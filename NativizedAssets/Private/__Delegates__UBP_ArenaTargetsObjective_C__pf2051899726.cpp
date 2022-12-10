@@ -1,0 +1,5 @@
+#include "__Delegates__UBP_ArenaTargetsObjective_C__pf2051899726.h"
+
+U__Delegates__UBP_ArenaTargetsObjective_C__pf2051899726::U__Delegates__UBP_ArenaTargetsObjective_C__pf2051899726() {
+}
+
