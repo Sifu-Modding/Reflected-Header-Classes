@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "BPOrderServiceInstance.h"
-#include "OrderService.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
+#include "OrderService.h"
 #include "ESlopeReaction.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=FloatRange -FallbackName=FloatRange
 #include "HitBox.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=AnimContainer -FallbackName=AnimContainer
+#include "BPOrderServiceInstance.h"
 #include "DetectFallOrderService.generated.h"
 
 UCLASS(EditInlineNew)

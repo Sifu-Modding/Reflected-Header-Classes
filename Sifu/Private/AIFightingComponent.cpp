@@ -2,16 +2,16 @@
 #include "Net/UnrealNetwork.h"
 #include "Templates/SubclassOf.h"
 
-class UFightingMovementComponent;
 class UOrderComponent;
-class UObject;
-class UAvoidAbility;
+class UFightingMovementComponent;
 class UAttackDB;
+class UAvoidAbility;
 class APathPatrol;
 class UAIContextualDefense;
+class UAIPhaseScenario;
 class UCombo;
 class AActor;
-class UAIPhaseScenario;
+class UObject;
 
 void UAIFightingComponent::OnTargetHitDuringAttack(const FHitDescription& _hitDescription) {
 }

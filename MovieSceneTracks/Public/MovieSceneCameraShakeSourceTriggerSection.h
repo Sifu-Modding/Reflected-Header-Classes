@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "MovieSceneCameraShakeSourceTriggerChannel.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=MovieScene -ObjectName=MovieSceneSection -FallbackName=MovieSceneSection
+#include "MovieSceneCameraShakeSourceTriggerChannel.h"
 #include "MovieSceneCameraShakeSourceTriggerSection.generated.h"
 
 UCLASS(MinimalAPI)

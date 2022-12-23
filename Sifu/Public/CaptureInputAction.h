@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "MappingID.h"
-#include "ECaptureInputStep.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintAsyncActionBase -FallbackName=BlueprintAsyncActionBase
+#include "ECaptureInputStep.h"
 #include "InputMappingData.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCDelegate -FallbackName=SCDelegate
+#include "MappingID.h"
 #include "CaptureInputAction.generated.h"
 
-class UInputMappingWidgetData;
 class UCaptureInputAction;
+class UInputMappingWidgetData;
 
 UCLASS()
 class SIFU_API UCaptureInputAction : public UBlueprintAsyncActionBase {

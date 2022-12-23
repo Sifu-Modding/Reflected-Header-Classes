@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "ReplayKeyWidgetStateChangedDelegate.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector2D -FallbackName=Vector2D
 #include "ButtonUserWidget.h"
-#include "ReplayKeyWidgetVisualData.h"
 #include "ReplayKeyWidgetVisualKey.h"
-#include "ReplayKeyWidgetStateChangedDelegate.h"
+#include "ReplayKeyWidgetVisualData.h"
 #include "ReplayKeyWidget.generated.h"
 
 class UReplayKeyWidgetVisualsDB;

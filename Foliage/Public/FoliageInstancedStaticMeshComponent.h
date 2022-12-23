@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "InstancePointDamageSignatureDelegate.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=HierarchicalInstancedStaticMeshComponent -FallbackName=HierarchicalInstancedStaticMeshComponent
-#include "InstanceRadialDamageSignatureDelegate.h"
+#include "InstancePointDamageSignatureDelegate.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Guid -FallbackName=Guid
+#include "InstanceRadialDamageSignatureDelegate.h"
 #include "FoliageInstancedStaticMeshComponent.generated.h"
 
 UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

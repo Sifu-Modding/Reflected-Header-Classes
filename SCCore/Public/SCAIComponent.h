@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SCPoolableActorComponent.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ActorComponent -FallbackName=ActorComponent
+#include "SCPoolableActorComponent.h"
 #include "SCAIComponent.generated.h"
 
 UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

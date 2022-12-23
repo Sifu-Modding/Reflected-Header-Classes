@@ -4,8 +4,8 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 #include "ThrowObjectAnimRequest.generated.h"
 
-class UAttackDB;
 class AActor;
+class UAttackDB;
 class AThrowableActor;
 
 UCLASS(Blueprintable)

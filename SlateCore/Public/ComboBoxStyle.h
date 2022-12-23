@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "SlateWidgetStyle.h"
-#include "SlateSound.h"
 #include "ComboButtonStyle.h"
+#include "SlateSound.h"
 #include "ComboBoxStyle.generated.h"
 
 USTRUCT(BlueprintType)

@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "ChaosEventListenerComponent.h"
-#include "BreakEventCallbackWrapper.h"
 #include "ChaosHandlerSet.h"
+#include "BreakEventCallbackWrapper.h"
 #include "ChaosGameplayEventDispatcher.generated.h"
 
 class UPrimitiveComponent;

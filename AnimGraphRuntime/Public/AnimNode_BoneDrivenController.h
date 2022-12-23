@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "AnimNode_SkeletalControlBase.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BoneReference -FallbackName=BoneReference
 #include "EDrivenBoneModificationMode.h"
 #include "EDrivenDestinationMode.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BoneReference -FallbackName=BoneReference
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=EComponentType -FallbackName=EComponentType
 #include "AnimNode_BoneDrivenController.generated.h"
 

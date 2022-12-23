@@ -3,16 +3,16 @@
 class AActor;
 class UAkAuxBus;
 class UAkAudioBank;
-class UAkAudioType;
-class UAkTrigger;
 class UObject;
-class UAkRtpc;
 class UAkAudioEvent;
-class UAkComponent;
 class UAkSwitchValue;
+class UAkComponent;
 class UAkStateValue;
+class UAkRtpc;
 class USceneComponent;
+class UAkTrigger;
 class UAkMediaAsset;
+class UAkAudioType;
 
 void UAkGameplayStatics::UseReverbVolumes(bool inUseReverbVolumes, AActor* Actor) {
 }

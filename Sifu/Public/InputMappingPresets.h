@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "InputMappingData.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=DataAsset -FallbackName=DataAsset
 #include "InputPresetsEnumHandler.h"
+#include "InputMappingData.h"
 #include "InputMappingPresets.generated.h"
 
 UCLASS()

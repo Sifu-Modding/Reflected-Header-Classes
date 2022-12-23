@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "OrderService.h"
 #include "EFightingState.h"
+#include "OrderService.h"
 #include "ForceFightingStateOrderService.generated.h"
 
 UCLASS(EditInlineNew)

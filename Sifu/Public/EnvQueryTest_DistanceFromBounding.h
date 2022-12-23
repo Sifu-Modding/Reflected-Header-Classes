@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "ESCTestDistance.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=AIModule -ObjectName=EnvQueryTest -FallbackName=EnvQueryTest
+#include "ESCTestDistance.h"
 #include "EnvQueryTest_DistanceFromBounding.generated.h"
 
 class UEnvQueryContext;

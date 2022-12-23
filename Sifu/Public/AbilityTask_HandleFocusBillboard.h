@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "TargetForSlotsEnumHandler.h"
-#include "HandleFocusBillboardDelegateDelegate.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=GameplayAbilities -ObjectName=AbilityTask -FallbackName=AbilityTask
+#include "HandleFocusBillboardDelegateDelegate.h"
+#include "TargetForSlotsEnumHandler.h"
 #include "AbilityTask_HandleFocusBillboard.generated.h"
 
 class UAbilityTask_HandleFocusBillboard;

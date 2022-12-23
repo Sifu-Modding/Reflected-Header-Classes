@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTag -FallbackName=GameplayTag
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=AchievementUnlockCondition -FallbackName=AchievementUnlockCondition
-#include "ERunType.h"
 #include "EOrderType.h"
+#include "ERunType.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTag -FallbackName=GameplayTag
 #include "WGAchievementUnlockCondition.generated.h"
 
 class AAISituationActor;

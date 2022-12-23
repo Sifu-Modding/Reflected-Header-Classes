@@ -2,13 +2,13 @@
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintAsyncActionBase -FallbackName=BlueprintAsyncActionBase
 #include "DeviceModelLoadedDelegateDelegate.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Transform -FallbackName=Transform
 #include "XRDeviceId.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Transform -FallbackName=Transform
 #include "AsyncTask_LoadXRDeviceVisComponent.generated.h"
 
-class AActor;
 class UPrimitiveComponent;
 class UAsyncTask_LoadXRDeviceVisComponent;
+class AActor;
 
 UCLASS()
 class UAsyncTask_LoadXRDeviceVisComponent : public UBlueprintAsyncActionBase {

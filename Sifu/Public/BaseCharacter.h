@@ -2,9 +2,9 @@
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCCharacter -FallbackName=SCCharacter
 //CROSS-MODULE INCLUDE V2: -ModuleName=AIModule -ObjectName=AISightTargetInterface -FallbackName=AISightTargetInterface
+#include "DynamicMaterialInput.h"
 #include "DynamicMaterialsPerType.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=HitResult -FallbackName=HitResult
-#include "DynamicMaterialInput.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=LinearColor -FallbackName=LinearColor
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=ECharacterGender -FallbackName=ECharacterGender
 #include "InputContext.h"
@@ -17,13 +17,13 @@
 class UCharacterTextLipSync;
 class USocialComponent;
 class UOrderComponent;
-class USCDialogComponent;
 class USkinTonesDB;
-class APlayerController;
-class AActor;
+class USCDialogComponent;
 class UPrimitiveComponent;
-class UMaterialInstanceDynamic;
+class AActor;
 class APlayerState;
+class UMaterialInstanceDynamic;
+class APlayerController;
 
 UCLASS()
 class SIFU_API ABaseCharacter : public ASCCharacter, public IAISightTargetInterface {

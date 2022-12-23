@@ -7,9 +7,9 @@
 #include "EWeaponOrientationConstraint.h"
 #include "WeaponAnimInfo.generated.h"
 
+class UAnimationAsset;
 class UBlendSpaceBase;
 class UCurveFloat;
-class UAnimationAsset;
 
 USTRUCT(BlueprintType)
 struct SIFU_API FWeaponAnimInfo : public FAssociatedPropsAnimInfo {

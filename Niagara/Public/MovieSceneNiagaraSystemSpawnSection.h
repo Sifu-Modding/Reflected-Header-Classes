@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ENiagaraSystemSpawnSectionEvaluateBehavior.h"
-#include "ENiagaraSystemSpawnSectionStartBehavior.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=MovieScene -ObjectName=MovieSceneSection -FallbackName=MovieSceneSection
+#include "ENiagaraSystemSpawnSectionStartBehavior.h"
 #include "ENiagaraSystemSpawnSectionEndBehavior.h"
+#include "ENiagaraSystemSpawnSectionEvaluateBehavior.h"
 #include "ENiagaraAgeUpdateMode.h"
 #include "MovieSceneNiagaraSystemSpawnSection.generated.h"
 

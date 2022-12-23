@@ -3,8 +3,8 @@
 #include "EMenuEnum.h"
 #include "MenuStackInfos.generated.h"
 
-class UPanelWidget;
 class UWidget;
+class UPanelWidget;
 
 USTRUCT(BlueprintType)
 struct FMenuStackInfos {

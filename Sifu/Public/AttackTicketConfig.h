@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ESCAICombatRoles.h"
-#include "FAttackTicketBehavior.h"
 #include "EPassiveTicketBehaviorAginstJoker.h"
+#include "FAttackTicketBehavior.h"
 #include "AITicketCooldowns.h"
-#include "TimerAndOffset.h"
+#include "ESCAICombatRoles.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Int32Range -FallbackName=Int32Range
+#include "TimerAndOffset.h"
 #include "SCAITicketEnum.h"
 #include "AttackTicketConfig.generated.h"
 

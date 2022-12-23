@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "XRDeviceId.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Transform -FallbackName=Transform
+#include "XRDeviceId.h"
 #include "XRAssetFunctionLibrary.generated.h"
 
-class AActor;
 class UPrimitiveComponent;
+class AActor;
 
 UCLASS(BlueprintType)
 class UXRAssetFunctionLibrary : public UBlueprintFunctionLibrary {

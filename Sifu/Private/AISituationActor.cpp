@@ -3,8 +3,8 @@
 
 class AAISpawner;
 class AActor;
-class ASpawnerGroup;
 class UAIFightingComponent;
+class ASpawnerGroup;
 
 void AAISituationActor::OnUpdatedFromSaveCallback() {
 }

@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTag -FallbackName=GameplayTag
 #include "AbilityTask_WaitGameplayTag.h"
 #include "WaitGameplayTagDelegateDelegate.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTag -FallbackName=GameplayTag
 #include "AbilityTask_WaitGameplayTagRemoved.generated.h"
 
 class UGameplayAbility;

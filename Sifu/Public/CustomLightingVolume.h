@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCPlayerVolumeNoPhysics -FallbackName=SCPlayerVolumeNoPhysics
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=WuguanCustomLightingUserParameters -FallbackName=WuguanCustomLightingUserParameters
+//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCPlayerVolumeNoPhysics -FallbackName=SCPlayerVolumeNoPhysics
 #include "CustomLightingVolume.generated.h"
 
 UCLASS()

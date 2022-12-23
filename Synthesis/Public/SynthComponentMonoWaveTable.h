@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=AudioMixer -ObjectName=SynthComponent -FallbackName=SynthComponent
 #include "CurveInterpolationType.h"
 #include "OnTableAlteredDelegate.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=AudioMixer -ObjectName=SynthComponent -FallbackName=SynthComponent
 #include "ESynthLFOType.h"
 #include "NumTablesChangedDelegate.h"
 #include "SynthComponentMonoWaveTable.generated.h"

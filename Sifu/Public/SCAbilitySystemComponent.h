@@ -2,14 +2,14 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=GameplayAbilities -ObjectName=AbilitySystemComponent -FallbackName=AbilitySystemComponent
+//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTagContainer -FallbackName=GameplayTagContainer
+#include "OnSkillConsolidatedDelegate.h"
 #include "AbilityDynamicDelegateDelegate.h"
 #include "AbilityDelegateHandler.h"
-#include "OnSkillConsolidatedDelegate.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTagContainer -FallbackName=GameplayTagContainer
 #include "SCAbilitySystemComponent.generated.h"
 
-class UGameplayEffect;
 class USkillGameplayEffect;
+class UGameplayEffect;
 class UGameplayAbility;
 
 UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

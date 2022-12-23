@@ -2,10 +2,10 @@
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
 //CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTag -FallbackName=GameplayTag
-#include "AchievementUnlockConditionStruct.h"
 #include "AchievementUnlockConditionSet.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTagContainer -FallbackName=GameplayTagContainer
 #include "AchievementUnlockObjectSet.h"
+#include "AchievementUnlockConditionStruct.h"
 #include "SCInGameAchievementsManagerSettings.generated.h"
 
 class UAchievementUnlockCondition;
@@ -16,6 +16,7 @@ class SCCORE_API USCInGameAchievementsManagerSettings : public UObject {
 public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnSaveCheckFinished);
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnObjectUnlockedDynamic, FGameplayTag, _objectUnlockedTag);
+    DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnAchievementsInit);
     
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<FAchievementUnlockConditionSet> m_InGameAchievements;
@@ -43,6 +44,9 @@ public:
     
     UPROPERTY(BlueprintAssignable)
     FOnSaveCheckFinished m_OnSaveCheckFinished;
+    
+    UPROPERTY(BlueprintAssignable)
+    FOnAchievementsInit m_OnAchievementsInit;
     
     USCInGameAchievementsManagerSettings();
     UFUNCTION(BlueprintPure)

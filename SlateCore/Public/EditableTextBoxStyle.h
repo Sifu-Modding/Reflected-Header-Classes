@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SlateWidgetStyle.h"
-#include "SlateFontInfo.h"
+#include "SlateColor.h"
 #include "Margin.h"
 #include "SlateBrush.h"
-#include "SlateColor.h"
+#include "SlateWidgetStyle.h"
+#include "SlateFontInfo.h"
 #include "ScrollBarStyle.h"
 #include "EditableTextBoxStyle.generated.h"
 

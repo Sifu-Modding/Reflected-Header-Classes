@@ -2,10 +2,10 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=SceneComponent -FallbackName=SceneComponent
 
 class UCharacterHealthComponent;
-class ASCVolume;
 class AAISituationActor;
-class AActor;
+class ASCVolume;
 class UPrimitiveComponent;
+class AActor;
 
 void AArenaHardpointAreaActor::OnOverlappingEnemyDown(UCharacterHealthComponent* _healthComponent, EDownState _eState) {
 }

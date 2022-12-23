@@ -1,8 +1,8 @@
 #include "LockableDoor.h"
 #include "Net/UnrealNetwork.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCSaveGameComponent -FallbackName=SCSaveGameComponent
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=SkeletalMeshComponent -FallbackName=SkeletalMeshComponent
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=SceneComponent -FallbackName=SceneComponent
-//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCSaveGameComponent -FallbackName=SCSaveGameComponent
 
 class UAnimationAsset;
 class AFightingCharacter;

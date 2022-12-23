@@ -7,13 +7,13 @@
 #include "ERTPCValueType.h"
 #include "AkComponent.generated.h"
 
-class UAkAuxBus;
-class UAkComponent;
-class UAkSwitchValue;
-class UAkAudioEvent;
 class UAkRtpc;
-class UAkTrigger;
+class UAkSwitchValue;
 class AActor;
+class UAkAuxBus;
+class UAkTrigger;
+class UAkComponent;
+class UAkAudioEvent;
 
 UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class AKAUDIO_API UAkComponent : public UAkGameObject {

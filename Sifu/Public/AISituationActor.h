@@ -1,23 +1,23 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EAlertLevel.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=Actor -FallbackName=Actor
 #include "EGlobalBehaviors.h"
 #include "SpawnerGroupSoundData.h"
+#include "AISituationNamedActor.h"
 #include "SCImpostorForSave.h"
 #include "AIPhaseTransitionData.h"
-#include "AISituationNamedActor.h"
 #include "EFightingState.h"
+#include "EAlertLevel.h"
 #include "AISituationActor.generated.h"
 
-class AAISituationActor;
+class AAISpawner;
 class ABaseCharacter;
+class AAISituationActor;
 class UAIFightingComponent;
 class USCSaveGameComponent;
 class ASpawnerGroup;
-class ALockableDoor;
 class AFightingCharacter;
-class AAISpawner;
+class ALockableDoor;
 
 UCLASS()
 class SIFU_API AAISituationActor : public AActor {

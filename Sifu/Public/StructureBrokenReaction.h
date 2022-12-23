@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "BaseFightingStateBehavior.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=AnimContainer -FallbackName=AnimContainer
+#include "BaseFightingStateBehavior.h"
 #include "StructureBrokenReaction.generated.h"
 
 USTRUCT(BlueprintType)

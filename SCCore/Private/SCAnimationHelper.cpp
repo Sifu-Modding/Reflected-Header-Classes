@@ -2,9 +2,9 @@
 #include "Templates/SubclassOf.h"
 
 class UAnimSequenceBase;
+class UAnimSequence;
 class UAnimationAsset;
 class UAnimNotifyState;
-class UAnimSequence;
 class UAnimNotify;
 
 bool USCAnimationHelper::HasInvalidNotifies(UAnimSequenceBase* _sequence, const FString& _inNotifyName) {

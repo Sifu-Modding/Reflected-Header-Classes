@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "RigUnit_SimBaseMutable.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 #include "CRSimPoint.h"
 #include "CRSimLinearSpring.h"
-#include "ECRSimPointIntegrateType.h"
 #include "CRSimPointForce.h"
 #include "CRSimSoftCollision.h"
+#include "ECRSimPointIntegrateType.h"
 #include "RigUnit_PointSimulation_BoneTarget.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
+#include "RigUnit_PointSimulation_WorkData.h"
 #include "RigUnit_PointSimulation_DebugSettings.h"
 #include "CRFourPointBezier.h"
-#include "RigUnit_PointSimulation_WorkData.h"
 #include "RigUnit_PointSimulation.generated.h"
 
 USTRUCT()

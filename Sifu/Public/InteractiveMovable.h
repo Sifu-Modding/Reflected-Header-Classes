@@ -1,18 +1,18 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCActor -FallbackName=SCActor
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Transform -FallbackName=Transform
-#include "InputAction.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCActor -FallbackName=SCActor
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 #include "EDebugMovableState.h"
+#include "InputAction.h"
 #include "InteractiveMovable.generated.h"
 
-class UMovableInteractionComponent;
+class UTargetSettingsDB;
 class USCStreamingActorComponent;
 class UInteractiveDestructionComponent;
+class UMovableInteractionComponent;
 class USCSaveGameComponent;
-class UTargetSettingsDB;
 class AActor;
 class AFightingCharacter;
 

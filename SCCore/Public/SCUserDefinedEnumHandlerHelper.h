@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SCUserDefinedEnumHandler.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
+#include "SCUserDefinedEnumHandler.h"
 #include "SCUserDefinedEnumHandlerHelper.generated.h"
 
 class UEnum;

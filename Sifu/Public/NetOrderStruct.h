@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "NetOrderStruct.generated.h"
 
-class UAbilityPayload;
 class AActor;
+class UAbilityPayload;
 
 USTRUCT(BlueprintType)
 struct SIFU_API FNetOrderStruct {

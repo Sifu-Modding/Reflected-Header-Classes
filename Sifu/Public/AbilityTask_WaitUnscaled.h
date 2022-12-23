@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayAbilities -ObjectName=AbilityTask -FallbackName=AbilityTask
 #include "WaitUnscaledDelegate.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayAbilities -ObjectName=AbilityTask -FallbackName=AbilityTask
 #include "AbilityTask_WaitUnscaled.generated.h"
 
-class UGameplayAbility;
 class UAbilityTask_WaitUnscaled;
+class UGameplayAbility;
 
 UCLASS()
 class SIFU_API UAbilityTask_WaitUnscaled : public UAbilityTask {

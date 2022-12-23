@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EFightingActionState.h"
 #include "BaseActorCondition.h"
+#include "EFightingActionState.h"
 #include "FightingActionStateCondition.generated.h"
 
 UCLASS()

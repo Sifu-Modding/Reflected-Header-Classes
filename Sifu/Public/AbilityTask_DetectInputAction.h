@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "InputAction.h"
-#include "DetectInputActionDelegateDelegate.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayAbilities -ObjectName=AbilityTask -FallbackName=AbilityTask
 #include "InputContext.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayAbilities -ObjectName=AbilityTask -FallbackName=AbilityTask
+#include "DetectInputActionDelegateDelegate.h"
+#include "InputAction.h"
 #include "AbilityTask_DetectInputAction.generated.h"
 
-class UAbilityTask_DetectInputAction;
 class UGameplayAbility;
+class UAbilityTask_DetectInputAction;
 
 UCLASS()
 class SIFU_API UAbilityTask_DetectInputAction : public UAbilityTask {

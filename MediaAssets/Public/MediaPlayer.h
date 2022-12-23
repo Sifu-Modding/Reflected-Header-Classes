@@ -2,21 +2,21 @@
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
 #include "OnMediaPlayerMediaEventDelegate.h"
-#include "OnMediaPlayerMediaOpenedDelegate.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Rotator -FallbackName=Rotator
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Timespan -FallbackName=Timespan
-//CROSS-MODULE INCLUDE V2: -ModuleName=MediaUtils -ObjectName=MediaPlayerOptions -FallbackName=MediaPlayerOptions
 #include "OnMediaPlayerMediaOpenFailedDelegate.h"
+#include "OnMediaPlayerMediaOpenedDelegate.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Timespan -FallbackName=Timespan
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Guid -FallbackName=Guid
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Rotator -FallbackName=Rotator
 #include "EMediaPlayerTrack.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=MediaUtils -ObjectName=MediaPlayerOptions -FallbackName=MediaPlayerOptions
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=LatentActionInfo -FallbackName=LatentActionInfo
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=FloatRange -FallbackName=FloatRange
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=IntPoint -FallbackName=IntPoint
 #include "MediaPlayer.generated.h"
 
+class UMediaPlaylist;
 class UMediaTimeStampInfo;
 class UMediaSource;
-class UMediaPlaylist;
 
 UCLASS(BlueprintType)
 class MEDIAASSETS_API UMediaPlayer : public UObject {

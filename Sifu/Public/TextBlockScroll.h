@@ -3,9 +3,9 @@
 #include "SCUserWidget.h"
 #include "TextBlockScroll.generated.h"
 
-class UMaterialInterface;
-class UMaterialInstanceDynamic;
 class URetainerBox;
+class UMaterialInstanceDynamic;
+class UMaterialInterface;
 class UTextBlock;
 
 UCLASS(EditInlineNew)

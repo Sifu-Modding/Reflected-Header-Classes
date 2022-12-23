@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EFirstWaveSpawnMethod.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCActor -FallbackName=SCActor
+#include "EFirstWaveSpawnMethod.h"
 #include "WaveParams.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=HitResult -FallbackName=HitResult
 #include "AIWaveDirector.generated.h"
 
 class AAISpawner;
-class AActor;
-class UPrimitiveComponent;
 class ASCPlayerVolume;
+class UPrimitiveComponent;
+class AActor;
 
 UCLASS()
 class SIFU_API AAIWaveDirector : public ASCActor {

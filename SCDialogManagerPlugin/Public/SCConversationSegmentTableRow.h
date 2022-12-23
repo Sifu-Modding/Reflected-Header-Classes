@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "SCConversationInteractiveChoice.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=TableRowBase -FallbackName=TableRowBase
 #include "SCConversationSegment.h"
-#include "SCConversationInteractiveChoice.h"
 #include "SCConversationSegmentTableRow.generated.h"
 
 class UDialogActionBase;

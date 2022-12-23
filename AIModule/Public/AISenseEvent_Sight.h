@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "AISenseEvent.h"
 #include "AISightEvent.h"
+#include "AISenseEvent.h"
 #include "AISenseEvent_Sight.generated.h"
 
 UCLASS(EditInlineNew)

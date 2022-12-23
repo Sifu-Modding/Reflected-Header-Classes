@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "NetworkSyncDelegateDelegate.h"
 #include "AbilityTask.h"
+#include "NetworkSyncDelegateDelegate.h"
 #include "EAbilityTaskNetSyncType.h"
 #include "AbilityTask_NetworkSyncPoint.generated.h"
 
-class UAbilityTask_NetworkSyncPoint;
 class UGameplayAbility;
+class UAbilityTask_NetworkSyncPoint;
 
 UCLASS()
 class GAMEPLAYABILITIES_API UAbilityTask_NetworkSyncPoint : public UAbilityTask {

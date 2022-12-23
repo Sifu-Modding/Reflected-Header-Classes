@@ -4,8 +4,8 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCPoolableActor -FallbackName=SCPoolableActor
 #include "FightingAIController.generated.h"
 
-class AAISpawner;
 class AActor;
+class AAISpawner;
 
 UCLASS()
 class SIFU_API AFightingAIController : public AAIController, public ISCPoolableActor {

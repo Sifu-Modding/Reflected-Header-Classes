@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EFightingActionState.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
-#include "EOrderType.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=ELookAtApplyMode -FallbackName=ELookAtApplyMode
-#include "ELookAtRefDirMode.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCUserDefinedEnumHandler -FallbackName=SCUserDefinedEnumHandler
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=EVisibilityBasedAnimTickOption -FallbackName=EVisibilityBasedAnimTickOption
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=DynamicBlendSettings -FallbackName=DynamicBlendSettings
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=EVisibilityBasedAnimTickOption -FallbackName=EVisibilityBasedAnimTickOption
+#include "EOrderType.h"
+#include "EFightingActionState.h"
 #include "OrderServiceInfosList.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCUserDefinedEnumHandler -FallbackName=SCUserDefinedEnumHandler
+#include "ELookAtRefDirMode.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=ELookAtApplyMode -FallbackName=ELookAtApplyMode
 #include "OrderDB.generated.h"
 
 class UOrderComponent;

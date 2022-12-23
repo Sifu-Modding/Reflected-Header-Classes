@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SoundStateInfo.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCLevelScriptActor -FallbackName=SCLevelScriptActor
-#include "AIPhaseTransitionData.h"
+#include "SoundStateInfo.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=EEndPlayReason -FallbackName=EEndPlayReason
+#include "AIPhaseTransitionData.h"
 #include "ThePlainesLevel.generated.h"
 
-class AFightingCharacter;
 class ASCBlenderManager;
-class ULevelSequence;
 class UAkAudioBank;
+class ULevelSequence;
 class AActor;
+class AFightingCharacter;
 
 UCLASS()
 class SIFU_API AThePlainesLevel : public ASCLevelScriptActor {

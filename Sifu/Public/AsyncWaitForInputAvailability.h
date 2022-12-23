@@ -5,8 +5,8 @@
 #include "InputAction.h"
 #include "AsyncWaitForInputAvailability.generated.h"
 
-class UAsyncWaitForInputAvailability;
 class ABaseCharacter;
+class UAsyncWaitForInputAvailability;
 
 UCLASS()
 class SIFU_API UAsyncWaitForInputAvailability : public UBlueprintAsyncActionBase {

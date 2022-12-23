@@ -2,13 +2,13 @@
 #include "CoreMinimal.h"
 #include "SCGameplayAbility.h"
 #include "HitBox.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTagContainer -FallbackName=GameplayTagContainer
-#include "ImpactResult.h"
-#include "EALBinaryOperation.h"
 #include "InputAction.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTagContainer -FallbackName=GameplayTagContainer
 #include "SCGameplayAbilityActivationInfo.h"
+#include "EALBinaryOperation.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=HitResult -FallbackName=HitResult
 #include "HitRequest.h"
+#include "ImpactResult.h"
 #include "GuardAbility.generated.h"
 
 class AFightingCharacter;

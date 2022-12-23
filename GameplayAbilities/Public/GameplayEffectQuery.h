@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
+#include "GameplayAttribute.h"
 #include "ActiveGameplayEffectQueryCustomMatch_DynamicDelegate.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTagQuery -FallbackName=GameplayTagQuery
-#include "GameplayAttribute.h"
 #include "GameplayEffectQuery.generated.h"
 
 class UObject;

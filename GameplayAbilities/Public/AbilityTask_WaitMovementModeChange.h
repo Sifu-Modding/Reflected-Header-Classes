@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "AbilityTask.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=EMovementMode -FallbackName=EMovementMode
+#include "AbilityTask.h"
 #include "MovementModeChangedDelegateDelegate.h"
 #include "AbilityTask_WaitMovementModeChange.generated.h"
 

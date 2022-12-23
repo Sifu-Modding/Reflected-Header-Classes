@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "CameraFocusSettings.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=CameraComponent -FallbackName=CameraComponent
-#include "CameraLensSettings.h"
 #include "CameraFilmbackSettings.h"
+#include "CameraLensSettings.h"
+#include "CameraFocusSettings.h"
 #include "NamedFilmbackPreset.h"
 #include "NamedLensPreset.h"
 #include "CineCameraComponent.generated.h"

@@ -3,8 +3,8 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=AnimInstance -FallbackName=AnimInstance
 #include "AnimSharingAdditiveInstance.generated.h"
 
-class UAnimSequence;
 class USkeletalMeshComponent;
+class UAnimSequence;
 
 UCLASS(NonTransient)
 class UAnimSharingAdditiveInstance : public UAnimInstance {

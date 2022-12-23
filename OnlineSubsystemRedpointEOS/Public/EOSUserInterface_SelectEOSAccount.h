@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EOSUserInterface_CandidateEOSAccount.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Interface -FallbackName=Interface
+#include "EOSUserInterface_CandidateEOSAccount.h"
 #include "EOSUserInterface_SelectEOSAccount.generated.h"
 
 class UEOSUserInterface_SelectEOSAccount_Context;

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameplayEffectCalculation.h"
 #include "GameplayEffectCustomExecutionParameters.h"
+#include "GameplayEffectCalculation.h"
 #include "GameplayEffectCustomExecutionOutput.h"
 #include "GameplayEffectExecutionCalculation.generated.h"
 

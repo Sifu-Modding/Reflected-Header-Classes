@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "ELookAtApplyMode.h"
 #include "AnimContainer.h"
+#include "ELookAtApplyMode.h"
 #include "SCGestureAndBlendProfile.generated.h"
 
 class UBlendProfilePayload;

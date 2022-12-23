@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ESCMathConditionValueType.h"
 #include "ESCMathConditionExpression.h"
+#include "ESCMathConditionValueType.h"
 #include "SCMathCondition.h"
 #include "SCMathConditionGroup.generated.h"
 

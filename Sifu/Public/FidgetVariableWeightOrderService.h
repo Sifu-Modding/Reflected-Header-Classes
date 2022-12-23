@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "OrderService.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCUserDefinedEnumHandler -FallbackName=SCUserDefinedEnumHandler
-#include "ESpeedState.h"
 #include "EditableOrderType.h"
+#include "ESpeedState.h"
 #include "FidgetVariableWeightOrderService.generated.h"
 
 class UBlendProfile;

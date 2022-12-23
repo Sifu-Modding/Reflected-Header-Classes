@@ -3,14 +3,14 @@
 #include "Templates/SubclassOf.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
 #include "OnMoviePipelineExecutorFinishedDelegate.h"
-#include "MoviePipelineSocketMessageRecievedDelegate.h"
 #include "OnMoviePipelineExecutorErroredDelegate.h"
+#include "MoviePipelineSocketMessageRecievedDelegate.h"
 #include "MoviePipelineHttpResponseRecievedDelegate.h"
 #include "MoviePipelineExecutorBase.generated.h"
 
-class UMoviePipelineQueue;
 class UMovieRenderDebugWidget;
 class UMoviePipeline;
+class UMoviePipelineQueue;
 
 UCLASS(Abstract, Blueprintable)
 class MOVIERENDERPIPELINECORE_API UMoviePipelineExecutorBase : public UObject {

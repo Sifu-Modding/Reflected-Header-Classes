@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "HitBox.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=ESCCardinalPoints -FallbackName=ESCCardinalPoints
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
-//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=AnimContainer -FallbackName=AnimContainer
-#include "EQuadrantTypes.h"
 #include "NetOrderStructDodge.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=AnimContainer -FallbackName=AnimContainer
+//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=ESCCardinalPoints -FallbackName=ESCCardinalPoints
+#include "EQuadrantTypes.h"
+#include "HitBox.h"
 #include "DodgeAnimRequest.generated.h"
 
 class AFightingCharacter;

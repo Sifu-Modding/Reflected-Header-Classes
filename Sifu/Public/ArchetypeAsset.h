@@ -1,40 +1,40 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "EDefenseTactics.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
-#include "AIAttackReaction.h"
-#include "AIWeaponInfo.h"
-#include "SCAITriggerableActionsArray.h"
-#include "EAIArchetype.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=ECharacterGender -FallbackName=ECharacterGender
-#include "AISuperDizzyParams.h"
 #include "AIConditionedActionArray.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
+#include "ESCAICombatRoles.h"
+#include "EAIArchetype.h"
+#include "AISuperDizzyParams.h"
 #include "EAIWuguanTicketEvaluation.h"
+#include "AIDifficultyLevel.h"
+#include "EDefenseTactics.h"
+#include "SCAITriggerableActionsArray.h"
+#include "AIWeaponInfo.h"
+#include "AIAttackReaction.h"
 #include "AIActionReaction.h"
 #include "LocomotionPaceSelector.h"
-#include "AIDifficultyLevel.h"
-#include "CardinalAnimContainer.h"
-#include "VoiceVariationsAkSwitchContainer.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=ECharacterGender -FallbackName=ECharacterGender
 #include "PatrolActivity.h"
-#include "ESCAICombatRoles.h"
-#include "AIRangePerCircleIndex.h"
+#include "VoiceVariationsAkSwitchContainer.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=FloatRange -FallbackName=FloatRange
+#include "AIRangePerCircleIndex.h"
+#include "CardinalAnimContainer.h"
 #include "JiggleAnimContainer.h"
 #include "BaseActorConditionInstance.h"
 #include "ArchetypeAsset.generated.h"
 
+class UBaseMovementDB;
+class UAttackPropertiesResistanceDB;
 class UAvoidAbility;
 class UCurveFloat;
-class UAttackPropertiesResistanceDB;
-class UBaseMovementDB;
-class UDodgeTypeUseCaseMatrix;
 class UAIContextualDefense;
+class UDodgeTypeUseCaseMatrix;
 class ABaseWeapon;
 class UThrowableInfoForAIDataAsset;
-class UFidgetDB;
-class UNavigationQueryFilter;
 class UBehaviorTree;
+class UNavigationQueryFilter;
+class UFidgetDB;
 class UBlackboardData;
 class UDataTable;
 class UVitalPointDB;

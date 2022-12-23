@@ -2,14 +2,14 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=DataAsset -FallbackName=DataAsset
+//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=Bool -FallbackName=Bool
 #include "EAvoidLaunchMethod.h"
 #include "CardinalMatchArray.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=Bool -FallbackName=Bool
 #include "AvoidDB.generated.h"
 
-class UAvoidPropertyDB;
-class UAvoidMatchCondition;
 class UCurveFloat;
+class UAvoidMatchCondition;
+class UAvoidPropertyDB;
 
 UCLASS()
 class SIFU_API UAvoidDB : public UDataAsset {

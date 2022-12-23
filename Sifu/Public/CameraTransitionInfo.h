@@ -6,8 +6,8 @@
 #include "CameraTransitionEventStruct.h"
 #include "CameraTransitionInfo.generated.h"
 
-class UCurveFloat;
 class UCameraTransitionModule;
+class UCurveFloat;
 
 UCLASS()
 class SIFU_API UCameraTransitionInfo : public UDataAsset {

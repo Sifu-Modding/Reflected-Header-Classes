@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EEnvQueryRunMode.h"
-#include "AIDynamicParam.h"
 #include "BlackboardKeySelector.h"
+#include "AIDynamicParam.h"
+#include "EEnvQueryRunMode.h"
 #include "EQSParametrizedQueryExecutionRequest.generated.h"
 
 class UEnvQuery;

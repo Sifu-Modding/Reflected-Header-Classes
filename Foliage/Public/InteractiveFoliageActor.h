@@ -5,9 +5,9 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=HitResult -FallbackName=HitResult
 #include "InteractiveFoliageActor.generated.h"
 
-class AActor;
-class UPrimitiveComponent;
 class UCapsuleComponent;
+class UPrimitiveComponent;
+class AActor;
 
 UCLASS(MinimalAPI)
 class AInteractiveFoliageActor : public AStaticMeshActor {

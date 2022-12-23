@@ -2,14 +2,14 @@
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
 #include "EArchetypeType.h"
-#include "AISituationNamedActor.h"
 #include "EAIPositioningOption.h"
+#include "AISituationNamedActor.h"
 #include "AIManagerHelpers.generated.h"
 
-class UAIFightingComponent;
-class AActor;
-class AAISituationActor;
 class AAIDirectorActor;
+class AActor;
+class UAIFightingComponent;
+class AAISituationActor;
 
 UCLASS(BlueprintType)
 class SIFU_API UAIManagerHelpers : public UBlueprintFunctionLibrary {

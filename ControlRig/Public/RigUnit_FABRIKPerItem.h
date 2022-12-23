@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "RigUnit_HighlevelBaseMutable.h"
 #include "RigElementKeyCollection.h"
-#include "RigUnit_FABRIK_WorkData.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Transform -FallbackName=Transform
+#include "RigUnit_FABRIK_WorkData.h"
 #include "RigUnit_FABRIKPerItem.generated.h"
 
 USTRUCT()

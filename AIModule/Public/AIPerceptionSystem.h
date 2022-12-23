@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "AISubsystem.h"
-#include "AIStimulus.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=EEndPlayReason -FallbackName=EEndPlayReason
+#include "AIStimulus.h"
 #include "AIPerceptionSystem.generated.h"
 
 class UAISenseEvent;

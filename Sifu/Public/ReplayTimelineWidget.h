@@ -1,22 +1,22 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "ReplayWidgetHandler.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=UMG -ObjectName=UserWidget -FallbackName=UserWidget
-#include "ReplayKeyData.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=FloatRange -FallbackName=FloatRange
+#include "ReplayWidgetHandler.h"
+#include "EReplayTimelineDebugType.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=Margin -FallbackName=Margin
+#include "ReplayKeyData.h"
 #include "EReplayKeyIndexUpdateReason.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=FloatRange -FallbackName=FloatRange
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector2D -FallbackName=Vector2D
 //CROSS-MODULE INCLUDE V2: -ModuleName=UMG -ObjectName=PaintContext -FallbackName=PaintContext
-#include "EReplayTimelineDebugType.h"
 #include "ReplayTimelineWidget.generated.h"
 
 class UCanvasPanel;
+class UReplayKey;
 class UReplayTimelineContainerBase;
 class UReplayTimelineTransition;
 class UReplayKeyWidget;
-class UReplayKey;
 class AReplayController;
 class UReplayTimelineModel;
 

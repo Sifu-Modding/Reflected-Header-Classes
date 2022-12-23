@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCPoolableActorComponent -FallbackName=SCPoolableActorComponent
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ActorComponent -FallbackName=ActorComponent
+//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCPoolableActorComponent -FallbackName=SCPoolableActorComponent
 #include "ReplayReplicatedStateMachine.h"
 #include "ReplayReplicatedAnimInstanceAssetPlayers.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCAnimInstanceRef -FallbackName=SCAnimInstanceRef

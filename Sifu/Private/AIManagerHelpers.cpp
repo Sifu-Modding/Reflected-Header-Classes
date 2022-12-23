@@ -1,9 +1,9 @@
 #include "AIManagerHelpers.h"
 
-class UAIFightingComponent;
 class AActor;
-class AAISituationActor;
+class UAIFightingComponent;
 class AAIDirectorActor;
+class AAISituationActor;
 
 void UAIManagerHelpers::BPF_SetWantedArchetypeType(EArchetypeType _eWantedType) {
 }

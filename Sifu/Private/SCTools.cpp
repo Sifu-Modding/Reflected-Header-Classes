@@ -1,8 +1,8 @@
 #include "SCTools.h"
 
-class UObject;
-class UWorld;
 class UGameInstance;
+class UWorld;
+class UObject;
 
 EQuadrantTypes USCTools::GetAttackQuadrant(EQuadrantTypes _eQuadrant, bool _bIsMirror) {
     return EQuadrantTypes::FrontLeft;

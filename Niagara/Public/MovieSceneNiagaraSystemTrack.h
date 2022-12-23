@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "MovieSceneNiagaraTrack.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=MovieScene -ObjectName=MovieSceneTrackTemplateProducer -FallbackName=MovieSceneTrackTemplateProducer
+#include "MovieSceneNiagaraTrack.h"
 #include "MovieSceneNiagaraSystemTrack.generated.h"
 
 UCLASS(MinimalAPI)

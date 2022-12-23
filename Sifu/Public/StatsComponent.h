@@ -1,35 +1,35 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ActorComponent -FallbackName=ActorComponent
-#include "CharacterProgressionReward.h"
 #include "ECharacterProgressionRewardTypes.h"
+#include "CharacterProgressionReward.h"
 #include "EPendantUpdate.h"
+#include "CombatDeckDetails.h"
 #include "AttackDataRow.h"
+#include "EAttackLearningState.h"
 #include "EPendingttackXPType.h"
 #include "CharacterStatChangedDelegateDelegate.h"
-#include "FocusPointsGainStruct.h"
-#include "EWeightCategory.h"
-#include "ECharacterStat.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=EEndPlayReason -FallbackName=EEndPlayReason
-#include "DamageInfos.h"
-#include "ECharacterProgressionRewardConditions.h"
-#include "EEarnXPInstigator.h"
 #include "EStatsWeaponComputingMethod.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCUserDefinedEnumHandler -FallbackName=SCUserDefinedEnumHandler
+#include "ECharacterStat.h"
+#include "EWeightCategory.h"
+#include "FocusPointsGainStruct.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=EEndPlayReason -FallbackName=EEndPlayReason
+#include "EEarnXPInstigator.h"
+#include "DamageInfos.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=GameplayAbilities -ObjectName=GameplayAttribute -FallbackName=GameplayAttribute
-#include "EAttackLearningState.h"
-#include "CombatDeckDetails.h"
+#include "ECharacterProgressionRewardConditions.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCUserDefinedEnumHandler -FallbackName=SCUserDefinedEnumHandler
 #include "StatsComponent.generated.h"
 
-class UCharacterProgressionDB;
-class UCharacterProgressionUnlockDB;
-class UEffectData;
-class AFightingCharacter;
 class AActor;
+class UCharacterProgressionUnlockDB;
+class UTexture2D;
+class UCharacterProgressionDB;
+class AFightingCharacter;
 class UStatsDB;
 class UBaseWeaponData;
 class UAbilitySystemComponent;
-class UTexture2D;
+class UEffectData;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class SIFU_API UStatsComponent : public UActorComponent {

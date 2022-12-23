@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "AkCommonInitializationSettingsWithSampleRate.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
 #include "AkPlatformInitialisationSettingsBase.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
+#include "AkCommonInitializationSettingsWithSampleRate.h"
 #include "AkCommunicationSettingsWithSystemInitialization.h"
 #include "AkWinGDKAdvancedInitializationSettings.h"
 #include "AkWinGDKInitializationSettings.generated.h"

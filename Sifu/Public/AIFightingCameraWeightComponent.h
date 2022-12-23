@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "FightingCameraWeightComponent.h"
 #include "StateWeight.h"
+#include "FightingCameraWeightComponent.h"
 #include "AIFightingCameraWeightComponent.generated.h"
 
 class UCurveFloat;

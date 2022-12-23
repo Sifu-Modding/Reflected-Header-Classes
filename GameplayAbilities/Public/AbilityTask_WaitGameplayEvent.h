@@ -6,9 +6,9 @@
 #include "AbilityTask_WaitGameplayEvent.generated.h"
 
 class UAbilitySystemComponent;
-class AActor;
 class UAbilityTask_WaitGameplayEvent;
 class UGameplayAbility;
+class AActor;
 
 UCLASS()
 class GAMEPLAYABILITIES_API UAbilityTask_WaitGameplayEvent : public UAbilityTask {

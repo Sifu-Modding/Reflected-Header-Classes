@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector2D -FallbackName=Vector2D
+#include "NiagaraRendererProperties.h"
+#include "NiagaraMaterialAttributeBinding.h"
 #include "ENiagaraSpriteFacingMode.h"
 #include "ENiagaraRendererSourceDataMode.h"
-#include "NiagaraRendererProperties.h"
-#include "NiagaraUserParameterBinding.h"
 #include "ENiagaraSpriteAlignment.h"
+#include "NiagaraUserParameterBinding.h"
 #include "ENiagaraSortMode.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector2D -FallbackName=Vector2D
 #include "NiagaraVariableAttributeBinding.h"
-#include "NiagaraMaterialAttributeBinding.h"
 #include "NiagaraSpriteRendererProperties.generated.h"
 
 class UMaterialInterface;

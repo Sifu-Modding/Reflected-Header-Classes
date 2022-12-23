@@ -1,7 +1,7 @@
 #include "AkSpatialAudioVolume.h"
-#include "AkSurfaceReflectorSetComponent.h"
 #include "AkRoomComponent.h"
 #include "AkLateReverbComponent.h"
+#include "AkSurfaceReflectorSetComponent.h"
 
 AAkSpatialAudioVolume::AAkSpatialAudioVolume() {
     this->SurfaceReflectorSet = CreateDefaultSubobject<UAkSurfaceReflectorSetComponent>(TEXT("SurfaceReflector"));

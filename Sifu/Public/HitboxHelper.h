@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
 #include "HitBoxMetaDataClassInstance.h"
-#include "HitBox.h"
 #include "HitboxDataRow.h"
+#include "HitBox.h"
 #include "HitboxHelper.generated.h"
 
 class UHitBoxMetaData;

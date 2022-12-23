@@ -4,12 +4,12 @@
 #include "PawnActionsComponent.h"
 
 class UBlackboardData;
-class UBlackboardComponent;
-class UGameplayTaskResource;
 class UBehaviorTree;
-class UNavigationQueryFilter;
-class AActor;
 class UAIPerceptionComponent;
+class UBlackboardComponent;
+class AActor;
+class UGameplayTaskResource;
+class UNavigationQueryFilter;
 
 bool AAIController::UseBlackboard(UBlackboardData* BlackboardAsset, UBlackboardComponent*& BlackboardComponent) {
     return false;

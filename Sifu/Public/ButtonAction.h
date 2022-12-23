@@ -6,8 +6,8 @@
 #include "EActionMouseButtons.h"
 #include "ButtonAction.generated.h"
 
-class UTexture2D;
 class UGenericInputData;
+class UTexture2D;
 
 USTRUCT(BlueprintType)
 struct SIFU_API FButtonAction {

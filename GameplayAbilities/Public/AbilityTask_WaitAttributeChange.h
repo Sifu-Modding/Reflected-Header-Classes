@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameplayAttribute.h"
 #include "AbilityTask.h"
 #include "WaitAttributeChangeDelegateDelegate.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTag -FallbackName=GameplayTag
 #include "EWaitAttributeChangeComparison.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTag -FallbackName=GameplayTag
+#include "GameplayAttribute.h"
 #include "AbilityTask_WaitAttributeChange.generated.h"
 
 class UAbilitySystemComponent;

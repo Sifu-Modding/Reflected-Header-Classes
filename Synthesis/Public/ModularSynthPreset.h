@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ESynthFilterType.h"
-#include "ESynthStereoDelayMode.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=TableRowBase -FallbackName=TableRowBase
-#include "ESynthLFOPatchType.h"
-#include "ESynthLFOMode.h"
 #include "ESynthLFOType.h"
 #include "ESynth1OscType.h"
+#include "ESynthLFOPatchType.h"
 #include "ESynthModEnvBiasPatch.h"
-#include "ESynthFilterAlgorithm.h"
 #include "ESynthModEnvPatch.h"
+#include "ESynthLFOMode.h"
+#include "ESynthFilterType.h"
+#include "ESynthStereoDelayMode.h"
+#include "ESynthFilterAlgorithm.h"
 #include "EpicSynth1Patch.h"
 #include "ModularSynthPreset.generated.h"
 

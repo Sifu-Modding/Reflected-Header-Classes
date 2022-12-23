@@ -2,10 +2,10 @@
 #include "Net/UnrealNetwork.h"
 
 class AActor;
-class AVitalPointActor;
 class UTargetDB;
-class UCombo;
 class AInteractiveMovable;
+class UCombo;
+class AVitalPointActor;
 class UFocusDB;
 class AThrowableActor;
 class APushableActor;

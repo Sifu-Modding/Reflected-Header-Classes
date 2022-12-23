@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "InAppPurchaseQuery2ResultDelegate.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
+#include "InAppPurchaseQuery2ResultDelegate.h"
 #include "InAppPurchaseQueryCallbackProxy2.generated.h"
 
 class UInAppPurchaseQueryCallbackProxy2;

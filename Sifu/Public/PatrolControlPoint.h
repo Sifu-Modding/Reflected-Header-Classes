@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ESpeedState.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=AnimContainer -FallbackName=AnimContainer
+#include "ESpeedState.h"
 #include "PatrolControlPoint.generated.h"
 
 USTRUCT(BlueprintType)

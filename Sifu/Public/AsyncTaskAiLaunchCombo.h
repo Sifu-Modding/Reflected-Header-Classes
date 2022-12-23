@@ -6,8 +6,8 @@
 #include "AIComboLaunchParameters.h"
 #include "AsyncTaskAiLaunchCombo.generated.h"
 
-class UAsyncTaskAiLaunchCombo;
 class UAIFightingComponent;
+class UAsyncTaskAiLaunchCombo;
 class UAIActionLaunchCombo;
 
 UCLASS()

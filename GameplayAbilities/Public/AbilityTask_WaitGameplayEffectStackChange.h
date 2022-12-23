@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "WaitGameplayEffectStackChangeDelegateDelegate.h"
 #include "AbilityTask.h"
+#include "WaitGameplayEffectStackChangeDelegateDelegate.h"
 #include "ActiveGameplayEffectHandle.h"
 #include "AbilityTask_WaitGameplayEffectStackChange.generated.h"
 

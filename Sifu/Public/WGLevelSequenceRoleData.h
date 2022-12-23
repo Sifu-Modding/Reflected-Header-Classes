@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ELevelSequenceAIBehavior.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCLevelSequenceRoleData -FallbackName=SCLevelSequenceRoleData
 #include "EQuadrantTypes.h"
+#include "ELevelSequenceAIBehavior.h"
 #include "WGLevelSequenceRoleData.generated.h"
 
 UCLASS()

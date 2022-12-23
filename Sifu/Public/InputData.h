@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GenericInputData.h"
 #include "InputBehaviourStruct.h"
+#include "GenericInputData.h"
 #include "InputData.generated.h"
 
 UCLASS()

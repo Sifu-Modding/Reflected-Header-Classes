@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "AbilityTask.h"
 #include "MontageWaitSimpleDelegateDelegate.h"
+#include "AbilityTask.h"
 #include "AbilityTask_PlayMontageAndWait.generated.h"
 
 class UAnimMontage;

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EMoveTransitionType.h"
 #include "AnimStructBase.h"
+#include "EMoveTransitionType.h"
 #include "AnimStructMoveTransition.generated.h"
 
 USTRUCT(BlueprintType)

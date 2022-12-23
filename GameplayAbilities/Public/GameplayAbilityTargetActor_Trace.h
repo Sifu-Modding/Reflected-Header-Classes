@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameplayAbilityTargetActor.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=CollisionProfileName -FallbackName=CollisionProfileName
+#include "GameplayAbilityTargetActor.h"
 #include "GameplayAbilityTargetActor_Trace.generated.h"
 
 UCLASS(Abstract, Config=Game)

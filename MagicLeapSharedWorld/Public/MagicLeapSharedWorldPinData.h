@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Guid -FallbackName=Guid
 //CROSS-MODULE INCLUDE V2: -ModuleName=MagicLeapARPin -ObjectName=MagicLeapARPinState -FallbackName=MagicLeapARPinState
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Guid -FallbackName=Guid
 #include "MagicLeapSharedWorldPinData.generated.h"
 
 USTRUCT(BlueprintType)

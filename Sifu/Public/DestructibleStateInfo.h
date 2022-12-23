@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "DestructibleStateInfo.generated.h"
 
-class UStaticMesh;
 class USkeletalMesh;
+class UStaticMesh;
 
 USTRUCT(BlueprintType)
 struct FDestructibleStateInfo {

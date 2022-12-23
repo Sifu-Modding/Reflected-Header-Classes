@@ -3,8 +3,8 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=AnimNotify -FallbackName=AnimNotify
 #include "SCBlueprintNotify.generated.h"
 
-class USkeletalMeshComponent;
 class UAnimSequenceBase;
+class USkeletalMeshComponent;
 
 UCLASS(Abstract, CollapseCategories)
 class SIFU_API USCBlueprintNotify : public UAnimNotify {

@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCBasePlayerController -FallbackName=SCBasePlayerController
 #include "EActivityWantedState.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCBasePlayerController -FallbackName=SCBasePlayerController
 #include "SCPlayerController.generated.h"
 
-class AActor;
 class UInputContextData;
 class UUserWidget;
+class AActor;
 class UGenericErrorPopupWidget;
 
 UCLASS()

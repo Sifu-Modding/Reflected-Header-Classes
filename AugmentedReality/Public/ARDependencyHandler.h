@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EARServicePermissionRequestResult.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=LatentActionInfo -FallbackName=LatentActionInfo
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
+#include "EARServicePermissionRequestResult.h"
 #include "EARServiceAvailability.h"
 #include "EARServiceInstallRequestResult.h"
 #include "ARDependencyHandler.generated.h"

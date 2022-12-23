@@ -3,8 +3,8 @@
 #include "Templates/SubclassOf.h"
 #include "MovieSceneTrackInstanceComponent.generated.h"
 
-class UMovieSceneSection;
 class UMovieSceneTrackInstance;
+class UMovieSceneSection;
 
 USTRUCT()
 struct FMovieSceneTrackInstanceComponent {

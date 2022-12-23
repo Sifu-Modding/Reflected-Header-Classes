@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "CachedRigElement.h"
-#include "EBoneGetterSetterMode.h"
-#include "RigElementKey.h"
 #include "RigUnitMutable.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Transform -FallbackName=Transform
+#include "RigElementKey.h"
+#include "EBoneGetterSetterMode.h"
 #include "RigUnit_SetTransform.generated.h"
 
 USTRUCT()

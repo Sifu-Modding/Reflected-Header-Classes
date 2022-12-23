@@ -1,5 +1,6 @@
 #include "ReplaySystem.h"
 
+class APlayerController;
 class UObject;
 class AFightingCharacter;
 class AActor;
@@ -7,6 +8,9 @@ class UReplaySystem;
 class UReplayManagement;
 class AReplayController;
 class USCDemoNetDriver;
+
+void UReplaySystem::BPF_StopRecordingAndContinueWith(APlayerController* _controller, FStopRecordingContinue _onContinue, const EReplayStopRecordingReason _eReason) {
+}
 
 void UReplaySystem::BPF_StopRecording(const EReplayStopRecordingReason _eReason) {
 }

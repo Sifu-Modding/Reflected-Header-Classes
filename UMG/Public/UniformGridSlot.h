@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "PanelSlot.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=EVerticalAlignment -FallbackName=EVerticalAlignment
+#include "PanelSlot.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=EHorizontalAlignment -FallbackName=EHorizontalAlignment
 #include "UniformGridSlot.generated.h"
 

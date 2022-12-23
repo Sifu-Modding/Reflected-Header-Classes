@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "OrderService.h"
 #include "EQuadrantTypes.h"
+#include "OrderService.h"
 #include "ForceQuadrantOrderService.generated.h"
 
 UCLASS(EditInlineNew)

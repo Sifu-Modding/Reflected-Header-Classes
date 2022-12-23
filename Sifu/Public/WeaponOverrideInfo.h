@@ -3,8 +3,8 @@
 #include "Templates/SubclassOf.h"
 #include "BaseWeaponOverrideInfo.h"
 #include "LocomotionPaceSelector.h"
-#include "ComboOverride.h"
 #include "EAIWuguanTicketEvaluation.h"
+#include "ComboOverride.h"
 #include "ESCAICombatRoles.h"
 #include "WeaponOverrideInfo.generated.h"
 

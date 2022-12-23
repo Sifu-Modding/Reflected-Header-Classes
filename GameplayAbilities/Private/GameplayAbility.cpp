@@ -2,8 +2,8 @@
 #include "Templates/SubclassOf.h"
 
 class UGameplayEffect;
-class USkeletalMeshComponent;
 class AActor;
+class USkeletalMeshComponent;
 class UObject;
 class UAnimMontage;
 class UAbilitySystemComponent;

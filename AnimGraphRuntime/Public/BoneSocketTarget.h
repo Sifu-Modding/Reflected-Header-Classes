@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SocketReference.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BoneReference -FallbackName=BoneReference
+#include "SocketReference.h"
 #include "BoneSocketTarget.generated.h"
 
 USTRUCT(BlueprintType)

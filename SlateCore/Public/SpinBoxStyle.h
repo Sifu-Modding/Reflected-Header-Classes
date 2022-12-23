@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SlateWidgetStyle.h"
 #include "Margin.h"
-#include "SlateBrush.h"
 #include "SlateColor.h"
+#include "SlateBrush.h"
+#include "SlateWidgetStyle.h"
 #include "SpinBoxStyle.generated.h"
 
 USTRUCT(BlueprintType)

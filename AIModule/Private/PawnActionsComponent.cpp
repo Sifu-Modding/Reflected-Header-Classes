@@ -1,7 +1,7 @@
 #include "PawnActionsComponent.h"
 
-class UPawnAction;
 class APawn;
+class UPawnAction;
 class UObject;
 
 bool UPawnActionsComponent::K2_PushAction(UPawnAction* NewAction, TEnumAsByte<EAIRequestPriority::Type> Priority, UObject* Instigator) {

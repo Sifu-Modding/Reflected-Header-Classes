@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "EMenuEnum.h"
 #include "BaseStartMenu.h"
 #include "EStartupMenuState.h"
 #include "EPlayerScreenSide.h"
-#include "EMenuEnum.h"
 #include "StartupMenu.generated.h"
 
 class AActor;

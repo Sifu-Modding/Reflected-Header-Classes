@@ -5,11 +5,11 @@
 #include "ENiagaraPreviewGridResetMode.h"
 #include "NiagaraPreviewGrid.generated.h"
 
-class UNiagaraSystem;
 class ANiagaraPreviewBase;
+class UNiagaraSystem;
 class UNiagaraPreviewAxis;
-class UChildActorComponent;
 class UNiagaraComponent;
+class UChildActorComponent;
 
 UCLASS()
 class ANiagaraPreviewGrid : public AActor {

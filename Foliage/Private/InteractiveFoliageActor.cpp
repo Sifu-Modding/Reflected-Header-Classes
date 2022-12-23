@@ -1,8 +1,8 @@
 #include "InteractiveFoliageActor.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=CapsuleComponent -FallbackName=CapsuleComponent
 
-class AActor;
 class UPrimitiveComponent;
+class AActor;
 
 void AInteractiveFoliageActor::CapsuleTouched(UPrimitiveComponent* OverlappedComp, AActor* Other, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& OverlapInfo) {
 }

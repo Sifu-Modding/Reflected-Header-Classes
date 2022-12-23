@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SCGameplayAbilityActorInfo.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=AnimContainer -FallbackName=AnimContainer
 #include "SCGameplayAbility.h"
-#include "HitBox.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=ESCCardinalPoints -FallbackName=ESCCardinalPoints
+#include "HitBox.h"
+#include "SCGameplayAbilityActorInfo.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=GameplayAbilities -ObjectName=GameplayEventData -FallbackName=GameplayEventData
 #include "AvoidAbility.generated.h"
 

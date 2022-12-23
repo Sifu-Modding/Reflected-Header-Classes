@@ -1,27 +1,27 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "DefenseGauge.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ActorComponent -FallbackName=ActorComponent
-//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCPoolableActorComponent -FallbackName=SCPoolableActorComponent
-#include "EGuardType.h"
-#include "EFightingState.h"
 #include "EOrderType.h"
-#include "ActionConditions.h"
+#include "EGuardType.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCPoolableActorComponent -FallbackName=SCPoolableActorComponent
+#include "EFightingState.h"
 #include "GuardUpdateStruct.h"
-#include "HitDescription.h"
+#include "ActionConditions.h"
 #include "FightingStateElement.h"
+#include "DefenseGauge.h"
+#include "HitDescription.h"
 #include "DefenseComponent.generated.h"
 
-class UAttackPropertiesResistanceDB;
-class AFightingCharacter;
-class UEffectData;
+class UHealthComponent;
+class UCurveFloat;
 class UParryDB;
 class UAvoidDB;
 class UGuardDB;
-class UCurveFloat;
 class UAbsorbDB;
+class UAttackPropertiesResistanceDB;
 class UFightingMovementComponent;
-class UHealthComponent;
+class UEffectData;
+class AFightingCharacter;
 class UVitalPointDB;
 
 UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

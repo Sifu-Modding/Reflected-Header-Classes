@@ -1,33 +1,33 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "EDefenseTactics.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
 #include "ESpeedState.h"
-#include "ESCAICombatRoles.h"
-#include "EditableOrderType.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=FloatRange -FallbackName=FloatRange
 #include "EAIGameplayStates.h"
+#include "EditableOrderType.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=CollisionResponseContainer -FallbackName=CollisionResponseContainer
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ECollisionChannel -FallbackName=ECollisionChannel
-#include "AIAttackHitDetectionVolume.h"
-#include "EAIPositioningOption.h"
-#include "EAIChangeToIndirectRoleStates.h"
-#include "NavAreaPerRange.h"
-#include "EOrderType.h"
-#include "AIDominationGaugeSteps.h"
 #include "TimerAndOffset.h"
+#include "AIAttackHitDetectionVolume.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ECollisionChannel -FallbackName=ECollisionChannel
+#include "EAIPositioningOption.h"
+#include "AIDominationGaugeSteps.h"
+#include "NavAreaPerRange.h"
+#include "ESCAICombatRoles.h"
 #include "EAIWuguanTicketEvaluation.h"
+#include "EAIChangeToIndirectRoleStates.h"
+#include "EOrderType.h"
+#include "EDefenseTactics.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Int32Range -FallbackName=Int32Range
 #include "GlobalAISettings.generated.h"
 
-class AAIDirectorActor;
-class UNavigationQueryFilter;
 class UDodgeTypeUseCaseMatrix;
 class UNavArea;
 class UTraversalDB;
 class UAIMasterArchetype;
 class UCurveFloat;
+class UNavigationQueryFilter;
+class AAIDirectorActor;
 
 UCLASS(DefaultConfig, Config=WuguanAI)
 class SIFU_API UGlobalAISettings : public UObject {

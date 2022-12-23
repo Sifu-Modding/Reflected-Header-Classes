@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "OnMenuOpenChangedEventDelegate.h"
-#include "ContentWidget.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=EMenuPlacement -FallbackName=EMenuPlacement
-#include "Widget.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector2D -FallbackName=Vector2D
+#include "ContentWidget.h"
+#include "Widget.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=EMenuPlacement -FallbackName=EMenuPlacement
+#include "OnMenuOpenChangedEventDelegate.h"
 #include "MenuAnchor.generated.h"
 
 class UUserWidget;

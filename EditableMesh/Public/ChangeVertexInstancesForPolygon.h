@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "VertexInstancesForPolygonHole.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=MeshDescription -ObjectName=PolygonID -FallbackName=PolygonID
 #include "VertexIndexAndInstanceID.h"
+#include "VertexInstancesForPolygonHole.h"
 #include "ChangeVertexInstancesForPolygon.generated.h"
 
 USTRUCT(BlueprintType)

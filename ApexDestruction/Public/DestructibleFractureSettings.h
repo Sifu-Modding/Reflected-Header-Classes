@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
-#include "DestructibleChunkParameters.h"
-#include "FractureMaterial.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
+#include "FractureMaterial.h"
+#include "DestructibleChunkParameters.h"
 #include "DestructibleFractureSettings.generated.h"
 
 class UMaterialInterface;

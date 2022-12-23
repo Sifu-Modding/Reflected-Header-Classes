@@ -1,25 +1,25 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCUserDefinedEnumHandler -FallbackName=SCUserDefinedEnumHandler
+#include "MappingID.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
-#include "InputContext.h"
 #include "InputMappingProfileData.h"
-#include "InputPresetsEnumHandler.h"
 #include "InputMappingGroup.h"
+#include "InputPresetsEnumHandler.h"
+#include "InputContext.h"
 #include "InputMappingKeySlotContainer.h"
 #include "InputMappingData.h"
-#include "MappingValidationError.h"
-#include "MappingID.h"
-#include "InputAction.h"
 #include "InputMappingProfileEnumHandler.h"
+#include "MappingValidationError.h"
+#include "InputAction.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCUserDefinedEnumHandler -FallbackName=SCUserDefinedEnumHandler
 #include "InputMappingNode.h"
 #include "EKeyboardLayout.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Int32Range -FallbackName=Int32Range
 #include "InputMappingHelpers.generated.h"
 
+class UGenericInputData;
 class ASCPlayerController;
 class UInputMappingProfileDB;
-class UGenericInputData;
 
 UCLASS(BlueprintType)
 class UInputMappingHelpers : public UBlueprintFunctionLibrary {

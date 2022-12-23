@@ -6,8 +6,8 @@
 #include "InteractionHintInfo.h"
 #include "InteractionDetectionComponent.generated.h"
 
-class UInteractionObjectComponent;
 class AActor;
+class UInteractionObjectComponent;
 
 UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class SIFU_API UInteractionDetectionComponent : public UActorComponent {

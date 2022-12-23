@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ActorComponent -FallbackName=ActorComponent
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Rotator -FallbackName=Rotator
 #include "BlackboardComponent.generated.h"
 
-class UBlackboardData;
-class UBrainComponent;
 class UBlackboardKeyType;
+class UBrainComponent;
+class UBlackboardData;
 class UObject;
 
 UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

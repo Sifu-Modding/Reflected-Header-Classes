@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "InputMapping.h"
 #include "InputAction.h"
+#include "InputMapping.h"
 #include "InputMappingGroup.generated.h"
 
 USTRUCT(BlueprintType)

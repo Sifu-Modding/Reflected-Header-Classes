@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "MovieSceneSequenceID.h"
 #include "MovieSceneTrackIdentifier.h"
+#include "MovieSceneSequenceID.h"
 #include "MovieSceneEvaluationFieldTrackPtr.generated.h"
 
 USTRUCT(BlueprintType)

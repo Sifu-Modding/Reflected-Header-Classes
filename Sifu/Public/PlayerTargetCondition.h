@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "BaseActorCondition.h"
-#include "EActionType.h"
 #include "BaseActorTargetConditionInstance.h"
+#include "EActionType.h"
 #include "PlayerTargetCondition.generated.h"
 
 UCLASS()

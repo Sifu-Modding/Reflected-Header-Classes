@@ -4,8 +4,8 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Guid -FallbackName=Guid
 #include "ProceduralFoliageComponent.generated.h"
 
-class UProceduralFoliageSpawner;
 class AVolume;
+class UProceduralFoliageSpawner;
 
 UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FOLIAGE_API UProceduralFoliageComponent : public UActorComponent {

@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "HUDUserWidget.h"
 #include "EMenuEnum.h"
+#include "HUDUserWidget.h"
 #include "InGameNotification.generated.h"
 
 class UMessageNotification;
-class UProgressionRewardNotification;
 class UBaseNotification;
+class UProgressionRewardNotification;
 class UAttackProgressNotification;
-class ULevelUpNotification;
 class UProgressionDoorNotification;
+class ULevelUpNotification;
 
 UCLASS(EditInlineNew)
 class UInGameNotification : public UHUDUserWidget {

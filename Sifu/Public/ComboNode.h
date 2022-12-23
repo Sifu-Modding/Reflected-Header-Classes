@@ -2,11 +2,11 @@
 #include "CoreMinimal.h"
 #include "ComboTransitions.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTagContainer -FallbackName=GameplayTagContainer
-#include "ComboNodeAttackInfos.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTag -FallbackName=GameplayTag
+#include "ComboNodeAttackInfos.h"
+#include "EComboTransition.h"
 #include "AIActionAttackClassInstance.h"
 #include "AvailabilityLayerContainer.h"
-#include "EComboTransition.h"
 #include "ComboNode.generated.h"
 
 class UComboEvent;

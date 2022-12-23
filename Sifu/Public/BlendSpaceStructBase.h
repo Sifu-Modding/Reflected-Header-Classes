@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SwapperStructBase.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
+#include "SwapperStructBase.h"
 #include "BlendSpaceStructBase.generated.h"
 
 class UBlendSpaceBase;

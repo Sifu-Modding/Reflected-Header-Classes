@@ -5,9 +5,9 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 #include "AimingBillboardActor.generated.h"
 
+class AActor;
 class AAimingBillboardActor;
 class UBoxComponent;
-class AActor;
 
 UCLASS()
 class SIFU_API AAimingBillboardActor : public ASCActor {

@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "EClusterUnionMethod.h"
+#include "SolverBreakingFilterSettings.h"
 #include "SolverCollisionFilterSettings.h"
 #include "SolverTrailingFilterSettings.h"
-#include "SolverBreakingFilterSettings.h"
 #include "ChaosSolverConfiguration.generated.h"
 
 USTRUCT(BlueprintType)

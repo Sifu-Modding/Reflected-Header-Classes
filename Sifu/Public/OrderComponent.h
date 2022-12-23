@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ActorComponent -FallbackName=ActorComponent
+#include "EOrderAccessMode.h"
+#include "OrderInfosInstanceMap.h"
+#include "EOrderType.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCPoolableActorComponent -FallbackName=SCPoolableActorComponent
+#include "OrderType.h"
 #include "Buffer.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=UniqueNetIdRepl -FallbackName=UniqueNetIdRepl
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ActorComponent -FallbackName=ActorComponent
-//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCPoolableActorComponent -FallbackName=SCPoolableActorComponent
-#include "OrderInfosInstanceMap.h"
-#include "OrderType.h"
-#include "EOrderType.h"
 #include "OrderTransformData.h"
-#include "EOrderAccessMode.h"
 #include "OrderComponent.generated.h"
 
 class UOrderDelegateHandler;

@@ -5,9 +5,9 @@
 #include "LevelSequencePlayerSnapshot.h"
 #include "LevelSequenceBurnIn.generated.h"
 
-class ULevelSequenceBurnInInitSettings;
-class ALevelSequenceActor;
 class UObject;
+class ALevelSequenceActor;
+class ULevelSequenceBurnInInitSettings;
 
 UCLASS(EditInlineNew)
 class LEVELSEQUENCE_API ULevelSequenceBurnIn : public UUserWidget {

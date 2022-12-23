@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EMoveStatus.h"
 #include "BaseActorCondition.h"
+#include "EMoveStatus.h"
 #include "MoveStatusCondition.generated.h"
 
 UCLASS()

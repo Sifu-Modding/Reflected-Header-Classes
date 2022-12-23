@@ -3,8 +3,8 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=LevelScriptActor -FallbackName=LevelScriptActor
 #include "SCLevelScriptActor.generated.h"
 
-class UDataTable;
 class ALevelSequenceActor;
+class UDataTable;
 
 UCLASS()
 class SCCORE_API ASCLevelScriptActor : public ALevelScriptActor {

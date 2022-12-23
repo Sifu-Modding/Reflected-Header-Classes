@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "EBounceType.h"
-#include "HitBox.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=FloatRange -FallbackName=FloatRange
 #include "EHeight.h"
+#include "HitBox.h"
+#include "EBounceType.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=FloatRange -FallbackName=FloatRange
 #include "ThrowableData.generated.h"
 
-class UCurveFloat;
 class UTargetSettingsDB;
+class UCurveFloat;
 
 UCLASS(BlueprintType)
 class SIFU_API UThrowableData : public UObject {

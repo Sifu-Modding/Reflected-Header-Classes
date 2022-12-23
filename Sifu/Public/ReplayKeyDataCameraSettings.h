@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ReplayKeyDataLensSettings.h"
 #include "ReplayKeyDataFocusSettings.h"
+#include "ReplayKeyDataLensSettings.h"
 #include "ReplayKeyDataCameraSettings.generated.h"
 
 USTRUCT(BlueprintType)

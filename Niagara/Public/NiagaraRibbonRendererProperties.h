@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "NiagaraRendererProperties.h"
 #include "NiagaraVariableAttributeBinding.h"
-#include "ENiagaraRibbonFacingMode.h"
 #include "ENiagaraRibbonTessellationMode.h"
+#include "NiagaraRendererProperties.h"
 #include "ENiagaraRibbonDrawDirection.h"
+#include "ENiagaraRibbonFacingMode.h"
 #include "NiagaraUserParameterBinding.h"
 #include "NiagaraRibbonUVSettings.h"
 #include "NiagaraRibbonRendererProperties.generated.h"

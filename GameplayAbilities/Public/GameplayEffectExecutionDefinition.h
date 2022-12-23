@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
+#include "ConditionalGameplayEffect.h"
 #include "GameplayEffectExecutionScopedModifierInfo.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTagContainer -FallbackName=GameplayTagContainer
-#include "ConditionalGameplayEffect.h"
 #include "GameplayEffectExecutionDefinition.generated.h"
 
 class UGameplayEffectExecutionCalculation;

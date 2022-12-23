@@ -1,36 +1,36 @@
 #include "FightingCharacter.h"
 #include "Net/UnrealNetwork.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=CapsuleComponent -FallbackName=CapsuleComponent
-#include "ReplayFightingCharacterComponent.h"
-#include "DefenseComponent.h"
 #include "CharacterHitBoxComponent.h"
-#include "SCAbilitySystemComponent.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=PhysicalAnimationComponent -FallbackName=PhysicalAnimationComponent
-#include "CharacterHealthComponent.h"
-#include "MessengerComponent.h"
+#include "DefenseComponent.h"
+#include "SCAbilitySystemComponent.h"
+#include "ReplayFightingCharacterComponent.h"
 #include "TargetableActorComponent.h"
+#include "CharacterHealthComponent.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=CapsuleComponent -FallbackName=CapsuleComponent
+#include "MessengerComponent.h"
 #include "ReplayablePhysicsComponent.h"
 #include "FightingCharAnimRepComponent.h"
 
 class AActor;
-class UPrimitiveComponent;
-class UASMComponent;
-class UCameraComponentThird;
-class UOrderComponent;
-class UMaterialInterface;
-class UActorComponent;
 class UEffectData;
+class UOrderComponent;
+class UPrimitiveComponent;
+class UAIFightingComponent;
 class UPlayerFightingComponent;
 class UAttackComponent;
-class UAIFightingComponent;
+class UMaterialInterface;
 class UAvailabilityLayerData;
-class USkeletalMeshComponent;
-class UHitComponent;
+class UDeathDB;
+class UStatsComponent;
+class UPlayerAnim;
 class AInteractiveMovable;
 class ABaseWeapon;
-class UStatsComponent;
-class UDeathDB;
-class UPlayerAnim;
+class USkeletalMeshComponent;
+class UHitComponent;
+class UASMComponent;
+class UCameraComponentThird;
+class UActorComponent;
 
 void AFightingCharacter::SetTarget(AActor* _target) {
 }

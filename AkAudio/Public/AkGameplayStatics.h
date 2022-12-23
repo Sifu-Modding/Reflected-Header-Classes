@@ -1,37 +1,37 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "PanningRule.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Rotator -FallbackName=Rotator
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=EAttachLocation -FallbackName=EAttachLocation
+#include "EAkCurveInterpolation.h"
 #include "OnAkBankCallbackDelegate.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
+#include "OnSetCurrentAudioCultureCallbackDelegate.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=LatentActionInfo -FallbackName=LatentActionInfo
-#include "OnAkPostEventCallbackDelegate.h"
+#include "AkActionOnEventType.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Rotator -FallbackName=Rotator
+#include "PanningRule.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Transform -FallbackName=Transform
 #include "AkMultiPositionType.h"
 #include "AkChannelMask.h"
 #include "AkChannelConfiguration.h"
-#include "OnSetCurrentAudioCultureCallbackDelegate.h"
+#include "OnAkPostEventCallbackDelegate.h"
 #include "AkExternalSourceInfo.h"
 #include "ERTPCValueType.h"
-#include "AkActionOnEventType.h"
-#include "EAkCurveInterpolation.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=EAttachLocation -FallbackName=EAttachLocation
 #include "AkGameplayStatics.generated.h"
 
-class UAkAudioBank;
-class UAkComponent;
 class AActor;
 class UAkAuxBus;
-class UAkAudioType;
-class UAkTrigger;
+class UAkAudioBank;
 class UObject;
-class UAkRtpc;
+class UAkComponent;
 class UAkAudioEvent;
 class UAkSwitchValue;
 class UAkStateValue;
+class UAkRtpc;
 class USceneComponent;
+class UAkTrigger;
 class UAkMediaAsset;
+class UAkAudioType;
 
 UCLASS(BlueprintType)
 class AKAUDIO_API UAkGameplayStatics : public UBlueprintFunctionLibrary {

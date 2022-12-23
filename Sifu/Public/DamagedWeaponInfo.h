@@ -3,8 +3,8 @@
 #include "Templates/SubclassOf.h"
 #include "DamagedWeaponInfo.generated.h"
 
-class UBaseWeaponData;
 class UWeaponGameplayData;
+class UBaseWeaponData;
 class USkeletalMesh;
 
 USTRUCT(BlueprintType)

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "TargetableActor.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCActor -FallbackName=SCActor
+#include "TargetableActor.h"
 #include "ClusterStruct.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 #include "ClusterActor.generated.h"

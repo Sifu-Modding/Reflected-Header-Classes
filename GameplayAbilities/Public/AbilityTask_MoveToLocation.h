@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 #include "AbilityTask.h"
 #include "MoveToLocationDelegateDelegate.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 #include "AbilityTask_MoveToLocation.generated.h"
 
 class UCurveFloat;
-class UCurveVector;
 class UAbilityTask_MoveToLocation;
+class UCurveVector;
 class UGameplayAbility;
 
 UCLASS()

@@ -4,9 +4,9 @@
 #include "OnlineLogoutResultDelegate.h"
 #include "LogoutCallbackProxy.generated.h"
 
-class ULogoutCallbackProxy;
 class UObject;
 class APlayerController;
+class ULogoutCallbackProxy;
 
 UCLASS(MinimalAPI)
 class ULogoutCallbackProxy : public UBlueprintAsyncActionBase {

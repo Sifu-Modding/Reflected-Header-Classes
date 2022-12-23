@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EFightingState.h"
 #include "HitActionLauncher.h"
-#include "EQuadrantTypes.h"
-#include "AnimSyncContainer.h"
-#include "EOrderType.h"
-#include "HitDescription.h"
 #include "EditableOrderType.h"
+#include "EOrderType.h"
+#include "EQuadrantTypes.h"
+#include "EFightingState.h"
+#include "HitDescription.h"
 #include "OverridingHitBox.h"
+#include "AnimSyncContainer.h"
 #include "WeaponAnimInfo.h"
 #include "SynchronizedAttackHitActionLauncher.generated.h"
 

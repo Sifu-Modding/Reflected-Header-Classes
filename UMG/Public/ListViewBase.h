@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "Widget.h"
-#include "OnListEntryGeneratedDynamicDelegate.h"
 #include "OnListEntryReleasedDynamicDelegate.h"
+#include "Widget.h"
 #include "ESlateVisibility.h"
+#include "OnListEntryGeneratedDynamicDelegate.h"
 #include "UserWidgetPool.h"
 #include "ListViewBase.generated.h"
 

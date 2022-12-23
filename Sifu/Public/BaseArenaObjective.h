@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "EScoreComparisonType.h"
 #include "WGAchievementUnlockCondition.h"
 #include "OnStarsCountChangedDelegate.h"
 #include "OnScoreChangedDelegate.h"
 #include "EDownState.h"
-#include "EScoreComparisonType.h"
 #include "BaseArenaObjective.generated.h"
 
 class UCharacterHealthComponent;

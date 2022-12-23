@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "InputAction.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=AIModule -ObjectName=BTTaskNode -FallbackName=BTTaskNode
+#include "InputAction.h"
 #include "TraversalBTTask.generated.h"
 
 UCLASS(Abstract)

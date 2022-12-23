@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
-#include "GameOptionOverride.h"
 #include "EGameOptionTypes.h"
+#include "GameOptionOverride.h"
 #include "GameOptionTypeHelper.generated.h"
 
 UCLASS(BlueprintType)

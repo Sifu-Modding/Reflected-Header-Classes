@@ -3,8 +3,8 @@
 
 class UAbilityTask_ApplyRootMotionJumpForce;
 class UGameplayAbility;
-class UCurveFloat;
 class UCurveVector;
+class UCurveFloat;
 
 void UAbilityTask_ApplyRootMotionJumpForce::OnLandedCallback(const FHitResult& Hit) {
 }

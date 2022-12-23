@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "EWeightBinaryOperator.h"
 #include "BaseTargetEvaluation.h"
 #include "InputAction.h"
-#include "EWeightBinaryOperator.h"
 #include "TE_DirectionalWeightEvaluation.generated.h"
 
 class UBaseDirectionalTargetWeightEvaluation;

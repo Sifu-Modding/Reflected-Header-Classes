@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "LookAtConfig.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Rotator -FallbackName=Rotator
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCAnimInstance -FallbackName=SCAnimInstance
 #include "AimOffsetStruct.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector2D -FallbackName=Vector2D
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=ELookAtApplyMode -FallbackName=ELookAtApplyMode
-#include "ELookAtRefDirMode.h"
-#include "LookAtModifierParams.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Rotator -FallbackName=Rotator
-#include "ELookAtTargetType.h"
 #include "LookAtLocomotionLimits.h"
+#include "ELookAtRefDirMode.h"
+#include "LookAtConfig.h"
+#include "ELookAtTargetType.h"
+#include "LookAtModifierParams.h"
 #include "LookAtLimits.h"
 #include "ETransitionGlobalType.h"
 #include "LookAtAnimInstance.generated.h"

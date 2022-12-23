@@ -3,8 +3,8 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
 #include "EAIWuguanTicketEvaluation.h"
 #include "EAIAttackTicketJokerSituation.h"
-#include "AIAttackJokerSituationConfigsPerDominationStep.h"
 #include "SCAITicketEnum.h"
+#include "AIAttackJokerSituationConfigsPerDominationStep.h"
 #include "TicketSettings.generated.h"
 
 class UOrderDB;

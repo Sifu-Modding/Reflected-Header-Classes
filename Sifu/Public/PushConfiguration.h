@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "HitBox.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=ESCCardinalPoints -FallbackName=ESCCardinalPoints
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
 #include "TraversalInfo.h"
 #include "PushTraversalAnimContainer.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=ESCCardinalPoints -FallbackName=ESCCardinalPoints
 #include "PushAnims.h"
+#include "HitBox.h"
 #include "PushConfiguration.generated.h"
 
 class AFightingCharacter;

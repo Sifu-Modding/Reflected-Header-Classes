@@ -4,9 +4,9 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=EmptyOnlineDelegate__DelegateSignature -FallbackName=EmptyOnlineDelegateDelegate
 #include "DestroySessionCallbackProxy.generated.h"
 
-class APlayerController;
 class UDestroySessionCallbackProxy;
 class UObject;
+class APlayerController;
 
 UCLASS(MinimalAPI)
 class UDestroySessionCallbackProxy : public UOnlineBlueprintCallProxyBase {

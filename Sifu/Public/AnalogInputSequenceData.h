@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "GenericInputData.h"
-#include "AnalogInputSequenceStep.h"
 #include "EControllerIconAxisTypes.h"
+#include "AnalogInputSequenceStep.h"
 #include "AnalogInputSequenceData.generated.h"
 
 class UVectorInputData;

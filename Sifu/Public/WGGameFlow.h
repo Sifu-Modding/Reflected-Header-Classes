@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=EGameFlowTravelType -FallbackName=EGameFlowTravelType
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=GameFlow -FallbackName=GameFlow
-//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=ESCGameInstanceState -FallbackName=ESCGameInstanceState
-//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCDelegate -FallbackName=SCDelegate
-#include "EWorldTravelLoadSaveStrategy.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTag -FallbackName=GameplayTag
 #include "EMenuEnum.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=ESCGameInstanceState -FallbackName=ESCGameInstanceState
+#include "EWorldTravelLoadSaveStrategy.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCDelegate -FallbackName=SCDelegate
+//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTag -FallbackName=GameplayTag
+//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=EGameFlowTravelType -FallbackName=EGameFlowTravelType
 //CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTagContainer -FallbackName=GameplayTagContainer
 #include "EWGGameFlowMapOption.h"
 #include "WGGameFlow.generated.h"

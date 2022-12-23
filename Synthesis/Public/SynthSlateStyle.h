@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=SlateWidgetStyle -FallbackName=SlateWidgetStyle
 #include "ESynthSlateColorStyle.h"
 #include "ESynthSlateSizeType.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=SlateWidgetStyle -FallbackName=SlateWidgetStyle
 #include "SynthSlateStyle.generated.h"
 
 USTRUCT(BlueprintType)

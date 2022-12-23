@@ -2,17 +2,17 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ActorComponent -FallbackName=ActorComponent
+#include "ActorPerceptionInfoUpdatedDelegateDelegate.h"
 #include "PerceptionUpdatedDelegateDelegate.h"
 #include "ActorPerceptionUpdatedDelegateDelegate.h"
-#include "ActorPerceptionInfoUpdatedDelegateDelegate.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=EEndPlayReason -FallbackName=EEndPlayReason
 #include "ActorPerceptionBlueprintInfo.h"
 #include "AIPerceptionComponent.generated.h"
 
-class UAISenseConfig;
-class UAISense;
 class AAIController;
 class AActor;
+class UAISenseConfig;
+class UAISense;
 
 UCLASS(BlueprintType, ClassGroup=Custom, Config=Game, meta=(BlueprintSpawnableComponent))
 class AIMODULE_API UAIPerceptionComponent : public UActorComponent {

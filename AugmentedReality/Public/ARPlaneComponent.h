@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "ARComponent.h"
 #include "ARPlaneUpdatePayload.h"
-#include "EPlaneComponentDebugMode.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=LinearColor -FallbackName=LinearColor
+#include "EPlaneComponentDebugMode.h"
 #include "EARObjectClassification.h"
 #include "ARPlaneComponent.generated.h"
 

@@ -1,18 +1,18 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
-//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCUserDefinedEnumHandler -FallbackName=SCUserDefinedEnumHandler
-#include "SCAITicketEnum.h"
 #include "AIConditionClassInstance.h"
-#include "EAIAttackTicketJokerSituation.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
+#include "SCAITicketEnum.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCUserDefinedEnumHandler -FallbackName=SCUserDefinedEnumHandler
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
+#include "EAIAttackTicketJokerSituation.h"
 #include "AIHelpers.generated.h"
 
 class UAIFightingComponent;
 class APawn;
 class AFightingCharacter;
-class UObject;
 class AAISpawner;
+class UObject;
 class AActor;
 
 UCLASS(BlueprintType)

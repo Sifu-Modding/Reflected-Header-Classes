@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EGranularSynthSeekType.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=AudioMixer -ObjectName=SynthComponent -FallbackName=SynthComponent
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector2D -FallbackName=Vector2D
 #include "EGranularSynthEnvelopeType.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector2D -FallbackName=Vector2D
 #include "GranularSynth.generated.h"
 
 class USoundWave;

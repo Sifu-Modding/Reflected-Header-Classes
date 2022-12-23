@@ -5,9 +5,9 @@
 #include "DamageInfos.h"
 #include "AIWaveRefillDirector.generated.h"
 
+class AAISituationActor;
 class AAIWaveSpawner;
 class AFightingCharacter;
-class AAISituationActor;
 class ABaseCharacter;
 class AActor;
 

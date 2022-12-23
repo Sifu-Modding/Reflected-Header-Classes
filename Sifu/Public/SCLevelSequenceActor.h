@@ -4,8 +4,8 @@
 #include "SequenceBinding.h"
 #include "SCLevelSequenceActor.generated.h"
 
-class ACharacter;
 class ULevelSequence;
+class ACharacter;
 
 UCLASS()
 class SIFU_API ASCLevelSequenceActor : public ALevelSequenceActor {

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "OrderInfosInstance.h"
 #include "EOrderType.h"
+#include "OrderInfosInstance.h"
 #include "OrderInfosInstanceMap.generated.h"
 
 USTRUCT(BlueprintType)

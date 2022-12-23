@@ -2,9 +2,9 @@
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
 #include "AppliedHitImpact.h"
-#include "DeflectImpact.h"
 #include "HitImpact.h"
 #include "AppliedDeflectImpact.h"
+#include "DeflectImpact.h"
 #include "DeflectImpactHelpers.generated.h"
 
 class AFightingCharacter;

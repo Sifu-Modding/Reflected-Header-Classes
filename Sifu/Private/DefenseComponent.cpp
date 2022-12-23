@@ -3,8 +3,8 @@
 
 class UFightingMovementComponent;
 class UEffectData;
-class AFightingCharacter;
 class UHealthComponent;
+class AFightingCharacter;
 class UVitalPointDB;
 class UAttackPropertiesResistanceDB;
 class UGuardDB;

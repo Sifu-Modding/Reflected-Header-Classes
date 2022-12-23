@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RigElement.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=LinearColor -FallbackName=LinearColor
-#include "ERigControlType.h"
+#include "RigElement.h"
 #include "RigControlValue.h"
+#include "ERigControlType.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Transform -FallbackName=Transform
 #include "ERigControlAxis.h"
 #include "RigControl.generated.h"

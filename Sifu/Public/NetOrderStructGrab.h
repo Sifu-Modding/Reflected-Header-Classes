@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "NetOrderStructSnapAnim.h"
 #include "HitRequest.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=HitResult -FallbackName=HitResult
-#include "NetOrderStructSnapAnim.h"
 #include "ImpactResult.h"
 #include "DefenseAnimInfos.h"
 #include "NetOrderStructGrab.generated.h"

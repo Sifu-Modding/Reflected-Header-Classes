@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ETransformSpaceMode.h"
-#include "EApplyTransformMode.h"
 #include "RigUnitMutable.h"
+#include "ETransformSpaceMode.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Transform -FallbackName=Transform
 //CROSS-MODULE INCLUDE V2: -ModuleName=AnimationCore -ObjectName=TransformFilter -FallbackName=TransformFilter
+#include "EApplyTransformMode.h"
 #include "RigUnit_ApplyFK.generated.h"
 
 USTRUCT()

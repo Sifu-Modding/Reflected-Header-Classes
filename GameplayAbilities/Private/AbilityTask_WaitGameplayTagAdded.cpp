@@ -1,7 +1,7 @@
 #include "AbilityTask_WaitGameplayTagAdded.h"
 
-class UAbilityTask_WaitGameplayTagAdded;
 class UGameplayAbility;
+class UAbilityTask_WaitGameplayTagAdded;
 class AActor;
 
 UAbilityTask_WaitGameplayTagAdded* UAbilityTask_WaitGameplayTagAdded::WaitGameplayTagAdd(UGameplayAbility* OwningAbility, FGameplayTag Tag, AActor* InOptionalExternalTarget, bool OnlyTriggerOnce) {

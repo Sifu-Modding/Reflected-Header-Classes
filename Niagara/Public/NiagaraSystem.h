@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "NiagaraSystemScalabilityOverride.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=FXSystemAsset -FallbackName=FXSystemAsset
 #include "NiagaraSystemScalabilityOverrides.h"
-#include "NiagaraEmitterHandle.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=FXSystemAsset -FallbackName=FXSystemAsset
+#include "NiagaraSystemScalabilityOverride.h"
 #include "NiagaraSystemCompiledData.h"
+#include "NiagaraEmitterHandle.h"
 #include "NiagaraUserRedirectionParameterStore.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Box -FallbackName=Box
 #include "NiagaraSystem.generated.h"

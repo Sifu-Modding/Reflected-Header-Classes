@@ -3,8 +3,8 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
 #include "ReplayCutManagement.generated.h"
 
-class UReplayKey;
 class UReplayTimelineModel;
+class UReplayKey;
 
 UCLASS(BlueprintType)
 class SIFU_API UReplayCutManagement : public UObject {

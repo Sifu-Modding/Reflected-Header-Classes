@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
-//CROSS-MODULE INCLUDE V2: -ModuleName=Chaos -ObjectName=RecordedTransformTrack -FallbackName=RecordedTransformTrack
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Guid -FallbackName=Guid
+//CROSS-MODULE INCLUDE V2: -ModuleName=Chaos -ObjectName=RecordedTransformTrack -FallbackName=RecordedTransformTrack
 #include "GeometryCollectionCache.generated.h"
 
 class UGeometryCollection;

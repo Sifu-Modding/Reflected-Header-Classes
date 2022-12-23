@@ -1,25 +1,25 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EMcDominationGaugeSteps.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=Actor -FallbackName=Actor
-#include "EAlertLevel.h"
-#include "DamageInfos.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCDelegate -FallbackName=SCDelegate
 #include "EGlobalBehaviors.h"
+#include "DamageInfos.h"
+#include "EAlertLevel.h"
 #include "ESCAICombatRoles.h"
+#include "ESCAICombatRolesChangeReason.h"
 #include "EOrderState.h"
 #include "EAlertLevelThreshold.h"
-#include "EAlertedReason.h"
+#include "EMcDominationGaugeSteps.h"
 #include "EOrderType.h"
+#include "EAlertedReason.h"
 #include "EFightingState.h"
-#include "ESCAICombatRolesChangeReason.h"
 #include "AIDirectorActor.generated.h"
 
 class AFightingCharacter;
+class USCAiAction;
 class AAISituationActor;
 class UAIFightingComponent;
 class ABaseCharacter;
-class USCAiAction;
 
 UCLASS()
 class SIFU_API AAIDirectorActor : public AActor {

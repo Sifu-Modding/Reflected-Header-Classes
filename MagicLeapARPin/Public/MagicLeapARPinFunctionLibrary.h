@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "MagicLeapContentBindingFoundDelegateDelegate.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
-#include "MagicLeapARPinUpdatedDelegateDelegate.h"
-#include "EMagicLeapPassableWorldError.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Guid -FallbackName=Guid
-#include "MagicLeapARPinQuery.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 #include "MagicLeapARPinState.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Guid -FallbackName=Guid
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
+#include "EMagicLeapPassableWorldError.h"
+#include "MagicLeapContentBindingFoundDelegateDelegate.h"
+#include "MagicLeapARPinUpdatedDelegateDelegate.h"
+#include "MagicLeapARPinQuery.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Rotator -FallbackName=Rotator
 #include "MagicLeapARPinFunctionLibrary.generated.h"
 

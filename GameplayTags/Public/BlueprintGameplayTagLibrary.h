@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "GameplayTagQuery.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
 #include "GameplayTagContainer.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
 #include "GameplayTag.h"
+#include "GameplayTagQuery.h"
 #include "BlueprintGameplayTagLibrary.generated.h"
 
-class AActor;
-class UObject;
 class UGameplayTagAssetInterface;
 class IGameplayTagAssetInterface;
+class UObject;
+class AActor;
 
 UCLASS(BlueprintType)
 class GAMEPLAYTAGS_API UBlueprintGameplayTagLibrary : public UBlueprintFunctionLibrary {

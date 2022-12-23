@@ -4,8 +4,8 @@
 #include "FilterPresetCache.h"
 #include "FilterPresetDB.generated.h"
 
-class ASCPlayerController;
 class UFilterPresetEntitlementDB;
+class ASCPlayerController;
 
 UCLASS(BlueprintType)
 class SIFU_API UFilterPresetDB : public UDataAsset {

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "BPOrderServiceInstance.h"
 #include "OrderService.h"
+#include "BPOrderServiceInstance.h"
 #include "BlueprintOrderService.generated.h"
 
 UCLASS(EditInlineNew)

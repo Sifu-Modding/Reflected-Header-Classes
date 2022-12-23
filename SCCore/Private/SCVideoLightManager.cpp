@@ -1,8 +1,8 @@
 #include "SCVideoLightManager.h"
 
+class UMaterialInterface;
 class UMediaTexture;
 class UMediaSource;
-class UMaterialInterface;
 class ULocalLightComponent;
 class UCurveLinearColor;
 

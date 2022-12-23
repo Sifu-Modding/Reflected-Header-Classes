@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=ECharacterGender -FallbackName=ECharacterGender
+#include "PlayerGenderSpecificData.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ActorComponent -FallbackName=ActorComponent
 //CROSS-MODULE INCLUDE V2: -ModuleName=AIModule -ObjectName=CrowdAgentInterface -FallbackName=CrowdAgentInterface
-#include "PlayerGenderSpecificData.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=ECharacterGender -FallbackName=ECharacterGender
 #include "OutfitData.h"
 #include "PlayerFightingComponent.generated.h"
 
-class UEquipmentSelectionData;
 class AActor;
+class UEquipmentSelectionData;
 class USkeletalMesh;
 class UBaseMovementDB;
 class UMaterialInterface;

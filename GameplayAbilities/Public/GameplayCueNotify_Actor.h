@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "EGameplayCueEvent.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=Actor -FallbackName=Actor
 //CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTag -FallbackName=GameplayTag
 #include "GameplayCueParameters.h"
-#include "EGameplayCueEvent.h"
 #include "GameplayCueNotify_Actor.generated.h"
 
 UCLASS()

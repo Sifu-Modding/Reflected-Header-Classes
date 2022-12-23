@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "DialogActionArrayContainer.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=DataAsset -FallbackName=DataAsset
+#include "DialogActionArrayContainer.h"
 #include "SCDialogRealOverrideDb.generated.h"
 
 UCLASS()

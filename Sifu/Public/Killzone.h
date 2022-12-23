@@ -5,9 +5,9 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 #include "Killzone.generated.h"
 
-class AActor;
-class UPrimitiveComponent;
 class UBoxComponent;
+class UPrimitiveComponent;
+class AActor;
 class AFightingCharacter;
 
 UCLASS()

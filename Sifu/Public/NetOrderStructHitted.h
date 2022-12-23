@@ -3,8 +3,8 @@
 #include "NetOrderStructPlayAnim.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=HitResult -FallbackName=HitResult
 #include "HitRequest.h"
-#include "HittedAnimContainer.h"
 #include "ImpactResult.h"
+#include "HittedAnimContainer.h"
 #include "NetOrderStructHitted.generated.h"
 
 USTRUCT(BlueprintType)

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ReplayInitialStateToggleEventDelegateDelegate.h"
 #include "ReplayInitialStateToggleGetValueEventDelegateDelegate.h"
+#include "ReplayInitialStateToggleEventDelegateDelegate.h"
 #include "ReplayInitialStateToggleEvent.generated.h"
 
 class AActor;

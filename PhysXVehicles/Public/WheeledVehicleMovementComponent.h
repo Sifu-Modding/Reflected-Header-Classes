@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "ReplicatedVehicleState.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=NavAvoidanceMask -FallbackName=NavAvoidanceMask
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=PawnMovementComponent -FallbackName=PawnMovementComponent
+#include "VehicleInputRate.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=RVOAvoidanceInterface -FallbackName=RVOAvoidanceInterface
 #include "WheelSetup.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=NavAvoidanceMask -FallbackName=NavAvoidanceMask
-#include "VehicleInputRate.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 #include "WheeledVehicleMovementComponent.generated.h"
 
 class UVehicleWheel;

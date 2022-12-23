@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "AbilityTask.h"
 #include "WaitConfirmCancelDelegateDelegate.h"
+#include "AbilityTask.h"
 #include "AbilityTask_WaitConfirmCancel.generated.h"
 
 class UAbilityTask_WaitConfirmCancel;

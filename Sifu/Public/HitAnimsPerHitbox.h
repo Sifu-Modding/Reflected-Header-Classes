@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "HittedAnimContainer.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=DataTableRowHandle -FallbackName=DataTableRowHandle
+#include "HittedAnimContainer.h"
 #include "HitAnimsPerHitbox.generated.h"
 
 USTRUCT(BlueprintType)

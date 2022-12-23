@@ -5,8 +5,8 @@
 #include "SkillTreeNode.h"
 #include "SkillButton.generated.h"
 
-class USkillGameplayEffect;
 class USkillButton;
+class USkillGameplayEffect;
 class USkillsDB;
 class ASkillTree;
 

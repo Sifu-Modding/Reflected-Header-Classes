@@ -2,13 +2,13 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
-#include "MovieSceneCaptureInterface.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=SoftClassPath -FallbackName=SoftClassPath
+#include "MovieSceneCaptureInterface.h"
 #include "MovieSceneCaptureSettings.h"
 #include "MovieSceneCapture.generated.h"
 
-class UMovieSceneAudioCaptureProtocolBase;
 class UMovieSceneImageCaptureProtocolBase;
+class UMovieSceneAudioCaptureProtocolBase;
 class UMovieSceneCaptureProtocolBase;
 
 UCLASS(BlueprintType, PerObjectConfig, Config=EditorPerProjectUserSettings)

@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "EConstantQNormalizationEnum.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=EAudioSpectrumType -FallbackName=EAudioSpectrumType
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=EFFTWindowType -FallbackName=EFFTWindowType
 #include "AudioSynesthesiaNRTSettings.h"
 #include "EConstantQFFTSizeEnum.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=EFFTWindowType -FallbackName=EFFTWindowType
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=EAudioSpectrumType -FallbackName=EAudioSpectrumType
-#include "EConstantQNormalizationEnum.h"
 #include "ConstantQNRTSettings.generated.h"
 
 UCLASS(BlueprintType, EditInlineNew)

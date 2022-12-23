@@ -3,9 +3,9 @@
 class UWidgetAnimation;
 class APlayerController;
 class USoundBase;
-class APlayerCameraManager;
 class UUMGSequencePlayer;
 class APawn;
+class APlayerCameraManager;
 
 void UUserWidget::UnregisterInputComponent() {
 }

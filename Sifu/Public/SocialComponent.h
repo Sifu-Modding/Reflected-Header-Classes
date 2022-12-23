@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ActorComponent -FallbackName=ActorComponent
+#include "NameArray.h"
 #include "EGameModeTypes.h"
 #include "ERelationshipTypes.h"
 #include "InFightPlayersInfo.h"
-#include "NameArray.h"
-#include "EEmoteAction.h"
 #include "ESocialRequest.h"
+#include "EEmoteAction.h"
 #include "CoopGroup.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=UniqueNetIdRepl -FallbackName=UniqueNetIdRepl
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=EEndPlayReason -FallbackName=EEndPlayReason
@@ -14,8 +14,8 @@
 #include "EDangerStates.h"
 #include "SocialComponent.generated.h"
 
-class UDataTable;
 class AActor;
+class UDataTable;
 
 UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class SIFU_API USocialComponent : public UActorComponent {

@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "DefenseAnimInfos.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
 #include "HitDescription.h"
 #include "DefenderAnimInfos.h"
+#include "DefenseAnimInfos.h"
 #include "DefenseAnimRequest.generated.h"
 
 class AFightingCharacter;

@@ -1,43 +1,43 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "GameplayAbilityTargetDataHandle.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTasks -ObjectName=GameplayTasksComponent -FallbackName=GameplayTasksComponent
 //CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTagAssetInterface -FallbackName=GameplayTagAssetInterface
-//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTagContainer -FallbackName=GameplayTagContainer
-#include "AbilitySystemReplicationProxyInterface.h"
-#include "AttributeDefaults.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTasks -ObjectName=GameplayTasksComponent -FallbackName=GameplayTasksComponent
 #include "GameplayAbilitySpecContainer.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTag -FallbackName=GameplayTag
+#include "GameplayEffectSpecForRPC.h"
+#include "AbilitySystemReplicationProxyInterface.h"
+#include "GameplayEffectContextHandle.h"
+#include "AttributeDefaults.h"
+#include "GameplayAbilityActivationInfo.h"
+#include "GameplayEffectQuery.h"
+#include "GameplayAbilityLocalAnimMontage.h"
 #include "GameplayAbilityRepAnimMontage.h"
 #include "ActiveGameplayEffectsContainer.h"
-#include "GameplayAbilityLocalAnimMontage.h"
-#include "ActiveGameplayCueContainer.h"
 #include "MinimalReplicationTagCountMap.h"
+#include "ActiveGameplayCueContainer.h"
 #include "ReplicatedPredictionKeyMap.h"
-#include "GameplayEffectQuery.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTagContainer -FallbackName=GameplayTagContainer
+#include "GameplayAttribute.h"
 #include "ActiveGameplayEffectHandle.h"
 #include "GameplayAbilitySpecHandle.h"
 #include "PredictionKey.h"
 #include "GameplayEventData.h"
+#include "GameplayAbilityTargetDataHandle.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTag -FallbackName=GameplayTag
 #include "EAbilityGenericReplicatedEvent.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=Vector_NetQuantize100 -FallbackName=Vector_NetQuantize100
-#include "GameplayAbilityActivationInfo.h"
-#include "GameplayEffectSpecForRPC.h"
 #include "ServerAbilityRPCBatch.h"
 #include "GameplayCueParameters.h"
-#include "GameplayEffectContextHandle.h"
 #include "GameplayEffectSpecHandle.h"
-#include "GameplayAttribute.h"
 #include "AbilitySystemComponent.generated.h"
 
-class AGameplayAbilityTargetActor;
-class UDataTable;
-class AActor;
 class UAttributeSet;
+class AActor;
+class AGameplayAbilityTargetActor;
 class UGameplayAbility;
-class UAnimMontage;
 class UGameplayEffect;
+class UDataTable;
+class UAnimMontage;
 class UAbilitySystemComponent;
 
 UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

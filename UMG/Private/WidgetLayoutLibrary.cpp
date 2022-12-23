@@ -1,19 +1,19 @@
 #include "WidgetLayoutLibrary.h"
 
-class UScaleBoxSlot;
-class USizeBoxSlot;
-class UVerticalBoxSlot;
 class UWidget;
 class UWrapBoxSlot;
-class UBorderSlot;
 class UWidgetSwitcherSlot;
-class UScrollBoxSlot;
+class UCanvasPanelSlot;
+class UVerticalBoxSlot;
 class UUniformGridSlot;
+class USizeBoxSlot;
+class UScrollBoxSlot;
+class UScaleBoxSlot;
 class USafeZoneSlot;
 class UOverlaySlot;
 class UHorizontalBoxSlot;
 class UGridSlot;
-class UCanvasPanelSlot;
+class UBorderSlot;
 class UObject;
 class APlayerController;
 

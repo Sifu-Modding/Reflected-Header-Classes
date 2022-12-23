@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "TestInputAdditionalValidationDelegateDelegate.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintAsyncActionBase -FallbackName=BlueprintAsyncActionBase
 #include "OnInputWaitDelegate.h"
+#include "TestInputAdditionalValidationDelegateDelegate.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=ESCBlendType -FallbackName=ESCBlendType
 #include "InputAction.h"
 #include "AsyncTaskWaitForInput.generated.h"
 
-class UAsyncTaskWaitForInput;
 class UObject;
+class UAsyncTaskWaitForInput;
 class USCGameplayAbility;
 class UCurveFloat;
 

@@ -2,11 +2,11 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "SCAnimInstance.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
+#include "FootIkDamping.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=RuntimeFloatCurve -FallbackName=RuntimeFloatCurve
 #include "SCFootIkData.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=EMovementMode -FallbackName=EMovementMode
-#include "FootIkDamping.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 #include "SCFootIkAnimInstance.generated.h"
 
 class USCFootIkService;

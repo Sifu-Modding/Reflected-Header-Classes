@@ -6,11 +6,11 @@
 #include "AISystem.generated.h"
 
 class UBehaviorTreeManager;
-class UNavLocalGridManager;
-class UEnvQueryManager;
-class UAIAsyncTaskBlueprintProxy;
-class UAIPerceptionSystem;
 class UAIHotSpotManager;
+class UEnvQueryManager;
+class UAIPerceptionSystem;
+class UAIAsyncTaskBlueprintProxy;
+class UNavLocalGridManager;
 
 UCLASS()
 class AIMODULE_API UAISystem : public UAISystemBase {

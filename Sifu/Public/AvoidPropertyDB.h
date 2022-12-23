@@ -4,8 +4,8 @@
 #include "EAvoidFeedbackTypes.h"
 #include "AvoidPropertyDB.generated.h"
 
-class UCurveFloat;
 class UAvoidPropertyDB;
+class UCurveFloat;
 
 UCLASS()
 class SIFU_API UAvoidPropertyDB : public USpecialAbilityPropertyDB {

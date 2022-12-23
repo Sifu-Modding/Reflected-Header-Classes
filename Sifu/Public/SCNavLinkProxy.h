@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "CustomNavLinkReachedDelegate.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=Actor -FallbackName=Actor
+#include "CustomNavLinkReachedDelegate.h"
 #include "SCNavLinkProxy.generated.h"
 
-class USCCustomNavLink;
 class USceneComponent;
+class USCCustomNavLink;
 
 UCLASS()
 class SIFU_API ASCNavLinkProxy : public AActor {

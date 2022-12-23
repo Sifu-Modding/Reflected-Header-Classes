@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "AISenseConfig.h"
 #include "AISenseAffiliationFilter.h"
+#include "AISenseConfig.h"
 #include "AISenseConfig_Hearing.generated.h"
 
 class UAISense_Hearing;

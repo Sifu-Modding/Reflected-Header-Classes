@@ -3,8 +3,8 @@
 #include "Templates/SubclassOf.h"
 #include "AnimSequenceDBCache.generated.h"
 
-class ABaseWeapon;
 class UAnimSequenceEntryDB;
+class ABaseWeapon;
 
 USTRUCT(BlueprintType)
 struct FAnimSequenceDBCache {

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "BlendProfileBySpeedStateStruct.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
+#include "BlendProfileBySpeedStateStruct.h"
 #include "ESpeedState.h"
 #include "BlendProfileHelper.generated.h"
 

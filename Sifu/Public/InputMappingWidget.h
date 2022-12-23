@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "AsyncTextureStruct.h"
-#include "SCUserWidget.h"
-#include "ERemappingAllowedInputTypes.h"
-#include "EMappableFieldScaleTypes.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=InputCore -ObjectName=Key -FallbackName=Key
+#include "SCUserWidget.h"
+#include "EMappableFieldScaleTypes.h"
+#include "ERemappingAllowedInputTypes.h"
+#include "AsyncTextureStruct.h"
 #include "InputMappingWidget.generated.h"
 
 class UButtonUserWidget;

@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "AkEventCallbackInfo.h"
-#include "AkMidiNoteAftertouch.h"
-#include "EAkMidiEventType.h"
 #include "AkMidiProgramChange.h"
-#include "AkMidiChannelAftertouch.h"
+#include "AkEventCallbackInfo.h"
+#include "EAkMidiEventType.h"
 #include "AkMidiPitchBend.h"
-#include "AkMidiCc.h"
 #include "AkMidiNoteOnOff.h"
 #include "AkMidiGeneric.h"
+#include "AkMidiNoteAftertouch.h"
+#include "AkMidiChannelAftertouch.h"
+#include "AkMidiCc.h"
 #include "AkMIDIEventCallbackInfo.generated.h"
 
 UCLASS()

@@ -3,14 +3,14 @@
 #include "Templates/SubclassOf.h"
 #include "AimOffsetStruct.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector2D -FallbackName=Vector2D
-//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=ELookAtApplyMode -FallbackName=ELookAtApplyMode
-#include "ELookAtRefDirMode.h"
-#include "LookAtModifierParams.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Rotator -FallbackName=Rotator
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
+//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=ELookAtApplyMode -FallbackName=ELookAtApplyMode
+#include "LookAtLocomotionLimits.h"
+#include "ELookAtRefDirMode.h"
 #include "LookAtConfig.h"
 #include "ELookAtTargetType.h"
-#include "LookAtLocomotionLimits.h"
+#include "LookAtModifierParams.h"
 #include "LookAtLimits.h"
 #include "ETransitionGlobalType.h"
 #include "LookAtAnimHandler.generated.h"

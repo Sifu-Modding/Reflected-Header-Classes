@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GizmoBaseVec2ParameterSource.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Transform -FallbackName=Transform
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector2D -FallbackName=Vector2D
+#include "GizmoBaseVec2ParameterSource.h"
 #include "GizmoVec2ParameterChange.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Transform -FallbackName=Transform
 #include "GizmoUniformScaleParameterSource.generated.h"
 
 class UGizmoAxisSource;

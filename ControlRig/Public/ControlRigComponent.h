@@ -1,24 +1,24 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "ControlRigComponentDelegateDelegate.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=PrimitiveComponent -FallbackName=PrimitiveComponent
 #include "ControlRigComponentMappedElement.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=PrimitiveComponent -FallbackName=PrimitiveComponent
+#include "ControlRigComponentDelegateDelegate.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Transform -FallbackName=Transform
 #include "EControlRigComponentSpace.h"
-#include "ERigElementType.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector2D -FallbackName=Vector2D
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Rotator -FallbackName=Rotator
-#include "ControlRigComponentMappedBone.h"
+#include "ERigElementType.h"
 #include "ControlRigComponentMappedCurve.h"
+#include "ControlRigComponentMappedBone.h"
 #include "ControlRigComponentMappedComponent.h"
 #include "ControlRigComponent.generated.h"
 
-class USkeletalMeshComponent;
 class UControlRig;
 class USkeletalMesh;
 class UControlRigComponent;
+class USkeletalMeshComponent;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class CONTROLRIG_API UControlRigComponent : public UPrimitiveComponent {

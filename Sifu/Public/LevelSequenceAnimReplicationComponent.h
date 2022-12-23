@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ReplicatedSequencerAnimMontagePosition.h"
-#include "ReplicatedSequencerAnimMontage.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCPoolableActorComponent -FallbackName=SCPoolableActorComponent
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ActorComponent -FallbackName=ActorComponent
+//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCPoolableActorComponent -FallbackName=SCPoolableActorComponent
+#include "ReplicatedSequencerAnimMontage.h"
+#include "ReplicatedSequencerAnimMontagePosition.h"
 #include "LevelSequenceAnimReplicationComponent.generated.h"
 
-class ALevelSequenceActor;
 class ULevelSequenceDirector;
+class ALevelSequenceActor;
 
 UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class SIFU_API ULevelSequenceAnimReplicationComponent : public UActorComponent, public ISCPoolableActorComponent {

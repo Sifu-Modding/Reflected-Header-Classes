@@ -4,14 +4,14 @@
 #include "ThrowableActor.h"
 #include "AIWeaponTicketable.h"
 #include "EDropReason.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=FloatRange -FallbackName=FloatRange
 #include "EOnDestructibleDamageType.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 #include "BaseWeapon.generated.h"
 
-class UWeaponGameplayData;
 class UTargetSettingsDB;
 class USkeletalMeshComponent;
+class UWeaponGameplayData;
 class UBaseWeaponData;
 class UAnimInstanceReplicationComponent;
 class AFightingCharacter;

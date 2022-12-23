@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
-#include "SCLevelSequenceDynamicDelegateDelegate.h"
 #include "SCSequenceParameters.h"
+#include "SCLevelSequenceDynamicDelegateDelegate.h"
 #include "SCLevelSequenceHelpers.generated.h"
 
+class ALevelSequenceActor;
 class APlayerController;
 class ACharacter;
-class ALevelSequenceActor;
 class AActor;
 
 UCLASS(BlueprintType)

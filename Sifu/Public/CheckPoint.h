@@ -5,8 +5,8 @@
 #include "CheckPoint.generated.h"
 
 class UBoxComponent;
-class AActor;
 class UPrimitiveComponent;
+class AActor;
 
 UCLASS()
 class SIFU_API ACheckPoint : public ASCPlayerStart {

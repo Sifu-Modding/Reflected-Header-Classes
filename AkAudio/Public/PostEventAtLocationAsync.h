@@ -6,9 +6,9 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Rotator -FallbackName=Rotator
 #include "PostEventAtLocationAsync.generated.h"
 
-class UPostEventAtLocationAsync;
 class UObject;
 class UAkAudioEvent;
+class UPostEventAtLocationAsync;
 
 UCLASS()
 class AKAUDIO_API UPostEventAtLocationAsync : public UBlueprintAsyncActionBase {

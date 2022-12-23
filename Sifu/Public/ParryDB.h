@@ -6,8 +6,8 @@
 #include "ParryAnimationCharacterQuadrantArray.h"
 #include "ParryDB.generated.h"
 
-class UParryMatch;
 class UCurveFloat;
+class UParryMatch;
 class UAvailabilityLayerData;
 class UParryPropertyDB;
 

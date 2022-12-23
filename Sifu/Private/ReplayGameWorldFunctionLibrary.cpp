@@ -1,9 +1,9 @@
 #include "ReplayGameWorldFunctionLibrary.h"
 
+class UExponentialHeightFogComponent;
 class AFightingCharacter;
 class UObject;
 class AActor;
-class UExponentialHeightFogComponent;
 class ASCPlayerController;
 class ASCCharacterImpostor;
 

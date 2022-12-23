@@ -1,24 +1,24 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=FloatRange -FallbackName=FloatRange
-#include "InputAction.h"
+#include "VitalPointDataDefinition.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ActorComponent -FallbackName=ActorComponent
 #include "DamageInfos.h"
-#include "EAlertLevel.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCUserDefinedEnumHandler -FallbackName=SCUserDefinedEnumHandler
+#include "EAlertLevel.h"
 #include "EScoringKillType.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=DataTableRowHandle -FallbackName=DataTableRowHandle
-#include "VitalPointDataDefinition.h"
+#include "InputAction.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=FloatRange -FallbackName=FloatRange
 #include "EScoringActionType.h"
 #include "PlayerScoringComponent.generated.h"
 
-class UOrderComponent;
 class AActor;
+class UOrderComponent;
 class AVitalPointActor;
 class AFightingCharacter;
-class UArchetypeAsset;
 class UCurveFloat;
 class UAttackDB;
+class UArchetypeAsset;
 class ABaseWeapon;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

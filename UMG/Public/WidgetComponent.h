@@ -2,22 +2,22 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=MeshComponent -FallbackName=MeshComponent
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector2D -FallbackName=Vector2D
-#include "EWidgetTimingPolicy.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=IntPoint -FallbackName=IntPoint
 #include "ETickMode.h"
 #include "EWidgetSpace.h"
+#include "EWidgetTimingPolicy.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector2D -FallbackName=Vector2D
 #include "EWindowVisibility.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=IntPoint -FallbackName=IntPoint
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=LinearColor -FallbackName=LinearColor
 #include "EWidgetBlendMode.h"
 #include "EWidgetGeometryMode.h"
 #include "WidgetComponent.generated.h"
 
-class UTextureRenderTarget2D;
-class UUserWidget;
-class UMaterialInterface;
 class ULocalPlayer;
+class UUserWidget;
 class UBodySetup;
+class UMaterialInterface;
+class UTextureRenderTarget2D;
 class UMaterialInstanceDynamic;
 
 UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

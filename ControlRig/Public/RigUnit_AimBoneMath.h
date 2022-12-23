@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "RigUnit_HighlevelBase.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Transform -FallbackName=Transform
-#include "RigUnit_AimItem_Target.h"
 #include "RigUnit_AimBone_DebugSettings.h"
+#include "RigUnit_AimItem_Target.h"
 #include "CachedRigElement.h"
 #include "RigUnit_AimBoneMath.generated.h"
 

@@ -4,8 +4,8 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=Interface_AssetUserData -FallbackName=Interface_AssetUserData
 #include "GeometryCache.generated.h"
 
-class UGeometryCacheTrack;
 class UMaterialInterface;
+class UGeometryCacheTrack;
 
 UCLASS(BlueprintType)
 class GEOMETRYCACHE_API UGeometryCache : public UObject, public IInterface_AssetUserData {

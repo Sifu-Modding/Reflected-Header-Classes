@@ -3,8 +3,8 @@
 #include "Templates/SubclassOf.h"
 #include "GameplayTask.h"
 #include "GameplayTaskSpawnActorDelegateDelegate.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Rotator -FallbackName=Rotator
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Rotator -FallbackName=Rotator
 #include "GameplayTask_SpawnActor.generated.h"
 
 class AActor;

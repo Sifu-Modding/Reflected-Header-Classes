@@ -1,25 +1,25 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EWidgetLifeCycle.h"
-#include "SCUserWidget.h"
 #include "HandleInput.h"
-#include "EGameModeTypes.h"
+#include "InputAction.h"
+#include "SCUserWidget.h"
 #include "AvailabilityLayerPushParams.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=UMG -ObjectName=ESlateVisibility -FallbackName=ESlateVisibility
+#include "EWidgetLifeCycle.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=UMG -ObjectName=EUMGSequencePlayMode -FallbackName=EUMGSequencePlayMode
+//CROSS-MODULE INCLUDE V2: -ModuleName=UMG -ObjectName=ESlateVisibility -FallbackName=ESlateVisibility
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector2D -FallbackName=Vector2D
 #include "ECycleDirection.h"
 #include "EMenuTransitions.h"
 #include "EMenuEnum.h"
-#include "InputAction.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=UniqueNetIdRepl -FallbackName=UniqueNetIdRepl
 #include "ECoopGameModeAnswerStatus.h"
+#include "EGameModeTypes.h"
 #include "MenuWidget.generated.h"
 
-class AActor;
 class UWidgetAnimation;
 class UUserWidget;
 class UBaseNotification;
+class AActor;
 
 UCLASS(EditInlineNew)
 class SIFU_API UMenuWidget : public USCUserWidget, public IHandleInput {

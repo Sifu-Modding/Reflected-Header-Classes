@@ -1,8 +1,8 @@
 #include "PostEventAtLocationAsync.h"
 
 class UObject;
-class UAkAudioEvent;
 class UPostEventAtLocationAsync;
+class UAkAudioEvent;
 
 UPostEventAtLocationAsync* UPostEventAtLocationAsync::PostEventAtLocationAsync(const UObject* WorldContextObject, UAkAudioEvent* AkEvent, FVector Location, FRotator Orientation) {
     return NULL;

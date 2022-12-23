@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "FieldNodeBase.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Chaos -ObjectName=EFieldCullingOperationType -FallbackName=EFieldCullingOperationType
+#include "FieldNodeBase.h"
 #include "CullingField.generated.h"
 
 class UCullingField;

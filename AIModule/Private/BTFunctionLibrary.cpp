@@ -1,8 +1,8 @@
 #include "BTFunctionLibrary.h"
 
 class UBehaviorTreeComponent;
-class UBTNode;
 class AActor;
+class UBTNode;
 class UBlackboardComponent;
 class UObject;
 

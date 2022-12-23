@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ETraversalEntryType.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 #include "ECharacterTraversalType.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
+#include "ETraversalEntryType.h"
 #include "TraversalInfo.generated.h"
 
 class UTraversalComponent;

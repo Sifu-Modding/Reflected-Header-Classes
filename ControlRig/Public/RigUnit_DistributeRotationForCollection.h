@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "EControlRigAnimEasingType.h"
 #include "RigUnit_HighlevelBaseMutable.h"
 #include "RigUnit_DistributeRotation_WorkData.h"
 #include "RigElementKeyCollection.h"
 #include "RigUnit_DistributeRotation_Rotation.h"
-#include "EControlRigAnimEasingType.h"
 #include "RigUnit_DistributeRotationForCollection.generated.h"
 
 USTRUCT()

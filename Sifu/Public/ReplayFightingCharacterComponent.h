@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ReplayVoiceReplication.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ActorComponent -FallbackName=ActorComponent
+#include "ReplayVoiceReplication.h"
 #include "ReplayCameraTransform.h"
 #include "ReplayFightingCharacterComponent.generated.h"
 

@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "RigUnit_TwoBoneIKSimple_DebugSettings.h"
-#include "RigUnit_HighlevelBaseMutable.h"
-#include "CachedRigElement.h"
-#include "RigElementKey.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Transform -FallbackName=Transform
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 #include "EControlRigVectorKind.h"
+#include "RigUnit_HighlevelBaseMutable.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Transform -FallbackName=Transform
+#include "RigElementKey.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
+#include "CachedRigElement.h"
 #include "RigUnit_TwoBoneIKSimplePerItem.generated.h"
 
 USTRUCT()

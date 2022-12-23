@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "EFightingState.h"
+#include "EInterruptionBehavior.h"
 #include "OrderService.h"
 #include "EditableOrderType.h"
 #include "EOrderType.h"
+#include "EFightingActionState.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCUserDefinedEnumHandler -FallbackName=SCUserDefinedEnumHandler
 #include "EControllerNature.h"
-#include "EFightingActionState.h"
-#include "EInterruptionBehavior.h"
-#include "EFightingState.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=AnimContainer -FallbackName=AnimContainer
 #include "HitBox.h"
 #include "CheckTargetStateOrderService.generated.h"

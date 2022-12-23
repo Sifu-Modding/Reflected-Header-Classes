@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "BaseTargetEvaluation.h"
 #include "EWeightBinaryOperator.h"
+#include "BaseTargetEvaluation.h"
 #include "TE_WeightEvaluation.generated.h"
 
 class UBaseTargetWeightEvaluation;

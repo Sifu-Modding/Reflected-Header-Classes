@@ -7,10 +7,10 @@
 
 class UTexture;
 class UMoviePipelineCustomTimeStep;
+class ALevelSequenceActor;
+class ULevelSequence;
 class UEngineCustomTimeStep;
 class UMovieRenderDebugWidget;
-class ULevelSequence;
-class ALevelSequenceActor;
 class UMoviePipelineExecutorJob;
 class UMoviePipelineMasterConfig;
 

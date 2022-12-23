@@ -6,8 +6,8 @@
 #include "AIDataProviderBoolValue.h"
 #include "EnvQueryGenerator_ActorsOfClass.generated.h"
 
-class AActor;
 class UEnvQueryContext;
+class AActor;
 
 UCLASS(EditInlineNew)
 class AIMODULE_API UEnvQueryGenerator_ActorsOfClass : public UEnvQueryGenerator {

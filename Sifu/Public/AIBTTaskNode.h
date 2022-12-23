@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCBTTaskNode -FallbackName=SCBTTaskNode
-#include "InputAction.h"
 #include "BTTaskNodeRelevancyCondition.h"
+#include "InputAction.h"
 #include "AIBTTaskNode.generated.h"
 
 UCLASS()

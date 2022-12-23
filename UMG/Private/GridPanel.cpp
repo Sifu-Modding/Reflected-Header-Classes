@@ -1,7 +1,7 @@
 #include "GridPanel.h"
 
-class UWidget;
 class UGridSlot;
+class UWidget;
 
 void UGridPanel::SetRowFill(int32 ColumnIndex, float Coefficient) {
 }

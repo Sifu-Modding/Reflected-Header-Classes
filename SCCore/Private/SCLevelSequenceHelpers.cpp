@@ -1,8 +1,8 @@
 #include "SCLevelSequenceHelpers.h"
 
+class ALevelSequenceActor;
 class APlayerController;
 class ACharacter;
-class ALevelSequenceActor;
 class AActor;
 
 void USCLevelSequenceHelpers::BPF_UnbindOnSequenceViewBlendStateChanged(const FSCLevelSequenceDynamicDelegate& _delegate) {

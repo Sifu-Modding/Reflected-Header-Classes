@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "DatasmithMeshBuildSettingsTemplate.h"
 #include "DatasmithObjectTemplate.h"
 #include "DatasmithMeshSectionInfoMapTemplate.h"
-#include "DatasmithMeshBuildSettingsTemplate.h"
 #include "DatasmithStaticMaterialTemplate.h"
 #include "DatasmithStaticMeshTemplate.generated.h"
 

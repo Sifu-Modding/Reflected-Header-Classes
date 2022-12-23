@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=RichCurve -FallbackName=RichCurve
 #include "RBFEntry.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=RichCurve -FallbackName=RichCurve
 #include "ERBFFunctionType.h"
 #include "ERBFDistanceMethod.h"
 #include "RBFTarget.generated.h"

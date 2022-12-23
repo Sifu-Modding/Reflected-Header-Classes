@@ -4,8 +4,8 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=MovieScene -ObjectName=MovieSceneSequencePlaybackSettings -FallbackName=MovieSceneSequencePlaybackSettings
 #include "ActorSequenceComponent.generated.h"
 
-class UActorSequencePlayer;
 class UActorSequence;
+class UActorSequencePlayer;
 
 UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class ACTORSEQUENCE_API UActorSequenceComponent : public UActorComponent {

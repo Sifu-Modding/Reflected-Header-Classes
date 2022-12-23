@@ -1,44 +1,44 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "AIComponent.h"
-#include "EOrderType.h"
-#include "EMcDominationGaugeSteps.h"
 #include "EOrderState.h"
-#include "EAvoidType.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=AnimContainer -FallbackName=AnimContainer
+//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCDelegate -FallbackName=SCDelegate
+#include "AIComponent.h"
+#include "OnCombatRoleChangedDynamicDelegate.h"
 #include "HitRequest.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCDelegate -FallbackName=SCDelegate
-#include "OnCombatRoleChangedDynamicDelegate.h"
 #include "EGlobalBehaviors.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCDelegate -FallbackName=SCDelegate
+#include "EAvoidType.h"
+#include "AIPhaseNodeHardLink.h"
+#include "EOrderType.h"
+#include "AIDefenseTargetAttackInfos.h"
+#include "EMcDominationGaugeSteps.h"
+#include "EAIContextualDefenseType.h"
+#include "AIPhaseNodeSoftLink.h"
+#include "EDefenseTactics.h"
 #include "VariableWeightEnumHandler.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=AnimContainer -FallbackName=AnimContainer
 #include "TurnAnimationArray.h"
-#include "ESCAICombatRoles.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=FloatRange -FallbackName=FloatRange
 #include "PhasesTransitionObjectCache.h"
 #include "HitDescription.h"
-#include "EDefenseTactics.h"
-#include "AIPhaseNodeSoftLink.h"
-#include "AIPhaseNodeHardLink.h"
-#include "EAIContextualDefenseType.h"
+#include "ESCAICombatRoles.h"
 #include "EAlertedReason.h"
-#include "AIDefenseTargetAttackInfos.h"
 #include "AIFightingComponent.generated.h"
 
 class AActor;
-class APathPatrol;
-class UFightingMovementComponent;
 class UAIFightingComponent;
-class UOrderComponent;
 class UAttackDB;
-class UAIContextualDefense;
-class UBlendSpace1D;
-class UAIPhaseScenario;
 class UAIPhaseTransition;
-class UObject;
-class UAvoidAbility;
 class UCombo;
+class UAIPhaseScenario;
+class UOrderComponent;
+class UBlendSpace1D;
+class UFightingMovementComponent;
+class UAvoidAbility;
+class APathPatrol;
+class UAIContextualDefense;
+class UObject;
 
 UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class SIFU_API UAIFightingComponent : public UAIComponent {

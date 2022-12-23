@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "VertexPair.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=MeshDescription -ObjectName=PolygonID -FallbackName=PolygonID
+#include "VertexPair.h"
 #include "PolygonToSplit.generated.h"
 
 USTRUCT(BlueprintType)

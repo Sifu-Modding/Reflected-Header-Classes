@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "NiagaraEmitterScalabilitySettingsArray.h"
+#include "ENiagaraCullReaction.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
 #include "ENiagaraScalabilityUpdateFrequency.h"
-#include "ENiagaraCullReaction.h"
-#include "NiagaraSystemScalabilitySettings.h"
 #include "NiagaraSystemScalabilitySettingsArray.h"
+#include "NiagaraSystemScalabilitySettings.h"
+#include "NiagaraEmitterScalabilitySettingsArray.h"
 #include "NiagaraEffectType.generated.h"
 
 class UNiagaraSignificanceHandler;

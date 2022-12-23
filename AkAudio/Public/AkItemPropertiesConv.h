@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "AkPropertyToControl.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
+#include "AkPropertyToControl.h"
 #include "AkItemPropertiesConv.generated.h"
 
 UCLASS(BlueprintType)

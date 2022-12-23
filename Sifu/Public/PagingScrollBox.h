@@ -1,18 +1,18 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "TableWidget.h"
-#include "TableWidget.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=UMG -ObjectName=ScrollBox -FallbackName=ScrollBox
+#include "TableWidget.h"
+#include "TableWidget.h"
 #include "TableWidget.h"
 #include "TableWidget.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=EFocusCause -FallbackName=EFocusCause
 #include "PagingScrollBox.generated.h"
 
-class UWidget;
+class UButtonUserWidget;
 class UUserWidget;
 class USCUserWidget;
-class UButtonUserWidget;
+class UWidget;
 
 UCLASS()
 class UPagingScrollBox : public UScrollBox {

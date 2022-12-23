@@ -3,9 +3,9 @@
 class AActor;
 class AFightingCharacter;
 class UEffectData;
+class UCharacterProgressionDB;
 class UCharacterProgressionUnlockDB;
 class UTexture2D;
-class UCharacterProgressionDB;
 
 void UStatsComponent::OnStatsChangedCallback() {
 }

@@ -1,23 +1,23 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=LevelSequence -ObjectName=LevelSequenceDirector -FallbackName=LevelSequenceDirector
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Rotator -FallbackName=Rotator
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Rotator -FallbackName=Rotator
 #include "ESCSequenceBlendViewState.h"
 #include "ESequenceBindingType.h"
 #include "SCLevelSequence.generated.h"
 
-class ASCSequenceAnchor;
-class UMaterialParameterCollection;
 class UAnimMontage;
-class ALevelSequenceActor;
-class ACameraActor;
+class ASCSequenceAnchor;
 class USCLevelSequenceDirectorData;
+class ACameraActor;
 class AActor;
 class APlayerController;
 class ACharacter;
 class UAnimSequence;
 class ULevelSequence;
+class UMaterialParameterCollection;
+class ALevelSequenceActor;
 
 UCLASS()
 class SCCORE_API USCLevelSequence : public ULevelSequenceDirector {

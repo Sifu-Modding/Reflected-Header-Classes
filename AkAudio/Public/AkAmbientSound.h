@@ -3,8 +3,8 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=Actor -FallbackName=Actor
 #include "AkAmbientSound.generated.h"
 
-class UAkComponent;
 class UAkAudioEvent;
+class UAkComponent;
 
 UCLASS()
 class AKAUDIO_API AAkAmbientSound : public AActor {

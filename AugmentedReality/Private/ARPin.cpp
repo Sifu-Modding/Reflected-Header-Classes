@@ -1,7 +1,7 @@
 #include "ARPin.h"
 
-class USceneComponent;
 class UARTrackedGeometry;
+class USceneComponent;
 class UWorld;
 
 EARTrackingState UARPin::GetTrackingState() const {

@@ -3,14 +3,14 @@
 #include "Templates/SubclassOf.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
 #include "EOrderType.h"
-#include "BaseWeaponOverrideInfo.h"
 #include "ETargetingPrio.h"
 #include "VariableWeightLayerToBoneMask.h"
+#include "BaseWeaponOverrideInfo.h"
 #include "BaseWeaponData.generated.h"
 
 class AFightingCharacter;
-class UCurveFloat;
 class UThrowObjectAnimRequest;
+class UCurveFloat;
 class UPlayerAnim;
 class ABaseWeapon;
 

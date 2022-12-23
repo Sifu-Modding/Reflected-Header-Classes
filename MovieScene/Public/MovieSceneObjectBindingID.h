@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EMovieSceneObjectBindingSpace.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Guid -FallbackName=Guid
+#include "EMovieSceneObjectBindingSpace.h"
 #include "MovieSceneObjectBindingID.generated.h"
 
 USTRUCT(BlueprintType)

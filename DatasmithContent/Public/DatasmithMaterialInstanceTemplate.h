@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "DatasmithStaticParameterSetTemplate.h"
 #include "DatasmithObjectTemplate.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=LinearColor -FallbackName=LinearColor
+#include "DatasmithStaticParameterSetTemplate.h"
 #include "DatasmithMaterialInstanceTemplate.generated.h"
 
-class UTexture;
 class UMaterialInterface;
+class UTexture;
 
 UCLASS()
 class DATASMITHCONTENT_API UDatasmithMaterialInstanceTemplate : public UDatasmithObjectTemplate {

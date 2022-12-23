@@ -5,11 +5,11 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Transform -FallbackName=Transform
 #include "ControlRigControlActor.generated.h"
 
-class UMaterialInstanceDynamic;
-class UControlRig;
-class UMaterialInterface;
 class UStaticMeshComponent;
 class USceneComponent;
+class UControlRig;
+class UMaterialInterface;
+class UMaterialInstanceDynamic;
 
 UCLASS()
 class CONTROLRIG_API AControlRigControlActor : public AActor {

@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameSaveData.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCSaveObjectGameData -FallbackName=SCSaveObjectGameData
-//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTag -FallbackName=GameplayTag
 #include "ECharacterStat.h"
+#include "GameSaveData.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTag -FallbackName=GameplayTag
 #include "DuplicatedSaveData.h"
 #include "WGSaveObjectGameData.generated.h"
 

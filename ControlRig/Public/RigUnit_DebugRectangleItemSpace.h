@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "RigUnit_DebugBaseMutable.h"
+#include "RigElementKey.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Transform -FallbackName=Transform
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=LinearColor -FallbackName=LinearColor
-#include "RigElementKey.h"
 #include "RigUnit_DebugRectangleItemSpace.generated.h"
 
 USTRUCT()

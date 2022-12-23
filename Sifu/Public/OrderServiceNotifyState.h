@@ -4,8 +4,8 @@
 #include "SCAnimNotifyState.h"
 #include "OrderServiceNotifyState.generated.h"
 
-class UOrderService;
 class UOrderServiceActivationConditions;
+class UOrderService;
 
 UCLASS(CollapseCategories, EditInlineNew)
 class SIFU_API UOrderServiceNotifyState : public USCAnimNotifyState {

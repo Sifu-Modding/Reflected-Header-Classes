@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameplayEffectSpec.h"
 #include "GameplayEffectCalculation.h"
+#include "GameplayEffectSpec.h"
 #include "GameplayModMagnitudeCalculation.generated.h"
 
 UCLASS(Abstract, Blueprintable)

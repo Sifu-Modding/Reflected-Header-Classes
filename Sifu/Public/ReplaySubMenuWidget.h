@@ -5,8 +5,8 @@
 #include "IsSubMenuAvailableDelegateDelegate.h"
 #include "ReplaySubMenuWidget.generated.h"
 
-class UReplaySubMenuWidget;
 class UCustomWidgetNavigation;
+class UReplaySubMenuWidget;
 class UReplayMenuWidget;
 
 UCLASS(EditInlineNew)

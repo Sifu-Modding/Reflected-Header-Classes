@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SCAnimPoseArray.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
 #include "SCAnimPoseLooped.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
+#include "SCAnimPoseArray.h"
 #include "SCCharacterPoseData.generated.h"
 
 class UPoseAsset;

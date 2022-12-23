@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "AIPhaseNodeHardLink.h"
 #include "ContextualDefenseInfluenceNode.h"
+#include "AIPhaseNodeHardLink.h"
 #include "DefenseInfluenceNodeGotoPhase.generated.h"
 
 UCLASS()

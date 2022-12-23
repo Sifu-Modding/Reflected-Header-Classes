@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "BaseTargetWeightEvaluation.h"
 #include "EWeightBinaryOperator.h"
+#include "BaseTargetWeightEvaluation.h"
 #include "GenericTargetWeightEvaluation.generated.h"
 
 UCLASS(EditInlineNew)

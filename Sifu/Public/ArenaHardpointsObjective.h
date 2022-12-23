@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "BaseArenaObjective.h"
+#include "EHardpointActivationRule.h"
 #include "HardpointInfos.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCDelegate -FallbackName=SCDelegate
 #include "ESequentialLoopRule.h"
-#include "EHardpointActivationRule.h"
 #include "ArenaHardpointsObjective.generated.h"
 
 class AArenaHardpointAreaActor;

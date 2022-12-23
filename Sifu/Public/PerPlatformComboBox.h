@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "PerPlatformWidget.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=UMG -ObjectName=ComboBoxString -FallbackName=ComboBoxString
+#include "PerPlatformWidget.h"
 #include "PerPlatformComboBox.generated.h"
 
 UCLASS()

@@ -5,8 +5,8 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=ECharacterGender -FallbackName=ECharacterGender
 #include "AsyncTaskSwapGender.generated.h"
 
-class UPlayerFightingComponent;
 class UAsyncTaskSwapGender;
+class UPlayerFightingComponent;
 
 UCLASS()
 class SIFU_API UAsyncTaskSwapGender : public UBlueprintAsyncActionBase {

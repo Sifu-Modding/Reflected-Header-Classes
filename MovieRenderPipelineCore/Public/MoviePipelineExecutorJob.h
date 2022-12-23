@@ -4,8 +4,8 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=SoftObjectPath -FallbackName=SoftObjectPath
 #include "MoviePipelineExecutorJob.generated.h"
 
-class UMoviePipelineExecutorShot;
 class UMoviePipelineMasterConfig;
+class UMoviePipelineExecutorShot;
 
 UCLASS(Blueprintable)
 class MOVIERENDERPIPELINECORE_API UMoviePipelineExecutorJob : public UObject {

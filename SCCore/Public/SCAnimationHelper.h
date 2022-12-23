@@ -2,14 +2,14 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Transform -FallbackName=Transform
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=AnimNotifyEvent -FallbackName=AnimNotifyEvent
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Transform -FallbackName=Transform
 #include "SCAnimationHelper.generated.h"
 
-class UAnimNotifyState;
 class UAnimSequenceBase;
-class UAnimationAsset;
 class UAnimSequence;
+class UAnimationAsset;
+class UAnimNotifyState;
 class UAnimNotify;
 
 UCLASS(BlueprintType)

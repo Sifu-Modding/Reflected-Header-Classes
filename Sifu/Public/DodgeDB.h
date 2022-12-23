@@ -5,8 +5,8 @@
 #include "DodgeConfigStruct.h"
 #include "DodgeDB.generated.h"
 
-class UDodgeAnimRequest;
 class UCurveFloat;
+class UDodgeAnimRequest;
 
 UCLASS()
 class SIFU_API UDodgeDB : public UDataAsset {

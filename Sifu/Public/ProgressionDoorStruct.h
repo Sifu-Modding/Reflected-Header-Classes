@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "ProgressionDoorStruct.generated.h"
 
-class UProgressionDoorData;
 class UQuestItemData;
+class UProgressionDoorData;
 
 USTRUCT(BlueprintType)
 struct SIFU_API FProgressionDoorStruct {

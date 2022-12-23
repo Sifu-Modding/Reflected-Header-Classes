@@ -1,7 +1,7 @@
 #include "ProgressionDoorNotification.h"
 
-class UProgressionDoorNotification;
 class UQuestItemData;
+class UProgressionDoorNotification;
 
 UProgressionDoorNotification* UProgressionDoorNotification::BPF_Init(const FProgressionDoorStruct& _progressionDoorStruct, UQuestItemData* _lastFulfilledQuest) {
     return NULL;

@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "MovieSceneObjectPathChannelKeyValue.h"
 #include "MovieSceneChannel.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=FrameNumber -FallbackName=FrameNumber
-#include "MovieSceneObjectPathChannelKeyValue.h"
 #include "MovieSceneObjectPathChannel.generated.h"
 
 USTRUCT(BlueprintType)

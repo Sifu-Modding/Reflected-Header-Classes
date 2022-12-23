@@ -1,7 +1,7 @@
 #include "TableWidget.h"
 
-class UButtonUserWidget;
 class UUserWidget;
+class UButtonUserWidget;
 class UWidget;
 
 void UTableWidget::OnItemSelected(UButtonUserWidget* _button, UButtonUserWidget* _prevButton) {

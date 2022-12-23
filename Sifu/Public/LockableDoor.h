@@ -6,10 +6,10 @@
 
 class USkeletalMeshComponent;
 class USceneComponent;
-class ULevelSequence;
 class USCSaveGameComponent;
-class UAnimationAsset;
+class ULevelSequence;
 class USkeletalMesh;
+class UAnimationAsset;
 class AFightingCharacter;
 
 UCLASS()

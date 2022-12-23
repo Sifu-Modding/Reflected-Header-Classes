@@ -7,12 +7,12 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=HitResult -FallbackName=HitResult
 #include "ArenaHardpointAreaActor.generated.h"
 
-class UPrimitiveComponent;
-class UCharacterHealthComponent;
 class USceneComponent;
-class AFightingCharacter;
 class ASCVolume;
+class AFightingCharacter;
+class UCharacterHealthComponent;
 class AAISituationActor;
+class UPrimitiveComponent;
 
 UCLASS()
 class SIFU_API AArenaHardpointAreaActor : public AActor {

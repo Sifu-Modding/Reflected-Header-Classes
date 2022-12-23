@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "OnRepBrokenStateDelegate.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ActorComponent -FallbackName=ActorComponent
+#include "OnRepBrokenStateDelegate.h"
 #include "ReplayableDestructionComponent.generated.h"
 
 UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

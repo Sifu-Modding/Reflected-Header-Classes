@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RigElementKey.h"
 #include "RigUnitMutable.h"
 #include "ERigEvent.h"
+#include "RigElementKey.h"
 #include "RigUnit_SendEvent.generated.h"
 
 USTRUCT()

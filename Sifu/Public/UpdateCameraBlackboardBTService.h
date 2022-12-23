@@ -1,18 +1,18 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=AIModule -ObjectName=BlackboardKeySelector -FallbackName=BlackboardKeySelector
 //CROSS-MODULE INCLUDE V2: -ModuleName=AIModule -ObjectName=BTService_BlueprintBase -FallbackName=BTService_BlueprintBase
-#include "EFightingActionState.h"
-#include "PlayerStatesStatus.h"
 #include "EDirections.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=AIModule -ObjectName=BlackboardKeySelector -FallbackName=BlackboardKeySelector
+#include "PlayerStatesStatus.h"
 #include "EOrderType.h"
+#include "EFightingActionState.h"
 #include "UpdateCameraBlackboardBTService.generated.h"
 
-class AFightingCharacter;
-class UPlayerFightingComponent;
-class UASMComponent;
 class UCameraComponentThird;
+class UPlayerFightingComponent;
+class AFightingCharacter;
 class UAttackComponent;
+class UASMComponent;
 
 UCLASS()
 class SIFU_API UUpdateCameraBlackboardBTService : public UBTService_BlueprintBase {

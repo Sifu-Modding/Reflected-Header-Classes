@@ -1,25 +1,27 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "OnRecordingCompleteDelegate.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
 #include "ReplaySizeManagement.h"
 #include "ReplayTimeDilationChangeDelegateDelegate.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCDelegate -FallbackName=SCDelegate
+#include "OnRecordingCompleteDelegate.h"
 #include "OnReplayRecordingChangedDelegate.h"
 #include "ReplayFeedbackEventSignatureDelegate.h"
-#include "ReplayInitialStateToggleEvent.h"
-#include "EReplayStopRecordingReason.h"
 #include "ReplayInitialStateToggleEventDelegateDelegate.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCDelegate -FallbackName=SCDelegate
+#include "ReplayInitialStateToggleEvent.h"
+#include "StopRecordingContinueDelegate.h"
+#include "EReplayStopRecordingReason.h"
 #include "ReplayInitialStateToggleGetValueEventDelegateDelegate.h"
 #include "ReplayCurrentRecordingData.h"
 #include "ReplaySystem.generated.h"
 
-class UReplaySoundReplication;
+class UReplayManagement;
+class AActor;
 class UThePlainesGameInstance;
 class UReplayLevelStreamingReplication;
-class UReplayManagement;
+class UReplaySoundReplication;
 class AFightingCharacter;
-class AActor;
+class APlayerController;
 class UReplaySystem;
 class AReplayController;
 class USCDemoNetDriver;
@@ -73,6 +75,9 @@ private:
     
 public:
     UReplaySystem();
+    UFUNCTION(BlueprintCallable)
+    static void BPF_StopRecordingAndContinueWith(APlayerController* _controller, FStopRecordingContinue _onContinue, const EReplayStopRecordingReason _eReason);
+    
     UFUNCTION(BlueprintCallable)
     void BPF_StopRecording(const EReplayStopRecordingReason _eReason);
     

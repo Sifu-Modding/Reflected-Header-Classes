@@ -10,9 +10,9 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector2D -FallbackName=Vector2D
 #include "NavigationTestingActor.generated.h"
 
-class ANavigationData;
-class UCapsuleComponent;
 class UNavigationInvokerComponent;
+class UCapsuleComponent;
+class ANavigationData;
 class ANavigationTestingActor;
 class UNavigationQueryFilter;
 

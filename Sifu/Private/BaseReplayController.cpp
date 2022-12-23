@@ -1,10 +1,10 @@
 #include "BaseReplayController.h"
 #include "ReplaySpectatorPawn.h"
 
-class AReplayHUD;
-class UReplayCineCameraComponent;
 class UHandleInput;
 class IHandleInput;
+class AReplayHUD;
+class UReplayCineCameraComponent;
 
 void ABaseReplayController::OnSaveGameStatusChanged(bool _bSaveInProgress, ESaveResult _eSaveResult) {
 }

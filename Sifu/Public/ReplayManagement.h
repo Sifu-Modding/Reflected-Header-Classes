@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
-#include "ReplaySizeManagement.h"
 #include "OnTaskStateChangedSignatureDelegate.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
 #include "EReplayOpenState.h"
+#include "ReplaySizeManagement.h"
 #include "ReplayManagement.generated.h"
 
 class UReplaySaveGame;
@@ -21,6 +21,12 @@ protected:
     
 public:
     UReplayManagement();
+    UFUNCTION()
+    void OnStreamingCompleteQuitReplayManagement();
+    
+    UFUNCTION()
+    void OnQuitReplayManagementMenu(bool _bIsPlayingReplay);
+    
     UFUNCTION(BlueprintCallable)
     void BPF_SetReplayOpenState(const EReplayOpenState _eOpenState);
     

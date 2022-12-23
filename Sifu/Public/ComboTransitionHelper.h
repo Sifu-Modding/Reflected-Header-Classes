@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "InputAction.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
 #include "EComboTransition.h"
-#include "InputAction.h"
 #include "ComboTransitionHelper.generated.h"
 
 UCLASS(BlueprintType)

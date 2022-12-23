@@ -2,12 +2,12 @@
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=GameplayAbilities -ObjectName=GameplayEventData -FallbackName=GameplayEventData
 //CROSS-MODULE INCLUDE V2: -ModuleName=GameplayAbilities -ObjectName=GameplayAbilitySpecHandle -FallbackName=GameplayAbilitySpecHandle
-#include "SCGameplayAbilityActorInfo.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=GameplayAbilities -ObjectName=GameplayAbilityActivationInfo -FallbackName=GameplayAbilityActivationInfo
+#include "SCGameplayAbilityActorInfo.h"
 #include "SCGameplayAbilityActivationInfo.generated.h"
 
-class AActor;
 class UAbilityPayload;
+class AActor;
 
 USTRUCT(BlueprintType)
 struct SIFU_API FSCGameplayAbilityActivationInfo {

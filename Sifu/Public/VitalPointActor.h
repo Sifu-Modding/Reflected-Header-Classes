@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "VitalPointDataDefinition.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCActor -FallbackName=SCActor
+#include "VitalPointDataDefinition.h"
 #include "VitalPointActor.generated.h"
 
-class AActor;
 class AVitalPointActor;
+class AActor;
 class AAimingBillboardActor;
 
 UCLASS()

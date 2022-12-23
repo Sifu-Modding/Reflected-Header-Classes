@@ -4,9 +4,9 @@
 #include "OpenColorIOColorConversionSettings.h"
 #include "OpenColorIOBlueprintLibrary.generated.h"
 
-class UTextureRenderTarget2D;
-class UObject;
 class UTexture;
+class UObject;
+class UTextureRenderTarget2D;
 
 UCLASS(BlueprintType, MinimalAPI)
 class UOpenColorIOBlueprintLibrary : public UBlueprintFunctionLibrary {

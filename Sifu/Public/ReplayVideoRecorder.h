@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=Actor -FallbackName=Actor
-#include "AvailabilityLayerCache.h"
 #include "VideoRecordEventDelegate.h"
+#include "AvailabilityLayerCache.h"
 #include "ReplayVideoRecorder.generated.h"
 
 class UWorld;

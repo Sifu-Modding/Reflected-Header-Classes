@@ -7,8 +7,8 @@
 #include "EGameplayTaskRunResult.h"
 #include "GameplayTasksComponent.generated.h"
 
-class UGameplayTask;
 class UGameplayTaskResource;
+class UGameplayTask;
 
 UCLASS(BlueprintType, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class GAMEPLAYTASKS_API UGameplayTasksComponent : public UActorComponent, public IGameplayTaskOwnerInterface {

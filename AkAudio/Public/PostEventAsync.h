@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintAsyncActionBase -FallbackName=BlueprintAsyncActionBase
-#include "OnAkPostEventCallbackDelegate.h"
 #include "PostEventAsyncOutputPinDelegate.h"
+#include "OnAkPostEventCallbackDelegate.h"
 #include "AkExternalSourceInfo.h"
 #include "PostEventAsync.generated.h"
 
-class UPostEventAsync;
 class UObject;
+class UPostEventAsync;
 class UAkAudioEvent;
 class AActor;
 

@@ -6,8 +6,8 @@
 #include "AsyncTaskAiAction.generated.h"
 
 class UAsyncTaskAiAction;
-class USCAiAction;
 class UAIFightingComponent;
+class USCAiAction;
 
 UCLASS()
 class SIFU_API UAsyncTaskAiAction : public UBlueprintAsyncActionBase {

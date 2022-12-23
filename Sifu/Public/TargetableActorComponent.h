@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EFactionsEnums.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=SceneComponent -FallbackName=SceneComponent
-#include "ETargetingPrio.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCPoolableActorComponent -FallbackName=SCPoolableActorComponent
-#include "EActionType.h"
+#include "ETargetingPrio.h"
 #include "TargetableConditions.h"
+#include "EFactionsEnums.h"
+#include "EActionType.h"
 #include "TargetableActorComponent.generated.h"
 
 class UCurveFloat;

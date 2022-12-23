@@ -1,19 +1,19 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "ReplayMenuWidget.h"
-#include "ECycleDirection.h"
+#include "EReplayTimelineControlType.h"
 #include "ReplayTimelineControl.h"
 #include "ReplayAvailabilityLayerCache.h"
-#include "EReplayTimelineControlType.h"
 #include "ReplayKeyData.h"
-#include "ETimelineStateAction.h"
+#include "ECycleDirection.h"
 #include "TimelineChangeState.h"
+#include "ETimelineStateAction.h"
 #include "EReplayCameraMode.h"
 #include "ReplayMainUserWidget.generated.h"
 
-class UReplayKey;
-class UReplayTimelineWidget;
 class AActor;
+class UReplayTimelineWidget;
+class UReplayKey;
 class AReplayController;
 
 UCLASS(EditInlineNew, Config=Replay)

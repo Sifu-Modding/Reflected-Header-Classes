@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EStereoDelayFiltertype.h"
 #include "EStereoDelaySourceEffect.h"
+#include "EStereoDelayFiltertype.h"
 #include "SourceEffectStereoDelaySettings.generated.h"
 
 USTRUCT(BlueprintType)

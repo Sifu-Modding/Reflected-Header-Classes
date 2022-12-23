@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ESCAICombatRoles.h"
 #include "WGAiAction.h"
+#include "ESCAICombatRoles.h"
 #include "AIActionChangeCombatRole.generated.h"
 
 UCLASS()

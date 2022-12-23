@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EFidgetMirroringTypes.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCGestureAndBlendProfile -FallbackName=SCGestureAndBlendProfile
+#include "EFidgetMirroringTypes.h"
 #include "EQuadrantTypes.h"
 #include "BaseActorConditionInstance.h"
 #include "SCConditionnalGestureAndBlendProfile.generated.h"

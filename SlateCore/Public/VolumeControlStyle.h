@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "SlateBrush.h"
 #include "SlateWidgetStyle.h"
 #include "SliderStyle.h"
-#include "SlateBrush.h"
 #include "VolumeControlStyle.generated.h"
 
 USTRUCT()

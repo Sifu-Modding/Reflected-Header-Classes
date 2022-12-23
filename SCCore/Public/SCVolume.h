@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=Volume -FallbackName=Volume
-#include "VolumeBounds.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=HitResult -FallbackName=HitResult
+#include "VolumeBounds.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=Volume -FallbackName=Volume
 #include "SCVolume.generated.h"
 
-class ASCVolume;
 class AActor;
 class UPrimitiveComponent;
+class ASCVolume;
 
 UCLASS()
 class SCCORE_API ASCVolume : public AVolume {

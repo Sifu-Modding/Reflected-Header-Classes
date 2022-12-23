@@ -1,25 +1,25 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCDelegate -FallbackName=SCDelegate
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=Actor -FallbackName=Actor
 #include "EGlobalBehaviors.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCDelegate -FallbackName=SCDelegate
-//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCDelegate -FallbackName=SCDelegate
-//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCDelegate -FallbackName=SCDelegate
-#include "EFirstSpawnMethod.h"
-#include "AICharacterSpawnParams.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCAiActionClassInstance -FallbackName=SCAiActionClassInstance
-#include "EPatrolLaunchMethod.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=AnimContainer -FallbackName=AnimContainer
+#include "EFirstSpawnMethod.h"
+#include "EPatrolLaunchMethod.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCDelegate -FallbackName=SCDelegate
+//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCDelegate -FallbackName=SCDelegate
 #include "EFactionsEnums.h"
+#include "AICharacterSpawnParams.h"
 #include "IdleAnimAndTransition.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCAiActionClassInstance -FallbackName=SCAiActionClassInstance
 #include "CarriedProps.h"
 #include "AISpawner.generated.h"
 
-class AAISpawner;
 class ABaseCharacter;
-class UAIFightingComponent;
+class AAISpawner;
 class APathPatrol;
+class UAIFightingComponent;
 class UAIPhaseScenario;
 class USceneComponent;
 class ABaseWeapon;

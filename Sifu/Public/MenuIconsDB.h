@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EquipmentCategoryInfos.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=DataAsset -FallbackName=DataAsset
+#include "EquipmentCategoryInfos.h"
 #include "ControllerIcons.h"
 #include "MenuIconsDB.generated.h"
 

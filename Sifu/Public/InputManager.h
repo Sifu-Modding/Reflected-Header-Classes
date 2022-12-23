@@ -4,8 +4,8 @@
 #include "InputAction.h"
 #include "InputManager.generated.h"
 
-class UInputPad;
 class UInputsDB;
+class UInputPad;
 class ASCPlayerController;
 
 UCLASS(BlueprintType)

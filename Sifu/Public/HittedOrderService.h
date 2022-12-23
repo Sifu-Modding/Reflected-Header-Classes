@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=HitResult -FallbackName=HitResult
-#include "OrderService.h"
-#include "BPOrderServiceInstance.h"
-#include "EOrderType.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BoneReferenceContainerInterface -FallbackName=BoneReferenceContainerInterface
+#include "OrderService.h"
 #include "HittedServiceInfos.h"
+#include "EOrderType.h"
 #include "HitBox.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=HitResult -FallbackName=HitResult
+#include "BPOrderServiceInstance.h"
 #include "HittedAnimContainer.h"
 #include "HitRequest.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=AnimContainer -FallbackName=AnimContainer

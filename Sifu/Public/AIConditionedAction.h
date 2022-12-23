@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "AIConditionClassInstance.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCAiActionClassInstance -FallbackName=SCAiActionClassInstance
+#include "AIConditionClassInstance.h"
 #include "AIConditionedAction.generated.h"
 
 class UComboTransitionCondition;

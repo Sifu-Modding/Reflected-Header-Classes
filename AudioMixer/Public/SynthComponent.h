@@ -7,10 +7,10 @@
 #include "OnSynthEnvelopeValueDelegate.h"
 #include "SynthComponent.generated.h"
 
+class USoundEffectSourcePresetChain;
 class USoundAttenuation;
 class USoundConcurrency;
 class USoundClass;
-class USoundEffectSourcePresetChain;
 class USoundSubmixBase;
 class USynthSound;
 class UAudioComponent;

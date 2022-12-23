@@ -5,9 +5,9 @@
 #include "ClothConfig_Legacy.h"
 #include "ClothingAssetCommon.generated.h"
 
-class UPhysicsAsset;
 class UClothLODDataCommon_Legacy;
 class UClothConfigBase;
+class UPhysicsAsset;
 class UClothingAssetCustomData;
 
 UCLASS(BlueprintType)

@@ -3,8 +3,8 @@
 #include "Templates/SubclassOf.h"
 #include "AttributeDefaults.generated.h"
 
-class UAttributeSet;
 class UDataTable;
+class UAttributeSet;
 
 USTRUCT(BlueprintType)
 struct GAMEPLAYABILITIES_API FAttributeDefaults {

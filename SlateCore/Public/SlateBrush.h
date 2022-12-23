@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ESlateBrushMirrorType.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Box2D -FallbackName=Box2D
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector2D -FallbackName=Vector2D
-#include "Margin.h"
-#include "SlateColor.h"
 #include "ESlateBrushTileType.h"
-#include "ESlateBrushDrawType.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector2D -FallbackName=Vector2D
+#include "SlateColor.h"
+#include "Margin.h"
+#include "ESlateBrushMirrorType.h"
 #include "ESlateBrushImageType.h"
+#include "ESlateBrushDrawType.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Box2D -FallbackName=Box2D
 #include "SlateBrush.generated.h"
 
 class UObject;

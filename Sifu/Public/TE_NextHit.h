@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "BaseTargetEvaluation.h"
-#include "ETS_NextHitExtraInfos.h"
 #include "TargetResult.h"
+#include "ETS_NextHitExtraInfos.h"
 #include "TE_NextHit.generated.h"
 
 class AFightingCharacter;

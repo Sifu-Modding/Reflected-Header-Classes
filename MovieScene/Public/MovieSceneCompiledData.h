@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "MovieSceneSequenceCompilerMaskStruct.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
 #include "MovieSceneEvaluationTemplate.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=FrameTime -FallbackName=FrameTime
 #include "MovieSceneSequenceHierarchy.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Guid -FallbackName=Guid
 #include "MovieSceneEntityComponentField.h"
 #include "MovieSceneEvaluationField.h"
-#include "MovieSceneSequenceCompilerMaskStruct.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Guid -FallbackName=Guid
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=FrameTime -FallbackName=FrameTime
 #include "EMovieSceneSequenceFlags.h"
 #include "MovieSceneCompiledData.generated.h"
 

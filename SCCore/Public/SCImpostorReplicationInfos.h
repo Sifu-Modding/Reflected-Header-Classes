@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Quat -FallbackName=Quat
-#include "CompressedPoseSnapshot.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
+#include "CompressedPoseSnapshot.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Quat -FallbackName=Quat
 #include "SCImpostorReplicationInfos.generated.h"
 
-class UAnimSequence;
 class ASCCharacterImpostor;
+class UAnimSequence;
 class USkeletalMesh;
 
 USTRUCT(BlueprintType)

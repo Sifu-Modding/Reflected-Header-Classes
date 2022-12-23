@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCActor -FallbackName=SCActor
-//CROSS-MODULE INCLUDE V2: -ModuleName=UMG -ObjectName=ESlateVisibility -FallbackName=ESlateVisibility
 #include "EMenuEnum.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=UMG -ObjectName=ESlateVisibility -FallbackName=ESlateVisibility
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector2D -FallbackName=Vector2D
 #include "InteractiveMenu.generated.h"
 
+class AFightingPlayerController;
 class AActor;
 class UInteractionObjectComponent;
-class USceneComponent;
 class UMenuWidget;
-class AFightingPlayerController;
+class USceneComponent;
 class ASCPlayerController;
 
 UCLASS()

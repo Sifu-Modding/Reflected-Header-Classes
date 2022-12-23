@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameplayEffectContextHandle.h"
-#include "GameplayEffectModifiedAttribute.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTagContainer -FallbackName=GameplayTagContainer
+#include "GameplayEffectModifiedAttribute.h"
+#include "GameplayEffectContextHandle.h"
 #include "GameplayEffectSpecForRPC.generated.h"
 
 class UGameplayEffect;

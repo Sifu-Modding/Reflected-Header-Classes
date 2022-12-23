@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "BaseActorTargetCondition.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCUserDefinedEnumHandler -FallbackName=SCUserDefinedEnumHandler
+#include "BaseActorTargetCondition.h"
 #include "IsTargetSlotCondition.generated.h"
 
 UCLASS()

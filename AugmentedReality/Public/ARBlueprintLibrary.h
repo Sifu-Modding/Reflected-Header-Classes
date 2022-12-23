@@ -1,45 +1,45 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
 #include "EARCaptureType.h"
-#include "EARWorldMappingState.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Rotator -FallbackName=Rotator
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Transform -FallbackName=Transform
-#include "ARSessionStatus.h"
-#include "EARSceneReconstruction.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=IntPoint -FallbackName=IntPoint
-#include "EARTextureType.h"
-#include "ARCameraIntrinsics.h"
 #include "ARTraceResult.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector2D -FallbackName=Vector2D
 #include "EARSessionType.h"
-#include "EARSessionTrackingFeature.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=LinearColor -FallbackName=LinearColor
-#include "EARTrackingQualityReason.h"
-#include "EARObjectClassification.h"
-#include "EARTrackingQuality.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector2D -FallbackName=Vector2D
 #include "ARPose2D.h"
+#include "EARSessionTrackingFeature.h"
+#include "EARSceneReconstruction.h"
+#include "EARWorldMappingState.h"
+#include "EARTrackingQuality.h"
+#include "EARTrackingQualityReason.h"
+#include "ARSessionStatus.h"
+#include "EARObjectClassification.h"
 #include "ARVideoFormat.h"
+#include "ARCameraIntrinsics.h"
+#include "EARTextureType.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=LinearColor -FallbackName=LinearColor
 #include "ARBlueprintLibrary.generated.h"
 
+class UARTrackedPoint;
 class UAREnvironmentCaptureProbe;
 class USceneComponent;
 class UARSessionConfig;
 class UARPin;
+class UARTrackedImage;
 class UARTrackedGeometry;
+class UARPlaneGeometry;
+class UARTrackedPose;
 class UARTexture;
 class UARLightEstimate;
 class UARTextureCameraImage;
-class UTexture2D;
 class UARTextureCameraDepth;
-class UARTrackedPose;
-class UARTrackedPoint;
-class UARPlaneGeometry;
-class UARTrackedImage;
 class UObject;
 class UARCandidateImage;
+class UTexture2D;
 
 UCLASS(BlueprintType)
 class AUGMENTEDREALITY_API UARBlueprintLibrary : public UBlueprintFunctionLibrary {

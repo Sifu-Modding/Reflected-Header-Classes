@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "AbilityTask.h"
 #include "InputPressDelegateDelegate.h"
+#include "AbilityTask.h"
 #include "AbilityTask_WaitInputPress.generated.h"
 
 class UAbilityTask_WaitInputPress;

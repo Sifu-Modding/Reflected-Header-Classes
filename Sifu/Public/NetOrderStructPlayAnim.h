@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "EQuadrantTypes.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 #include "NetOrderStruct.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=AnimContainer -FallbackName=AnimContainer
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 #include "WeaponAnimInfo.h"
-#include "EQuadrantTypes.h"
 #include "NetOrderStructPlayAnim.generated.h"
 
 class UCurveFloat;

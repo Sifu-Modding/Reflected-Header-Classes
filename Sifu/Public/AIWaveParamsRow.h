@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "AIWaveBucketDescription.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=TableRowBase -FallbackName=TableRowBase
 #include "EAIArchetype.h"
-#include "AIWaveBucketDescription.h"
 #include "AIWaveParamsRow.generated.h"
 
 USTRUCT()

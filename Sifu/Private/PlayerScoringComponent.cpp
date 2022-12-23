@@ -1,12 +1,12 @@
 #include "PlayerScoringComponent.h"
 
+class UCurveFloat;
 class UOrderComponent;
 class AActor;
 class AVitalPointActor;
-class UArchetypeAsset;
-class UCurveFloat;
 class UAttackDB;
 class AFightingCharacter;
+class UArchetypeAsset;
 class ABaseWeapon;
 
 void UPlayerScoringComponent::OnOwnerTakedownStarted(uint8 _iOrderID, UOrderComponent* _OrderComponent) {

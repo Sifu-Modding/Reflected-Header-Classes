@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "PhaseTransitionNodeHandler.h"
-#include "AICustomBehaviorTreeList.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Guid -FallbackName=Guid
 #include "AIPhaseNodeHardLink.h"
 #include "EAIPhaseNodeType.h"
+#include "AICustomBehaviorTreeList.h"
+#include "PhaseTransitionNodeHandler.h"
 #include "PhaseNodeHandler.generated.h"
 
-class UArchetypeAsset;
 class USkeletalMesh;
+class UArchetypeAsset;
 
 USTRUCT(BlueprintType)
 struct FPhaseNodeHandler {

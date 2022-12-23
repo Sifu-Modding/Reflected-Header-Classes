@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "AkAcousticPortalState.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=Volume -FallbackName=Volume
+#include "AkAcousticPortalState.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ECollisionChannel -FallbackName=ECollisionChannel
 #include "AkAcousticPortal.generated.h"
 

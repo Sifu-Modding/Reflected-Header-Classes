@@ -2,13 +2,13 @@
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCBaseGameSettings -FallbackName=SCBaseGameSettings
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=DataTableRowHandle -FallbackName=DataTableRowHandle
-#include "SCWuguanUserEnumSetting.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=SoftObjectPath -FallbackName=SoftObjectPath
+#include "SCWuguanUserEnumSetting.h"
 #include "SCGameSettings.generated.h"
 
+class UArenaSettings;
 class UMirrorAnimDB;
 class UOrderService;
-class UArenaSettings;
 
 UCLASS()
 class SIFU_API USCGameSettings : public USCBaseGameSettings {

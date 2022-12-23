@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EGameplayModEvaluationChannel.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=SoftClassPath -FallbackName=SoftClassPath
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=SoftObjectPath -FallbackName=SoftObjectPath
-//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTag -FallbackName=GameplayTag
 #include "NetSerializeScriptStructCache.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTag -FallbackName=GameplayTag
+#include "EGameplayModEvaluationChannel.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=SoftObjectPath -FallbackName=SoftObjectPath
 #include "AbilitySystemGlobals.generated.h"
 
-class UDataTable;
-class UCurveTable;
 class UGameplayTagReponseTable;
+class UDataTable;
 class UGameplayCueManager;
+class UCurveTable;
 
 UCLASS(Config=Game)
 class GAMEPLAYABILITIES_API UAbilitySystemGlobals : public UObject {

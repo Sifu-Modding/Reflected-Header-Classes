@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "AbilityTask.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTagQuery -FallbackName=GameplayTagQuery
 #include "WaitAbilityCommitDelegateDelegate.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTagQuery -FallbackName=GameplayTagQuery
 //CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTag -FallbackName=GameplayTag
 #include "AbilityTask_WaitAbilityCommit.generated.h"
 

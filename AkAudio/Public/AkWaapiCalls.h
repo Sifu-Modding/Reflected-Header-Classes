@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
-#include "OnWaapiProjectLoadedDelegate.h"
-#include "AKWaapiJsonObject.h"
-#include "OnEventCallbackDelegate.h"
 #include "AkWaapiSubscriptionId.h"
+#include "AKWaapiJsonObject.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
+#include "OnEventCallbackDelegate.h"
 #include "AkWaapiUri.h"
 #include "OnWaapiConnectionLostDelegate.h"
+#include "OnWaapiProjectLoadedDelegate.h"
 #include "AkWaapiCalls.generated.h"
 
 UCLASS(BlueprintType, DefaultConfig, Within=World)

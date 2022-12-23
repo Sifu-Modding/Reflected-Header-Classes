@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Transform -FallbackName=Transform
-#include "SCAnimInstanceBase.h"
 #include "DynamicBlendSettings.h"
+#include "SCAnimInstanceBase.h"
 #include "ECinematicLayerTypes.h"
 #include "ESCBlendType.h"
 #include "SCAnimInstance.generated.h"
 
+class UCurveFloat;
 class UMirrorAnimDB;
 class UPoseAsset;
-class UCurveFloat;
 
 UCLASS(NonTransient)
 class SCCORE_API USCAnimInstance : public USCAnimInstanceBase {

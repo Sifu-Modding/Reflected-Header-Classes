@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameplayTagRequirements.h"
 #include "AbilityTask.h"
+#include "GameplayTagRequirements.h"
 #include "GameplayEffectBlockedDelegateDelegate.h"
 #include "AbilityTask_WaitGameplayEffectBlockedImmunity.generated.h"
 
 class UAbilitySystemComponent;
-class UAbilityTask_WaitGameplayEffectBlockedImmunity;
-class UGameplayAbility;
 class AActor;
+class UGameplayAbility;
+class UAbilityTask_WaitGameplayEffectBlockedImmunity;
 
 UCLASS()
 class GAMEPLAYABILITIES_API UAbilityTask_WaitGameplayEffectBlockedImmunity : public UAbilityTask {

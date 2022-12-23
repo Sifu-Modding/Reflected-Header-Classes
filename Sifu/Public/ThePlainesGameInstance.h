@@ -2,28 +2,28 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCGameInstance -FallbackName=SCGameInstance
-//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTag -FallbackName=GameplayTag
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCError -FallbackName=SCError
 //CROSS-MODULE INCLUDE V2: -ModuleName=AkAudio -ObjectName=AkExternalSourceInfo -FallbackName=AkExternalSourceInfo
+//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTag -FallbackName=GameplayTag
 #include "EFactionsEnums.h"
 #include "ThePlainesGameInstance.generated.h"
 
-class USCSessionManager;
-class UUserWidget;
+class USessionTimeManager;
 class UWGGameFlow;
-class UAkAudioEvent;
+class UUserWidget;
 class UReplaySystem;
+class UAkAudioEvent;
 class UItemsDB;
 class UInputManager;
-class USCLocalPlayer;
 class UFactionsManager;
+class USCLocalPlayer;
 class UPredictionManager;
 class UCinematicManager;
-class ULocalPlayer;
 class UMessageManager;
-class USessionTimeManager;
+class USCSessionManager;
 class ALevelSequenceActor;
 class ASCPlayerStart;
+class ULocalPlayer;
 
 UCLASS(NonTransient)
 class SIFU_API UThePlainesGameInstance : public USCGameInstance {

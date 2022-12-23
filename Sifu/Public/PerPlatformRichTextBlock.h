@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "PerPlatformWidget.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=UMG -ObjectName=RichTextBlock -FallbackName=RichTextBlock
+#include "PerPlatformWidget.h"
 #include "PerPlatformRichTextBlock.generated.h"
 
 class UDataTable;

@@ -5,9 +5,9 @@
 #include "NDIStaticMeshSectionFilter.h"
 #include "NiagaraDataInterfaceStaticMesh.generated.h"
 
-class AActor;
 class UStaticMesh;
 class UStaticMeshComponent;
+class AActor;
 
 UCLASS(EditInlineNew)
 class NIAGARA_API UNiagaraDataInterfaceStaticMesh : public UNiagaraDataInterface {

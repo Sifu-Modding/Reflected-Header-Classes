@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "AkCommonInitializationSettingsWithSampleRate.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
-#include "AkAdvancedInitializationSettings.h"
 #include "AkPlatformInitialisationSettingsBase.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
+#include "AkCommonInitializationSettingsWithSampleRate.h"
 #include "AkAudioSession.h"
 #include "AkCommunicationSettingsWithSystemInitialization.h"
+#include "AkAdvancedInitializationSettings.h"
 #include "AkTVOSInitializationSettings.generated.h"
 
 UCLASS(DefaultConfig, Config=Game)

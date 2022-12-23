@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "EPathExistanceQueryType.h"
 #include "BTDecorator.h"
 #include "BlackboardKeySelector.h"
+#include "EPathExistanceQueryType.h"
 #include "BTDecorator_DoesPathExist.generated.h"
 
 class UNavigationQueryFilter;

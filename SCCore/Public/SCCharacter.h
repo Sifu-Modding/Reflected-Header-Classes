@@ -9,9 +9,9 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=EAttachmentRule -FallbackName=EAttachmentRule
 #include "SCCharacter.generated.h"
 
-class UAnimSequence;
 class ASCCharacterImpostor;
 class USCCharacterPoseData;
+class UAnimSequence;
 class USkeletalMesh;
 class AActor;
 

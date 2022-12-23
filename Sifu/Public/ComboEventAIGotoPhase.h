@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "AIPhaseNodeSoftLink.h"
 #include "ComboEvent.h"
+#include "AIPhaseNodeSoftLink.h"
 #include "SCAITicketEnum.h"
 #include "ComboEventAIGotoPhase.generated.h"
 

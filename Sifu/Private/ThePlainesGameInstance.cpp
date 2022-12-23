@@ -1,12 +1,12 @@
 #include "ThePlainesGameInstance.h"
 #include "PredictionManager.h"
 
-class ASCPlayerStart;
-class UReplaySystem;
+class UWGGameFlow;
 class USCLocalPlayer;
 class ALevelSequenceActor;
 class ULocalPlayer;
-class UWGGameFlow;
+class UReplaySystem;
+class ASCPlayerStart;
 
 void UThePlainesGameInstance::TriggerTakeKinectResources(bool _bTake) {
 }

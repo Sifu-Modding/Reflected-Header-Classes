@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "OnReplayKeySelectionUpdateDelegate.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
+#include "OnReplayKeyDataUpdateDelegate.h"
 #include "ReplayKeyData.h"
-#include "OnReplayKeyTransitionUpdateDelegate.h"
 #include "OnReplayKeyEventDelegate.h"
 #include "OnReplayKeyIndexUpdateDelegate.h"
-#include "OnReplayKeyDataUpdateDelegate.h"
+#include "OnReplayKeyTransitionUpdateDelegate.h"
 #include "OnReplayKeyHoveredUpdateDelegate.h"
+#include "OnReplayKeySelectionUpdateDelegate.h"
 #include "OnReplayKeyTimeUpdateDelegate.h"
 #include "ReplayKey.generated.h"
 

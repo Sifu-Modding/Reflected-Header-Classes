@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "GameplayTagsList.h"
-#include "RestrictedConfigInfo.h"
-#include "GameplayTagCategoryRemap.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=SoftObjectPath -FallbackName=SoftObjectPath
 #include "GameplayTagRedirect.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=SoftObjectPath -FallbackName=SoftObjectPath
+#include "GameplayTagCategoryRemap.h"
+#include "RestrictedConfigInfo.h"
 #include "GameplayTagsSettings.generated.h"
 
 UCLASS(DefaultConfig, Config=GameplayTags)

@@ -3,29 +3,29 @@
 #include "Templates/SubclassOf.h"
 #include "OnReplayGoToTimeDelegate.h"
 #include "BaseReplayController.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCDelegate -FallbackName=SCDelegate
+#include "EReplayKeyTransition.h"
 #include "ReplayTimelineControllerData.h"
 #include "ReplayCameraSettings.h"
-#include "ReplayOverrideMPCParameter.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCDelegate -FallbackName=SCDelegate
 #include "OnReplayCameraModeChangedDelegate.h"
-#include "EReplayKeyTransition.h"
 #include "EReplayCameraMode.h"
+#include "ReplayOverrideMPCParameter.h"
 #include "ReplayVideoRecorderCreatedDelegateDelegate.h"
 #include "ReplayController.generated.h"
 
 class UReplayTimelineController;
-class UReplayFightingCharacterComponent;
-class UCurveFloat;
-class AActor;
 class UReplayLoadingScreenWidget;
+class AActor;
+class UReplayCineCameraComponent;
+class UCurveFloat;
 class UReplayMainUserWidget;
 class AReplayVideoRecorder;
 class UReplayKey;
 class UReplayTimelineModel;
 class UReplaySystem;
+class UReplayFightingCharacterComponent;
 class UObject;
 class AReplayingCamera;
-class UReplayCineCameraComponent;
 
 UCLASS()
 class SIFU_API AReplayController : public ABaseReplayController {

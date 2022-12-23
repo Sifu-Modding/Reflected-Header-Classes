@@ -2,15 +2,15 @@
 #include "CoreMinimal.h"
 #include "OrderDB.h"
 #include "FallOnSlopeConfiguration.h"
-#include "ERagdollMeshOrientation.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=CollisionProfileName -FallbackName=CollisionProfileName
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=AnimContainer -FallbackName=AnimContainer
+#include "ERagdollMeshOrientation.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=FloatRange -FallbackName=FloatRange
 #include "OrderFallOnSlopeDB.generated.h"
 
-class UAkRtpc;
 class UPhysicsAsset;
 class UAnimSequence;
+class UAkRtpc;
 class UObject;
 class UPhysicalMaterial;
 

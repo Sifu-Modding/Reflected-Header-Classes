@@ -1,26 +1,26 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=EAttachmentRule -FallbackName=EAttachmentRule
-#include "NiagaraMaterialOverride.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=FXSystemComponent -FallbackName=FXSystemComponent
+#include "NiagaraMaterialOverride.h"
 #include "ENiagaraTickBehavior.h"
-#include "OnNiagaraSystemFinishedDelegate.h"
 #include "NiagaraUserRedirectionParameterStore.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Quat -FallbackName=Quat
+#include "OnNiagaraSystemFinishedDelegate.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=EAttachmentRule -FallbackName=EAttachmentRule
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector4 -FallbackName=Vector4
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector2D -FallbackName=Vector2D
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Quat -FallbackName=Quat
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=LinearColor -FallbackName=LinearColor
 #include "ENiagaraAgeUpdateMode.h"
 #include "NiagaraComponent.generated.h"
 
 class UNiagaraSystem;
-class AActor;
+class UNiagaraDataInterface;
 class USceneComponent;
 class UTextureRenderTarget;
 class UObject;
 class UMaterialInterface;
-class UNiagaraDataInterface;
+class AActor;
 
 UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class NIAGARA_API UNiagaraComponent : public UFXSystemComponent {

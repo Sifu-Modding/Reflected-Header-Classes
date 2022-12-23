@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "NiagaraScalabilityManager.generated.h"
 
-class UNiagaraComponent;
 class UNiagaraEffectType;
+class UNiagaraComponent;
 
 USTRUCT()
 struct FNiagaraScalabilityManager {

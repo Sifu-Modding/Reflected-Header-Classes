@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=FrameNumber -FallbackName=FrameNumber
 //CROSS-MODULE INCLUDE V2: -ModuleName=MovieScene -ObjectName=MovieSceneSection -FallbackName=MovieSceneSection
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=FrameNumber -FallbackName=FrameNumber
 #include "MovieSceneMediaSection.generated.h"
 
 class UMediaSource;
-class UMediaTexture;
 class UMediaSoundComponent;
+class UMediaTexture;
 class UMediaPlayer;
 
 UCLASS(MinimalAPI)

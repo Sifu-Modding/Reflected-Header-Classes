@@ -3,15 +3,15 @@
 #include "AbilityTask_ApplyRootMotion_Base.h"
 #include "ApplyRootMotionMoveToActorForceDelegateDelegate.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=EMovementMode -FallbackName=EMovementMode
 #include "ERootMotionMoveToActorTargetOffsetType.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=EMovementMode -FallbackName=EMovementMode
 #include "GameplayAbilityTargetDataHandle.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ERootMotionFinishVelocityMode -FallbackName=ERootMotionFinishVelocityMode
 #include "AbilityTask_ApplyRootMotionMoveToActorForce.generated.h"
 
-class UCurveFloat;
-class AActor;
 class UCurveVector;
+class AActor;
+class UCurveFloat;
 class UAbilityTask_ApplyRootMotionMoveToActorForce;
 class UGameplayAbility;
 

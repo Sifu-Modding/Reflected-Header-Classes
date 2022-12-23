@@ -4,10 +4,10 @@
 #include "TargetableWidgetUpdaterComponent.h"
 #include "ASMDetectionComponent.h"
 
+class UCharacterProgressionUnlockDB;
+class AActor;
 class UInteractionObjectComponent;
 class AAISpawner;
-class AActor;
-class UCharacterProgressionUnlockDB;
 class UPanelWidget;
 class UMenuWidget;
 class UPopupWidget;

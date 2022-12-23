@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EAbsorbFeedbackTypes.h"
 #include "SpecialAbilityPropertyDB.h"
+#include "EAbsorbFeedbackTypes.h"
 #include "AbsorbPropertyDB.generated.h"
 
 UCLASS()

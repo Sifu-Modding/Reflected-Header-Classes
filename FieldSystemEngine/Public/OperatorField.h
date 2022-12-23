@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "FieldNodeBase.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Chaos -ObjectName=EFieldOperationType -FallbackName=EFieldOperationType
+#include "FieldNodeBase.h"
 #include "OperatorField.generated.h"
 
 class UOperatorField;

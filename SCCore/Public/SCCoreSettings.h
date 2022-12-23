@@ -1,22 +1,22 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=DeveloperSettings -ObjectName=DeveloperSettings -FallbackName=DeveloperSettings
 #include "SCVolumeClusterMaterialsPath.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=DeveloperSettings -ObjectName=DeveloperSettings -FallbackName=DeveloperSettings
 #include "ActorsPoolConfig.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTag -FallbackName=GameplayTag
 #include "SCErrorPopup.h"
 #include "SCCoreSettings.generated.h"
 
-class USCCheatManagerSettings;
-class USCInGameAchievementsManagerSettings;
-class ASCSequenceAnchor;
 class USCBaseGameSettings;
+class USCInGameAchievementsManagerSettings;
+class USCCheatManagerSettings;
+class UCurveFloat;
 class USCLevelSequenceDirectorData;
+class ASCSequenceAnchor;
 class USCAiAction;
 class AActor;
 class ASCCharacterImpostor;
-class UCurveFloat;
 
 UCLASS(BlueprintType, DefaultConfig, Config=SCCore)
 class SCCORE_API USCCoreSettings : public UDeveloperSettings {

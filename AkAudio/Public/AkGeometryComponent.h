@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "AkMeshType.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=SceneComponent -FallbackName=SceneComponent
+#include "AkMeshType.h"
 #include "AkGeometryData.h"
 #include "AkGeometrySurfaceOverride.h"
 #include "AkGeometryComponent.generated.h"

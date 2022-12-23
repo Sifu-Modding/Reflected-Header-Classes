@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ELimbs.h"
-#include "EInstigatorType.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTagContainer -FallbackName=GameplayTagContainer
 #include "AttackRequest.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=HitResult -FallbackName=HitResult
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
+#include "ELimbs.h"
+#include "EInstigatorType.h"
 #include "HitBox.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTagContainer -FallbackName=GameplayTagContainer
 #include "HitRequest.generated.h"
 
 class AActor;

@@ -3,10 +3,10 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=Actor -FallbackName=Actor
 #include "SCPositionBakeSceneCapture.generated.h"
 
-class UMaterialInstanceDynamic;
 class USCCaptureComponent2D;
 class UMaterialInterface;
 class UTextureRenderTarget2D;
+class UMaterialInstanceDynamic;
 
 UCLASS()
 class SCCORE_API ASCPositionBakeSceneCapture : public AActor {

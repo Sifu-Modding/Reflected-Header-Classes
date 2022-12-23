@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
 #include "AkCommonInitializationSettings.h"
 #include "AkPlatformInitialisationSettingsBase.h"
-#include "AkPS4AdvancedInitializationSettings.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
 #include "AkCommunicationSettingsWithSystemInitialization.h"
+#include "AkPS4AdvancedInitializationSettings.h"
 #include "AkPS4InitializationSettings.generated.h"
 
 UCLASS(DefaultConfig, Config=Game)

@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameplayTagRequirements.h"
+#include "GameplayEffectModifierMagnitude.h"
 #include "GameplayAttribute.h"
 #include "EGameplayModOp.h"
 #include "ScalableFloat.h"
 #include "GameplayModEvaluationChannelSettings.h"
-#include "GameplayEffectModifierMagnitude.h"
+#include "GameplayTagRequirements.h"
 #include "GameplayModifierInfo.generated.h"
 
 USTRUCT(BlueprintType)

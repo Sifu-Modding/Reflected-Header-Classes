@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
-#include "AKWaapiJsonObject.h"
 #include "AkWaapiFieldNames.h"
+#include "AKWaapiJsonObject.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
 #include "AkWaapiJsonManager.generated.h"
 
 UCLASS(BlueprintType)

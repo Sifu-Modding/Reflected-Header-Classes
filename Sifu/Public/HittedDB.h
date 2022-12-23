@@ -5,9 +5,9 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=AnimContainer -FallbackName=AnimContainer
 #include "HittedDB.generated.h"
 
+class UFallHitRequest;
 class UAvailabilityLayerData;
 class UHitAnimRequest;
-class UFallHitRequest;
 
 UCLASS(BlueprintType)
 class SIFU_API UHittedDB : public UInheritedDataAsset {

@@ -5,9 +5,9 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=Margin -FallbackName=Margin
 #include "LoadChoices.generated.h"
 
+class UWidget;
 class UPanelWidget;
 class ULoadSlot;
-class UWidget;
 
 UCLASS(EditInlineNew)
 class SIFU_API ULoadChoices : public UMenuItem {

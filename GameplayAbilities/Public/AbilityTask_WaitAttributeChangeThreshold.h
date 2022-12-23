@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameplayAttribute.h"
 #include "AbilityTask.h"
 #include "WaitAttributeChangeThresholdDelegateDelegate.h"
+#include "GameplayAttribute.h"
 #include "EWaitAttributeChangeComparison.h"
 #include "AbilityTask_WaitAttributeChangeThreshold.generated.h"
 
-class UAbilityTask_WaitAttributeChangeThreshold;
 class UAbilitySystemComponent;
+class UAbilityTask_WaitAttributeChangeThreshold;
 class UGameplayAbility;
 class AActor;
 

@@ -1,43 +1,43 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "InputAction.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ActorComponent -FallbackName=ActorComponent
-//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCPoolableActorComponent -FallbackName=SCPoolableActorComponent
-#include "BaseComponent.h"
-#include "AnimSyncContainer.h"
-#include "EActionType.h"
-#include "EHitDismissReason.h"
-#include "EMovableType.h"
-#include "EDangerStates.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCDelegate -FallbackName=SCDelegate
 #include "AttackHitRequest.h"
-#include "ImpactResult.h"
-#include "ELimbs.h"
+#include "EMovableType.h"
 #include "EChargeCapEndReason.h"
+#include "EDangerStates.h"
+#include "AvoidWindow.h"
+#include "BaseComponent.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCPoolableActorComponent -FallbackName=SCPoolableActorComponent
+#include "ELimbs.h"
+#include "EActionType.h"
+#include "ImpactResult.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCDelegate -FallbackName=SCDelegate
+#include "HitBox.h"
+#include "EHitDismissReason.h"
 #include "EAttackStates.h"
+#include "AnimSyncContainer.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCUserDefinedEnumHandler -FallbackName=SCUserDefinedEnumHandler
 #include "AttackIKLimbProfiles.h"
+#include "InputAction.h"
 #include "AbsorbWindow.h"
-#include "HitBox.h"
-#include "AvoidWindow.h"
 #include "ComboAttack.h"
 #include "AttackComponent.generated.h"
 
-class UTargetDB;
-class AActor;
-class AVitalPointActor;
-class UAnimSequence;
-class UIdleDB;
-class UPushObjectAnimRequest;
-class UCombo;
-class UComboManager;
-class UEnvironmentalAttackDetectionDB;
-class UCurveFloat;
-class URushAttackDB;
-class UFocusDB;
 class AInteractiveMovable;
+class UCurveFloat;
+class AVitalPointActor;
+class AActor;
+class UTargetDB;
 class AThrowableActor;
+class UEnvironmentalAttackDetectionDB;
+class UPushObjectAnimRequest;
+class UComboManager;
+class UCombo;
+class UIdleDB;
+class URushAttackDB;
+class UAnimSequence;
+class UFocusDB;
 class APushableActor;
 
 UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

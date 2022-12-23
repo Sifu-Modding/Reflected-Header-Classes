@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "SlateColor.h"
+#include "SlateBrush.h"
 #include "SlateWidgetStyle.h"
 #include "TableColumnHeaderStyle.h"
-#include "SlateColor.h"
 #include "SplitterStyle.h"
-#include "SlateBrush.h"
 #include "HeaderRowStyle.generated.h"
 
 USTRUCT()

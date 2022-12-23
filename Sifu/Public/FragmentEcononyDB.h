@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ELootBoxType.h"
 #include "EEquipmentSlot.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=DataAsset -FallbackName=DataAsset
 #include "SlotEquipmentValues.h"
+#include "ELootBoxType.h"
 #include "EGearRarity.h"
 #include "FragmentEcononyDB.generated.h"
 

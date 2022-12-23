@@ -1,9 +1,9 @@
 #include "WGAiAction.h"
 
-class USCCrowdFollowingComponent;
 class AFightingPlayerController;
-class AFightingAIController;
 class AFightingCharacter;
+class USCCrowdFollowingComponent;
+class AFightingAIController;
 class UAIFightingComponent;
 class UOrderParams;
 

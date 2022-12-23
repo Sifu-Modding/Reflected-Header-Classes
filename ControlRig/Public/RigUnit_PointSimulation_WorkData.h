@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "CRSimPointContainer.h"
 #include "CachedRigElement.h"
+#include "CRSimPointContainer.h"
 #include "RigUnit_PointSimulation_WorkData.generated.h"
 
 USTRUCT(BlueprintType)

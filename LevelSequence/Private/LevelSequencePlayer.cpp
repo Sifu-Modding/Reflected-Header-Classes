@@ -2,8 +2,8 @@
 
 class UCameraComponent;
 class UObject;
-class ULevelSequence;
 class ALevelSequenceActor;
+class ULevelSequence;
 class ULevelSequencePlayer;
 
 UCameraComponent* ULevelSequencePlayer::GetActiveCameraComponent() const {

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "MoviePipelinePostProcessPass.h"
 #include "MoviePipelineImagePassBase.h"
+#include "MoviePipelinePostProcessPass.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=ActorLayerUtilities -ObjectName=ActorLayer -FallbackName=ActorLayer
 #include "MoviePipelineDeferredPassBase.generated.h"
 

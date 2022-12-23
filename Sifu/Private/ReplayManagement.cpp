@@ -1,5 +1,11 @@
 #include "ReplayManagement.h"
 
+void UReplayManagement::OnStreamingCompleteQuitReplayManagement() {
+}
+
+void UReplayManagement::OnQuitReplayManagementMenu(bool _bIsPlayingReplay) {
+}
+
 void UReplayManagement::BPF_SetReplayOpenState(const EReplayOpenState _eOpenState) {
 }
 

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "MovieSceneAdditiveCameraAnimationTemplate.h"
 #include "MovieSceneCameraAnimSectionData.h"
+#include "MovieSceneAdditiveCameraAnimationTemplate.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=FrameNumber -FallbackName=FrameNumber
 #include "MovieSceneCameraAnimSectionTemplate.generated.h"
 

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SCGameplayAbilityActorInfo.h"
 #include "SCGameplayAbility.h"
+#include "SCGameplayAbilityActorInfo.h"
 #include "DizzyReductionAbility.generated.h"
 
 class UCurveFloat;

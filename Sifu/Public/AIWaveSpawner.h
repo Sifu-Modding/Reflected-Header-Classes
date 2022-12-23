@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "AISpawner.h"
-#include "EAIArchetype.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTag -FallbackName=GameplayTag
 #include "EGlobalBehaviors.h"
+#include "EAIArchetype.h"
 #include "AIWaveSpawner.generated.h"
 
 UCLASS()

@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "EControlRigRotationOrder.h"
+#include "EControlRigAnimEasingType.h"
 #include "RigUnit_HighlevelBaseMutable.h"
 #include "RigUnit_Harmonics_TargetItem.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
-#include "EControlRigAnimEasingType.h"
 #include "RigUnit_BoneHarmonics_WorkData.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 #include "RigUnit_ItemHarmonics.generated.h"
 
 USTRUCT()

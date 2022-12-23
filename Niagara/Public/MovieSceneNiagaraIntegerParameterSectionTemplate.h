@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "MovieSceneNiagaraParameterSectionTemplate.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=MovieScene -ObjectName=MovieSceneIntegerChannel -FallbackName=MovieSceneIntegerChannel
+#include "MovieSceneNiagaraParameterSectionTemplate.h"
 #include "MovieSceneNiagaraIntegerParameterSectionTemplate.generated.h"
 
 USTRUCT()

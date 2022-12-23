@@ -3,8 +3,8 @@
 #include "ReplayableStaticObjectComponent.h"
 #include "ReplayablePhysObjectComponent.generated.h"
 
-class UPrimitiveComponent;
 class AActor;
+class UPrimitiveComponent;
 
 UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class SIFU_API UReplayablePhysObjectComponent : public UReplayableStaticObjectComponent {

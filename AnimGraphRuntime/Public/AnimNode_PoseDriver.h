@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "AnimNode_PoseHandler.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=PoseLink -FallbackName=PoseLink
-#include "RBFParams.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BoneReference -FallbackName=BoneReference
 #include "EPoseDriverOutput.h"
 #include "EPoseDriverSource.h"
 #include "PoseDriverTarget.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=PoseLink -FallbackName=PoseLink
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BoneReference -FallbackName=BoneReference
+#include "RBFParams.h"
 #include "AnimNode_PoseDriver.generated.h"
 
 USTRUCT(BlueprintType)

@@ -3,8 +3,8 @@
 #include "Templates/SubclassOf.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=Actor -FallbackName=Actor
 #include "GameplayAbilityTargetingLocationInfo.h"
-#include "GameplayTargetDataFilterHandle.h"
 #include "WorldReticleParameters.h"
+#include "GameplayTargetDataFilterHandle.h"
 #include "GameplayAbilityTargetActor.generated.h"
 
 class UAbilitySystemComponent;

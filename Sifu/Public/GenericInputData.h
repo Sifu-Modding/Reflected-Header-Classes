@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "InputMappingKeySlotContainer.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=DataAsset -FallbackName=DataAsset
 #include "InputAction.h"
+#include "InputMappingKeySlotContainer.h"
 #include "GenericInputData.generated.h"
 
-class UGenericInputData;
 class UGenericInputUIData;
+class UGenericInputData;
 
 UCLASS(BlueprintType)
 class SIFU_API UGenericInputData : public UDataAsset {

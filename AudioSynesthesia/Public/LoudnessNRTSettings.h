@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "AudioSynesthesiaNRTSettings.h"
 #include "ELoudnessNRTCurveTypeEnum.h"
+#include "AudioSynesthesiaNRTSettings.h"
 #include "LoudnessNRTSettings.generated.h"
 
 UCLASS(BlueprintType, EditInlineNew)

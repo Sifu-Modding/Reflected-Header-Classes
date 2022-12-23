@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "RigUnit_MathRBFInterpolateQuatBase.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 #include "MathRBFInterpolateQuatVector_Target.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 #include "RigUnit_MathRBFInterpolateQuatVector.generated.h"
 
 USTRUCT()

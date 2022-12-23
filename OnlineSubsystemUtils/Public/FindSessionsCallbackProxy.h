@@ -5,8 +5,8 @@
 #include "BlueprintSessionResult.h"
 #include "FindSessionsCallbackProxy.generated.h"
 
-class UObject;
 class UFindSessionsCallbackProxy;
+class UObject;
 class APlayerController;
 
 UCLASS(MinimalAPI)

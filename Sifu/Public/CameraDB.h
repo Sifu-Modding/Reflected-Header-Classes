@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=DataAsset -FallbackName=DataAsset
-#include "CameraSafePointPlacement.h"
-#include "CameraLookAtServiceBehaviorTime.h"
 #include "CameraLookAtServiceBehaviorConfig.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=DataAsset -FallbackName=DataAsset
+#include "CameraLookAtServiceBehaviorTime.h"
+#include "CameraSafePointPlacement.h"
 #include "CameraSafePointConditionalPlacement.h"
 #include "CameraRepulsionConfig.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ECollisionChannel -FallbackName=ECollisionChannel
@@ -12,9 +12,9 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=CollisionResponseContainer -FallbackName=CollisionResponseContainer
 #include "CameraDB.generated.h"
 
+class UCurveFloat;
 class UBehaviorTree;
 class UAbstractCameraData;
-class UCurveFloat;
 class UCameraTransitionInfo;
 class UAnimNotify;
 

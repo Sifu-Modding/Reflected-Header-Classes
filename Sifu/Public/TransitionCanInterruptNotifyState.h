@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=Bool -FallbackName=Bool
 #include "SCAnimNotifyState.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=Bool -FallbackName=Bool
 #include "TransitionCanInterruptNotifyState.generated.h"
 
 UCLASS(CollapseCategories, EditInlineNew)

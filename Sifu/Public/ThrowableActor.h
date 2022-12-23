@@ -1,27 +1,27 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "InteractiveMovable.h"
 #include "EThrowableState.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=FloatRange -FallbackName=FloatRange
+#include "InteractiveMovable.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 #include "EBounceType.h"
-#include "HitBox.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCCollisionResponsePreset -FallbackName=SCCollisionResponsePreset
 #include "EHeight.h"
-#include "EDebugTargetState.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=FloatRange -FallbackName=FloatRange
+//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCCollisionResponsePreset -FallbackName=SCCollisionResponsePreset
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Rotator -FallbackName=Rotator
+#include "EDebugTargetState.h"
+#include "HitBox.h"
 #include "ThrowableActor.generated.h"
 
-class AActor;
-class USphereComponent;
 class UThrowObjectAnimRequest;
-class UBoxComponent;
-class USceneComponent;
 class UPhysicalActorDependencyComponent;
-class UThrowableObjMovementComponent;
-class UAIPerceptionStimuliSourceComponent;
+class USphereComponent;
+class AActor;
 class UReplayablePhysObjectComponent;
+class UBoxComponent;
+class UAIPerceptionStimuliSourceComponent;
+class USceneComponent;
+class UThrowableObjMovementComponent;
 class UReplayableDestructionComponent;
 class UHitBoxComponent;
 class UCurveFloat;

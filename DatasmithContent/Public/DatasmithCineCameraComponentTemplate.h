@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "DatasmithObjectTemplate.h"
+#include "DatasmithCameraLensSettingsTemplate.h"
 #include "DatasmithCameraFilmbackSettingsTemplate.h"
 #include "DatasmithCameraFocusSettingsTemplate.h"
-#include "DatasmithCameraLensSettingsTemplate.h"
 #include "DatasmithPostProcessSettingsTemplate.h"
 #include "DatasmithCineCameraComponentTemplate.generated.h"
 

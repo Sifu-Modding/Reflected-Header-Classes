@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "AIPerceptionListenerInterface.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=Controller -FallbackName=Controller
-//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTasks -ObjectName=GameplayTaskOwnerInterface -FallbackName=GameplayTaskOwnerInterface
 #include "GenericTeamAgentInterface.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=Controller -FallbackName=Controller
+#include "AIPerceptionListenerInterface.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTasks -ObjectName=GameplayTaskOwnerInterface -FallbackName=GameplayTaskOwnerInterface
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=VisualLoggerDebugSnapshotInterface -FallbackName=VisualLoggerDebugSnapshotInterface
 #include "AIMoveCompletedSignatureDelegate.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTasks -ObjectName=GameplayResourceSet -FallbackName=GameplayResourceSet
@@ -13,17 +13,17 @@
 #include "EPathFollowingStatus.h"
 #include "AIController.generated.h"
 
+class AActor;
 class UPathFollowingComponent;
-class UBlackboardData;
 class UBrainComponent;
+class UBlackboardComponent;
 class UAIPerceptionComponent;
 class UPawnActionsComponent;
-class UBlackboardComponent;
+class UBlackboardData;
 class UGameplayTasksComponent;
 class UNavigationQueryFilter;
 class UGameplayTaskResource;
 class UBehaviorTree;
-class AActor;
 
 UCLASS()
 class AIMODULE_API AAIController : public AController, public IAIPerceptionListenerInterface, public IGameplayTaskOwnerInterface, public IGenericTeamAgentInterface, public IVisualLoggerDebugSnapshotInterface {

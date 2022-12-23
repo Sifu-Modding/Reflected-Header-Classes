@@ -1,7 +1,7 @@
 #include "InAppPurchaseCallbackProxy2.h"
 
-class APlayerController;
 class UInAppPurchaseCallbackProxy2;
+class APlayerController;
 
 UInAppPurchaseCallbackProxy2* UInAppPurchaseCallbackProxy2::CreateProxyObjectForInAppPurchaseUnprocessedPurchases(APlayerController* PlayerController) {
     return NULL;

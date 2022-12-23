@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "RigUnit_TransformConstraint_WorkData.h"
 #include "RigUnit_HighlevelBaseMutable.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Transform -FallbackName=Transform
 #include "ETransformSpaceMode.h"
 #include "RigElementKey.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Transform -FallbackName=Transform
 #include "ConstraintTarget.h"
-#include "RigUnit_TransformConstraint_WorkData.h"
 #include "RigUnit_TransformConstraintPerItem.generated.h"
 
 USTRUCT()

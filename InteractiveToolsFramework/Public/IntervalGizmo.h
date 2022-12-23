@@ -4,9 +4,9 @@
 #include "IntervalGizmo.generated.h"
 
 class UGizmoTransformChangeStateTarget;
-class UPrimitiveComponent;
 class UTransformProxy;
 class UGizmoComponentAxisSource;
+class UPrimitiveComponent;
 
 UCLASS(NonTransient)
 class INTERACTIVETOOLSFRAMEWORK_API UIntervalGizmo : public UInteractiveGizmo {

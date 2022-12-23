@@ -2,10 +2,10 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=GameplayAbilities -ObjectName=GameplayAbility -FallbackName=GameplayAbility
-//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTagQuery -FallbackName=GameplayTagQuery
 #include "InputDetection.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTagContainer -FallbackName=GameplayTagContainer
+//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTagQuery -FallbackName=GameplayTagQuery
 #include "EALBinaryOperation.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTagContainer -FallbackName=GameplayTagContainer
 #include "TargetResult.h"
 #include "SCGameplayAbilityActorInfo.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=GameplayAbilities -ObjectName=GameplayEventData -FallbackName=GameplayEventData
@@ -17,12 +17,12 @@
 #include "NetOrderStruct.h"
 #include "SCGameplayAbility.generated.h"
 
+class UAbilityPayload;
+class UAvailabilityLayerData;
+class UGameplayEffect;
+class UBaseTargetEvaluation;
 class AFightingCharacter;
 class AActor;
-class UAbilityPayload;
-class UGameplayEffect;
-class UAvailabilityLayerData;
-class UBaseTargetEvaluation;
 class USCGameplayAbility;
 class UScriptStruct;
 

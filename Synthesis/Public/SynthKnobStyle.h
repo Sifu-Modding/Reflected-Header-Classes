@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ESynthKnobSize.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=SlateWidgetStyle -FallbackName=SlateWidgetStyle
 //CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=SlateBrush -FallbackName=SlateBrush
+//CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=SlateWidgetStyle -FallbackName=SlateWidgetStyle
+#include "ESynthKnobSize.h"
 #include "SynthKnobStyle.generated.h"
 
 USTRUCT(BlueprintType)

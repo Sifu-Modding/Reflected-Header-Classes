@@ -7,10 +7,10 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=CollisionProfileName -FallbackName=CollisionProfileName
 #include "InteractiveDestructionComponent.generated.h"
 
-class UStaticMesh;
 class UStaticMeshComponent;
 class UMeshComponent;
 class USkeletalMesh;
+class UStaticMesh;
 
 UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class SIFU_API UInteractiveDestructionComponent : public UHealthComponent {

@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=SoundEffectSourcePreset -FallbackName=SoundEffectSourcePreset
-#include "SourceEffectChorusSettings.h"
 #include "SourceEffectChorusBaseSettings.h"
+#include "SourceEffectChorusSettings.h"
 #include "SourceEffectChorusPreset.generated.h"
 
 class USoundModulatorBase;

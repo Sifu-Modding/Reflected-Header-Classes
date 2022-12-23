@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=AnimContainer -FallbackName=AnimContainer
 #include "BaseFightingStateBehavior.h"
 #include "PropertyReactionMovement.h"
 #include "AIResistanceActions.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=AnimContainer -FallbackName=AnimContainer
 #include "PropertyReactionHit.h"
 #include "PropertyReaction.generated.h"
 

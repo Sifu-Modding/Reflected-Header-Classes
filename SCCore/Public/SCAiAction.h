@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
 #include "SCTypedValue.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
 #include "SCAIActionMemoryEntryHandler.h"
 #include "EAIActionScheduleCondition.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 #include "SCAiAction.generated.h"
 
-class ASCCharacter;
 class UBehaviorTree;
 class USCAIComponent;
+class ASCCharacter;
 class UBlackboardComponent;
 
 UCLASS(Abstract, Blueprintable)

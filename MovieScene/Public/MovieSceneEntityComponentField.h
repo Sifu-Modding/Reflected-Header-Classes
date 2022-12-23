@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "MovieSceneEvaluationFieldEntityTree.h"
+#include "MovieSceneEvaluationFieldEntityMetaData.h"
 #include "MovieSceneEvaluationFieldEntity.h"
 #include "MovieSceneEvaluationFieldSharedEntityMetaData.h"
-#include "MovieSceneEvaluationFieldEntityMetaData.h"
 #include "MovieSceneEntityComponentField.generated.h"
 
 USTRUCT(BlueprintType)

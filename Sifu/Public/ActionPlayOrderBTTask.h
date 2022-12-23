@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCUserDefinedEnumHandler -FallbackName=SCUserDefinedEnumHandler
+#include "EFightingActionState.h"
+#include "EOrderType.h"
 #include "AIBTTaskNode.h"
 #include "EditableOrderType.h"
-#include "EOrderType.h"
-#include "EFightingActionState.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCUserDefinedEnumHandler -FallbackName=SCUserDefinedEnumHandler
 #include "ActionPlayOrderBTTask.generated.h"
 
 UCLASS()

@@ -1,30 +1,30 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTagAssetInterface -FallbackName=GameplayTagAssetInterface
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
-#include "GameplayEffectExecutionDefinition.h"
-#include "EGameplayEffectStackingDurationPolicy.h"
-#include "EGameplayEffectDurationType.h"
-#include "GameplayEffectModifierMagnitude.h"
-#include "ScalableFloat.h"
+#include "EGameplayEffectStackingExpirationPolicy.h"
 #include "EGameplayEffectPeriodInhibitionRemovedPolicy.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
+//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTagAssetInterface -FallbackName=GameplayTagAssetInterface
+//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTag -FallbackName=GameplayTag
+#include "GameplayEffectModifierMagnitude.h"
+#include "EGameplayEffectDurationType.h"
+#include "ScalableFloat.h"
+#include "GameplayEffectCue.h"
 #include "GameplayModifierInfo.h"
 #include "ConditionalGameplayEffect.h"
-#include "GameplayEffectCue.h"
-#include "EGameplayEffectStackingPeriodPolicy.h"
+#include "GameplayEffectExecutionDefinition.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTagContainer -FallbackName=GameplayTagContainer
 #include "InheritedTagContainer.h"
+#include "GameplayAbilitySpecDef.h"
 #include "GameplayTagRequirements.h"
 #include "GameplayEffectQuery.h"
-#include "GameplayAbilitySpecDef.h"
 #include "EGameplayEffectStackingType.h"
-#include "EGameplayEffectStackingExpirationPolicy.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTag -FallbackName=GameplayTag
-//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTagContainer -FallbackName=GameplayTagContainer
+#include "EGameplayEffectStackingDurationPolicy.h"
+#include "EGameplayEffectStackingPeriodPolicy.h"
 #include "GameplayEffect.generated.h"
 
-class UGameplayEffectCustomApplicationRequirement;
 class UGameplayEffectUIData;
+class UGameplayEffectCustomApplicationRequirement;
 class UGameplayEffect;
 
 UCLASS(BlueprintType)

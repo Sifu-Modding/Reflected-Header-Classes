@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "FrameMetrics.h"
 #include "UserDefinedCaptureProtocol.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=ImageWriteQueue -ObjectName=EDesiredImageFormat -FallbackName=EDesiredImageFormat
 #include "CapturedPixels.h"
 #include "CapturedPixelsID.h"
+#include "FrameMetrics.h"
 #include "UserDefinedImageCaptureProtocol.generated.h"
 
 class UTexture;

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RigVMMemoryStatistics.h"
 #include "RigVMByteCodeStatistics.h"
+#include "RigVMMemoryStatistics.h"
 #include "RigVMStatistics.generated.h"
 
 USTRUCT()

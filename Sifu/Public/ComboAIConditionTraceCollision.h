@@ -6,12 +6,12 @@
 #include "AIConditionTraceOffset.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=CollisionResponseContainer -FallbackName=CollisionResponseContainer
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ECollisionChannel -FallbackName=ECollisionChannel
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 //CROSS-MODULE INCLUDE V2: -ModuleName=AIModule -ObjectName=EEnvTraceShape -FallbackName=EEnvTraceShape
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 #include "ComboAIConditionTraceCollision.generated.h"
 
-class AActor;
 class UAIFightingComponent;
+class AActor;
 
 UCLASS(EditInlineNew)
 class SIFU_API UComboAIConditionTraceCollision : public UAIComboCondition {

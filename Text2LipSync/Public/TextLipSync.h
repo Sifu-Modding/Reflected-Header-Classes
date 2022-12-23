@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ActorComponent -FallbackName=ActorComponent
-#include "LipSync_TimedPhrase.h"
-#include "SpeakingNotifyDelegate.h"
-#include "LipsyncData.h"
 #include "SpeakingEventDelegate.h"
+#include "SpeakingNotifyDelegate.h"
 #include "SpeakingEventBoolDelegate.h"
+#include "LipSync_TimedPhrase.h"
+#include "LipsyncData.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=EPhoneme -FallbackName=EPhoneme
 #include "TextLipSync.generated.h"
 

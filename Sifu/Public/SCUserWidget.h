@@ -4,28 +4,28 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCBaseUserWidget -FallbackName=SCBaseUserWidget
 //CROSS-MODULE INCLUDE V2: -ModuleName=UMG -ObjectName=ESlateVisibility -FallbackName=ESlateVisibility
 //CROSS-MODULE INCLUDE V2: -ModuleName=UMG -ObjectName=EUMGSequencePlayMode -FallbackName=EUMGSequencePlayMode
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=EPlatform -FallbackName=EPlatform
 #include "EUIInputModes.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=EPlatform -FallbackName=EPlatform
 #include "SCUserWidget.generated.h"
 
 class USCUserWidget;
-class UWidgetData;
 class UWidgetAnimation;
-class UWorld;
+class UWidgetData;
 class UPanelWidget;
-class UMenuDB;
-class UStatsComponent;
 class UThePlainesGameInstance;
+class UStatsComponent;
 class USocialManager;
 class USocialComponent;
 class ASCPlayerController;
+class UAttackComponent;
 class UMenuWidget;
+class UMenuDB;
 class UCharacterHealthComponent;
-class USCAbilitySystemComponent;
 class AFightingPlayerController;
 class AFightingCharacter;
 class UDefenseComponent;
-class UAttackComponent;
+class UWorld;
+class USCAbilitySystemComponent;
 
 UCLASS(EditInlineNew, Config=Game)
 class SIFU_API USCUserWidget : public USCBaseUserWidget {

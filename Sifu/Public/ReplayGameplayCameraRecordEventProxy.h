@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ReplayGameplayCameraRecordEventDelegateDelegate.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
+#include "ReplayGameplayCameraRecordEventDelegateDelegate.h"
 #include "ReplayGameplayCameraRecordEventProxy.generated.h"
 
 UCLASS(BlueprintType)

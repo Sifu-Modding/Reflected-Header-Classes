@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "LootBaseItemStruct.h"
 #include "SCUserWidget.h"
 #include "ProgressionDoorStruct.h"
 #include "LootBoxTypeCountStruct.h"
 #include "ECharacterProgressionRewardTypes.h"
+#include "LootBaseItemStruct.h"
 #include "UnlockNotification.generated.h"
 
 class UQuestItemData;

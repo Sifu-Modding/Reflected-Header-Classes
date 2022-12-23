@@ -6,10 +6,10 @@
 #include "EEnvQueryRunMode.h"
 #include "EnvQueryManager.generated.h"
 
-class UEnvQuery;
+class UObject;
 class UEnvQueryContext;
 class UEnvQueryInstanceBlueprintWrapper;
-class UObject;
+class UEnvQuery;
 
 UCLASS(BlueprintType, Transient, Config=Game)
 class AIMODULE_API UEnvQueryManager : public UAISubsystem {

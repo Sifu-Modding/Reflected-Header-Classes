@@ -3,8 +3,8 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
 #include "MovieSceneFolder.generated.h"
 
-class UMovieSceneFolder;
 class UMovieSceneTrack;
+class UMovieSceneFolder;
 
 UCLASS(DefaultToInstanced)
 class MOVIESCENE_API UMovieSceneFolder : public UObject {

@@ -2,9 +2,9 @@
 #include "CoreMinimal.h"
 #include "ApplyRootMotionMoveToForceDelegateDelegate.h"
 #include "AbilityTask_ApplyRootMotion_Base.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ERootMotionFinishVelocityMode -FallbackName=ERootMotionFinishVelocityMode
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=EMovementMode -FallbackName=EMovementMode
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ERootMotionFinishVelocityMode -FallbackName=ERootMotionFinishVelocityMode
 #include "AbilityTask_ApplyRootMotionMoveToForce.generated.h"
 
 class UCurveVector;

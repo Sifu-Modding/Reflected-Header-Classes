@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "MenuWidget.h"
 #include "CreditCompanyStruct.h"
+#include "MenuWidget.h"
 #include "CreditsWidget.generated.h"
 
 UCLASS(EditInlineNew)

@@ -4,9 +4,9 @@
 #include "SCUserWidget.h"
 #include "DebugMenu.generated.h"
 
-class ULoadSlot;
 class UCharacterBuildDB;
 class UCharacterBuildListDB;
+class ULoadSlot;
 class UPanelWidget;
 
 UCLASS(EditInlineNew)

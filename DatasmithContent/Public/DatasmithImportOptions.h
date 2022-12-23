@@ -2,10 +2,10 @@
 #include "CoreMinimal.h"
 #include "DatasmithOptionsBase.h"
 #include "EDatasmithImportSearchPackagePolicy.h"
-#include "DatasmithImportBaseOptions.h"
 #include "EDatasmithImportMaterialQuality.h"
-#include "EDatasmithImportActorPolicy.h"
 #include "EDatasmithImportAssetConflictPolicy.h"
+#include "EDatasmithImportActorPolicy.h"
+#include "DatasmithImportBaseOptions.h"
 #include "DatasmithReimportOptions.h"
 #include "DatasmithImportOptions.generated.h"
 

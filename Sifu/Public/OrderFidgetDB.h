@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "OrderDB.h"
-#include "FidgetDBDescription.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCUserDefinedEnumHandler -FallbackName=SCUserDefinedEnumHandler
 #include "EditableOrderType.h"
+#include "FidgetDBDescription.h"
 #include "OrderFidgetDB.generated.h"
 
-class UFidgetDB;
 class UDataTable;
+class UFidgetDB;
 
 UCLASS()
 class SIFU_API UOrderFidgetDB : public UOrderDB {

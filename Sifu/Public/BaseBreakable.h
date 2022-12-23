@@ -1,18 +1,18 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=Actor -FallbackName=Actor
-//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCCollisionResponsePreset -FallbackName=SCCollisionResponsePreset
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
+//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCCollisionResponsePreset -FallbackName=SCCollisionResponsePreset
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=HitResult -FallbackName=HitResult
 #include "BaseBreakable.generated.h"
 
-class UReplayableDestructibleComponent;
-class UPrimitiveComponent;
 class UBoxComponent;
-class USCStreamingActorComponent;
 class UReplayablePhysObjectComponent;
+class UReplayableDestructibleComponent;
 class UPhysicalActorDependencyComponent;
+class USCStreamingActorComponent;
 class UAkAudioEvent;
+class UPrimitiveComponent;
 
 UCLASS(Abstract)
 class SIFU_API ABaseBreakable : public AActor {

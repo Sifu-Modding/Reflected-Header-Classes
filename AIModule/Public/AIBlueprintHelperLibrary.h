@@ -1,20 +1,20 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Rotator -FallbackName=Rotator
 #include "AIBlueprintHelperLibrary.generated.h"
 
 class APawn;
-class UNavigationPath;
 class UAnimInstance;
-class UObject;
 class UBehaviorTree;
+class UObject;
+class AAIController;
 class AActor;
 class AController;
+class UNavigationPath;
 class UBlackboardComponent;
-class AAIController;
 class UAIAsyncTaskBlueprintProxy;
 
 UCLASS(BlueprintType)

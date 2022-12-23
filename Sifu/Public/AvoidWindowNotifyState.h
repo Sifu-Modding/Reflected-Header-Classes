@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "AvoidPropertyContainer.h"
 #include "SCAnimNotifyState.h"
 #include "EAvoidType.h"
-#include "AvoidPropertyContainer.h"
 #include "AvoidWindowNotifyState.generated.h"
 
 UCLASS(CollapseCategories, EditInlineNew)

@@ -1,52 +1,52 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "OverridenVariableWeightInfo.h"
+#include "AddVariableWeightInfo.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCAnimInstance -FallbackName=SCAnimInstance
-#include "MovementMode.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=AnimContainer -FallbackName=AnimContainer
-#include "AnimStructOverride.h"
 #include "AnimStructMoveTransition.h"
-#include "ELimbs.h"
 #include "BlendSpaceContainer.h"
-#include "EMoveTransitionType.h"
 #include "EQuadrantTypes.h"
-#include "BlendSpaceDirectionContainer.h"
-#include "AnimStructAttack.h"
-#include "AnimQuadrantStruct.h"
+#include "EMoveDirections.h"
 #include "AnimStructBase.h"
+#include "AnimStructAttack.h"
+#include "EMoveStatus.h"
+#include "AnimQuadrantStruct.h"
+#include "SpeedDescriptionStruct.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=AnimContainer -FallbackName=AnimContainer
+#include "BlendSpaceDirectionContainer.h"
+#include "AnimStructOverride.h"
 #include "AnimStruct4.h"
 #include "EOrderType.h"
 #include "AnimStructVariableWeight.h"
-#include "AddVariableWeightInfo.h"
-#include "AnimStructHandPose.h"
-#include "EMoveStatus.h"
-#include "EFallLevel.h"
 #include "AnimStructEmote.h"
+#include "AnimStructHandPose.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
-#include "SpeedDescriptionStruct.h"
+#include "SpeedState.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Rotator -FallbackName=Rotator
+#include "MovementMode.h"
+#include "EFallLevel.h"
 #include "BlendSpaceStructBase.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCUserDefinedEnumHandler -FallbackName=SCUserDefinedEnumHandler
 #include "LookAtAnimHandler.h"
-#include "EGlobalBehaviors.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=PoseSnapshot -FallbackName=PoseSnapshot
-#include "AnimStructTraversal.h"
-#include "OverridenVariableWeightInfo.h"
-#include "LocomotionTransitionsResultCache.h"
-#include "EMoveDirections.h"
-#include "ESpeedState.h"
-#include "MoveStatus.h"
-#include "SpeedState.h"
-#include "SetVariableWeightInfo.h"
-#include "ETransitionGlobalType.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Transform -FallbackName=Transform
 #include "ESaveBone.h"
+#include "AnimStructTraversal.h"
+#include "MoveStatus.h"
+#include "LocomotionTransitionsResultCache.h"
+#include "EGlobalBehaviors.h"
+#include "SetVariableWeightInfo.h"
+#include "EMoveTransitionType.h"
+#include "ESpeedState.h"
+#include "ETransitionGlobalType.h"
+#include "ELimbs.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Transform -FallbackName=Transform
 #include "PlayerAnim.generated.h"
 
-class UAnimSequence;
-class UBaseMovementDB;
-class UHandPoseDB;
-class UCurveVector;
 class UCurveFloat;
+class UHandPoseDB;
+class UAnimSequence;
+class UCurveVector;
+class UBaseMovementDB;
 
 UCLASS(NonTransient)
 class SIFU_API UPlayerAnim : public USCAnimInstance {

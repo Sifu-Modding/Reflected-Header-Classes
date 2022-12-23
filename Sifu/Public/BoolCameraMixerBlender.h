@@ -4,8 +4,8 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=ESCBlendType -FallbackName=ESCBlendType
 #include "BoolCameraMixerBlender.generated.h"
 
-class UCurveFloat;
 class UCameraComponentThird;
+class UCurveFloat;
 
 UCLASS(Abstract)
 class SIFU_API UBoolCameraMixerBlender : public UOverTimeCameraMixerBlender {

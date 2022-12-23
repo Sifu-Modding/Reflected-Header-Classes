@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "BaseActorCondition.h"
 #include "EControllerNature.h"
+#include "BaseActorCondition.h"
 #include "ControllerNatureCondition.generated.h"
 
 UCLASS()

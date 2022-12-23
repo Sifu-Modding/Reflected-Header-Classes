@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
+#include "InputAction.h"
 #include "SCUserWidget.h"
 #include "HandleInput.h"
 #include "OnOverlayChangedSignatureDelegate.h"
-#include "InputAction.h"
 #include "ReplayMenuWidget.generated.h"
 
 class ABaseReplayController;
-class UReplayUIModeUserWidget;
 class UReplayScreenshotUserWidget;
-class UReplayUIModeDB;
+class UReplayUIModeUserWidget;
 class UReplaySubMenuWidget;
+class UReplayUIModeDB;
 
 UCLASS(EditInlineNew)
 class SIFU_API UReplayMenuWidget : public USCUserWidget, public IHandleInput {

@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=LinearColor -FallbackName=LinearColor
-#include "InputMappingGroup.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Class -FallbackName=Class
 #include "InputPriorityGroup.h"
 #include "InputMappingKeySlotContainer.h"
 #include "InputMappingData.h"
 #include "InputMappingKeySlot.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=LinearColor -FallbackName=LinearColor
+#include "InputMappingGroup.h"
 #include "InputMappingProfileEnumHandler.h"
 #include "InputPresetsEnumHandler.h"
 #include "MappingEditorHelpers.generated.h"

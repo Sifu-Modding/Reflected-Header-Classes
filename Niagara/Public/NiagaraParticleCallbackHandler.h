@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "BasicParticleData.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Interface -FallbackName=Interface
+#include "BasicParticleData.h"
 #include "NiagaraParticleCallbackHandler.generated.h"
 
 class UNiagaraSystem;

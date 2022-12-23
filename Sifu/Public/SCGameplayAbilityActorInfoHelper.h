@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SCGameplayAbilityActorInfo.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
+#include "SCGameplayAbilityActorInfo.h"
 #include "SCGameplayAbilityActorInfoHelper.generated.h"
 
-class AFightingPlayerController;
 class USCAbilitySystemComponent;
 class AFightingCharacter;
+class AFightingPlayerController;
 
 UCLASS(BlueprintType)
 class USCGameplayAbilityActorInfoHelper : public UBlueprintFunctionLibrary {

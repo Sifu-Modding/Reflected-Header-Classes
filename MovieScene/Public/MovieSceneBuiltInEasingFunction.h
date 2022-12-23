@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "MovieSceneEasingFunction.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
+#include "MovieSceneEasingFunction.h"
 #include "EMovieSceneBuiltInEasing.h"
 #include "MovieSceneBuiltInEasingFunction.generated.h"
 

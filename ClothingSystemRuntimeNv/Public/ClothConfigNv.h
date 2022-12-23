@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=ClothingSystemRuntimeCommon -ObjectName=EClothingWindMethod_Legacy -FallbackName=EClothingWindMethod_Legacy
 //CROSS-MODULE INCLUDE V2: -ModuleName=ClothingSystemRuntimeCommon -ObjectName=ClothConfigCommon -FallbackName=ClothConfigCommon
 #include "EClothingWindMethodNv.h"
 #include "ClothConstraintSetupNv.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
-//CROSS-MODULE INCLUDE V2: -ModuleName=ClothingSystemRuntimeCommon -ObjectName=EClothingWindMethod_Legacy -FallbackName=EClothingWindMethod_Legacy
 //CROSS-MODULE INCLUDE V2: -ModuleName=ClothingSystemRuntimeCommon -ObjectName=ClothConstraintSetup_Legacy -FallbackName=ClothConstraintSetup_Legacy
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 #include "ClothConfigNv.generated.h"
 
 UCLASS()

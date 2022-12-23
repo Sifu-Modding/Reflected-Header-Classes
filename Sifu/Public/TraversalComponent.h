@@ -11,8 +11,8 @@
 #include "TraversalComponent.generated.h"
 
 class UTraversalComponent;
-class UNavArea;
 class AActor;
+class UNavArea;
 
 UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class SIFU_API UTraversalComponent : public UBoxComponent {

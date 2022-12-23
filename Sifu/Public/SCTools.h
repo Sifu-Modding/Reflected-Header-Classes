@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCCoreTools -FallbackName=SCCoreTools
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=EPlatform -FallbackName=EPlatform
-#include "EQuadrantTypes.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=LatentActionInfo -FallbackName=LatentActionInfo
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=EPlatform -FallbackName=EPlatform
+//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCCoreTools -FallbackName=SCCoreTools
+#include "EQuadrantTypes.h"
 #include "SCTools.generated.h"
 
 class UObject;
-class UWorld;
 class UGameInstance;
+class UWorld;
 
 UCLASS(BlueprintType)
 class SIFU_API USCTools : public USCCoreTools {

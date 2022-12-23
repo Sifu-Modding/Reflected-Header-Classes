@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "CardinalChangementAnimContainer.h"
 #include "SpeedTransitionsAnimContainer.h"
+#include "CardinalChangementAnimContainer.h"
 #include "CombatSpeedTransitionsAnimContainer.generated.h"
 
 USTRUCT(BlueprintType)

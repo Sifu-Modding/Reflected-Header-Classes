@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCAnimInstance -FallbackName=SCAnimInstance
-#include "AnimStructMoveTransition.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=AnimContainer -FallbackName=AnimContainer
 #include "BlendSpaceDirectionContainer.h"
 #include "AnimInfo.h"
+#include "AnimStructMoveTransition.h"
 #include "EMoveTransitionType.h"
 #include "AnimInstanceWithDependancy.generated.h"
 

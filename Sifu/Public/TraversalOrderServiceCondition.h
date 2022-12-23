@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "OrderServiceActivationConditions.h"
 #include "ETraversalPhase.h"
+#include "OrderServiceActivationConditions.h"
 #include "TraversalOrderServiceCondition.generated.h"
 
 UCLASS(EditInlineNew)

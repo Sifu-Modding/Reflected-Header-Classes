@@ -3,9 +3,9 @@
 #include "NiagaraDataInterface.h"
 #include "NiagaraDataInterfaceAudioPlayer.generated.h"
 
-class USoundConcurrency;
-class USoundBase;
 class USoundAttenuation;
+class USoundBase;
+class USoundConcurrency;
 
 UCLASS(EditInlineNew)
 class NIAGARA_API UNiagaraDataInterfaceAudioPlayer : public UNiagaraDataInterface {

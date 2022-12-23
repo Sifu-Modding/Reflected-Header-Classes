@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "MathRBFInterpolateQuatFloat_Target.h"
 #include "RigUnit_MathRBFInterpolateQuatBase.h"
+#include "MathRBFInterpolateQuatFloat_Target.h"
 #include "RigUnit_MathRBFInterpolateQuatFloat.generated.h"
 
 USTRUCT()

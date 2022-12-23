@@ -2,8 +2,8 @@
 #include "Templates/SubclassOf.h"
 
 class UAIFightingComponent;
-class UAIActionWallJumpAttack;
 class AActor;
+class UAIActionWallJumpAttack;
 class AFightingCharacter;
 
 bool UAIActionWallJumpAttack::BPF_PrepareWallJumpAttack(UAIFightingComponent* _aiComponent, TSubclassOf<UAIActionWallJumpAttack> _action, AActor* _wallJumpActor, const FVector& _vSnapLocation, const AActor* _target, bool _bIgnoreAngleConstraint) {

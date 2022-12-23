@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "CRSimPointContainer.h"
 #include "CachedRigElement.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Transform -FallbackName=Transform
-#include "CRSimPointContainer.h"
 #include "RigUnit_SpringIK_WorkData.generated.h"
 
 USTRUCT(BlueprintType)

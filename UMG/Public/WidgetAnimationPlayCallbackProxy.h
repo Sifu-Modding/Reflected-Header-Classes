@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "WidgetAnimationResultDelegate.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
 #include "EUMGSequencePlayMode.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
+#include "WidgetAnimationResultDelegate.h"
 #include "WidgetAnimationPlayCallbackProxy.generated.h"
 
+class UUserWidget;
+class UWidgetAnimationPlayCallbackProxy;
 class UWidgetAnimation;
 class UUMGSequencePlayer;
-class UWidgetAnimationPlayCallbackProxy;
-class UUserWidget;
 
 UCLASS(BlueprintType, MinimalAPI)
 class UWidgetAnimationPlayCallbackProxy : public UObject {

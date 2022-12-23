@@ -3,7 +3,7 @@
 UCrowdManager::UCrowdManager() {
     this->MyNavData = NULL;
     this->AvoidanceConfig.AddDefaulted(4);
-    this->MaxAgents = 30;
+    this->MaxAgents = 1000;
     this->MaxAgentRadius = 100.00f;
     this->MaxAvoidedAgents = 6;
     this->MaxAvoidedWalls = 8;

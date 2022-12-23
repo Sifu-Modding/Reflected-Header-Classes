@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
-#include "ETS_NextHitExtraInfos.h"
 #include "TargetResult.h"
+#include "ETS_NextHitExtraInfos.h"
 #include "ETS_NextHitHelper.generated.h"
 
 class AFightingCharacter;

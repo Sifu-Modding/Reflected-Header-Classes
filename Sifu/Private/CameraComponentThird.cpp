@@ -1,8 +1,8 @@
 #include "CameraComponentThird.h"
 #include "Net/UnrealNetwork.h"
 
-class AActor;
 class UAbstractCameraData;
+class AActor;
 class UBlackboardComponent;
 
 void UCameraComponentThird::BPF_UpdateCachedTargets() {

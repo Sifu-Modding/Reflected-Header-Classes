@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "OrientedRotationAnimContainer.h"
 #include "CombatSpeedTransitionsAnimContainer.h"
 #include "SpeedTransitionsAnimContainer.h"
-#include "OrientedRotationAnimContainer.h"
 #include "LocomotionTransitionsAnimContainer.generated.h"
 
 USTRUCT(BlueprintType)

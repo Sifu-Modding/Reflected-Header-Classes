@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "EAttackOrigin.h"
+#include "EAttackMovementType.h"
+#include "EAttackTarget.h"
 #include "BaseHitBoxConditionInstance.h"
+#include "EIKAnimTargetTypes.h"
 #include "HitBoxMetaDataClassInstance.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=DataTableRowHandle -FallbackName=DataTableRowHandle
 #include "FrameRange.h"
-#include "EAttackMovementType.h"
-#include "EAttackTarget.h"
-#include "EIKAnimTargetTypes.h"
-#include "EAttackOrigin.h"
 #include "HitboxDataRow.h"
 #include "HitBox.generated.h"
 

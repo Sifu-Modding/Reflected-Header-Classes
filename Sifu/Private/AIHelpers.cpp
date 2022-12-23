@@ -3,8 +3,8 @@
 class APawn;
 class UAIFightingComponent;
 class AFightingCharacter;
-class UObject;
 class AAISpawner;
+class UObject;
 class AActor;
 
 FSCAITicketEnum UAIHelpers::Conv_SCEnumToAITicketEnum(const FSCUserDefinedEnumHandler& _scEnum) {

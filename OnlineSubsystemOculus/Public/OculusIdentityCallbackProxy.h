@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "OculusIdentitySuccessResultDelegate.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=OnlineBlueprintCallProxyBase -FallbackName=OnlineBlueprintCallProxyBase
+#include "OculusIdentitySuccessResultDelegate.h"
 #include "OculusIdentityFailureResultDelegate.h"
 #include "OculusIdentityCallbackProxy.generated.h"
 

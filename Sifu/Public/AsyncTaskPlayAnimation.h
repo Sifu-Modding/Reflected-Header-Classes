@@ -4,9 +4,9 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=UMG -ObjectName=EUMGSequencePlayMode -FallbackName=EUMGSequencePlayMode
 #include "AsyncTaskPlayAnimation.generated.h"
 
+class UObject;
 class UAsyncTaskPlayAnimation;
 class UWidgetAnimation;
-class UObject;
 
 UCLASS()
 class UAsyncTaskPlayAnimation : public UMenuAsyncActionBase {

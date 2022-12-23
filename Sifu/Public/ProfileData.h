@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "FilterProperties.h"
 #include "InputMappingProfileEnumHandler.h"
+#include "FilterProperties.h"
 #include "SaveAdditionalInfos.h"
 #include "InputMappingProfileData.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTagContainer -FallbackName=GameplayTagContainer
@@ -41,7 +41,7 @@ public:
     UPROPERTY(BlueprintReadOnly, SaveGame, VisibleAnywhere)
     FGameplayTagContainer m_UnlockedCheats;
     
-    UPROPERTY(BlueprintReadWrite, SaveGame, VisibleAnywhere)
+    UPROPERTY(SaveGame, VisibleAnywhere)
     TMap<TSubclassOf<USkillGameplayEffect>, int32> m_SkillConsolidationLevel;
     
     UPROPERTY(BlueprintReadWrite, SaveGame, VisibleAnywhere)

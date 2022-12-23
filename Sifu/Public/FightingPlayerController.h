@@ -2,42 +2,42 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "SCPlayerController.h"
-#include "CharacterProgressionReward.h"
-#include "ECharacterProgressionRewardTypes.h"
-#include "ERelationshipTypes.h"
-#include "EGameOptionTypes.h"
-#include "CoopGroup.h"
-#include "EMenuEnum.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=InputCore -ObjectName=Key -FallbackName=Key
-#include "ECycleDirection.h"
-#include "InteractionTextStruct.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCDelegate -FallbackName=SCDelegate
+#include "ECycleDirection.h"
+#include "ERelationshipTypes.h"
+#include "ECharacterProgressionRewardTypes.h"
+#include "CharacterProgressionReward.h"
+#include "EGameOptionTypes.h"
+#include "EMenuEnum.h"
+#include "InteractionTextStruct.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=InputCore -ObjectName=Key -FallbackName=Key
 #include "MenuReferenceWithRequiredTags.h"
-#include "MenuStackInfos.h"
-#include "EQuadrantTypes.h"
-#include "EDangerStates.h"
 #include "InputAction.h"
+#include "EQuadrantTypes.h"
+#include "MenuStackInfos.h"
+#include "CoopGroup.h"
+#include "EDangerStates.h"
 #include "FightingPlayerController.generated.h"
 
+class UPickUpMenu;
 class UCharacterProgressionUnlockDB;
 class AActor;
-class UInteractionObjectComponent;
+class UTargetableWidgetUpdaterComponent;
 class AFightingCharacter;
-class UASMDetectionComponent;
 class AController;
-class AInteractiveObject;
 class ASkillTree;
-class AAISpawner;
-class UMaterialParameterCollection;
-class UMenuWidget;
 class UTexture2D;
 class UUserWidget;
+class UEquipmentSelectionData;
+class UMenuWidget;
 class UMaterialInterface;
 class UPopupWidget;
-class UEquipmentSelectionData;
-class UTargetableWidgetUpdaterComponent;
+class UASMDetectionComponent;
 class UWidgetPoolComponent;
-class UPickUpMenu;
+class AInteractiveObject;
+class UMaterialParameterCollection;
+class UInteractionObjectComponent;
+class AAISpawner;
 class UPanelWidget;
 
 UCLASS()

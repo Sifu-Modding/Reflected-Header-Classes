@@ -1,6 +1,7 @@
 #include "NiagaraFunctionLibrary.h"
 
 class UObject;
+class USkeletalMeshComponent;
 class UNiagaraSystem;
 class USceneComponent;
 class UNiagaraComponent;
@@ -8,7 +9,6 @@ class UVolumeTexture;
 class UTexture;
 class UStaticMeshComponent;
 class UStaticMesh;
-class USkeletalMeshComponent;
 class UNiagaraParameterCollection;
 class UNiagaraParameterCollectionInstance;
 

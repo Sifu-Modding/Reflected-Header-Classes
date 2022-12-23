@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
 //CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTag -FallbackName=GameplayTag
-#include "GameplayCueParameters.h"
 #include "EGameplayCueEvent.h"
+#include "GameplayCueParameters.h"
 #include "GameplayCueNotify_Static.generated.h"
 
 class AActor;

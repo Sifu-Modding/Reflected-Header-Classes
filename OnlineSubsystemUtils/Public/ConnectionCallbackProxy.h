@@ -4,9 +4,9 @@
 #include "OnlineConnectionResultDelegate.h"
 #include "ConnectionCallbackProxy.generated.h"
 
+class UObject;
 class APlayerController;
 class UConnectionCallbackProxy;
-class UObject;
 
 UCLASS(MinimalAPI)
 class UConnectionCallbackProxy : public UOnlineBlueprintCallProxyBase {

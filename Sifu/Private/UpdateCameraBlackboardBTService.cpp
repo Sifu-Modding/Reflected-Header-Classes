@@ -1,10 +1,10 @@
 #include "UpdateCameraBlackboardBTService.h"
 
+class UCameraComponentThird;
+class UPlayerFightingComponent;
 class UAttackComponent;
 class AFightingCharacter;
-class UPlayerFightingComponent;
 class UASMComponent;
-class UCameraComponentThird;
 
 void UUpdateCameraBlackboardBTService::BPF_UpdateIsInFlyModeKey(FBlackboardKeySelector _IsInFlyModeKey) {
 }

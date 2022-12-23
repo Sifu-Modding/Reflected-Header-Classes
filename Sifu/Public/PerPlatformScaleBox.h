@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=UMG -ObjectName=ScaleBox -FallbackName=ScaleBox
-#include "PerPlatformWidget.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Slate -ObjectName=EStretch -FallbackName=EStretch
+#include "PerPlatformWidget.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Slate -ObjectName=EStretchDirection -FallbackName=EStretchDirection
 #include "PerPlatformScaleBox.generated.h"
 

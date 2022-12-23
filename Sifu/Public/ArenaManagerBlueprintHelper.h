@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "ArenaParams.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
 //CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTag -FallbackName=GameplayTag
-#include "ArenaParams.h"
 #include "ArenaManagerBlueprintHelper.generated.h"
 
 class UArenaChallengeDescription;

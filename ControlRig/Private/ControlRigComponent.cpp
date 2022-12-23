@@ -1,9 +1,9 @@
 #include "ControlRigComponent.h"
 
-class USkeletalMesh;
 class UControlRigComponent;
-class USkeletalMeshComponent;
+class USkeletalMesh;
 class UControlRig;
+class USkeletalMeshComponent;
 
 void UControlRigComponent::Update(float DeltaTime) {
 }

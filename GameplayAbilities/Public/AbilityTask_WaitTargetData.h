@@ -8,9 +8,9 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTag -FallbackName=GameplayTag
 #include "AbilityTask_WaitTargetData.generated.h"
 
+class UAbilityTask_WaitTargetData;
 class UGameplayAbility;
 class AGameplayAbilityTargetActor;
-class UAbilityTask_WaitTargetData;
 
 UCLASS(NotPlaceable)
 class GAMEPLAYABILITIES_API UAbilityTask_WaitTargetData : public UAbilityTask {

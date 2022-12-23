@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=ApexDestruction -ObjectName=DestructibleComponent -FallbackName=DestructibleComponent
+#include "ReplicatedDamageEvent.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCDelegate -FallbackName=SCDelegate
 #include "ReplayableDestructibleStateChangeDelegateDelegate.h"
-#include "ReplicatedDamageEvent.h"
 #include "EReplayableDestructibleState.h"
 #include "ReplicatedDestructibleChunks.h"
 #include "ReplicatedBoxSphereBounds.h"

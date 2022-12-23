@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "InputPresetsEnumHandler.h"
 #include "InputMappingKeySlot.h"
+#include "InputPresetsEnumHandler.h"
 #include "InputMappingNode.generated.h"
 
 class UGenericInputData;

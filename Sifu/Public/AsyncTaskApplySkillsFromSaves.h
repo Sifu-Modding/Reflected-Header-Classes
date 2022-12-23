@@ -4,9 +4,9 @@
 #include "OnSavesAppliedDelegate.h"
 #include "AsyncTaskApplySkillsFromSaves.generated.h"
 
-class USCAbilitySystemComponent;
-class UAsyncTaskApplySkillsFromSaves;
 class UObject;
+class UAsyncTaskApplySkillsFromSaves;
+class USCAbilitySystemComponent;
 
 UCLASS()
 class SIFU_API UAsyncTaskApplySkillsFromSaves : public UBlueprintAsyncActionBase {

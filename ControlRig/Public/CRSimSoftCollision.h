@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ECRSimSoftCollisionType.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Transform -FallbackName=Transform
+#include "ECRSimSoftCollisionType.h"
 #include "EControlRigAnimEasingType.h"
 #include "CRSimSoftCollision.generated.h"
 

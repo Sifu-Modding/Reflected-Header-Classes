@@ -2,12 +2,18 @@
 #include "CoreMinimal.h"
 #include "MenuWidget.h"
 #include "ReplayListInfo.h"
+#include "OnQuitReplayManagementMenuDelegate.h"
 #include "ReplayInfo.h"
 #include "ReplayManagementMenuWidget.generated.h"
 
 UCLASS(EditInlineNew)
 class SIFU_API UReplayManagementMenuWidget : public UMenuWidget {
     GENERATED_BODY()
+public:
+protected:
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
+    FOnQuitReplayManagementMenu m_OnQuitReplayManagementMenu;
+    
 public:
     UReplayManagementMenuWidget();
 protected:

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EGearRarity.h"
 #include "EquipmentValues.h"
+#include "EGearRarity.h"
 #include "SlotEquipmentValues.generated.h"
 
 USTRUCT(BlueprintType)

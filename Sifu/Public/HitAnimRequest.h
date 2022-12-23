@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
-#include "HitRequest.h"
 #include "HitAnimsPerDataTableContainer.h"
-#include "HittedAnimContainer.h"
+#include "HitRequest.h"
 #include "ImpactResult.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=AnimContainer -FallbackName=AnimContainer
+#include "HittedAnimContainer.h"
 #include "HitAnimRequest.generated.h"
 
 class AFightingCharacter;

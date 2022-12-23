@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SlateWidgetStyle.h"
-#include "EditableTextBoxStyle.h"
 #include "Margin.h"
 #include "SlateBrush.h"
+#include "SlateWidgetStyle.h"
+#include "EditableTextBoxStyle.h"
 #include "SlateFontInfo.h"
 #include "SearchBoxStyle.generated.h"
 

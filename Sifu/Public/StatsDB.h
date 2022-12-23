@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=DataAsset -FallbackName=DataAsset
-#include "SCFloatRange.h"
 #include "SCInt32Range.h"
+#include "SCFloatRange.h"
 #include "StatsDB.generated.h"
 
 class UCurveFloat;

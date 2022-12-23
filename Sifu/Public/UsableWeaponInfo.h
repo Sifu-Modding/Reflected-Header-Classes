@@ -3,9 +3,9 @@
 #include "Templates/SubclassOf.h"
 #include "UsableWeaponInfo.generated.h"
 
+class UBaseWeaponData;
 class UWeaponGameplayData;
 class ABaseWeapon;
-class UBaseWeaponData;
 
 USTRUCT(BlueprintType)
 struct FUsableWeaponInfo {

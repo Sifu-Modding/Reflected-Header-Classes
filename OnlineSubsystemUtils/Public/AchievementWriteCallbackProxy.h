@@ -5,8 +5,8 @@
 #include "AchievementWriteCallbackProxy.generated.h"
 
 class APlayerController;
-class UAchievementWriteCallbackProxy;
 class UObject;
+class UAchievementWriteCallbackProxy;
 
 UCLASS(MinimalAPI)
 class UAchievementWriteCallbackProxy : public UOnlineBlueprintCallProxyBase {

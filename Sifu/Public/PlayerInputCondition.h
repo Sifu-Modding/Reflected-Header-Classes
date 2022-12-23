@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "BaseActorCondition.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=FloatRange -FallbackName=FloatRange
 #include "InputAction.h"
 #include "EPlayerInputConditionTestMethod.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=FloatRange -FallbackName=FloatRange
 #include "PlayerInputCondition.generated.h"
 
 UCLASS()

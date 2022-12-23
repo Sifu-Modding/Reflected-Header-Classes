@@ -1,7 +1,7 @@
 #include "EOSGetPlayerAvatar.h"
 
-class UObject;
 class UTexture;
+class UObject;
 class UEOSGetPlayerAvatar;
 
 UEOSGetPlayerAvatar* UEOSGetPlayerAvatar::GetPlayerAvatar(const UObject* NewWorldContextObject, int32 NewLocalUserNum, FUniqueNetIdRepl NewUserId, UTexture* NewDefaultAvatar) {

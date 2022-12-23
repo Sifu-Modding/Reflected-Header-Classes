@@ -4,8 +4,8 @@
 #include "EBTNodeResult.h"
 #include "BTDecorator_BlueprintBase.generated.h"
 
-class AAIController;
 class AActor;
+class AAIController;
 class APawn;
 
 UCLASS(Abstract, Blueprintable)

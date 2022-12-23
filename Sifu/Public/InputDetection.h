@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "InputAction.h"
+#include "EUpdateTargetCondition.h"
 #include "BaseActorConditionInstance.h"
 #include "EActionType.h"
-#include "EUpdateTargetCondition.h"
 #include "InputDetection.generated.h"
 
 class UTargetActionTypeRequest;

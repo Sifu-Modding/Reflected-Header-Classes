@@ -3,12 +3,12 @@
 #include "Templates/SubclassOf.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
 #include "EQSQueryResultSourceInterface.h"
-#include "EEnvQueryStatus.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
+#include "EEnvQueryStatus.h"
 #include "EnvQueryInstanceBlueprintWrapper.generated.h"
 
-class UEnvQueryItemType;
 class UEnvQueryInstanceBlueprintWrapper;
+class UEnvQueryItemType;
 class AActor;
 
 UCLASS(BlueprintType)

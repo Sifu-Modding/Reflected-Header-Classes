@@ -1,10 +1,10 @@
 #include "MagicLeapARPinComponent.h"
 #include "Templates/SubclassOf.h"
-#include "MagicLeapARPinSaveGame.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=SphereComponent -FallbackName=SphereComponent
+#include "MagicLeapARPinSaveGame.h"
 
-class USceneComponent;
 class AActor;
+class USceneComponent;
 
 void UMagicLeapARPinComponent::UnPin() {
 }

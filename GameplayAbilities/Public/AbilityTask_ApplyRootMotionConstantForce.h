@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "AbilityTask_ApplyRootMotion_Base.h"
 #include "ApplyRootMotionConstantForceDelegateDelegate.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ERootMotionFinishVelocityMode -FallbackName=ERootMotionFinishVelocityMode
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 #include "AbilityTask_ApplyRootMotionConstantForce.generated.h"
 
 class UAbilityTask_ApplyRootMotionConstantForce;

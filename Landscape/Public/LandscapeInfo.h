@@ -5,8 +5,8 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Guid -FallbackName=Guid
 #include "LandscapeInfo.generated.h"
 
-class ALandscapeStreamingProxy;
 class ALandscape;
+class ALandscapeStreamingProxy;
 
 UCLASS(Transient)
 class ULandscapeInfo : public UObject {

@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=AnimContainer -FallbackName=AnimContainer
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
-#include "CardinalChangementAnimContainer.h"
-#include "SpeedStateAnimContainer.h"
-#include "OrientedRotationAnimContainer.h"
-#include "RotationAnimContainer.h"
-#include "ESpeedState.h"
-#include "ETransitionRotation.h"
-#include "QuadrantAnimContainer.h"
 #include "EQuadrantTypes.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=ESCCardinalPoints -FallbackName=ESCCardinalPoints
+#include "ETransitionRotation.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
+#include "SpeedStateAnimContainer.h"
+#include "ESpeedState.h"
+#include "RotationAnimContainer.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=AnimContainer -FallbackName=AnimContainer
+#include "QuadrantAnimContainer.h"
+#include "OrientedRotationAnimContainer.h"
 #include "CardinalAnimContainer.h"
+#include "CardinalChangementAnimContainer.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=ESCCardinalPoints -FallbackName=ESCCardinalPoints
 #include "AnimContainerLibrary.generated.h"
 
 UCLASS(BlueprintType)

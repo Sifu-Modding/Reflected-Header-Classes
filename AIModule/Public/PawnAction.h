@@ -6,9 +6,9 @@
 #include "EAIRequestPriority.h"
 #include "PawnAction.generated.h"
 
-class UBrainComponent;
-class UPawnAction;
 class UPawnActionsComponent;
+class UPawnAction;
+class UBrainComponent;
 
 UCLASS(Abstract, BlueprintType, EditInlineNew)
 class AIMODULE_API UPawnAction : public UObject {

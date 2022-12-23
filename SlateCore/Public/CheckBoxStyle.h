@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SlateWidgetStyle.h"
+#include "SlateColor.h"
 #include "Margin.h"
 #include "SlateBrush.h"
+#include "SlateWidgetStyle.h"
 #include "ESlateCheckBoxType.h"
 #include "SlateSound.h"
-#include "SlateColor.h"
 #include "CheckBoxStyle.generated.h"
 
 USTRUCT(BlueprintType)

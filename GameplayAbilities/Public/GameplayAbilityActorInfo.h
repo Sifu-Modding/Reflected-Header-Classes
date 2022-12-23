@@ -3,11 +3,11 @@
 #include "GameplayAbilityActorInfo.generated.h"
 
 class AActor;
+class UMovementComponent;
 class UAbilitySystemComponent;
 class APlayerController;
 class USkeletalMeshComponent;
 class UAnimInstance;
-class UMovementComponent;
 
 USTRUCT(BlueprintType)
 struct GAMEPLAYABILITIES_API FGameplayAbilityActorInfo {

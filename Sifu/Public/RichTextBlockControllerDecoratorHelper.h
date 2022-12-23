@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
 #include "InputAction.h"
-#include "EControllerIconAxisTypes.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
 #include "EControllerIconStyles.h"
+#include "EControllerIconAxisTypes.h"
 #include "RichTextBlockControllerDecoratorHelper.generated.h"
 
 UCLASS(BlueprintType)

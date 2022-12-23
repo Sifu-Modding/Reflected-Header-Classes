@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "ELookAtType.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 #include "CameraLookAtServiceBehaviorTime.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 #include "CameraLookAtServiceBehaviorConfig.h"
 #include "CameraLookAtServiceBehavior.generated.h"
 

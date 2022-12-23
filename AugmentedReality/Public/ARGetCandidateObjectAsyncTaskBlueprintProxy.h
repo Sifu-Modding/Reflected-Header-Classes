@@ -5,8 +5,8 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 #include "ARGetCandidateObjectAsyncTaskBlueprintProxy.generated.h"
 
-class UObject;
 class UARGetCandidateObjectAsyncTaskBlueprintProxy;
+class UObject;
 
 UCLASS()
 class UARGetCandidateObjectAsyncTaskBlueprintProxy : public UARBaseAsyncTaskBlueprintProxy {

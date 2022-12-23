@@ -1,21 +1,21 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
-#include "ENCPoolMethod.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Rotator -FallbackName=Rotator
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=EAttachLocation -FallbackName=EAttachLocation
+#include "ENCPoolMethod.h"
 #include "NiagaraFunctionLibrary.generated.h"
 
-class USceneComponent;
 class UNiagaraComponent;
+class USkeletalMeshComponent;
 class UNiagaraSystem;
+class USceneComponent;
 class UObject;
 class UVolumeTexture;
 class UTexture;
 class UStaticMeshComponent;
 class UStaticMesh;
-class USkeletalMeshComponent;
 class UNiagaraParameterCollectionInstance;
 class UNiagaraParameterCollection;
 

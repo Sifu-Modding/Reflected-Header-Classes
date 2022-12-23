@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "AchievementUnlockConditionStruct.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTag -FallbackName=GameplayTag
+#include "AchievementUnlockConditionStruct.h"
 #include "AchievementUnlockObjectSet.generated.h"
 
 USTRUCT(BlueprintType)

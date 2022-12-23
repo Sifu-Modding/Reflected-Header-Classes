@@ -3,8 +3,8 @@
 #include "ECharacterProgressionRewardConditions.h"
 #include "CharacterProgressionReward.generated.h"
 
-class UCharacterProgressionUnlockDB;
 class UTexture2D;
+class UCharacterProgressionUnlockDB;
 
 USTRUCT(BlueprintType)
 struct FCharacterProgressionReward {

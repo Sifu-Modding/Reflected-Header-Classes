@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "OnItemSelectionChangedDelegate.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=UMG -ObjectName=Widget -FallbackName=Widget
 #include "OnItemDragDetectedDelegate.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=UMG -ObjectName=Widget -FallbackName=Widget
+#include "OnItemSelectionChangedDelegate.h"
 #include "AkWwiseObjectDetails.h"
 #include "AkWwiseTree.generated.h"
 

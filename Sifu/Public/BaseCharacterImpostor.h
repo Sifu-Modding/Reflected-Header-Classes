@@ -5,8 +5,8 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=AkAudio -ObjectName=AkExternalSourceInfo -FallbackName=AkExternalSourceInfo
 #include "BaseCharacterImpostor.generated.h"
 
-class UAkRtpc;
 class UAkAudioEvent;
+class UAkRtpc;
 class UCurveFloat;
 
 UCLASS()

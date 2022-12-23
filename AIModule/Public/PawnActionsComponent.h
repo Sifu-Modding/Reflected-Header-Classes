@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EPawnActionAbortState.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ActorComponent -FallbackName=ActorComponent
 #include "EAIRequestPriority.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ActorComponent -FallbackName=ActorComponent
 #include "PawnActionStack.h"
 #include "PawnActionEvent.h"
+#include "EPawnActionAbortState.h"
 #include "PawnActionsComponent.generated.h"
 
-class APawn;
 class UPawnAction;
+class APawn;
 class UObject;
 
 UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

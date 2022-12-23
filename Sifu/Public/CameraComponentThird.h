@@ -1,28 +1,28 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=CameraComponent -FallbackName=CameraComponent
-#include "BaseComponent.h"
-#include "CameraLookAtServiceBehavior.h"
-#include "ECameraTransitionState.h"
-#include "ECameraLockAlgorithms.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=ESCBlendType -FallbackName=ESCBlendType
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector2D -FallbackName=Vector2D
-#include "CameraRepulsionConfig.h"
-#include "CameraLookAtServiceBehaviorTime.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Transform -FallbackName=Transform
-#include "CameraLookAtServiceBehaviorConfig.h"
 #include "CameraTargetPosition.h"
+#include "CameraLookAtServiceBehaviorConfig.h"
+#include "BaseComponent.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
+#include "ECameraTransitionState.h"
+#include "CameraRepulsionConfig.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=ESCBlendType -FallbackName=ESCBlendType
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector2D -FallbackName=Vector2D
+#include "CameraLookAtServiceBehaviorTime.h"
 #include "CameraMirrorManagementConfig.h"
+#include "ECameraLockAlgorithms.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=ESCSequenceBlendViewState -FallbackName=ESCSequenceBlendViewState
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Transform -FallbackName=Transform
+#include "CameraLookAtServiceBehavior.h"
 #include "CameraComponentThird.generated.h"
 
+class USCLevelSequence;
 class UCameraLagStruct;
 class UCameraDB;
-class USCLevelSequence;
 class UMaterialParameterCollection;
-class UAbstractCameraData;
 class AActor;
+class UAbstractCameraData;
 class UBlackboardComponent;
 
 UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

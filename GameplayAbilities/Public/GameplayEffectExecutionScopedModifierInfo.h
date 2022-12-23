@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameplayTagRequirements.h"
 #include "GameplayEffectAttributeCaptureDefinition.h"
-#include "GameplayModEvaluationChannelSettings.h"
 #include "GameplayEffectModifierMagnitude.h"
 #include "EGameplayEffectScopedModifierAggregatorType.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTag -FallbackName=GameplayTag
 #include "EGameplayModOp.h"
+#include "GameplayModEvaluationChannelSettings.h"
+#include "GameplayTagRequirements.h"
 #include "GameplayEffectExecutionScopedModifierInfo.generated.h"
 
 USTRUCT(BlueprintType)

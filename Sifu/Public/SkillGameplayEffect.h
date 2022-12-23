@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCGameplayEffect -FallbackName=SCGameplayEffect
 #include "ECharacterStat.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCGameplayEffect -FallbackName=SCGameplayEffect
 #include "SkillGameplayEffect.generated.h"
 
 UCLASS()

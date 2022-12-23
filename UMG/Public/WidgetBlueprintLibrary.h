@@ -1,35 +1,35 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector2D -FallbackName=Vector2D
-//CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=InputEvent -FallbackName=InputEvent
+//CROSS-MODULE INCLUDE V2: -ModuleName=InputCore -ObjectName=Key -FallbackName=Key
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
 #include "EventReply.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=EWindowTitleBarMode -FallbackName=EWindowTitleBarMode
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=EMouseLockMode -FallbackName=EMouseLockMode
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=EWindowTitleBarMode -FallbackName=EWindowTitleBarMode
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector2D -FallbackName=Vector2D
+//CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=InputEvent -FallbackName=InputEvent
+//CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=AnalogInputEvent -FallbackName=AnalogInputEvent
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=EMouseCursor -FallbackName=EMouseCursor
 //CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=EColorVisionDeficiency -FallbackName=EColorVisionDeficiency
 //CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=SlateBrush -FallbackName=SlateBrush
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector4 -FallbackName=Vector4
-//CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=NavigationEvent -FallbackName=NavigationEvent
 //CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=KeyEvent -FallbackName=KeyEvent
-//CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=AnalogInputEvent -FallbackName=AnalogInputEvent
 //CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=PointerEvent -FallbackName=PointerEvent
+//CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=NavigationEvent -FallbackName=NavigationEvent
 //CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=CharacterEvent -FallbackName=CharacterEvent
 #include "PaintContext.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=LinearColor -FallbackName=LinearColor
-//CROSS-MODULE INCLUDE V2: -ModuleName=InputCore -ObjectName=Key -FallbackName=Key
 #include "WidgetBlueprintLibrary.generated.h"
 
-class UDragDropOperation;
-class UWidget;
 class APlayerController;
+class UMaterialInstanceDynamic;
+class UWidget;
+class UUserWidget;
 class UObject;
 class UTexture2D;
 class UMaterialInterface;
 class USlateBrushAsset;
-class UMaterialInstanceDynamic;
-class UUserWidget;
+class UDragDropOperation;
 class UInterface;
 class IInterface;
 class UFont;

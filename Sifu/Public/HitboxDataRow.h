@@ -2,12 +2,12 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=TableRowBase -FallbackName=TableRowBase
+#include "EHitType.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTagContainer -FallbackName=GameplayTagContainer
 #include "HitImpact.h"
-#include "DeflectImpact.h"
-#include "EHitType.h"
 #include "EHittedReaction.h"
 #include "EAttackPowers.h"
+#include "DeflectImpact.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCUserDefinedEnumHandler -FallbackName=SCUserDefinedEnumHandler
 #include "AttackPropertyLevel.h"
 #include "EFightingState.h"

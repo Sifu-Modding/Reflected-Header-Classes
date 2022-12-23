@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "MainAttackComboRealNamesDB.h"
 #include "AlternativeAttackComboRealNamesDB.h"
+#include "MainAttackComboRealNamesDB.h"
 #include "AttackComboRealNamesDB.generated.h"
 
 USTRUCT()

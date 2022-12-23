@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "EGetActorsRelativeSideToBox.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=AIModule -ObjectName=EnvQueryTest -FallbackName=EnvQueryTest
 #include "ETestAxis2D.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=AIModule -ObjectName=EnvQueryTest -FallbackName=EnvQueryTest
+#include "EGetActorsRelativeSideToBox.h"
 #include "EnvQueryTest_ActorsRelativeSideToBox.generated.h"
 
 class UEnvQueryContext;

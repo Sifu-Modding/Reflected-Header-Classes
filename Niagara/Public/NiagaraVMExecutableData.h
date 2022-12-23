@@ -5,9 +5,9 @@
 #include "NiagaraScriptDataInterfaceCompileInfo.h"
 #include "VMExternalFunctionBindingInfo.h"
 #include "NiagaraDataSetID.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=NiagaraShader -ObjectName=NiagaraDataInterfaceGPUParamInfo -FallbackName=NiagaraDataInterfaceGPUParamInfo
 #include "NiagaraDataSetProperties.h"
 #include "NiagaraStatScope.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=NiagaraShader -ObjectName=NiagaraDataInterfaceGPUParamInfo -FallbackName=NiagaraDataInterfaceGPUParamInfo
 #include "ENiagaraScriptCompileStatus.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=NiagaraShader -ObjectName=SimulationStageMetaData -FallbackName=SimulationStageMetaData
 #include "NiagaraVMExecutableData.generated.h"

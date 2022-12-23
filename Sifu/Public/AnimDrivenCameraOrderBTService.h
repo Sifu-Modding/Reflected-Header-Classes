@@ -5,8 +5,8 @@
 #include "ECameraAnimDrivenComputationMethod.h"
 #include "AnimDrivenCameraOrderBTService.generated.h"
 
-class UAbstractCameraData;
 class UCameraComponentThird;
+class UAbstractCameraData;
 
 UCLASS(Abstract, Blueprintable)
 class SIFU_API UAnimDrivenCameraOrderBTService : public UBTService {

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SCSaveObject.h"
 #include "SCGameData.h"
+#include "SCSaveObject.h"
 #include "SCSaveObjectGameData.generated.h"
 
 UCLASS()

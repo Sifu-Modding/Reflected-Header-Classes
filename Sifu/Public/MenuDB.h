@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=DataAsset -FallbackName=DataAsset
-#include "EquipmentCategoryInfos.h"
-#include "EGameModeTypes.h"
-#include "ControllerIcons.h"
 #include "IconTextures.h"
+#include "EquipmentCategoryInfos.h"
+#include "ControllerIcons.h"
 #include "EQuadrantTypes.h"
 #include "EIconStyle.h"
+#include "EGameModeTypes.h"
 #include "ControllerKeyIcons.h"
 #include "ControllerAxisIcons.h"
 #include "EParrySide.h"

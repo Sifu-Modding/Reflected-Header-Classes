@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=PostProcessSettings -FallbackName=PostProcessSettings
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=PostProcessSettings -FallbackName=PostProcessSettings
 #include "ReplayGameWorldFunctionLibrary.generated.h"
 
+class ASCCharacterImpostor;
+class UExponentialHeightFogComponent;
 class AFightingCharacter;
 class UObject;
 class AActor;
-class UExponentialHeightFogComponent;
 class ASCPlayerController;
-class ASCCharacterImpostor;
 
 UCLASS(BlueprintType)
 class SIFU_API UReplayGameWorldFunctionLibrary : public UBlueprintFunctionLibrary {

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "BlendProfileBySpeedStateStruct.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=BlendProfilePayload -FallbackName=BlendProfilePayload
+#include "BlendProfileBySpeedStateStruct.h"
 #include "BlendProfileBySpeedStatePayload.generated.h"
 
 UCLASS(Abstract)

@@ -4,10 +4,10 @@
 #include "SCVideoLightManager.generated.h"
 
 class UTextureRenderTarget2D;
-class UMaterialInstanceDynamic;
-class UMaterialInterface;
-class UMediaTexture;
 class UCanvas;
+class UMaterialInstanceDynamic;
+class UMediaTexture;
+class UMaterialInterface;
 class UMediaSource;
 class ULocalLightComponent;
 class UCurveLinearColor;

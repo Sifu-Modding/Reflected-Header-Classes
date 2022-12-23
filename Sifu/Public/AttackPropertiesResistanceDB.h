@@ -3,11 +3,11 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=InheritedDataAsset -FallbackName=InheritedDataAsset
 #include "PushPropertyReaction.h"
 #include "AttackPropertyResistanceMatrixByFightingState.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=AnimContainer -FallbackName=AnimContainer
 #include "PropertyReaction.h"
 #include "StructureBrokenReaction.h"
-#include "SuperDizzyReaction.h"
 #include "DizzyReaction.h"
+#include "SuperDizzyReaction.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=AnimContainer -FallbackName=AnimContainer
 #include "AttackPropertiesResistanceDB.generated.h"
 
 UCLASS(BlueprintType)

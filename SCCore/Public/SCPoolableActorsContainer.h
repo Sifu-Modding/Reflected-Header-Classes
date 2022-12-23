@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "SCPoolableActorsContainerPoolEntry.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=Actor -FallbackName=Actor
+#include "SCPoolableActorsContainerPoolEntry.h"
 #include "SCPoolableActorsContainer.generated.h"
 
 class ASCCharacterImpostor;

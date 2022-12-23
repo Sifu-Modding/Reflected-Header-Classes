@@ -2,24 +2,23 @@
 #include "CoreMinimal.h"
 #include "Widget.h"
 #include "Widget.h"
-#include "NamedSlotInterface.h"
-#include "Widget.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=Margin -FallbackName=Margin
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=LinearColor -FallbackName=LinearColor
-//CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=SlateColor -FallbackName=SlateColor
 #include "OnVisibilityChangedEventDelegate.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=SlateColor -FallbackName=SlateColor
+#include "NamedSlotInterface.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=LinearColor -FallbackName=LinearColor
+#include "Widget.h"
 #include "AnimationEventBinding.h"
 #include "NamedSlotBinding.h"
 #include "EWidgetTickFrequency.h"
-#include "EventReply.h"
 #include "WidgetAnimationDynamicEventDelegate.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=Geometry -FallbackName=Geometry
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=EInputEvent -FallbackName=EInputEvent
-//CROSS-MODULE INCLUDE V2: -ModuleName=Slate -ObjectName=Anchors -FallbackName=Anchors
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector2D -FallbackName=Vector2D
-//CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=PointerEvent -FallbackName=PointerEvent
+//CROSS-MODULE INCLUDE V2: -ModuleName=Slate -ObjectName=Anchors -FallbackName=Anchors
 #include "EUMGSequencePlayMode.h"
-#include "EWidgetAnimationEvent.h"
+#include "EventReply.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=PointerEvent -FallbackName=PointerEvent
 //CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=FocusEvent -FallbackName=FocusEvent
 //CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=KeyEvent -FallbackName=KeyEvent
 #include "PaintContext.h"
@@ -27,18 +26,19 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=CharacterEvent -FallbackName=CharacterEvent
 //CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=AnalogInputEvent -FallbackName=AnalogInputEvent
 #include "OnInputActionDelegate.h"
+#include "EWidgetAnimationEvent.h"
 #include "UserWidget.generated.h"
 
-class APlayerCameraManager;
-class UUMGSequencePlayer;
 class UUMGSequenceTickManager;
-class UWidgetTree;
-class USoundBase;
+class UUMGSequencePlayer;
 class UInputComponent;
+class UWidgetTree;
+class APawn;
 class UWidgetAnimation;
 class UDragDropOperation;
 class APlayerController;
-class APawn;
+class USoundBase;
+class APlayerCameraManager;
 
 UCLASS(Abstract, Blueprintable, EditInlineNew)
 class UMG_API UUserWidget : public UWidget, public INamedSlotInterface {

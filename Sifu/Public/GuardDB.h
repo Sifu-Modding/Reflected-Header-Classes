@@ -1,20 +1,20 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
+#include "AnimByCardinalThenHeight.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=InheritedDataAsset -FallbackName=InheritedDataAsset
+#include "DeflectImpact.h"
+#include "EAvoidLaunchMethod.h"
 #include "AnimByHeight.h"
 #include "HitBox.h"
-#include "AnimByCardinalThenHeight.h"
-#include "DeflectImpact.h"
+#include "EHeight.h"
 #include "HitImpact.h"
-#include "EAvoidLaunchMethod.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=FloatRange -FallbackName=FloatRange
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCUserDefinedEnumHandler -FallbackName=SCUserDefinedEnumHandler
 #include "HitRequest.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=AnimContainer -FallbackName=AnimContainer
 #include "EQuadrantTypes.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=ESCCardinalPoints -FallbackName=ESCCardinalPoints
-#include "EHeight.h"
 #include "GuardDB.generated.h"
 
 class UAvailabilityLayerData;

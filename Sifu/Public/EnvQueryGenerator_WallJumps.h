@@ -6,9 +6,9 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=AIModule -ObjectName=AIDataProviderBoolValue -FallbackName=AIDataProviderBoolValue
 #include "EnvQueryGenerator_WallJumps.generated.h"
 
-class UActorComponent;
-class AActor;
 class UEnvQueryContext;
+class AActor;
+class UActorComponent;
 
 UCLASS(EditInlineNew)
 class UEnvQueryGenerator_WallJumps : public UEnvQueryGenerator {

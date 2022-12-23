@@ -3,8 +3,8 @@
 #include "RigUnit_DebugBaseMutable.h"
 #include "CRFourPointBezier.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=LinearColor -FallbackName=LinearColor
-#include "RigElementKey.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Transform -FallbackName=Transform
+#include "RigElementKey.h"
 #include "RigUnit_DebugBezierItemSpace.generated.h"
 
 USTRUCT()

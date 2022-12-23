@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EMovieSceneCompletionMode.h"
 #include "MovieSceneEvalTemplateBase.h"
+#include "EMovieSceneCompletionMode.h"
 #include "MovieSceneEvalTemplate.generated.h"
 
 class UMovieSceneSection;

@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Interface -FallbackName=Interface
 #include "InputAction.h"
-#include "EControllerIconAxisTypes.h"
 #include "EControllerIconStyles.h"
+#include "EControllerIconAxisTypes.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCUserDefinedEnumHandler -FallbackName=SCUserDefinedEnumHandler
 #include "ControllerButtonInterface.generated.h"
 

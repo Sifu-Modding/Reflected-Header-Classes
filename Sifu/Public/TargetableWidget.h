@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "ERelationshipTypes.h"
 #include "HUDUserWidget.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector2D -FallbackName=Vector2D
-#include "ERelationshipTypes.h"
 #include "TargetableWidget.generated.h"
 
 class UWidget;

@@ -4,9 +4,9 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Transform -FallbackName=Transform
 #include "GameplayAbilityTargetingLocationInfo.generated.h"
 
-class UGameplayAbility;
-class AActor;
 class UMeshComponent;
+class AActor;
+class UGameplayAbility;
 
 USTRUCT(BlueprintType)
 struct GAMEPLAYABILITIES_API FGameplayAbilityTargetingLocationInfo {

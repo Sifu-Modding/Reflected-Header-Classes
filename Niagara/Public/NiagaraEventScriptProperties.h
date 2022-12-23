@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "NiagaraEmitterScriptProperties.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Guid -FallbackName=Guid
 #include "EScriptExecutionMode.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Guid -FallbackName=Guid
 #include "NiagaraEventScriptProperties.generated.h"
 
 USTRUCT(BlueprintType)

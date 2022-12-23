@@ -3,13 +3,13 @@
 
 class AController;
 class APawn;
-class UNavigationPath;
 class UAnimInstance;
-class UObject;
 class UBehaviorTree;
-class AActor;
-class UBlackboardComponent;
+class UObject;
 class AAIController;
+class AActor;
+class UNavigationPath;
+class UBlackboardComponent;
 class UAIAsyncTaskBlueprintProxy;
 
 void UAIBlueprintHelperLibrary::UnlockAIResourcesWithAnimation(UAnimInstance* AnimInstance, bool bUnlockMovement, bool UnlockAILogic) {
