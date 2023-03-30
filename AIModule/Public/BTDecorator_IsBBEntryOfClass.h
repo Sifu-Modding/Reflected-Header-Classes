@@ -3,12 +3,12 @@
 #include "BTDecorator_BlackboardBase.h"
 #include "BTDecorator_IsBBEntryOfClass.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class AIMODULE_API UBTDecorator_IsBBEntryOfClass : public UBTDecorator_BlackboardBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UClass* TestClass;
     
 public:

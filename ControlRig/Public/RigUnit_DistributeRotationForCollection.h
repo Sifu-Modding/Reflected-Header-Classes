@@ -1,29 +1,29 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "EControlRigAnimEasingType.h"
-#include "RigUnit_HighlevelBaseMutable.h"
-#include "RigUnit_DistributeRotation_WorkData.h"
 #include "RigElementKeyCollection.h"
 #include "RigUnit_DistributeRotation_Rotation.h"
+#include "RigUnit_DistributeRotation_WorkData.h"
+#include "RigUnit_HighlevelBaseMutable.h"
 #include "RigUnit_DistributeRotationForCollection.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_DistributeRotationForCollection : public FRigUnit_HighlevelBaseMutable {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRigElementKeyCollection Items;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FRigUnit_DistributeRotation_Rotation> Rotations;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EControlRigAnimEasingType RotationEaseType;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Weight;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FRigUnit_DistributeRotation_WorkData WorkData;
     
     CONTROLRIG_API FRigUnit_DistributeRotationForCollection();

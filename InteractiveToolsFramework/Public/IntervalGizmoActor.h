@@ -5,17 +5,17 @@
 
 class UGizmoLineHandleComponent;
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class INTERACTIVETOOLSFRAMEWORK_API AIntervalGizmoActor : public AGizmoActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UGizmoLineHandleComponent* UpIntervalComponent;
     
-    UPROPERTY(Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UGizmoLineHandleComponent* DownIntervalComponent;
     
-    UPROPERTY(Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UGizmoLineHandleComponent* ForwardIntervalComponent;
     
     AIntervalGizmoActor();

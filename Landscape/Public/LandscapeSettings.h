@@ -3,11 +3,11 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=DeveloperSettings -ObjectName=DeveloperSettings -FallbackName=DeveloperSettings
 #include "LandscapeSettings.generated.h"
 
-UCLASS(DefaultConfig)
+UCLASS(Blueprintable, Config=Engine, DefaultConfig)
 class LANDSCAPE_API ULandscapeSettings : public UDeveloperSettings {
     GENERATED_BODY()
 public:
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 MaxNumberOfLayers;
     
     ULandscapeSettings();

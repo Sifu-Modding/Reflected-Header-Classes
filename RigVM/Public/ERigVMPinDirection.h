@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "ERigVMPinDirection.generated.h"
 
-UENUM()
-enum class ERigVMPinDirection {
+UENUM(BlueprintType)
+enum class ERigVMPinDirection : uint8 {
     Input,
     Output,
     IO,

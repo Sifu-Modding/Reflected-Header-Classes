@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EGameplayAbilityInstancingPolicy.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 namespace EGameplayAbilityInstancingPolicy {
     enum Type {
         NonInstanced,

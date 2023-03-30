@@ -1,18 +1,18 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RigUnit.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Rotator -FallbackName=Rotator
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Quat -FallbackName=Quat
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Rotator -FallbackName=Rotator
+#include "RigUnit.h"
 #include "RigUnit_ConvertRotation.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_ConvertRotation : public FRigUnit {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRotator Input;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FQuat Result;
     
     CONTROLRIG_API FRigUnit_ConvertRotation();

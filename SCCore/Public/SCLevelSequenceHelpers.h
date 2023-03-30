@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
-#include "SCSequenceParameters.h"
 #include "SCLevelSequenceDynamicDelegateDelegate.h"
+#include "SCSequenceParameters.h"
 #include "SCLevelSequenceHelpers.generated.h"
 
+class AActor;
+class ACharacter;
 class ALevelSequenceActor;
 class APlayerController;
-class ACharacter;
-class AActor;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class SCCORE_API USCLevelSequenceHelpers : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
@@ -33,7 +33,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static void BPF_PauseSequence(const ALevelSequenceActor* _sequenceActor);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static FName BPF_GetTeleportRoleName();
     
     UFUNCTION(BlueprintCallable)

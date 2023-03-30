@@ -1,25 +1,25 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=FastArraySerializerItem -FallbackName=FastArraySerializerItem
-#include "PredictionKey.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTag -FallbackName=GameplayTag
 #include "GameplayCueParameters.h"
+#include "PredictionKey.h"
 #include "ActiveGameplayCue.generated.h"
 
 USTRUCT(BlueprintType)
 struct FActiveGameplayCue : public FFastArraySerializerItem {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayTag GameplayCueTag;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FPredictionKey PredictionKey;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayCueParameters Parameters;
     
-    UPROPERTY(NotReplicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, NotReplicated, meta=(AllowPrivateAccess=true))
     bool bPredictivelyRemoved;
     
     GAMEPLAYABILITIES_API FActiveGameplayCue();

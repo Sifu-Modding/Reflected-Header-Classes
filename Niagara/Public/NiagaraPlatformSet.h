@@ -8,13 +8,13 @@ USTRUCT(BlueprintType)
 struct NIAGARA_API FNiagaraPlatformSet {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 QualityLevelMask;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FNiagaraDeviceProfileStateEntry> DeviceProfileStates;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FNiagaraPlatformSetCVarCondition> CVarConditions;
     
     FNiagaraPlatformSet();

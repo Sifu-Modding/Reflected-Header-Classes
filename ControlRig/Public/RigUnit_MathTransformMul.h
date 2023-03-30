@@ -3,7 +3,7 @@
 #include "RigUnit_MathTransformBinaryOp.h"
 #include "RigUnit_MathTransformMul.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_MathTransformMul : public FRigUnit_MathTransformBinaryOp {
     GENERATED_BODY()
 public:

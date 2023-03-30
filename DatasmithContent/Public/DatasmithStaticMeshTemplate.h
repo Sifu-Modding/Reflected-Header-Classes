@@ -1,28 +1,28 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "DatasmithMeshBuildSettingsTemplate.h"
-#include "DatasmithObjectTemplate.h"
 #include "DatasmithMeshSectionInfoMapTemplate.h"
+#include "DatasmithObjectTemplate.h"
 #include "DatasmithStaticMaterialTemplate.h"
 #include "DatasmithStaticMeshTemplate.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class DATASMITHCONTENT_API UDatasmithStaticMeshTemplate : public UDatasmithObjectTemplate {
     GENERATED_BODY()
 public:
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FDatasmithMeshSectionInfoMapTemplate SectionInfoMap;
     
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 LightMapCoordinateIndex;
     
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 LightMapResolution;
     
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FDatasmithMeshBuildSettingsTemplate> BuildSettings;
     
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FDatasmithStaticMaterialTemplate> StaticMaterials;
     
     UDatasmithStaticMeshTemplate();

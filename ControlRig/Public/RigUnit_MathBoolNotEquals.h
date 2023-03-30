@@ -3,17 +3,17 @@
 #include "RigUnit_MathBoolBase.h"
 #include "RigUnit_MathBoolNotEquals.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_MathBoolNotEquals : public FRigUnit_MathBoolBase {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool A;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool B;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool Result;
     
     CONTROLRIG_API FRigUnit_MathBoolNotEquals();

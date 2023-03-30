@@ -3,15 +3,15 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=AkAudio -ObjectName=MovieSceneAkAudioEventSection -FallbackName=MovieSceneAkAudioEventSection
 #include "MovieSceneSubtitlesSection.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class SIFU_API UMovieSceneSubtitlesSection : public UMovieSceneAkAudioEventSection {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FText Subtitle;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bIsMCSpeaking;
     
 public:

@@ -3,7 +3,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
 #include "SCLevelStreamingManagerHelpers.generated.h"
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class SCCORE_API USCLevelStreamingManagerHelpers : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

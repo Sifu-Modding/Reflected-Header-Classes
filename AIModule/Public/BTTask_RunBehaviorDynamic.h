@@ -1,23 +1,23 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "BTTaskNode.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTag -FallbackName=GameplayTag
+#include "BTTaskNode.h"
 #include "BTTask_RunBehaviorDynamic.generated.h"
 
 class UBehaviorTree;
 
-UCLASS()
+UCLASS(Blueprintable)
 class AIMODULE_API UBTTask_RunBehaviorDynamic : public UBTTaskNode {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayTag InjectionTag;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UBehaviorTree* DefaultBehaviorAsset;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UBehaviorTree* BehaviorAsset;
     
 public:

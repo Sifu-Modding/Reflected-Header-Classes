@@ -3,14 +3,14 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
 #include "AkMediaAssetData.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class AKAUDIO_API UAkMediaAssetData : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool IsStreamed;
     
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool UseDeviceMemory;
     
     UAkMediaAssetData();

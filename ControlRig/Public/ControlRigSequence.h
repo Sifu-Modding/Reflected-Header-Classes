@@ -6,17 +6,17 @@
 class UAnimSequence;
 class USkeletalMesh;
 
-UCLASS()
+UCLASS(Blueprintable)
 class CONTROLRIG_API UControlRigSequence : public ULevelSequence {
     GENERATED_BODY()
 public:
-    UPROPERTY(AssetRegistrySearchable)
+    UPROPERTY(AssetRegistrySearchable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSoftObjectPtr<UAnimSequence> LastExportedToAnimationSequence;
     
-    UPROPERTY(AssetRegistrySearchable)
+    UPROPERTY(AssetRegistrySearchable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSoftObjectPtr<USkeletalMesh> LastExportedUsingSkeletalMesh;
     
-    UPROPERTY(AssetRegistrySearchable)
+    UPROPERTY(AssetRegistrySearchable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float LastExportedFrameRate;
     
     UControlRigSequence();

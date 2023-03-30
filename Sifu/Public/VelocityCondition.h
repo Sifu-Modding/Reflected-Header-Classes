@@ -4,14 +4,14 @@
 #include "BaseActorCondition.h"
 #include "VelocityCondition.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class SIFU_API UVelocityCondition : public UBaseActorCondition {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EOperationType m_eOperation;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fVelocity;
     
     UVelocityCondition();

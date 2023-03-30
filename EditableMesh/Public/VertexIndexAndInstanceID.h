@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FVertexIndexAndInstanceID {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 ContourIndex;
     
-    UPROPERTY(BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVertexInstanceID VertexInstanceID;
     
     EDITABLEMESH_API FVertexIndexAndInstanceID();

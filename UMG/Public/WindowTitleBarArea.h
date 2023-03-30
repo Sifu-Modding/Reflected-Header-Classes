@@ -1,19 +1,19 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ContentWidget.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=Margin -FallbackName=Margin
-//CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=EVerticalAlignment -FallbackName=EVerticalAlignment
 //CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=EHorizontalAlignment -FallbackName=EHorizontalAlignment
+//CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=EVerticalAlignment -FallbackName=EVerticalAlignment
+//CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=Margin -FallbackName=Margin
+#include "ContentWidget.h"
 #include "WindowTitleBarArea.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UMG_API UWindowTitleBarArea : public UContentWidget {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bWindowButtonsEnabled;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bDoubleClickTogglesFullscreen;
     
     UWindowTitleBarArea();

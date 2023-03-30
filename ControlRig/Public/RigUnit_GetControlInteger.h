@@ -4,23 +4,23 @@
 #include "RigUnit.h"
 #include "RigUnit_GetControlInteger.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_GetControlInteger : public FRigUnit {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName Control;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 IntegerValue;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 Minimum;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 Maximum;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FCachedRigElement CachedControlIndex;
     
     CONTROLRIG_API FRigUnit_GetControlInteger();

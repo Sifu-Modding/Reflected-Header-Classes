@@ -5,12 +5,12 @@
 
 class UMoviePipeline;
 
-UCLASS(Abstract, EditInlineNew)
+UCLASS(Abstract, Blueprintable, EditInlineNew)
 class UMovieRenderDebugWidget : public UUserWidget {
     GENERATED_BODY()
 public:
     UMovieRenderDebugWidget();
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnInitializedForPipeline(UMoviePipeline* ForPipeline);
     
 };

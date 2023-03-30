@@ -6,20 +6,20 @@
 
 class UMaterial;
 
-UCLASS()
+UCLASS(Blueprintable)
 class CONTROLRIG_API UControlRigGizmoLibrary : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FControlRigGizmoDefinition DefaultGizmo;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSoftObjectPtr<UMaterial> DefaultMaterial;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName MaterialColorParameter;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FControlRigGizmoDefinition> Gizmos;
     
     UControlRigGizmoLibrary();

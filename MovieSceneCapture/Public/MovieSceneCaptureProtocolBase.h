@@ -4,20 +4,20 @@
 #include "EMovieSceneCaptureProtocolState.h"
 #include "MovieSceneCaptureProtocolBase.generated.h"
 
-UCLASS(Abstract, BlueprintType, PerObjectConfig, Config=EditorPerProjectUserSettings)
+UCLASS(Abstract, Blueprintable, PerObjectConfig, Config=EditorPerProjectUserSettings)
 class MOVIESCENECAPTURE_API UMovieSceneCaptureProtocolBase : public UObject {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     EMovieSceneCaptureProtocolState State;
     
 public:
     UMovieSceneCaptureProtocolBase();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsCapturing() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     EMovieSceneCaptureProtocolState GetState() const;
     
 };

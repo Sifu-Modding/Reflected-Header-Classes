@@ -1,19 +1,19 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "TargetEvaluationSettings.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
+#include "TargetEvaluationSettings.h"
 #include "TargettingHelper.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class SIFU_API UTargettingHelper : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UTargettingHelper();
 private:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     FString GetEditorTitle(const FTargetEvaluationSettings& _settings);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     FString GetEditorDesc(const FTargetEvaluationSettings& _settings);
     
 };

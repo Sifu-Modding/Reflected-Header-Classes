@@ -6,12 +6,12 @@
 class AWheeledVehicle;
 class UWheeledVehicleMovementComponent;
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class PHYSXVEHICLES_API UVehicleAnimInstance : public UAnimInstance {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(Instanced, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UWheeledVehicleMovementComponent* WheeledVehicleMovementComponent;
     
 public:

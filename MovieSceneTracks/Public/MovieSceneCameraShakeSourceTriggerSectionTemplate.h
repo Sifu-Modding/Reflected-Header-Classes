@@ -5,15 +5,15 @@
 #include "MovieSceneCameraShakeSourceTrigger.h"
 #include "MovieSceneCameraShakeSourceTriggerSectionTemplate.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct MOVIESCENETRACKS_API FMovieSceneCameraShakeSourceTriggerSectionTemplate : public FMovieSceneEvalTemplate {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FFrameNumber> TriggerTimes;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FMovieSceneCameraShakeSourceTrigger> TriggerValues;
     
 public:

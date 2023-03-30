@@ -1,20 +1,20 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=AIModule -ObjectName=EnvQueryTest -FallbackName=EnvQueryTest
 #include "ESCTestDistance.h"
+#include "Templates/SubclassOf.h"
 #include "EnvQueryTest_DistanceFromBounding.generated.h"
 
 class UEnvQueryContext;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UEnvQueryTest_DistanceFromBounding : public UEnvQueryTest {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ESCTestDistance TestMode;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UEnvQueryContext> DistanceTo;
     
     UEnvQueryTest_DistanceFromBounding();

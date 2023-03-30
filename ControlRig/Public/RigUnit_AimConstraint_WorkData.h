@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FRigUnit_AimConstraint_WorkData {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FConstraintData> ConstraintData;
     
     CONTROLRIG_API FRigUnit_AimConstraint_WorkData();

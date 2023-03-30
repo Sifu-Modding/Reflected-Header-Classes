@@ -1,36 +1,36 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EventReply.h"
-#include "Visual.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=Geometry -FallbackName=Geometry
-#include "CustomWidgetNavigationDelegateDelegate.h"
-#include "WidgetTransform.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=PointerEvent -FallbackName=PointerEvent
-#include "ESlateVisibility.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=ECheckBoxState -FallbackName=ECheckBoxState
-//CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=SlateBrush -FallbackName=SlateBrush
-//CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=SlateColor -FallbackName=SlateColor
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=EMouseCursor -FallbackName=EMouseCursor
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=LinearColor -FallbackName=LinearColor
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector2D -FallbackName=Vector2D
-//CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=EWidgetClipping -FallbackName=EWidgetClipping
+//CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=ECheckBoxState -FallbackName=ECheckBoxState
 //CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=EFlowDirectionPreference -FallbackName=EFlowDirectionPreference
 //CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=EUINavigation -FallbackName=EUINavigation
 //CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=EUINavigationRule -FallbackName=EUINavigationRule
+//CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=EWidgetClipping -FallbackName=EWidgetClipping
+//CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=Geometry -FallbackName=Geometry
+//CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=PointerEvent -FallbackName=PointerEvent
+//CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=SlateBrush -FallbackName=SlateBrush
+//CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=SlateColor -FallbackName=SlateColor
+#include "CustomWidgetNavigationDelegateDelegate.h"
+#include "ESlateVisibility.h"
+#include "EventReply.h"
+#include "Visual.h"
+#include "WidgetTransform.h"
 #include "Widget.generated.h"
 
-class UWidget;
-class UGameInstance;
-class UPanelSlot;
-class UObject;
-class USlateAccessibleWidgetData;
-class UWidgetNavigation;
-class UPropertyBinding;
 class APlayerController;
-class UPanelWidget;
+class UGameInstance;
 class ULocalPlayer;
+class UObject;
+class UPanelSlot;
+class UPanelWidget;
+class UPropertyBinding;
+class USlateAccessibleWidgetData;
+class UWidget;
+class UWidgetNavigation;
 
-UCLASS(Abstract, BlueprintType)
+UCLASS(Abstract, Blueprintable)
 class UMG_API UWidget : public UVisual {
     GENERATED_BODY()
 public:
@@ -50,74 +50,74 @@ public:
     DECLARE_DYNAMIC_DELEGATE_RetVal_OneParam(UWidget*, FGenerateWidgetForString, const FString&, Item);
     DECLARE_DYNAMIC_DELEGATE_RetVal_OneParam(UWidget*, FGenerateWidgetForObject, UObject*, Item);
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced, TextExportTransient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, TextExportTransient, meta=(AllowPrivateAccess=true))
     UPanelSlot* Slot;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGetBool bIsEnabledDelegate;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FText ToolTipText;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGetText ToolTipTextDelegate;
     
-    UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UWidget* ToolTipWidget;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGetWidget ToolTipWidgetDelegate;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGetSlateVisibility VisibilityDelegate;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FWidgetTransform RenderTransform;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector2D RenderTransformPivot;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bIsVariable: 1;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     uint8 bCreatedByConstructionScript: 1;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bIsEnabled: 1;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bOverride_Cursor: 1;
     
 private:
-    UPROPERTY(Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USlateAccessibleWidgetData* AccessibleWidgetData;
     
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bIsVolatile: 1;
     
 public:
-    UPROPERTY(AdvancedDisplay, BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<EMouseCursor::Type> Cursor;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EWidgetClipping Clipping;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ESlateVisibility Visibility;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float RenderOpacity;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UWidgetNavigation* Navigation;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EFlowDirectionPreference FlowDirectionPreference;
     
 protected:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UPropertyBinding*> NativeBindings;
     
 public:
@@ -194,79 +194,79 @@ public:
     UFUNCTION(BlueprintCallable)
     void RemoveFromParent();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsVisible() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsHovered() const;
     
     UFUNCTION(BlueprintCallable)
     void InvalidateLayoutAndVolatility();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool HasUserFocusedDescendants(APlayerController* PlayerController) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool HasUserFocus(APlayerController* PlayerController) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool HasMouseCaptureByUser(int32 UserIndex, int32 PointerIndex) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool HasMouseCapture() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool HasKeyboardFocus() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool HasFocusedDescendants() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool HasAnyUserFocus() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ESlateVisibility GetVisibility() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FGeometry GetTickSpaceGeometry() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetRenderTransformAngle() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetRenderOpacity() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UPanelWidget* GetParent() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FGeometry GetPaintSpaceGeometry() const;
     
-    UFUNCTION(BlueprintCosmetic, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintCosmetic, BlueprintPure)
     APlayerController* GetOwningPlayer() const;
     
-    UFUNCTION(BlueprintCosmetic, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintCosmetic, BlueprintPure)
     ULocalPlayer* GetOwningLocalPlayer() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool GetIsEnabled() const;
     
-    UFUNCTION(BlueprintCosmetic, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintCosmetic, BlueprintPure)
     UGameInstance* GetGameInstance() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector2D GetDesiredSize() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     EWidgetClipping GetClipping() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FGeometry GetCachedGeometry() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FText GetAccessibleText() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FText GetAccessibleSummaryText() const;
     
     UFUNCTION(BlueprintCallable)

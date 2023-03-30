@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FMovieSceneEvaluationFieldEntity {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMovieSceneEvaluationFieldEntityKey Key;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 SharedMetaDataIndex;
     
     MOVIESCENE_API FMovieSceneEvaluationFieldEntity();

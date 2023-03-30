@@ -1,59 +1,59 @@
 #pragma once
 #include "CoreMinimal.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=FrameRate -FallbackName=FrameRate
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Guid -FallbackName=Guid
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=SoftObjectPath -FallbackName=SoftObjectPath
-#include "MovieSceneSequenceTransform.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=FrameRate -FallbackName=FrameRate
-#include "MovieSceneSequenceID.h"
 #include "MovieSceneFrameRange.h"
+#include "MovieSceneSequenceID.h"
 #include "MovieSceneSequenceInstanceDataPtr.h"
+#include "MovieSceneSequenceTransform.h"
 #include "MovieSceneSubSequenceData.generated.h"
 
 USTRUCT(BlueprintType)
 struct FMovieSceneSubSequenceData {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSoftObjectPath Sequence;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMovieSceneSequenceTransform RootToSequenceTransform;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FFrameRate TickResolution;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMovieSceneSequenceID DeterministicSequenceID;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMovieSceneFrameRange PlayRange;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMovieSceneFrameRange FullPlayRange;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMovieSceneFrameRange UnwarpedPlayRange;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMovieSceneFrameRange PreRollRange;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMovieSceneFrameRange PostRollRange;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     int16 HierarchicalBias;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bHasHierarchicalEasing;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMovieSceneSequenceInstanceDataPtr InstanceData;
     
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGuid SubSectionSignature;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMovieSceneSequenceTransform OuterToInnerTransform;
     
 public:

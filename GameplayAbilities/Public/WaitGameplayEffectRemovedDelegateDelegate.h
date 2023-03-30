@@ -3,5 +3,5 @@
 #include "GameplayEffectRemovalInfo.h"
 #include "WaitGameplayEffectRemovedDelegateDelegate.generated.h"
 
-UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FWaitGameplayEffectRemovedDelegate, const FGameplayEffectRemovalInfo&, GameplayEffectRemovalInfo);
+UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FWaitGameplayEffectRemovedDelegate, const FGameplayEffectRemovalInfo&, GameplayEffectRemovalInfo);
 

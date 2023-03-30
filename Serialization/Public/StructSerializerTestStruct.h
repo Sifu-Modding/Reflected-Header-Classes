@@ -1,37 +1,37 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "StructSerializerSetTestStruct.h"
-#include "StructSerializerNumericTestStruct.h"
-#include "StructSerializerBooleanTestStruct.h"
 #include "StructSerializerArrayTestStruct.h"
-#include "StructSerializerObjectTestStruct.h"
+#include "StructSerializerBooleanTestStruct.h"
 #include "StructSerializerBuiltinTestStruct.h"
 #include "StructSerializerMapTestStruct.h"
+#include "StructSerializerNumericTestStruct.h"
+#include "StructSerializerObjectTestStruct.h"
+#include "StructSerializerSetTestStruct.h"
 #include "StructSerializerTestStruct.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FStructSerializerTestStruct {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FStructSerializerNumericTestStruct Numerics;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FStructSerializerBooleanTestStruct Booleans;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FStructSerializerObjectTestStruct Objects;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FStructSerializerBuiltinTestStruct Builtins;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FStructSerializerArrayTestStruct Arrays;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FStructSerializerMapTestStruct Maps;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FStructSerializerSetTestStruct Sets;
     
     SERIALIZATION_API FStructSerializerTestStruct();

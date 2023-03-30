@@ -1,40 +1,40 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ColorParameterNameAndCurves.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=FrameNumber -FallbackName=FrameNumber
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=LinearColor -FallbackName=LinearColor
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Transform -FallbackName=Transform
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector2D -FallbackName=Vector2D
 //CROSS-MODULE INCLUDE V2: -ModuleName=MovieScene -ObjectName=MovieSceneSection -FallbackName=MovieSceneSection
 #include "BoolParameterNameAndCurve.h"
-#include "Vector2DParameterNameAndCurves.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=FrameNumber -FallbackName=FrameNumber
+#include "ColorParameterNameAndCurves.h"
 #include "ScalarParameterNameAndCurve.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector2D -FallbackName=Vector2D
-#include "VectorParameterNameAndCurves.h"
 #include "TransformParameterNameAndCurves.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Transform -FallbackName=Transform
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=LinearColor -FallbackName=LinearColor
+#include "Vector2DParameterNameAndCurves.h"
+#include "VectorParameterNameAndCurves.h"
 #include "MovieSceneParameterSection.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class MOVIESCENETRACKS_API UMovieSceneParameterSection : public UMovieSceneSection {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FBoolParameterNameAndCurve> BoolParameterNamesAndCurves;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FScalarParameterNameAndCurve> ScalarParameterNamesAndCurves;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FVector2DParameterNameAndCurves> Vector2DParameterNamesAndCurves;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FVectorParameterNameAndCurves> VectorParameterNamesAndCurves;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FColorParameterNameAndCurves> ColorParameterNamesAndCurves;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTransformParameterNameAndCurves> TransformParameterNamesAndCurves;
     
 public:
@@ -57,7 +57,7 @@ public:
     UFUNCTION(BlueprintCallable)
     bool RemoveBoolParameter(FName InParameterName);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     void GetParameterNames(TSet<FName>& ParameterNames) const;
     
     UFUNCTION(BlueprintCallable)

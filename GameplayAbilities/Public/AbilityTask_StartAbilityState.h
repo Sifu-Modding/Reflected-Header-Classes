@@ -1,20 +1,20 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "AbilityTask.h"
 #include "AbilityStateDelegateDelegate.h"
+#include "AbilityTask.h"
 #include "AbilityTask_StartAbilityState.generated.h"
 
-class UGameplayAbility;
 class UAbilityTask_StartAbilityState;
+class UGameplayAbility;
 
-UCLASS()
+UCLASS(Blueprintable)
 class GAMEPLAYABILITIES_API UAbilityTask_StartAbilityState : public UAbilityTask {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAbilityStateDelegate OnStateEnded;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAbilityStateDelegate OnStateInterrupted;
     
     UAbilityTask_StartAbilityState();

@@ -3,11 +3,11 @@
 #include "DatasmithStaticMeshImportData.h"
 #include "DatasmithStaticMeshGLTFImportData.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class DATASMITHCONTENT_API UDatasmithStaticMeshGLTFImportData : public UDatasmithStaticMeshImportData {
     GENERATED_BODY()
 public:
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString SourceMeshName;
     
     UDatasmithStaticMeshGLTFImportData();

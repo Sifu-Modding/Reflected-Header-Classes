@@ -1,24 +1,24 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=Actor -FallbackName=Actor
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Guid -FallbackName=Guid
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=Actor -FallbackName=Actor
+#include "Templates/SubclassOf.h"
 #include "MagicLeapARPinRenderer.generated.h"
 
 class AMagicLeapARPinInfoActorBase;
 
-UCLASS()
+UCLASS(Blueprintable)
 class MAGICLEAPARPIN_API AMagicLeapARPinRenderer : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bInfoActorsVisibilityOverride;
     
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<FGuid, AMagicLeapARPinInfoActorBase*> AllInfoActors;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<AMagicLeapARPinInfoActorBase> ClassToSpawn;
     
 public:

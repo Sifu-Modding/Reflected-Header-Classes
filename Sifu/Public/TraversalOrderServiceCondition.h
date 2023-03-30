@@ -4,11 +4,11 @@
 #include "OrderServiceActivationConditions.h"
 #include "TraversalOrderServiceCondition.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class SIFU_API UTraversalOrderServiceCondition : public UOrderServiceActivationConditions {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETraversalPhase m_ePhase;
     
     UTraversalOrderServiceCondition();

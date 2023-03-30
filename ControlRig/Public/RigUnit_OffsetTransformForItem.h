@@ -1,28 +1,28 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "CachedRigElement.h"
-#include "RigUnitMutable.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Transform -FallbackName=Transform
+#include "CachedRigElement.h"
 #include "RigElementKey.h"
+#include "RigUnitMutable.h"
 #include "RigUnit_OffsetTransformForItem.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_OffsetTransformForItem : public FRigUnitMutable {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRigElementKey Item;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTransform OffsetTransform;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Weight;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bPropagateToChildren;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FCachedRigElement CachedIndex;
     
     CONTROLRIG_API FRigUnit_OffsetTransformForItem();

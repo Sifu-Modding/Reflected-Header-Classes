@@ -1,27 +1,27 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "InputContext.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=DataAsset -FallbackName=DataAsset
+#include "InputContext.h"
 #include "InputMappingProfileDB.generated.h"
 
 class UInputMappingPresets;
-class UInputMappingProfileUIData;
 class UInputMappingProfileContextDB;
+class UInputMappingProfileUIData;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UInputMappingProfileDB : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bGamepadMapping;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UInputMappingPresets* m_PresetDB;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UInputMappingProfileUIData* m_UIData;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<InputContext, UInputMappingProfileContextDB*> m_MappingPerContext;
     
     UInputMappingProfileDB();

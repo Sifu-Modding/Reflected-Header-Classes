@@ -3,7 +3,7 @@
 #include "RigUnit_MathIntBinaryOp.h"
 #include "RigUnit_MathIntMax.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_MathIntMax : public FRigUnit_MathIntBinaryOp {
     GENERATED_BODY()
 public:

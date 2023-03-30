@@ -3,28 +3,28 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
 #include "AnimSharingInstance.generated.h"
 
-class UAnimationSharingStateProcessor;
 class AActor;
-class UEnum;
 class UAnimSequence;
+class UAnimationSharingStateProcessor;
+class UEnum;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UAnimSharingInstance : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(Transient, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<AActor*> RegisteredActors;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UAnimationSharingStateProcessor* StateProcessor;
     
-    UPROPERTY(Transient, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UAnimSequence*> UsedAnimationSequences;
     
-    UPROPERTY(Transient, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UEnum* StateEnum;
     
-    UPROPERTY(Transient, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     AActor* SharingActor;
     
     UAnimSharingInstance();

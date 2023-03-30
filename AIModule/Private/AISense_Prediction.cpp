@@ -1,8 +1,8 @@
 #include "AISense_Prediction.h"
 
-class APawn;
 class AAIController;
 class AActor;
+class APawn;
 
 void UAISense_Prediction::RequestPawnPredictionEvent(APawn* Requestor, AActor* PredictedActor, float PredictionTime) {
 }

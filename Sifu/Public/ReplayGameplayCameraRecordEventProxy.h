@@ -4,7 +4,7 @@
 #include "ReplayGameplayCameraRecordEventDelegateDelegate.h"
 #include "ReplayGameplayCameraRecordEventProxy.generated.h"
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UReplayGameplayCameraRecordEventProxy : public UObject {
     GENERATED_BODY()
 public:

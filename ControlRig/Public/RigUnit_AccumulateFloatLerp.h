@@ -3,26 +3,26 @@
 #include "RigUnit_SimBase.h"
 #include "RigUnit_AccumulateFloatLerp.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_AccumulateFloatLerp : public FRigUnit_SimBase {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float TargetValue;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float InitialValue;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Blend;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bIntegrateDeltaTime;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Result;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float AccumulatedValue;
     
     CONTROLRIG_API FRigUnit_AccumulateFloatLerp();

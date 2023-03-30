@@ -1,19 +1,19 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "AbilityTask.h"
+#include "Templates/SubclassOf.h"
 #include "VisualizeTargetingDelegateDelegate.h"
 #include "AbilityTask_VisualizeTargeting.generated.h"
 
-class UAbilityTask_VisualizeTargeting;
 class AGameplayAbilityTargetActor;
+class UAbilityTask_VisualizeTargeting;
 class UGameplayAbility;
 
-UCLASS()
+UCLASS(Blueprintable)
 class GAMEPLAYABILITIES_API UAbilityTask_VisualizeTargeting : public UAbilityTask {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVisualizeTargetingDelegate TimeElapsed;
     
     UAbilityTask_VisualizeTargeting();

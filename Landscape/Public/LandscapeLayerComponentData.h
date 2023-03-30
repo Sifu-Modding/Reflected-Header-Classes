@@ -4,14 +4,14 @@
 #include "WeightmapData.h"
 #include "LandscapeLayerComponentData.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FLandscapeLayerComponentData {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FHeightmapData HeightmapData;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FWeightmapData WeightmapData;
     
     LANDSCAPE_API FLandscapeLayerComponentData();

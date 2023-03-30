@@ -1,45 +1,45 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=SoftClassPath -FallbackName=SoftClassPath
 #include "MovieSceneCaptureInterface.h"
 #include "MovieSceneCaptureSettings.h"
+#include "Templates/SubclassOf.h"
 #include "MovieSceneCapture.generated.h"
 
-class UMovieSceneImageCaptureProtocolBase;
 class UMovieSceneAudioCaptureProtocolBase;
 class UMovieSceneCaptureProtocolBase;
+class UMovieSceneImageCaptureProtocolBase;
 
-UCLASS(BlueprintType, PerObjectConfig, Config=EditorPerProjectUserSettings)
+UCLASS(Blueprintable, PerObjectConfig, Config=EditorPerProjectUserSettings)
 class MOVIESCENECAPTURE_API UMovieSceneCapture : public UObject, public IMovieSceneCaptureInterface {
     GENERATED_BODY()
 public:
-    UPROPERTY(Config, EditAnywhere, NoClear)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, NoClear, meta=(AllowPrivateAccess=true))
     FSoftClassPath ImageCaptureProtocolType;
     
-    UPROPERTY(Config, EditAnywhere, NoClear)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, NoClear, meta=(AllowPrivateAccess=true))
     FSoftClassPath AudioCaptureProtocolType;
     
-    UPROPERTY(Instanced, Transient, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UMovieSceneImageCaptureProtocolBase* ImageCaptureProtocol;
     
-    UPROPERTY(Instanced, Transient, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UMovieSceneAudioCaptureProtocolBase* AudioCaptureProtocol;
     
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMovieSceneCaptureSettings Settings;
     
-    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, Config, EditAnywhere)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bUseSeparateProcess;
     
-    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, Config, EditAnywhere)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bCloseEditorWhenCaptureStarts;
     
-    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, Config, EditAnywhere)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString AdditionalCommandLineArguments;
     
-    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, Transient)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FString InheritedCommandLineArguments;
     
     UMovieSceneCapture();

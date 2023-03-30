@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
-#include "TargetResult.h"
 #include "ETS_NextHitExtraInfos.h"
+#include "TargetResult.h"
 #include "ETS_NextHitHelper.generated.h"
 
 class AFightingCharacter;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class SIFU_API UETS_NextHitHelper : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

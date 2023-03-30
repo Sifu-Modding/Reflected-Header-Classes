@@ -3,15 +3,15 @@
 #include "NiagaraTypeDefinitionHandle.h"
 #include "NiagaraVariableBase.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FNiagaraVariableBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName Name;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FNiagaraTypeDefinitionHandle TypeDefHandle;
     
 public:

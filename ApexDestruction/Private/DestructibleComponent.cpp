@@ -1,7 +1,7 @@
 #include "DestructibleComponent.h"
 
-class UMaterialInterface;
 class UDestructibleMesh;
+class UMaterialInterface;
 
 void UDestructibleComponent::SetDestructibleMesh(UDestructibleMesh* NewMesh) {
 }

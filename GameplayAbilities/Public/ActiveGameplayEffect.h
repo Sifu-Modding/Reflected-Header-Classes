@@ -9,22 +9,22 @@ USTRUCT(BlueprintType)
 struct GAMEPLAYABILITIES_API FActiveGameplayEffect : public FFastArraySerializerItem {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayEffectSpec Spec;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FPredictionKey PredictionKey;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float StartServerWorldTime;
     
-    UPROPERTY(NotReplicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, NotReplicated, meta=(AllowPrivateAccess=true))
     float CachedStartServerWorldTime;
     
-    UPROPERTY(NotReplicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, NotReplicated, meta=(AllowPrivateAccess=true))
     float StartWorldTime;
     
-    UPROPERTY(NotReplicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, NotReplicated, meta=(AllowPrivateAccess=true))
     bool bIsInhibited;
     
     FActiveGameplayEffect();

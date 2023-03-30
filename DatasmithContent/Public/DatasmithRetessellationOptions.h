@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct DATASMITHCONTENT_API FDatasmithRetessellationOptions : public FDatasmithTessellationOptions {
     GENERATED_BODY()
 public:
-    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, Config, EditAnywhere)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     EDatasmithCADRetessellationRule RetessellationRule;
     
     FDatasmithRetessellationOptions();

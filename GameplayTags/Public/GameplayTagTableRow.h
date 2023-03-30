@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FGameplayTagTableRow : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName Tag;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString DevComment;
     
     GAMEPLAYTAGS_API FGameplayTagTableRow();

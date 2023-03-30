@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RigUnit_CollectionBase.h"
 #include "RigElementKeyCollection.h"
+#include "RigUnit_CollectionBase.h"
 #include "RigUnit_CollectionReverse.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_CollectionReverse : public FRigUnit_CollectionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRigElementKeyCollection Collection;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRigElementKeyCollection Reversed;
     
     CONTROLRIG_API FRigUnit_CollectionReverse();

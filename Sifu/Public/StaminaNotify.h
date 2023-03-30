@@ -3,7 +3,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=AnimNotify -FallbackName=AnimNotify
 #include "StaminaNotify.generated.h"
 
-UCLASS(Abstract, CollapseCategories)
+UCLASS(Abstract, Blueprintable, CollapseCategories)
 class SIFU_API UStaminaNotify : public UAnimNotify {
     GENERATED_BODY()
 public:

@@ -3,11 +3,11 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=AnimContainer -FallbackName=AnimContainer
 #include "IdleAnimPerSex.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FIdleAnimPerSex {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     FAnimContainer m_AnimsPerSex[2];
     
     SIFU_API FIdleAnimPerSex();

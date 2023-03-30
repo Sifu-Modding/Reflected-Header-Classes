@@ -3,7 +3,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=GameModeBase -FallbackName=GameModeBase
 #include "MoviePipelineGameMode.generated.h"
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class MOVIERENDERPIPELINECORE_API AMoviePipelineGameMode : public AGameModeBase {
     GENERATED_BODY()
 public:

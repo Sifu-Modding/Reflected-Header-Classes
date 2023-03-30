@@ -6,22 +6,22 @@ USTRUCT(BlueprintType)
 struct FNiagaraTypeLayoutInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<uint32> FloatComponentByteOffsets;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<uint32> FloatComponentRegisterOffsets;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<uint32> Int32ComponentByteOffsets;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<uint32> Int32ComponentRegisterOffsets;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<uint32> HalfComponentByteOffsets;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<uint32> HalfComponentRegisterOffsets;
     
     NIAGARA_API FNiagaraTypeLayoutInfo();

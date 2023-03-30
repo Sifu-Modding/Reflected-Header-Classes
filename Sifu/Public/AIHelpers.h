@@ -1,37 +1,37 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "AIConditionClassInstance.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
-#include "SCAITicketEnum.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCUserDefinedEnumHandler -FallbackName=SCUserDefinedEnumHandler
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
+//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCUserDefinedEnumHandler -FallbackName=SCUserDefinedEnumHandler
+#include "AIConditionClassInstance.h"
 #include "EAIAttackTicketJokerSituation.h"
+#include "SCAITicketEnum.h"
 #include "AIHelpers.generated.h"
 
-class UAIFightingComponent;
-class APawn;
-class AFightingCharacter;
 class AAISpawner;
-class UObject;
 class AActor;
+class AFightingCharacter;
+class APawn;
+class UAIFightingComponent;
+class UObject;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class SIFU_API UAIHelpers : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FFightingAIDelegate, UAIFightingComponent*, AIComponent);
     
     UAIHelpers();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static FSCAITicketEnum Conv_SCEnumToAITicketEnum(const FSCUserDefinedEnumHandler& _scEnum);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static UAIFightingComponent* Conv_PawnToAiComponent(APawn* _pawn);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static UAIFightingComponent* Conv_AISpawnerToAiComponent(AAISpawner* _spawner);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static AFightingCharacter* Conv_AiComponentToFightingCharacter(UAIFightingComponent* _aiComponent);
     
     UFUNCTION(BlueprintCallable)

@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RigUnit.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
+#include "RigUnit.h"
 #include "RigUnit_ToWorldSpace_Location.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_ToWorldSpace_Location : public FRigUnit {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector Location;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector World;
     
     CONTROLRIG_API FRigUnit_ToWorldSpace_Location();

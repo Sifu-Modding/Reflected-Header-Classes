@@ -2,20 +2,20 @@
 #include "CoreMinimal.h"
 #include "CRSimLinearSpring.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FCRSimLinearSpring {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 SubjectA;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 SubjectB;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Coefficient;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Equilibrium;
     
     CONTROLRIG_API FCRSimLinearSpring();

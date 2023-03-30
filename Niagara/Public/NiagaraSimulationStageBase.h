@@ -5,17 +5,17 @@
 
 class UNiagaraScript;
 
-UCLASS()
+UCLASS(Blueprintable)
 class NIAGARA_API UNiagaraSimulationStageBase : public UNiagaraMergeable {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UNiagaraScript* Script;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName SimulationStageName;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bEnabled: 1;
     
     UNiagaraSimulationStageBase();

@@ -3,17 +3,17 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
 #include "SCSignificanceSettings.generated.h"
 
-UCLASS(DefaultConfig, Config=Game)
+UCLASS(Blueprintable, Config=Engine, DefaultConfig, Config=Game)
 class SIFU_API USCSignificanceSettings : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fRecentlyRenderedLimit;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fHighBucketDist;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fMediumBucketDist;
     
     USCSignificanceSettings();

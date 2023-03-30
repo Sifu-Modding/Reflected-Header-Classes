@@ -4,11 +4,11 @@
 #include "MovieSceneEntityProvider.h"
 #include "MovieSceneSpawnSection.generated.h"
 
-UCLASS(MinimalAPI)
+UCLASS(Blueprintable, MinimalAPI)
 class UMovieSceneSpawnSection : public UMovieSceneBoolSection, public IMovieSceneEntityProvider {
     GENERATED_BODY()
 public:
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bPreviewOnly;
     
     UMovieSceneSpawnSection();

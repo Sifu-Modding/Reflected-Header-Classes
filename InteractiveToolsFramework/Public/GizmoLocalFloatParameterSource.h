@@ -4,14 +4,14 @@
 #include "GizmoFloatParameterChange.h"
 #include "GizmoLocalFloatParameterSource.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class INTERACTIVETOOLSFRAMEWORK_API UGizmoLocalFloatParameterSource : public UGizmoBaseFloatParameterSource {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Value;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGizmoFloatParameterChange LastChange;
     
     UGizmoLocalFloatParameterSource();

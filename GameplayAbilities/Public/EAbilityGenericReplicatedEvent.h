@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EAbilityGenericReplicatedEvent.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 namespace EAbilityGenericReplicatedEvent {
     enum Type {
         GenericConfirm,

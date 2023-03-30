@@ -3,7 +3,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=WorldSubsystem -FallbackName=WorldSubsystem
 #include "LandscapeSubsystem.generated.h"
 
-UCLASS(MinimalAPI)
+UCLASS(Blueprintable, MinimalAPI)
 class ULandscapeSubsystem : public UWorldSubsystem {
     GENERATED_BODY()
 public:

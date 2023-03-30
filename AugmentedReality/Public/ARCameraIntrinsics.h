@@ -8,13 +8,13 @@ USTRUCT(BlueprintType)
 struct AUGMENTEDREALITY_API FARCameraIntrinsics {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FIntPoint ImageResolution;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector2D FocalLength;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector2D PrincipalPoint;
     
     FARCameraIntrinsics();

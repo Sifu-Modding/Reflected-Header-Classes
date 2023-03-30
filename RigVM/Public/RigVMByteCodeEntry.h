@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct RIGVM_API FRigVMByteCodeEntry {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName Name;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 InstructionIndex;
     
     FRigVMByteCodeEntry();

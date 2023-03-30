@@ -4,23 +4,23 @@
 #include "RigUnit_DebugBase.h"
 #include "RigUnit_VisualDebugQuat.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_VisualDebugQuat : public FRigUnit_DebugBase {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FQuat Value;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bEnabled;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Thickness;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Scale;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName BoneSpace;
     
     CONTROLRIG_API FRigUnit_VisualDebugQuat();

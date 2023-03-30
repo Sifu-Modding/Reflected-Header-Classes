@@ -3,7 +3,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=UMG -ObjectName=Spacer -FallbackName=Spacer
 #include "ButtonInputRegionWidget.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UButtonInputRegionWidget : public USpacer {
     GENERATED_BODY()
 public:

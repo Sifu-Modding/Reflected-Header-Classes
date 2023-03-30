@@ -1,50 +1,50 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "AkWwiseItemToControl.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=UMG -ObjectName=ContentWidget -FallbackName=ContentWidget
-//CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=ECheckBoxState -FallbackName=ECheckBoxState
-//CROSS-MODULE INCLUDE V2: -ModuleName=UMG -ObjectName=Widget -FallbackName=Widget
-#include "AkOnCheckBoxComponentStateChangedDelegate.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=EHorizontalAlignment -FallbackName=EHorizontalAlignment
-//CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=CheckBoxStyle -FallbackName=CheckBoxStyle
-#include "AkBoolPropertyToControl.h"
-#include "OnWwiseItemDropDetectedDelegate.h"
-#include "OnBoolPropertyDropDetectedDelegate.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Guid -FallbackName=Guid
+//CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=CheckBoxStyle -FallbackName=CheckBoxStyle
+//CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=ECheckBoxState -FallbackName=ECheckBoxState
+//CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=EHorizontalAlignment -FallbackName=EHorizontalAlignment
+//CROSS-MODULE INCLUDE V2: -ModuleName=UMG -ObjectName=ContentWidget -FallbackName=ContentWidget
+//CROSS-MODULE INCLUDE V2: -ModuleName=UMG -ObjectName=Widget -FallbackName=Widget
+#include "AkBoolPropertyToControl.h"
+#include "AkOnCheckBoxComponentStateChangedDelegate.h"
+#include "AkWwiseItemToControl.h"
+#include "OnBoolPropertyDropDetectedDelegate.h"
+#include "OnWwiseItemDropDetectedDelegate.h"
 #include "AkCheckBox.generated.h"
 
-UCLASS(DefaultConfig, Config=Editor)
+UCLASS(Blueprintable, Config=Engine, DefaultConfig, Config=Editor)
 class AKAUDIO_API UAkCheckBox : public UContentWidget {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ECheckBoxState CheckedState;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UWidget::FGetCheckBoxState CheckedStateDelegate;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FCheckBoxStyle WidgetStyle;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<EHorizontalAlignment> HorizontalAlignment;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool IsFocusable;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAkBoolPropertyToControl ThePropertyToControl;
     
-    UPROPERTY(Config, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAkWwiseItemToControl ItemToControl;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAkOnCheckBoxComponentStateChanged AkOnCheckStateChanged;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnWwiseItemDropDetected OnItemDropped;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnBoolPropertyDropDetected OnPropertyDropped;
     
     UAkCheckBox();
@@ -60,19 +60,19 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetAkBoolProperty(const FString& ItemProperty);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsPressed() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsChecked() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ECheckBoxState GetCheckedState() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FString GetAkProperty() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FGuid GetAkItemId() const;
     
 };

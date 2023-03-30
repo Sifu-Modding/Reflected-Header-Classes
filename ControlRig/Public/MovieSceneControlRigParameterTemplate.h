@@ -5,15 +5,15 @@
 #include "IntegerParameterNameAndCurve.h"
 #include "MovieSceneControlRigParameterTemplate.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FMovieSceneControlRigParameterTemplate : public FMovieSceneParameterSectionTemplate {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FEnumParameterNameAndCurve> Enums;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FIntegerParameterNameAndCurve> Integers;
     
 public:

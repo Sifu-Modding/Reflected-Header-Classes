@@ -3,10 +3,10 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=Actor -FallbackName=Actor
 #include "Lootboxes_BlackRoom.generated.h"
 
-class UTexture2D;
 class UMaterialInstanceDynamic;
+class UTexture2D;
 
-UCLASS()
+UCLASS(Blueprintable)
 class SIFU_API ALootboxes_BlackRoom : public AActor {
     GENERATED_BODY()
 public:

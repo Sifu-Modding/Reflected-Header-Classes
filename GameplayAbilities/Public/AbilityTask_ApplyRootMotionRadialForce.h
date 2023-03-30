@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "AbilityTask_ApplyRootMotion_Base.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Rotator -FallbackName=Rotator
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ERootMotionFinishVelocityMode -FallbackName=ERootMotionFinishVelocityMode
+#include "AbilityTask_ApplyRootMotion_Base.h"
 #include "ApplyRootMotionRadialForceDelegateDelegate.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Rotator -FallbackName=Rotator
 #include "AbilityTask_ApplyRootMotionRadialForce.generated.h"
 
 class AActor;
@@ -12,48 +12,48 @@ class UAbilityTask_ApplyRootMotionRadialForce;
 class UCurveFloat;
 class UGameplayAbility;
 
-UCLASS()
+UCLASS(Blueprintable)
 class GAMEPLAYABILITIES_API UAbilityTask_ApplyRootMotionRadialForce : public UAbilityTask_ApplyRootMotion_Base {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FApplyRootMotionRadialForceDelegate OnFinish;
     
 protected:
-    UPROPERTY(Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     FVector Location;
     
-    UPROPERTY(Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     AActor* LocationActor;
     
-    UPROPERTY(Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     float Strength;
     
-    UPROPERTY(Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     float Duration;
     
-    UPROPERTY(Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     float Radius;
     
-    UPROPERTY(Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     bool bIsPush;
     
-    UPROPERTY(Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     bool bIsAdditive;
     
-    UPROPERTY(Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     bool bNoZForce;
     
-    UPROPERTY(Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     UCurveFloat* StrengthDistanceFalloff;
     
-    UPROPERTY(Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     UCurveFloat* StrengthOverTime;
     
-    UPROPERTY(Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     bool bUseFixedWorldDirection;
     
-    UPROPERTY(Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     FRotator FixedWorldDirection;
     
 public:

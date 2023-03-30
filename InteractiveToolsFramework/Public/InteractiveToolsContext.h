@@ -4,24 +4,24 @@
 #include "InteractiveToolsContext.generated.h"
 
 class UInputRouter;
-class UInteractiveToolManager;
 class UInteractiveGizmoManager;
+class UInteractiveToolManager;
 
-UCLASS(Transient)
+UCLASS(Blueprintable, Transient)
 class INTERACTIVETOOLSFRAMEWORK_API UInteractiveToolsContext : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UInputRouter* InputRouter;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UInteractiveToolManager* ToolManager;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UInteractiveGizmoManager* GizmoManager;
     
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSoftClassPtr<UInteractiveToolManager> ToolManagerClass;
     
 public:

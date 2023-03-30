@@ -1,25 +1,25 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "CachedRigElement.h"
-#include "RigUnitMutable.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Transform -FallbackName=Transform
+#include "CachedRigElement.h"
 #include "EBoneGetterSetterMode.h"
+#include "RigUnitMutable.h"
 #include "RigUnit_SetControlOffset.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_SetControlOffset : public FRigUnitMutable {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName Control;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTransform Offset;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EBoneGetterSetterMode Space;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FCachedRigElement CachedControlIndex;
     
     CONTROLRIG_API FRigUnit_SetControlOffset();

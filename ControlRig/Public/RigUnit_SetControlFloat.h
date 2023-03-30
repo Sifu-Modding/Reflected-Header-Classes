@@ -4,20 +4,20 @@
 #include "RigUnitMutable.h"
 #include "RigUnit_SetControlFloat.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_SetControlFloat : public FRigUnitMutable {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName Control;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Weight;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float FloatValue;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FCachedRigElement CachedControlIndex;
     
     CONTROLRIG_API FRigUnit_SetControlFloat();

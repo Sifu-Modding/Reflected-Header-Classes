@@ -1,7 +1,7 @@
 #include "MoviePipelinePythonHostExecutor.h"
 
-class UWorld;
 class UMoviePipelineQueue;
+class UWorld;
 
 void UMoviePipelinePythonHostExecutor::OnMapLoad_Implementation(UWorld* InWorld) {
 }

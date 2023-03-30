@@ -3,11 +3,11 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=InterpTrackInst -FallbackName=InterpTrackInst
 #include "InterpTrackInstAkAudioEvent.generated.h"
 
-UCLASS(MinimalAPI)
+UCLASS(Blueprintable, MinimalAPI)
 class UInterpTrackInstAkAudioEvent : public UInterpTrackInst {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float LastUpdatePosition;
     
     UInterpTrackInstAkAudioEvent();

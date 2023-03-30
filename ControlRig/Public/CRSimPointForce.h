@@ -1,23 +1,23 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ECRSimPointForceType.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
+#include "ECRSimPointForceType.h"
 #include "CRSimPointForce.generated.h"
 
 USTRUCT(BlueprintType)
 struct FCRSimPointForce {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ECRSimPointForceType ForceType;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector Vector;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Coefficient;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bNormalize;
     
     CONTROLRIG_API FCRSimPointForce();

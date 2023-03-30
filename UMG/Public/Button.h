@@ -1,60 +1,60 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ContentWidget.h"
-#include "OnButtonClickedEventDelegate.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=LinearColor -FallbackName=LinearColor
 //CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=ButtonStyle -FallbackName=ButtonStyle
 //CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=EButtonClickMethod -FallbackName=EButtonClickMethod
 //CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=EButtonPressMethod -FallbackName=EButtonPressMethod
 //CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=EButtonTouchMethod -FallbackName=EButtonTouchMethod
+#include "ContentWidget.h"
+#include "OnButtonClickedEventDelegate.h"
+#include "OnButtonHoverEventDelegate.h"
 #include "OnButtonPressedEventDelegate.h"
 #include "OnButtonReleasedEventDelegate.h"
-#include "OnButtonHoverEventDelegate.h"
 #include "Button.generated.h"
 
 class USlateWidgetStyleAsset;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UMG_API UButton : public UContentWidget {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USlateWidgetStyleAsset* Style;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FButtonStyle WidgetStyle;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FLinearColor ColorAndOpacity;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FLinearColor BackgroundColor;
     
-    UPROPERTY(AdvancedDisplay, BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<EButtonClickMethod::Type> ClickMethod;
     
-    UPROPERTY(AdvancedDisplay, BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<EButtonTouchMethod::Type> TouchMethod;
     
-    UPROPERTY(AdvancedDisplay, BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<EButtonPressMethod::Type> PressMethod;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool IsFocusable;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnButtonClickedEvent OnClicked;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnButtonPressedEvent OnPressed;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnButtonReleasedEvent OnReleased;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnButtonHoverEvent OnHovered;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnButtonHoverEvent OnUnhovered;
     
     UButton();
@@ -76,7 +76,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetBackgroundColor(FLinearColor InBackgroundColor);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsPressed() const;
     
 };

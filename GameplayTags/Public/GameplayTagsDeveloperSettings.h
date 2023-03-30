@@ -3,14 +3,14 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=DeveloperSettings -ObjectName=DeveloperSettings -FallbackName=DeveloperSettings
 #include "GameplayTagsDeveloperSettings.generated.h"
 
-UCLASS(Config=EditorPerProjectUserSettings)
+UCLASS(Blueprintable, Config=EditorPerProjectUserSettings)
 class GAMEPLAYTAGS_API UGameplayTagsDeveloperSettings : public UDeveloperSettings {
     GENERATED_BODY()
 public:
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString DeveloperConfigName;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName FavoriteTagSource;
     
     UGameplayTagsDeveloperSettings();

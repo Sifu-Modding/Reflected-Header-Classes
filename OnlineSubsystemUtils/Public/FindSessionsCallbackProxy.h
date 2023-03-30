@@ -5,31 +5,31 @@
 #include "BlueprintSessionResult.h"
 #include "FindSessionsCallbackProxy.generated.h"
 
+class APlayerController;
 class UFindSessionsCallbackProxy;
 class UObject;
-class APlayerController;
 
-UCLASS(MinimalAPI)
+UCLASS(Blueprintable, MinimalAPI)
 class UFindSessionsCallbackProxy : public UOnlineBlueprintCallProxyBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBlueprintFindSessionsResultDelegate OnSuccess;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBlueprintFindSessionsResultDelegate OnFailure;
     
     UFindSessionsCallbackProxy();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static FString GetServerName(const FBlueprintSessionResult& Result);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static int32 GetPingInMs(const FBlueprintSessionResult& Result);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static int32 GetMaxPlayers(const FBlueprintSessionResult& Result);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static int32 GetCurrentPlayers(const FBlueprintSessionResult& Result);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))

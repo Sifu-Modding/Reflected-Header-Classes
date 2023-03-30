@@ -10,16 +10,16 @@ USTRUCT(BlueprintType)
 struct UMG_API FWidgetNavigationData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EUINavigationRule Rule;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName WidgetToFocus;
     
-    UPROPERTY(Export)
+    UPROPERTY(EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<UWidget> Widget;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FCustomWidgetNavigationDelegate CustomDelegate;
     
     FWidgetNavigationData();

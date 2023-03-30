@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FRotationLimit {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector LimitMin;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector LimitMax;
     
     ANIMGRAPHRUNTIME_API FRotationLimit();

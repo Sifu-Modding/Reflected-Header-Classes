@@ -1,51 +1,51 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Guid -FallbackName=Guid
+#include "AICustomBehaviorTreeList.h"
 #include "AIPhaseNodeHardLink.h"
 #include "EAIPhaseNodeType.h"
-#include "AICustomBehaviorTreeList.h"
 #include "PhaseTransitionNodeHandler.h"
+#include "Templates/SubclassOf.h"
 #include "PhaseNodeHandler.generated.h"
 
-class USkeletalMesh;
 class UArchetypeAsset;
+class USkeletalMesh;
 
 USTRUCT(BlueprintType)
 struct FPhaseNodeHandler {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGuid m_Guid;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_Name;
     
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAIPhaseNodeHardLink m_Link;
     
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UArchetypeAsset> m_PhaseArchetype;
     
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UArchetypeAsset> m_WeakerPhaseArchetype;
     
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UArchetypeAsset> m_StrongerPhaseArchetype;
     
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USkeletalMesh* m_OverrideSkeletalMesh;
     
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     EAIPhaseNodeType m_eType;
     
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAICustomBehaviorTreeList m_CustomBehaviorTrees;
     
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_DialogToLaunch;
     
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FPhaseTransitionNodeHandler> m_PhaseTransitions;
     
     SIFU_API FPhaseNodeHandler();

@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FGameplayCueTag {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayTag GameplayCueTag;
     
     GAMEPLAYABILITIES_API FGameplayCueTag();

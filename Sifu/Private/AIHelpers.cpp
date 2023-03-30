@@ -1,11 +1,11 @@
 #include "AIHelpers.h"
 
+class AAISpawner;
+class AActor;
+class AFightingCharacter;
 class APawn;
 class UAIFightingComponent;
-class AFightingCharacter;
-class AAISpawner;
 class UObject;
-class AActor;
 
 FSCAITicketEnum UAIHelpers::Conv_SCEnumToAITicketEnum(const FSCUserDefinedEnumHandler& _scEnum) {
     return FSCAITicketEnum{};

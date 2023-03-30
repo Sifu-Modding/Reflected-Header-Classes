@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FAkCommonInitializationSettingsWithSampleRate : public FAkCommonInitializationSettings {
     GENERATED_BODY()
 public:
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint32 SampleRate;
     
     AKAUDIO_API FAkCommonInitializationSettingsWithSampleRate();

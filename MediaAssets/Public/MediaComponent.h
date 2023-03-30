@@ -3,26 +3,26 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ActorComponent -FallbackName=ActorComponent
 #include "MediaComponent.generated.h"
 
-class UMediaTexture;
 class UMediaPlayer;
+class UMediaTexture;
 
-UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class MEDIAASSETS_API UMediaComponent : public UActorComponent {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadOnly, Instanced, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UMediaTexture* MediaTexture;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced, Interp, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Interp, Transient, meta=(AllowPrivateAccess=true))
     UMediaPlayer* MediaPlayer;
     
 public:
     UMediaComponent();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UMediaTexture* GetMediaTexture() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UMediaPlayer* GetMediaPlayer() const;
     
 };

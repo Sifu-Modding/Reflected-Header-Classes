@@ -10,10 +10,10 @@ USTRUCT(BlueprintType)
 struct GAMEPLAYABILITIES_API FGameplayAbilityTargetData_ActorArray : public FGameplayAbilityTargetData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayAbilityTargetingLocationInfo SourceLocation;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<TWeakObjectPtr<AActor>> TargetActorArray;
     
     FGameplayAbilityTargetData_ActorArray();

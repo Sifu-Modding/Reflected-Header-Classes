@@ -5,15 +5,15 @@
 
 class UEnvQueryOption;
 
-UCLASS()
+UCLASS(Blueprintable)
 class AIMODULE_API UEnvQuery : public UDataAsset {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName QueryName;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UEnvQueryOption*> Options;
     
 public:

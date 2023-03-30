@@ -1,44 +1,44 @@
 #pragma once
 #include "CoreMinimal.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Transform -FallbackName=Transform
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
+#include "ARTrackedGeometry.h"
 #include "EAREye.h"
 #include "EARFaceBlendShape.h"
-#include "ARTrackedGeometry.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Transform -FallbackName=Transform
 #include "ARFaceGeometry.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class AUGMENTEDREALITY_API UARFaceGeometry : public UARTrackedGeometry {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector LookAtTarget;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bIsTracked;
     
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<EARFaceBlendShape, float> BlendShapes;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTransform LeftEyeTransform;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTransform RightEyeTransform;
     
 public:
     UARFaceGeometry();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FTransform GetWorldSpaceEyeTransform(EAREye Eye) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FTransform GetLocalSpaceEyeTransform(EAREye Eye) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetBlendShapeValue(EARFaceBlendShape BlendShape) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     TMap<EARFaceBlendShape, float> GetBlendShapes() const;
     
 };

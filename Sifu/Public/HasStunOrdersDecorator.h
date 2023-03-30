@@ -3,7 +3,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCBTDecorator -FallbackName=SCBTDecorator
 #include "HasStunOrdersDecorator.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UHasStunOrdersDecorator : public USCBTDecorator {
     GENERATED_BODY()
 public:

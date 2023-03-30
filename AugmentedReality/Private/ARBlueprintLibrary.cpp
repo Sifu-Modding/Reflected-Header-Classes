@@ -1,22 +1,22 @@
 #include "ARBlueprintLibrary.h"
 #include "Templates/SubclassOf.h"
 
-class UAREnvironmentCaptureProbe;
-class USceneComponent;
-class UARTrackedPoint;
-class UARSessionConfig;
-class UARPin;
-class UARTrackedImage;
-class UARTrackedGeometry;
-class UARPlaneGeometry;
-class UARTrackedPose;
-class UARTexture;
-class UARLightEstimate;
-class UARTextureCameraImage;
-class UARTextureCameraDepth;
-class UObject;
-class UTexture2D;
 class UARCandidateImage;
+class UAREnvironmentCaptureProbe;
+class UARLightEstimate;
+class UARPin;
+class UARPlaneGeometry;
+class UARSessionConfig;
+class UARTexture;
+class UARTextureCameraDepth;
+class UARTextureCameraImage;
+class UARTrackedGeometry;
+class UARTrackedImage;
+class UARTrackedPoint;
+class UARTrackedPose;
+class UObject;
+class USceneComponent;
+class UTexture2D;
 
 void UARBlueprintLibrary::UnpinComponent(USceneComponent* ComponentToUnpin) {
 }

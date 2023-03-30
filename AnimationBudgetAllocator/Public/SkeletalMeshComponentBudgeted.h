@@ -3,7 +3,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=SkeletalMeshComponent -FallbackName=SkeletalMeshComponent
 #include "SkeletalMeshComponentBudgeted.generated.h"
 
-UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class ANIMATIONBUDGETALLOCATOR_API USkeletalMeshComponentBudgeted : public USkeletalMeshComponent {
     GENERATED_BODY()
 public:
@@ -11,10 +11,10 @@ private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bAutoRegisterWithBudgetAllocator: 1;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bAutoCalculateSignificance: 1;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bShouldUseActorRenderedFlag: 1;
     
 public:

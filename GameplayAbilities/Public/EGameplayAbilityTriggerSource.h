@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EGameplayAbilityTriggerSource.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 namespace EGameplayAbilityTriggerSource {
     enum Type {
         GameplayEvent,

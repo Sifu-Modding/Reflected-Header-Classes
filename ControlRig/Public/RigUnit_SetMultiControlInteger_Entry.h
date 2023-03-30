@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FRigUnit_SetMultiControlInteger_Entry {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName Control;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 IntegerValue;
     
     CONTROLRIG_API FRigUnit_SetMultiControlInteger_Entry();

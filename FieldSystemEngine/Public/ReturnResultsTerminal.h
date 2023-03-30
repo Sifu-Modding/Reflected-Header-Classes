@@ -5,12 +5,12 @@
 
 class UReturnResultsTerminal;
 
-UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FIELDSYSTEMENGINE_API UReturnResultsTerminal : public UFieldNodeBase {
     GENERATED_BODY()
 public:
     UReturnResultsTerminal();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UReturnResultsTerminal* SetReturnResultsTerminal();
     
 };

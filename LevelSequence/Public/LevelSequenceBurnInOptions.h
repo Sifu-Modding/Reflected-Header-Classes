@@ -6,17 +6,17 @@
 
 class ULevelSequenceBurnInInitSettings;
 
-UCLASS(BlueprintType, DefaultToInstanced, PerObjectConfig, Config=EditorPerProjectUserSettings)
+UCLASS(Blueprintable, DefaultToInstanced, PerObjectConfig, Config=EditorPerProjectUserSettings)
 class LEVELSEQUENCE_API ULevelSequenceBurnInOptions : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bUseBurnIn;
     
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSoftClassPath BurnInClass;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     ULevelSequenceBurnInInitSettings* Settings;
     
     ULevelSequenceBurnInOptions();

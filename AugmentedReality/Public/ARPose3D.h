@@ -9,16 +9,16 @@ USTRUCT(BlueprintType)
 struct AUGMENTEDREALITY_API FARPose3D {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FARSkeletonDefinition SkeletonDefinition;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTransform> JointTransforms;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<bool> IsJointTracked;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EARJointTransformSpace JointTransformSpace;
     
     FARPose3D();

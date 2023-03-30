@@ -5,17 +5,17 @@
 #include "AchievementWriteCallbackProxy.generated.h"
 
 class APlayerController;
-class UObject;
 class UAchievementWriteCallbackProxy;
+class UObject;
 
-UCLASS(MinimalAPI)
+UCLASS(Blueprintable, MinimalAPI)
 class UAchievementWriteCallbackProxy : public UOnlineBlueprintCallProxyBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAchievementWriteDelegate OnSuccess;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAchievementWriteDelegate OnFailure;
     
     UAchievementWriteCallbackProxy();

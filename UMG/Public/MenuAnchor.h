@@ -1,50 +1,50 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector2D -FallbackName=Vector2D
-#include "ContentWidget.h"
-#include "Widget.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=EMenuPlacement -FallbackName=EMenuPlacement
+#include "ContentWidget.h"
 #include "OnMenuOpenChangedEventDelegate.h"
+#include "Templates/SubclassOf.h"
+#include "Widget.h"
 #include "MenuAnchor.generated.h"
 
 class UUserWidget;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UMG_API UMenuAnchor : public UContentWidget {
     GENERATED_BODY()
 public:
     DECLARE_DYNAMIC_DELEGATE_RetVal(UUserWidget*, FGetUserWidget);
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UUserWidget> MenuClass;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UWidget::FGetWidget OnGetMenuContentEvent;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGetUserWidget OnGetUserMenuContentEvent;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<EMenuPlacement> Placement;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bFitInWindow;
     
-    UPROPERTY(AdvancedDisplay, BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool ShouldDeferPaintingAfterWindowContent;
     
-    UPROPERTY(AdvancedDisplay, BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool UseApplicationMenuStack;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnMenuOpenChangedEvent OnMenuOpenChanged;
     
     UMenuAnchor();
     UFUNCTION(BlueprintCallable)
     void ToggleOpen(bool bFocusOnOpen);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool ShouldOpenDueToClick() const;
     
     UFUNCTION(BlueprintCallable)
@@ -53,13 +53,13 @@ public:
     UFUNCTION(BlueprintCallable)
     void Open(bool bFocusMenu);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsOpen() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool HasOpenSubMenus() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector2D GetMenuPosition() const;
     
     UFUNCTION(BlueprintCallable)

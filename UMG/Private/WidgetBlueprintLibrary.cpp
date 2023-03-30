@@ -2,17 +2,17 @@
 #include "Templates/SubclassOf.h"
 
 class APlayerController;
-class UMaterialInstanceDynamic;
-class UWidget;
-class UUserWidget;
-class UObject;
-class UTexture2D;
-class UMaterialInterface;
-class USlateBrushAsset;
-class UDragDropOperation;
-class UInterface;
 class IInterface;
+class UInterface;
+class UDragDropOperation;
 class UFont;
+class UMaterialInstanceDynamic;
+class UMaterialInterface;
+class UObject;
+class USlateBrushAsset;
+class UTexture2D;
+class UUserWidget;
+class UWidget;
 
 FEventReply UWidgetBlueprintLibrary::UnlockMouse(FEventReply& Reply) {
     return FEventReply{};

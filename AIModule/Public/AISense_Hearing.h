@@ -1,22 +1,22 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "AISense.h"
-#include "AINoiseEvent.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
+#include "AINoiseEvent.h"
+#include "AISense.h"
 #include "AISense_Hearing.generated.h"
 
-class UObject;
 class AActor;
+class UObject;
 
-UCLASS(Config=Game)
+UCLASS(Blueprintable, Config=Game)
 class AIMODULE_API UAISense_Hearing : public UAISense {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FAINoiseEvent> NoiseEvents;
     
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     float SpeedOfSoundSq;
     
 public:

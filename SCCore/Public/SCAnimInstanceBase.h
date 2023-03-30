@@ -3,15 +3,15 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=AnimInstance -FallbackName=AnimInstance
 #include "SCAnimInstanceBase.generated.h"
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class SCCORE_API USCAnimInstanceBase : public UAnimInstance {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bIsReplayScrubSnapshotCompatible;
     
-    UPROPERTY(Transient, ReplicatedUsing=OnRep_AnimInstanceUpdateEnable)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_AnimInstanceUpdateEnable, meta=(AllowPrivateAccess=true))
     bool m_bAnimInstanceUpdateEnabled;
     
 public:
@@ -19,7 +19,7 @@ public:
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
     
 protected:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnRep_AnimInstanceUpdateEnable();
     
 };

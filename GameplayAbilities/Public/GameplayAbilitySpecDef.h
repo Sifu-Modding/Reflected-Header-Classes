@@ -1,34 +1,34 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "ScalableFloat.h"
 #include "EGameplayEffectGrantedAbilityRemovePolicy.h"
 #include "GameplayAbilitySpecHandle.h"
+#include "ScalableFloat.h"
+#include "Templates/SubclassOf.h"
 #include "GameplayAbilitySpecDef.generated.h"
 
-class UObject;
 class UGameplayAbility;
+class UObject;
 
 USTRUCT(BlueprintType)
 struct FGameplayAbilitySpecDef {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly, NotReplicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, NotReplicated, meta=(AllowPrivateAccess=true))
     TSubclassOf<UGameplayAbility> Ability;
     
-    UPROPERTY(EditDefaultsOnly, NotReplicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, NotReplicated, meta=(AllowPrivateAccess=true))
     FScalableFloat LevelScalableFloat;
     
-    UPROPERTY(EditDefaultsOnly, NotReplicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, NotReplicated, meta=(AllowPrivateAccess=true))
     int32 InputID;
     
-    UPROPERTY(EditDefaultsOnly, NotReplicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, NotReplicated, meta=(AllowPrivateAccess=true))
     EGameplayEffectGrantedAbilityRemovePolicy RemovalPolicy;
     
-    UPROPERTY(NotReplicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, NotReplicated, meta=(AllowPrivateAccess=true))
     UObject* SourceObject;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayAbilitySpecHandle AssignedHandle;
     
     GAMEPLAYABILITIES_API FGameplayAbilitySpecDef();

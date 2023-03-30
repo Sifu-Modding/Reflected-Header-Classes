@@ -1,84 +1,84 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "InteractiveGizmo.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Rotator -FallbackName=Rotator
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 #include "EToolContextCoordinateSystem.h"
+#include "InteractiveGizmo.h"
 #include "TransformGizmo.generated.h"
 
-class UGizmoConstantFrameAxisSource;
-class UTransformProxy;
 class UGizmoComponentAxisSource;
-class UPrimitiveComponent;
-class UGizmoTransformChangeStateTarget;
+class UGizmoConstantFrameAxisSource;
 class UGizmoScaledTransformSource;
+class UGizmoTransformChangeStateTarget;
+class UPrimitiveComponent;
+class UTransformProxy;
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class INTERACTIVETOOLSFRAMEWORK_API UTransformGizmo : public UInteractiveGizmo {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTransformProxy* ActiveTarget;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bSnapToWorldGrid;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bGridSizeIsExplicit;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector ExplicitGridSize;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bRotationGridSizeIsExplicit;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRotator ExplicitRotationGridSize;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bSnapToWorldRotGrid;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bUseContextCoordinateSystem;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     EToolContextCoordinateSystem CurrentCoordinateSystem;
     
 protected:
-    UPROPERTY(Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     TArray<UPrimitiveComponent*> ActiveComponents;
     
-    UPROPERTY(Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     TArray<UPrimitiveComponent*> NonuniformScaleComponents;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UInteractiveGizmo*> ActiveGizmos;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UGizmoConstantFrameAxisSource* CameraAxisSource;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UGizmoComponentAxisSource* AxisXSource;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UGizmoComponentAxisSource* AxisYSource;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UGizmoComponentAxisSource* AxisZSource;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UGizmoComponentAxisSource* UnitAxisXSource;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UGizmoComponentAxisSource* UnitAxisYSource;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UGizmoComponentAxisSource* UnitAxisZSource;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UGizmoTransformChangeStateTarget* StateTarget;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UGizmoScaledTransformSource* ScaledTransformSource;
     
 public:

@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EDatasmithImportHierarchy.generated.h"
 
-UENUM()
-enum class EDatasmithImportHierarchy {
+UENUM(BlueprintType)
+enum class EDatasmithImportHierarchy : uint8 {
     UseMultipleActors,
     UseSingleActor,
     UseOneBlueprint,

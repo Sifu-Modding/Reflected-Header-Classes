@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EPropertyAccessObjectType.h"
 #include "EPropertyAccessIndirectionType.h"
+#include "EPropertyAccessObjectType.h"
 #include "PropertyAccessIndirection.generated.h"
 
 class UFunction;
@@ -11,28 +11,28 @@ struct FPropertyAccessIndirection {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TFieldPath<FArrayProperty> ArrayProperty;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UFunction* Function;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 ReturnBufferSize;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 ReturnBufferAlignment;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 ArrayIndex;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint32 Offset;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EPropertyAccessObjectType ObjectType;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EPropertyAccessIndirectionType Type;
     
 public:

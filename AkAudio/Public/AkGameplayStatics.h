@@ -1,39 +1,39 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EAkCurveInterpolation.h"
-#include "OnAkBankCallbackDelegate.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Rotator -FallbackName=Rotator
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Transform -FallbackName=Transform
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
-#include "OnSetCurrentAudioCultureCallbackDelegate.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=EAttachLocation -FallbackName=EAttachLocation
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=LatentActionInfo -FallbackName=LatentActionInfo
 #include "AkActionOnEventType.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Rotator -FallbackName=Rotator
-#include "PanningRule.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Transform -FallbackName=Transform
-#include "AkMultiPositionType.h"
-#include "AkChannelMask.h"
 #include "AkChannelConfiguration.h"
-#include "OnAkPostEventCallbackDelegate.h"
+#include "AkChannelMask.h"
 #include "AkExternalSourceInfo.h"
+#include "AkMultiPositionType.h"
+#include "EAkCurveInterpolation.h"
 #include "ERTPCValueType.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=EAttachLocation -FallbackName=EAttachLocation
+#include "OnAkBankCallbackDelegate.h"
+#include "OnAkPostEventCallbackDelegate.h"
+#include "OnSetCurrentAudioCultureCallbackDelegate.h"
+#include "PanningRule.h"
 #include "AkGameplayStatics.generated.h"
 
 class AActor;
-class UAkAuxBus;
 class UAkAudioBank;
-class UObject;
-class UAkComponent;
 class UAkAudioEvent;
-class UAkSwitchValue;
-class UAkStateValue;
-class UAkRtpc;
-class USceneComponent;
-class UAkTrigger;
-class UAkMediaAsset;
 class UAkAudioType;
+class UAkAuxBus;
+class UAkComponent;
+class UAkMediaAsset;
+class UAkRtpc;
+class UAkStateValue;
+class UAkSwitchValue;
+class UAkTrigger;
+class UObject;
+class USceneComponent;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class AKAUDIO_API UAkGameplayStatics : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
@@ -191,7 +191,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static TArray<FString> GetAvailableAudioCultures();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static TMap<FString, FText> GetAkSupportedLanguagesWithDisplayText();
     
     UFUNCTION(BlueprintCallable)

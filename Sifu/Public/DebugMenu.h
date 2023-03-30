@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "SCUserWidget.h"
+#include "Templates/SubclassOf.h"
 #include "DebugMenu.generated.h"
 
 class UCharacterBuildDB;
@@ -9,21 +9,21 @@ class UCharacterBuildListDB;
 class ULoadSlot;
 class UPanelWidget;
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class SIFU_API UDebugMenu : public USCUserWidget {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString m_CharacterBuildPath;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UCharacterBuildDB* m_DummyCharcterBuild;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UCharacterBuildListDB* m_CharacterBuildList;
     
 private:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ULoadSlot> m_LoadingButtonClass;
     
 public:

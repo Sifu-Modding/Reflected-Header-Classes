@@ -10,13 +10,13 @@ USTRUCT(BlueprintType)
 struct FInputMappingNode {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UGenericInputData* m_InputData;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FInputPresetsEnumHandler m_Preset;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FInputMappingKeySlot m_KeySlot;
     
     SIFU_API FInputMappingNode();

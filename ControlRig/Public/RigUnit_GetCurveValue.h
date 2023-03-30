@@ -4,18 +4,18 @@
 #include "RigUnit.h"
 #include "RigUnit_GetCurveValue.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_GetCurveValue : public FRigUnit {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName Curve;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Value;
     
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FCachedRigElement CachedCurveIndex;
     
 public:

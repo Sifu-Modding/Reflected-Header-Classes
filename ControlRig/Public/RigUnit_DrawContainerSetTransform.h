@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RigUnitMutable.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Transform -FallbackName=Transform
+#include "RigUnitMutable.h"
 #include "RigUnit_DrawContainerSetTransform.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_DrawContainerSetTransform : public FRigUnitMutable {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName InstructionName;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTransform Transform;
     
     CONTROLRIG_API FRigUnit_DrawContainerSetTransform();

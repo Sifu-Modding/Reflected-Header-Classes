@@ -5,14 +5,14 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Renderer -ObjectName=LightPropagationVolumeSettings -FallbackName=LightPropagationVolumeSettings
 #include "LightPropagationVolumeBlendable.generated.h"
 
-UCLASS(BlueprintType, MinimalAPI)
+UCLASS(Blueprintable, MinimalAPI)
 class ULightPropagationVolumeBlendable : public UObject, public IBlendableInterface {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Interp)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Interp, meta=(AllowPrivateAccess=true))
     FLightPropagationVolumeSettings Settings;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Interp)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Interp, meta=(AllowPrivateAccess=true))
     float BlendWeight;
     
     ULightPropagationVolumeBlendable();

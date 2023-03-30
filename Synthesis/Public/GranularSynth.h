@@ -1,19 +1,19 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EGranularSynthSeekType.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=AudioMixer -ObjectName=SynthComponent -FallbackName=SynthComponent
-#include "EGranularSynthEnvelopeType.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector2D -FallbackName=Vector2D
+#include "EGranularSynthEnvelopeType.h"
+#include "EGranularSynthSeekType.h"
 #include "GranularSynth.generated.h"
 
 class USoundWave;
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class SYNTHESIS_API UGranularSynth : public USynthComponent {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     USoundWave* GranulatedSoundWave;
     
 public:
@@ -69,13 +69,13 @@ public:
     UFUNCTION(BlueprintCallable)
     void NoteOff(const float Note, const bool bKill);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsLoaded() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetSampleDuration() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetCurrentPlayheadTime() const;
     
 };

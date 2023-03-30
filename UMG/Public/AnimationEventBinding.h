@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "WidgetAnimationDynamicEventDelegate.h"
 #include "EWidgetAnimationEvent.h"
+#include "WidgetAnimationDynamicEventDelegate.h"
 #include "AnimationEventBinding.generated.h"
 
 class UWidgetAnimation;
@@ -10,16 +10,16 @@ USTRUCT(BlueprintType)
 struct FAnimationEventBinding {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UWidgetAnimation* Animation;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FWidgetAnimationDynamicEvent Delegate;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EWidgetAnimationEvent AnimationEvent;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName UserTag;
     
     UMG_API FAnimationEventBinding();

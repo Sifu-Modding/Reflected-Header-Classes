@@ -4,11 +4,11 @@
 #include "SourceEffectSimpleDelaySettings.h"
 #include "SourceEffectSimpleDelayPreset.generated.h"
 
-UCLASS(BlueprintType, EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class SYNTHESIS_API USourceEffectSimpleDelayPreset : public USoundEffectSourcePreset {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSourceEffectSimpleDelaySettings Settings;
     
     USourceEffectSimpleDelayPreset();

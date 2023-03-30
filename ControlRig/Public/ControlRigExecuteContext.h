@@ -3,7 +3,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=RigVM -ObjectName=RigVMExecuteContext -FallbackName=RigVMExecuteContext
 #include "ControlRigExecuteContext.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FControlRigExecuteContext : public FRigVMExecuteContext {
     GENERATED_BODY()
 public:

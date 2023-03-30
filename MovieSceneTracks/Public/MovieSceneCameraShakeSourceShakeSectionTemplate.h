@@ -5,18 +5,18 @@
 #include "MovieSceneCameraShakeSectionData.h"
 #include "MovieSceneCameraShakeSourceShakeSectionTemplate.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FMovieSceneCameraShakeSourceShakeSectionTemplate : public FMovieSceneEvalTemplate {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMovieSceneCameraShakeSectionData SourceData;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FFrameNumber SectionStartTime;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FFrameNumber SectionEndTime;
     
 public:

@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ActorLayer.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
+#include "ActorLayer.h"
 #include "LayersBlueprintLibrary.generated.h"
 
 class AActor;
 class UObject;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class ULayersBlueprintLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

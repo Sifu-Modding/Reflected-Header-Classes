@@ -3,7 +3,7 @@
 #include "RigUnit_MathBase.h"
 #include "RigUnit_MathColorBase.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_MathColorBase : public FRigUnit_MathBase {
     GENERATED_BODY()
 public:

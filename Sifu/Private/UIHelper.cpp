@@ -1,11 +1,11 @@
 #include "UIHelper.h"
 
-class UWidget;
 class UButtonUserWidget;
-class UUserWidget;
 class ULocalPlayer;
-class UTextBlock;
 class UPanelWidget;
+class UTextBlock;
+class UUserWidget;
+class UWidget;
 class UWidgetAnimation;
 
 void UUIHelper::UpdateXPProgressBar(int32 _iCurrentLevelXP, int32 _iNextLevelXP, int32 _iStartXP, int32 _iIncrementXP, float _fProgress, float _fDuration, float _fDelta, float& _fNewProgress, float& _fLevelProgress, int32& _iCurrentXP) {

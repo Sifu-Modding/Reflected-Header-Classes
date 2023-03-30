@@ -6,17 +6,17 @@
 
 class UObject;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UMG_API UComboBox : public UWidget {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UObject*> Items;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UWidget::FGenerateWidgetForObject OnGenerateWidgetEvent;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bIsFocusable;
     
     UComboBox();

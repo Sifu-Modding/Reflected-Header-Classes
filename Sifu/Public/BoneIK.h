@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct SIFU_API FBoneIK {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     FBoneReference m_Bone;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fWeight;
     
     FBoneIK();

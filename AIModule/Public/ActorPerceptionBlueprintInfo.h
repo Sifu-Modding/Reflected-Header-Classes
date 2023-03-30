@@ -9,13 +9,13 @@ USTRUCT(BlueprintType)
 struct FActorPerceptionBlueprintInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AActor* Target;
     
-    UPROPERTY(BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FAIStimulus> LastSensedStimuli;
     
-    UPROPERTY(BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bIsHostile: 1;
     
     AIMODULE_API FActorPerceptionBlueprintInfo();

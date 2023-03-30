@@ -4,12 +4,12 @@
 #include "MovieScenePropertySectionData.h"
 #include "MovieScenePropertySectionTemplate.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct MOVIESCENE_API FMovieScenePropertySectionTemplate : public FMovieSceneEvalTemplate {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMovieScenePropertySectionData PropertyData;
     
 public:

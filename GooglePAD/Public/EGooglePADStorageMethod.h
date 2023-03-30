@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EGooglePADStorageMethod.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EGooglePADStorageMethod : uint8 {
     AssetPack_STORAGE_FILES,
     AssetPack_STORAGE_APK,

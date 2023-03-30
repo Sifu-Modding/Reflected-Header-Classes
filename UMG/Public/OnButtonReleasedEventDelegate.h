@@ -2,5 +2,5 @@
 #include "CoreMinimal.h"
 #include "OnButtonReleasedEventDelegate.generated.h"
 
-UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnButtonReleasedEvent);
+UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnButtonReleasedEvent);
 

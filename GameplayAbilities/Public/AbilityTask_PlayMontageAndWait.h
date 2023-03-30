@@ -1,57 +1,57 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "MontageWaitSimpleDelegateDelegate.h"
 #include "AbilityTask.h"
+#include "MontageWaitSimpleDelegateDelegate.h"
 #include "AbilityTask_PlayMontageAndWait.generated.h"
 
-class UAnimMontage;
 class UAbilityTask_PlayMontageAndWait;
+class UAnimMontage;
 class UGameplayAbility;
 
-UCLASS()
+UCLASS(Blueprintable)
 class GAMEPLAYABILITIES_API UAbilityTask_PlayMontageAndWait : public UAbilityTask {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMontageWaitSimpleDelegate OnCompleted;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMontageWaitSimpleDelegate OnBlendOut;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMontageWaitSimpleDelegate OnInterrupted;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMontageWaitSimpleDelegate OnCancelled;
     
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UAnimMontage* MontageToPlay;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Rate;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName StartSection;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float AnimRootMotionTranslationScale;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float StartTimeSeconds;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bStopWhenAbilityEnds;
     
 public:
     UAbilityTask_PlayMontageAndWait();
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnMontageInterrupted();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnMontageEnded(UAnimMontage* Montage, bool bInterrupted);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnMontageBlendingOut(UAnimMontage* Montage, bool bInterrupted);
     
     UFUNCTION(BlueprintCallable)

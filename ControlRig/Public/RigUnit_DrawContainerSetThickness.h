@@ -3,14 +3,14 @@
 #include "RigUnitMutable.h"
 #include "RigUnit_DrawContainerSetThickness.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_DrawContainerSetThickness : public FRigUnitMutable {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName InstructionName;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Thickness;
     
     CONTROLRIG_API FRigUnit_DrawContainerSetThickness();

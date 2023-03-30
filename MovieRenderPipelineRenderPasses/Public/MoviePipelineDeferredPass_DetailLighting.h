@@ -3,7 +3,7 @@
 #include "MoviePipelineDeferredPassBase.h"
 #include "MoviePipelineDeferredPass_DetailLighting.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UMoviePipelineDeferredPass_DetailLighting : public UMoviePipelineDeferredPassBase {
     GENERATED_BODY()
 public:

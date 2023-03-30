@@ -1,7 +1,7 @@
 #include "CheckGeoTrackingAvailabilityAsyncTaskBlueprintProxy.h"
 
-class UObject;
 class UCheckGeoTrackingAvailabilityAsyncTaskBlueprintProxy;
+class UObject;
 
 UCheckGeoTrackingAvailabilityAsyncTaskBlueprintProxy* UCheckGeoTrackingAvailabilityAsyncTaskBlueprintProxy::CheckGeoTrackingAvailabilityAtLocation(UObject* WorldContextObject, float Longitude, float Latitude) {
     return NULL;

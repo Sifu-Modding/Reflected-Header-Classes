@@ -3,11 +3,11 @@
 #include "RigUnit.h"
 #include "RigUnit_SpaceName.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_SpaceName : public FRigUnit {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName Space;
     
     CONTROLRIG_API FRigUnit_SpaceName();

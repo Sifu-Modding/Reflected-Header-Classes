@@ -1,8 +1,8 @@
 #include "LandscapeComponent.h"
 #include "LandscapeLODStreamingProxy.h"
 
-class UMaterialInstanceDynamic;
 class ULandscapeLayerInfoObject;
+class UMaterialInstanceDynamic;
 
 UMaterialInstanceDynamic* ULandscapeComponent::GetMaterialInstanceDynamic(int32 InIndex) const {
     return NULL;

@@ -4,11 +4,11 @@
 #include "MotoSynthRuntimeSettings.h"
 #include "MotoSynthPreset.generated.h"
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class MOTOSYNTH_API UMotoSynthPreset : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMotoSynthRuntimeSettings Settings;
     
     UMotoSynthPreset();

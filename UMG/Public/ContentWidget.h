@@ -6,7 +6,7 @@
 class UPanelSlot;
 class UWidget;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class UMG_API UContentWidget : public UPanelWidget {
     GENERATED_BODY()
 public:
@@ -14,10 +14,10 @@ public:
     UFUNCTION(BlueprintCallable)
     UPanelSlot* SetContent(UWidget* Content);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UPanelSlot* GetContentSlot() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UWidget* GetContent() const;
     
 };

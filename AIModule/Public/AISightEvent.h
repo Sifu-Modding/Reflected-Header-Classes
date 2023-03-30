@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct AIMODULE_API FAISightEvent {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AActor* SeenActor;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AActor* Observer;
     
     FAISightEvent();

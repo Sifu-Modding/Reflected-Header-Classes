@@ -10,16 +10,16 @@ USTRUCT(BlueprintType)
 struct GAMEPLAYTAGS_API FGameplayTagSource {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName SourceName;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EGameplayTagSourceType SourceType;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UGameplayTagsList* SourceTagList;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     URestrictedGameplayTagsList* SourceRestrictedTagList;
     
     FGameplayTagSource();

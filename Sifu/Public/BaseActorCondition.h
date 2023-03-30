@@ -3,7 +3,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
 #include "BaseActorCondition.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class SIFU_API UBaseActorCondition : public UObject {
     GENERATED_BODY()
 public:

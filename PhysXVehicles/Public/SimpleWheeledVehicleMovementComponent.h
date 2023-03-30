@@ -3,7 +3,7 @@
 #include "WheeledVehicleMovementComponent.h"
 #include "SimpleWheeledVehicleMovementComponent.generated.h"
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class PHYSXVEHICLES_API USimpleWheeledVehicleMovementComponent : public UWheeledVehicleMovementComponent {
     GENERATED_BODY()
 public:

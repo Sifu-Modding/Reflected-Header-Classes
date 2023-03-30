@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FRigUnit_SetMultiControlBool_Entry {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName Control;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool BoolValue;
     
     CONTROLRIG_API FRigUnit_SetMultiControlBool_Entry();

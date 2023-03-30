@@ -1,10 +1,10 @@
 #include "AbilityTask_MoveToLocation.h"
 #include "Net/UnrealNetwork.h"
 
-class UGameplayAbility;
+class UAbilityTask_MoveToLocation;
 class UCurveFloat;
 class UCurveVector;
-class UAbilityTask_MoveToLocation;
+class UGameplayAbility;
 
 UAbilityTask_MoveToLocation* UAbilityTask_MoveToLocation::MoveToLocation(UGameplayAbility* OwningAbility, FName TaskInstanceName, FVector Location, float Duration, UCurveFloat* OptionalInterpolationCurve, UCurveVector* OptionalVectorInterpolationCurve) {
     return NULL;

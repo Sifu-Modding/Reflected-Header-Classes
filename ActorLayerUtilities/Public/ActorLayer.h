@@ -6,7 +6,7 @@ USTRUCT(BlueprintType)
 struct FActorLayer {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName Name;
     
     ACTORLAYERUTILITIES_API FActorLayer();

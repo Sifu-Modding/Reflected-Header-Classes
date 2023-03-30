@@ -1,7 +1,7 @@
 #include "EditableMeshFactory.h"
 
-class UPrimitiveComponent;
 class UEditableMesh;
+class UPrimitiveComponent;
 
 UEditableMesh* UEditableMeshFactory::MakeEditableMesh(UPrimitiveComponent* PrimitiveComponent, const int32 LODIndex) {
     return NULL;

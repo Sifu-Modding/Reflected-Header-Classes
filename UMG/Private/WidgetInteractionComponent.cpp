@@ -1,7 +1,7 @@
 #include "WidgetInteractionComponent.h"
 
-class UWidgetComponent;
 class UWidget;
+class UWidgetComponent;
 
 void UWidgetInteractionComponent::SetFocus(UWidget* FocusWidget) {
 }

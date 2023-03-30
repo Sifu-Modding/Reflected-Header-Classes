@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SourceEffectFoldbackDistortionSettings.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=SoundEffectSourcePreset -FallbackName=SoundEffectSourcePreset
+#include "SourceEffectFoldbackDistortionSettings.h"
 #include "SourceEffectFoldbackDistortionPreset.generated.h"
 
-UCLASS(BlueprintType, EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class SYNTHESIS_API USourceEffectFoldbackDistortionPreset : public USoundEffectSourcePreset {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSourceEffectFoldbackDistortionSettings Settings;
     
     USourceEffectFoldbackDistortionPreset();

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EWheelSweepType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum EWheelSweepType {
     SimpleAndComplex,
     Simple,

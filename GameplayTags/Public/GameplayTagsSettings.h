@@ -1,47 +1,47 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameplayTagsList.h"
-#include "GameplayTagRedirect.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=SoftObjectPath -FallbackName=SoftObjectPath
 #include "GameplayTagCategoryRemap.h"
+#include "GameplayTagRedirect.h"
+#include "GameplayTagsList.h"
 #include "RestrictedConfigInfo.h"
 #include "GameplayTagsSettings.generated.h"
 
-UCLASS(DefaultConfig, Config=GameplayTags)
+UCLASS(Blueprintable, Config=Engine, DefaultConfig, Config=GameplayTags)
 class GAMEPLAYTAGS_API UGameplayTagsSettings : public UGameplayTagsList {
     GENERATED_BODY()
 public:
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool ImportTagsFromConfig;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool WarnOnInvalidTags;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool FastReplication;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString InvalidTagCharacters;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FGameplayTagCategoryRemap> CategoryRemapping;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FSoftObjectPath> GameplayTagTableList;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FGameplayTagRedirect> GameplayTagRedirects;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FName> CommonlyReplicatedTags;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 NumBitsForContainerSize;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 NetIndexFirstBitSegment;
     
-    UPROPERTY(AdvancedDisplay, Config, EditAnywhere)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FRestrictedConfigInfo> RestrictedConfigFiles;
     
     UGameplayTagsSettings();

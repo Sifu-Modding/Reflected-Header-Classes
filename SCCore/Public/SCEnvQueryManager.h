@@ -3,7 +3,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=AIModule -ObjectName=EnvQueryManager -FallbackName=EnvQueryManager
 #include "SCEnvQueryManager.generated.h"
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class SCCORE_API USCEnvQueryManager : public UEnvQueryManager {
     GENERATED_BODY()
 public:

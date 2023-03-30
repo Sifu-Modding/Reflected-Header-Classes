@@ -9,13 +9,13 @@ USTRUCT(BlueprintType)
 struct FNCPool {
     GENERATED_BODY()
 public:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<FNCPoolElement> FreeElements;
     
-    UPROPERTY(Instanced, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     TArray<UNiagaraComponent*> InUseComponents_Auto;
     
-    UPROPERTY(Instanced, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     TArray<UNiagaraComponent*> InUseComponents_Manual;
     
     NIAGARA_API FNCPool();

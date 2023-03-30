@@ -1,33 +1,33 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "EnvQueryGenerator.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
+#include "EnvQueryGenerator.h"
+#include "Templates/SubclassOf.h"
 #include "EnvQueryGenerator_BlueprintBase.generated.h"
 
+class AActor;
 class UEnvQueryContext;
 class UEnvQueryItemType;
 class UObject;
-class AActor;
 
 UCLASS(Abstract, Blueprintable, EditInlineNew)
 class AIMODULE_API UEnvQueryGenerator_BlueprintBase : public UEnvQueryGenerator {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FText GeneratorsActionDescription;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UEnvQueryContext> Context;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UEnvQueryItemType> GeneratedItemType;
     
     UEnvQueryGenerator_BlueprintBase();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UObject* GetQuerier() const;
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void DoItemGeneration(const TArray<FVector>& ContextLocations) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure=false)

@@ -1,13 +1,13 @@
 #include "ReplayController.h"
 
-class UReplayKey;
-class UReplayTimelineModel;
-class UObject;
-class UReplaySystem;
-class UReplayCineCameraComponent;
-class UCurveFloat;
-class UReplayFightingCharacterComponent;
 class AReplayingCamera;
+class UCurveFloat;
+class UObject;
+class UReplayCineCameraComponent;
+class UReplayFightingCharacterComponent;
+class UReplayKey;
+class UReplaySystem;
+class UReplayTimelineModel;
 
 void AReplayController::OnKeysLoaded() {
 }

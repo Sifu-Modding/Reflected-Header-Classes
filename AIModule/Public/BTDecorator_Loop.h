@@ -3,17 +3,17 @@
 #include "BTDecorator.h"
 #include "BTDecorator_Loop.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class AIMODULE_API UBTDecorator_Loop : public UBTDecorator {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 NumLoops;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bInfiniteLoop;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float InfiniteLoopTimeoutTime;
     
     UBTDecorator_Loop();

@@ -1,8 +1,8 @@
 #include "ARDependencyHandler.h"
 
-class UObject;
-class UARSessionConfig;
 class UARDependencyHandler;
+class UARSessionConfig;
+class UObject;
 
 void UARDependencyHandler::StartARSessionLatent(UObject* WorldContextObject, UARSessionConfig* SessionConfig, FLatentActionInfo LatentInfo) {
 }

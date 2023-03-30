@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTag -FallbackName=GameplayTag
+#include "EGameplayEffectScopedModifierAggregatorType.h"
+#include "EGameplayModOp.h"
 #include "GameplayEffectAttributeCaptureDefinition.h"
 #include "GameplayEffectModifierMagnitude.h"
-#include "EGameplayEffectScopedModifierAggregatorType.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTag -FallbackName=GameplayTag
-#include "EGameplayModOp.h"
 #include "GameplayModEvaluationChannelSettings.h"
 #include "GameplayTagRequirements.h"
 #include "GameplayEffectExecutionScopedModifierInfo.generated.h"
@@ -13,28 +13,28 @@ USTRUCT(BlueprintType)
 struct FGameplayEffectExecutionScopedModifierInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(VisibleDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayEffectAttributeCaptureDefinition CapturedAttribute;
     
-    UPROPERTY(VisibleDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayTag TransientAggregatorIdentifier;
     
-    UPROPERTY(VisibleDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EGameplayEffectScopedModifierAggregatorType AggregatorType;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<EGameplayModOp::Type> ModifierOp;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayEffectModifierMagnitude ModifierMagnitude;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayModEvaluationChannelSettings EvaluationChannelSettings;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayTagRequirements SourceTags;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayTagRequirements TargetTags;
     
     GAMEPLAYABILITIES_API FGameplayEffectExecutionScopedModifierInfo();

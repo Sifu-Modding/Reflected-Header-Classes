@@ -5,15 +5,15 @@
 
 class UMovieSceneSection;
 
-UCLASS(MinimalAPI)
+UCLASS(Blueprintable, MinimalAPI)
 class UMovieSceneCameraCutTrack : public UMovieSceneNameableTrack {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bCanBlend;
     
 private:
-    UPROPERTY(Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     TArray<UMovieSceneSection*> Sections;
     
 public:

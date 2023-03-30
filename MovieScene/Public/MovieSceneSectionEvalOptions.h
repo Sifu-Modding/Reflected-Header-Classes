@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FMovieSceneSectionEvalOptions {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bCanEditCompletionMode;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EMovieSceneCompletionMode CompletionMode;
     
     MOVIESCENE_API FMovieSceneSectionEvalOptions();

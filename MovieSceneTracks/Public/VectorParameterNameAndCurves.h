@@ -7,16 +7,16 @@ USTRUCT(BlueprintType)
 struct MOVIESCENETRACKS_API FVectorParameterNameAndCurves {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName ParameterName;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMovieSceneFloatChannel XCurve;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMovieSceneFloatChannel YCurve;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMovieSceneFloatChannel ZCurve;
     
     FVectorParameterNameAndCurves();

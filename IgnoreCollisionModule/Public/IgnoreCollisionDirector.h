@@ -3,7 +3,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=Actor -FallbackName=Actor
 #include "IgnoreCollisionDirector.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class IGNORECOLLISIONMODULE_API AIgnoreCollisionDirector : public AActor {
     GENERATED_BODY()
 public:

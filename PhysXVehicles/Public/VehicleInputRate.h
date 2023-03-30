@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct PHYSXVEHICLES_API FVehicleInputRate {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float RiseRate;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float FallRate;
     
     FVehicleInputRate();

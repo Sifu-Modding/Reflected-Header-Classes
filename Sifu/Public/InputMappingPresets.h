@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=DataAsset -FallbackName=DataAsset
-#include "InputPresetsEnumHandler.h"
 #include "InputMappingData.h"
+#include "InputPresetsEnumHandler.h"
 #include "InputMappingPresets.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UInputMappingPresets : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<FInputPresetsEnumHandler, FInputMappingData> m_Presets;
     
     UInputMappingPresets();

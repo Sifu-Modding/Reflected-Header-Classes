@@ -4,21 +4,21 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTasks -ObjectName=GameplayTaskOwnerInterface -FallbackName=GameplayTaskOwnerInterface
 #include "BTNode.generated.h"
 
-class UBehaviorTree;
 class UBTCompositeNode;
+class UBehaviorTree;
 
-UCLASS(Abstract, Config=Game)
+UCLASS(Abstract, Blueprintable, Config=Game)
 class AIMODULE_API UBTNode : public UObject, public IGameplayTaskOwnerInterface {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString NodeName;
     
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UBehaviorTree* TreeAsset;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UBTCompositeNode* ParentNode;
     
 public:

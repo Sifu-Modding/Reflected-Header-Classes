@@ -1,67 +1,67 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "OnMouseCaptureEndEventSynth2DDelegate.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=UMG -ObjectName=Widget -FallbackName=Widget
-//CROSS-MODULE INCLUDE V2: -ModuleName=UMG -ObjectName=Widget -FallbackName=Widget
-#include "OnMouseCaptureBeginEventSynth2DDelegate.h"
-#include "Synth2DSliderStyle.h"
-#include "OnControllerCaptureBeginEventSynth2DDelegate.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=LinearColor -FallbackName=LinearColor
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector2D -FallbackName=Vector2D
+//CROSS-MODULE INCLUDE V2: -ModuleName=UMG -ObjectName=Widget -FallbackName=Widget
+//CROSS-MODULE INCLUDE V2: -ModuleName=UMG -ObjectName=Widget -FallbackName=Widget
+#include "OnControllerCaptureBeginEventSynth2DDelegate.h"
 #include "OnControllerCaptureEndEventSynth2DDelegate.h"
 #include "OnFloatValueChangedEventSynth2DDelegate.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector2D -FallbackName=Vector2D
+#include "OnMouseCaptureBeginEventSynth2DDelegate.h"
+#include "OnMouseCaptureEndEventSynth2DDelegate.h"
+#include "Synth2DSliderStyle.h"
 #include "Synth2DSlider.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class SYNTHESIS_API USynth2DSlider : public UWidget {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ValueX;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ValueY;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UWidget::FGetFloat ValueXDelegate;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UWidget::FGetFloat ValueYDelegate;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSynth2DSliderStyle WidgetStyle;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FLinearColor SliderHandleColor;
     
-    UPROPERTY(AdvancedDisplay, BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool IndentHandle;
     
-    UPROPERTY(AdvancedDisplay, BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool Locked;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float StepSize;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool IsFocusable;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnMouseCaptureBeginEventSynth2D OnMouseCaptureBegin;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnMouseCaptureEndEventSynth2D OnMouseCaptureEnd;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnControllerCaptureBeginEventSynth2D OnControllerCaptureBegin;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnControllerCaptureEndEventSynth2D OnControllerCaptureEnd;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnFloatValueChangedEventSynth2D OnValueChangedX;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnFloatValueChangedEventSynth2D OnValueChangedY;
     
     USynth2DSlider();
@@ -80,7 +80,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetIndentHandle(bool InValue);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector2D GetValue() const;
     
 };

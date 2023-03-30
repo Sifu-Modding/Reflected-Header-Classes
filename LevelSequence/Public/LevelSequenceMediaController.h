@@ -1,26 +1,26 @@
 #pragma once
 #include "CoreMinimal.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=FrameTime -FallbackName=FrameTime
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=QualifiedFrameTime -FallbackName=QualifiedFrameTime
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=Actor -FallbackName=Actor
 //CROSS-MODULE INCLUDE V2: -ModuleName=MovieScene -ObjectName=MovieSceneCustomClockSource -FallbackName=MovieSceneCustomClockSource
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=FrameTime -FallbackName=FrameTime
 #include "LevelSequenceMediaController.generated.h"
 
-class UMediaComponent;
 class ALevelSequenceActor;
+class UMediaComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class LEVELSEQUENCE_API ALevelSequenceMediaController : public AActor, public IMovieSceneCustomClockSource {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ALevelSequenceActor* Sequence;
     
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UMediaComponent* MediaComponent;
     
-    UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_ServerStartTimeSeconds, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_ServerStartTimeSeconds, meta=(AllowPrivateAccess=true))
     float ServerStartTimeSeconds;
     
 public:
@@ -34,14 +34,14 @@ public:
     void Play();
     
 private:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnRep_ServerStartTimeSeconds();
     
 public:
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ALevelSequenceActor* GetSequence() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UMediaComponent* GetMediaComponent() const;
     
     

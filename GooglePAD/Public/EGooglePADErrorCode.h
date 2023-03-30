@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EGooglePADErrorCode.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EGooglePADErrorCode : uint8 {
     AssetPack_NO_ERROR,
     AssetPack_APP_UNAVAILABLE,

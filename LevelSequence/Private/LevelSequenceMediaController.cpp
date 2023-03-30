@@ -1,6 +1,6 @@
 #include "LevelSequenceMediaController.h"
-#include "Net/UnrealNetwork.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=MediaAssets -ObjectName=MediaComponent -FallbackName=MediaComponent
+#include "Net/UnrealNetwork.h"
 
 class ALevelSequenceActor;
 

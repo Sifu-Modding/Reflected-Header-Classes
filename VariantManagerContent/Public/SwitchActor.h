@@ -5,15 +5,15 @@
 
 class USceneComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class VARIANTMANAGERCONTENT_API ASwitchActor : public AActor {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USceneComponent* SceneComponent;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 LastSelectedOption;
     
 public:
@@ -21,10 +21,10 @@ public:
     UFUNCTION(BlueprintCallable)
     void SelectOption(int32 OptionIndex);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetSelectedOption() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     TArray<AActor*> GetOptions() const;
     
 };

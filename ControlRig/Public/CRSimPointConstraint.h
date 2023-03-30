@@ -1,26 +1,26 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ECRSimConstraintType.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
+#include "ECRSimConstraintType.h"
 #include "CRSimPointConstraint.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FCRSimPointConstraint {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ECRSimConstraintType Type;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 SubjectA;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 SubjectB;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector DataA;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector DataB;
     
     CONTROLRIG_API FCRSimPointConstraint();

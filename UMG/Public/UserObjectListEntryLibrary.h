@@ -3,16 +3,16 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
 #include "UserObjectListEntryLibrary.generated.h"
 
-class UObject;
-class UUserObjectListEntry;
 class IUserObjectListEntry;
+class UUserObjectListEntry;
+class UObject;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UMG_API UUserObjectListEntryLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UUserObjectListEntryLibrary();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static UObject* GetListItemObject(TScriptInterface<IUserObjectListEntry> UserObjectListEntry);
     
 };

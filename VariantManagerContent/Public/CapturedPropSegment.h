@@ -6,13 +6,13 @@ USTRUCT(BlueprintType)
 struct VARIANTMANAGERCONTENT_API FCapturedPropSegment {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString PropertyName;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 PropertyIndex;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString ComponentName;
     
     FCapturedPropSegment();

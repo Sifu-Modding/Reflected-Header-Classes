@@ -1,26 +1,26 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "ARComponent.h"
-#include "EFaceComponentDebugMode.h"
-#include "EARFaceTransformMixing.h"
 #include "ARFaceUpdatePayload.h"
+#include "EARFaceTransformMixing.h"
+#include "EFaceComponentDebugMode.h"
 #include "ARFaceComponent.generated.h"
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class AUGMENTEDREALITY_API UARFaceComponent : public UARComponent {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EARFaceTransformMixing TransformSetting;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bUpdateVertexNormal;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bFaceOutOfScreen;
     
-    UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_Payload)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_Payload, meta=(AllowPrivateAccess=true))
     FARFaceUpdatePayload ReplicatedPayload;
     
 public:
@@ -31,14 +31,14 @@ public:
     static void SetFaceComponentDebugMode(EFaceComponentDebugMode NewDebugMode);
     
 protected:
-    UFUNCTION(Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
     void ServerUpdatePayload(const FARFaceUpdatePayload& NewPayload);
     
 public:
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveUpdate(const FARFaceUpdatePayload& Payload);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveAdd(const FARFaceUpdatePayload& Payload);
     
 };

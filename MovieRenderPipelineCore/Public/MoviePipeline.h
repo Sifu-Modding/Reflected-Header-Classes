@@ -1,51 +1,51 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
 #include "MoviePipelineFinishedDelegate.h"
+#include "Templates/SubclassOf.h"
 #include "MoviePipeline.generated.h"
 
-class UTexture;
-class UMoviePipelineCustomTimeStep;
 class ALevelSequenceActor;
-class ULevelSequence;
 class UEngineCustomTimeStep;
-class UMovieRenderDebugWidget;
+class ULevelSequence;
+class UMoviePipelineCustomTimeStep;
 class UMoviePipelineExecutorJob;
 class UMoviePipelineMasterConfig;
+class UMovieRenderDebugWidget;
+class UTexture;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class MOVIERENDERPIPELINECORE_API UMoviePipeline : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMoviePipelineFinished OnMoviePipelineFinishedDelegate;
     
 private:
-    UPROPERTY(Instanced, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UMoviePipelineCustomTimeStep* CustomTimeStep;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UEngineCustomTimeStep* CachedPrevCustomTimeStep;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ULevelSequence* TargetSequence;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ALevelSequenceActor* LevelSequenceActor;
     
-    UPROPERTY(Instanced, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UMovieRenderDebugWidget* DebugWidget;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTexture* PreviewTexture;
     
 public:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TSubclassOf<UMovieRenderDebugWidget> DebugWidgetClass;
     
 private:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UMoviePipelineExecutorJob* CurrentJob;
     
 public:
@@ -61,16 +61,16 @@ protected:
     void OnMoviePipelineFinishedImpl();
     
 public:
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsShutdownRequested() const;
     
     UFUNCTION(BlueprintCallable)
     void Initialize(UMoviePipelineExecutorJob* InJob);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UTexture* GetPreviewTexture() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UMoviePipelineMasterConfig* GetPipelineMasterConfig() const;
     
 };

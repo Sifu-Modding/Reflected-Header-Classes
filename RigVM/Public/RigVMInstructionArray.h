@@ -8,7 +8,7 @@ struct RIGVM_API FRigVMInstructionArray {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FRigVMInstruction> Instructions;
     
 public:

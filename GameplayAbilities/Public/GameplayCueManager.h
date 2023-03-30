@@ -1,38 +1,38 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "GameplayCueObjectLibrary.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=DataAsset -FallbackName=DataAsset
+#include "GameplayCueObjectLibrary.h"
 #include "GameplayCuePendingExecute.h"
 #include "PreallocationInfo.h"
+#include "Templates/SubclassOf.h"
 #include "GameplayCueManager.generated.h"
 
 class AGameplayCueNotify_Actor;
 
-UCLASS()
+UCLASS(Blueprintable)
 class GAMEPLAYABILITIES_API UGameplayCueManager : public UDataAsset {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FGameplayCueObjectLibrary RuntimeGameplayCueObjectLibrary;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FGameplayCueObjectLibrary EditorGameplayCueObjectLibrary;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UClass*> LoadedGameplayCueNotifyClasses;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<TSubclassOf<AGameplayCueNotify_Actor>> GameplayCueClassesForPreallocation;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<FGameplayCuePendingExecute> PendingExecuteCues;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     int32 GameplayCueSendContextCount;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<FPreallocationInfo> PreallocationInfoList_Internal;
     
 public:

@@ -1,31 +1,31 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=UMG -ObjectName=UserWidget -FallbackName=UserWidget
 #include "LevelSequencePlayerSnapshot.h"
+#include "Templates/SubclassOf.h"
 #include "LevelSequenceBurnIn.generated.h"
 
-class UObject;
 class ALevelSequenceActor;
 class ULevelSequenceBurnInInitSettings;
+class UObject;
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class LEVELSEQUENCE_API ULevelSequenceBurnIn : public UUserWidget {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FLevelSequencePlayerSnapshot FrameInformation;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ALevelSequenceActor* LevelSequenceActor;
     
 public:
     ULevelSequenceBurnIn();
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetSettings(UObject* InSettings);
     
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     TSubclassOf<ULevelSequenceBurnInInitSettings> GetSettingsClass() const;
     
 };

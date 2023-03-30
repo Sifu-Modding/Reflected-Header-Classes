@@ -5,12 +5,12 @@
 
 class UMovieSceneTrackInstanceInstantiator;
 
-UCLASS()
+UCLASS(Blueprintable)
 class MOVIESCENE_API UMovieSceneTrackInstanceSystem : public UMovieSceneEntitySystem {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UMovieSceneTrackInstanceInstantiator* Instantiator;
     
 public:

@@ -3,18 +3,18 @@
 #include "FieldNodeInt.h"
 #include "ToIntegerField.generated.h"
 
-class UToIntegerField;
 class UFieldNodeFloat;
+class UToIntegerField;
 
-UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FIELDSYSTEMENGINE_API UToIntegerField : public UFieldNodeInt {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UFieldNodeFloat* FloatField;
     
     UToIntegerField();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UToIntegerField* SetToIntegerField(const UFieldNodeFloat* NewFloatField);
     
 };

@@ -3,37 +3,37 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=FrameNumber -FallbackName=FrameNumber
 #include "MovieSceneMediaSectionParams.generated.h"
 
+class UMediaPlayer;
 class UMediaSoundComponent;
 class UMediaSource;
 class UMediaTexture;
-class UMediaPlayer;
 
 USTRUCT(BlueprintType)
 struct FMovieSceneMediaSectionParams {
     GENERATED_BODY()
 public:
-    UPROPERTY(Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UMediaSoundComponent* MediaSoundComponent;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UMediaSource* MediaSource;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UMediaTexture* MediaTexture;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UMediaPlayer* MediaPlayer;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FFrameNumber SectionStartFrame;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FFrameNumber SectionEndFrame;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bLooping;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FFrameNumber StartFrameOffset;
     
     MEDIACOMPOSITING_API FMovieSceneMediaSectionParams();

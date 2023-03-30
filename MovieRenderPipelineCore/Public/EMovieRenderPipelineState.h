@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMovieRenderPipelineState.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EMovieRenderPipelineState : uint8 {
     Uninitialized,
     ProducingFrames,

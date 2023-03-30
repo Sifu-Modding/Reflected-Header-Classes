@@ -5,15 +5,15 @@
 
 class UInteractiveToolPropertySet;
 
-UCLASS(Transient)
+UCLASS(Blueprintable, Transient)
 class INTERACTIVETOOLSFRAMEWORK_API UInteractiveToolPropertySet : public UObject {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UInteractiveToolPropertySet* CachedProperties;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bIsPropertySetEnabled;
     
 public:

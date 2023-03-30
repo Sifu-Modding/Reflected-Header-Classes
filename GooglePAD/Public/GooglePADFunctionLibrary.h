@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EGooglePADDownloadStatus.h"
-#include "EGooglePADStorageMethod.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
-#include "EGooglePADErrorCode.h"
 #include "EGooglePADCellularDataConfirmStatus.h"
+#include "EGooglePADDownloadStatus.h"
+#include "EGooglePADErrorCode.h"
+#include "EGooglePADStorageMethod.h"
 #include "GooglePADFunctionLibrary.generated.h"
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class GOOGLEPAD_API UGooglePADFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

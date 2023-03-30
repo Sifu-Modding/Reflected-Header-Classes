@@ -1,64 +1,64 @@
 #pragma once
 #include "CoreMinimal.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=LinearColor -FallbackName=LinearColor
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
-#include "OnARTrackingStateChangedDelegate.h"
-#include "OnARTransformUpdatedDelegate.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Transform -FallbackName=Transform
 #include "EARTrackingState.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=LinearColor -FallbackName=LinearColor
+#include "OnARTrackingStateChangedDelegate.h"
+#include "OnARTransformUpdatedDelegate.h"
 #include "ARPin.generated.h"
 
 class UARTrackedGeometry;
 class USceneComponent;
 class UWorld;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class AUGMENTEDREALITY_API UARPin : public UObject {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UARTrackedGeometry* TrackedGeometry;
     
-    UPROPERTY(Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USceneComponent* PinnedComponent;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTransform LocalToTrackingTransform;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTransform LocalToAlignedTrackingTransform;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EARTrackingState TrackingState;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnARTrackingStateChanged OnARTrackingStateChanged;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnARTransformUpdated OnARTransformUpdated;
     
 public:
     UARPin();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     EARTrackingState GetTrackingState() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UARTrackedGeometry* GetTrackedGeometry() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     USceneComponent* GetPinnedComponent() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FTransform GetLocalToWorldTransform() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FTransform GetLocalToTrackingTransform() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FName GetDebugName() const;
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void DebugDraw(UWorld* World, const FLinearColor& Color, float Scale, float PersistForSeconds) const;
     
 };

@@ -5,11 +5,11 @@
 
 class UWidget;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UMG_API UWidgetSwitcher : public UPanelWidget {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 ActiveWidgetIndex;
     
     UWidgetSwitcher();
@@ -19,16 +19,16 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetActiveWidget(UWidget* Widget);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UWidget* GetWidgetAtIndex(int32 Index) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetNumWidgets() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetActiveWidgetIndex() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UWidget* GetActiveWidget() const;
     
 };

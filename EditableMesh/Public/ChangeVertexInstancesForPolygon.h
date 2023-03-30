@@ -9,13 +9,13 @@ USTRUCT(BlueprintType)
 struct FChangeVertexInstancesForPolygon {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FPolygonID PolygonID;
     
-    UPROPERTY(BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FVertexIndexAndInstanceID> PerimeterVertexIndicesAndInstanceIDs;
     
-    UPROPERTY(BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FVertexInstancesForPolygonHole> VertexIndicesAndInstanceIDsForEachHole;
     
     EDITABLEMESH_API FChangeVertexInstancesForPolygon();

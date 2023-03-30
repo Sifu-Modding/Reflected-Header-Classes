@@ -1,26 +1,26 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RigUnit_SimBase.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
+#include "RigUnit_SimBase.h"
 #include "RigUnit_KalmanVector.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_KalmanVector : public FRigUnit_SimBase {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector Value;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 BufferSize;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector Result;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FVector> Buffer;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 LastInsertIndex;
     
     CONTROLRIG_API FRigUnit_KalmanVector();

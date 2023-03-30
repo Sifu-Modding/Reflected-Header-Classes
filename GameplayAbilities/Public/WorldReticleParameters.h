@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FWorldReticleParameters {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector AOEScale;
     
     GAMEPLAYABILITIES_API FWorldReticleParameters();

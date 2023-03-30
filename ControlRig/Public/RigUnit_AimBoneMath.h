@@ -1,38 +1,38 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RigUnit_HighlevelBase.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Transform -FallbackName=Transform
+#include "CachedRigElement.h"
 #include "RigUnit_AimBone_DebugSettings.h"
 #include "RigUnit_AimItem_Target.h"
-#include "CachedRigElement.h"
+#include "RigUnit_HighlevelBase.h"
 #include "RigUnit_AimBoneMath.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_AimBoneMath : public FRigUnit_HighlevelBase {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTransform InputTransform;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRigUnit_AimItem_Target Primary;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRigUnit_AimItem_Target Secondary;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Weight;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTransform Result;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRigUnit_AimBone_DebugSettings DebugSettings;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FCachedRigElement PrimaryCachedSpace;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FCachedRigElement SecondaryCachedSpace;
     
     CONTROLRIG_API FRigUnit_AimBoneMath();

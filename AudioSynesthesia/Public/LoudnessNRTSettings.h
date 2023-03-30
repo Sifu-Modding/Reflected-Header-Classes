@@ -1,26 +1,26 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ELoudnessNRTCurveTypeEnum.h"
 #include "AudioSynesthesiaNRTSettings.h"
+#include "ELoudnessNRTCurveTypeEnum.h"
 #include "LoudnessNRTSettings.generated.h"
 
-UCLASS(BlueprintType, EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class AUDIOSYNESTHESIA_API ULoudnessNRTSettings : public UAudioSynesthesiaNRTSettings {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float AnalysisPeriod;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MinimumFrequency;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MaximumFrequency;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ELoudnessNRTCurveTypeEnum CurveType;
     
-    UPROPERTY(AdvancedDisplay, BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float NoiseFloorDb;
     
     ULoudnessNRTSettings();

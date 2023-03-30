@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RigUnitMutable.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=LinearColor -FallbackName=LinearColor
+#include "RigUnitMutable.h"
 #include "RigUnit_DrawContainerSetColor.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_DrawContainerSetColor : public FRigUnitMutable {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName InstructionName;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FLinearColor Color;
     
     CONTROLRIG_API FRigUnit_DrawContainerSetColor();

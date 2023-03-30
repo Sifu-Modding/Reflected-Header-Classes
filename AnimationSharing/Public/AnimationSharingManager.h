@@ -3,21 +3,21 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
 #include "AnimationSharingManager.generated.h"
 
-class UAnimationSharingManager;
 class AActor;
-class USkeleton;
 class UAnimSharingInstance;
+class UAnimationSharingManager;
 class UAnimationSharingSetup;
+class USkeleton;
 
-UCLASS(BlueprintType, DefaultConfig)
+UCLASS(Blueprintable, Config=Engine, DefaultConfig)
 class ANIMATIONSHARING_API UAnimationSharingManager : public UObject {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<USkeleton*> Skeletons;
     
-    UPROPERTY(Transient, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UAnimSharingInstance*> PerSkeletonData;
     
 public:
@@ -31,7 +31,7 @@ public:
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static bool CreateAnimationSharingManager(UObject* WorldContextObject, const UAnimationSharingSetup* Setup);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool AnimationSharingEnabled();
     
 };

@@ -6,14 +6,14 @@
 
 class UMotoSynthPreset;
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class MOTOSYNTH_API USynthComponentMoto : public USynthComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UMotoSynthPreset* MotoSynthPreset;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float RPM;
     
     USynthComponentMoto();
@@ -23,7 +23,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetRPM(float InRPM, float InTimeSec);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsEnabled() const;
     
     UFUNCTION(BlueprintCallable)

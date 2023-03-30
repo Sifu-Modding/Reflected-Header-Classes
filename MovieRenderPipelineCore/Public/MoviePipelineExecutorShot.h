@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=SoftObjectPath -FallbackName=SoftObjectPath
+#include "Templates/SubclassOf.h"
 #include "MoviePipelineExecutorShot.generated.h"
 
 class UMoviePipelineShotConfig;
@@ -11,33 +11,33 @@ UCLASS(Blueprintable)
 class MOVIERENDERPIPELINECORE_API UMoviePipelineExecutorShot : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bEnabled;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSoftObjectPath InnerPathKey;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSoftObjectPath OuterPathKey;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString OuterName;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString InnerName;
     
 protected:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float Progress;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FString StatusMessage;
     
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UMoviePipelineShotConfig* ShotOverrideConfig;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSoftObjectPtr<UMoviePipelineShotConfig> ShotOverridePresetOrigin;
     
 public:
@@ -54,16 +54,16 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetShotOverrideConfiguration(UMoviePipelineShotConfig* InPreset);
     
-    UFUNCTION(BlueprintNativeEvent, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent, BlueprintPure)
     float GetStatusProgress() const;
     
-    UFUNCTION(BlueprintNativeEvent, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent, BlueprintPure)
     FString GetStatusMessage() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UMoviePipelineShotConfig* GetShotOverridePresetOrigin() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UMoviePipelineShotConfig* GetShotOverrideConfiguration() const;
     
     UFUNCTION(BlueprintCallable)

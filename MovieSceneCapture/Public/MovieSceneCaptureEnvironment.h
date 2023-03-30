@@ -3,10 +3,10 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
 #include "MovieSceneCaptureEnvironment.generated.h"
 
-class UMovieSceneImageCaptureProtocolBase;
 class UMovieSceneAudioCaptureProtocolBase;
+class UMovieSceneImageCaptureProtocolBase;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class MOVIESCENECAPTURE_API UMovieSceneCaptureEnvironment : public UObject {
     GENERATED_BODY()
 public:
@@ -14,10 +14,10 @@ public:
     UFUNCTION(BlueprintCallable)
     static bool IsCaptureInProgress();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static int32 GetCaptureFrameNumber();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static float GetCaptureElapsedTime();
     
     UFUNCTION(BlueprintCallable)

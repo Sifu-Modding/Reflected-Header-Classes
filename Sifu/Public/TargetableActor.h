@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EFactionsEnums.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Interface -FallbackName=Interface
+#include "EFactionsEnums.h"
 #include "TargetableActor.generated.h"
 
 class AActor;

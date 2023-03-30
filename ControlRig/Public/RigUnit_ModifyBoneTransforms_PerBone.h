@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FRigUnit_ModifyBoneTransforms_PerBone {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName Bone;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTransform Transform;
     
     CONTROLRIG_API FRigUnit_ModifyBoneTransforms_PerBone();

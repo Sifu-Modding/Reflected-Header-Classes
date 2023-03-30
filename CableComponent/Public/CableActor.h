@@ -5,11 +5,11 @@
 
 class UCableComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class CABLECOMPONENT_API ACableActor : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UCableComponent* CableComponent;
     
     ACableActor();

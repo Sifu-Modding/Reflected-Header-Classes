@@ -6,24 +6,24 @@
 
 class UOperatorField;
 
-UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FIELDSYSTEMENGINE_API UOperatorField : public UFieldNodeBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Magnitude;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UFieldNodeBase* RightField;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UFieldNodeBase* LeftField;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<EFieldOperationType> Operation;
     
     UOperatorField();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UOperatorField* SetOperatorField(float NewMagnitude, const UFieldNodeBase* NewRightField, const UFieldNodeBase* NewLeftField, TEnumAsByte<EFieldOperationType> NewOperation);
     
 };

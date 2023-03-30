@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FLevelSequenceCameraSettings {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bOverrideAspectRatioAxisConstraint;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<EAspectRatioAxisConstraint> AspectRatioAxisConstraint;
     
     LEVELSEQUENCE_API FLevelSequenceCameraSettings();

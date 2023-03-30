@@ -1,24 +1,24 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "ENiagaraGpuBufferFormat.h"
 #include "NiagaraDataInterfaceGrid3D.h"
 #include "NiagaraUserParameterBinding.h"
-#include "ENiagaraGpuBufferFormat.h"
 #include "NiagaraDataInterfaceGrid3DCollection.generated.h"
 
-class UVolumeTexture;
 class UNiagaraComponent;
+class UVolumeTexture;
 
-UCLASS(BlueprintType, EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class NIAGARA_API UNiagaraDataInterfaceGrid3DCollection : public UNiagaraDataInterfaceGrid3D {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 NumAttributes;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FNiagaraUserParameterBinding RenderTargetUserParameter;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ENiagaraGpuBufferFormat BufferFormat;
     
     UNiagaraDataInterfaceGrid3DCollection();

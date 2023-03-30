@@ -1,31 +1,31 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EAIRequestPriority.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ActorComponent -FallbackName=ActorComponent
-#include "PawnActionStack.h"
-#include "PawnActionEvent.h"
+#include "EAIRequestPriority.h"
 #include "EPawnActionAbortState.h"
+#include "PawnActionEvent.h"
+#include "PawnActionStack.h"
 #include "PawnActionsComponent.generated.h"
 
-class UPawnAction;
 class APawn;
 class UObject;
+class UPawnAction;
 
-UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class AIMODULE_API UPawnActionsComponent : public UActorComponent {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     APawn* ControlledPawn;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FPawnActionStack> ActionStacks;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FPawnActionEvent> ActionEvents;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UPawnAction* CurrentAction;
     
 public:

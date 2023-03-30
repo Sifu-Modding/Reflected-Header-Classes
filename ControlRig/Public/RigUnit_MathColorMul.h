@@ -3,7 +3,7 @@
 #include "RigUnit_MathColorBinaryOp.h"
 #include "RigUnit_MathColorMul.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_MathColorMul : public FRigUnit_MathColorBinaryOp {
     GENERATED_BODY()
 public:

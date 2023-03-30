@@ -5,24 +5,24 @@
 
 class ULoudnessNRTSettings;
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class AUDIOSYNESTHESIA_API ULoudnessNRT : public UAudioSynesthesiaNRT {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ULoudnessNRTSettings* Settings;
     
     ULoudnessNRT();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     void GetNormalizedLoudnessAtTime(const float InSeconds, float& OutLoudness) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     void GetNormalizedChannelLoudnessAtTime(const float InSeconds, const int32 InChannel, float& OutLoudness) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     void GetLoudnessAtTime(const float InSeconds, float& OutLoudness) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     void GetChannelLoudnessAtTime(const float InSeconds, const int32 InChannel, float& OutLoudness) const;
     
 };

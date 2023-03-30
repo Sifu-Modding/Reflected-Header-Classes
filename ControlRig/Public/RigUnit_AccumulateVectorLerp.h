@@ -1,29 +1,29 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RigUnit_SimBase.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
+#include "RigUnit_SimBase.h"
 #include "RigUnit_AccumulateVectorLerp.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_AccumulateVectorLerp : public FRigUnit_SimBase {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector TargetValue;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector InitialValue;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Blend;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bIntegrateDeltaTime;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector Result;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector AccumulatedValue;
     
     CONTROLRIG_API FRigUnit_AccumulateVectorLerp();

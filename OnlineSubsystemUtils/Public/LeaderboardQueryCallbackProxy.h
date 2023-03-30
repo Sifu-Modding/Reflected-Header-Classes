@@ -7,14 +7,14 @@
 class APlayerController;
 class ULeaderboardQueryCallbackProxy;
 
-UCLASS(BlueprintType, MinimalAPI)
+UCLASS(Blueprintable, MinimalAPI)
 class ULeaderboardQueryCallbackProxy : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FLeaderboardQueryResult OnSuccess;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FLeaderboardQueryResult OnFailure;
     
     ULeaderboardQueryCallbackProxy();

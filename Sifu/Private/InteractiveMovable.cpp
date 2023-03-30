@@ -1,8 +1,8 @@
 #include "InteractiveMovable.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCSaveGameComponent -FallbackName=SCSaveGameComponent
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCStreamingActorComponent -FallbackName=SCStreamingActorComponent
 #include "InteractiveDestructionComponent.h"
 #include "MovableInteractionComponent.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCSaveGameComponent -FallbackName=SCSaveGameComponent
 
 class AActor;
 

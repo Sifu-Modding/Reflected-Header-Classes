@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EImpactDamageOverride.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum EImpactDamageOverride {
     IDO_None,
     IDO_On,

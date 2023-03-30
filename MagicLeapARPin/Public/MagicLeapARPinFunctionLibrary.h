@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "MagicLeapARPinState.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Guid -FallbackName=Guid
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Rotator -FallbackName=Rotator
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
 #include "EMagicLeapPassableWorldError.h"
-#include "MagicLeapContentBindingFoundDelegateDelegate.h"
-#include "MagicLeapARPinUpdatedDelegateDelegate.h"
 #include "MagicLeapARPinQuery.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Rotator -FallbackName=Rotator
+#include "MagicLeapARPinState.h"
+#include "MagicLeapARPinUpdatedDelegateDelegate.h"
+#include "MagicLeapContentBindingFoundDelegateDelegate.h"
 #include "MagicLeapARPinFunctionLibrary.generated.h"
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class MAGICLEAPARPIN_API UMagicLeapARPinFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
@@ -31,19 +31,19 @@ public:
     UFUNCTION(BlueprintCallable)
     static EMagicLeapPassableWorldError QueryARPins(const FMagicLeapARPinQuery& Query, TArray<FGuid>& Pins);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool ParseStringToARPinId(const FString& PinIdString, FGuid& ARPinId);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool IsTrackerValid();
     
     UFUNCTION(BlueprintCallable)
     static EMagicLeapPassableWorldError GetNumAvailableARPins(int32& Count);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static EMagicLeapPassableWorldError GetGlobalQueryFilter(FMagicLeapARPinQuery& CurrentGlobalFilter);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static int32 GetContentBindingSaveGameUserIndex();
     
     UFUNCTION(BlueprintCallable)
@@ -52,7 +52,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static EMagicLeapPassableWorldError GetAvailableARPins(int32 NumRequested, TArray<FGuid>& Pins);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static FString GetARPinStateToString(const FMagicLeapARPinState& State);
     
     UFUNCTION(BlueprintCallable)
@@ -76,7 +76,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static void BindToOnMagicLeapARPinUpdatedDelegate(const FMagicLeapARPinUpdatedDelegate& Delegate);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static FString ARPinIdToString(const FGuid& ARPinId);
     
 };

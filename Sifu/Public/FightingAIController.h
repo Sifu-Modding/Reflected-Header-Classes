@@ -4,19 +4,19 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCPoolableActor -FallbackName=SCPoolableActor
 #include "FightingAIController.generated.h"
 
-class AActor;
 class AAISpawner;
+class AActor;
 
-UCLASS()
+UCLASS(Blueprintable)
 class SIFU_API AFightingAIController : public AAIController, public ISCPoolableActor {
     GENERATED_BODY()
 public:
     AFightingAIController();
 private:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnPerceptionUpdate(const TArray<AActor*>& _updatedActors);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void AiSpawned(AAISpawner* _spawner);
     
     

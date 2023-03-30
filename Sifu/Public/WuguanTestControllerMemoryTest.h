@@ -3,7 +3,7 @@
 #include "WuguanTestControllerBase.h"
 #include "WuguanTestControllerMemoryTest.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UWuguanTestControllerMemoryTest : public UWuguanTestControllerBase {
     GENERATED_BODY()
 public:

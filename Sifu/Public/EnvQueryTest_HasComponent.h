@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=AIModule -ObjectName=EnvQueryTest -FallbackName=EnvQueryTest
+#include "Templates/SubclassOf.h"
 #include "EnvQueryTest_HasComponent.generated.h"
 
 class UActorComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class SIFU_API UEnvQueryTest_HasComponent : public UEnvQueryTest {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UActorComponent> m_ComponentClass;
     
 public:

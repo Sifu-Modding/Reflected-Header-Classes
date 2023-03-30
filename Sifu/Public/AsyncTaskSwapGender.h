@@ -1,21 +1,21 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintAsyncActionBase -FallbackName=BlueprintAsyncActionBase
-#include "OnSwapGenderDelegate.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=ECharacterGender -FallbackName=ECharacterGender
+#include "OnSwapGenderDelegate.h"
 #include "AsyncTaskSwapGender.generated.h"
 
 class UAsyncTaskSwapGender;
 class UPlayerFightingComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class SIFU_API UAsyncTaskSwapGender : public UBlueprintAsyncActionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnSwapGender OnSuccess;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnSwapGender OnFail;
     
     UAsyncTaskSwapGender();

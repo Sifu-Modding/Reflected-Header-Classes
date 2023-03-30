@@ -1,41 +1,41 @@
 #pragma once
 #include "CoreMinimal.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Transform -FallbackName=Transform
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=GameState -FallbackName=GameState
 #include "MagicLeapSharedWorldAlignmentTransforms.h"
 #include "MagicLeapSharedWorldSharedData.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Transform -FallbackName=Transform
 #include "MagicLeapSharedWorldGameState.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class MAGICLEAPSHAREDWORLD_API AMagicLeapSharedWorldGameState : public AGameState {
     GENERATED_BODY()
 public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE(FMagicLeapSharedWorldEvent);
     
-    UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnReplicate_SharedWorldData)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnReplicate_SharedWorldData, meta=(AllowPrivateAccess=true))
     FMagicLeapSharedWorldSharedData SharedWorldData;
     
-    UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnReplicate_AlignmentTransforms)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnReplicate_AlignmentTransforms, meta=(AllowPrivateAccess=true))
     FMagicLeapSharedWorldAlignmentTransforms AlignmentTransforms;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMagicLeapSharedWorldEvent OnSharedWorldDataUpdated;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMagicLeapSharedWorldEvent OnAlignmentTransformsUpdated;
     
     AMagicLeapSharedWorldGameState();
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
     
 private:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnReplicate_SharedWorldData();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnReplicate_AlignmentTransforms();
     
 public:
-    UFUNCTION(BlueprintNativeEvent, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent, BlueprintPure)
     FTransform CalculateXRCameraRootTransform() const;
     
 };

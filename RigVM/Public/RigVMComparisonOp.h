@@ -3,7 +3,7 @@
 #include "RigVMBaseOp.h"
 #include "RigVMComparisonOp.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct RIGVM_API FRigVMComparisonOp : public FRigVMBaseOp {
     GENERATED_BODY()
 public:

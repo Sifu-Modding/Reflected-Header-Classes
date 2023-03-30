@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FGameModeName {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString Name;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSoftClassPath GameMode;
     
     ENGINESETTINGS_API FGameModeName();

@@ -1,58 +1,58 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=SceneComponent -FallbackName=SceneComponent
-#include "ChaosCollisionEventRequestSettings.h"
+#include "ChaosBreakingEventData.h"
 #include "ChaosBreakingEventRequestSettings.h"
-#include "OnChaosBreakingEventsDelegate.h"
-#include "EChaosCollisionSortMethod.h"
+#include "ChaosCollisionEventData.h"
+#include "ChaosCollisionEventRequestSettings.h"
+#include "ChaosTrailingEventData.h"
 #include "ChaosTrailingEventRequestSettings.h"
+#include "EChaosBreakingSortMethod.h"
+#include "EChaosCollisionSortMethod.h"
+#include "EChaosTrailingSortMethod.h"
+#include "OnChaosBreakingEventsDelegate.h"
 #include "OnChaosCollisionEventsDelegate.h"
 #include "OnChaosTrailingEventsDelegate.h"
-#include "ChaosCollisionEventData.h"
-#include "ChaosTrailingEventData.h"
-#include "EChaosTrailingSortMethod.h"
-#include "ChaosBreakingEventData.h"
-#include "EChaosBreakingSortMethod.h"
 #include "ChaosDestructionListener.generated.h"
 
 class AChaosSolverActor;
 class AGeometryCollectionActor;
 
-UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class GEOMETRYCOLLECTIONENGINE_API UChaosDestructionListener : public USceneComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bIsCollisionEventListeningEnabled: 1;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bIsBreakingEventListeningEnabled: 1;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bIsTrailingEventListeningEnabled: 1;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FChaosCollisionEventRequestSettings CollisionEventRequestSettings;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FChaosBreakingEventRequestSettings BreakingEventRequestSettings;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FChaosTrailingEventRequestSettings TrailingEventRequestSettings;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSet<AChaosSolverActor*> ChaosSolverActors;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSet<AGeometryCollectionActor*> GeometryCollectionActors;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnChaosCollisionEvents OnCollisionEvents;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnChaosBreakingEvents OnBreakingEvents;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnChaosTrailingEvents OnTrailingEvents;
     
     UChaosDestructionListener();
@@ -89,7 +89,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void RemoveChaosSolverActor(AChaosSolverActor* ChaosSolverActor);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsEventListening() const;
     
     UFUNCTION(BlueprintCallable)

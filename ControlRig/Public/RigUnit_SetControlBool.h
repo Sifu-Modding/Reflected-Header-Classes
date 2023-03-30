@@ -4,17 +4,17 @@
 #include "RigUnitMutable.h"
 #include "RigUnit_SetControlBool.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_SetControlBool : public FRigUnitMutable {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName Control;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool BoolValue;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FCachedRigElement CachedControlIndex;
     
     CONTROLRIG_API FRigUnit_SetControlBool();

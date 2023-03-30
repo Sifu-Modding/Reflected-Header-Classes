@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct UMG_API FNamedSlotBinding {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName Name;
     
-    UPROPERTY(Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UWidget* Content;
     
     FNamedSlotBinding();

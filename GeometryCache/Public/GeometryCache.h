@@ -4,24 +4,24 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=Interface_AssetUserData -FallbackName=Interface_AssetUserData
 #include "GeometryCache.generated.h"
 
-class UMaterialInterface;
 class UGeometryCacheTrack;
+class UMaterialInterface;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class GEOMETRYCACHE_API UGeometryCache : public UObject, public IInterface_AssetUserData {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UMaterialInterface*> Materials;
     
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UGeometryCacheTrack*> Tracks;
     
 protected:
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 StartFrame;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 EndFrame;
     
 public:

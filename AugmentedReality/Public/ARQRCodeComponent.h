@@ -5,12 +5,12 @@
 #include "EQRCodeComponentDebugMode.h"
 #include "ARQRCodeComponent.generated.h"
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class AUGMENTEDREALITY_API UARQRCodeComponent : public UARComponent {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_Payload)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_Payload, meta=(AllowPrivateAccess=true))
     FARQRCodeUpdatePayload ReplicatedPayload;
     
 public:
@@ -21,14 +21,14 @@ public:
     static void SetQRCodeComponentDebugMode(EQRCodeComponentDebugMode NewDebugMode);
     
 protected:
-    UFUNCTION(Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
     void ServerUpdatePayload(const FARQRCodeUpdatePayload& NewPayload);
     
 public:
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveUpdate(const FARQRCodeUpdatePayload& Payload);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveAdd(const FARQRCodeUpdatePayload& Payload);
     
 };

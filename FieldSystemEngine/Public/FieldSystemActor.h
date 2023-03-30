@@ -5,11 +5,11 @@
 
 class UFieldSystemComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class FIELDSYSTEMENGINE_API AFieldSystemActor : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UFieldSystemComponent* FieldSystemComponent;
     
     AFieldSystemActor();

@@ -1,32 +1,32 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "CachedRigElement.h"
-#include "RigUnitMutable.h"
-#include "RigElementKey.h"
-#include "EBoneGetterSetterMode.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
+#include "CachedRigElement.h"
+#include "EBoneGetterSetterMode.h"
+#include "RigElementKey.h"
+#include "RigUnitMutable.h"
 #include "RigUnit_SetScale.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_SetScale : public FRigUnitMutable {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRigElementKey Item;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EBoneGetterSetterMode Space;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector Scale;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Weight;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bPropagateToChildren;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FCachedRigElement CachedIndex;
     
     CONTROLRIG_API FRigUnit_SetScale();

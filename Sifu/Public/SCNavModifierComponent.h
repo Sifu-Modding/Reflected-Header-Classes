@@ -3,7 +3,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=NavigationSystem -ObjectName=NavModifierComponent -FallbackName=NavModifierComponent
 #include "SCNavModifierComponent.generated.h"
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class SIFU_API USCNavModifierComponent : public UNavModifierComponent {
     GENERATED_BODY()
 public:

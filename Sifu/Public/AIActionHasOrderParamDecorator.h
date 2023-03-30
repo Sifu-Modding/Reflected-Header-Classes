@@ -3,12 +3,12 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCBTDecorator -FallbackName=SCBTDecorator
 #include "AIActionHasOrderParamDecorator.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class SIFU_API UAIActionHasOrderParamDecorator : public USCBTDecorator {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_OrderParamsName;
     
 public:

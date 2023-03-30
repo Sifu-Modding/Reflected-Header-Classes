@@ -3,7 +3,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
 #include "PredictionManager.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class SIFU_API UPredictionManager : public UObject {
     GENERATED_BODY()
 public:

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EControlRigDrawSettings.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 namespace EControlRigDrawSettings {
     enum Type {
         Points,

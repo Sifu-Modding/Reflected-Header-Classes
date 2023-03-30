@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ETransformGetterType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class ETransformGetterType : uint8 {
     Initial,
     Current,

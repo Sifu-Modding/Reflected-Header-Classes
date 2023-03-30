@@ -1,18 +1,18 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RigUnit_MathQuaternionBase.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Rotator -FallbackName=Rotator
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Quat -FallbackName=Quat
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Rotator -FallbackName=Rotator
+#include "RigUnit_MathQuaternionBase.h"
 #include "RigUnit_MathQuaternionFromRotator.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_MathQuaternionFromRotator : public FRigUnit_MathQuaternionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRotator Rotator;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FQuat Result;
     
     CONTROLRIG_API FRigUnit_MathQuaternionFromRotator();

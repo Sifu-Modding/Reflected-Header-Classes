@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMagicLeapPassableWorldError.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EMagicLeapPassableWorldError : uint8 {
     None,
     LowMapQuality,

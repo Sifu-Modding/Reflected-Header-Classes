@@ -7,7 +7,7 @@ struct FMovieScene2DTransformMask {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint32 Mask;
     
 public:

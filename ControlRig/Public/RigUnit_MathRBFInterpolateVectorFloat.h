@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RigUnit_MathRBFInterpolateVectorBase.h"
 #include "MathRBFInterpolateVectorFloat_Target.h"
+#include "RigUnit_MathRBFInterpolateVectorBase.h"
 #include "RigUnit_MathRBFInterpolateVectorFloat.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_MathRBFInterpolateVectorFloat : public FRigUnit_MathRBFInterpolateVectorBase {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FMathRBFInterpolateVectorFloat_Target> Targets;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Output;
     
     CONTROLRIG_API FRigUnit_MathRBFInterpolateVectorFloat();

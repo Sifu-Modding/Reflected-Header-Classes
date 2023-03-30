@@ -3,7 +3,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=MovieRenderPipelineCore -ObjectName=MoviePipelineOutputBase -FallbackName=MoviePipelineOutputBase
 #include "MoviePipelineImageSequenceOutputBase.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class MOVIERENDERPIPELINERENDERPASSES_API UMoviePipelineImageSequenceOutputBase : public UMoviePipelineOutputBase {
     GENERATED_BODY()
 public:

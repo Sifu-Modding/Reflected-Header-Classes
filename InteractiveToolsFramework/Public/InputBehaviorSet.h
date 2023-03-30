@@ -4,12 +4,12 @@
 #include "BehaviorInfo.h"
 #include "InputBehaviorSet.generated.h"
 
-UCLASS(Transient)
+UCLASS(Blueprintable, Transient)
 class INTERACTIVETOOLSFRAMEWORK_API UInputBehaviorSet : public UObject {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FBehaviorInfo> Behaviors;
     
 public:

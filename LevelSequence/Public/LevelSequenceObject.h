@@ -9,13 +9,13 @@ struct FLevelSequenceObject {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TLazyObjectPtr<UObject> ObjectOrOwner;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString ComponentName;
     
-    UPROPERTY(Transient)
+    UPROPERTY(EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<UObject> CachedComponent;
     
 public:

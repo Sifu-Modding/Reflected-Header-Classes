@@ -1,32 +1,32 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "DatasmithObjectTemplate.h"
-#include "DatasmithCameraLensSettingsTemplate.h"
 #include "DatasmithCameraFilmbackSettingsTemplate.h"
 #include "DatasmithCameraFocusSettingsTemplate.h"
+#include "DatasmithCameraLensSettingsTemplate.h"
+#include "DatasmithObjectTemplate.h"
 #include "DatasmithPostProcessSettingsTemplate.h"
 #include "DatasmithCineCameraComponentTemplate.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class DATASMITHCONTENT_API UDatasmithCineCameraComponentTemplate : public UDatasmithObjectTemplate {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FDatasmithCameraFilmbackSettingsTemplate FilmbackSettings;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FDatasmithCameraLensSettingsTemplate LensSettings;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FDatasmithCameraFocusSettingsTemplate FocusSettings;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float CurrentFocalLength;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float CurrentAperture;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FDatasmithPostProcessSettingsTemplate PostProcessSettings;
     
     UDatasmithCineCameraComponentTemplate();

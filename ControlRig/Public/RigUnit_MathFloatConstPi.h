@@ -3,7 +3,7 @@
 #include "RigUnit_MathFloatConstant.h"
 #include "RigUnit_MathFloatConstPi.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_MathFloatConstPi : public FRigUnit_MathFloatConstant {
     GENERATED_BODY()
 public:

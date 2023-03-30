@@ -5,21 +5,21 @@
 
 class USkeletalMeshComponent;
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class UAnimSharingTransitionInstance : public UAnimInstance {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, Export, Transient)
+    UPROPERTY(EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<USkeletalMeshComponent> FromComponent;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, Export, Transient)
+    UPROPERTY(EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<USkeletalMeshComponent> ToComponent;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float BlendTime;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     bool bBlendBool;
     
 public:

@@ -1,50 +1,50 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector2D -FallbackName=Vector2D
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
-#include "RigVMMemoryContainer.h"
-#include "RigVMExecuteContext.h"
-#include "RigVMByteCode.h"
-#include "RigVMParameter.h"
-#include "RigVMInstructionArray.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Transform -FallbackName=Transform
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Quat -FallbackName=Quat
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Transform -FallbackName=Transform
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector2D -FallbackName=Vector2D
+#include "RigVMByteCode.h"
+#include "RigVMExecuteContext.h"
+#include "RigVMInstructionArray.h"
+#include "RigVMMemoryContainer.h"
+#include "RigVMParameter.h"
 #include "RigVM.generated.h"
 
 class URigVM;
 class UScriptStruct;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class RIGVM_API URigVM : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRigVMMemoryContainer WorkMemoryStorage;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRigVMMemoryContainer LiteralMemoryStorage;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRigVMByteCode ByteCodeStorage;
     
 private:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FRigVMInstructionArray Instructions;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FRigVMExecuteContext Context;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FName> FunctionNamesStorage;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FRigVMParameter> Parameters;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<FName, int32> ParametersNameMap;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     URigVM* DeferredVMToCopy;
     
 public:
@@ -76,7 +76,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetParameterValueBool(const FName& InParameterName, bool InValue, int32 InArrayIndex);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     FString GetRigVMFunctionName(int32 InFunctionIndex) const;
     
     UFUNCTION(BlueprintCallable)
@@ -106,13 +106,13 @@ public:
     UFUNCTION(BlueprintCallable)
     bool GetParameterValueBool(const FName& InParameterName, int32 InArrayIndex);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetParameterArraySize(const FName& InParameterName) const;
     
     UFUNCTION(BlueprintCallable)
     bool Execute(const FName& InEntryName);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     int32 AddRigVMFunction(UScriptStruct* InRigVMStruct, const FName& InMethodName);
     
 };

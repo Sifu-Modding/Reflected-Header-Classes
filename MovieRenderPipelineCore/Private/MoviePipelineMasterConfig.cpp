@@ -1,8 +1,8 @@
 #include "MoviePipelineMasterConfig.h"
 #include "MoviePipelineOutputSetting.h"
 
-class UMoviePipelineSetting;
 class ULevelSequence;
+class UMoviePipelineSetting;
 
 void UMoviePipelineMasterConfig::InitializeTransientSettings() {
 }

@@ -4,14 +4,14 @@
 #include "MagicLeapARPinState.h"
 #include "MagicLeapARPinSettings.generated.h"
 
-UCLASS(DefaultConfig)
+UCLASS(Blueprintable, Config=Engine, DefaultConfig)
 class MAGICLEAPARPIN_API UMagicLeapARPinSettings : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere, GlobalConfig)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, GlobalConfig, meta=(AllowPrivateAccess=true))
     float UpdateCheckFrequency;
     
-    UPROPERTY(EditAnywhere, GlobalConfig)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, GlobalConfig, meta=(AllowPrivateAccess=true))
     FMagicLeapARPinState OnUpdatedEventTriggerDelta;
     
     UMagicLeapARPinSettings();

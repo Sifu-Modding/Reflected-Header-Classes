@@ -1,27 +1,27 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "AIActionReaction.h"
-#include "AIConditionedActionArray.h"
-#include "SCAITriggerableActionsArray.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
-#include "EDefenseTactics.h"
+#include "AIActionReaction.h"
 #include "AIAttackReaction.h"
+#include "AIConditionedActionArray.h"
+#include "EDefenseTactics.h"
+#include "SCAITriggerableActionsArray.h"
 #include "AIMasterArchetype.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class SIFU_API UAIMasterArchetype : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<EDefenseTactics, FSCAITriggerableActionsArray> m_DefaultPostDefenseActions;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<EDefenseTactics, FAIConditionedActionArray> m_DefaultPostDefenseActionsMap;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FAIAttackReaction> m_ReactionAttacks;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FAIActionReaction> m_ReactionActions;
     
     UAIMasterArchetype();

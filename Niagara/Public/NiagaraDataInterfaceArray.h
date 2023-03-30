@@ -3,11 +3,11 @@
 #include "NiagaraDataInterface.h"
 #include "NiagaraDataInterfaceArray.generated.h"
 
-UCLASS(Abstract, BlueprintType, EditInlineNew)
+UCLASS(Abstract, Blueprintable, EditInlineNew)
 class NIAGARA_API UNiagaraDataInterfaceArray : public UNiagaraDataInterface {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 MaxElements;
     
     UNiagaraDataInterfaceArray();

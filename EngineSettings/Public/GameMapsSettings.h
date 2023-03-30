@@ -1,61 +1,61 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=SoftClassPath -FallbackName=SoftClassPath
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=SoftObjectPath -FallbackName=SoftObjectPath
-#include "ETwoPlayerSplitScreenType.h"
 #include "EFourPlayerSplitScreenType.h"
 #include "EThreePlayerSplitScreenType.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=SoftClassPath -FallbackName=SoftClassPath
+#include "ETwoPlayerSplitScreenType.h"
 #include "GameModeName.h"
 #include "GameMapsSettings.generated.h"
 
 class UGameMapsSettings;
 
-UCLASS(BlueprintType, DefaultConfig)
+UCLASS(Blueprintable, Config=Engine, DefaultConfig)
 class ENGINESETTINGS_API UGameMapsSettings : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(AdvancedDisplay, Config, EditAnywhere)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString LocalMapOptions;
     
-    UPROPERTY(AdvancedDisplay, Config, EditAnywhere)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSoftObjectPath TransitionMap;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bUseSplitscreen;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<ETwoPlayerSplitScreenType::Type> TwoPlayerSplitscreenLayout;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<EThreePlayerSplitScreenType::Type> ThreePlayerSplitscreenLayout;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     EFourPlayerSplitScreenType FourPlayerSplitscreenLayout;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bOffsetPlayerGamepadIds;
     
-    UPROPERTY(Config, EditAnywhere, NoClear)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, NoClear, meta=(AllowPrivateAccess=true))
     FSoftClassPath GameInstanceClass;
     
 private:
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSoftObjectPath GameDefaultMap;
     
-    UPROPERTY(AdvancedDisplay, Config, EditAnywhere)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSoftObjectPath ServerDefaultMap;
     
-    UPROPERTY(Config, EditAnywhere, NoClear)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, NoClear, meta=(AllowPrivateAccess=true))
     FSoftClassPath GlobalDefaultGameMode;
     
-    UPROPERTY(AdvancedDisplay, Config, EditAnywhere)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSoftClassPath GlobalDefaultServerGameMode;
     
-    UPROPERTY(AdvancedDisplay, Config, EditAnywhere)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FGameModeName> GameModeMapPrefixes;
     
-    UPROPERTY(AdvancedDisplay, Config, EditAnywhere)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FGameModeName> GameModeClassAliases;
     
 public:
@@ -63,10 +63,10 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetSkipAssigningGamepadToPlayer1(bool bSkipFirstPlayer);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool GetSkipAssigningGamepadToPlayer1() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static UGameMapsSettings* GetGameMapsSettings();
     
 };

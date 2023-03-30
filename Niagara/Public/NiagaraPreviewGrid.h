@@ -1,49 +1,49 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=Actor -FallbackName=Actor
 #include "ENiagaraPreviewGridResetMode.h"
+#include "Templates/SubclassOf.h"
 #include "NiagaraPreviewGrid.generated.h"
 
 class ANiagaraPreviewBase;
-class UNiagaraSystem;
-class UNiagaraPreviewAxis;
-class UNiagaraComponent;
 class UChildActorComponent;
+class UNiagaraComponent;
+class UNiagaraPreviewAxis;
+class UNiagaraSystem;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ANiagaraPreviewGrid : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UNiagaraSystem* System;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ENiagaraPreviewGridResetMode ResetMode;
     
-    UPROPERTY(EditAnywhere, Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UNiagaraPreviewAxis* PreviewAxisX;
     
-    UPROPERTY(EditAnywhere, Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UNiagaraPreviewAxis* PreviewAxisY;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ANiagaraPreviewBase> PreviewClass;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float SpacingX;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float SpacingY;
     
 private:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     int32 NumX;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     int32 NumY;
     
-    UPROPERTY(Instanced, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     TArray<UChildActorComponent*> PreviewComponents;
     
 public:

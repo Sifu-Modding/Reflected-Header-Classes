@@ -3,7 +3,7 @@
 #include "MovieScene3DAttachTrack.h"
 #include "MovieScenePreview3DAttachTrack.generated.h"
 
-UCLASS(MinimalAPI)
+UCLASS(Blueprintable, MinimalAPI)
 class UMovieScenePreview3DAttachTrack : public UMovieScene3DAttachTrack {
     GENERATED_BODY()
 public:

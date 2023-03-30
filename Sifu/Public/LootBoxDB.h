@@ -2,25 +2,25 @@
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=DataAsset -FallbackName=DataAsset
 #include "ELootBoxType.h"
-#include "LootBoxStaticData.h"
 #include "LootBaseItemStruct.h"
 #include "LootBoxInstancedData.h"
+#include "LootBoxStaticData.h"
 #include "LootBoxDB.generated.h"
 
 class UDataTable;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class SIFU_API ULootBoxDB : public UDataAsset {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<ELootBoxType, FLootBoxStaticData> m_LootBoxTypes;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UDataTable* m_SmallLootDataTable;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UDataTable*> m_BigLootDataTables;
     
 public:

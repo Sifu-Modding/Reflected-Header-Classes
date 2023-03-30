@@ -2,5 +2,5 @@
 #include "CoreMinimal.h"
 #include "WidgetAnimationResultDelegate.generated.h"
 
-UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE(FWidgetAnimationResult);
+UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE(FWidgetAnimationResult);
 

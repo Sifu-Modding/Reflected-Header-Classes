@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTagContainer -FallbackName=GameplayTagContainer
-#include "GameplayEffectModifiedAttribute.h"
 #include "GameplayEffectContextHandle.h"
+#include "GameplayEffectModifiedAttribute.h"
 #include "GameplayEffectSpecForRPC.generated.h"
 
 class UGameplayEffect;
@@ -11,25 +11,25 @@ USTRUCT(BlueprintType)
 struct GAMEPLAYABILITIES_API FGameplayEffectSpecForRPC {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UGameplayEffect* Def;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FGameplayEffectModifiedAttribute> ModifiedAttributes;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayEffectContextHandle EffectContext;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayTagContainer AggregatedSourceTags;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayTagContainer AggregatedTargetTags;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Level;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float AbilityLevel;
     
     FGameplayEffectSpecForRPC();

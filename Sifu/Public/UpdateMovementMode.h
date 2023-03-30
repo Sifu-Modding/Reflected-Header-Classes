@@ -3,7 +3,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=AIModule -ObjectName=BTService -FallbackName=BTService
 #include "UpdateMovementMode.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class SIFU_API UUpdateMovementMode : public UBTService {
     GENERATED_BODY()
 public:

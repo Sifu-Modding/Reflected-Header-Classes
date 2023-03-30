@@ -1,21 +1,21 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RigUnit_ItemBase.h"
-#include "RigElementKey.h"
 #include "CachedRigElement.h"
+#include "RigElementKey.h"
+#include "RigUnit_ItemBase.h"
 #include "RigUnit_ItemExists.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_ItemExists : public FRigUnit_ItemBase {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRigElementKey Item;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool Exists;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FCachedRigElement CachedIndex;
     
     CONTROLRIG_API FRigUnit_ItemExists();

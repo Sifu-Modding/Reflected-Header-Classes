@@ -3,23 +3,23 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=PrimitiveComponent -FallbackName=PrimitiveComponent
 #include "LandscapeSplinesComponent.generated.h"
 
-class USplineMeshComponent;
 class ULandscapeSplineControlPoint;
 class ULandscapeSplineSegment;
 class UMeshComponent;
+class USplineMeshComponent;
 
-UCLASS(MinimalAPI, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, MinimalAPI, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class ULandscapeSplinesComponent : public UPrimitiveComponent {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(TextExportTransient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, TextExportTransient, meta=(AllowPrivateAccess=true))
     TArray<ULandscapeSplineControlPoint*> ControlPoints;
     
-    UPROPERTY(TextExportTransient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, TextExportTransient, meta=(AllowPrivateAccess=true))
     TArray<ULandscapeSplineSegment*> Segments;
     
-    UPROPERTY(Instanced, TextExportTransient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, TextExportTransient, meta=(AllowPrivateAccess=true))
     TArray<UMeshComponent*> CookedForeignMeshComponents;
     
 public:

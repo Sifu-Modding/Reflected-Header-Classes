@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RigUnit.h"
 #include "RigElementKey.h"
+#include "RigUnit.h"
 #include "RigUnit_Item.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_Item : public FRigUnit {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRigElementKey Item;
     
     CONTROLRIG_API FRigUnit_Item();

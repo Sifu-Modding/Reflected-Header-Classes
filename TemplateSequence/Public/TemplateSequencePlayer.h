@@ -4,12 +4,12 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=MovieScene -ObjectName=MovieSceneSequencePlayer -FallbackName=MovieSceneSequencePlayer
 #include "TemplateSequencePlayer.generated.h"
 
-class UTemplateSequencePlayer;
+class ATemplateSequenceActor;
 class UObject;
 class UTemplateSequence;
-class ATemplateSequenceActor;
+class UTemplateSequencePlayer;
 
-UCLASS()
+UCLASS(Blueprintable)
 class TEMPLATESEQUENCE_API UTemplateSequencePlayer : public UMovieSceneSequencePlayer {
     GENERATED_BODY()
 public:

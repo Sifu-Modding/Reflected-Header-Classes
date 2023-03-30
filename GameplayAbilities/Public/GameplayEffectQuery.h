@@ -1,37 +1,37 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "GameplayAttribute.h"
-#include "ActiveGameplayEffectQueryCustomMatch_DynamicDelegate.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTagQuery -FallbackName=GameplayTagQuery
+#include "ActiveGameplayEffectQueryCustomMatch_DynamicDelegate.h"
+#include "GameplayAttribute.h"
+#include "Templates/SubclassOf.h"
 #include "GameplayEffectQuery.generated.h"
 
-class UObject;
 class UGameplayEffect;
+class UObject;
 
 USTRUCT(BlueprintType)
 struct GAMEPLAYABILITIES_API FGameplayEffectQuery {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FActiveGameplayEffectQueryCustomMatch_Dynamic CustomMatchDelegate_BP;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayTagQuery OwningTagQuery;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayTagQuery EffectTagQuery;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayTagQuery SourceTagQuery;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayAttribute ModifyingAttribute;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UObject* EffectSource;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UGameplayEffect> EffectDefinition;
     
     FGameplayEffectQuery();

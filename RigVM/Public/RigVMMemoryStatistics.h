@@ -6,13 +6,13 @@ USTRUCT(BlueprintType)
 struct FRigVMMemoryStatistics {
     GENERATED_BODY()
 public:
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint32 RegisterCount;
     
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint32 DataBytes;
     
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint32 TotalBytes;
     
     RIGVM_API FRigVMMemoryStatistics();

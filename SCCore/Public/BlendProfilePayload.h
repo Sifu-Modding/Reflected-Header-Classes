@@ -3,7 +3,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
 #include "BlendProfilePayload.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class SCCORE_API UBlendProfilePayload : public UObject {
     GENERATED_BODY()
 public:

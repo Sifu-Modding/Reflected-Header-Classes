@@ -1,20 +1,20 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ProceduralFoliageInstance.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
+#include "ProceduralFoliageInstance.h"
 #include "ProceduralFoliageTile.generated.h"
 
 class UProceduralFoliageSpawner;
 
-UCLASS()
+UCLASS(Blueprintable)
 class FOLIAGE_API UProceduralFoliageTile : public UObject {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UProceduralFoliageSpawner* FoliageSpawner;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FProceduralFoliageInstance> InstancesArray;
     
 public:

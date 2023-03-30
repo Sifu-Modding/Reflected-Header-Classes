@@ -3,17 +3,17 @@
 #include "Templates/SubclassOf.h"
 #include "MovieSceneTrackInstanceComponent.generated.h"
 
-class UMovieSceneTrackInstance;
 class UMovieSceneSection;
+class UMovieSceneTrackInstance;
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FMovieSceneTrackInstanceComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UMovieSceneSection* Owner;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UMovieSceneTrackInstance> TrackInstanceClass;
     
     MOVIESCENE_API FMovieSceneTrackInstanceComponent();

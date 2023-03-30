@@ -3,16 +3,16 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCDialogManagerPlugin -ObjectName=DialogActionBase -FallbackName=DialogActionBase
 #include "StopLowStructureOnPrefightAction.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class SIFU_API UStopLowStructureOnPrefightAction : public UDialogActionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_ActorKey;
     
     UStopLowStructureOnPrefightAction();
 protected:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     TArray<FName> GetActorOptions() const;
     
 };

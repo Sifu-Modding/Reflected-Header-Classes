@@ -6,7 +6,7 @@
 class UHorizontalBoxSlot;
 class UWidget;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UMG_API UHorizontalBox : public UPanelWidget {
     GENERATED_BODY()
 public:

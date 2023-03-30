@@ -7,16 +7,16 @@ USTRUCT(BlueprintType)
 struct UMG_API FBlueprintWidgetAnimationDelegateBinding {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EWidgetAnimationEvent Action;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName AnimationToBind;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName FunctionNameToBind;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName UserTag;
     
     FBlueprintWidgetAnimationDelegateBinding();

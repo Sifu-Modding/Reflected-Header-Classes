@@ -1,18 +1,18 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "AISense.h"
-#include "AIDamageEvent.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
+#include "AIDamageEvent.h"
+#include "AISense.h"
 #include "AISense_Damage.generated.h"
 
-class UObject;
 class AActor;
+class UObject;
 
-UCLASS()
+UCLASS(Blueprintable)
 class AIMODULE_API UAISense_Damage : public UAISense {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FAIDamageEvent> RegisteredEvents;
     
     UAISense_Damage();

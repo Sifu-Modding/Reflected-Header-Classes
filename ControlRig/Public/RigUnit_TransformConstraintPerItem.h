@@ -1,37 +1,37 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RigUnit_TransformConstraint_WorkData.h"
-#include "RigUnit_HighlevelBaseMutable.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Transform -FallbackName=Transform
+#include "ConstraintTarget.h"
 #include "ETransformSpaceMode.h"
 #include "RigElementKey.h"
-#include "ConstraintTarget.h"
+#include "RigUnit_HighlevelBaseMutable.h"
+#include "RigUnit_TransformConstraint_WorkData.h"
 #include "RigUnit_TransformConstraintPerItem.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_TransformConstraintPerItem : public FRigUnit_HighlevelBaseMutable {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRigElementKey Item;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETransformSpaceMode BaseTransformSpace;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTransform BaseTransform;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRigElementKey BaseItem;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FConstraintTarget> Targets;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bUseInitialTransforms;
     
 private:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FRigUnit_TransformConstraint_WorkData WorkData;
     
 public:

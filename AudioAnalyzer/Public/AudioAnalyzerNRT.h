@@ -5,14 +5,14 @@
 
 class USoundWave;
 
-UCLASS(Abstract, BlueprintType, EditInlineNew)
+UCLASS(Abstract, Blueprintable, EditInlineNew)
 class AUDIOANALYZER_API UAudioAnalyzerNRT : public UAudioAnalyzerAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundWave* Sound;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DurationInSeconds;
     
     UAudioAnalyzerNRT();

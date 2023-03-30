@@ -4,15 +4,15 @@
 #include "EControlRigFKRigExecuteMode.h"
 #include "FKControlRig.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class CONTROLRIG_API UFKControlRig : public UControlRig {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<bool> IsControlActive;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EControlRigFKRigExecuteMode ApplyMode;
     
 public:

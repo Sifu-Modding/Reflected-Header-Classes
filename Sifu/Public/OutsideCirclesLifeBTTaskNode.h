@@ -3,7 +3,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=AIModule -ObjectName=BTTaskNode -FallbackName=BTTaskNode
 #include "OutsideCirclesLifeBTTaskNode.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class SIFU_API UOutsideCirclesLifeBTTaskNode : public UBTTaskNode {
     GENERATED_BODY()
 public:

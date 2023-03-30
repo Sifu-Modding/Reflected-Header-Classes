@@ -1,11 +1,11 @@
 #include "NiagaraComponent.h"
 
+class AActor;
+class UMaterialInterface;
+class UNiagaraDataInterface;
+class UNiagaraSystem;
 class UObject;
 class UTextureRenderTarget;
-class UMaterialInterface;
-class AActor;
-class UNiagaraSystem;
-class UNiagaraDataInterface;
 
 void UNiagaraComponent::SetVariableVec4(FName InVariableName, const FVector4& InValue) {
 }

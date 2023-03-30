@@ -9,10 +9,10 @@ USTRUCT(BlueprintType)
 struct FLandscapeComponentMaterialOverride {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FPerPlatformInt LODIndex;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UMaterialInterface* Material;
     
     LANDSCAPE_API FLandscapeComponentMaterialOverride();

@@ -1,18 +1,18 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RigUnit_MathRBFInterpolateVectorBase.h"
-#include "MathRBFInterpolateVectorXform_Target.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Transform -FallbackName=Transform
+#include "MathRBFInterpolateVectorXform_Target.h"
+#include "RigUnit_MathRBFInterpolateVectorBase.h"
 #include "RigUnit_MathRBFInterpolateVectorXform.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_MathRBFInterpolateVectorXform : public FRigUnit_MathRBFInterpolateVectorBase {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FMathRBFInterpolateVectorXform_Target> Targets;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTransform Output;
     
     CONTROLRIG_API FRigUnit_MathRBFInterpolateVectorXform();

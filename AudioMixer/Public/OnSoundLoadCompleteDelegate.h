@@ -4,5 +4,5 @@
 
 class USoundWave;
 
-UDELEGATE() DECLARE_DYNAMIC_DELEGATE_TwoParams(FOnSoundLoadComplete, const USoundWave*, LoadedSoundWave, const bool, WasCancelled);
+UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_DELEGATE_TwoParams(FOnSoundLoadComplete, const USoundWave*, LoadedSoundWave, const bool, WasCancelled);
 

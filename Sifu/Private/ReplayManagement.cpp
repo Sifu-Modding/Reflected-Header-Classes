@@ -9,6 +9,9 @@ void UReplayManagement::OnQuitReplayManagementMenu(bool _bIsPlayingReplay) {
 void UReplayManagement::BPF_SetReplayOpenState(const EReplayOpenState _eOpenState) {
 }
 
+void UReplayManagement::BPF_ResetReplayEditorMetaDataWithCallback(const FString& _replayID, const FSCDynamicDelegate& _callback) {
+}
+
 void UReplayManagement::BPF_ResetReplayEditorMetaData(const FString& _replayID) {
 }
 

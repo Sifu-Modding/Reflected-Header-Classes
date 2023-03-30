@@ -4,18 +4,18 @@
 #include "OnlineConnectionResultDelegate.h"
 #include "ConnectionCallbackProxy.generated.h"
 
-class UObject;
 class APlayerController;
 class UConnectionCallbackProxy;
+class UObject;
 
-UCLASS(MinimalAPI)
+UCLASS(Blueprintable, MinimalAPI)
 class UConnectionCallbackProxy : public UOnlineBlueprintCallProxyBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnlineConnectionResult OnSuccess;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnlineConnectionResult OnFailure;
     
     UConnectionCallbackProxy();

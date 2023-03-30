@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "MovieScenePropertyTrack.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=MovieScene -ObjectName=MovieSceneTrackTemplateProducer -FallbackName=MovieSceneTrackTemplateProducer
+#include "MovieScenePropertyTrack.h"
 #include "MovieScenePrimitiveMaterialTrack.generated.h"
 
-UCLASS(MinimalAPI)
+UCLASS(Blueprintable, MinimalAPI)
 class UMovieScenePrimitiveMaterialTrack : public UMovieScenePropertyTrack, public IMovieSceneTrackTemplateProducer {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 MaterialIndex;
     
     UMovieScenePrimitiveMaterialTrack();

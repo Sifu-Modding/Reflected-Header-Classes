@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EGameplayAbilityNetExecutionPolicy.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 namespace EGameplayAbilityNetExecutionPolicy {
     enum Type {
         LocalPredicted,

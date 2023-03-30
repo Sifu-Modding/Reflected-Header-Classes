@@ -1,21 +1,21 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RigUnit_CollectionBase.h"
-#include "RigElementKeyCollection.h"
 #include "RigElementKey.h"
+#include "RigElementKeyCollection.h"
+#include "RigUnit_CollectionBase.h"
 #include "RigUnit_CollectionItemAtIndex.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_CollectionItemAtIndex : public FRigUnit_CollectionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRigElementKeyCollection Collection;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 Index;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRigElementKey Item;
     
     CONTROLRIG_API FRigUnit_CollectionItemAtIndex();

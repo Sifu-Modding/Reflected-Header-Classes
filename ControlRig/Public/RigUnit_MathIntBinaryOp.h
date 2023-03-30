@@ -3,17 +3,17 @@
 #include "RigUnit_MathIntBase.h"
 #include "RigUnit_MathIntBinaryOp.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_MathIntBinaryOp : public FRigUnit_MathIntBase {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 A;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 B;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 Result;
     
     CONTROLRIG_API FRigUnit_MathIntBinaryOp();

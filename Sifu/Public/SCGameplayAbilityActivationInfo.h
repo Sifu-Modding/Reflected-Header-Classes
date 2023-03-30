@@ -1,34 +1,34 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayAbilities -ObjectName=GameplayEventData -FallbackName=GameplayEventData
-//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayAbilities -ObjectName=GameplayAbilitySpecHandle -FallbackName=GameplayAbilitySpecHandle
 //CROSS-MODULE INCLUDE V2: -ModuleName=GameplayAbilities -ObjectName=GameplayAbilityActivationInfo -FallbackName=GameplayAbilityActivationInfo
+//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayAbilities -ObjectName=GameplayAbilitySpecHandle -FallbackName=GameplayAbilitySpecHandle
+//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayAbilities -ObjectName=GameplayEventData -FallbackName=GameplayEventData
 #include "SCGameplayAbilityActorInfo.h"
 #include "SCGameplayAbilityActivationInfo.generated.h"
 
-class UAbilityPayload;
 class AActor;
+class UAbilityPayload;
 
 USTRUCT(BlueprintType)
 struct SIFU_API FSCGameplayAbilityActivationInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayAbilitySpecHandle m_Handle;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSCGameplayAbilityActorInfo m_ActorInfos;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayAbilityActivationInfo m_ActivationInfo;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayEventData m_EventData;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UAbilityPayload* m_Payload;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<AActor> m_Target;
     
     FSCGameplayAbilityActivationInfo();

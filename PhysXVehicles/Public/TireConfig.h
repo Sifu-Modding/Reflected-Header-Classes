@@ -4,15 +4,15 @@
 #include "TireConfigMaterialFriction.h"
 #include "TireConfig.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class PHYSXVEHICLES_API UTireConfig : public UDataAsset {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float FrictionScale;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTireConfigMaterialFriction> TireFrictionScales;
     
 public:

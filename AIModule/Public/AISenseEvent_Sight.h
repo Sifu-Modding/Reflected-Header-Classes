@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "AISightEvent.h"
 #include "AISenseEvent.h"
+#include "AISightEvent.h"
 #include "AISenseEvent_Sight.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class AIMODULE_API UAISenseEvent_Sight : public UAISenseEvent {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAISightEvent Event;
     
     UAISenseEvent_Sight();

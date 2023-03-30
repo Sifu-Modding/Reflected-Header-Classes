@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct FNamedInterface {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName InterfaceName;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UObject* InterfaceObject;
     
     ONLINESUBSYSTEM_API FNamedInterface();

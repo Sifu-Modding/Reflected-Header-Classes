@@ -1,18 +1,18 @@
 #include "AkGameplayStatics.h"
 
 class AActor;
-class UAkAuxBus;
 class UAkAudioBank;
-class UObject;
 class UAkAudioEvent;
-class UAkSwitchValue;
-class UAkComponent;
-class UAkStateValue;
-class UAkRtpc;
-class USceneComponent;
-class UAkTrigger;
-class UAkMediaAsset;
 class UAkAudioType;
+class UAkAuxBus;
+class UAkComponent;
+class UAkMediaAsset;
+class UAkRtpc;
+class UAkStateValue;
+class UAkSwitchValue;
+class UAkTrigger;
+class UObject;
+class USceneComponent;
 
 void UAkGameplayStatics::UseReverbVolumes(bool inUseReverbVolumes, AActor* Actor) {
 }

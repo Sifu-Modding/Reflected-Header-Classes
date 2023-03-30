@@ -2,57 +2,57 @@
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=CameraComponent -FallbackName=CameraComponent
 #include "CameraFilmbackSettings.h"
-#include "CameraLensSettings.h"
 #include "CameraFocusSettings.h"
+#include "CameraLensSettings.h"
 #include "NamedFilmbackPreset.h"
 #include "NamedLensPreset.h"
 #include "CineCameraComponent.generated.h"
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class CINEMATICCAMERA_API UCineCameraComponent : public UCameraComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FCameraFilmbackSettings FilmbackSettings;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Interp)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Interp, meta=(AllowPrivateAccess=true))
     FCameraFilmbackSettings Filmback;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FCameraLensSettings LensSettings;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FCameraFocusSettings FocusSettings;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Interp)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Interp, meta=(AllowPrivateAccess=true))
     float CurrentFocalLength;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Interp)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Interp, meta=(AllowPrivateAccess=true))
     float CurrentAperture;
     
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float CurrentFocusDistance;
     
 protected:
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FNamedFilmbackPreset> FilmbackPresets;
     
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FNamedLensPreset> LensPresets;
     
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString DefaultFilmbackPresetName;
     
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString DefaultFilmbackPreset;
     
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString DefaultLensPresetName;
     
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DefaultLensFocalLength;
     
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DefaultLensFStop;
     
 public:
@@ -66,25 +66,25 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetCurrentFocalLength(float InFocalLength);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetVerticalFieldOfView() const;
     
     UFUNCTION(BlueprintCallable)
     static TArray<FNamedLensPreset> GetLensPresetsCopy();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FString GetLensPresetName() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetHorizontalFieldOfView() const;
     
     UFUNCTION(BlueprintCallable)
     static TArray<FNamedFilmbackPreset> GetFilmbackPresetsCopy();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FString GetFilmbackPresetName() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FString GetDefaultFilmbackPresetName() const;
     
 };

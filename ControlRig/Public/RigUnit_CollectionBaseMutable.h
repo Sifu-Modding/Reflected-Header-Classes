@@ -3,7 +3,7 @@
 #include "RigUnitMutable.h"
 #include "RigUnit_CollectionBaseMutable.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_CollectionBaseMutable : public FRigUnitMutable {
     GENERATED_BODY()
 public:

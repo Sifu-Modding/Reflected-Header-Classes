@@ -6,17 +6,17 @@
 
 class UNavigationGraphNodeComponent;
 
-UCLASS(MinimalAPI, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, MinimalAPI, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UNavigationGraphNodeComponent : public USceneComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FNavGraphNode Node;
     
-    UPROPERTY(Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UNavigationGraphNodeComponent* NextNodeComponent;
     
-    UPROPERTY(Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UNavigationGraphNodeComponent* PrevNodeComponent;
     
     UNavigationGraphNodeComponent();

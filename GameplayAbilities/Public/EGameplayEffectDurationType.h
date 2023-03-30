@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EGameplayEffectDurationType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EGameplayEffectDurationType : uint8 {
     Instant,
     Infinite,

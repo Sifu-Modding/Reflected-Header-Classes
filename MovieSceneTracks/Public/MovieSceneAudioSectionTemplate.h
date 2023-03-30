@@ -5,11 +5,11 @@
 
 class UMovieSceneAudioSection;
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FMovieSceneAudioSectionTemplate : public FMovieSceneEvalTemplate {
     GENERATED_BODY()
 public:
-    UPROPERTY(Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UMovieSceneAudioSection* AudioSection;
     
     MOVIESCENETRACKS_API FMovieSceneAudioSectionTemplate();

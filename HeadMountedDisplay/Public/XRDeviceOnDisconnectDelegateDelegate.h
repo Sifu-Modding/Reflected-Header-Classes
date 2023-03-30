@@ -2,5 +2,5 @@
 #include "CoreMinimal.h"
 #include "XRDeviceOnDisconnectDelegateDelegate.generated.h"
 
-UDELEGATE() DECLARE_DYNAMIC_DELEGATE_OneParam(FXRDeviceOnDisconnectDelegate, const FString&, OutReason);
+UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_DELEGATE_OneParam(FXRDeviceOnDisconnectDelegate, const FString&, OutReason);
 

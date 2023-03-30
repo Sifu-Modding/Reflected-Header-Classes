@@ -1,21 +1,21 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "CachedRigElement.h"
-#include "RigUnit_SetMultiControlFloat_Entry.h"
 #include "RigUnitMutable.h"
+#include "RigUnit_SetMultiControlFloat_Entry.h"
 #include "RigUnit_SetMultiControlFloat.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_SetMultiControlFloat : public FRigUnitMutable {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FRigUnit_SetMultiControlFloat_Entry> Entries;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Weight;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FCachedRigElement> CachedControlIndices;
     
     CONTROLRIG_API FRigUnit_SetMultiControlFloat();

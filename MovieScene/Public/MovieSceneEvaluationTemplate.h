@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "MovieSceneTrackIdentifier.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Guid -FallbackName=Guid
-#include "MovieSceneEvaluationTrack.h"
 #include "MovieSceneEvaluationTemplateSerialNumber.h"
+#include "MovieSceneEvaluationTrack.h"
 #include "MovieSceneTemplateGenerationLedger.h"
+#include "MovieSceneTrackIdentifier.h"
 #include "MovieSceneEvaluationTemplate.generated.h"
 
 USTRUCT(BlueprintType)
@@ -12,18 +12,18 @@ struct FMovieSceneEvaluationTemplate {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<FMovieSceneTrackIdentifier, FMovieSceneEvaluationTrack> Tracks;
     
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGuid SequenceSignature;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMovieSceneEvaluationTemplateSerialNumber TemplateSerialNumber;
     
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMovieSceneTemplateGenerationLedger TemplateLedger;
     
 public:

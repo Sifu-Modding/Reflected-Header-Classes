@@ -3,14 +3,14 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BoneReference -FallbackName=BoneReference
 #include "SplineIKCachedBoneData.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FSplineIKCachedBoneData {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     FBoneReference Bone;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 RefSkeletonIndex;
     
     ANIMGRAPHRUNTIME_API FSplineIKCachedBoneData();

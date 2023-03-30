@@ -1,13 +1,13 @@
 #include "AIController.h"
-#include "Templates/SubclassOf.h"
 #include "PathFollowingComponent.h"
 #include "PawnActionsComponent.h"
+#include "Templates/SubclassOf.h"
 
-class UBlackboardData;
-class UBehaviorTree;
-class UAIPerceptionComponent;
-class UBlackboardComponent;
 class AActor;
+class UAIPerceptionComponent;
+class UBehaviorTree;
+class UBlackboardComponent;
+class UBlackboardData;
 class UGameplayTaskResource;
 class UNavigationQueryFilter;
 

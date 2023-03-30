@@ -1,23 +1,23 @@
 #pragma once
 #include "CoreMinimal.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTag -FallbackName=GameplayTag
 #include "AbilityTask.h"
 #include "WaitGameplayEventDelegateDelegate.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTag -FallbackName=GameplayTag
 #include "AbilityTask_WaitGameplayEvent.generated.h"
 
+class AActor;
 class UAbilitySystemComponent;
 class UAbilityTask_WaitGameplayEvent;
 class UGameplayAbility;
-class AActor;
 
-UCLASS()
+UCLASS(Blueprintable)
 class GAMEPLAYABILITIES_API UAbilityTask_WaitGameplayEvent : public UAbilityTask {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FWaitGameplayEventDelegate EventReceived;
     
-    UPROPERTY(Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UAbilitySystemComponent* OptionalExternalTarget;
     
     UAbilityTask_WaitGameplayEvent();

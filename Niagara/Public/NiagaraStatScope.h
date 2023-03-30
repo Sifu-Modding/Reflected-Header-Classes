@@ -2,14 +2,14 @@
 #include "CoreMinimal.h"
 #include "NiagaraStatScope.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FNiagaraStatScope {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName FullName;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName FriendlyName;
     
     NIAGARA_API FNiagaraStatScope();

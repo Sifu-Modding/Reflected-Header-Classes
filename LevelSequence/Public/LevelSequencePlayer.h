@@ -5,24 +5,24 @@
 #include "OnLevelSequencePlayerCameraCutEventDelegate.h"
 #include "LevelSequencePlayer.generated.h"
 
+class ALevelSequenceActor;
 class UCameraComponent;
 class ULevelSequence;
-class ALevelSequenceActor;
 class ULevelSequencePlayer;
 class UObject;
 
-UCLASS()
+UCLASS(Blueprintable)
 class LEVELSEQUENCE_API ULevelSequencePlayer : public UMovieSceneSequencePlayer {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnLevelSequencePlayerCameraCutEvent OnCameraCut;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ALevelSequenceActor* SequenceActor;
     
     ULevelSequencePlayer();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UCameraComponent* GetActiveCameraComponent() const;
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))

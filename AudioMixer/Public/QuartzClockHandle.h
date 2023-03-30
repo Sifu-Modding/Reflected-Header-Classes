@@ -2,12 +2,12 @@
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=EQuartzCommandQuantization -FallbackName=EQuartzCommandQuantization
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=OnQuartzCommandEventBP__DelegateSignature -FallbackName=OnQuartzCommandEventBPDelegate
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=OnQuartzMetronomeEventBP__DelegateSignature -FallbackName=OnQuartzMetronomeEventBPDelegate
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=QuartzQuantizationBoundary -FallbackName=QuartzQuantizationBoundary
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=OnQuartzCommandEventBP__DelegateSignature -FallbackName=OnQuartzCommandEventBPDelegate
 #include "QuartzClockHandle.generated.h"
 
-UCLASS(BlueprintType, Transient)
+UCLASS(Blueprintable, Transient)
 class AUDIOMIXER_API UQuartzClockHandle : public UObject {
     GENERATED_BODY()
 public:
@@ -48,19 +48,19 @@ public:
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     void PauseClock(const UObject* WorldContextObject);
     
-    UFUNCTION(BlueprintPure, meta=(WorldContext="WorldContextObject"))
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     float GetTicksPerSecond(const UObject* WorldContextObject) const;
     
-    UFUNCTION(BlueprintPure, meta=(WorldContext="WorldContextObject"))
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     float GetThirtySecondNotesPerMinute(const UObject* WorldContextObject) const;
     
-    UFUNCTION(BlueprintPure, meta=(WorldContext="WorldContextObject"))
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     float GetSecondsPerTick(const UObject* WorldContextObject) const;
     
-    UFUNCTION(BlueprintPure, meta=(WorldContext="WorldContextObject"))
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     float GetMillisecondsPerTick(const UObject* WorldContextObject) const;
     
-    UFUNCTION(BlueprintPure, meta=(WorldContext="WorldContextObject"))
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     float GetBeatsPerMinute(const UObject* WorldContextObject) const;
     
 };

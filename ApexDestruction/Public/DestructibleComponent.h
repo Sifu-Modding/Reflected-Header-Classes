@@ -1,53 +1,53 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ComponentFractureSignatureDelegate.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=DestructibleInterface -FallbackName=DestructibleInterface
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=SkinnedMeshComponent -FallbackName=SkinnedMeshComponent
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=FractureEffect -FallbackName=FractureEffect
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=SkinnedMeshComponent -FallbackName=SkinnedMeshComponent
+#include "ComponentFractureSignatureDelegate.h"
 #include "DestructibleWakeStateDelegateDelegate.h"
 #include "DestructibleComponent.generated.h"
 
+class UDestructibleMesh;
 class UDestructibleSnapshot;
 class UMaterialInterface;
-class UDestructibleMesh;
 
-UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class APEXDESTRUCTION_API UDestructibleComponent : public USkinnedMeshComponent, public IDestructibleInterface {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bFractureEffectOverride: 1;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, EditFixedSize)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, EditFixedSize, meta=(AllowPrivateAccess=true))
     TArray<FFractureEffect> FractureEffects;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bEnableHardSleeping;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float LargeChunkThreshold;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UDestructibleMesh* LowEndDestructibleMesh;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FComponentFractureSignature OnComponentFracture;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FComponentFractureSignature OnComponentSilentFracture;
     
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ApexChunksMaxDistanceThreshold;
     
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ApexChunksUpdateSleepInterval;
     
-    UPROPERTY(BlueprintAssignable, Transient)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FDestructibleWakeStateDelegate OnWakeStateChanged;
     
 private:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UDestructibleSnapshot* Snapshot;
     
 public:
@@ -58,7 +58,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void ReplaceAllMaterials(UMaterialInterface* Material);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsFractured() const;
     
     UFUNCTION(BlueprintCallable)

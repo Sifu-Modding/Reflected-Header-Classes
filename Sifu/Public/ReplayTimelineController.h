@@ -1,30 +1,38 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
-#include "OnTimeDilationChangedSignatureDelegate.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCDelegate -FallbackName=SCDelegate
+//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCDynamicDelegate__DelegateSignature -FallbackName=SCDynamicDelegateDelegate
 #include "EReplayKeyTypeFlag.h"
+#include "OnTimeDilationChangedSignatureDelegate.h"
 #include "ReplayTimelineController.generated.h"
 
 class UReplayCutManagement;
-class UReplayTimelineModel;
 class UReplayKey;
+class UReplayTimelineModel;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class SIFU_API UReplayTimelineController : public UObject {
     GENERATED_BODY()
 public:
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    USCDelegate::FDynamicMulticast m_OnModelReset;
+    
 protected:
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UReplayCutManagement* m_CutManagement;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UReplayTimelineModel* m_Model;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnTimeDilationChangedSignature m_OnTimeDilationChanged;
     
 public:
     UReplayTimelineController();
+    UFUNCTION(BlueprintCallable)
+    void BPF_SaveKeysWithCallback(const FSCDynamicDelegate& _onModelSaved);
+    
     UFUNCTION(BlueprintCallable)
     void BPF_SaveKeys();
     
@@ -32,15 +40,18 @@ public:
     void BPF_ResetTransitionContext();
     
     UFUNCTION(BlueprintCallable)
+    void BPF_ResetModelWithCallback(const FSCDynamicDelegate& _onModelSaved);
+    
+    UFUNCTION(BlueprintCallable)
     void BPF_ResetModel();
     
     UFUNCTION(BlueprintCallable)
     void BPF_ResetFocusTargetTransitionContext();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UReplayKey* BPF_GetCurrentKeyWithCameraTransition() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UReplayKey* BPF_GetCurrentKeyOfType(EReplayKeyTypeFlag _eTypeFlag) const;
     
 };

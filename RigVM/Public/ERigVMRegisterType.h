@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ERigVMRegisterType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class ERigVMRegisterType : uint8 {
     Plain,
     String,

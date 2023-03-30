@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EGameplayEffectMagnitudeCalculation.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EGameplayEffectMagnitudeCalculation : uint8 {
     ScalableFloat,
     AttributeBased,

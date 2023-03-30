@@ -4,12 +4,12 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTag -FallbackName=GameplayTag
 #include "SCContentRestrictionBlueprintHelper.generated.h"
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class SCCORE_API USCContentRestrictionBlueprintHelper : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     USCContentRestrictionBlueprintHelper();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool BPF_IsContentAvailable(FGameplayTag _wantedContentType);
     
 };

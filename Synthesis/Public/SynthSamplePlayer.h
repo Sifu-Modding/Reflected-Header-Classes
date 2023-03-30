@@ -1,24 +1,24 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=AudioMixer -ObjectName=SynthComponent -FallbackName=SynthComponent
+#include "ESamplePlayerSeekType.h"
 #include "OnSampleLoadedDelegate.h"
 #include "OnSamplePlaybackProgressDelegate.h"
-#include "ESamplePlayerSeekType.h"
 #include "SynthSamplePlayer.generated.h"
 
 class USoundWave;
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class SYNTHESIS_API USynthSamplePlayer : public USynthComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundWave* SoundWave;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnSampleLoaded OnSampleLoaded;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnSamplePlaybackProgress OnSamplePlaybackProgress;
     
     USynthSamplePlayer();
@@ -37,16 +37,16 @@ public:
     UFUNCTION(BlueprintCallable)
     void SeekToTime(float TimeSec, ESamplePlayerSeekType SeekType, bool bWrap);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsLoaded() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetSampleDuration() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetCurrentPlaybackProgressTime() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetCurrentPlaybackProgressPercent() const;
     
 };

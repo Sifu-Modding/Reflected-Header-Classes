@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GizmoStateTarget.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
+#include "GizmoStateTarget.h"
 #include "GizmoTransformChangeStateTarget.generated.h"
 
-class UToolContextTransactionProvider;
 class IToolContextTransactionProvider;
+class UToolContextTransactionProvider;
 
-UCLASS()
+UCLASS(Blueprintable)
 class INTERACTIVETOOLSFRAMEWORK_API UGizmoTransformChangeStateTarget : public UObject, public IGizmoStateTarget {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TScriptInterface<IToolContextTransactionProvider> TransactionManager;
     
     UGizmoTransformChangeStateTarget();

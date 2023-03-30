@@ -5,15 +5,15 @@
 #include "MovieSceneActorReferenceData.h"
 #include "MovieSceneActorReferenceSectionTemplate.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FMovieSceneActorReferenceSectionTemplate : public FMovieSceneEvalTemplate {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMovieScenePropertySectionData PropertyData;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMovieSceneActorReferenceData ActorReferenceData;
     
 public:

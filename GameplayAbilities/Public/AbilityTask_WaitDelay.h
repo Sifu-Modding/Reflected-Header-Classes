@@ -7,11 +7,11 @@
 class UAbilityTask_WaitDelay;
 class UGameplayAbility;
 
-UCLASS()
+UCLASS(Blueprintable)
 class GAMEPLAYABILITIES_API UAbilityTask_WaitDelay : public UAbilityTask {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FWaitDelayDelegate OnFinish;
     
     UAbilityTask_WaitDelay();

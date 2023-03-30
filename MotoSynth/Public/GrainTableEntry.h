@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FGrainTableEntry {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 SampleIndex;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float RPM;
     
     MOTOSYNTH_API FGrainTableEntry();

@@ -7,16 +7,16 @@ USTRUCT(BlueprintType)
 struct FStructSerializerSetTestStruct {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSet<FString> StrSet;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSet<int32> IntSet;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSet<FName> NameSet;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSet<FStructSerializerBuiltinTestStruct> StructSet;
     
     SERIALIZATION_API FStructSerializerSetTestStruct();

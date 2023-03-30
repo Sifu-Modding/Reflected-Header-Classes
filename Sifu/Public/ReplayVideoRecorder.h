@@ -1,24 +1,24 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=Actor -FallbackName=Actor
-#include "VideoRecordEventDelegate.h"
 #include "AvailabilityLayerCache.h"
+#include "VideoRecordEventDelegate.h"
 #include "ReplayVideoRecorder.generated.h"
 
 class UWorld;
 
-UCLASS()
+UCLASS(Blueprintable)
 class SIFU_API AReplayVideoRecorder : public AActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintAssignable, BlueprintCallable)
+    UPROPERTY(BlueprintAssignable, BlueprintCallable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVideoRecordEvent m_OnVideoRecordingComplete;
     
-    UPROPERTY(BlueprintAssignable, BlueprintCallable)
+    UPROPERTY(BlueprintAssignable, BlueprintCallable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVideoRecordEvent m_OnVideoRecordingStarted;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAvailabilityLayerCache m_AvailabilityLayerCache;
     
 public:
@@ -37,14 +37,14 @@ public:
     UFUNCTION(BlueprintCallable)
     void BPF_GoToEnd();
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BPE_StartRecordingVideo();
     
 protected:
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BPE_OnPlayBackCompleted(UWorld* _world);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BPE_OnGoToTimeCompleted();
     
 };

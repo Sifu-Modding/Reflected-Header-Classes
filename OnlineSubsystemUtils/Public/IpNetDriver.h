@@ -3,39 +3,39 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=NetDriver -FallbackName=NetDriver
 #include "IpNetDriver.generated.h"
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class ONLINESUBSYSTEMUTILS_API UIpNetDriver : public UNetDriver {
     GENERATED_BODY()
 public:
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 LogPortUnreach: 1;
     
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 AllowPlayerPortUnreach: 1;
     
-    UPROPERTY(Config)
+    UPROPERTY(Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint32 MaxPortCountToTry;
     
 private:
-    UPROPERTY(Config)
+    UPROPERTY(Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint32 ServerDesiredSocketReceiveBufferBytes;
     
-    UPROPERTY(Config)
+    UPROPERTY(Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint32 ServerDesiredSocketSendBufferBytes;
     
-    UPROPERTY(Config)
+    UPROPERTY(Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint32 ClientDesiredSocketReceiveBufferBytes;
     
-    UPROPERTY(Config)
+    UPROPERTY(Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint32 ClientDesiredSocketSendBufferBytes;
     
-    UPROPERTY(Config)
+    UPROPERTY(Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     double MaxSecondsInReceive;
     
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 NbPacketsBetweenReceiveTimeTest;
     
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ResolutionConnectionTimeout;
     
 public:

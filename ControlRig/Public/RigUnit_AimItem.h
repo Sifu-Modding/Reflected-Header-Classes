@@ -1,38 +1,38 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RigUnit_HighlevelBaseMutable.h"
+#include "CachedRigElement.h"
 #include "RigElementKey.h"
 #include "RigUnit_AimBone_DebugSettings.h"
 #include "RigUnit_AimItem_Target.h"
-#include "CachedRigElement.h"
+#include "RigUnit_HighlevelBaseMutable.h"
 #include "RigUnit_AimItem.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_AimItem : public FRigUnit_HighlevelBaseMutable {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRigElementKey Item;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRigUnit_AimItem_Target Primary;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRigUnit_AimItem_Target Secondary;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Weight;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRigUnit_AimBone_DebugSettings DebugSettings;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FCachedRigElement CachedItem;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FCachedRigElement PrimaryCachedSpace;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FCachedRigElement SecondaryCachedSpace;
     
     CONTROLRIG_API FRigUnit_AimItem();

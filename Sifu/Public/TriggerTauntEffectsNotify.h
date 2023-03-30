@@ -3,7 +3,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=AnimNotify -FallbackName=AnimNotify
 #include "TriggerTauntEffectsNotify.generated.h"
 
-UCLASS(CollapseCategories)
+UCLASS(Blueprintable, CollapseCategories)
 class SIFU_API UTriggerTauntEffectsNotify : public UAnimNotify {
     GENERATED_BODY()
 public:

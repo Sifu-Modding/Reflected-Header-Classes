@@ -7,16 +7,16 @@ USTRUCT(BlueprintType)
 struct FNiagaraVariableLayoutInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint32 FloatComponentStart;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint32 Int32ComponentStart;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint32 HalfComponentStart;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FNiagaraTypeLayoutInfo LayoutInfo;
     
     NIAGARA_API FNiagaraVariableLayoutInfo();

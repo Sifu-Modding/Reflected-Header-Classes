@@ -4,45 +4,45 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=SoftObjectPath -FallbackName=SoftObjectPath
 #include "MoviePipelineExecutorJob.generated.h"
 
-class UMoviePipelineMasterConfig;
 class UMoviePipelineExecutorShot;
+class UMoviePipelineMasterConfig;
 
 UCLASS(Blueprintable)
 class MOVIERENDERPIPELINECORE_API UMoviePipelineExecutorJob : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString JobName;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSoftObjectPath Sequence;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSoftObjectPath Map;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString Author;
     
-    UPROPERTY(BlueprintReadWrite, Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     TArray<UMoviePipelineExecutorShot*> ShotInfo;
     
-    UPROPERTY(BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString UserData;
     
 private:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FString StatusMessage;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float StatusProgress;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     bool bIsConsumed;
     
-    UPROPERTY(Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UMoviePipelineMasterConfig* Configuration;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSoftObjectPtr<UMoviePipelineMasterConfig> PresetOrigin;
     
 public:
@@ -68,19 +68,19 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void OnDuplicated();
     
-    UFUNCTION(BlueprintNativeEvent, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent, BlueprintPure)
     bool IsConsumed() const;
     
-    UFUNCTION(BlueprintNativeEvent, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent, BlueprintPure)
     float GetStatusProgress() const;
     
-    UFUNCTION(BlueprintNativeEvent, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent, BlueprintPure)
     FString GetStatusMessage() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UMoviePipelineMasterConfig* GetPresetOrigin() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UMoviePipelineMasterConfig* GetConfiguration() const;
     
 };

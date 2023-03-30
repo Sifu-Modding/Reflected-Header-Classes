@@ -2,20 +2,20 @@
 #include "CoreMinimal.h"
 #include "NiagaraHalfVector4.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FNiagaraHalfVector4 {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint16 X;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint16 Y;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint16 Z;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint16 W;
     
     NIAGARA_API FNiagaraHalfVector4();

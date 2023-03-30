@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct FMovieSceneNestedSequenceTransform {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMovieSceneTimeTransform LinearTransform;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMovieSceneTimeWarping Warping;
     
     MOVIESCENE_API FMovieSceneNestedSequenceTransform();

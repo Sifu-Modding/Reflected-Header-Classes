@@ -5,12 +5,12 @@
 
 class UMoviePipeline;
 
-UCLASS(Abstract, EditInlineNew)
+UCLASS(Abstract, Blueprintable, EditInlineNew)
 class MOVIERENDERPIPELINESETTINGS_API UMoviePipelineBurnInWidget : public UUserWidget {
     GENERATED_BODY()
 public:
     UMoviePipelineBurnInWidget();
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnOutputFrameStarted(UMoviePipeline* ForPipeline);
     
 };

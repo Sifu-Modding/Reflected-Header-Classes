@@ -4,11 +4,11 @@
 #include "EnvTraceData.h"
 #include "EnvQueryGenerator_ProjectedPoints.generated.h"
 
-UCLASS(Abstract, EditInlineNew)
+UCLASS(Abstract, Blueprintable, EditInlineNew)
 class AIMODULE_API UEnvQueryGenerator_ProjectedPoints : public UEnvQueryGenerator {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FEnvTraceData ProjectionData;
     
     UEnvQueryGenerator_ProjectedPoints();

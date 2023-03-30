@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FMovieSceneMarkedFrame {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FFrameNumber FrameNumber;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString Label;
     
     MOVIESCENE_API FMovieSceneMarkedFrame();

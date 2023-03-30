@@ -1,19 +1,19 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=DataAsset -FallbackName=DataAsset
-#include "ReplayKeyWidgetVisualKey.h"
 #include "ReplayKeyWidgetVisualData.h"
+#include "ReplayKeyWidgetVisualKey.h"
 #include "ReplayKeyWidgetVisualsDB.generated.h"
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class SIFU_API UReplayKeyWidgetVisualsDB : public UDataAsset {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<FReplayKeyWidgetVisualKey, FReplayKeyWidgetVisualData> m_Visuals;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FReplayKeyWidgetVisualData m_DefaultVisual;
     
 public:

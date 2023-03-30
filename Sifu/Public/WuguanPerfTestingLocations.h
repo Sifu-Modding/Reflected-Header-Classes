@@ -5,12 +5,12 @@
 
 class AAISituationActor;
 
-UCLASS()
+UCLASS(Blueprintable)
 class SIFU_API AWuguanPerfTestingLocations : public ASCTestingLocationsBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<TSoftObjectPtr<AAISituationActor>> m_situationsToSpawn;
     
 public:

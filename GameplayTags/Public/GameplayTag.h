@@ -7,10 +7,11 @@ struct GAMEPLAYTAGS_API FGameplayTag {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(SaveGame, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
     FName TagName;
     
 public:
     FGameplayTag();
 };
+FORCEINLINE uint32 GetTypeHash(const FGameplayTag) { return 0; }
 

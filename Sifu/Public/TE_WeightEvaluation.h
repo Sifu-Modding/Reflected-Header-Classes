@@ -1,19 +1,19 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EWeightBinaryOperator.h"
 #include "BaseTargetEvaluation.h"
+#include "EWeightBinaryOperator.h"
 #include "TE_WeightEvaluation.generated.h"
 
 class UBaseTargetWeightEvaluation;
 
-UCLASS()
+UCLASS(Blueprintable)
 class SIFU_API UTE_WeightEvaluation : public UBaseTargetEvaluation {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EWeightBinaryOperator m_eOperator;
     
-    UPROPERTY(EditAnywhere, Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     TArray<UBaseTargetWeightEvaluation*> m_Evaluations;
     
     UTE_WeightEvaluation();

@@ -5,17 +5,17 @@
 
 class UOpenColorIOConfiguration;
 
-UCLASS()
+UCLASS(Blueprintable)
 class OPENCOLORIO_API UOpenColorIOColorTransform : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UOpenColorIOConfiguration* ConfigurationOwner;
     
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString SourceColorSpace;
     
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString DestinationColorSpace;
     
     UOpenColorIOColorTransform();

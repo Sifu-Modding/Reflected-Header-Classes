@@ -4,14 +4,14 @@
 #include "GameplayTagTableRow.h"
 #include "GameplayTagsList.generated.h"
 
-UCLASS(NotPlaceable, Config=GameplayTagsList)
+UCLASS(Blueprintable, NotPlaceable, Config=GameplayTagsList)
 class GAMEPLAYTAGS_API UGameplayTagsList : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString ConfigFileName;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FGameplayTagTableRow> GameplayTagList;
     
     UGameplayTagsList();

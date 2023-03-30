@@ -3,12 +3,12 @@
 #include "MovieSceneAudioCaptureProtocolBase.h"
 #include "MasterAudioSubmixCaptureProtocol.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class MOVIESCENECAPTURE_API UMasterAudioSubmixCaptureProtocol : public UMovieSceneAudioCaptureProtocolBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString Filename;
     
 public:

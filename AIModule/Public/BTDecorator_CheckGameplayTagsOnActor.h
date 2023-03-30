@@ -1,26 +1,26 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "BTDecorator.h"
-#include "BlackboardKeySelector.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=EGameplayContainerMatchType -FallbackName=EGameplayContainerMatchType
 //CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTagContainer -FallbackName=GameplayTagContainer
+#include "BTDecorator.h"
+#include "BlackboardKeySelector.h"
 #include "BTDecorator_CheckGameplayTagsOnActor.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class AIMODULE_API UBTDecorator_CheckGameplayTagsOnActor : public UBTDecorator {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBlackboardKeySelector ActorToCheck;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EGameplayContainerMatchType TagsToMatch;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayTagContainer GameplayTags;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString CachedDescription;
     
 public:

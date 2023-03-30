@@ -9,10 +9,10 @@ struct MOVIESCENE_API FMovieSceneObjectPathChannelKeyValue {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSoftObjectPtr<UObject> SoftPtr;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UObject* HardPtr;
     
 public:

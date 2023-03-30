@@ -1,36 +1,36 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RigUnit_MathRBFInterpolateBase.h"
-#include "ERBFKernelType.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Quat -FallbackName=Quat
-#include "ERBFQuatDistanceType.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
+#include "ERBFKernelType.h"
+#include "ERBFQuatDistanceType.h"
+#include "RigUnit_MathRBFInterpolateBase.h"
 #include "RigUnit_MathRBFInterpolateQuatWorkData.h"
 #include "RigUnit_MathRBFInterpolateQuatBase.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_MathRBFInterpolateQuatBase : public FRigUnit_MathRBFInterpolateBase {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FQuat Input;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ERBFQuatDistanceType DistanceFunction;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ERBFKernelType SmoothingFunction;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float SmoothingAngle;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bNormalizeOutput;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector TwistAxis;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FRigUnit_MathRBFInterpolateQuatWorkData WorkData;
     
     CONTROLRIG_API FRigUnit_MathRBFInterpolateQuatBase();

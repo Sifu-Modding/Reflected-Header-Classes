@@ -3,20 +3,20 @@
 #include "RigUnit.h"
 #include "RigUnit_Clamp_Float.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_Clamp_Float : public FRigUnit {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Value;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Min;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Max;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Result;
     
     CONTROLRIG_API FRigUnit_Clamp_Float();

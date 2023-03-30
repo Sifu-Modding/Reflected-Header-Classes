@@ -1,21 +1,21 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "CompositeFallbackFont.h"
-#include "Typeface.h"
 #include "CompositeSubFont.h"
+#include "Typeface.h"
 #include "CompositeFont.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct SLATECORE_API FCompositeFont {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTypeface DefaultTypeface;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FCompositeFallbackFont FallbackTypeface;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FCompositeSubFont> SubTypefaces;
     
     FCompositeFont();

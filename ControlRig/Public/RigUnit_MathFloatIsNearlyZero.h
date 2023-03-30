@@ -3,17 +3,17 @@
 #include "RigUnit_MathFloatBase.h"
 #include "RigUnit_MathFloatIsNearlyZero.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_MathFloatIsNearlyZero : public FRigUnit_MathFloatBase {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Value;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Tolerance;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool Result;
     
     CONTROLRIG_API FRigUnit_MathFloatIsNearlyZero();

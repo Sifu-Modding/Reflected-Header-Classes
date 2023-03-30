@@ -1,34 +1,34 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=SceneComponent -FallbackName=SceneComponent
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Guid -FallbackName=Guid
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=SceneComponent -FallbackName=SceneComponent
 #include "ARComponent.generated.h"
 
-class UMaterialInterface;
 class UARTrackedGeometry;
 class UMRMeshComponent;
+class UMaterialInterface;
 
 UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class AUGMENTEDREALITY_API UARComponent : public USceneComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     FGuid NativeID;
     
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bUseDefaultReplication;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UMaterialInterface* DefaultMeshMaterial;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UMaterialInterface* DefaultWireframeMeshMaterial;
     
-    UPROPERTY(Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UMRMeshComponent* MRMeshComponent;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UARTrackedGeometry* MyTrackedGeometry;
     
 public:
@@ -41,15 +41,15 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetNativeID(FGuid NewNativeID);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveRemove();
     
 protected:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnRep_Payload();
     
 public:
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UMRMeshComponent* GetMRMesh();
     
 };

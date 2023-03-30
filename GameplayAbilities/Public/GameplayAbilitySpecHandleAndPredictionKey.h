@@ -3,14 +3,14 @@
 #include "GameplayAbilitySpecHandle.h"
 #include "GameplayAbilitySpecHandleAndPredictionKey.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct GAMEPLAYABILITIES_API FGameplayAbilitySpecHandleAndPredictionKey {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayAbilitySpecHandle AbilityHandle;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 PredictionKeyAtCreation;
     
     FGameplayAbilitySpecHandleAndPredictionKey();

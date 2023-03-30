@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FMathRBFInterpolateVectorFloat_Target {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector Target;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Value;
     
     CONTROLRIG_API FMathRBFInterpolateVectorFloat_Target();

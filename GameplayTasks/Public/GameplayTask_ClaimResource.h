@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "GameplayTask.h"
+#include "Templates/SubclassOf.h"
 #include "GameplayTask_ClaimResource.generated.h"
 
-class UGameplayTask_ClaimResource;
-class UGameplayTaskOwnerInterface;
 class IGameplayTaskOwnerInterface;
+class UGameplayTaskOwnerInterface;
 class UGameplayTaskResource;
+class UGameplayTask_ClaimResource;
 
-UCLASS()
+UCLASS(Blueprintable)
 class GAMEPLAYTASKS_API UGameplayTask_ClaimResource : public UGameplayTask {
     GENERATED_BODY()
 public:

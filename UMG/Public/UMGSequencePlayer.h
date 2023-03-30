@@ -1,20 +1,20 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=MovieScene -ObjectName=MovieSceneRootEvaluationTemplateInstance -FallbackName=MovieSceneRootEvaluationTemplateInstance
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
+//CROSS-MODULE INCLUDE V2: -ModuleName=MovieScene -ObjectName=MovieSceneRootEvaluationTemplateInstance -FallbackName=MovieSceneRootEvaluationTemplateInstance
 #include "UMGSequencePlayer.generated.h"
 
 class UWidgetAnimation;
 
-UCLASS(BlueprintType, Transient)
+UCLASS(Blueprintable, Transient)
 class UMG_API UUMGSequencePlayer : public UObject {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UWidgetAnimation* Animation;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMovieSceneRootEvaluationTemplateInstance RootTemplateInstance;
     
 public:
@@ -22,7 +22,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetUserTag(FName InUserTag);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FName GetUserTag() const;
     
 };

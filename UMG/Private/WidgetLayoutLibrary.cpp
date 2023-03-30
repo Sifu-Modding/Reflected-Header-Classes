@@ -1,21 +1,21 @@
 #include "WidgetLayoutLibrary.h"
 
-class UWidget;
-class UWrapBoxSlot;
-class UWidgetSwitcherSlot;
-class UCanvasPanelSlot;
-class UVerticalBoxSlot;
-class UUniformGridSlot;
-class USizeBoxSlot;
-class UScrollBoxSlot;
-class UScaleBoxSlot;
-class USafeZoneSlot;
-class UOverlaySlot;
-class UHorizontalBoxSlot;
-class UGridSlot;
-class UBorderSlot;
-class UObject;
 class APlayerController;
+class UBorderSlot;
+class UCanvasPanelSlot;
+class UGridSlot;
+class UHorizontalBoxSlot;
+class UObject;
+class UOverlaySlot;
+class USafeZoneSlot;
+class UScaleBoxSlot;
+class UScrollBoxSlot;
+class USizeBoxSlot;
+class UUniformGridSlot;
+class UVerticalBoxSlot;
+class UWidget;
+class UWidgetSwitcherSlot;
+class UWrapBoxSlot;
 
 UWrapBoxSlot* UWidgetLayoutLibrary::SlotAsWrapBoxSlot(UWidget* Widget) {
     return NULL;

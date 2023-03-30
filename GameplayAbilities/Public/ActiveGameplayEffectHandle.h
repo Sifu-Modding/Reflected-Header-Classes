@@ -7,10 +7,10 @@ struct GAMEPLAYABILITIES_API FActiveGameplayEffectHandle {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 Handle;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bPassedFiltersAndWasExecuted;
     
 public:

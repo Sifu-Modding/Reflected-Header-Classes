@@ -1,11 +1,11 @@
 #include "SCAnimationHelper.h"
 #include "Templates/SubclassOf.h"
 
-class UAnimSequenceBase;
-class UAnimSequence;
-class UAnimationAsset;
-class UAnimNotifyState;
 class UAnimNotify;
+class UAnimNotifyState;
+class UAnimSequence;
+class UAnimSequenceBase;
+class UAnimationAsset;
 
 bool USCAnimationHelper::HasInvalidNotifies(UAnimSequenceBase* _sequence, const FString& _inNotifyName) {
     return false;

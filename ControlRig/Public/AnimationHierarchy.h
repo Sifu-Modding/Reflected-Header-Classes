@@ -4,11 +4,11 @@
 #include "ConstraintNodeData.h"
 #include "AnimationHierarchy.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FAnimationHierarchy : public FNodeHierarchyWithUserData {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FConstraintNodeData> UserData;
     
     CONTROLRIG_API FAnimationHierarchy();

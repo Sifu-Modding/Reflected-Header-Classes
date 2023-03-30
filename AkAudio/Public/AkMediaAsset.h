@@ -5,21 +5,21 @@
 
 class UAkMediaAssetData;
 
-UCLASS()
+UCLASS(Blueprintable)
 class AKAUDIO_API UAkMediaAsset : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint32 ID;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool AutoLoad;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UObject*> UserData;
     
 private:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UAkMediaAssetData* CurrentMediaAssetData;
     
 public:

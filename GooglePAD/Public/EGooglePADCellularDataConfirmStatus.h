@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EGooglePADCellularDataConfirmStatus.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EGooglePADCellularDataConfirmStatus : uint8 {
     AssetPack_CONFIRM_UNKNOWN,
     AssetPack_CONFIRM_PENDING,

@@ -3,7 +3,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=AIModule -ObjectName=AISystem -FallbackName=AISystem
 #include "SCAISystem.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class SCCORE_API USCAISystem : public UAISystem {
     GENERATED_BODY()
 public:

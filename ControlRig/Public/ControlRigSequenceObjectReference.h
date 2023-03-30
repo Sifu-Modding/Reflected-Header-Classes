@@ -10,7 +10,7 @@ struct FControlRigSequenceObjectReference {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UControlRig> ControlRigClass;
     
 public:

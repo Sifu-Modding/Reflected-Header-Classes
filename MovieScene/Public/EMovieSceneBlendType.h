@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMovieSceneBlendType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EMovieSceneBlendType : uint8 {
     Invalid,
     Absolute,

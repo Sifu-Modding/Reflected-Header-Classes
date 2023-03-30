@@ -4,25 +4,25 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Transform -FallbackName=Transform
 #include "VariantSet.generated.h"
 
-class UVariant;
-class UTexture2D;
 class ULevelVariantSets;
+class UTexture2D;
+class UVariant;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class VARIANTMANAGERCONTENT_API UVariantSet : public UObject {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FText DisplayText;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bExpanded;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UVariant*> Variants;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTexture2D* Thumbnail;
     
 public:
@@ -42,22 +42,22 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetDisplayText(const FText& NewDisplayText);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UVariant* GetVariantByName(const FString& VariantName);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UVariant* GetVariant(int32 VariantIndex);
     
     UFUNCTION(BlueprintCallable)
     UTexture2D* GetThumbnail();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ULevelVariantSets* GetParent();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetNumVariants() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FText GetDisplayText() const;
     
 };

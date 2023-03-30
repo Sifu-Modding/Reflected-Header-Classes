@@ -1,47 +1,47 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "EARCaptureType.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=IntPoint -FallbackName=IntPoint
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=LinearColor -FallbackName=LinearColor
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Rotator -FallbackName=Rotator
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Transform -FallbackName=Transform
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=IntPoint -FallbackName=IntPoint
-#include "ARTraceResult.h"
-#include "EARSessionType.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector2D -FallbackName=Vector2D
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
+#include "ARCameraIntrinsics.h"
 #include "ARPose2D.h"
-#include "EARSessionTrackingFeature.h"
+#include "ARSessionStatus.h"
+#include "ARTraceResult.h"
+#include "ARVideoFormat.h"
+#include "EARCaptureType.h"
+#include "EARObjectClassification.h"
 #include "EARSceneReconstruction.h"
-#include "EARWorldMappingState.h"
+#include "EARSessionTrackingFeature.h"
+#include "EARSessionType.h"
+#include "EARTextureType.h"
 #include "EARTrackingQuality.h"
 #include "EARTrackingQualityReason.h"
-#include "ARSessionStatus.h"
-#include "EARObjectClassification.h"
-#include "ARVideoFormat.h"
-#include "ARCameraIntrinsics.h"
-#include "EARTextureType.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=LinearColor -FallbackName=LinearColor
+#include "EARWorldMappingState.h"
+#include "Templates/SubclassOf.h"
 #include "ARBlueprintLibrary.generated.h"
 
-class UARTrackedPoint;
-class UAREnvironmentCaptureProbe;
-class USceneComponent;
-class UARSessionConfig;
-class UARPin;
-class UARTrackedImage;
-class UARTrackedGeometry;
-class UARPlaneGeometry;
-class UARTrackedPose;
-class UARTexture;
-class UARLightEstimate;
-class UARTextureCameraImage;
-class UARTextureCameraDepth;
-class UObject;
 class UARCandidateImage;
+class UAREnvironmentCaptureProbe;
+class UARLightEstimate;
+class UARPin;
+class UARPlaneGeometry;
+class UARSessionConfig;
+class UARTexture;
+class UARTextureCameraDepth;
+class UARTextureCameraImage;
+class UARTrackedGeometry;
+class UARTrackedImage;
+class UARTrackedPoint;
+class UARTrackedPose;
+class UObject;
+class USceneComponent;
 class UTexture2D;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class AUGMENTEDREALITY_API UARBlueprintLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
@@ -106,40 +106,40 @@ public:
     UFUNCTION(BlueprintCallable)
     static TArray<FARTraceResult> LineTraceTrackedObjects(const FVector2D ScreenCoord, bool bTestFeaturePoints, bool bTestGroundPlane, bool bTestPlaneExtents, bool bTestPlaneBoundaryPolygon);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool IsSessionTypeSupported(EARSessionType SessionType);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool IsSessionTrackingFeatureSupported(EARSessionType SessionType, EARSessionTrackingFeature SessionTrackingFeature);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool IsSceneReconstructionSupported(EARSessionType SessionType, EARSceneReconstruction SceneReconstructionMethod);
     
     UFUNCTION(BlueprintCallable)
     static bool IsARSupported();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool IsARPinLocalStoreSupported();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool IsARPinLocalStoreReady();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static EARWorldMappingState GetWorldMappingStatus();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static EARTrackingQualityReason GetTrackingQualityReason();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static EARTrackingQuality GetTrackingQuality();
     
     UFUNCTION(BlueprintCallable)
     static TArray<FARVideoFormat> GetSupportedVideoFormats(EARSessionType SessionType);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static UARSessionConfig* GetSessionConfig();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static TArray<FVector> GetPointCloud();
     
     UFUNCTION(BlueprintCallable)
@@ -154,7 +154,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static int32 GetNumberOfTrackedFacesSupported();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static UARLightEstimate* GetCurrentLightEstimate();
     
     UFUNCTION(BlueprintCallable)
@@ -166,13 +166,13 @@ public:
     UFUNCTION(BlueprintCallable)
     static UARTextureCameraDepth* GetCameraDepth();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static float GetARWorldScale();
     
     UFUNCTION(BlueprintCallable)
     static UARTexture* GetARTexture(EARTextureType TextureType);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static FARSessionStatus GetARSessionStatus();
     
     UFUNCTION(BlueprintCallable)
@@ -202,7 +202,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static TArray<UARTrackedGeometry*> GetAllGeometries();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static FTransform GetAlignmentTransform();
     
     UFUNCTION(BlueprintCallable)

@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FAxisSettings {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<EAxis::Type> YawRotationAxis;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float BodyOrientationAlpha;
     
     CUSTOMANIMNODE_API FAxisSettings();

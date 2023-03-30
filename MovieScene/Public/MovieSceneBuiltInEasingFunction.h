@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
-#include "MovieSceneEasingFunction.h"
 #include "EMovieSceneBuiltInEasing.h"
+#include "MovieSceneEasingFunction.h"
 #include "MovieSceneBuiltInEasingFunction.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class MOVIESCENE_API UMovieSceneBuiltInEasingFunction : public UObject, public IMovieSceneEasingFunction {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EMovieSceneBuiltInEasing Type;
     
     UMovieSceneBuiltInEasingFunction();

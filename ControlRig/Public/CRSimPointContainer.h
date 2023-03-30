@@ -3,32 +3,32 @@
 #include "CRSimContainer.h"
 #include "CRSimLinearSpring.h"
 #include "CRSimPoint.h"
-#include "CRSimSoftCollision.h"
-#include "CRSimPointForce.h"
 #include "CRSimPointConstraint.h"
+#include "CRSimPointForce.h"
+#include "CRSimSoftCollision.h"
 #include "CRSimPointContainer.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FCRSimPointContainer : public FCRSimContainer {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FCRSimPoint> Points;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FCRSimLinearSpring> Springs;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FCRSimPointForce> Forces;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FCRSimSoftCollision> CollisionVolumes;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FCRSimPointConstraint> Constraints;
     
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FCRSimPoint> PreviousStep;
     
 public:

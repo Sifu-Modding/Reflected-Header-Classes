@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RigUnit.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Transform -FallbackName=Transform
+#include "RigUnit.h"
 #include "RigUnit_ToRigSpace_Transform.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_ToRigSpace_Transform : public FRigUnit {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTransform Transform;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTransform Global;
     
     CONTROLRIG_API FRigUnit_ToRigSpace_Transform();

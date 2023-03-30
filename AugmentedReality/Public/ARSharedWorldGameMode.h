@@ -5,11 +5,11 @@
 
 class AARSharedWorldGameState;
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class AUGMENTEDREALITY_API AARSharedWorldGameMode : public AGameMode {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 BufferSizePerChunk;
     
     AARSharedWorldGameMode();

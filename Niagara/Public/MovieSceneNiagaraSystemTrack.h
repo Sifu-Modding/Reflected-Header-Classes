@@ -4,7 +4,7 @@
 #include "MovieSceneNiagaraTrack.h"
 #include "MovieSceneNiagaraSystemTrack.generated.h"
 
-UCLASS(MinimalAPI)
+UCLASS(Blueprintable, MinimalAPI)
 class UMovieSceneNiagaraSystemTrack : public UMovieSceneNiagaraTrack, public IMovieSceneTrackTemplateProducer {
     GENERATED_BODY()
 public:

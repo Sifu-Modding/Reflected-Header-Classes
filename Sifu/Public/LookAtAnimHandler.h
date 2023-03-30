@@ -1,18 +1,18 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "AimOffsetStruct.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector2D -FallbackName=Vector2D
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Rotator -FallbackName=Rotator
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector2D -FallbackName=Vector2D
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=ELookAtApplyMode -FallbackName=ELookAtApplyMode
-#include "LookAtLocomotionLimits.h"
+#include "AimOffsetStruct.h"
 #include "ELookAtRefDirMode.h"
-#include "LookAtConfig.h"
 #include "ELookAtTargetType.h"
-#include "LookAtModifierParams.h"
-#include "LookAtLimits.h"
 #include "ETransitionGlobalType.h"
+#include "LookAtConfig.h"
+#include "LookAtLimits.h"
+#include "LookAtLocomotionLimits.h"
+#include "LookAtModifierParams.h"
+#include "Templates/SubclassOf.h"
 #include "LookAtAnimHandler.generated.h"
 
 class ULookAtAnimRequest2;
@@ -22,122 +22,122 @@ struct SIFU_API FLookAtAnimHandler {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, NotReplicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, NotReplicated, meta=(AllowPrivateAccess=true))
     FAimOffsetStruct m_aimOffset0;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, NotReplicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, NotReplicated, meta=(AllowPrivateAccess=true))
     FAimOffsetStruct m_aimOffset1;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     int32 m_iAimOffsetIndex;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     bool m_bLookAtEnabled;
     
-    UPROPERTY(BlueprintReadOnly, NotReplicated, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, NotReplicated, Transient, meta=(AllowPrivateAccess=true))
     FVector2D m_vRawBlendSpaceParams;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FVector2D m_vBlendSpaceParams;
     
-    UPROPERTY(BlueprintReadOnly, NotReplicated, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, NotReplicated, Transient, meta=(AllowPrivateAccess=true))
     FVector2D m_vEyeBlendSpaceParams;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FRotator m_BoneModifierRot;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FRotator m_CompensationRot;
     
-    UPROPERTY(BlueprintReadOnly, NotReplicated, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, NotReplicated, Transient, meta=(AllowPrivateAccess=true))
     bool m_bIsTargetLocationValid;
     
-    UPROPERTY(BlueprintReadOnly, NotReplicated, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, NotReplicated, Transient, meta=(AllowPrivateAccess=true))
     FVector m_vTargetLocation;
     
-    UPROPERTY(EditDefaultsOnly, NotReplicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, NotReplicated, meta=(AllowPrivateAccess=true))
     bool m_bEnableAnimationCompensation;
     
-    UPROPERTY(EditDefaultsOnly, NotReplicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, NotReplicated, meta=(AllowPrivateAccess=true))
     float m_fMaxHeadDiffYaw;
     
-    UPROPERTY(EditDefaultsOnly, NotReplicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, NotReplicated, meta=(AllowPrivateAccess=true))
     float m_fMaxHeadDiffPitch;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, NotReplicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, NotReplicated, meta=(AllowPrivateAccess=true))
     FName m_headInWorldSpaceSaveBoneName;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, NotReplicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, NotReplicated, meta=(AllowPrivateAccess=true))
     FName m_headComparaisonInWorldSpaceSaveBoneName;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, NotReplicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, NotReplicated, meta=(AllowPrivateAccess=true))
     FName m_headInWorldSpacePostLookAtSaveBoneName;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, NotReplicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, NotReplicated, meta=(AllowPrivateAccess=true))
     bool m_bEyesLookAtSpecificBone;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, NotReplicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, NotReplicated, meta=(AllowPrivateAccess=true))
     FName m_EyesLookAtSpecificBoneName;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ELookAtApplyMode m_eApplyMode;
     
-    UPROPERTY(BlueprintReadOnly, NotReplicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, NotReplicated, meta=(AllowPrivateAccess=true))
     ELookAtRefDirMode m_eRefDirMode;
     
 private:
-    UPROPERTY(EditDefaultsOnly, NotReplicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, NotReplicated, meta=(AllowPrivateAccess=true))
     float m_fAngleThreshold;
     
-    UPROPERTY(EditDefaultsOnly, NotReplicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, NotReplicated, meta=(AllowPrivateAccess=true))
     float m_fMaxFrontAngle;
     
-    UPROPERTY(EditDefaultsOnly, NotReplicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, NotReplicated, meta=(AllowPrivateAccess=true))
     bool m_bLookInCameraDir;
     
-    UPROPERTY(EditDefaultsOnly, NotReplicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, NotReplicated, meta=(AllowPrivateAccess=true))
     TSubclassOf<ULookAtAnimRequest2> m_animRequest;
     
-    UPROPERTY(EditDefaultsOnly, NotReplicated)
+    UPROPERTY(EditAnywhere, NotReplicated, meta=(AllowPrivateAccess=true))
     FLookAtConfig m_lookAtConfigs[5];
     
-    UPROPERTY(EditDefaultsOnly, NotReplicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, NotReplicated, meta=(AllowPrivateAccess=true))
     TArray<ELookAtTargetType> m_targetPriorities;
     
-    UPROPERTY(EditDefaultsOnly, NotReplicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, NotReplicated, meta=(AllowPrivateAccess=true))
     FLookAtModifierParams m_defaultModifierParams;
     
-    UPROPERTY(EditDefaultsOnly, NotReplicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, NotReplicated, meta=(AllowPrivateAccess=true))
     FLookAtLimits m_boneModifierLimits;
     
-    UPROPERTY(EditDefaultsOnly, NotReplicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, NotReplicated, meta=(AllowPrivateAccess=true))
     bool m_bInverseValuesOnBoneModifier;
     
-    UPROPERTY(EditDefaultsOnly, NotReplicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, NotReplicated, meta=(AllowPrivateAccess=true))
     FVector2D m_vBoneModifierOffset;
     
-    UPROPERTY(EditDefaultsOnly, NotReplicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, NotReplicated, meta=(AllowPrivateAccess=true))
     FVector2D m_vBoneModifierMultiplier;
     
-    UPROPERTY(EditDefaultsOnly, NotReplicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, NotReplicated, meta=(AllowPrivateAccess=true))
     FLookAtLimits m_defaultLimits;
     
-    UPROPERTY(EditDefaultsOnly, NotReplicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, NotReplicated, meta=(AllowPrivateAccess=true))
     TArray<FLookAtLocomotionLimits> m_locomotionLimits;
     
-    UPROPERTY(EditDefaultsOnly, NotReplicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, NotReplicated, meta=(AllowPrivateAccess=true))
     TMap<ETransitionGlobalType, FLookAtLimits> m_transitionLimits;
     
-    UPROPERTY(EditDefaultsOnly, NotReplicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, NotReplicated, meta=(AllowPrivateAccess=true))
     FLookAtModifierParams m_friendlyModifierParams;
     
-    UPROPERTY(EditDefaultsOnly, NotReplicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, NotReplicated, meta=(AllowPrivateAccess=true))
     FLookAtModifierParams m_hostileInIdleModifierParams;
     
-    UPROPERTY(EditDefaultsOnly, NotReplicated)
+    UPROPERTY(EditAnywhere, NotReplicated, meta=(AllowPrivateAccess=true))
     uint32 m_uiFirstLocalPlayerAIBehavior;
     
-    UPROPERTY(EditDefaultsOnly, NotReplicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, NotReplicated, meta=(AllowPrivateAccess=true))
     float m_fMaxDistFromFirstLocalPlayer;
     
 public:

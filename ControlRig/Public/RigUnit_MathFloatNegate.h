@@ -3,7 +3,7 @@
 #include "RigUnit_MathFloatUnaryOp.h"
 #include "RigUnit_MathFloatNegate.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_MathFloatNegate : public FRigUnit_MathFloatUnaryOp {
     GENERATED_BODY()
 public:

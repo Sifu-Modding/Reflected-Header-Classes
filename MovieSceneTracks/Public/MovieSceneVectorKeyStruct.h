@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "MovieSceneVectorKeyStructBase.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
+#include "MovieSceneVectorKeyStructBase.h"
 #include "MovieSceneVectorKeyStruct.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FMovieSceneVectorKeyStruct : public FMovieSceneVectorKeyStructBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector Vector;
     
     MOVIESCENETRACKS_API FMovieSceneVectorKeyStruct();

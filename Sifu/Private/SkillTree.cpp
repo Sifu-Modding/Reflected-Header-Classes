@@ -1,8 +1,8 @@
 #include "SkillTree.h"
 #include "Templates/SubclassOf.h"
 
-class USkillGameplayEffect;
 class UCurveFloat;
+class USkillGameplayEffect;
 
 void ASkillTree::BPF_UpdateTreeOverTime(const TArray<TSubclassOf<USkillGameplayEffect>>& _prevUnlockedSkills, const TArray<TSubclassOf<USkillGameplayEffect>>& _newUnlockedSkills, float _fDuration, UCurveFloat* _floatCurve, FSCDynamicDelegate _onFinished) {
 }

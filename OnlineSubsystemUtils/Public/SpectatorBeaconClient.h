@@ -1,52 +1,52 @@
 #pragma once
 #include "CoreMinimal.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=UniqueNetIdRepl -FallbackName=UniqueNetIdRepl
+#include "ESpectatorClientRequestType.h"
+#include "ESpectatorReservationResult.h"
 #include "OnlineBeaconClient.h"
 #include "SpectatorReservation.h"
-#include "ESpectatorClientRequestType.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=UniqueNetIdRepl -FallbackName=UniqueNetIdRepl
-#include "ESpectatorReservationResult.h"
 #include "SpectatorBeaconClient.generated.h"
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class ONLINESUBSYSTEMUTILS_API ASpectatorBeaconClient : public AOnlineBeaconClient {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString DestSessionId;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSpectatorReservation PendingReservation;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ESpectatorClientRequestType RequestType;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bPendingReservationSent;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bCancelReservation;
     
 public:
     ASpectatorBeaconClient();
 protected:
-    UFUNCTION(Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
     void ServerReservationRequest(const FString& SessionId, const FSpectatorReservation& Reservation);
     
-    UFUNCTION(Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
     void ServerCancelReservationRequest(const FUniqueNetIdRepl& Spectator);
     
 public:
-    UFUNCTION(Client, Reliable)
+    UFUNCTION(BlueprintCallable, Client, Reliable)
     void ClientSendReservationUpdates(int32 NumRemainingReservations);
     
-    UFUNCTION(Client, Reliable)
+    UFUNCTION(BlueprintCallable, Client, Reliable)
     void ClientSendReservationFull();
     
-    UFUNCTION(Client, Reliable)
+    UFUNCTION(BlueprintCallable, Client, Reliable)
     void ClientReservationResponse(TEnumAsByte<ESpectatorReservationResult::Type> ReservationResponse);
     
-    UFUNCTION(Client, Reliable)
+    UFUNCTION(BlueprintCallable, Client, Reliable)
     void ClientCancelReservationResponse(TEnumAsByte<ESpectatorReservationResult::Type> ReservationResponse);
     
 };

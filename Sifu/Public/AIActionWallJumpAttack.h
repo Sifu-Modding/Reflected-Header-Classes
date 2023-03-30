@@ -1,60 +1,59 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "AIActionAttack.h"
-#include "HitBox.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=FloatRange -FallbackName=FloatRange
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Color -FallbackName=Color
-#include "SCRangeFloatCurve.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 //CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTag -FallbackName=GameplayTag
+#include "AIActionAttack.h"
+#include "HitBox.h"
+#include "SCRangeFloatCurve.h"
+#include "Templates/SubclassOf.h"
 #include "AIActionWallJumpAttack.generated.h"
 
 class AActor;
+class AFightingCharacter;
 class UAIActionWallJumpAttack;
 class UAIFightingComponent;
 class UEnvQuery;
-class AFightingCharacter;
 
-UCLASS()
+UCLASS(Blueprintable)
 class SIFU_API UAIActionWallJumpAttack : public UAIActionAttack {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fQueryResultLifetime;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float m_fQueryExecuteFrequency;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UEnvQuery* m_QueryTemplate;
     
-    UPROPERTY(EditAnywhere)
-    bool m_bDisplayDebugInfos;
-    
-    UPROPERTY(EditAnywhere)
-    FColor m_DebugDisplayColor;
-    
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FFloatRange m_ValidAngleRange;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FFloatRange m_DistToWallJumpPoint;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_iDeprecationVersion;
     
-    UPROPERTY(EditAnywhere)
-    FSCRangeFloatCurve m_AngleRange;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FSCRangeFloatCurve m_angleRange;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSCRangeFloatCurve m_DistToWallJumpSnap;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSCRangeFloatCurve m_DistToWallJumpSnapTarget;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fMaxJumpHeightWhenPossible;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool m_bAddBoxHalfHeightToJumpPoint;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FHitBox m_WallJumpAttackHitBox;
     
 public:

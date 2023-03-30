@@ -5,17 +5,17 @@
 
 class UARCandidateObject;
 
-UCLASS()
+UCLASS(Blueprintable)
 class AUGMENTEDREALITY_API UARTrackedObject : public UARTrackedGeometry {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UARCandidateObject* DetectedObject;
     
 public:
     UARTrackedObject();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UARCandidateObject* GetDetectedObject() const;
     
 };

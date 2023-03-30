@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct GAMEPLAYABILITIES_API FMinimalReplicationTagCountMap {
     GENERATED_BODY()
 public:
-    UPROPERTY(Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UAbilitySystemComponent* Owner;
     
     FMinimalReplicationTagCountMap();

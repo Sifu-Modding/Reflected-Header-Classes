@@ -1,25 +1,25 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UserDefinedCaptureProtocol.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=ImageWriteQueue -ObjectName=EDesiredImageFormat -FallbackName=EDesiredImageFormat
 #include "CapturedPixels.h"
 #include "CapturedPixelsID.h"
 #include "FrameMetrics.h"
+#include "UserDefinedCaptureProtocol.h"
 #include "UserDefinedImageCaptureProtocol.generated.h"
 
 class UTexture;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class MOVIESCENECAPTURE_API UUserDefinedImageCaptureProtocol : public UUserDefinedCaptureProtocol {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     EDesiredImageFormat Format;
     
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bEnableCompression;
     
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 CompressionQuality;
     
     UUserDefinedImageCaptureProtocol();

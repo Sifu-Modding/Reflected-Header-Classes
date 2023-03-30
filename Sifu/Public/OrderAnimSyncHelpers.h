@@ -3,7 +3,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
 #include "OrderAnimSyncHelpers.generated.h"
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class SIFU_API UOrderAnimSyncHelpers : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

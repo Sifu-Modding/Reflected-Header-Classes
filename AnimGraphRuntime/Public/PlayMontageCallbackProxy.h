@@ -1,45 +1,45 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "OnMontagePlayDelegateDelegate.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BranchingPointNotifyPayload -FallbackName=BranchingPointNotifyPayload
+#include "OnMontagePlayDelegateDelegate.h"
 #include "PlayMontageCallbackProxy.generated.h"
 
-class USkeletalMeshComponent;
-class UPlayMontageCallbackProxy;
 class UAnimMontage;
+class UPlayMontageCallbackProxy;
+class USkeletalMeshComponent;
 
-UCLASS(BlueprintType, MinimalAPI)
+UCLASS(Blueprintable, MinimalAPI)
 class UPlayMontageCallbackProxy : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnMontagePlayDelegate OnCompleted;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnMontagePlayDelegate OnBlendOut;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnMontagePlayDelegate OnInterrupted;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnMontagePlayDelegate OnNotifyBegin;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnMontagePlayDelegate OnNotifyEnd;
     
     UPlayMontageCallbackProxy();
 protected:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnNotifyEndReceived(FName NotifyName, const FBranchingPointNotifyPayload& BranchingPointNotifyPayload);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnNotifyBeginReceived(FName NotifyName, const FBranchingPointNotifyPayload& BranchingPointNotifyPayload);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnMontageEnded(UAnimMontage* Montage, bool bInterrupted);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnMontageBlendingOut(UAnimMontage* Montage, bool bInterrupted);
     
 public:

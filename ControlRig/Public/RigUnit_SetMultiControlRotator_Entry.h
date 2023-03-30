@@ -8,13 +8,13 @@ USTRUCT(BlueprintType)
 struct FRigUnit_SetMultiControlRotator_Entry {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName Control;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRotator Rotator;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EBoneGetterSetterMode Space;
     
     CONTROLRIG_API FRigUnit_SetMultiControlRotator_Entry();

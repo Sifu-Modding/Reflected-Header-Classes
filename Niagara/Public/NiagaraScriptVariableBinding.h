@@ -2,11 +2,11 @@
 #include "CoreMinimal.h"
 #include "NiagaraScriptVariableBinding.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FNiagaraScriptVariableBinding {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName Name;
     
     NIAGARA_API FNiagaraScriptVariableBinding();

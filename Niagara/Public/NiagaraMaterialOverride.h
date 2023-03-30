@@ -9,13 +9,13 @@ USTRUCT(BlueprintType)
 struct FNiagaraMaterialOverride {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UMaterialInterface* Material;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint32 MaterialSubIndex;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UNiagaraRendererProperties* EmitterRendererProperty;
     
     NIAGARA_API FNiagaraMaterialOverride();

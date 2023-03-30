@@ -5,12 +5,12 @@
 
 class UMovieSceneSection;
 
-UCLASS(MinimalAPI)
+UCLASS(Blueprintable, MinimalAPI)
 class UMovieScene3DConstraintTrack : public UMovieSceneTrack {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     TArray<UMovieSceneSection*> ConstraintSections;
     
 public:

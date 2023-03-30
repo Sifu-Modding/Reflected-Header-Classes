@@ -1,27 +1,27 @@
 #pragma once
 #include "CoreMinimal.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Transform -FallbackName=Transform
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintAsyncActionBase -FallbackName=BlueprintAsyncActionBase
 #include "DeviceModelLoadedDelegateDelegate.h"
 #include "XRDeviceId.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Transform -FallbackName=Transform
 #include "AsyncTask_LoadXRDeviceVisComponent.generated.h"
 
-class UPrimitiveComponent;
-class UAsyncTask_LoadXRDeviceVisComponent;
 class AActor;
+class UAsyncTask_LoadXRDeviceVisComponent;
+class UPrimitiveComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UAsyncTask_LoadXRDeviceVisComponent : public UBlueprintAsyncActionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FDeviceModelLoadedDelegate OnModelLoaded;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FDeviceModelLoadedDelegate OnLoadFailure;
     
 private:
-    UPROPERTY(Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UPrimitiveComponent* SpawnedComponent;
     
 public:

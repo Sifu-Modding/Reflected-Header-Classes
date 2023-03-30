@@ -1,7 +1,7 @@
 #include "UserObjectListEntryLibrary.h"
 
-class UUserObjectListEntry;
 class IUserObjectListEntry;
+class UUserObjectListEntry;
 class UObject;
 
 UObject* UUserObjectListEntryLibrary::GetListItemObject(TScriptInterface<IUserObjectListEntry> UserObjectListEntry) {

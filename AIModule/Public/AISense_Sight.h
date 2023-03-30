@@ -4,30 +4,30 @@
 #include "AISightEvent.h"
 #include "AISense_Sight.generated.h"
 
-UCLASS(Config=Game)
+UCLASS(Blueprintable, Config=Game)
 class AIMODULE_API UAISense_Sight : public UAISense {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FAISightEvent> RegisteredEvents;
     
 protected:
-    UPROPERTY(Config, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 MaxTracesPerTick;
     
-    UPROPERTY(Config, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 MinQueriesPerTimeSliceCheck;
     
-    UPROPERTY(Config, EditDefaultsOnly)
+    UPROPERTY(Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     double MaxTimeSlicePerTick;
     
-    UPROPERTY(Config, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     float HighImportanceQueryDistanceThreshold;
     
-    UPROPERTY(Config, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MaxQueryImportance;
     
-    UPROPERTY(Config, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     float SightLimitQueryImportance;
     
 public:

@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FRigVMByteCodeStatistics {
     GENERATED_BODY()
 public:
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint32 InstructionCount;
     
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint32 DataBytes;
     
     RIGVM_API FRigVMByteCodeStatistics();

@@ -1,38 +1,38 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "NiagaraVariable.h"
 #include "NiagaraDataSetCompiledData.h"
+#include "NiagaraVariable.h"
 #include "NiagaraEmitterCompiledData.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FNiagaraEmitterCompiledData {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FName> SpawnAttributes;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FNiagaraVariable EmitterSpawnIntervalVar;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FNiagaraVariable EmitterInterpSpawnStartDTVar;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FNiagaraVariable EmitterSpawnGroupVar;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FNiagaraVariable EmitterAgeVar;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FNiagaraVariable EmitterRandomSeedVar;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FNiagaraVariable EmitterInstanceSeedVar;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FNiagaraVariable EmitterTotalSpawnedParticlesVar;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FNiagaraDataSetCompiledData DataSetCompiledData;
     
     NIAGARA_API FNiagaraEmitterCompiledData();

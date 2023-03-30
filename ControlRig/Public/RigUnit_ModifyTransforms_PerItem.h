@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct FRigUnit_ModifyTransforms_PerItem {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRigElementKey Item;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTransform Transform;
     
     CONTROLRIG_API FRigUnit_ModifyTransforms_PerItem();

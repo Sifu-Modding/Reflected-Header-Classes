@@ -5,7 +5,7 @@
 
 class UMRMeshComponent;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class MRMESH_API UMeshReconstructorBase : public UObject {
     GENERATED_BODY()
 public:
@@ -19,16 +19,16 @@ public:
     UFUNCTION(BlueprintCallable)
     void PauseReconstruction();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsReconstructionStarted() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsReconstructionPaused() const;
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void DisconnectMRMesh();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void ConnectMRMesh(UMRMeshComponent* Mesh);
     
 };

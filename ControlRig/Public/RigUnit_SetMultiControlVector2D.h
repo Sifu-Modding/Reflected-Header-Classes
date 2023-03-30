@@ -5,17 +5,17 @@
 #include "RigUnit_SetMultiControlVector2D_Entry.h"
 #include "RigUnit_SetMultiControlVector2D.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_SetMultiControlVector2D : public FRigUnitMutable {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FRigUnit_SetMultiControlVector2D_Entry> Entries;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Weight;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FCachedRigElement> CachedControlIndices;
     
     CONTROLRIG_API FRigUnit_SetMultiControlVector2D();

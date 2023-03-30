@@ -3,7 +3,7 @@
 #include "RigUnit_DebugBaseMutable.h"
 #include "RigUnit_StartProfilingTimer.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_StartProfilingTimer : public FRigUnit_DebugBaseMutable {
     GENERATED_BODY()
 public:

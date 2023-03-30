@@ -10,13 +10,13 @@ USTRUCT(BlueprintType)
 struct FNiagaraEmitterScriptProperties {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UNiagaraScript* Script;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FNiagaraEventReceiverProperties> EventReceivers;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FNiagaraEventGeneratorProperties> EventGenerators;
     
     NIAGARA_API FNiagaraEmitterScriptProperties();

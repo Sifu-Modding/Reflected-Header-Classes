@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EGameplayCueEvent.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 namespace EGameplayCueEvent {
     enum Type {
         OnActive,

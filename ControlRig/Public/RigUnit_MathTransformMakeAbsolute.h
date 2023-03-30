@@ -1,20 +1,20 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RigUnit_MathTransformBase.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Transform -FallbackName=Transform
+#include "RigUnit_MathTransformBase.h"
 #include "RigUnit_MathTransformMakeAbsolute.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_MathTransformMakeAbsolute : public FRigUnit_MathTransformBase {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTransform Local;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTransform Parent;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTransform Global;
     
     CONTROLRIG_API FRigUnit_MathTransformMakeAbsolute();

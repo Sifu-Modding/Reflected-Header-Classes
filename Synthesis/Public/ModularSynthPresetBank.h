@@ -4,11 +4,11 @@
 #include "ModularSynthPresetBankEntry.h"
 #include "ModularSynthPresetBank.generated.h"
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class SYNTHESIS_API UModularSynthPresetBank : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FModularSynthPresetBankEntry> Presets;
     
     UModularSynthPresetBank();

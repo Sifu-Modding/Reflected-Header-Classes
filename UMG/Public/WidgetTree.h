@@ -5,11 +5,11 @@
 
 class UWidget;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UMG_API UWidgetTree : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UWidget* RootWidget;
     
     UWidgetTree();

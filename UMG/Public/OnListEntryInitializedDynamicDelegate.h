@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "OnListEntryInitializedDynamicDelegate.generated.h"
 
-class UUserWidget;
 class UObject;
+class UUserWidget;
 
-UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FOnListEntryInitializedDynamic, UObject*, Item, UUserWidget*, Widget);
+UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FOnListEntryInitializedDynamic, UObject*, Item, UUserWidget*, Widget);
 

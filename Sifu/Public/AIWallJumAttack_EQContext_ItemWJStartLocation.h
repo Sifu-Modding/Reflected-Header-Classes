@@ -3,7 +3,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=AIModule -ObjectName=EnvQueryContext -FallbackName=EnvQueryContext
 #include "AIWallJumAttack_EQContext_ItemWJStartLocation.generated.h"
 
-UCLASS(EditInlineNew, MinimalAPI)
+UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UAIWallJumAttack_EQContext_ItemWJStartLocation : public UEnvQueryContext {
     GENERATED_BODY()
 public:

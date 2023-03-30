@@ -5,24 +5,24 @@
 
 class ASCTestingLocationsBase;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UWuguanTestControllerBase : public UGauntletTestController {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<ASCTestingLocationsBase*> m_TestingLocations;
     
 public:
     UWuguanTestControllerBase();
 private:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void StopProfiling();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void StartProfiling();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnTestLevelVisible();
     
 };

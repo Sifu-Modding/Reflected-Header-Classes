@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "MovieScenePropertyTrack.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=MovieScene -ObjectName=MovieSceneTrackTemplateProducer -FallbackName=MovieSceneTrackTemplateProducer
+#include "MovieScenePropertyTrack.h"
 #include "MovieSceneByteTrack.generated.h"
 
 class UEnum;
 
-UCLASS()
+UCLASS(Blueprintable)
 class MOVIESCENETRACKS_API UMovieSceneByteTrack : public UMovieScenePropertyTrack, public IMovieSceneTrackTemplateProducer {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UEnum* Enum;
     
 public:

@@ -1,27 +1,27 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "CachedRigElement.h"
-#include "RigUnitMutable.h"
 #include "RigElementKey.h"
+#include "RigUnitMutable.h"
 #include "RigUnit_PropagateTransform.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_PropagateTransform : public FRigUnitMutable {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRigElementKey Item;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bRecomputeGlobal;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bApplyToChildren;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bRecursive;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FCachedRigElement CachedIndex;
     
     CONTROLRIG_API FRigUnit_PropagateTransform();

@@ -3,22 +3,22 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
 #include "UserListEntryLibrary.generated.h"
 
-class UUserListEntry;
 class IUserListEntry;
+class UUserListEntry;
 class UListViewBase;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UMG_API UUserListEntryLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UUserListEntryLibrary();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool IsListItemSelected(TScriptInterface<IUserListEntry> UserListEntry);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool IsListItemExpanded(TScriptInterface<IUserListEntry> UserListEntry);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static UListViewBase* GetOwningListView(TScriptInterface<IUserListEntry> UserListEntry);
     
 };

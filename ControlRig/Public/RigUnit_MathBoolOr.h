@@ -3,7 +3,7 @@
 #include "RigUnit_MathBoolBinaryOp.h"
 #include "RigUnit_MathBoolOr.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_MathBoolOr : public FRigUnit_MathBoolBinaryOp {
     GENERATED_BODY()
 public:

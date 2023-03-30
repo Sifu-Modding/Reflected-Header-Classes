@@ -1,20 +1,20 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ARTrackedGeometry.h"
 #include "ARPose3D.h"
+#include "ARTrackedGeometry.h"
 #include "ARTrackedPose.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class AUGMENTEDREALITY_API UARTrackedPose : public UARTrackedGeometry {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FARPose3D TrackedPose;
     
 public:
     UARTrackedPose();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FARPose3D GetTrackedPoseData() const;
     
 };

@@ -1,10 +1,10 @@
 #include "Widget.h"
 
 class APlayerController;
-class UWidget;
-class UPanelWidget;
-class ULocalPlayer;
 class UGameInstance;
+class ULocalPlayer;
+class UPanelWidget;
+class UWidget;
 
 void UWidget::SetVisibility(ESlateVisibility InVisibility) {
 }

@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct FMovieSceneEvaluationOperand {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGuid ObjectBindingID;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMovieSceneSequenceID SequenceID;
     
     MOVIESCENE_API FMovieSceneEvaluationOperand();

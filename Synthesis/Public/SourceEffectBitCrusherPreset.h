@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=SoundEffectSourcePreset -FallbackName=SoundEffectSourcePreset
-#include "SourceEffectBitCrusherSettings.h"
 #include "SourceEffectBitCrusherBaseSettings.h"
+#include "SourceEffectBitCrusherSettings.h"
 #include "SourceEffectBitCrusherPreset.generated.h"
 
 class USoundModulatorBase;
 
-UCLASS(BlueprintType, EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class SYNTHESIS_API USourceEffectBitCrusherPreset : public USoundEffectSourcePreset {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSourceEffectBitCrusherSettings Settings;
     
     USourceEffectBitCrusherPreset();

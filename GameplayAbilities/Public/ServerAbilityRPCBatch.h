@@ -1,30 +1,30 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "GameplayAbilitySpecHandle.h"
-#include "PredictionKey.h"
 #include "GameplayAbilityTargetDataHandle.h"
+#include "PredictionKey.h"
 #include "ServerAbilityRPCBatch.generated.h"
 
 USTRUCT(BlueprintType)
 struct FServerAbilityRPCBatch {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayAbilitySpecHandle AbilitySpecHandle;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FPredictionKey PredictionKey;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayAbilityTargetDataHandle TargetData;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool InputPressed;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool Ended;
     
-    UPROPERTY(NotReplicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, NotReplicated, meta=(AllowPrivateAccess=true))
     bool Started;
     
     GAMEPLAYABILITIES_API FServerAbilityRPCBatch();

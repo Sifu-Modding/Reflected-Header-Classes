@@ -4,18 +4,18 @@
 #include "OnlineLogoutResultDelegate.h"
 #include "LogoutCallbackProxy.generated.h"
 
-class UObject;
 class APlayerController;
 class ULogoutCallbackProxy;
+class UObject;
 
-UCLASS(MinimalAPI)
+UCLASS(Blueprintable, MinimalAPI)
 class ULogoutCallbackProxy : public UBlueprintAsyncActionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnlineLogoutResult OnSuccess;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnlineLogoutResult OnFailure;
     
     ULogoutCallbackProxy();

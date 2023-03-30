@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ARSessionPayload.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Transform -FallbackName=Transform
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector2D -FallbackName=Vector2D
+#include "ARSessionPayload.h"
 #include "ARImageUpdatePayload.generated.h"
 
 class UARCandidateImage;
@@ -11,16 +11,16 @@ USTRUCT(BlueprintType)
 struct FARImageUpdatePayload {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FARSessionPayload SessionPayload;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTransform WorldTransform;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UARCandidateImage* DetectedImage;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector2D EstimatedSize;
     
     AUGMENTEDREALITY_API FARImageUpdatePayload();

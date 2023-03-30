@@ -5,11 +5,11 @@
 
 class AProceduralFoliageVolume;
 
-UCLASS(MinimalAPI)
+UCLASS(Blueprintable, MinimalAPI)
 class AProceduralFoliageBlockingVolume : public AVolume {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AProceduralFoliageVolume* ProceduralFoliageVolume;
     
     AProceduralFoliageBlockingVolume();

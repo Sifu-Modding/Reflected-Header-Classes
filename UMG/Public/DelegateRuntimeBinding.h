@@ -1,26 +1,26 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EBindingKind.h"
 #include "DynamicPropertyPath.h"
+#include "EBindingKind.h"
 #include "DelegateRuntimeBinding.generated.h"
 
 USTRUCT(BlueprintType)
 struct FDelegateRuntimeBinding {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString ObjectName;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName PropertyName;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName FunctionName;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FDynamicPropertyPath SourcePath;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EBindingKind Kind;
     
     UMG_API FDelegateRuntimeBinding();

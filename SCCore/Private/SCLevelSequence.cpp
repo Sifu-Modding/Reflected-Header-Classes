@@ -1,15 +1,15 @@
 #include "SCLevelSequence.h"
 
-class UAnimMontage;
 class AActor;
-class ACharacter;
-class USCLevelSequenceDirectorData;
-class APlayerController;
 class ACameraActor;
-class ULevelSequence;
-class UAnimSequence;
+class ACharacter;
+class APlayerController;
 class ASCSequenceAnchor;
+class UAnimMontage;
+class UAnimSequence;
+class ULevelSequence;
 class UMaterialParameterCollection;
+class USCLevelSequenceDirectorData;
 
 void USCLevelSequence::OnPreStop() {
 }

@@ -2,11 +2,11 @@
 #include "CoreMinimal.h"
 #include "JsonObjectWrapper.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct JSONUTILITIES_API FJsonObjectWrapper {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString JsonString;
     
     FJsonObjectWrapper();

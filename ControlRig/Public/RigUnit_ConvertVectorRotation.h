@@ -3,7 +3,7 @@
 #include "RigUnit_ConvertRotation.h"
 #include "RigUnit_ConvertVectorRotation.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_ConvertVectorRotation : public FRigUnit_ConvertRotation {
     GENERATED_BODY()
 public:

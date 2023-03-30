@@ -3,18 +3,18 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
 #include "CinematicManager.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class SIFU_API UCinematicManager : public UObject {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fFadeDuration;
     
 public:
     UCinematicManager();
 private:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void MovieStopped();
     
 };

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EGameplayModOp.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 namespace EGameplayModOp {
     enum Type {
         Additive,

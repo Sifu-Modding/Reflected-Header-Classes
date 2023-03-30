@@ -4,11 +4,11 @@
 #include "GameplayCueNotifyData.h"
 #include "GameplayCueSet.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class GAMEPLAYABILITIES_API UGameplayCueSet : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FGameplayCueNotifyData> GameplayCueData;
     
     UGameplayCueSet();

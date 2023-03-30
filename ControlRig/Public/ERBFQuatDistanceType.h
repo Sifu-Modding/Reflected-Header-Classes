@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ERBFQuatDistanceType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class ERBFQuatDistanceType : uint8 {
     Euclidean,
     ArcLength,

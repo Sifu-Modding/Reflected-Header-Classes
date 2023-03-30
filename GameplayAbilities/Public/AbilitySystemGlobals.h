@@ -2,136 +2,136 @@
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=SoftClassPath -FallbackName=SoftClassPath
-#include "NetSerializeScriptStructCache.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=SoftObjectPath -FallbackName=SoftObjectPath
 //CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTag -FallbackName=GameplayTag
 #include "EGameplayModEvaluationChannel.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=SoftObjectPath -FallbackName=SoftObjectPath
+#include "NetSerializeScriptStructCache.h"
 #include "AbilitySystemGlobals.generated.h"
 
-class UGameplayTagReponseTable;
+class UCurveTable;
 class UDataTable;
 class UGameplayCueManager;
-class UCurveTable;
+class UGameplayTagReponseTable;
 
-UCLASS(Config=Game)
+UCLASS(Blueprintable, Config=Game)
 class GAMEPLAYABILITIES_API UAbilitySystemGlobals : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSoftClassPath AbilitySystemGlobalsClassName;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayTag ActivateFailIsDeadTag;
     
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName ActivateFailIsDeadName;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayTag ActivateFailCooldownTag;
     
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName ActivateFailCooldownName;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayTag ActivateFailCostTag;
     
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName ActivateFailCostName;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayTag ActivateFailTagsBlockedTag;
     
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName ActivateFailTagsBlockedName;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayTag ActivateFailTagsMissingTag;
     
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName ActivateFailTagsMissingName;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayTag ActivateFailNetworkingTag;
     
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName ActivateFailNetworkingName;
     
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 MinimalReplicationTagCountBits;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FNetSerializeScriptStructCache TargetDataStructCache;
     
 protected:
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bAllowGameplayModEvaluationChannels;
     
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     EGameplayModEvaluationChannel DefaultGameplayModEvaluationChannel;
     
-    UPROPERTY(Config)
+    UPROPERTY(Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName GameplayModEvaluationChannelAliases[10];
     
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSoftObjectPath GlobalCurveTableName;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UCurveTable* GlobalCurveTable;
     
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSoftObjectPath GlobalAttributeMetaDataTableName;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UDataTable* GlobalAttributeMetaDataTable;
     
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSoftObjectPath GlobalAttributeSetDefaultsTableName;
     
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FSoftObjectPath> GlobalAttributeSetDefaultsTableNames;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UCurveTable*> GlobalAttributeDefaultsTables;
     
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSoftObjectPath GlobalGameplayCueManagerClass;
     
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSoftObjectPath GlobalGameplayCueManagerName;
     
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FString> GameplayCueNotifyPaths;
     
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSoftObjectPath GameplayTagResponseTableName;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UGameplayTagReponseTable* GameplayTagResponseTable;
     
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool PredictTargetGameplayEffects;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UGameplayCueManager* GlobalGameplayCueManager;
     
 public:
     UAbilitySystemGlobals();
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void ToggleIgnoreAbilitySystemCosts();
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void ToggleIgnoreAbilitySystemCooldowns();
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void ServerEndPlayerAbility(const FString& AbilityNameMatch);
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void ServerCancelPlayerAbility(const FString& AbilityNameMatch);
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void ServerActivatePlayerAbility(const FString& AbilityNameMatch);
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void ListPlayerAbilities();
     
 };

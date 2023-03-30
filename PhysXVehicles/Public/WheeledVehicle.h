@@ -6,15 +6,15 @@
 class USkeletalMeshComponent;
 class UWheeledVehicleMovementComponent;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class PHYSXVEHICLES_API AWheeledVehicle : public APawn {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USkeletalMeshComponent* Mesh;
     
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UWheeledVehicleMovementComponent* VehicleMovement;
     
 public:

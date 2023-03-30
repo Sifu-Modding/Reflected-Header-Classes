@@ -5,12 +5,12 @@
 
 class UControlRig;
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct CONTROLRIG_API FAnimNode_ControlRig_ExternalSource : public FAnimNode_ControlRigBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(Transient)
+    UPROPERTY(EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<UControlRig> ControlRig;
     
 public:

@@ -1,31 +1,31 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "EnvQueryTest.h"
-#include "AIDataProviderFloatValue.h"
-#include "EnvTraceData.h"
 #include "AIDataProviderBoolValue.h"
+#include "AIDataProviderFloatValue.h"
+#include "EnvQueryTest.h"
+#include "EnvTraceData.h"
+#include "Templates/SubclassOf.h"
 #include "EnvQueryTest_Trace.generated.h"
 
 class UEnvQueryContext;
 
-UCLASS(MinimalAPI)
+UCLASS(Blueprintable, MinimalAPI)
 class UEnvQueryTest_Trace : public UEnvQueryTest {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FEnvTraceData TraceData;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAIDataProviderBoolValue TraceFromContext;
     
-    UPROPERTY(AdvancedDisplay, EditDefaultsOnly)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAIDataProviderFloatValue ItemHeightOffset;
     
-    UPROPERTY(AdvancedDisplay, EditDefaultsOnly)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAIDataProviderFloatValue ContextHeightOffset;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UEnvQueryContext> Context;
     
     UEnvQueryTest_Trace();

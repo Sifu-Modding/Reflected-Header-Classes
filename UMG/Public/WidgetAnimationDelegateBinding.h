@@ -4,11 +4,11 @@
 #include "BlueprintWidgetAnimationDelegateBinding.h"
 #include "WidgetAnimationDelegateBinding.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UMG_API UWidgetAnimationDelegateBinding : public UDynamicBlueprintBinding {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FBlueprintWidgetAnimationDelegateBinding> WidgetAnimationDelegateBindings;
     
     UWidgetAnimationDelegateBinding();

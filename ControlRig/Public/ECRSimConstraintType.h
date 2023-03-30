@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ECRSimConstraintType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class ECRSimConstraintType : uint8 {
     Distance,
     DistanceFromA,

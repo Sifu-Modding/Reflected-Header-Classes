@@ -1,23 +1,23 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "PanelWidget.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=Margin -FallbackName=Margin
+#include "PanelWidget.h"
 #include "UniformGridPanel.generated.h"
 
 class UUniformGridSlot;
 class UWidget;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UMG_API UUniformGridPanel : public UPanelWidget {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMargin SlotPadding;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MinDesiredSlotWidth;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MinDesiredSlotHeight;
     
     UUniformGridPanel();

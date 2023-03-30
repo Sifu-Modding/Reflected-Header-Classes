@@ -4,14 +4,14 @@
 
 class UAIDataProvider;
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct AIMODULE_API FAIDataProviderValue {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere, Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UAIDataProvider* DataBinding;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName DataField;
     
     FAIDataProviderValue();

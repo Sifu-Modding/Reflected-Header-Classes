@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FNamedFilmbackPreset {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString Name;
     
-    UPROPERTY(BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FCameraFilmbackSettings FilmbackSettings;
     
     CINEMATICCAMERA_API FNamedFilmbackPreset();

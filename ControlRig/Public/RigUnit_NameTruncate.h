@@ -3,23 +3,23 @@
 #include "RigUnit_NameBase.h"
 #include "RigUnit_NameTruncate.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_NameTruncate : public FRigUnit_NameBase {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName Name;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 Count;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool FromEnd;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName Remainder;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName Chopped;
     
     CONTROLRIG_API FRigUnit_NameTruncate();

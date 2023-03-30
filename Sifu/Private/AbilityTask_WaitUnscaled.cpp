@@ -1,7 +1,7 @@
 #include "AbilityTask_WaitUnscaled.h"
 
-class UGameplayAbility;
 class UAbilityTask_WaitUnscaled;
+class UGameplayAbility;
 
 UAbilityTask_WaitUnscaled* UAbilityTask_WaitUnscaled::BPF_WaitUnscaled(UGameplayAbility* _owningAbility, float _fDuration) {
     return NULL;

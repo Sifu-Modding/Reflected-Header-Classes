@@ -9,7 +9,7 @@ USTRUCT(BlueprintType)
 struct FPreallocationInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<TSubclassOf<AGameplayCueNotify_Actor>> ClassesNeedingPreallocation;
     
     GAMEPLAYABILITIES_API FPreallocationInfo();

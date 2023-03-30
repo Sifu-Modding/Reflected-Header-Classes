@@ -1,90 +1,90 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=AISystemBase -FallbackName=AISystemBase
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=SoftClassPath -FallbackName=SoftClassPath
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=AISystemBase -FallbackName=AISystemBase
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ECollisionChannel -FallbackName=ECollisionChannel
 #include "AISystem.generated.h"
 
-class UBehaviorTreeManager;
-class UAIHotSpotManager;
-class UEnvQueryManager;
-class UAIPerceptionSystem;
 class UAIAsyncTaskBlueprintProxy;
+class UAIHotSpotManager;
+class UAIPerceptionSystem;
+class UBehaviorTreeManager;
+class UEnvQueryManager;
 class UNavLocalGridManager;
 
-UCLASS()
+UCLASS(Blueprintable)
 class AIMODULE_API UAISystem : public UAISystemBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere, GlobalConfig)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, GlobalConfig, meta=(AllowPrivateAccess=true))
     FSoftClassPath PerceptionSystemClassName;
     
-    UPROPERTY(EditAnywhere, GlobalConfig)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, GlobalConfig, meta=(AllowPrivateAccess=true))
     FSoftClassPath HotSpotManagerClassName;
     
 public:
-    UPROPERTY(EditDefaultsOnly, GlobalConfig)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, GlobalConfig, meta=(AllowPrivateAccess=true))
     float AcceptanceRadius;
     
-    UPROPERTY(EditDefaultsOnly, GlobalConfig)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, GlobalConfig, meta=(AllowPrivateAccess=true))
     float PathfollowingRegularPathPointAcceptanceRadius;
     
-    UPROPERTY(EditDefaultsOnly, GlobalConfig)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, GlobalConfig, meta=(AllowPrivateAccess=true))
     float PathfollowingNavLinkAcceptanceRadius;
     
-    UPROPERTY(EditDefaultsOnly, GlobalConfig)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, GlobalConfig, meta=(AllowPrivateAccess=true))
     bool bFinishMoveOnGoalOverlap;
     
-    UPROPERTY(EditDefaultsOnly, GlobalConfig)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, GlobalConfig, meta=(AllowPrivateAccess=true))
     bool bAcceptPartialPaths;
     
-    UPROPERTY(EditDefaultsOnly, GlobalConfig)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, GlobalConfig, meta=(AllowPrivateAccess=true))
     bool bAllowStrafing;
     
-    UPROPERTY(EditDefaultsOnly, GlobalConfig)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, GlobalConfig, meta=(AllowPrivateAccess=true))
     bool bEnableBTAITasks;
     
-    UPROPERTY(EditDefaultsOnly, GlobalConfig)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, GlobalConfig, meta=(AllowPrivateAccess=true))
     bool bAllowControllersAsEQSQuerier;
     
-    UPROPERTY(EditDefaultsOnly, GlobalConfig)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, GlobalConfig, meta=(AllowPrivateAccess=true))
     bool bEnableDebuggerPlugin;
     
-    UPROPERTY(EditDefaultsOnly, GlobalConfig)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, GlobalConfig, meta=(AllowPrivateAccess=true))
     bool bForgetStaleActors;
     
-    UPROPERTY(EditDefaultsOnly, GlobalConfig)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, GlobalConfig, meta=(AllowPrivateAccess=true))
     bool bAddBlackboardSelfKey;
     
-    UPROPERTY(EditDefaultsOnly, GlobalConfig)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, GlobalConfig, meta=(AllowPrivateAccess=true))
     TEnumAsByte<ECollisionChannel> DefaultSightCollisionChannel;
     
 protected:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UBehaviorTreeManager* BehaviorTreeManager;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UEnvQueryManager* EnvironmentQueryManager;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UAIPerceptionSystem* PerceptionSystem;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UAIAsyncTaskBlueprintProxy*> AllProxyObjects;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UAIHotSpotManager* HotSpotManager;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UNavLocalGridManager* NavLocalGrids;
     
 public:
     UAISystem();
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void AILoggingVerbose();
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void AIIgnorePlayers();
     
 };

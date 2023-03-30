@@ -1,9 +1,9 @@
 #include "GameplayTask_SpawnActor.h"
 #include "Templates/SubclassOf.h"
 
-class UGameplayTaskOwnerInterface;
-class IGameplayTaskOwnerInterface;
 class AActor;
+class IGameplayTaskOwnerInterface;
+class UGameplayTaskOwnerInterface;
 class UGameplayTask_SpawnActor;
 class UObject;
 

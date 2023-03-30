@@ -5,14 +5,14 @@
 #include "RigUnit_SetMultiControlBool_Entry.h"
 #include "RigUnit_SetMultiControlBool.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_SetMultiControlBool : public FRigUnitMutable {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FRigUnit_SetMultiControlBool_Entry> Entries;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FCachedRigElement> CachedControlIndices;
     
     CONTROLRIG_API FRigUnit_SetMultiControlBool();

@@ -1,27 +1,27 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Quat -FallbackName=Quat
-#include "RigUnit_DebugBase.h"
 #include "RigElementKey.h"
+#include "RigUnit_DebugBase.h"
 #include "RigUnit_VisualDebugQuatItemSpace.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_VisualDebugQuatItemSpace : public FRigUnit_DebugBase {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FQuat Value;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bEnabled;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Thickness;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Scale;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRigElementKey Space;
     
     CONTROLRIG_API FRigUnit_VisualDebugQuatItemSpace();

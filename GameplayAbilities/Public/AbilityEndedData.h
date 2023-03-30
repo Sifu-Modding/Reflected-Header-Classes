@@ -5,20 +5,20 @@
 
 class UGameplayAbility;
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FAbilityEndedData {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UGameplayAbility* AbilityThatEnded;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayAbilitySpecHandle AbilitySpecHandle;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bReplicateEndAbility;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bWasCancelled;
     
     GAMEPLAYABILITIES_API FAbilityEndedData();

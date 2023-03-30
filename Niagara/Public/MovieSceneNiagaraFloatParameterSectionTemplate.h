@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "MovieSceneNiagaraParameterSectionTemplate.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=MovieScene -ObjectName=MovieSceneFloatChannel -FallbackName=MovieSceneFloatChannel
+#include "MovieSceneNiagaraParameterSectionTemplate.h"
 #include "MovieSceneNiagaraFloatParameterSectionTemplate.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FMovieSceneNiagaraFloatParameterSectionTemplate : public FMovieSceneNiagaraParameterSectionTemplate {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMovieSceneFloatChannel FloatChannel;
     
 public:

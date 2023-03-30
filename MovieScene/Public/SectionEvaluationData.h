@@ -4,17 +4,17 @@
 #include "ESectionEvaluationFlags.h"
 #include "SectionEvaluationData.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FSectionEvaluationData {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 ImplIndex;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FFrameNumber ForcedTime;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ESectionEvaluationFlags Flags;
     
     MOVIESCENE_API FSectionEvaluationData();

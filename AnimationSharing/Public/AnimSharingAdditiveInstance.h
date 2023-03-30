@@ -3,24 +3,24 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=AnimInstance -FallbackName=AnimInstance
 #include "AnimSharingAdditiveInstance.generated.h"
 
-class USkeletalMeshComponent;
 class UAnimSequence;
+class USkeletalMeshComponent;
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class UAnimSharingAdditiveInstance : public UAnimInstance {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, Export, Transient)
+    UPROPERTY(EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<USkeletalMeshComponent> BaseComponent;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, Transient)
+    UPROPERTY(EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<UAnimSequence> AdditiveAnimation;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float Alpha;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     bool bStateBool;
     
 public:

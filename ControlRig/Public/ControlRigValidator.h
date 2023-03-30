@@ -5,12 +5,12 @@
 
 class UControlRigValidationPass;
 
-UCLASS()
+UCLASS(Blueprintable)
 class CONTROLRIG_API UControlRigValidator : public UObject {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UControlRigValidationPass*> Passes;
     
 public:

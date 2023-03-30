@@ -4,11 +4,11 @@
 #include "PhysicalMaterialInput.h"
 #include "MaterialExpressionLandscapePhysicalMaterialOutput.generated.h"
 
-UCLASS(CollapseCategories)
+UCLASS(Blueprintable, CollapseCategories)
 class LANDSCAPE_API UMaterialExpressionLandscapePhysicalMaterialOutput : public UMaterialExpressionCustomOutput {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FPhysicalMaterialInput> Inputs;
     
     UMaterialExpressionLandscapePhysicalMaterialOutput();

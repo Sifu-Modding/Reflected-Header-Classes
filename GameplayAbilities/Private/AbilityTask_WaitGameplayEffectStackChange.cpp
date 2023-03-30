@@ -1,7 +1,7 @@
 #include "AbilityTask_WaitGameplayEffectStackChange.h"
 
-class UGameplayAbility;
 class UAbilityTask_WaitGameplayEffectStackChange;
+class UGameplayAbility;
 
 UAbilityTask_WaitGameplayEffectStackChange* UAbilityTask_WaitGameplayEffectStackChange::WaitForGameplayEffectStackChange(UGameplayAbility* OwningAbility, FActiveGameplayEffectHandle Handle) {
     return NULL;

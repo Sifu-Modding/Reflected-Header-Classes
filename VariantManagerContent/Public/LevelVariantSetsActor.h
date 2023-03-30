@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=Actor -FallbackName=Actor
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=SoftObjectPath -FallbackName=SoftObjectPath
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=Actor -FallbackName=Actor
 #include "LevelVariantSetsActor.generated.h"
 
 class ULevelVariantSets;
 
-UCLASS()
+UCLASS(Blueprintable)
 class VARIANTMANAGERCONTENT_API ALevelVariantSetsActor : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSoftObjectPath LevelVariantSets;
     
     ALevelVariantSetsActor();

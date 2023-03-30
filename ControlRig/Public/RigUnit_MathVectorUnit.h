@@ -3,7 +3,7 @@
 #include "RigUnit_MathVectorUnaryOp.h"
 #include "RigUnit_MathVectorUnit.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_MathVectorUnit : public FRigUnit_MathVectorUnaryOp {
     GENERATED_BODY()
 public:

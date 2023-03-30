@@ -5,21 +5,21 @@
 class UNiagaraComponent;
 class UNiagaraSystem;
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct NIAGARA_API FNiagaraSystemUpdateContext {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(Instanced, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     TArray<UNiagaraComponent*> ComponentsToReset;
     
-    UPROPERTY(Instanced, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     TArray<UNiagaraComponent*> ComponentsToReInit;
     
-    UPROPERTY(Instanced, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     TArray<UNiagaraComponent*> ComponentsToNotifySimDestroy;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UNiagaraSystem*> SystemSimsToDestroy;
     
 public:

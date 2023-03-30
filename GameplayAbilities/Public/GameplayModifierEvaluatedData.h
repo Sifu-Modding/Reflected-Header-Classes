@@ -1,27 +1,27 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "ActiveGameplayEffectHandle.h"
-#include "GameplayAttribute.h"
 #include "EGameplayModOp.h"
+#include "GameplayAttribute.h"
 #include "GameplayModifierEvaluatedData.generated.h"
 
 USTRUCT(BlueprintType)
 struct FGameplayModifierEvaluatedData {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayAttribute Attribute;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<EGameplayModOp::Type> ModifierOp;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Magnitude;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FActiveGameplayEffectHandle Handle;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool IsValid;
     
     GAMEPLAYABILITIES_API FGameplayModifierEvaluatedData();

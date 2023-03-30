@@ -3,12 +3,12 @@
 #include "BTTaskNode.h"
 #include "BTTask_GameplayTaskBase.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class AIMODULE_API UBTTask_GameplayTaskBase : public UBTTaskNode {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(AdvancedDisplay, EditAnywhere)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bWaitForGameplayTask: 1;
     
 public:

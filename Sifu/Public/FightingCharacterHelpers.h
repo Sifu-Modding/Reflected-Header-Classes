@@ -6,7 +6,7 @@
 
 class UAnimSequence;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class SIFU_API UFightingCharacterHelpers : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

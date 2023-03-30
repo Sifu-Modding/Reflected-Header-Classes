@@ -1,33 +1,33 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "DestructibleAdvancedParameters.h"
 #include "DestructibleDamageParameters.h"
 #include "DestructibleDebrisParameters.h"
-#include "DestructibleSpecialHierarchyDepths.h"
-#include "DestructibleAdvancedParameters.h"
 #include "DestructibleDepthParameters.h"
 #include "DestructibleParametersFlag.h"
+#include "DestructibleSpecialHierarchyDepths.h"
 #include "DestructibleParameters.generated.h"
 
 USTRUCT(BlueprintType)
 struct FDestructibleParameters {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FDestructibleDamageParameters DamageParameters;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FDestructibleDebrisParameters DebrisParameters;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FDestructibleAdvancedParameters AdvancedParameters;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FDestructibleSpecialHierarchyDepths SpecialHierarchyDepths;
     
-    UPROPERTY(EditAnywhere, EditFixedSize)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, EditFixedSize, meta=(AllowPrivateAccess=true))
     TArray<FDestructibleDepthParameters> DepthParameters;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FDestructibleParametersFlag Flags;
     
     APEXDESTRUCTION_API FDestructibleParameters();

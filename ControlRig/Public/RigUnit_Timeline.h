@@ -3,17 +3,17 @@
 #include "RigUnit_SimBase.h"
 #include "RigUnit_Timeline.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_Timeline : public FRigUnit_SimBase {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Speed;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Time;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float AccumulatedValue;
     
     CONTROLRIG_API FRigUnit_Timeline();

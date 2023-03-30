@@ -5,15 +5,15 @@
 #include "NamedInterfaceDef.h"
 #include "NamedInterfaces.generated.h"
 
-UCLASS(Transient)
+UCLASS(Blueprintable, Transient)
 class UNamedInterfaces : public UObject {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FNamedInterface> NamedInterfaces;
     
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FNamedInterfaceDef> NamedInterfaceDefs;
     
 public:

@@ -6,25 +6,25 @@ USTRUCT(BlueprintType)
 struct FMoviePipelineSegmentWorkMetrics {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString SegmentName;
     
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 OutputFrameIndex;
     
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 TotalOutputFrameCount;
     
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 OutputSubSampleIndex;
     
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 TotalSubSampleCount;
     
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 EngineWarmUpFrameIndex;
     
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 TotalEngineWarmUpFrameCount;
     
     MOVIERENDERPIPELINECORE_API FMoviePipelineSegmentWorkMetrics();

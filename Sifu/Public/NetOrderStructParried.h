@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FNetOrderStructParried : public FNetOrderStructAttackEnv {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FHitDescription m_AttackHitDescription;
     
     SIFU_API FNetOrderStructParried();

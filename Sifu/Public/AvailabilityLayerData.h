@@ -1,25 +1,25 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "AvailabilityLayerCombinations.h"
-#include "InputContext.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=DataAsset -FallbackName=DataAsset
+#include "AvailabilityLayerCombinations.h"
 #include "InputAction.h"
+#include "InputContext.h"
 #include "AvailabilityLayerData.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class SIFU_API UAvailabilityLayerData : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     InputContext m_eContext;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FAvailabilityLayerCombinations> m_Combinations;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bInvertSelection;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<InputAction> m_inputActionArray;
     
     UAvailabilityLayerData();

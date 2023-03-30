@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FPelvisAdjustmentInterp {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Stiffness;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Dampen;
     
     CUSTOMANIMNODE_API FPelvisAdjustmentInterp();

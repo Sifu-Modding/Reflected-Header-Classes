@@ -1,27 +1,27 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "CustomizedToolMenuEntry.h"
-#include "CustomizedToolMenuSection.h"
 #include "CustomizedToolMenuNameArray.h"
+#include "CustomizedToolMenuSection.h"
 #include "CustomizedToolMenu.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct SLATE_API FCustomizedToolMenu {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName Name;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<FName, FCustomizedToolMenuEntry> Entries;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<FName, FCustomizedToolMenuSection> Sections;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<FName, FCustomizedToolMenuNameArray> EntryOrder;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FName> SectionOrder;
     
     FCustomizedToolMenu();

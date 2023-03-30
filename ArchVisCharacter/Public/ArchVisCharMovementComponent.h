@@ -1,35 +1,35 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=CharacterMovementComponent -FallbackName=CharacterMovementComponent
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Rotator -FallbackName=Rotator
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=CharacterMovementComponent -FallbackName=CharacterMovementComponent
 #include "ArchVisCharMovementComponent.generated.h"
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class ARCHVISCHARACTER_API UArchVisCharMovementComponent : public UCharacterMovementComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRotator RotationalAcceleration;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRotator RotationalDeceleration;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRotator MaxRotationalVelocity;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MinPitch;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MaxPitch;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float WalkingFriction;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float WalkingSpeed;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float WalkingAcceleration;
     
     UArchVisCharMovementComponent();

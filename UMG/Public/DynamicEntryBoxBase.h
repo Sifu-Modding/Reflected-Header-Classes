@@ -1,48 +1,48 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Widget.h"
-#include "SlateChildSize.h"
-#include "EDynamicBoxType.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector2D -FallbackName=Vector2D
 //CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=EHorizontalAlignment -FallbackName=EHorizontalAlignment
 //CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=EVerticalAlignment -FallbackName=EVerticalAlignment
+#include "EDynamicBoxType.h"
 #include "RadialBoxSettings.h"
+#include "SlateChildSize.h"
 #include "UserWidgetPool.h"
+#include "Widget.h"
 #include "DynamicEntryBoxBase.generated.h"
 
 class UUserWidget;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class UMG_API UDynamicEntryBoxBase : public UWidget {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EDynamicBoxType EntryBoxType;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector2D EntrySpacing;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FVector2D> SpacingPattern;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSlateChildSize EntrySizeRule;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<EHorizontalAlignment> EntryHorizontalAlignment;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<EVerticalAlignment> EntryVerticalAlignment;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 MaxElementSize;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRadialBoxSettings RadialBoxSettings;
     
 private:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FUserWidgetPool EntryWidgetPool;
     
 public:
@@ -53,10 +53,10 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetEntrySpacing(const FVector2D& InEntrySpacing);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetNumEntries() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     TArray<UUserWidget*> GetAllEntries() const;
     
 };

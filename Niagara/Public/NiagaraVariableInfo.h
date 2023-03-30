@@ -5,17 +5,17 @@
 
 class UNiagaraDataInterface;
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FNiagaraVariableInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FNiagaraVariable Variable;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FText Definition;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UNiagaraDataInterface* DataInterface;
     
     NIAGARA_API FNiagaraVariableInfo();

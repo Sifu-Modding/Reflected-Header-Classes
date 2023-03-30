@@ -6,15 +6,15 @@
 
 class UInputBehaviorSet;
 
-UCLASS(Transient)
+UCLASS(Blueprintable, Transient)
 class INTERACTIVETOOLSFRAMEWORK_API UInteractiveTool : public UObject, public IInputBehaviorSource {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UInputBehaviorSet* InputBehaviors;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UObject*> ToolPropertyObjects;
     
 public:

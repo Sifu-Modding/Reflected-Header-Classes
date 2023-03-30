@@ -1,25 +1,25 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "AbilityTask.h"
-#include "WaitAttributeChangeRatioThresholdDelegateDelegate.h"
-#include "GameplayAttribute.h"
 #include "EWaitAttributeChangeComparison.h"
+#include "GameplayAttribute.h"
+#include "WaitAttributeChangeRatioThresholdDelegateDelegate.h"
 #include "AbilityTask_WaitAttributeChangeRatioThreshold.generated.h"
 
-class UAbilityTask_WaitAttributeChangeRatioThreshold;
-class UAbilitySystemComponent;
-class UGameplayAbility;
 class AActor;
+class UAbilitySystemComponent;
+class UAbilityTask_WaitAttributeChangeRatioThreshold;
+class UGameplayAbility;
 
-UCLASS()
+UCLASS(Blueprintable)
 class GAMEPLAYABILITIES_API UAbilityTask_WaitAttributeChangeRatioThreshold : public UAbilityTask {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FWaitAttributeChangeRatioThresholdDelegate OnChange;
     
 protected:
-    UPROPERTY(Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UAbilitySystemComponent* ExternalOwner;
     
 public:

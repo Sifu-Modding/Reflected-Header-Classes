@@ -3,20 +3,20 @@
 #include "RigUnit_DebugBaseMutable.h"
 #include "RigUnit_EndProfilingTimer.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_EndProfilingTimer : public FRigUnit_DebugBaseMutable {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 NumberOfMeasurements;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString Prefix;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float AccumulatedTime;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 MeasurementsLeft;
     
     CONTROLRIG_API FRigUnit_EndProfilingTimer();

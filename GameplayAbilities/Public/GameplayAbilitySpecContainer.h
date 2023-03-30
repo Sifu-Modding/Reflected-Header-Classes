@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameplayAbilitySpec.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=FastArraySerializer -FallbackName=FastArraySerializer
+#include "GameplayAbilitySpec.h"
 #include "GameplayAbilitySpecContainer.generated.h"
 
 class UAbilitySystemComponent;
@@ -10,10 +10,10 @@ USTRUCT(BlueprintType)
 struct GAMEPLAYABILITIES_API FGameplayAbilitySpecContainer : public FFastArraySerializer {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FGameplayAbilitySpec> Items;
     
-    UPROPERTY(Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UAbilitySystemComponent* Owner;
     
     FGameplayAbilitySpecContainer();

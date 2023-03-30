@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ETransformSpaceMode.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class ETransformSpaceMode : uint8 {
     LocalSpace,
     GlobalSpace,

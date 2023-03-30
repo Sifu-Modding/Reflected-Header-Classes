@@ -1,60 +1,72 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
-#include "EAIWuguanTicketEvaluation.h"
-#include "EAIAttackTicketJokerSituation.h"
-#include "SCAITicketEnum.h"
 #include "AIAttackJokerSituationConfigsPerDominationStep.h"
+#include "EAIAttackTicketJokerSituation.h"
+#include "EAIWuguanTicketEvaluation.h"
+#include "SCAITicketEnum.h"
 #include "TicketSettings.generated.h"
 
-class UOrderDB;
 class UAIAttackTicketData;
+class UOrderDB;
 
-UCLASS(DefaultConfig, Config=WuguanAI)
+UCLASS(Blueprintable, Config=Engine, DefaultConfig, Config=WuguanAI)
 class SIFU_API UTicketSettings : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_iSerializeVersion;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<EAIWuguanTicketEvaluation, float> m_AttackTicketScoreFactors;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<EAIWuguanTicketEvaluation, float> m_PositionTicketScoreFactors;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<EAIWuguanTicketEvaluation, float> m_WeaponTicketScoreFactors;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<EAIAttackTicketJokerSituation, FAIAttackJokerSituationConfigsPerDominationStep> m_AttackTicketJokerSituationsConfigs;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<TSoftClassPtr<UOrderDB>, EAIAttackTicketJokerSituation> m_OrderDBToJokerSituationMap;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bActivateWeaponTicketManager;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fDefaultWeaponTicketCooldown;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fWeaponTicketCooldownIncreaseValue;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fWeaponTicketCooldownDecreaseValue;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fDefaultMaxDistanceToWeapon;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fMinDistanceForCandidateAttackCancel;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fMinDistanceForAttackTicketTimeOut;
     
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float m_fPathHeightTolerance;
+    
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float m_fPathFallHeightTolerance;
+    
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float m_fPathHeightDifferenceWeight;
+    
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float m_fPathNavlinkWeight;
+    
 private:
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<FSCAITicketEnum, TSoftObjectPtr<UAIAttackTicketData>> m_AttackTicketsMap;
     
 public:

@@ -1,32 +1,32 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ARLightEstimate.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=LinearColor -FallbackName=LinearColor
+#include "ARLightEstimate.h"
 #include "ARBasicLightEstimate.generated.h"
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class AUGMENTEDREALITY_API UARBasicLightEstimate : public UARLightEstimate {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float AmbientIntensityLumens;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float AmbientColorTemperatureKelvin;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FLinearColor AmbientColor;
     
 public:
     UARBasicLightEstimate();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetAmbientIntensityLumens() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetAmbientColorTemperatureKelvin() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FLinearColor GetAmbientColor() const;
     
 };

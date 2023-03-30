@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FDatasmithCameraFilmbackSettingsTemplate {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float SensorWidth;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float SensorHeight;
     
     DATASMITHCONTENT_API FDatasmithCameraFilmbackSettingsTemplate();

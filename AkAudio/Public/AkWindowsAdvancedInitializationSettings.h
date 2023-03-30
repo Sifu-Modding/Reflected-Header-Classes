@@ -7,13 +7,13 @@ USTRUCT(BlueprintType)
 struct FAkWindowsAdvancedInitializationSettings : public FAkAdvancedInitializationSettingsWithMultiCoreRendering {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint32 AudioAPI;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool GlobalFocus;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool UseHeadMountedDisplayAudioDevice;
     
     AKAUDIO_API FAkWindowsAdvancedInitializationSettings();

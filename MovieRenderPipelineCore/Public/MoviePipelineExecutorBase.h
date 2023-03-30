@@ -1,44 +1,44 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
-#include "OnMoviePipelineExecutorFinishedDelegate.h"
-#include "OnMoviePipelineExecutorErroredDelegate.h"
-#include "MoviePipelineSocketMessageRecievedDelegate.h"
 #include "MoviePipelineHttpResponseRecievedDelegate.h"
+#include "MoviePipelineSocketMessageRecievedDelegate.h"
+#include "OnMoviePipelineExecutorErroredDelegate.h"
+#include "OnMoviePipelineExecutorFinishedDelegate.h"
+#include "Templates/SubclassOf.h"
 #include "MoviePipelineExecutorBase.generated.h"
 
-class UMovieRenderDebugWidget;
 class UMoviePipeline;
 class UMoviePipelineQueue;
+class UMovieRenderDebugWidget;
 
 UCLASS(Abstract, Blueprintable)
 class MOVIERENDERPIPELINECORE_API UMoviePipelineExecutorBase : public UObject {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnMoviePipelineExecutorFinished OnExecutorFinishedDelegate;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnMoviePipelineExecutorErrored OnExecutorErroredDelegate;
     
 protected:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMoviePipelineSocketMessageRecieved SocketMessageRecievedDelegate;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMoviePipelineHttpResponseRecieved HTTPResponseRecievedDelegate;
     
 public:
-    UPROPERTY(BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UMovieRenderDebugWidget> DebugWidgetClass;
     
-    UPROPERTY(BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString UserData;
     
 protected:
-    UPROPERTY(BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UMoviePipeline> TargetPipelineClass;
     
 public:
@@ -66,21 +66,21 @@ protected:
     void OnExecutorErroredImpl(UMoviePipeline* ErroredPipeline, bool bFatal, FText ErrorReason);
     
 public:
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void OnBeginFrame();
     
 protected:
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsSocketConnected() const;
     
 public:
-    UFUNCTION(BlueprintNativeEvent, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent, BlueprintPure)
     bool IsRendering() const;
     
-    UFUNCTION(BlueprintNativeEvent, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent, BlueprintPure)
     float GetStatusProgress() const;
     
-    UFUNCTION(BlueprintNativeEvent, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent, BlueprintPure)
     FString GetStatusMessage() const;
     
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)

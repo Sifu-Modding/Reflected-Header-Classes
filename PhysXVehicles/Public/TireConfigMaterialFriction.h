@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct FTireConfigMaterialFriction {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UPhysicalMaterial* PhysicalMaterial;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float FrictionScale;
     
     PHYSXVEHICLES_API FTireConfigMaterialFriction();

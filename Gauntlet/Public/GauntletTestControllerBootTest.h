@@ -3,7 +3,7 @@
 #include "GauntletTestController.h"
 #include "GauntletTestControllerBootTest.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class GAUNTLET_API UGauntletTestControllerBootTest : public UGauntletTestController {
     GENERATED_BODY()
 public:

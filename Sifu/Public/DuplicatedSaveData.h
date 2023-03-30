@@ -1,46 +1,46 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTagContainer -FallbackName=GameplayTagContainer
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=ECharacterGender -FallbackName=ECharacterGender
 #include "ECharacterStat.h"
+#include "Templates/SubclassOf.h"
 #include "DuplicatedSaveData.generated.h"
 
-class USkillGameplayEffect;
 class UGameplayEffect;
+class USkillGameplayEffect;
 
 USTRUCT(BlueprintType)
 struct FDuplicatedSaveData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, SaveGame, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
     ECharacterGender m_eGender;
     
-    UPROPERTY(BlueprintReadWrite, SaveGame, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
     TArray<TSubclassOf<UGameplayEffect>> m_ShrineEffects;
     
-    UPROPERTY(BlueprintReadWrite, SaveGame, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
     TArray<TSubclassOf<USkillGameplayEffect>> m_UnlockedSkills;
     
-    UPROPERTY(BlueprintReadWrite, SaveGame, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
     TMap<TSubclassOf<USkillGameplayEffect>, int32> m_SkillConsolidationLevel;
     
-    UPROPERTY(BlueprintReadWrite, SaveGame, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
     TMap<ECharacterStat, float> m_DefaultStats;
     
-    UPROPERTY(BlueprintReadWrite, SaveGame, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
     FGameplayTagContainer m_PlayerTags;
     
-    UPROPERTY(BlueprintReadWrite, SaveGame, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
     FGameplayTagContainer m_GameplayTagContainer;
     
-    UPROPERTY(BlueprintReadWrite, SaveGame, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
     float m_fMCDominationGauge;
     
-    UPROPERTY(BlueprintReadWrite, SaveGame, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
     int32 m_iLastManGauge;
     
-    UPROPERTY(BlueprintReadWrite, SaveGame, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
     TArray<uint8> m_duplicatedSaveEntries;
     
     SIFU_API FDuplicatedSaveData();

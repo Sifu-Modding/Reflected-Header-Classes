@@ -5,11 +5,11 @@
 
 class UMovieSceneSubtitlesSection;
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct SIFU_API FMovieSceneSubtitlesTemplate : public FMovieSceneAkAudioEventTemplate {
     GENERATED_BODY()
 public:
-    UPROPERTY(Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UMovieSceneSubtitlesSection* SubtitleSection;
     
     FMovieSceneSubtitlesTemplate();

@@ -1,7 +1,7 @@
 #include "PanelWidget.h"
 
-class UWidget;
 class UPanelSlot;
+class UWidget;
 
 bool UPanelWidget::RemoveChildAt(int32 Index) {
     return false;

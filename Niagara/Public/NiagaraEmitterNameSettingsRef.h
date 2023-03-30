@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FNiagaraEmitterNameSettingsRef {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName SystemName;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString EmitterName;
     
     NIAGARA_API FNiagaraEmitterNameSettingsRef();

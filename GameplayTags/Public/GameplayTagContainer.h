@@ -8,10 +8,10 @@ struct GAMEPLAYTAGS_API FGameplayTagContainer {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, SaveGame)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
     TArray<FGameplayTag> GameplayTags;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<FGameplayTag> ParentTags;
     
 public:

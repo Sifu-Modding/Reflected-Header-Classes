@@ -8,16 +8,16 @@ USTRUCT(BlueprintType)
 struct CLOTHINGSYSTEMRUNTIMECOMMON_API FClothLODDataCommon {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FClothPhysicalMeshData PhysicalMeshData;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FClothCollisionData CollisionData;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bUseMultipleInfluences;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float SkinningKernelRadius;
     
     FClothLODDataCommon();

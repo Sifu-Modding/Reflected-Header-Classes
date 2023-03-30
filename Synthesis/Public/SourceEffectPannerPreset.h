@@ -4,11 +4,11 @@
 #include "SourceEffectPannerSettings.h"
 #include "SourceEffectPannerPreset.generated.h"
 
-UCLASS(BlueprintType, EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class SYNTHESIS_API USourceEffectPannerPreset : public USoundEffectSourcePreset {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSourceEffectPannerSettings Settings;
     
     USourceEffectPannerPreset();

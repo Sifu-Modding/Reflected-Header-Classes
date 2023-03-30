@@ -3,14 +3,14 @@
 #include "NiagaraDataInterface.h"
 #include "NiagaraDataInterfaceCamera.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class NIAGARA_API UNiagaraDataInterfaceCamera : public UNiagaraDataInterface {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 PlayerControllerIndex;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bRequireCurrentFrameData;
     
     UNiagaraDataInterfaceCamera();

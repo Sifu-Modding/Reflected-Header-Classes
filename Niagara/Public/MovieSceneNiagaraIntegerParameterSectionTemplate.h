@@ -4,12 +4,12 @@
 #include "MovieSceneNiagaraParameterSectionTemplate.h"
 #include "MovieSceneNiagaraIntegerParameterSectionTemplate.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FMovieSceneNiagaraIntegerParameterSectionTemplate : public FMovieSceneNiagaraParameterSectionTemplate {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMovieSceneIntegerChannel IntegerChannel;
     
 public:

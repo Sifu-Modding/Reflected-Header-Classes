@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FRigUnit_SetMultiControlFloat_Entry {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName Control;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float FloatValue;
     
     CONTROLRIG_API FRigUnit_SetMultiControlFloat_Entry();

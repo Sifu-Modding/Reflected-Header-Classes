@@ -1,18 +1,18 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=DefaultPawn -FallbackName=DefaultPawn
-#include "GameplayCueInterface.h"
 #include "AbilitySystemInterface.h"
+#include "GameplayCueInterface.h"
 #include "AbilitySystemTestPawn.generated.h"
 
 class UAbilitySystemComponent;
 
-UCLASS(NotPlaceable)
+UCLASS(Blueprintable, NotPlaceable)
 class GAMEPLAYABILITIES_API AAbilitySystemTestPawn : public ADefaultPawn, public IGameplayCueInterface, public IAbilitySystemInterface {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UAbilitySystemComponent* AbilitySystemComponent;
     
 public:

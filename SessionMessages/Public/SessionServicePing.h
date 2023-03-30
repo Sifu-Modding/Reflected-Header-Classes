@@ -2,11 +2,11 @@
 #include "CoreMinimal.h"
 #include "SessionServicePing.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FSessionServicePing {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString UserName;
     
     SESSIONMESSAGES_API FSessionServicePing();

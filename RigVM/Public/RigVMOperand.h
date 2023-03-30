@@ -3,18 +3,18 @@
 #include "ERigVMMemoryType.h"
 #include "RigVMOperand.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct RIGVM_API FRigVMOperand {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ERigVMMemoryType MemoryType;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint16 RegisterIndex;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint16 RegisterOffset;
     
 public:

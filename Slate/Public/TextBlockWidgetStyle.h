@@ -4,11 +4,11 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=TextBlockStyle -FallbackName=TextBlockStyle
 #include "TextBlockWidgetStyle.generated.h"
 
-UCLASS(MinimalAPI)
+UCLASS(Blueprintable, MinimalAPI)
 class UTextBlockWidgetStyle : public USlateWidgetStyleContainerBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTextBlockStyle TextBlockStyle;
     
     UTextBlockWidgetStyle();

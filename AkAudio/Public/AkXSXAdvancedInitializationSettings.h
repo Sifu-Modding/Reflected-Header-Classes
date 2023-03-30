@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FAkXSXAdvancedInitializationSettings : public FAkAdvancedInitializationSettingsWithMultiCoreRendering {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint16 MaximumNumberOfXMAVoices;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool UseHardwareCodecLowLatencyMode;
     
     AKAUDIO_API FAkXSXAdvancedInitializationSettings();

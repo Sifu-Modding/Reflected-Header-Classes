@@ -7,18 +7,18 @@
 
 class UAsyncImage;
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UBindableAsyncImage : public UUserWidget {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UAsyncImage* m_AsyncImage;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAsyncTextureStruct AsyncTexture;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGetAsyncTextureAsset AsyncTextureDelegate;
     
 public:

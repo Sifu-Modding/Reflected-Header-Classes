@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EControlRigCurveAlignment.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EControlRigCurveAlignment : uint8 {
     Front,
     Stretched,

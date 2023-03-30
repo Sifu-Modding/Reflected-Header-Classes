@@ -4,11 +4,11 @@
 #include "SubmixEffectMultibandCompressorSettings.h"
 #include "SubmixEffectMultibandCompressorPreset.generated.h"
 
-UCLASS(BlueprintType, EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class USubmixEffectMultibandCompressorPreset : public USoundEffectSubmixPreset {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSubmixEffectMultibandCompressorSettings Settings;
     
     USubmixEffectMultibandCompressorPreset();

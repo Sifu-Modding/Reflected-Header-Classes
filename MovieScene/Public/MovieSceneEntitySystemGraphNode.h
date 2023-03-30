@@ -4,11 +4,11 @@
 
 class UMovieSceneEntitySystem;
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FMovieSceneEntitySystemGraphNode {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UMovieSceneEntitySystem* System;
     
     MOVIESCENE_API FMovieSceneEntitySystemGraphNode();

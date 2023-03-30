@@ -7,15 +7,15 @@
 
 class UObject;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UMG_API UTreeView : public UListView {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnGetItemChildrenDynamic BP_OnGetItemChildren;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnItemExpansionChangedDynamic BP_OnItemExpansionChanged;
     
 public:

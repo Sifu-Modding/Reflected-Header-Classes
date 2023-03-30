@@ -4,11 +4,11 @@
 
 class UMovieSceneLevelVisibilitySection;
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FLevelVisibilityComponentData {
     GENERATED_BODY()
 public:
-    UPROPERTY(Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UMovieSceneLevelVisibilitySection* Section;
     
     MOVIESCENETRACKS_API FLevelVisibilityComponentData();

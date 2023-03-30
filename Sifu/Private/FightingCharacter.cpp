@@ -1,36 +1,36 @@
 #include "FightingCharacter.h"
-#include "Net/UnrealNetwork.h"
-#include "CharacterHitBoxComponent.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=PhysicalAnimationComponent -FallbackName=PhysicalAnimationComponent
-#include "DefenseComponent.h"
-#include "SCAbilitySystemComponent.h"
-#include "ReplayFightingCharacterComponent.h"
-#include "TargetableActorComponent.h"
-#include "CharacterHealthComponent.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=CapsuleComponent -FallbackName=CapsuleComponent
-#include "MessengerComponent.h"
-#include "ReplayablePhysicsComponent.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=PhysicalAnimationComponent -FallbackName=PhysicalAnimationComponent
+#include "CharacterHealthComponent.h"
+#include "CharacterHitBoxComponent.h"
+#include "DefenseComponent.h"
 #include "FightingCharAnimRepComponent.h"
+#include "MessengerComponent.h"
+#include "Net/UnrealNetwork.h"
+#include "ReplayFightingCharacterComponent.h"
+#include "ReplayablePhysicsComponent.h"
+#include "SCAbilitySystemComponent.h"
+#include "TargetableActorComponent.h"
 
 class AActor;
-class UEffectData;
-class UOrderComponent;
-class UPrimitiveComponent;
-class UAIFightingComponent;
-class UPlayerFightingComponent;
-class UAttackComponent;
-class UMaterialInterface;
-class UAvailabilityLayerData;
-class UDeathDB;
-class UStatsComponent;
-class UPlayerAnim;
-class AInteractiveMovable;
 class ABaseWeapon;
-class USkeletalMeshComponent;
-class UHitComponent;
+class AInteractiveMovable;
+class UAIFightingComponent;
 class UASMComponent;
-class UCameraComponentThird;
 class UActorComponent;
+class UAttackComponent;
+class UAvailabilityLayerData;
+class UCameraComponentThird;
+class UDeathDB;
+class UEffectData;
+class UHitComponent;
+class UMaterialInterface;
+class UOrderComponent;
+class UPlayerAnim;
+class UPlayerFightingComponent;
+class UPrimitiveComponent;
+class USkeletalMeshComponent;
+class UStatsComponent;
 
 void AFightingCharacter::SetTarget(AActor* _target) {
 }

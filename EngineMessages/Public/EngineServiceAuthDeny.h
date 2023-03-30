@@ -2,14 +2,14 @@
 #include "CoreMinimal.h"
 #include "EngineServiceAuthDeny.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FEngineServiceAuthDeny {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString UserName;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString UserToDeny;
     
     ENGINEMESSAGES_API FEngineServiceAuthDeny();

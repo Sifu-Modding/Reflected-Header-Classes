@@ -1,28 +1,28 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "EnvQueryGenerator.h"
-#include "AIDataProviderFloatValue.h"
 #include "AIDataProviderBoolValue.h"
+#include "AIDataProviderFloatValue.h"
+#include "EnvQueryGenerator.h"
+#include "Templates/SubclassOf.h"
 #include "EnvQueryGenerator_ActorsOfClass.generated.h"
 
-class UEnvQueryContext;
 class AActor;
+class UEnvQueryContext;
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class AIMODULE_API UEnvQueryGenerator_ActorsOfClass : public UEnvQueryGenerator {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<AActor> SearchedActorClass;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAIDataProviderBoolValue GenerateOnlyActorsInRadius;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAIDataProviderFloatValue SearchRadius;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UEnvQueryContext> SearchCenter;
     
     UEnvQueryGenerator_ActorsOfClass();

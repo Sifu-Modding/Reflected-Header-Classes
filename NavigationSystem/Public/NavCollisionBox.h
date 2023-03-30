@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FNavCollisionBox {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector Offset;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector Extent;
     
     NAVIGATIONSYSTEM_API FNavCollisionBox();

@@ -1,8 +1,8 @@
 #include "AsyncTaskApplySkillsFromSaves.h"
 
+class UAsyncTaskApplySkillsFromSaves;
 class UObject;
 class USCAbilitySystemComponent;
-class UAsyncTaskApplySkillsFromSaves;
 
 UAsyncTaskApplySkillsFromSaves* UAsyncTaskApplySkillsFromSaves::BPF_ApplySavesSkillOnCurrentSave(UObject* _context, USCAbilitySystemComponent* _abilitySystemComponent, TArray<int32> _indicesOfSave) {
     return NULL;

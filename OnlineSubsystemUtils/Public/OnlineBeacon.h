@@ -5,18 +5,18 @@
 
 class UNetDriver;
 
-UCLASS(NotPlaceable, Transient)
+UCLASS(Blueprintable, NotPlaceable, Transient)
 class ONLINESUBSYSTEMUTILS_API AOnlineBeacon : public AActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     float BeaconConnectionInitialTimeout;
     
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     float BeaconConnectionTimeout;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UNetDriver* NetDriver;
     
 public:

@@ -6,18 +6,18 @@
 
 class UBehaviorTreeComponent;
 
-UCLASS(Transient)
+UCLASS(Blueprintable, Transient)
 class AIMODULE_API UBehaviorTreeManager : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 MaxDebuggerSteps;
     
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FBehaviorTreeTemplateInfo> LoadedTemplates;
     
-    UPROPERTY(Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     TArray<UBehaviorTreeComponent*> ActiveComponents;
     
 public:

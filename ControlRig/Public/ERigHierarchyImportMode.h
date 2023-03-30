@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "ERigHierarchyImportMode.generated.h"
 
-UENUM()
-enum class ERigHierarchyImportMode {
+UENUM(BlueprintType)
+enum class ERigHierarchyImportMode : uint8 {
     Append,
     Replace,
     ReplaceLocalTransform,

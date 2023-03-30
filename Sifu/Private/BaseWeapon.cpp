@@ -1,7 +1,7 @@
 #include "BaseWeapon.h"
-#include "Templates/SubclassOf.h"
-#include "AnimInstanceReplicationComponent.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=SkeletalMeshComponent -FallbackName=SkeletalMeshComponent
+#include "AnimInstanceReplicationComponent.h"
+#include "Templates/SubclassOf.h"
 
 class UBaseWeaponData;
 class UWeaponGameplayData;

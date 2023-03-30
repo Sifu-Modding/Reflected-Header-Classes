@@ -1,27 +1,27 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ComboTransitionCondition.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCAIActionMemoryEntryHandler -FallbackName=SCAIActionMemoryEntryHandler
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCTypedValue -FallbackName=SCTypedValue
+#include "ComboTransitionCondition.h"
 #include "AIComboCondition.generated.h"
 
+class AActor;
 class ASCCharacter;
 class UAIFightingComponent;
-class AActor;
 
-UCLASS(Abstract, EditInlineNew)
+UCLASS(Abstract, Blueprintable, EditInlineNew)
 class SIFU_API UAIComboCondition : public UComboTransitionCondition, public ISCAIActionMemoryEntryHandler {
     GENERATED_BODY()
 public:
     UAIComboCondition();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     void BPF_GetEnvQueryParameterValue(FName _paramName, const ASCCharacter* _owner, FSCTypedValue& _outValue) const;
     
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     bool BPE_TestCondition(const UAIFightingComponent* _aiComponent, const AActor* _target) const;
     
 protected:
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BPE_GetEnvQueryParameterValue(FName _paramName, const ASCCharacter* _owner, FSCTypedValue& _outValue) const;
     
     

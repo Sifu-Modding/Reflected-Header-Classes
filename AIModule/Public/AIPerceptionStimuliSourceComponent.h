@@ -1,20 +1,20 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ActorComponent -FallbackName=ActorComponent
+#include "Templates/SubclassOf.h"
 #include "AIPerceptionStimuliSourceComponent.generated.h"
 
 class UAISense;
 
-UCLASS(BlueprintType, ClassGroup=Custom, Config=Game, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, Config=Game, meta=(BlueprintSpawnableComponent))
 class AIMODULE_API UAIPerceptionStimuliSourceComponent : public UActorComponent {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bAutoRegisterAsSource: 1;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<TSubclassOf<UAISense>> RegisterAsSourceForSenses;
     
 public:

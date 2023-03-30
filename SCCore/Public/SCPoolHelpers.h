@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Transform -FallbackName=Transform
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
 #include "SCPoolHelpers.generated.h"
 
 class AActor;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class SCCORE_API USCPoolHelpers : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
@@ -14,7 +14,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static AActor* BPF_SpawnPoolableActor(AActor* _worldCtxt, UClass* _class, const FTransform& _transform, FName _poolName, bool _bGrow, bool _bFailIfNoPoolFound);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool BPF_IsActorValid(const AActor* _actor);
     
     UFUNCTION(BlueprintCallable)

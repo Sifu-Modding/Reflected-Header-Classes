@@ -1,28 +1,28 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "MagicLeapSharedWorldSharedData.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=GameMode -FallbackName=GameMode
+#include "MagicLeapSharedWorldSharedData.h"
 #include "MagicLeapSharedWorldGameMode.generated.h"
 
 class AMagicLeapSharedWorldPlayerController;
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class MAGICLEAPSHAREDWORLD_API AMagicLeapSharedWorldGameMode : public AGameMode {
     GENERATED_BODY()
 public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE(FMagicLeapOnNewLocalDataFromClients);
     
-    UPROPERTY(BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMagicLeapSharedWorldSharedData SharedWorldData;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMagicLeapOnNewLocalDataFromClients OnNewLocalDataFromClients;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float PinSelectionConfidenceThreshold;
     
 protected:
-    UPROPERTY(BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AMagicLeapSharedWorldPlayerController* ChosenOne;
     
 public:

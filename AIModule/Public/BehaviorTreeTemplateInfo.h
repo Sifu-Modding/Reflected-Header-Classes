@@ -2,17 +2,17 @@
 #include "CoreMinimal.h"
 #include "BehaviorTreeTemplateInfo.generated.h"
 
-class UBehaviorTree;
 class UBTCompositeNode;
+class UBehaviorTree;
 
 USTRUCT(BlueprintType)
 struct FBehaviorTreeTemplateInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UBehaviorTree* Asset;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UBTCompositeNode* Template;
     
     AIMODULE_API FBehaviorTreeTemplateInfo();

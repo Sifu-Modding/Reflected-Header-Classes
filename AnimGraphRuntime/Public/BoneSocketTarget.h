@@ -8,13 +8,13 @@ USTRUCT(BlueprintType)
 struct ANIMGRAPHRUNTIME_API FBoneSocketTarget {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bUseSocket;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     FBoneReference BoneReference;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSocketReference SocketReference;
     
     FBoneSocketTarget();

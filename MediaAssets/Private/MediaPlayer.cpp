@@ -1,9 +1,9 @@
 #include "MediaPlayer.h"
 
-class UMediaTimeStampInfo;
-class UMediaSource;
-class UObject;
 class UMediaPlaylist;
+class UMediaSource;
+class UMediaTimeStampInfo;
+class UObject;
 
 bool UMediaPlayer::SupportsSeeking() const {
     return false;

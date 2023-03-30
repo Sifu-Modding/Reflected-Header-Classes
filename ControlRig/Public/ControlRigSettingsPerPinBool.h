@@ -2,11 +2,11 @@
 #include "CoreMinimal.h"
 #include "ControlRigSettingsPerPinBool.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FControlRigSettingsPerPinBool {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<FString, bool> Values;
     
     CONTROLRIG_API FControlRigSettingsPerPinBool();

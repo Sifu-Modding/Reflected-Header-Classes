@@ -4,11 +4,11 @@
 #include "SourceEffectRingModulationSettings.h"
 #include "SourceEffectRingModulationPreset.generated.h"
 
-UCLASS(BlueprintType, EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class SYNTHESIS_API USourceEffectRingModulationPreset : public USoundEffectSourcePreset {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSourceEffectRingModulationSettings Settings;
     
     USourceEffectRingModulationPreset();

@@ -1,32 +1,32 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RigUnit_MathRBFInterpolateBase.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
-#include "ERBFVectorDistanceType.h"
 #include "ERBFKernelType.h"
+#include "ERBFVectorDistanceType.h"
+#include "RigUnit_MathRBFInterpolateBase.h"
 #include "RigUnit_MathRBFInterpolateVectorWorkData.h"
 #include "RigUnit_MathRBFInterpolateVectorBase.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_MathRBFInterpolateVectorBase : public FRigUnit_MathRBFInterpolateBase {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector Input;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ERBFVectorDistanceType DistanceFunction;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ERBFKernelType SmoothingFunction;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float SmoothingRadius;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bNormalizeOutput;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FRigUnit_MathRBFInterpolateVectorWorkData WorkData;
     
     CONTROLRIG_API FRigUnit_MathRBFInterpolateVectorBase();

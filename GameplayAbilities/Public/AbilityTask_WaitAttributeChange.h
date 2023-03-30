@@ -1,26 +1,26 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "AbilityTask.h"
-#include "WaitAttributeChangeDelegateDelegate.h"
-#include "EWaitAttributeChangeComparison.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTag -FallbackName=GameplayTag
+#include "AbilityTask.h"
+#include "EWaitAttributeChangeComparison.h"
 #include "GameplayAttribute.h"
+#include "WaitAttributeChangeDelegateDelegate.h"
 #include "AbilityTask_WaitAttributeChange.generated.h"
 
+class AActor;
 class UAbilitySystemComponent;
 class UAbilityTask_WaitAttributeChange;
 class UGameplayAbility;
-class AActor;
 
-UCLASS()
+UCLASS(Blueprintable)
 class GAMEPLAYABILITIES_API UAbilityTask_WaitAttributeChange : public UAbilityTask {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FWaitAttributeChangeDelegate OnChange;
     
 protected:
-    UPROPERTY(Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UAbilitySystemComponent* ExternalOwner;
     
 public:

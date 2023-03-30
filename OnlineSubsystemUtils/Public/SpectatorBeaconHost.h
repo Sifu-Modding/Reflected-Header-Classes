@@ -5,21 +5,21 @@
 
 class USpectatorBeaconState;
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class ONLINESUBSYSTEMUTILS_API ASpectatorBeaconHost : public AOnlineBeaconHostObject {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USpectatorBeaconState* State;
     
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bLogoutOnSessionTimeout;
     
-    UPROPERTY(Config, Transient)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float SessionTimeoutSecs;
     
-    UPROPERTY(Config, Transient)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float TravelSessionTimeoutSecs;
     
 public:

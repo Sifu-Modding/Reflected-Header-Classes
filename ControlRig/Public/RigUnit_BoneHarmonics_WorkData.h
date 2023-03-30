@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "CachedRigElement.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
+#include "CachedRigElement.h"
 #include "RigUnit_BoneHarmonics_WorkData.generated.h"
 
 USTRUCT(BlueprintType)
 struct FRigUnit_BoneHarmonics_WorkData {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FCachedRigElement> CachedItems;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector WaveTime;
     
     CONTROLRIG_API FRigUnit_BoneHarmonics_WorkData();

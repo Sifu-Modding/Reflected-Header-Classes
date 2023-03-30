@@ -1,28 +1,28 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ARTrackedGeometry.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
+#include "ARTrackedGeometry.h"
 #include "AREnvironmentCaptureProbe.generated.h"
 
 class UAREnvironmentCaptureProbeTexture;
 
-UCLASS()
+UCLASS(Blueprintable)
 class AUGMENTEDREALITY_API UAREnvironmentCaptureProbe : public UARTrackedGeometry {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector Extent;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UAREnvironmentCaptureProbeTexture* EnvironmentCaptureTexture;
     
 public:
     UAREnvironmentCaptureProbe();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector GetExtent() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UAREnvironmentCaptureProbeTexture* GetEnvironmentCaptureTexture();
     
 };

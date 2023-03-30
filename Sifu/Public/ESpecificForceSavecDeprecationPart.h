@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "ESpecificForceSavecDeprecationPart.generated.h"
 
-UENUM()
-enum class ESpecificForceSavecDeprecationPart {
+UENUM(BlueprintType)
+enum class ESpecificForceSavecDeprecationPart : uint8 {
     SkillConsolidationLevel,
 };
 

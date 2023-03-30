@@ -2,14 +2,14 @@
 #include "CoreMinimal.h"
 #include "EngineServiceAuthGrant.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FEngineServiceAuthGrant {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString UserName;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString UserToGrant;
     
     ENGINEMESSAGES_API FEngineServiceAuthGrant();

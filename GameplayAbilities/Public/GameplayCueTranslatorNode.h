@@ -1,24 +1,24 @@
 #pragma once
 #include "CoreMinimal.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTag -FallbackName=GameplayTag
 #include "GameplayCueTranslationLink.h"
 #include "GameplayCueTranslatorNodeIndex.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTag -FallbackName=GameplayTag
 #include "GameplayCueTranslatorNode.generated.h"
 
 USTRUCT(BlueprintType)
 struct FGameplayCueTranslatorNode {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FGameplayCueTranslationLink> Links;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayCueTranslatorNodeIndex CachedIndex;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayTag CachedGameplayTag;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName CachedGameplayTagName;
     
     GAMEPLAYABILITIES_API FGameplayCueTranslatorNode();

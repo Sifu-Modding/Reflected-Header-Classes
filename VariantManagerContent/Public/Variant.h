@@ -1,32 +1,32 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
-#include "VariantDependency.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Transform -FallbackName=Transform
+#include "VariantDependency.h"
 #include "Variant.generated.h"
 
-class UTexture2D;
 class AActor;
+class ULevelVariantSets;
+class UTexture2D;
+class UVariant;
 class UVariantObjectBinding;
 class UVariantSet;
-class UVariant;
-class ULevelVariantSets;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class VARIANTMANAGERCONTENT_API UVariant : public UObject {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FVariantDependency> Dependencies;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FText DisplayText;
     
-    UPROPERTY(Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     TArray<UVariantObjectBinding*> ObjectBindings;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTexture2D* Thumbnail;
     
 public:
@@ -49,7 +49,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetDisplayText(const FText& NewDisplayText);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void SetDependency(int32 Index, FVariantDependency& Dependency);
     
     UFUNCTION(BlueprintCallable)
@@ -58,31 +58,31 @@ public:
     UFUNCTION(BlueprintCallable)
     UTexture2D* GetThumbnail();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UVariantSet* GetParent();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetNumDependencies();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetNumActors();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FText GetDisplayText() const;
     
     UFUNCTION(BlueprintCallable)
     TArray<UVariant*> GetDependents(ULevelVariantSets* LevelVariantSets, bool bOnlyEnabledDependencies);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FVariantDependency GetDependency(int32 Index);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     AActor* GetActor(int32 ActorIndex);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void DeleteDependency(int32 Index);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     int32 AddDependency(FVariantDependency& Dependency);
     
 };

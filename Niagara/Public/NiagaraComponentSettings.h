@@ -4,17 +4,17 @@
 #include "NiagaraEmitterNameSettingsRef.h"
 #include "NiagaraComponentSettings.generated.h"
 
-UCLASS(DefaultConfig, Config=Game)
+UCLASS(Blueprintable, Config=Engine, DefaultConfig, Config=Game)
 class NIAGARA_API UNiagaraComponentSettings : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSet<FName> SuppressActivationList;
     
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSet<FName> ForceAutoPooolingList;
     
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSet<FNiagaraEmitterNameSettingsRef> SuppressEmitterList;
     
     UNiagaraComponentSettings();

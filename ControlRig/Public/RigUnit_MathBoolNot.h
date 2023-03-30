@@ -3,7 +3,7 @@
 #include "RigUnit_MathBoolUnaryOp.h"
 #include "RigUnit_MathBoolNot.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_MathBoolNot : public FRigUnit_MathBoolUnaryOp {
     GENERATED_BODY()
 public:

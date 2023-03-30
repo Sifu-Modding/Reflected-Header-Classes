@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "ENiagaraExecutionState.generated.h"
 
-UENUM()
-enum class ENiagaraExecutionState {
+UENUM(BlueprintType)
+enum class ENiagaraExecutionState : uint8 {
     Active,
     Inactive,
     InactiveClear,

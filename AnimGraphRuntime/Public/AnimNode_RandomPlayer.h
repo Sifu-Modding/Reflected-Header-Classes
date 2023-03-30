@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct ANIMGRAPHRUNTIME_API FAnimNode_RandomPlayer : public FAnimNode_Base {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FRandomPlayerSequenceEntry> Entries;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bShuffleMode;
     
     FAnimNode_RandomPlayer();

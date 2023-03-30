@@ -8,7 +8,7 @@ struct GAMEPLAYABILITIES_API FGameplayEffectAttributeCaptureSpec {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayEffectAttributeCaptureDefinition BackingDefinition;
     
 public:

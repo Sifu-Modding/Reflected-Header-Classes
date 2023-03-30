@@ -1,10 +1,10 @@
 #include "MoviePipelineBlueprintLibrary.h"
 
 class ULevelSequence;
-class UMoviePipelineExecutorJob;
 class UMoviePipeline;
-class UObject;
+class UMoviePipelineExecutorJob;
 class UMovieSceneSequence;
+class UObject;
 
 void UMoviePipelineBlueprintLibrary::UpdateJobShotListFromSequence(ULevelSequence* InSequence, UMoviePipelineExecutorJob* InJob) {
 }

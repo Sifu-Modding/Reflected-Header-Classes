@@ -4,14 +4,14 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Timespan -FallbackName=Timespan
 #include "MediaTimeStampInfo.generated.h"
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class MEDIAASSETS_API UMediaTimeStampInfo : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTimespan Time;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     int64 SequenceIndex;
     
     UMediaTimeStampInfo();

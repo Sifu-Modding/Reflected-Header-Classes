@@ -2,11 +2,11 @@
 #include "CoreMinimal.h"
 #include "RBFEntry.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct ANIMGRAPHRUNTIME_API FRBFEntry {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<float> Values;
     
     FRBFEntry();

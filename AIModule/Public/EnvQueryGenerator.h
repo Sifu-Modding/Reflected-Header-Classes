@@ -1,22 +1,22 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "EnvQueryNode.h"
+#include "Templates/SubclassOf.h"
 #include "EnvQueryGenerator.generated.h"
 
 class UEnvQueryItemType;
 
-UCLASS(Abstract, EditInlineNew)
+UCLASS(Abstract, Blueprintable, EditInlineNew)
 class AIMODULE_API UEnvQueryGenerator : public UEnvQueryNode {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString OptionName;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UEnvQueryItemType> ItemType;
     
-    UPROPERTY(AdvancedDisplay, EditDefaultsOnly)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bAutoSortTests: 1;
     
     UEnvQueryGenerator();

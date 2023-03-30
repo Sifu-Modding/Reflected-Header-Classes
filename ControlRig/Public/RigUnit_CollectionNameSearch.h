@@ -1,27 +1,27 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RigUnit_CollectionBase.h"
 #include "ERigElementType.h"
 #include "RigElementKeyCollection.h"
+#include "RigUnit_CollectionBase.h"
 #include "RigUnit_CollectionNameSearch.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_CollectionNameSearch : public FRigUnit_CollectionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName PartialName;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ERigElementType TypeToSearch;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRigElementKeyCollection Collection;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRigElementKeyCollection CachedCollection;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 CachedHierarchyHash;
     
     CONTROLRIG_API FRigUnit_CollectionNameSearch();

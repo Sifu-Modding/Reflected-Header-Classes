@@ -6,15 +6,15 @@
 
 class UDataTable;
 
-UCLASS()
+UCLASS(Blueprintable)
 class GAMEPLAYTAGS_API UGameplayTagsManager : public UObject {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FGameplayTagSource> TagSources;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UDataTable*> GameplayTagTables;
     
 public:

@@ -3,18 +3,18 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=AnimNotifyState_Trail -FallbackName=AnimNotifyState_Trail
 #include "TrailNotifyStateExtended.generated.h"
 
-UCLASS(CollapseCategories, EditInlineNew)
+UCLASS(Blueprintable, CollapseCategories, EditInlineNew)
 class SIFU_API UTrailNotifyStateExtended : public UAnimNotifyState_Trail {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bCheckInPerfectLink;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bCheckNotInPerfectLink;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString m_BaseName;
     
 public:

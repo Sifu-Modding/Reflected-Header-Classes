@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FVMFunctionSpecifier {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName Key;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName Value;
     
     NIAGARA_API FVMFunctionSpecifier();

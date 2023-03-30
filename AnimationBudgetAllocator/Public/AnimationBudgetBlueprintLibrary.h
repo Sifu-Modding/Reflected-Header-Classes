@@ -6,7 +6,7 @@
 
 class UObject;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UAnimationBudgetBlueprintLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

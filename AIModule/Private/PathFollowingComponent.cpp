@@ -1,7 +1,7 @@
 #include "PathFollowingComponent.h"
 
-class ANavigationData;
 class AActor;
+class ANavigationData;
 
 void UPathFollowingComponent::OnNavDataRegistered(ANavigationData* NavData) {
 }

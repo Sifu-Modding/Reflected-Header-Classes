@@ -1,19 +1,19 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=Actor -FallbackName=Actor
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCDynamicDelegate__DelegateSignature -FallbackName=SCDynamicDelegateDelegate
+#include "Templates/SubclassOf.h"
 #include "SkillTree.generated.h"
 
-class USkillsDB;
-class USkillGameplayEffect;
 class UCurveFloat;
+class USkillGameplayEffect;
+class USkillsDB;
 
-UCLASS()
+UCLASS(Blueprintable)
 class SIFU_API ASkillTree : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USkillsDB* m_SkillsDB;
     
     ASkillTree();
@@ -26,7 +26,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void BPF_BlendTreeState(const TArray<TSubclassOf<USkillGameplayEffect>>& _prevSkills, const TArray<TSubclassOf<USkillGameplayEffect>>& _newSkills, float _fAlpha);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BPE_SetNodeState(FName _boneName, float _fState, float _fAge);
     
 };

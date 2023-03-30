@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct MOVIESCENETRACKS_API FScalarParameterNameAndCurve {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName ParameterName;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMovieSceneFloatChannel ParameterCurve;
     
     FScalarParameterNameAndCurve();

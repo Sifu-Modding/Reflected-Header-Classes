@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EGameplayAbilityInputBinds.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 namespace EGameplayAbilityInputBinds {
     enum Type {
         Ability1,

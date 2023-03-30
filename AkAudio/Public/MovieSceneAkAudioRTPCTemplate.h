@@ -5,11 +5,11 @@
 
 class UMovieSceneAkAudioRTPCSection;
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct AKAUDIO_API FMovieSceneAkAudioRTPCTemplate : public FMovieSceneEvalTemplate {
     GENERATED_BODY()
 public:
-    UPROPERTY(Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UMovieSceneAkAudioRTPCSection* Section;
     
     FMovieSceneAkAudioRTPCTemplate();

@@ -6,13 +6,13 @@ USTRUCT(BlueprintType)
 struct FClothVertBoneData {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 NumInfluences;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint16 BoneIndices[12];
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     float BoneWeights[12];
     
     CLOTHINGSYSTEMRUNTIMEINTERFACE_API FClothVertBoneData();

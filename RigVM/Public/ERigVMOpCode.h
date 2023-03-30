@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ERigVMOpCode.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class ERigVMOpCode : uint8 {
     Execute_0_Operands,
     Execute_1_Operands,

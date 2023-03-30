@@ -1,50 +1,50 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "MediaTextureOrientation.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=Texture -FallbackName=Texture
-#include "MediaTextureOutputFormat.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=TextureAddress -FallbackName=TextureAddress
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=LinearColor -FallbackName=LinearColor
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=Texture -FallbackName=Texture
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=TextureAddress -FallbackName=TextureAddress
+#include "MediaTextureOrientation.h"
+#include "MediaTextureOutputFormat.h"
 #include "MediaTexture.generated.h"
 
 class UMediaPlayer;
 
-UCLASS()
+UCLASS(Blueprintable)
 class MEDIAASSETS_API UMediaTexture : public UTexture {
     GENERATED_BODY()
 public:
-    UPROPERTY(AdvancedDisplay, AssetRegistrySearchable, BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(AdvancedDisplay, AssetRegistrySearchable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<TextureAddress> AddressX;
     
-    UPROPERTY(AdvancedDisplay, AssetRegistrySearchable, BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(AdvancedDisplay, AssetRegistrySearchable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<TextureAddress> AddressY;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool AutoClear;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FLinearColor ClearColor;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool EnableGenMips;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 NumMips;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool NewStyleOutput;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<MediaTextureOutputFormat> OutputFormat;
     
-    UPROPERTY(BlueprintReadOnly, SkipSerialization, TextExportTransient, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SkipSerialization, TextExportTransient, Transient, meta=(AllowPrivateAccess=true))
     float CurrentAspectRatio;
     
-    UPROPERTY(BlueprintReadOnly, SkipSerialization, TextExportTransient, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SkipSerialization, TextExportTransient, Transient, meta=(AllowPrivateAccess=true))
     TEnumAsByte<MediaTextureOrientation> CurrentOrientation;
     
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UMediaPlayer* MediaPlayer;
     
 public:
@@ -52,16 +52,16 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetMediaPlayer(UMediaPlayer* NewMediaPlayer);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetWidth() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UMediaPlayer* GetMediaPlayer() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetHeight() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetAspectRatio() const;
     
 };

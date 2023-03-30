@@ -3,7 +3,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=GameViewportClient -FallbackName=GameViewportClient
 #include "SCGameViewportClient.generated.h"
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class SIFU_API USCGameViewportClient : public UGameViewportClient {
     GENERATED_BODY()
 public:

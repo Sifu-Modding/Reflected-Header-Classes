@@ -1,26 +1,26 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RigUnitMutable.h"
 #include "ControlRigExecuteContext.h"
+#include "RigUnitMutable.h"
 #include "RigUnit_ForLoopCount.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_ForLoopCount : public FRigUnitMutable {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 Count;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 Index;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Ratio;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool Continue;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FControlRigExecuteContext Completed;
     
     CONTROLRIG_API FRigUnit_ForLoopCount();

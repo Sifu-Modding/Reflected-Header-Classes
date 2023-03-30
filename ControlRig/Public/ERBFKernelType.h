@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ERBFKernelType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class ERBFKernelType : uint8 {
     Gaussian,
     Exponential,

@@ -8,19 +8,19 @@ USTRUCT(BlueprintType)
 struct GAMEPLAYABILITIES_API FPredictionKey {
     GENERATED_BODY()
 public:
-    UPROPERTY(NotReplicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, NotReplicated, meta=(AllowPrivateAccess=true))
     UPackageMap* PredictiveConnection;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     int16 Current;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     int16 Base;
     
-    UPROPERTY(NotReplicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, NotReplicated, meta=(AllowPrivateAccess=true))
     bool bIsStale;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bIsServerInitiated;
     
     FPredictionKey();

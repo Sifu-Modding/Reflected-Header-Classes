@@ -9,10 +9,10 @@ struct FLevelSequenceBindingReferences {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<FGuid, FLevelSequenceBindingReferenceArray> BindingIdToReferences;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSet<FGuid> AnimSequenceInstances;
     
 public:

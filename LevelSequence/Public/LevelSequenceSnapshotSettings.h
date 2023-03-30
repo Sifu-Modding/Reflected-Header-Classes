@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FLevelSequenceSnapshotSettings {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 ZeroPadAmount;
     
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FFrameRate FrameRate;
     
     LEVELSEQUENCE_API FLevelSequenceSnapshotSettings();

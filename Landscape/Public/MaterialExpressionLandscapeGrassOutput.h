@@ -4,11 +4,11 @@
 #include "GrassInput.h"
 #include "MaterialExpressionLandscapeGrassOutput.generated.h"
 
-UCLASS(CollapseCategories)
+UCLASS(Blueprintable, CollapseCategories)
 class LANDSCAPE_API UMaterialExpressionLandscapeGrassOutput : public UMaterialExpressionCustomOutput {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FGrassInput> GrassTypes;
     
     UMaterialExpressionLandscapeGrassOutput();

@@ -4,20 +4,20 @@
 #include "BlackboardKeySelector.h"
 #include "BTDecorator_ConeCheck.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class AIMODULE_API UBTDecorator_ConeCheck : public UBTDecorator {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ConeHalfAngle;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBlackboardKeySelector ConeOrigin;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBlackboardKeySelector ConeDirection;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBlackboardKeySelector Observed;
     
     UBTDecorator_ConeCheck();

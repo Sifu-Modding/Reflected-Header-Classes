@@ -1,23 +1,23 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "InputAction.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
-#include "EControllerIconStyles.h"
 #include "EControllerIconAxisTypes.h"
+#include "EControllerIconStyles.h"
+#include "InputAction.h"
 #include "RichTextBlockControllerDecoratorHelper.generated.h"
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class URichTextBlockControllerDecoratorHelper : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     URichTextBlockControllerDecoratorHelper();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static FString BPF_GetInputActionValueName(InputAction _eAction);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static FString BPF_GetControllerIconStylesValueName(EControllerIconStyles _eStyle);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static FString BPF_GetControllerIconAxisTypesValueName(EControllerIconAxisTypes _eAxis);
     
 };

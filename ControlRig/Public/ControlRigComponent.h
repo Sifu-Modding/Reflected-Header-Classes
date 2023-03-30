@@ -1,67 +1,67 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "ControlRigComponentMappedElement.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Rotator -FallbackName=Rotator
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Transform -FallbackName=Transform
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector2D -FallbackName=Vector2D
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=PrimitiveComponent -FallbackName=PrimitiveComponent
 #include "ControlRigComponentDelegateDelegate.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Transform -FallbackName=Transform
-#include "EControlRigComponentSpace.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector2D -FallbackName=Vector2D
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Rotator -FallbackName=Rotator
-#include "ERigElementType.h"
-#include "ControlRigComponentMappedCurve.h"
 #include "ControlRigComponentMappedBone.h"
 #include "ControlRigComponentMappedComponent.h"
+#include "ControlRigComponentMappedCurve.h"
+#include "ControlRigComponentMappedElement.h"
+#include "EControlRigComponentSpace.h"
+#include "ERigElementType.h"
+#include "Templates/SubclassOf.h"
 #include "ControlRigComponent.generated.h"
 
 class UControlRig;
-class USkeletalMesh;
 class UControlRigComponent;
+class USkeletalMesh;
 class USkeletalMeshComponent;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class CONTROLRIG_API UControlRigComponent : public UPrimitiveComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UControlRig> ControlRigClass;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FControlRigComponentDelegate OnPostInitializeDelegate;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FControlRigComponentDelegate OnPreSetupDelegate;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FControlRigComponentDelegate OnPostSetupDelegate;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FControlRigComponentDelegate OnPreUpdateDelegate;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FControlRigComponentDelegate OnPostUpdateDelegate;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FControlRigComponentMappedElement> MappedElements;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bResetTransformBeforeTick;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bResetInitialsBeforeSetup;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bUpdateRigOnTick;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bUpdateInEditor;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bDrawBones;
     
 private:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UControlRig* ControlRig;
     
 public:
@@ -111,73 +111,73 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetBoneInitialTransformsFromSkeletalMesh(USkeletalMesh* InSkeletalMesh);
     
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void OnPreUpdate(UControlRigComponent* Component);
     
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void OnPreSetup(UControlRigComponent* Component);
     
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void OnPostUpdate(UControlRigComponent* Component);
     
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void OnPostSetup(UControlRigComponent* Component);
     
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void OnPostInitialize(UControlRigComponent* Component);
     
     UFUNCTION(BlueprintCallable)
     void Initialize();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FTransform GetSpaceTransform(FName SpaceName, EControlRigComponentSpace Space);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FTransform GetInitialSpaceTransform(FName SpaceName, EControlRigComponentSpace Space);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FTransform GetInitialBoneTransform(FName BoneName, EControlRigComponentSpace Space);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     TArray<FName> GetElementNames(ERigElementType ElementType);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector2D GetControlVector2D(FName ControlName);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FTransform GetControlTransform(FName ControlName, EControlRigComponentSpace Space);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector GetControlScale(FName ControlName, EControlRigComponentSpace Space);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FRotator GetControlRotator(FName ControlName, EControlRigComponentSpace Space);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UControlRig* GetControlRig();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector GetControlPosition(FName ControlName, EControlRigComponentSpace Space);
     
     UFUNCTION(BlueprintCallable)
     FTransform GetControlOffset(FName ControlName, EControlRigComponentSpace Space);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetControlInt(FName ControlName);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetControlFloat(FName ControlName);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool GetControlBool(FName ControlName);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FTransform GetBoneTransform(FName BoneName, EControlRigComponentSpace Space);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetAbsoluteTime() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool DoesElementExist(FName Name, ERigElementType ElementType);
     
     UFUNCTION(BlueprintCallable)

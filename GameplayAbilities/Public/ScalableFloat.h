@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct GAMEPLAYABILITIES_API FScalableFloat {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Value;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FCurveTableRowHandle Curve;
     
     FScalableFloat();

@@ -3,19 +3,19 @@
 #include "GameplayAbilityWorldReticle.h"
 #include "GameplayAbilityWorldReticle_ActorVisualization.generated.h"
 
-class UCapsuleComponent;
 class UActorComponent;
+class UCapsuleComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class AGameplayAbilityWorldReticle_ActorVisualization : public AGameplayAbilityWorldReticle {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UCapsuleComponent* CollisionComponent;
     
 public:
-    UPROPERTY(Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     TArray<UActorComponent*> VisualizationComponents;
     
     AGameplayAbilityWorldReticle_ActorVisualization();

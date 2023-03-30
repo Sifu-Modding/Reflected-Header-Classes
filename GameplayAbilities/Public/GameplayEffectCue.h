@@ -1,23 +1,23 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameplayAttribute.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTagContainer -FallbackName=GameplayTagContainer
+#include "GameplayAttribute.h"
 #include "GameplayEffectCue.generated.h"
 
 USTRUCT(BlueprintType)
 struct FGameplayEffectCue {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayAttribute MagnitudeAttribute;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MinLevel;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MaxLevel;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayTagContainer GameplayCueTags;
     
     GAMEPLAYABILITIES_API FGameplayEffectCue();

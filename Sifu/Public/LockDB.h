@@ -7,26 +7,26 @@
 
 class UCurveFloat;
 
-UCLASS()
+UCLASS(Blueprintable)
 class SIFU_API ULockDB : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRelationshipActionConditionArray m_RelationshipBehaviours;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     EMoveStatus m_MoveStatusOutOfFightRange[6];
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     EMoveStatus m_MoveStatusInFightRange[6];
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UCurveFloat* m_MaxVerticalAngleCurve;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bDebugMaxVerticalAngle;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UCurveFloat* m_MaxZDiff;
     
     ULockDB();

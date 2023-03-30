@@ -1,36 +1,36 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "WaitConfirmCancelDelegateDelegate.h"
 #include "AbilityTask.h"
+#include "WaitConfirmCancelDelegateDelegate.h"
 #include "AbilityTask_WaitConfirmCancel.generated.h"
 
 class UAbilityTask_WaitConfirmCancel;
 class UGameplayAbility;
 
-UCLASS()
+UCLASS(Blueprintable)
 class GAMEPLAYABILITIES_API UAbilityTask_WaitConfirmCancel : public UAbilityTask {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FWaitConfirmCancelDelegate OnConfirm;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FWaitConfirmCancelDelegate OnCancel;
     
     UAbilityTask_WaitConfirmCancel();
     UFUNCTION(BlueprintCallable)
     static UAbilityTask_WaitConfirmCancel* WaitConfirmCancel(UGameplayAbility* OwningAbility);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnLocalConfirmCallback();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnLocalCancelCallback();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnConfirmCallback();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnCancelCallback();
     
 };

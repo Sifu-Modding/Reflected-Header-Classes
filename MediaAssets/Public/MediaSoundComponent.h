@@ -1,33 +1,33 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "MediaSoundComponentSpectralData.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=AudioMixer -ObjectName=SynthComponent -FallbackName=SynthComponent
-#include "EMediaSoundComponentFFTSize.h"
-#include "EMediaSoundChannels.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=FloatRange -FallbackName=FloatRange
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=SoundAttenuationSettings -FallbackName=SoundAttenuationSettings
+#include "EMediaSoundChannels.h"
+#include "EMediaSoundComponentFFTSize.h"
+#include "MediaSoundComponentSpectralData.h"
 #include "MediaSoundComponent.generated.h"
 
 class UMediaPlayer;
 
-UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class MEDIAASSETS_API UMediaSoundComponent : public USynthComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     EMediaSoundChannels Channels;
     
-    UPROPERTY(AdvancedDisplay, EditAnywhere)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool DynamicRateAdjustment;
     
-    UPROPERTY(AdvancedDisplay, EditAnywhere)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float RateAdjustmentFactor;
     
-    UPROPERTY(AdvancedDisplay, EditAnywhere)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FFloatRange RateAdjustmentRange;
     
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UMediaPlayer* MediaPlayer;
     
 public:
@@ -53,10 +53,10 @@ public:
     UFUNCTION(BlueprintCallable)
     TArray<FMediaSoundComponentSpectralData> GetNormalizedSpectralData();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UMediaPlayer* GetMediaPlayer() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetEnvelopeValue() const;
     
     UFUNCTION(BlueprintCallable)

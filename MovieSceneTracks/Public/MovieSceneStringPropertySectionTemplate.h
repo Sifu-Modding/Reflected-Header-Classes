@@ -4,12 +4,12 @@
 #include "MovieSceneStringChannel.h"
 #include "MovieSceneStringPropertySectionTemplate.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FMovieSceneStringPropertySectionTemplate : public FMovieScenePropertySectionTemplate {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMovieSceneStringChannel StringCurve;
     
 public:

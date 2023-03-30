@@ -6,14 +6,14 @@
 class UEnvQueryGenerator;
 class UEnvQueryTest;
 
-UCLASS()
+UCLASS(Blueprintable)
 class AIMODULE_API UEnvQueryOption : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UEnvQueryGenerator* Generator;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UEnvQueryTest*> Tests;
     
     UEnvQueryOption();

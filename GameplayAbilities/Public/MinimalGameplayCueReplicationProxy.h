@@ -4,12 +4,12 @@
 
 class UAbilitySystemComponent;
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct GAMEPLAYABILITIES_API FMinimalGameplayCueReplicationProxy {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UAbilitySystemComponent* Owner;
     
 public:

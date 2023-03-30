@@ -2,8 +2,8 @@
 #include "Net/UnrealNetwork.h"
 #include "Templates/SubclassOf.h"
 
-class UGameplayTaskOwnerInterface;
 class IGameplayTaskOwnerInterface;
+class UGameplayTaskOwnerInterface;
 class UGameplayTask;
 class UGameplayTaskResource;
 

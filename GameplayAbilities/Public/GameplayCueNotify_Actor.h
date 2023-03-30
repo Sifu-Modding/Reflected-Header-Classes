@@ -1,71 +1,71 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EGameplayCueEvent.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=Actor -FallbackName=Actor
 //CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTag -FallbackName=GameplayTag
+#include "EGameplayCueEvent.h"
 #include "GameplayCueParameters.h"
 #include "GameplayCueNotify_Actor.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class GAMEPLAYABILITIES_API AGameplayCueNotify_Actor : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bAutoDestroyOnRemove;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float AutoDestroyDelay;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool WarnIfTimelineIsStillRunning;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool WarnIfLatentActionIsStillRunning;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayTag GameplayCueTag;
     
-    UPROPERTY(AssetRegistrySearchable)
+    UPROPERTY(AssetRegistrySearchable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName GameplayCueName;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bAutoAttachToOwner;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool IsOverride;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bUniqueInstancePerInstigator;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bUniqueInstancePerSourceObject;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bAllowMultipleOnActiveEvents;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bAllowMultipleWhileActiveEvents;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 NumPreallocatedInstances;
     
     AGameplayCueNotify_Actor();
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     bool WhileActive(AActor* MyTarget, const FGameplayCueParameters& Parameters);
     
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     bool OnRemove(AActor* MyTarget, const FGameplayCueParameters& Parameters);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnOwnerDestroyed(AActor* DestroyedActor);
     
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     bool OnExecute(AActor* MyTarget, const FGameplayCueParameters& Parameters);
     
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     bool OnActive(AActor* MyTarget, const FGameplayCueParameters& Parameters);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void K2_HandleGameplayCue(AActor* MyTarget, TEnumAsByte<EGameplayCueEvent::Type> EventType, const FGameplayCueParameters& Parameters);
     
     UFUNCTION(BlueprintCallable)

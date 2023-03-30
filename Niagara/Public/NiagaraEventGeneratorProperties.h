@@ -7,13 +7,13 @@ USTRUCT(BlueprintType)
 struct FNiagaraEventGeneratorProperties {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 MaxEventsPerFrame;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName ID;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FNiagaraDataSetCompiledData DataSetCompiledData;
     
     NIAGARA_API FNiagaraEventGeneratorProperties();

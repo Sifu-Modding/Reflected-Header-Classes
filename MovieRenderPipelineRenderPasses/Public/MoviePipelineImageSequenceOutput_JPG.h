@@ -3,7 +3,7 @@
 #include "MoviePipelineImageSequenceOutputBase.h"
 #include "MoviePipelineImageSequenceOutput_JPG.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class MOVIERENDERPIPELINERENDERPASSES_API UMoviePipelineImageSequenceOutput_JPG : public UMoviePipelineImageSequenceOutputBase {
     GENERATED_BODY()
 public:

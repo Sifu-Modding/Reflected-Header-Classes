@@ -3,7 +3,7 @@
 #include "RigUnit_BinaryTransformOp.h"
 #include "RigUnit_GetRelativeTransform.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_GetRelativeTransform : public FRigUnit_BinaryTransformOp {
     GENERATED_BODY()
 public:

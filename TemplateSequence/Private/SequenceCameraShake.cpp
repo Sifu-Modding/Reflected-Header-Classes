@@ -1,6 +1,6 @@
 #include "SequenceCameraShake.h"
-#include "SequenceCameraShakeSequencePlayer.h"
 #include "SequenceCameraShakeCameraStandIn.h"
+#include "SequenceCameraShakeSequencePlayer.h"
 
 USequenceCameraShake::USequenceCameraShake() {
     this->Sequence = NULL;

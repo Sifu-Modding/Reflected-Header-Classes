@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FRigUnit_DebugTransformArrayMutable_WorkData {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTransform> DrawTransforms;
     
     CONTROLRIG_API FRigUnit_DebugTransformArrayMutable_WorkData();

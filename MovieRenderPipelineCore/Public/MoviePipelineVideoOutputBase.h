@@ -3,7 +3,7 @@
 #include "MoviePipelineOutputBase.h"
 #include "MoviePipelineVideoOutputBase.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class MOVIERENDERPIPELINECORE_API UMoviePipelineVideoOutputBase : public UMoviePipelineOutputBase {
     GENERATED_BODY()
 public:

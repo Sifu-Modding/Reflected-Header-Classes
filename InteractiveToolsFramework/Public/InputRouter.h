@@ -5,18 +5,18 @@
 
 class UInputBehaviorSet;
 
-UCLASS(Transient)
+UCLASS(Blueprintable, Transient)
 class INTERACTIVETOOLSFRAMEWORK_API UInputRouter : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bAutoInvalidateOnHover;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bAutoInvalidateOnCapture;
     
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UInputBehaviorSet* ActiveInputBehaviors;
     
 public:

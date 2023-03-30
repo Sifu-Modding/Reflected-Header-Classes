@@ -6,7 +6,7 @@ USTRUCT(BlueprintType)
 struct VARIANTMANAGERCONTENT_API FFunctionCaller {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName FunctionName;
     
     FFunctionCaller();

@@ -1,67 +1,67 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "NiagaraVariable.h"
-#include "NiagaraScriptDataUsageInfo.h"
-#include "NiagaraScriptDataInterfaceCompileInfo.h"
-#include "VMExternalFunctionBindingInfo.h"
-#include "NiagaraDataSetID.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=NiagaraShader -ObjectName=NiagaraDataInterfaceGPUParamInfo -FallbackName=NiagaraDataInterfaceGPUParamInfo
-#include "NiagaraDataSetProperties.h"
-#include "NiagaraStatScope.h"
-#include "ENiagaraScriptCompileStatus.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=NiagaraShader -ObjectName=SimulationStageMetaData -FallbackName=SimulationStageMetaData
+#include "ENiagaraScriptCompileStatus.h"
+#include "NiagaraDataSetID.h"
+#include "NiagaraDataSetProperties.h"
+#include "NiagaraScriptDataInterfaceCompileInfo.h"
+#include "NiagaraScriptDataUsageInfo.h"
+#include "NiagaraStatScope.h"
+#include "NiagaraVariable.h"
+#include "VMExternalFunctionBindingInfo.h"
 #include "NiagaraVMExecutableData.generated.h"
 
 USTRUCT(BlueprintType)
 struct NIAGARA_API FNiagaraVMExecutableData {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<uint8> ByteCode;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<uint8> OptimizedByteCode;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 NumTempRegisters;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 NumUserPtrs;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<uint8> ScriptLiterals;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FNiagaraVariable> Attributes;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FNiagaraScriptDataUsageInfo DataUsage;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FNiagaraScriptDataInterfaceCompileInfo> DataInterfaceInfo;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FVMExternalFunctionBindingInfo> CalledVMExternalFunctions;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FNiagaraDataSetID> ReadDataSets;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FNiagaraDataSetProperties> WriteDataSets;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FNiagaraStatScope> StatScopes;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FNiagaraDataInterfaceGPUParamInfo> DIParamInfo;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ENiagaraScriptCompileStatus LastCompileStatus;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FSimulationStageMetaData> SimulationStageMetaData;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bReadsSignificanceIndex: 1;
     
     FNiagaraVMExecutableData();

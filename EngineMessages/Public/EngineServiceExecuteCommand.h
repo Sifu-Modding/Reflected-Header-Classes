@@ -2,14 +2,14 @@
 #include "CoreMinimal.h"
 #include "EngineServiceExecuteCommand.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FEngineServiceExecuteCommand {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString Command;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString UserName;
     
     ENGINEMESSAGES_API FEngineServiceExecuteCommand();

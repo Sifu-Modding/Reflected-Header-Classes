@@ -1,7 +1,7 @@
 #include "InputMappingHelpers.h"
 
-class UGenericInputData;
 class ASCPlayerController;
+class UGenericInputData;
 class UInputMappingProfileDB;
 
 bool UInputMappingHelpers::ValidateMappingForPreset(const FInputMappingProfileData& _mappingContext, const FInputMappingGroup& _context, const FInputPresetsEnumHandler& _preset, InputContext _eContext, const FInputMappingData& _mapping, TArray<FMappingValidationError>& _outErrors, bool _bDetectCollisions) {

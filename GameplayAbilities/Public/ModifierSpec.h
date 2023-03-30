@@ -7,7 +7,7 @@ struct FModifierSpec {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float EvaluatedMagnitude;
     
 public:

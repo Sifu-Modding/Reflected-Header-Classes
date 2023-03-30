@@ -1,23 +1,23 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=Actor -FallbackName=Actor
+#include "Templates/SubclassOf.h"
 #include "OnlineBeaconHostObject.generated.h"
 
 class AOnlineBeaconClient;
 
-UCLASS(NotPlaceable, Transient)
+UCLASS(Blueprintable, NotPlaceable, Transient)
 class ONLINESUBSYSTEMUTILS_API AOnlineBeaconHostObject : public AActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FString BeaconTypeName;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<AOnlineBeaconClient> ClientBeaconActorClass;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<AOnlineBeaconClient*> ClientActors;
     
 public:

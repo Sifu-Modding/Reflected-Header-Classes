@@ -7,16 +7,16 @@ USTRUCT(BlueprintType)
 struct FNiagaraMaterialAttributeBinding {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName MaterialParameterName;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FNiagaraVariableBase NiagaraVariable;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FNiagaraVariableBase ResolvedNiagaraVariable;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FNiagaraVariableBase NiagaraChildVariable;
     
     NIAGARA_API FNiagaraMaterialAttributeBinding();

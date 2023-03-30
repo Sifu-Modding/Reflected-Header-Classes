@@ -4,20 +4,20 @@
 #include "NiagaraPlatformSet.h"
 #include "NiagaraRendererProperties.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class NIAGARA_API UNiagaraRendererProperties : public UNiagaraMergeable {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FNiagaraPlatformSet Platforms;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 SortOrderHint;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bIsEnabled;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bMotionBlurEnabled;
     
     UNiagaraRendererProperties();

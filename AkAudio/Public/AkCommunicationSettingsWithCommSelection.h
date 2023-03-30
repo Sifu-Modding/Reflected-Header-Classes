@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FAkCommunicationSettingsWithCommSelection : public FAkCommunicationSettings {
     GENERATED_BODY()
 public:
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     EAkCommSystem CommunicationSystem;
     
     AKAUDIO_API FAkCommunicationSettingsWithCommSelection();

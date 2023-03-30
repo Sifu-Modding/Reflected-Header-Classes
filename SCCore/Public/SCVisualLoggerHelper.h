@@ -3,7 +3,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
 #include "SCVisualLoggerHelper.generated.h"
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class SCCORE_API USCVisualLoggerHelper : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

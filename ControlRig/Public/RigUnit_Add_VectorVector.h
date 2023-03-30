@@ -3,7 +3,7 @@
 #include "RigUnit_BinaryVectorOp.h"
 #include "RigUnit_Add_VectorVector.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_Add_VectorVector : public FRigUnit_BinaryVectorOp {
     GENERATED_BODY()
 public:

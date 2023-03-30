@@ -5,15 +5,15 @@
 
 class UNiagaraComponent;
 
-UCLASS(MinimalAPI)
+UCLASS(Blueprintable, MinimalAPI)
 class ANiagaraActor : public AActor {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UNiagaraComponent* NiagaraComponent;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bDestroyOnSystemFinish: 1;
     
 public:
@@ -22,7 +22,7 @@ public:
     void SetDestroyOnSystemFinish(bool bShouldDestroyOnSystemFinish);
     
 private:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnNiagaraSystemFinished(UNiagaraComponent* FinishedComponent);
     
 };

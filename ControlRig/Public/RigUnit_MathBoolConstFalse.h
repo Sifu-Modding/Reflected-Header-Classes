@@ -3,7 +3,7 @@
 #include "RigUnit_MathBoolConstant.h"
 #include "RigUnit_MathBoolConstFalse.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_MathBoolConstFalse : public FRigUnit_MathBoolConstant {
     GENERATED_BODY()
 public:

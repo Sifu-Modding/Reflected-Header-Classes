@@ -5,11 +5,11 @@
 
 class UMovieScene;
 
-UCLASS(MinimalAPI)
+UCLASS(Blueprintable, MinimalAPI)
 class UTestMovieSceneSequence : public UMovieSceneSequence {
     GENERATED_BODY()
 public:
-    UPROPERTY(Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UMovieScene* MovieScene;
     
     UTestMovieSceneSequence();

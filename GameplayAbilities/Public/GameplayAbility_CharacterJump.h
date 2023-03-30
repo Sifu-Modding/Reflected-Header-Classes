@@ -3,7 +3,7 @@
 #include "GameplayAbility.h"
 #include "GameplayAbility_CharacterJump.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class GAMEPLAYABILITIES_API UGameplayAbility_CharacterJump : public UGameplayAbility {
     GENERATED_BODY()
 public:

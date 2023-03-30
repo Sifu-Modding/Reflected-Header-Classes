@@ -1,35 +1,35 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ScalarParameterNameAndCurve.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=MovieScene -ObjectName=MovieSceneEvalTemplate -FallbackName=MovieSceneEvalTemplate
-#include "Vector2DParameterNameAndCurves.h"
 #include "BoolParameterNameAndCurve.h"
-#include "VectorParameterNameAndCurves.h"
 #include "ColorParameterNameAndCurves.h"
+#include "ScalarParameterNameAndCurve.h"
 #include "TransformParameterNameAndCurves.h"
+#include "Vector2DParameterNameAndCurves.h"
+#include "VectorParameterNameAndCurves.h"
 #include "MovieSceneParameterSectionTemplate.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FMovieSceneParameterSectionTemplate : public FMovieSceneEvalTemplate {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FScalarParameterNameAndCurve> Scalars;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FBoolParameterNameAndCurve> Bools;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FVector2DParameterNameAndCurves> Vector2Ds;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FVectorParameterNameAndCurves> Vectors;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FColorParameterNameAndCurves> Colors;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTransformParameterNameAndCurves> Transforms;
     
 public:

@@ -3,20 +3,20 @@
 #include "GizmoBaseFloatParameterSource.h"
 #include "GizmoAxisIntervalParameterSource.generated.h"
 
-class UGizmoFloatParameterSource;
 class IGizmoFloatParameterSource;
+class UGizmoFloatParameterSource;
 
-UCLASS()
+UCLASS(Blueprintable)
 class INTERACTIVETOOLSFRAMEWORK_API UGizmoAxisIntervalParameterSource : public UGizmoBaseFloatParameterSource {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TScriptInterface<IGizmoFloatParameterSource> FloatParameterSource;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MinParameter;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MaxParameter;
     
     UGizmoAxisIntervalParameterSource();

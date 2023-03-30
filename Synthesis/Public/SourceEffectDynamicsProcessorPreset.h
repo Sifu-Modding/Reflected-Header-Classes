@@ -4,11 +4,11 @@
 #include "SourceEffectDynamicsProcessorSettings.h"
 #include "SourceEffectDynamicsProcessorPreset.generated.h"
 
-UCLASS(BlueprintType, EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class SYNTHESIS_API USourceEffectDynamicsProcessorPreset : public USoundEffectSourcePreset {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSourceEffectDynamicsProcessorSettings Settings;
     
     USourceEffectDynamicsProcessorPreset();

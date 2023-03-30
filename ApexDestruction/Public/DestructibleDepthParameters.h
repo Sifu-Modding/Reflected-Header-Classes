@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FDestructibleDepthParameters {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<EImpactDamageOverride> ImpactDamageOverride;
     
     APEXDESTRUCTION_API FDestructibleDepthParameters();

@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FNodeObject {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName Name;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName ParentName;
     
     ANIMATIONCORE_API FNodeObject();

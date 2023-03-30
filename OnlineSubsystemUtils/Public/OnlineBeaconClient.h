@@ -1,30 +1,30 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "OnlineBeacon.h"
 #include "EBeaconConnectionState.h"
+#include "OnlineBeacon.h"
 #include "OnlineBeaconClient.generated.h"
 
 class AOnlineBeaconHostObject;
 class UNetConnection;
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class ONLINESUBSYSTEMUTILS_API AOnlineBeaconClient : public AOnlineBeacon {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AOnlineBeaconHostObject* BeaconOwner;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UNetConnection* BeaconConnection;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EBeaconConnectionState ConnectionState;
     
 public:
     AOnlineBeaconClient();
 private:
-    UFUNCTION(Client, Reliable)
+    UFUNCTION(BlueprintCallable, Client, Reliable)
     void ClientOnConnected();
     
 };

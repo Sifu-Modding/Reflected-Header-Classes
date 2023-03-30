@@ -9,31 +9,31 @@ USTRUCT(BlueprintType)
 struct AIMODULE_API FEnvOverlapData {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ExtentX;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ExtentY;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ExtentZ;
     
-    UPROPERTY(AdvancedDisplay, EditDefaultsOnly)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector ShapeOffset;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<ECollisionChannel> OverlapChannel;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<EEnvOverlapShape::Type> OverlapShape;
     
-    UPROPERTY(AdvancedDisplay, EditDefaultsOnly)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bOnlyBlockingHits: 1;
     
-    UPROPERTY(AdvancedDisplay, EditDefaultsOnly)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bOverlapComplex: 1;
     
-    UPROPERTY(AdvancedDisplay, EditDefaultsOnly)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bSkipOverlapQuerier: 1;
     
     FEnvOverlapData();

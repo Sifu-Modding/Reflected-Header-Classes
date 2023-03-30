@@ -4,24 +4,24 @@
 #include "WaitCancelDelegateDelegate.h"
 #include "AbilityTask_WaitCancel.generated.h"
 
-class UGameplayAbility;
 class UAbilityTask_WaitCancel;
+class UGameplayAbility;
 
-UCLASS()
+UCLASS(Blueprintable)
 class GAMEPLAYABILITIES_API UAbilityTask_WaitCancel : public UAbilityTask {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FWaitCancelDelegate OnCancel;
     
     UAbilityTask_WaitCancel();
     UFUNCTION(BlueprintCallable)
     static UAbilityTask_WaitCancel* WaitCancel(UGameplayAbility* OwningAbility);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnLocalCancelCallback();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnCancelCallback();
     
 };

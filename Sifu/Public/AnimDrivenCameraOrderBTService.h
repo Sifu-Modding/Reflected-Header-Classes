@@ -1,37 +1,37 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=AIModule -ObjectName=BTService -FallbackName=BTService
-#include "EOrderType.h"
 #include "ECameraAnimDrivenComputationMethod.h"
+#include "EOrderType.h"
 #include "AnimDrivenCameraOrderBTService.generated.h"
 
-class UCameraComponentThird;
 class UAbstractCameraData;
+class UCameraComponentThird;
 
 UCLASS(Abstract, Blueprintable)
 class SIFU_API UAnimDrivenCameraOrderBTService : public UBTService {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EOrderType m_eOrderType;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bForceAsCurrentCamera;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bWaitForFirstFrameOrderService;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ECameraAnimDrivenComputationMethod m_eComputationMethod;
     
-    UPROPERTY(BlueprintReadOnly, Export)
+    UPROPERTY(EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<UCameraComponentThird> m_cameraComponent;
     
 public:
     UAnimDrivenCameraOrderBTService();
 protected:
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     UAbstractCameraData* GetCameraData() const;
     
 };

@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "ENiagaraParameterPanelCategory.generated.h"
 
-UENUM()
-enum class ENiagaraParameterPanelCategory {
+UENUM(BlueprintType)
+enum class ENiagaraParameterPanelCategory : uint8 {
     Input,
     Attributes,
     Output,

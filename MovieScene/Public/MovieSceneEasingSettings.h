@@ -2,35 +2,35 @@
 #include "CoreMinimal.h"
 #include "MovieSceneEasingSettings.generated.h"
 
-class UMovieSceneEasingFunction;
 class IMovieSceneEasingFunction;
+class UMovieSceneEasingFunction;
 
 USTRUCT(BlueprintType)
 struct FMovieSceneEasingSettings {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 AutoEaseInDuration;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 AutoEaseOutDuration;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TScriptInterface<IMovieSceneEasingFunction> EaseIn;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bManualEaseIn;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 ManualEaseInDuration;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TScriptInterface<IMovieSceneEasingFunction> EaseOut;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bManualEaseOut;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 ManualEaseOutDuration;
     
     MOVIESCENE_API FMovieSceneEasingSettings();

@@ -3,20 +3,20 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=DataTableRowHandle -FallbackName=DataTableRowHandle
 #include "OutfitData.generated.h"
 
-class USkeletalMesh;
 class UMaterialInstance;
+class USkeletalMesh;
 
 USTRUCT(BlueprintType)
 struct FOutfitData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSoftObjectPtr<USkeletalMesh> m_Mesh;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<int32, TSoftObjectPtr<UMaterialInstance>> m_OverrideMaterial;
     
-    UPROPERTY(BlueprintReadOnly, EditInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FDataTableRowHandle m_props;
     
     SIFU_API FOutfitData();

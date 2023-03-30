@@ -1,25 +1,25 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "AbilityTask.h"
-#include "NetworkSyncDelegateDelegate.h"
 #include "EAbilityTaskNetSyncType.h"
+#include "NetworkSyncDelegateDelegate.h"
 #include "AbilityTask_NetworkSyncPoint.generated.h"
 
-class UGameplayAbility;
 class UAbilityTask_NetworkSyncPoint;
+class UGameplayAbility;
 
-UCLASS()
+UCLASS(Blueprintable)
 class GAMEPLAYABILITIES_API UAbilityTask_NetworkSyncPoint : public UAbilityTask {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FNetworkSyncDelegate OnSync;
     
     UAbilityTask_NetworkSyncPoint();
     UFUNCTION(BlueprintCallable)
     static UAbilityTask_NetworkSyncPoint* WaitNetSync(UGameplayAbility* OwningAbility, EAbilityTaskNetSyncType SyncType);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnSignalCallback();
     
 };

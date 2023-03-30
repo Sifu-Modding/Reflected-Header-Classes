@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FRigUnit_SetMultiControlVector2D_Entry {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName Control;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector2D Vector;
     
     CONTROLRIG_API FRigUnit_SetMultiControlVector2D_Entry();

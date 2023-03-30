@@ -6,18 +6,18 @@ class UEnvQuery;
 class UObject;
 class UWorld;
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct AIMODULE_API FEnvQueryRequest {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UEnvQuery* QueryTemplate;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UObject* Owner;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UWorld* World;
     
 public:

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ERigExecutionType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class ERigExecutionType : uint8 {
     Runtime,
     Editing,

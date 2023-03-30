@@ -1,8 +1,8 @@
 #include "GameplayTask_ClaimResource.h"
 #include "Templates/SubclassOf.h"
 
-class UGameplayTaskOwnerInterface;
 class IGameplayTaskOwnerInterface;
+class UGameplayTaskOwnerInterface;
 class UGameplayTaskResource;
 class UGameplayTask_ClaimResource;
 

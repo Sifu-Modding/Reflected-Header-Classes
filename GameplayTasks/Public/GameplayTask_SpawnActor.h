@@ -1,30 +1,30 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Rotator -FallbackName=Rotator
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 #include "GameplayTask.h"
 #include "GameplayTaskSpawnActorDelegateDelegate.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Rotator -FallbackName=Rotator
+#include "Templates/SubclassOf.h"
 #include "GameplayTask_SpawnActor.generated.h"
 
 class AActor;
-class UGameplayTask_SpawnActor;
-class UGameplayTaskOwnerInterface;
 class IGameplayTaskOwnerInterface;
+class UGameplayTaskOwnerInterface;
+class UGameplayTask_SpawnActor;
 class UObject;
 
-UCLASS(MinimalAPI)
+UCLASS(Blueprintable, MinimalAPI)
 class UGameplayTask_SpawnActor : public UGameplayTask {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayTaskSpawnActorDelegate Success;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayTaskSpawnActorDelegate DidNotSpawn;
     
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<AActor> ClassToSpawn;
     
 public:

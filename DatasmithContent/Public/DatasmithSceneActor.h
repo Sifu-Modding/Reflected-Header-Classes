@@ -5,14 +5,14 @@
 
 class UDatasmithScene;
 
-UCLASS()
+UCLASS(Blueprintable)
 class DATASMITHCONTENT_API ADatasmithSceneActor : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UDatasmithScene* Scene;
     
-    UPROPERTY(AdvancedDisplay, VisibleAnywhere)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<FName, TSoftObjectPtr<AActor>> RelatedActors;
     
     ADatasmithSceneActor();

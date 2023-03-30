@@ -4,11 +4,11 @@
 
 class UMovieSceneSection;
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FEasingComponentData {
     GENERATED_BODY()
 public:
-    UPROPERTY(Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UMovieSceneSection* Section;
     
     MOVIESCENE_API FEasingComponentData();

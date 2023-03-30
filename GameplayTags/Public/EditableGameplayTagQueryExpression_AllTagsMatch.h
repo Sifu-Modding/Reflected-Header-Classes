@@ -4,11 +4,11 @@
 #include "GameplayTagContainer.h"
 #include "EditableGameplayTagQueryExpression_AllTagsMatch.generated.h"
 
-UCLASS(CollapseCategories, EditInlineNew, NonTransient)
+UCLASS(Blueprintable, CollapseCategories, EditInlineNew, NonTransient)
 class UEditableGameplayTagQueryExpression_AllTagsMatch : public UEditableGameplayTagQueryExpression {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayTagContainer Tags;
     
     UEditableGameplayTagQueryExpression_AllTagsMatch();

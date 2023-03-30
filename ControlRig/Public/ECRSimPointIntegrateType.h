@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ECRSimPointIntegrateType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class ECRSimPointIntegrateType : uint8 {
     Verlet,
     SemiExplicitEuler,

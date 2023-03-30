@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EGameplayAbilityReplicationPolicy.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 namespace EGameplayAbilityReplicationPolicy {
     enum Type {
         ReplicateNo,

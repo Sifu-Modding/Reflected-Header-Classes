@@ -5,24 +5,24 @@
 #include "WidgetAnimationDynamicEventDelegate.h"
 #include "WidgetAnimation.generated.h"
 
-class UUserWidget;
 class UMovieScene;
+class UUserWidget;
 
-UCLASS(MinimalAPI)
+UCLASS(Blueprintable, MinimalAPI)
 class UWidgetAnimation : public UMovieSceneSequence {
     GENERATED_BODY()
 public:
-    UPROPERTY(Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UMovieScene* MovieScene;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FWidgetAnimationBinding> AnimationBindings;
     
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bLegacyFinishOnStop;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString DisplayLabel;
     
 public:
@@ -39,10 +39,10 @@ public:
     UFUNCTION(BlueprintCallable)
     void UnbindAllFromAnimationFinished(UUserWidget* Widget);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetStartTime() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetEndTime() const;
     
     UFUNCTION(BlueprintCallable)

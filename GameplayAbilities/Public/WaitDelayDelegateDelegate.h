@@ -2,5 +2,5 @@
 #include "CoreMinimal.h"
 #include "WaitDelayDelegateDelegate.generated.h"
 
-UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE(FWaitDelayDelegate);
+UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE(FWaitDelayDelegate);
 

@@ -4,14 +4,14 @@
 #include "AdaptorTriangleID.h"
 #include "AdaptorPolygon.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FAdaptorPolygon {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FPolygonGroupID PolygonGroupID;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FAdaptorTriangleID> TriangulatedPolygonTriangleIndices;
     
     EDITABLEMESH_API FAdaptorPolygon();

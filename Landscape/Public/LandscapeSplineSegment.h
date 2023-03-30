@@ -1,32 +1,32 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "LandscapeSplineSegmentConnection.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Box -FallbackName=Box
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=InterpCurveVector -FallbackName=InterpCurveVector
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
 #include "LandscapeSplineInterpPoint.h"
+#include "LandscapeSplineSegmentConnection.h"
 #include "LandscapeSplineSegment.generated.h"
 
 class USplineMeshComponent;
 
-UCLASS(MinimalAPI, Within=LandscapeSplinesComponent)
+UCLASS(Blueprintable, MinimalAPI, Within=LandscapeSplinesComponent)
 class ULandscapeSplineSegment : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere, EditFixedSize)
+    UPROPERTY(EditAnywhere, EditFixedSize, meta=(AllowPrivateAccess=true))
     FLandscapeSplineSegmentConnection Connections[2];
     
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FInterpCurveVector SplineInfo;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FLandscapeSplineInterpPoint> Points;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBox Bounds;
     
-    UPROPERTY(Instanced, TextExportTransient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, TextExportTransient, meta=(AllowPrivateAccess=true))
     TArray<USplineMeshComponent*> LocalMeshComponents;
     
 public:

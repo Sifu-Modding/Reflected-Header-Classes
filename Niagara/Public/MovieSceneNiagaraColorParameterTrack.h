@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "MovieSceneNiagaraParameterTrack.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=MovieScene -ObjectName=MovieSceneTrackTemplateProducer -FallbackName=MovieSceneTrackTemplateProducer
+#include "MovieSceneNiagaraParameterTrack.h"
 #include "MovieSceneNiagaraColorParameterTrack.generated.h"
 
-UCLASS(MinimalAPI)
+UCLASS(Blueprintable, MinimalAPI)
 class UMovieSceneNiagaraColorParameterTrack : public UMovieSceneNiagaraParameterTrack, public IMovieSceneTrackTemplateProducer {
     GENERATED_BODY()
 public:

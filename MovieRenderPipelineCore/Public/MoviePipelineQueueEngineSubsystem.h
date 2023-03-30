@@ -1,21 +1,21 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=EngineSubsystem -FallbackName=EngineSubsystem
+#include "Templates/SubclassOf.h"
 #include "MoviePipelineQueueEngineSubsystem.generated.h"
 
-class UMoviePipelineQueue;
 class UMoviePipelineExecutorBase;
+class UMoviePipelineQueue;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class MOVIERENDERPIPELINECORE_API UMoviePipelineQueueEngineSubsystem : public UEngineSubsystem {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UMoviePipelineExecutorBase* ActiveExecutor;
     
-    UPROPERTY(Instanced, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UMoviePipelineQueue* CurrentQueue;
     
 public:
@@ -26,13 +26,13 @@ public:
     UFUNCTION(BlueprintCallable)
     UMoviePipelineExecutorBase* RenderQueueWithExecutor(TSubclassOf<UMoviePipelineExecutorBase> InExecutorType);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsRendering() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UMoviePipelineQueue* GetQueue() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UMoviePipelineExecutorBase* GetActiveExecutor() const;
     
 };

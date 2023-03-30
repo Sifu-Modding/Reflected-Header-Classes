@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EVehicleDifferential4W.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 namespace EVehicleDifferential4W {
     enum Type {
         LimitedSlip_4W,

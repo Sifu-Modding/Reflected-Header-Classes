@@ -3,7 +3,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=MovieScene -ObjectName=MovieSceneSpawnTrack -FallbackName=MovieSceneSpawnTrack
 #include "MovieScenePreviewSpawnTrack.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class MOVIESCENETRACKS_API UMovieScenePreviewSpawnTrack : public UMovieSceneSpawnTrack {
     GENERATED_BODY()
 public:

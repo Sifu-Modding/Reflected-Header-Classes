@@ -3,11 +3,11 @@
 #include "AITask.h"
 #include "AITask_RunEQS.generated.h"
 
-class UAITask_RunEQS;
 class AAIController;
+class UAITask_RunEQS;
 class UEnvQuery;
 
-UCLASS()
+UCLASS(Blueprintable)
 class AIMODULE_API UAITask_RunEQS : public UAITask {
     GENERATED_BODY()
 public:

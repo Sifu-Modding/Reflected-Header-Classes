@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ERigUnitVisualDebugPointMode.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class ERigUnitVisualDebugPointMode : uint8 {
     Point,
     Vector,

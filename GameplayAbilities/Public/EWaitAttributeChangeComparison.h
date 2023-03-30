@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EWaitAttributeChangeComparison.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 namespace EWaitAttributeChangeComparison {
     enum Type {
         None,

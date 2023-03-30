@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct DATASMITHCONTENT_API FDatasmithMeshSectionInfoMapTemplate {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<uint32, FDatasmithMeshSectionInfoTemplate> Map;
     
     FDatasmithMeshSectionInfoMapTemplate();

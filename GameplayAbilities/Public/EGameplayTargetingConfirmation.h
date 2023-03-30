@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EGameplayTargetingConfirmation.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 namespace EGameplayTargetingConfirmation {
     enum Type {
         Instant,

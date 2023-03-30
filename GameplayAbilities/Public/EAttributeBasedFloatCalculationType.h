@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EAttributeBasedFloatCalculationType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EAttributeBasedFloatCalculationType : uint8 {
     AttributeMagnitude,
     AttributeBaseValue,

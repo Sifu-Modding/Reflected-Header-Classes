@@ -4,26 +4,26 @@
 #include "RigVMMemoryStatistics.h"
 #include "RigVMStatistics.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigVMStatistics {
     GENERATED_BODY()
 public:
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint32 BytesForCDO;
     
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint32 BytesPerInstance;
     
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRigVMMemoryStatistics LiteralMemory;
     
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRigVMMemoryStatistics WorkMemory;
     
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint32 BytesForCaching;
     
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRigVMByteCodeStatistics ByteCode;
     
     RIGVM_API FRigVMStatistics();

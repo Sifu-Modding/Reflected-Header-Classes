@@ -3,8 +3,8 @@
 
 class AAISpawner;
 class AActor;
-class UAIFightingComponent;
 class ASpawnerGroup;
+class UAIFightingComponent;
 
 void AAISituationActor::OnUpdatedFromSaveCallback() {
 }
@@ -37,6 +37,10 @@ void AAISituationActor::BPF_GetSpawnerGroupsUsed(TArray<ASpawnerGroup*>& _outSpa
 
 AActor* AAISituationActor::BPF_GetNamedActor(const FAISituationNamedActor& _namedActor) const {
     return NULL;
+}
+
+EGlobalBehaviors AAISituationActor::BPF_GetBehaviorOverride_Implementation() {
+    return EGlobalBehaviors::Idle;
 }
 
 int32 AAISituationActor::BPF_GetAis(TArray<UAIFightingComponent*>& _outAiComponents, bool _bIncludeAlertedSpawners, bool _bAppendToArray, bool _bIncludeAbandonningAIs) const {

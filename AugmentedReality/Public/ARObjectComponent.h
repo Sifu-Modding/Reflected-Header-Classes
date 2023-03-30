@@ -4,12 +4,12 @@
 #include "ARObjectUpdatePayload.h"
 #include "ARObjectComponent.generated.h"
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class AUGMENTEDREALITY_API UARObjectComponent : public UARComponent {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_Payload)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_Payload, meta=(AllowPrivateAccess=true))
     FARObjectUpdatePayload ReplicatedPayload;
     
 public:
@@ -17,14 +17,14 @@ public:
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
     
 protected:
-    UFUNCTION(Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
     void ServerUpdatePayload(const FARObjectUpdatePayload& NewPayload);
     
 public:
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveUpdate(const FARObjectUpdatePayload& Payload);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveAdd(const FARObjectUpdatePayload& Payload);
     
 };

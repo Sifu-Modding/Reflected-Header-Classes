@@ -6,14 +6,14 @@
 
 class UMovieSceneSection;
 
-UCLASS(MinimalAPI)
+UCLASS(Blueprintable, MinimalAPI)
 class UTestMovieSceneTrack : public UMovieSceneTrack, public IMovieSceneTrackTemplateProducer {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bHighPassFilter;
     
-    UPROPERTY(Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     TArray<UMovieSceneSection*> SectionArray;
     
     UTestMovieSceneTrack();

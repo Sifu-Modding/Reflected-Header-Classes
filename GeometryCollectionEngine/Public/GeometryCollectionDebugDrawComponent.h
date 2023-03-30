@@ -6,14 +6,14 @@
 class AGeometryCollectionDebugDrawActor;
 class AGeometryCollectionRenderLevelSetActor;
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class GEOMETRYCOLLECTIONENGINE_API UGeometryCollectionDebugDrawComponent : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(AdvancedDisplay, EditAnywhere)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AGeometryCollectionDebugDrawActor* GeometryCollectionDebugDrawActor;
     
-    UPROPERTY(AdvancedDisplay, EditAnywhere)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AGeometryCollectionRenderLevelSetActor* GeometryCollectionRenderLevelSetActor;
     
     UGeometryCollectionDebugDrawComponent();

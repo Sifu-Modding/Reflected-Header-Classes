@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "MovieSceneTrackImplementationPtr.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Guid -FallbackName=Guid
 #include "EEvaluationMethod.h"
 #include "MovieSceneEvalTemplatePtr.h"
+#include "MovieSceneTrackImplementationPtr.h"
 #include "MovieSceneEvaluationTrack.generated.h"
 
 class UMovieSceneTrack;
@@ -13,34 +13,34 @@ struct FMovieSceneEvaluationTrack {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGuid ObjectBindingID;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint16 EvaluationPriority;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EEvaluationMethod EvaluationMethod;
     
-    UPROPERTY(Export)
+    UPROPERTY(EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<UMovieSceneTrack> SourceTrack;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FMovieSceneEvalTemplatePtr> ChildTemplates;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMovieSceneTrackImplementationPtr TrackTemplate;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName EvaluationGroup;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bEvaluateInPreroll: 1;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bEvaluateInPostroll: 1;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bTearDownPriority: 1;
     
 public:

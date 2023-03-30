@@ -3,13 +3,13 @@
 
 class AActor;
 class AController;
-class UObject;
-class ANavigationData;
-class UNavigationQueryFilter;
 class ANavMeshBoundsVolume;
+class ANavigationData;
 class UNavArea;
-class UNavigationSystemV1;
 class UNavigationPath;
+class UNavigationQueryFilter;
+class UNavigationSystemV1;
+class UObject;
 
 void UNavigationSystemV1::UnregisterNavigationInvoker(AActor* Invoker) {
 }

@@ -7,18 +7,18 @@
 class UAbilityTask_WaitInputRelease;
 class UGameplayAbility;
 
-UCLASS()
+UCLASS(Blueprintable)
 class GAMEPLAYABILITIES_API UAbilityTask_WaitInputRelease : public UAbilityTask {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FInputReleaseDelegate OnRelease;
     
     UAbilityTask_WaitInputRelease();
     UFUNCTION(BlueprintCallable)
     static UAbilityTask_WaitInputRelease* WaitInputRelease(UGameplayAbility* OwningAbility, bool bTestAlreadyReleased);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnReleaseCallback();
     
 };

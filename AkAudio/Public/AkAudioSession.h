@@ -8,13 +8,13 @@ USTRUCT(BlueprintType)
 struct FAkAudioSession {
     GENERATED_BODY()
 public:
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     EAkAudioSessionCategory AudioSessionCategory;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint32 AudioSessionCategoryOptions;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     EAkAudioSessionMode AudioSessionMode;
     
     AKAUDIO_API FAkAudioSession();

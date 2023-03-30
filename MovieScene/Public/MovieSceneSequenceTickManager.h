@@ -6,15 +6,15 @@
 class AActor;
 class UMovieSceneEntitySystemLinker;
 
-UCLASS()
+UCLASS(Blueprintable)
 class MOVIESCENE_API UMovieSceneSequenceTickManager : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<AActor*> SequenceActors;
     
 private:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UMovieSceneEntitySystemLinker* Linker;
     
 public:

@@ -3,7 +3,7 @@
 #include "WuguanTestControllerBase.h"
 #include "WuguanTestControllerPerfTest.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UWuguanTestControllerPerfTest : public UWuguanTestControllerBase {
     GENERATED_BODY()
 public:

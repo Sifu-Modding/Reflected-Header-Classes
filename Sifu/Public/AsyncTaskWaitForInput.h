@@ -1,32 +1,32 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintAsyncActionBase -FallbackName=BlueprintAsyncActionBase
-#include "OnInputWaitDelegate.h"
-#include "TestInputAdditionalValidationDelegateDelegate.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=ESCBlendType -FallbackName=ESCBlendType
 #include "InputAction.h"
+#include "OnInputWaitDelegate.h"
+#include "Templates/SubclassOf.h"
+#include "TestInputAdditionalValidationDelegateDelegate.h"
 #include "AsyncTaskWaitForInput.generated.h"
 
-class UObject;
 class UAsyncTaskWaitForInput;
-class USCGameplayAbility;
 class UCurveFloat;
+class UObject;
+class USCGameplayAbility;
 
-UCLASS()
+UCLASS(Blueprintable)
 class SIFU_API UAsyncTaskWaitForInput : public UBlueprintAsyncActionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnInputWait Validated;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnInputWait Skipped;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnInputWait Launched;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnInputWait SkippedOnError;
     
     UAsyncTaskWaitForInput();

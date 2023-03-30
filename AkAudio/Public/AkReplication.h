@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ReplayReplicationComponentBase -FallbackName=ReplayReplicationComponentBase
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Rotator -FallbackName=Rotator
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ReplayReplicationComponentBase -FallbackName=ReplayReplicationComponentBase
 #include "AkReplication.generated.h"
 
 class AActor;
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class AKAUDIO_API UAkReplication : public UReplayReplicationComponentBase {
     GENERATED_BODY()
 public:
@@ -19,13 +19,13 @@ protected:
     UFUNCTION(NetMulticast, Reliable)
     void MulticastSetState(uint32 _uiGroupID, uint32 _uiValueID) const;
     
-    UFUNCTION(NetMulticast, Reliable)
+    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
     void MulticastSetRTPCValueWithName(const FString& _rtpcName, float _akRtpcValue, int32 _iInterpolationTimeMs, const AActor* _actor) const;
     
     UFUNCTION(NetMulticast, Reliable)
     void MulticastSetRTPCValue(uint32 _uiRtpc, float _akRtpcValue, int32 _iInterpolationTimeMs, const AActor* _actor) const;
     
-    UFUNCTION(NetMulticast, Reliable)
+    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
     void MulticastPostEventAtLocation(const FString& _eventName, const FVector& _vLocation, const FRotator& _rotation) const;
     
     UFUNCTION(NetMulticast, Reliable)

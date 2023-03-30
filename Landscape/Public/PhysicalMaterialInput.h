@@ -9,10 +9,10 @@ USTRUCT(BlueprintType)
 struct FPhysicalMaterialInput {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UPhysicalMaterial* PhysicalMaterial;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FExpressionInput Input;
     
     LANDSCAPE_API FPhysicalMaterialInput();

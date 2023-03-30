@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct FMathRBFInterpolateQuatXform_Target {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FQuat Target;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTransform Value;
     
     CONTROLRIG_API FMathRBFInterpolateQuatXform_Target();

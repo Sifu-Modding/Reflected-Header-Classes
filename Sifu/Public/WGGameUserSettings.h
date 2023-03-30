@@ -4,11 +4,11 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=GameUserSettings -FallbackName=GameUserSettings
 #include "WGGameUserSettings.generated.h"
 
-UCLASS(Config=User)
+UCLASS(Blueprintable, Config=User)
 class SIFU_API UWGGameUserSettings : public UGameUserSettings {
     GENERATED_BODY()
 public:
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     UDLSSMode DLSSQuality;
     
     UWGGameUserSettings();

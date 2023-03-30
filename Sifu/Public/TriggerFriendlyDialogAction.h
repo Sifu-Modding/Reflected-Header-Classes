@@ -3,7 +3,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCDialogManagerPlugin -ObjectName=DialogActionBase -FallbackName=DialogActionBase
 #include "TriggerFriendlyDialogAction.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class SIFU_API UTriggerFriendlyDialogAction : public UDialogActionBase {
     GENERATED_BODY()
 public:

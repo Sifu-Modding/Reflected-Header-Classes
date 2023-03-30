@@ -8,16 +8,16 @@ USTRUCT(BlueprintType)
 struct FStructSerializerMapTestStruct {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<int32, FString> IntToStr;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<FString, FString> StrToStr;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<FString, FVector> StrToVec;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<FString, FStructSerializerBuiltinTestStruct> StrToStruct;
     
     SERIALIZATION_API FStructSerializerMapTestStruct();

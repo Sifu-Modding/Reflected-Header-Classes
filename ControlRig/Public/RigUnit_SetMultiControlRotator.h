@@ -5,17 +5,17 @@
 #include "RigUnit_SetMultiControlRotator_Entry.h"
 #include "RigUnit_SetMultiControlRotator.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_SetMultiControlRotator : public FRigUnitMutable {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FRigUnit_SetMultiControlRotator_Entry> Entries;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Weight;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FCachedRigElement> CachedControlIndices;
     
     CONTROLRIG_API FRigUnit_SetMultiControlRotator();

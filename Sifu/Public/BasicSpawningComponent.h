@@ -3,7 +3,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ActorComponent -FallbackName=ActorComponent
 #include "BasicSpawningComponent.generated.h"
 
-UCLASS(Abstract, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class SIFU_API UBasicSpawningComponent : public UActorComponent {
     GENERATED_BODY()
 public:

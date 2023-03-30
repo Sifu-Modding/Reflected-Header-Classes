@@ -1,64 +1,64 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=EConsumeMouseWheel -FallbackName=EConsumeMouseWheel
-#include "ListViewBase.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=EOrientation -FallbackName=EOrientation
-#include "OnListEntryInitializedDynamicDelegate.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Slate -ObjectName=ESelectionMode -FallbackName=ESelectionMode
-#include "SimpleListItemEventDynamicDelegate.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=EConsumeMouseWheel -FallbackName=EConsumeMouseWheel
+//CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=EOrientation -FallbackName=EOrientation
+#include "ListViewBase.h"
 #include "OnItemIsHoveredChangedDynamicDelegate.h"
-#include "OnListItemSelectionChangedDynamicDelegate.h"
+#include "OnListEntryInitializedDynamicDelegate.h"
 #include "OnListItemScrolledIntoViewDynamicDelegate.h"
+#include "OnListItemSelectionChangedDynamicDelegate.h"
+#include "SimpleListItemEventDynamicDelegate.h"
 #include "ListView.generated.h"
 
 class UObject;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UMG_API UListView : public UListViewBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<EOrientation> Orientation;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<ESelectionMode::Type> SelectionMode;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EConsumeMouseWheel ConsumeMouseWheel;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bClearSelectionOnClick;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bIsFocusable;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float EntrySpacing;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bReturnFocusToSelection;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UObject*> ListItems;
     
 private:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnListEntryInitializedDynamic BP_OnEntryInitialized;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSimpleListItemEventDynamic BP_OnItemClicked;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSimpleListItemEventDynamic BP_OnItemDoubleClicked;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnItemIsHoveredChangedDynamic BP_OnItemIsHoveredChanged;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnListItemSelectionChangedDynamic BP_OnItemSelectionChanged;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnListItemScrolledIntoViewDynamic BP_OnItemScrolledIntoView;
     
 public:
@@ -78,19 +78,19 @@ public:
     UFUNCTION(BlueprintCallable)
     void NavigateToIndex(int32 Index);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsRefreshPending() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetNumItems() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     TArray<UObject*> GetListItems() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UObject* GetItemAt(int32 Index) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetIndexForItem(UObject* Item) const;
     
     UFUNCTION(BlueprintCallable)
@@ -112,16 +112,16 @@ private:
     UFUNCTION(BlueprintCallable)
     void BP_NavigateToItem(UObject* Item);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool BP_IsItemVisible(UObject* Item) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure=false)
     bool BP_GetSelectedItems(TArray<UObject*>& Items) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UObject* BP_GetSelectedItem() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 BP_GetNumItemsSelected() const;
     
     UFUNCTION(BlueprintCallable)

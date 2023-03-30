@@ -4,18 +4,18 @@
 #include "PerPlatformWidget.h"
 #include "PerPlatformComboBox.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UPerPlatformComboBox : public UComboBoxString, public IPerPlatformWidget {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 NormalSize;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 SmallScreenSize;
     
 protected:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnCultureChanged OnCultureChanged;
     
 public:

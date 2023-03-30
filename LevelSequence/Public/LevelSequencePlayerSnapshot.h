@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=QualifiedFrameTime -FallbackName=QualifiedFrameTime
-#include "LevelSequenceSnapshotSettings.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=MovieScene -ObjectName=MovieSceneSequenceID -FallbackName=MovieSceneSequenceID
+#include "LevelSequenceSnapshotSettings.h"
 #include "LevelSequencePlayerSnapshot.generated.h"
 
 class UCameraComponent;
@@ -12,40 +12,40 @@ USTRUCT(BlueprintType)
 struct FLevelSequencePlayerSnapshot {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString MasterName;
     
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FQualifiedFrameTime MasterTime;
     
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FQualifiedFrameTime SourceTime;
     
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString CurrentShotName;
     
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FQualifiedFrameTime CurrentShotLocalTime;
     
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FQualifiedFrameTime CurrentShotSourceTime;
     
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString SourceTimecode;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     TSoftObjectPtr<UCameraComponent> CameraComponent;
     
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FLevelSequenceSnapshotSettings Settings;
     
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ULevelSequence* ActiveShot;
     
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bSimulateClothesOnFirstFrame;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMovieSceneSequenceID ShotID;
     
     LEVELSEQUENCE_API FLevelSequencePlayerSnapshot();

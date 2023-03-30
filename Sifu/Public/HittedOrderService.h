@@ -1,52 +1,52 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BoneReferenceContainerInterface -FallbackName=BoneReferenceContainerInterface
-#include "OrderService.h"
-#include "HittedServiceInfos.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=HitResult -FallbackName=HitResult
+//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=AnimContainer -FallbackName=AnimContainer
+#include "BPOrderServiceInstance.h"
 #include "EOrderType.h"
 #include "HitBox.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=HitResult -FallbackName=HitResult
-#include "BPOrderServiceInstance.h"
-#include "HittedAnimContainer.h"
 #include "HitRequest.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=AnimContainer -FallbackName=AnimContainer
+#include "HittedAnimContainer.h"
+#include "HittedServiceInfos.h"
+#include "OrderService.h"
 #include "HittedOrderService.generated.h"
 
 class UAttackPropertiesResistanceDB;
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class SIFU_API UHittedOrderService : public UOrderService, public IBoneReferenceContainerInterface {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FHittedServiceInfos m_Infos;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FHitBox m_Hit;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bFreezeInstigator;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EOrderType m_eInstigatorOrderType;
     
     UHittedOrderService();
-    UFUNCTION(BlueprintNativeEvent, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent, BlueprintPure)
     UAttackPropertiesResistanceDB* BPE_GetSpecialResistanceDB(const FBPOrderServiceInstance& _orderServiceInstance) const;
     
-    UFUNCTION(BlueprintNativeEvent, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent, BlueprintPure)
     FHittedAnimContainer BPE_GetLethalHittedAnim(const FBPOrderServiceInstance& _orderServiceInstance) const;
     
-    UFUNCTION(BlueprintNativeEvent, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent, BlueprintPure)
     void BPE_GetHitRequest(const FBPOrderServiceInstance& _orderServiceInstance, FHitRequest& _hitRequest, FHitResult& _hitResult) const;
     
-    UFUNCTION(BlueprintNativeEvent, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent, BlueprintPure)
     void BPE_GetHitBox(const FBPOrderServiceInstance& _orderServiceInstance, FHitBox& _hitbox, FHitResult& _envLocation) const;
     
-    UFUNCTION(BlueprintNativeEvent, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent, BlueprintPure)
     FAnimContainer BPE_GetFightingStateRecoveryAnim(const FBPOrderServiceInstance& _orderServiceInstance) const;
     
-    UFUNCTION(BlueprintNativeEvent, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent, BlueprintPure)
     FAnimContainer BPE_GetFightingStateLoopAnim(const FBPOrderServiceInstance& _orderServiceInstance) const;
     
     

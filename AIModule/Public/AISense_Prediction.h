@@ -1,18 +1,18 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "AISense.h"
 #include "AIPredictionEvent.h"
+#include "AISense.h"
 #include "AISense_Prediction.generated.h"
 
-class APawn;
 class AAIController;
 class AActor;
+class APawn;
 
-UCLASS()
+UCLASS(Blueprintable)
 class AIMODULE_API UAISense_Prediction : public UAISense {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FAIPredictionEvent> RegisteredEvents;
     
     UAISense_Prediction();

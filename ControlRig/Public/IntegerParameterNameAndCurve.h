@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct CONTROLRIG_API FIntegerParameterNameAndCurve {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName ParameterName;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMovieSceneIntegerChannel ParameterCurve;
     
     FIntegerParameterNameAndCurve();

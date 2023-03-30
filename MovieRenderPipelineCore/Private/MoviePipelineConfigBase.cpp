@@ -1,8 +1,8 @@
 #include "MoviePipelineConfigBase.h"
 #include "Templates/SubclassOf.h"
 
-class UMoviePipelineSetting;
 class UMoviePipelineConfigBase;
+class UMoviePipelineSetting;
 
 void UMoviePipelineConfigBase::RemoveSetting(UMoviePipelineSetting* InSetting) {
 }

@@ -1,21 +1,21 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameplayEffectAppliedTargetDelegateDelegate.h"
-#include "AbilityTask_WaitGameplayEffectApplied.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTagQuery -FallbackName=GameplayTagQuery
-#include "GameplayTargetDataFilterHandle.h"
+#include "AbilityTask_WaitGameplayEffectApplied.h"
+#include "GameplayEffectAppliedTargetDelegateDelegate.h"
 #include "GameplayTagRequirements.h"
+#include "GameplayTargetDataFilterHandle.h"
 #include "AbilityTask_WaitGameplayEffectApplied_Target.generated.h"
 
+class AActor;
 class UAbilityTask_WaitGameplayEffectApplied_Target;
 class UGameplayAbility;
-class AActor;
 
-UCLASS()
+UCLASS(Blueprintable)
 class GAMEPLAYABILITIES_API UAbilityTask_WaitGameplayEffectApplied_Target : public UAbilityTask_WaitGameplayEffectApplied {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayEffectAppliedTargetDelegate OnApplied;
     
     UAbilityTask_WaitGameplayEffectApplied_Target();

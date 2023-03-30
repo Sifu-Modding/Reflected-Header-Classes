@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FMovieSceneTimeWarping {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FFrameNumber Start;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FFrameNumber End;
     
     MOVIESCENE_API FMovieSceneTimeWarping();

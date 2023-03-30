@@ -1,53 +1,53 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SupportedAreaData.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=NavDataConfig -FallbackName=NavDataConfig
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=Actor -FallbackName=Actor
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=NavDataConfig -FallbackName=NavDataConfig
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=NavigationDataInterface -FallbackName=NavigationDataInterface
 #include "ERuntimeGenerationType.h"
+#include "SupportedAreaData.h"
 #include "NavigationData.generated.h"
 
 class UPrimitiveComponent;
 
-UCLASS(Abstract, DefaultConfig)
+UCLASS(Abstract, Blueprintable, Config=Engine, DefaultConfig)
 class NAVIGATIONSYSTEM_API ANavigationData : public AActor, public INavigationDataInterface {
     GENERATED_BODY()
 public:
-    UPROPERTY(DuplicateTransient, Instanced, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UPrimitiveComponent* RenderingComp;
     
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FNavDataConfig NavDataConfig;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     uint8 bEnableDrawing: 1;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bForceRebuildOnLoad: 1;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bAutoDestroyWhenNoNavigation: 1;
     
-    UPROPERTY(AdvancedDisplay, Config, EditAnywhere)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bCanBeMainNavData: 1;
     
-    UPROPERTY(AdvancedDisplay, Config, VisibleAnywhere)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bCanSpawnOnRebuild: 1;
     
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bRebuildAtRuntime: 1;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     ERuntimeGenerationType RuntimeGeneration;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ObservedPathsTickInterval;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint32 DataVersion;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FSupportedAreaData> SupportedAreas;
     
 public:

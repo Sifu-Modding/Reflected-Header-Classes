@@ -3,18 +3,18 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
 #include "SessionTimeManager.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class SIFU_API USessionTimeManager : public UObject {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fDelayBetweenSync;
     
-    UPROPERTY(Transient, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float m_fTimeSinceLastSync;
     
-    UPROPERTY(Transient, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float m_fScaleTime;
     
 public:

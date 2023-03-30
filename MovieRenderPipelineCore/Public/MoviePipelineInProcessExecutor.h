@@ -3,11 +3,11 @@
 #include "MoviePipelineLinearExecutorBase.h"
 #include "MoviePipelineInProcessExecutor.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class MOVIERENDERPIPELINECORE_API UMoviePipelineInProcessExecutor : public UMoviePipelineLinearExecutorBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bUseCurrentLevel;
     
     UMoviePipelineInProcessExecutor();

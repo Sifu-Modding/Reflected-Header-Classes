@@ -1,24 +1,24 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "FoliageType.h"
+#include "Templates/SubclassOf.h"
 #include "FoliageType_InstancedStaticMesh.generated.h"
 
-class UStaticMesh;
 class UFoliageInstancedStaticMeshComponent;
 class UMaterialInterface;
+class UStaticMesh;
 
-UCLASS(EditInlineNew, MinimalAPI)
+UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UFoliageType_InstancedStaticMesh : public UFoliageType {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UStaticMesh* Mesh;
     
-    UPROPERTY(AdvancedDisplay, EditAnywhere)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UMaterialInterface*> OverrideMaterials;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UFoliageInstancedStaticMeshComponent> ComponentClass;
     
     UFoliageType_InstancedStaticMesh();

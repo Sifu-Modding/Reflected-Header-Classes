@@ -1,50 +1,50 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=InputCore -ObjectName=Key -FallbackName=Key
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=EMouseCursor -FallbackName=EMouseCursor
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=LinearColor -FallbackName=LinearColor
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector2D -FallbackName=Vector2D
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector4 -FallbackName=Vector4
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
-#include "EventReply.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=EMouseLockMode -FallbackName=EMouseLockMode
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=EWindowTitleBarMode -FallbackName=EWindowTitleBarMode
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector2D -FallbackName=Vector2D
-//CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=InputEvent -FallbackName=InputEvent
+//CROSS-MODULE INCLUDE V2: -ModuleName=InputCore -ObjectName=Key -FallbackName=Key
 //CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=AnalogInputEvent -FallbackName=AnalogInputEvent
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=EMouseCursor -FallbackName=EMouseCursor
-//CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=EColorVisionDeficiency -FallbackName=EColorVisionDeficiency
-//CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=SlateBrush -FallbackName=SlateBrush
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector4 -FallbackName=Vector4
-//CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=KeyEvent -FallbackName=KeyEvent
-//CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=PointerEvent -FallbackName=PointerEvent
-//CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=NavigationEvent -FallbackName=NavigationEvent
 //CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=CharacterEvent -FallbackName=CharacterEvent
+//CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=EColorVisionDeficiency -FallbackName=EColorVisionDeficiency
+//CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=InputEvent -FallbackName=InputEvent
+//CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=KeyEvent -FallbackName=KeyEvent
+//CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=NavigationEvent -FallbackName=NavigationEvent
+//CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=PointerEvent -FallbackName=PointerEvent
+//CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=SlateBrush -FallbackName=SlateBrush
+#include "EventReply.h"
 #include "PaintContext.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=LinearColor -FallbackName=LinearColor
+#include "Templates/SubclassOf.h"
 #include "WidgetBlueprintLibrary.generated.h"
 
 class APlayerController;
-class UMaterialInstanceDynamic;
-class UWidget;
-class UUserWidget;
-class UObject;
-class UTexture2D;
-class UMaterialInterface;
-class USlateBrushAsset;
-class UDragDropOperation;
-class UInterface;
 class IInterface;
+class UInterface;
+class UDragDropOperation;
 class UFont;
+class UMaterialInstanceDynamic;
+class UMaterialInterface;
+class UObject;
+class USlateBrushAsset;
+class UTexture2D;
+class UUserWidget;
+class UWidget;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UMG_API UWidgetBlueprintLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     DECLARE_DYNAMIC_DELEGATE(FOnGameWindowCloseButtonClickedDelegate);
     
     UWidgetBlueprintLibrary();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static FEventReply UnlockMouse(UPARAM(Ref) FEventReply& Reply);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static FEventReply Unhandled();
     
     UFUNCTION(BlueprintCallable)
@@ -56,10 +56,10 @@ public:
     UFUNCTION(BlueprintCallable)
     static void SetWindowTitleBarCloseButtonActive(bool bActive);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static FEventReply SetUserFocus(UPARAM(Ref) FEventReply& Reply, UWidget* FocusWidget, bool bInAllUsers);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static FEventReply SetMousePosition(UPARAM(Ref) FEventReply& Reply, FVector2D NewMousePosition);
     
     UFUNCTION(BlueprintCallable, BlueprintCosmetic)
@@ -95,64 +95,64 @@ public:
     UFUNCTION(BlueprintCallable)
     static void RestorePreviousWindowTitleBarState();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static FEventReply ReleaseMouseCapture(UPARAM(Ref) FEventReply& Reply);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static FEventReply ReleaseJoystickCapture(UPARAM(Ref) FEventReply& Reply, bool bInAllJoysticks);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static FSlateBrush NoResourceBrush();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static FSlateBrush MakeBrushFromTexture(UTexture2D* Texture, int32 Width, int32 Height);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static FSlateBrush MakeBrushFromMaterial(UMaterialInterface* Material, int32 Width, int32 Height);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static FSlateBrush MakeBrushFromAsset(USlateBrushAsset* BrushAsset);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static FEventReply LockMouse(UPARAM(Ref) FEventReply& Reply, UWidget* CapturingWidget);
     
-    UFUNCTION(BlueprintCosmetic, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintCosmetic, BlueprintPure)
     static bool IsDragDropping();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static FEventReply Handled();
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void GetSafeZonePadding(UObject* WorldContextObject, FVector4& SafePadding, FVector2D& SafePaddingScale, FVector4& SpillOverPadding);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static FKeyEvent GetKeyEventFromAnalogInputEvent(const FAnalogInputEvent& Event);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static FInputEvent GetInputEventFromPointerEvent(const FPointerEvent& Event);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static FInputEvent GetInputEventFromNavigationEvent(const FNavigationEvent& Event);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static FInputEvent GetInputEventFromKeyEvent(const FKeyEvent& Event);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static FInputEvent GetInputEventFromCharacterEvent(const FCharacterEvent& Event);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static UMaterialInstanceDynamic* GetDynamicMaterial(UPARAM(Ref) FSlateBrush& Brush);
     
-    UFUNCTION(BlueprintCosmetic, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintCosmetic, BlueprintPure)
     static UDragDropOperation* GetDragDroppingContent();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static UTexture2D* GetBrushResourceAsTexture2D(const FSlateBrush& Brush);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static UMaterialInterface* GetBrushResourceAsMaterial(const FSlateBrush& Brush);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static UObject* GetBrushResource(const FSlateBrush& Brush);
     
     UFUNCTION(BlueprintCallable, BlueprintCosmetic, meta=(WorldContext="WorldContextObject"))
@@ -161,7 +161,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintCosmetic, meta=(WorldContext="WorldContextObject"))
     static void GetAllWidgetsOfClass(UObject* WorldContextObject, TArray<UUserWidget*>& FoundWidgets, TSubclassOf<UUserWidget> WidgetClass, bool TopLevelOnly);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static FEventReply EndDragDrop(UPARAM(Ref) FEventReply& Reply);
     
     UFUNCTION(BlueprintCallable)
@@ -185,7 +185,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static FEventReply DetectDragIfPressed(const FPointerEvent& PointerEvent, UWidget* WidgetDetectingDrag, FKey DragKey);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static FEventReply DetectDrag(UPARAM(Ref) FEventReply& Reply, UWidget* WidgetDetectingDrag, FKey DragKey);
     
     UFUNCTION(BlueprintCallable)
@@ -194,13 +194,13 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintCosmetic, meta=(WorldContext="WorldContextObject"))
     static UUserWidget* Create(UObject* WorldContextObject, TSubclassOf<UUserWidget> WidgetType, APlayerController* OwningPlayer);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static FEventReply ClearUserFocus(UPARAM(Ref) FEventReply& Reply, bool bInAllUsers);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static FEventReply CaptureMouse(UPARAM(Ref) FEventReply& Reply, UWidget* CapturingWidget);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static FEventReply CaptureJoystick(UPARAM(Ref) FEventReply& Reply, UWidget* CapturingWidget, bool bInAllJoysticks);
     
     UFUNCTION(BlueprintCallable)

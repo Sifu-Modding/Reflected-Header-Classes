@@ -8,10 +8,11 @@ struct FNiagaraVariable : public FNiagaraVariableBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<uint8> VarData;
     
 public:
     NIAGARA_API FNiagaraVariable();
 };
+FORCEINLINE uint32 GetTypeHash(const FNiagaraVariable) { return 0; }
 

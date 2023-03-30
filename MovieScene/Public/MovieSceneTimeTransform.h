@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FMovieSceneTimeTransform {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float TimeScale;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FFrameTime Offset;
     
     MOVIESCENE_API FMovieSceneTimeTransform();

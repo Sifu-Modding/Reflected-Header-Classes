@@ -4,11 +4,11 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCPoolableActorComponent -FallbackName=SCPoolableActorComponent
 #include "TargetableComponent.generated.h"
 
-UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class SIFU_API UTargetableComponent : public UActorComponent, public ISCPoolableActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     bool m_bShouldDisplayBP;
     
     UTargetableComponent();

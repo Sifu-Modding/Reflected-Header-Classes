@@ -1,7 +1,7 @@
 #include "MovieSceneCaptureEnvironment.h"
 
-class UMovieSceneImageCaptureProtocolBase;
 class UMovieSceneAudioCaptureProtocolBase;
+class UMovieSceneImageCaptureProtocolBase;
 
 bool UMovieSceneCaptureEnvironment::IsCaptureInProgress() {
     return false;

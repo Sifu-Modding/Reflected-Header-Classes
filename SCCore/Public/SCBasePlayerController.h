@@ -4,7 +4,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=VisualLoggerDebugSnapshotInterface -FallbackName=VisualLoggerDebugSnapshotInterface
 #include "SCBasePlayerController.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class SCCORE_API ASCBasePlayerController : public APlayerController, public IVisualLoggerDebugSnapshotInterface {
     GENERATED_BODY()
 public:

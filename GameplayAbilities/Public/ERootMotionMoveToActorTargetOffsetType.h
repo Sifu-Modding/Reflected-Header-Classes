@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ERootMotionMoveToActorTargetOffsetType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class ERootMotionMoveToActorTargetOffsetType : uint8 {
     AlignFromTargetToSource,
     AlignToTargetForward,

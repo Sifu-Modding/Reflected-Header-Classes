@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct MOVIERENDERPIPELINERENDERPASSES_API FMoviePipelinePostProcessPass {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bEnabled;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSoftObjectPtr<UMaterialInterface> Material;
     
     FMoviePipelinePostProcessPass();

@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FRigUnit_DistributeRotation_Rotation {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FQuat Rotation;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Ratio;
     
     CONTROLRIG_API FRigUnit_DistributeRotation_Rotation();

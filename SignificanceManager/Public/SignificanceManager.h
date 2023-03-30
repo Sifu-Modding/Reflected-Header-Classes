@@ -4,12 +4,12 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=SoftClassPath -FallbackName=SoftClassPath
 #include "SignificanceManager.generated.h"
 
-UCLASS(DefaultConfig)
+UCLASS(Blueprintable, Config=Engine, DefaultConfig)
 class SIGNIFICANCEMANAGER_API USignificanceManager : public UObject {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditAnywhere, GlobalConfig, NoClear)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, GlobalConfig, NoClear, meta=(AllowPrivateAccess=true))
     FSoftClassPath SignificanceManagerClassName;
     
 public:

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RigInfluenceEntry.h"
 #include "RigElementKey.h"
+#include "RigInfluenceEntry.h"
 #include "RigInfluenceMap.generated.h"
 
 USTRUCT(BlueprintType)
@@ -9,13 +9,13 @@ struct CONTROLRIG_API FRigInfluenceMap {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName EventName;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FRigInfluenceEntry> Entries;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<FRigElementKey, int32> KeyToIndex;
     
 public:

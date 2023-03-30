@@ -1,24 +1,24 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RigUnit_HighlevelBaseMutable.h"
 #include "RigElementKeyCollection.h"
+#include "RigUnit_HighlevelBaseMutable.h"
 #include "RigUnit_SlideChain_WorkData.h"
 #include "RigUnit_SlideChainPerItem.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_SlideChainPerItem : public FRigUnit_HighlevelBaseMutable {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRigElementKeyCollection Items;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float SlideAmount;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bPropagateToChildren;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FRigUnit_SlideChain_WorkData WorkData;
     
     CONTROLRIG_API FRigUnit_SlideChainPerItem();

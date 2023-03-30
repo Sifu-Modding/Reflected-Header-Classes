@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EUMGSequencePlayMode.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 namespace EUMGSequencePlayMode {
     enum Type {
         Forward,

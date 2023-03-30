@@ -2,5 +2,5 @@
 #include "CoreMinimal.h"
 #include "OnQuitReplayManagementMenuDelegate.generated.h"
 
-UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnQuitReplayManagementMenu, bool, _bHasLaunchedReplay);
+UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnQuitReplayManagementMenu, bool, _bHasLaunchedReplay);
 

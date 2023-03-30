@@ -3,7 +3,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=Actor -FallbackName=Actor
 #include "SC3DnavTester.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class SC3DNAV_API ASC3DnavTester : public AActor {
     GENERATED_BODY()
 public:

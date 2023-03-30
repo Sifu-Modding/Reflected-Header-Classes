@@ -1,35 +1,35 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "AnimationStateEntry.h"
+#include "Templates/SubclassOf.h"
 #include "PerSkeletonAnimationSharingSetup.generated.h"
 
-class UAnimationSharingStateProcessor;
-class USkeleton;
 class UAnimSharingAdditiveInstance;
-class USkeletalMesh;
 class UAnimSharingTransitionInstance;
+class UAnimationSharingStateProcessor;
+class USkeletalMesh;
+class USkeleton;
 
 USTRUCT(BlueprintType)
 struct FPerSkeletonAnimationSharingSetup {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USkeleton* Skeleton;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USkeletalMesh* SkeletalMesh;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UAnimSharingTransitionInstance> BlendAnimBlueprint;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UAnimSharingAdditiveInstance> AdditiveAnimBlueprint;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UAnimationSharingStateProcessor> StateProcessorClass;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FAnimationStateEntry> AnimationStates;
     
     ANIMATIONSHARING_API FPerSkeletonAnimationSharingSetup();

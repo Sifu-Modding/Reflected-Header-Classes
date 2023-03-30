@@ -1,23 +1,23 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=Margin -FallbackName=Margin
-#include "PanelSlot.h"
-#include "AnchorData.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Slate -ObjectName=Anchors -FallbackName=Anchors
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector2D -FallbackName=Vector2D
+//CROSS-MODULE INCLUDE V2: -ModuleName=Slate -ObjectName=Anchors -FallbackName=Anchors
+//CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=Margin -FallbackName=Margin
+#include "AnchorData.h"
+#include "PanelSlot.h"
 #include "CanvasPanelSlot.generated.h"
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UMG_API UCanvasPanelSlot : public UPanelSlot {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAnchorData LayoutData;
     
-    UPROPERTY(AdvancedDisplay, BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bAutoSize;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 ZOrder;
     
     UCanvasPanelSlot();
@@ -33,10 +33,10 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetOffsets(FMargin InOffset);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void SetMinimum(FVector2D InMinimumAnchors);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void SetMaximum(FVector2D InMaximumAnchors);
     
     UFUNCTION(BlueprintCallable)
@@ -57,28 +57,28 @@ public:
     UFUNCTION(BlueprintCallable)
     void RebaseLayout(bool PreserveSize);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetZOrder() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector2D GetSize() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector2D GetPosition() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FMargin GetOffsets() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FAnchorData GetLayout() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool GetAutoSize() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FAnchors GetAnchors() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector2D GetAlignment() const;
     
 };

@@ -7,13 +7,13 @@ USTRUCT(BlueprintType)
 struct GAMEPLAYABILITIES_API FInheritedTagContainer {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, Transient, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FGameplayTagContainer CombinedTags;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FGameplayTagContainer Added;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FGameplayTagContainer Removed;
     
     FInheritedTagContainer();

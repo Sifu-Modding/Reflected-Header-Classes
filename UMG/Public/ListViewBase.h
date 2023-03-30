@@ -1,43 +1,43 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "OnListEntryReleasedDynamicDelegate.h"
-#include "Widget.h"
 #include "ESlateVisibility.h"
 #include "OnListEntryGeneratedDynamicDelegate.h"
+#include "OnListEntryReleasedDynamicDelegate.h"
+#include "Templates/SubclassOf.h"
 #include "UserWidgetPool.h"
+#include "Widget.h"
 #include "ListViewBase.generated.h"
 
 class UUserWidget;
 
-UCLASS(Abstract, HideDropdown)
+UCLASS(Abstract, Blueprintable, HideDropdown)
 class UMG_API UListViewBase : public UWidget {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UUserWidget> EntryWidgetClass;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float WheelScrollMultiplier;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bEnableScrollAnimation;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bEnableFixedLineOffset;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float FixedLineScrollOffset;
     
 private:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnListEntryGeneratedDynamic BP_OnEntryGenerated;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnListEntryReleasedDynamic BP_OnEntryReleased;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FUserWidgetPool EntryWidgetPool;
     
 public:
@@ -63,7 +63,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void RegenerateAllEntries();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     TArray<UUserWidget*> GetDisplayedEntryWidgets() const;
     
 };

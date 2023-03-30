@@ -6,20 +6,20 @@
 
 class UDataTable;
 
-UCLASS()
+UCLASS(Blueprintable)
 class TEXT2LIPSYNC_API UPhrasesList : public UObject {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<FName, FLipSync_Phrase> Data;
     
 public:
     UPhrasesList();
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool LoadFromDataTable(UDataTable* DataTable);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void GetPhraseFromList(const FName& Key, FLipSync_Phrase& ReturnValue) const;
     
 };

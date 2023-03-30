@@ -6,17 +6,17 @@
 
 class UMovieSceneSubSection;
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FMovieSceneSubSectionData {
     GENERATED_BODY()
 public:
-    UPROPERTY(Export)
+    UPROPERTY(EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<UMovieSceneSubSection> Section;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGuid ObjectBindingID;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ESectionEvaluationFlags Flags;
     
     MOVIESCENE_API FMovieSceneSubSectionData();

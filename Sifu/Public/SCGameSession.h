@@ -3,7 +3,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=GameSession -FallbackName=GameSession
 #include "SCGameSession.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class SIFU_API ASCGameSession : public AGameSession {
     GENERATED_BODY()
 public:

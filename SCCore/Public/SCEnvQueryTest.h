@@ -3,7 +3,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=AIModule -ObjectName=EnvQueryTest -FallbackName=EnvQueryTest
 #include "SCEnvQueryTest.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class SCCORE_API USCEnvQueryTest : public UEnvQueryTest {
     GENERATED_BODY()
 public:

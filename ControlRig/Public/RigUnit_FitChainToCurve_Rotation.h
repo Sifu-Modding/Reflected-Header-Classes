@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FRigUnit_FitChainToCurve_Rotation {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FQuat Rotation;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Ratio;
     
     CONTROLRIG_API FRigUnit_FitChainToCurve_Rotation();

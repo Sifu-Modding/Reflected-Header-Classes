@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "MovieScenePropertyTrack.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=MovieScene -ObjectName=MovieSceneTrackTemplateProducer -FallbackName=MovieSceneTrackTemplateProducer
+#include "MovieScenePropertyTrack.h"
 #include "MovieSceneIntegerTrack.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class MOVIESCENETRACKS_API UMovieSceneIntegerTrack : public UMovieScenePropertyTrack, public IMovieSceneTrackTemplateProducer {
     GENERATED_BODY()
 public:

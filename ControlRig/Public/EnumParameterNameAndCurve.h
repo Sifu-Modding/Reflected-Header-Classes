@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct CONTROLRIG_API FEnumParameterNameAndCurve {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName ParameterName;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMovieSceneByteChannel ParameterCurve;
     
     FEnumParameterNameAndCurve();

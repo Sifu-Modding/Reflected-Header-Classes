@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EControlRigDrawHierarchyMode.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 namespace EControlRigDrawHierarchyMode {
     enum Type {
         Axes,

@@ -3,7 +3,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=GameplayAbilities -ObjectName=AbilitySystemGlobals -FallbackName=AbilitySystemGlobals
 #include "SCAbilitySystemGlobals.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class SIFU_API USCAbilitySystemGlobals : public UAbilitySystemGlobals {
     GENERATED_BODY()
 public:

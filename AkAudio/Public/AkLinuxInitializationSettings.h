@@ -1,27 +1,27 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "AkPlatformInitialisationSettingsBase.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
+#include "AkAdvancedInitializationSettingsWithMultiCoreRendering.h"
 #include "AkCommonInitializationSettingsWithSampleRate.h"
 #include "AkCommunicationSettingsWithSystemInitialization.h"
-#include "AkAdvancedInitializationSettingsWithMultiCoreRendering.h"
+#include "AkPlatformInitialisationSettingsBase.h"
 #include "AkLinuxInitializationSettings.generated.h"
 
-UCLASS(DefaultConfig, Config=Game)
+UCLASS(Blueprintable, Config=Engine, DefaultConfig, Config=Game)
 class AKAUDIO_API UAkLinuxInitializationSettings : public UObject, public IAkPlatformInitialisationSettingsBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAkCommonInitializationSettingsWithSampleRate CommonSettings;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAkCommunicationSettingsWithSystemInitialization CommunicationSettings;
     
-    UPROPERTY(AdvancedDisplay, Config, EditAnywhere)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAkAdvancedInitializationSettingsWithMultiCoreRendering AdvancedSettings;
     
     UAkLinuxInitializationSettings();
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void MigrateMultiCoreRendering(bool NewValue);
     
     

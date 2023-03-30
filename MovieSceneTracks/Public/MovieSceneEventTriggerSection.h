@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=MovieScene -ObjectName=MovieSceneEntityProvider -FallbackName=MovieSceneEntityProvider
-#include "MovieSceneEventSectionBase.h"
 #include "MovieSceneEventChannel.h"
+#include "MovieSceneEventSectionBase.h"
 #include "MovieSceneEventTriggerSection.generated.h"
 
-UCLASS(MinimalAPI)
+UCLASS(Blueprintable, MinimalAPI)
 class UMovieSceneEventTriggerSection : public UMovieSceneEventSectionBase, public IMovieSceneEntityProvider {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMovieSceneEventChannel EventChannel;
     
     UMovieSceneEventTriggerSection();

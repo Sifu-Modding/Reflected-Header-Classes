@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
-#include "OnAbilitySystemComponentTagsChangedDelegateDelegate.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTag -FallbackName=GameplayTag
+#include "OnAbilitySystemComponentTagsChangedDelegateDelegate.h"
 #include "SCAbilitySystemComponentHelper.generated.h"
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class SIFU_API USCAbilitySystemComponentHelper : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

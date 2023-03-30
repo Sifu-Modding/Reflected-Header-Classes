@@ -1,23 +1,23 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ERigElementType.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Transform -FallbackName=Transform
+#include "ERigElementType.h"
 #include "RigHierarchyCopyPasteContent.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct CONTROLRIG_API FRigHierarchyCopyPasteContent {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<ERigElementType> Types;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FString> Contents;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTransform> LocalTransforms;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTransform> GlobalTransforms;
     
     FRigHierarchyCopyPasteContent();

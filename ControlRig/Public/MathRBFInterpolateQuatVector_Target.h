@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct FMathRBFInterpolateQuatVector_Target {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FQuat Target;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector Value;
     
     CONTROLRIG_API FMathRBFInterpolateQuatVector_Target();

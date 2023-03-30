@@ -1,7 +1,7 @@
 #include "OpenColorIOBlueprintLibrary.h"
 
-class UTexture;
 class UObject;
+class UTexture;
 class UTextureRenderTarget2D;
 
 bool UOpenColorIOBlueprintLibrary::ApplyColorSpaceTransform(const UObject* WorldContextObject, const FOpenColorIOColorConversionSettings& ConversionSettings, UTexture* InputTexture, UTextureRenderTarget2D* OutputRenderTarget) {

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EActorSequenceObjectReferenceType.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Guid -FallbackName=Guid
+#include "EActorSequenceObjectReferenceType.h"
 #include "ActorSequenceObjectReference.generated.h"
 
 USTRUCT(BlueprintType)
@@ -9,13 +9,13 @@ struct FActorSequenceObjectReference {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EActorSequenceObjectReferenceType Type;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGuid ActorId;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString PathToComponent;
     
 public:

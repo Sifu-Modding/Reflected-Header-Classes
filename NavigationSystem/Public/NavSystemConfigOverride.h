@@ -6,18 +6,18 @@
 
 class UNavigationSystemConfig;
 
-UCLASS()
+UCLASS(Blueprintable)
 class NAVIGATIONSYSTEM_API ANavSystemConfigOverride : public AActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UNavigationSystemConfig* NavigationSystemConfig;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ENavSystemOverridePolicy OverridePolicy;
     
-    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bLoadOnClient: 1;
     
 public:

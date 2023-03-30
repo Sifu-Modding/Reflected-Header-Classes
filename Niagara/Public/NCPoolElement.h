@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FNCPoolElement {
     GENERATED_BODY()
 public:
-    UPROPERTY(Instanced, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UNiagaraComponent* Component;
     
     NIAGARA_API FNCPoolElement();

@@ -6,16 +6,16 @@
 
 class UDestructibleComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class APEXDESTRUCTION_API ADestructibleActor : public AActor {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UDestructibleComponent* DestructibleComponent;
     
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FActorFractureSignature OnActorFracture;
     
     ADestructibleActor();

@@ -1,6 +1,6 @@
 #include "SCEnvQueryTest_Trace.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=AIModule -ObjectName=EnvQueryContext_Querier -FallbackName=EnvQueryContext_Querier
 //CROSS-MODULE INCLUDE V2: -ModuleName=AIModule -ObjectName=EnvQueryContext_Item -FallbackName=EnvQueryContext_Item
+//CROSS-MODULE INCLUDE V2: -ModuleName=AIModule -ObjectName=EnvQueryContext_Querier -FallbackName=EnvQueryContext_Querier
 
 USCEnvQueryTest_Trace::USCEnvQueryTest_Trace() {
     this->m_bCustomCollisionResponse = false;

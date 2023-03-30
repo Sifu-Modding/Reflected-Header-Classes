@@ -3,21 +3,21 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=Volume -FallbackName=Volume
 #include "AkSpatialAudioVolume.generated.h"
 
-class UAkRoomComponent;
 class UAkLateReverbComponent;
+class UAkRoomComponent;
 class UAkSurfaceReflectorSetComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class AKAUDIO_API AAkSpatialAudioVolume : public AVolume {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UAkSurfaceReflectorSetComponent* SurfaceReflectorSet;
     
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UAkLateReverbComponent* LateReverb;
     
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UAkRoomComponent* Room;
     
     AAkSpatialAudioVolume();

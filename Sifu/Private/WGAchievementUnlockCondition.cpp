@@ -1,5 +1,9 @@
 #include "WGAchievementUnlockCondition.h"
 
+bool UWGAchievementUnlockCondition::BPF_IsPlatformAuthorized(EPlatform _ePlatform) const {
+    return false;
+}
+
 
 
 
@@ -18,5 +22,7 @@ UWGAchievementUnlockCondition::UWGAchievementUnlockCondition() {
     this->m_bWantSpecificDifficulty = false;
     this->m_eMonitoredOrder = EOrderType::None;
     this->m_bMonitorOrder = false;
+    this->m_bAuthorizeSpecificPlatform = false;
+    this->m_AuthorizedPlatform = 0;
 }
 

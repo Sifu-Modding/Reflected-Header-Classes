@@ -3,17 +3,17 @@
 #include "Templates/SubclassOf.h"
 #include "AttributeDefaults.generated.h"
 
-class UDataTable;
 class UAttributeSet;
+class UDataTable;
 
 USTRUCT(BlueprintType)
 struct GAMEPLAYABILITIES_API FAttributeDefaults {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UAttributeSet> Attributes;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UDataTable* DefaultStartingTable;
     
     FAttributeDefaults();

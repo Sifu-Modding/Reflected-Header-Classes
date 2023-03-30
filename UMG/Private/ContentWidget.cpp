@@ -1,7 +1,7 @@
 #include "ContentWidget.h"
 
-class UWidget;
 class UPanelSlot;
+class UWidget;
 
 UPanelSlot* UContentWidget::SetContent(UWidget* Content) {
     return NULL;

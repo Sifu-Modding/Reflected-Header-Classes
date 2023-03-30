@@ -1,31 +1,31 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RigUnit_HierarchyBase.h"
+#include "CachedRigElement.h"
 #include "RigElementKey.h"
 #include "RigElementKeyCollection.h"
-#include "CachedRigElement.h"
+#include "RigUnit_HierarchyBase.h"
 #include "RigUnit_HierarchyGetChildren.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_HierarchyGetChildren : public FRigUnit_HierarchyBase {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRigElementKey Parent;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bIncludeParent;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bRecursive;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRigElementKeyCollection Children;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FCachedRigElement CachedParent;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRigElementKeyCollection CachedChildren;
     
     CONTROLRIG_API FRigUnit_HierarchyGetChildren();

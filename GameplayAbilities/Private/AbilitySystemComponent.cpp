@@ -2,12 +2,12 @@
 #include "Net/UnrealNetwork.h"
 #include "Templates/SubclassOf.h"
 
+class UAbilitySystemComponent;
+class UAnimMontage;
+class UAttributeSet;
+class UDataTable;
 class UGameplayAbility;
 class UGameplayEffect;
-class UDataTable;
-class UAnimMontage;
-class UAbilitySystemComponent;
-class UAttributeSet;
 
 bool UAbilitySystemComponent::TryActivateAbilityByClass(TSubclassOf<UGameplayAbility> InAbilityToActivate, bool bAllowRemoteActivation) {
     return false;

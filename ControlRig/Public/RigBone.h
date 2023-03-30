@@ -1,33 +1,33 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RigElement.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Transform -FallbackName=Transform
 #include "ERigBoneType.h"
+#include "RigElement.h"
 #include "RigBone.generated.h"
 
 USTRUCT(BlueprintType)
 struct CONTROLRIG_API FRigBone : public FRigElement {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName ParentName;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     int32 ParentIndex;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTransform InitialTransform;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FTransform GlobalTransform;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FTransform LocalTransform;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<int32> Dependents;
     
-    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ERigBoneType Type;
     
     FRigBone();

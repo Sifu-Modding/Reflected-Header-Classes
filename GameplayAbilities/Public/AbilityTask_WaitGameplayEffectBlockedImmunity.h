@@ -1,24 +1,24 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "AbilityTask.h"
-#include "GameplayTagRequirements.h"
 #include "GameplayEffectBlockedDelegateDelegate.h"
+#include "GameplayTagRequirements.h"
 #include "AbilityTask_WaitGameplayEffectBlockedImmunity.generated.h"
 
-class UAbilitySystemComponent;
 class AActor;
-class UGameplayAbility;
+class UAbilitySystemComponent;
 class UAbilityTask_WaitGameplayEffectBlockedImmunity;
+class UGameplayAbility;
 
-UCLASS()
+UCLASS(Blueprintable)
 class GAMEPLAYABILITIES_API UAbilityTask_WaitGameplayEffectBlockedImmunity : public UAbilityTask {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayEffectBlockedDelegate bLocked;
     
 protected:
-    UPROPERTY(Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UAbilitySystemComponent* ExternalOwner;
     
 public:

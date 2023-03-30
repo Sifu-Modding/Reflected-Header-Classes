@@ -4,11 +4,11 @@
 #include "MovieSceneParticleChannel.h"
 #include "MovieSceneParticleSection.generated.h"
 
-UCLASS(MinimalAPI)
+UCLASS(Blueprintable, MinimalAPI)
 class UMovieSceneParticleSection : public UMovieSceneSection {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMovieSceneParticleChannel ParticleKeys;
     
     UMovieSceneParticleSection();

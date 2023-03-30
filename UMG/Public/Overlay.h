@@ -6,7 +6,7 @@
 class UOverlaySlot;
 class UWidget;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UMG_API UOverlay : public UPanelWidget {
     GENERATED_BODY()
 public:

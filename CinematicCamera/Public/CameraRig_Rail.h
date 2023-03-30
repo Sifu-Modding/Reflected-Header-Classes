@@ -6,29 +6,29 @@
 class USceneComponent;
 class USplineComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class CINEMATICCAMERA_API ACameraRig_Rail : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Interp)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Interp, meta=(AllowPrivateAccess=true))
     float CurrentPositionOnRail;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Interp)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Interp, meta=(AllowPrivateAccess=true))
     bool bLockOrientationToRail;
     
 private:
-    UPROPERTY(EditDefaultsOnly, Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USceneComponent* TransformComponent;
     
-    UPROPERTY(EditDefaultsOnly, Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USplineComponent* RailSplineComponent;
     
-    UPROPERTY(EditDefaultsOnly, Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USceneComponent* RailCameraMount;
     
 public:
     ACameraRig_Rail();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     USplineComponent* GetRailSplineComponent();
     
 };

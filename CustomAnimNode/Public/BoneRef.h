@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FBoneRef {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     FBoneReference Bone;
     
     CUSTOMANIMNODE_API FBoneRef();

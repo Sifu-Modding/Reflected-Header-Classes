@@ -3,7 +3,7 @@
 #include "RigUnit_MathIntBinaryOp.h"
 #include "RigUnit_MathIntMin.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_MathIntMin : public FRigUnit_MathIntBinaryOp {
     GENERATED_BODY()
 public:

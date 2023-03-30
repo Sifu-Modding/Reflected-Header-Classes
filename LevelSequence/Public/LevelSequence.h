@@ -1,37 +1,37 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "LevelSequenceObject.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=MovieScene -ObjectName=MovieSceneSequence -FallbackName=MovieSceneSequence
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=Interface_AssetUserData -FallbackName=Interface_AssetUserData
-#include "LevelSequenceObjectReferenceMap.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=MovieScene -ObjectName=MovieSceneSequence -FallbackName=MovieSceneSequence
 #include "LevelSequenceBindingReferences.h"
+#include "LevelSequenceObject.h"
+#include "LevelSequenceObjectReferenceMap.h"
 #include "LevelSequence.generated.h"
 
-class UObject;
-class UMovieScene;
 class UAssetUserData;
+class UMovieScene;
+class UObject;
 
-UCLASS()
+UCLASS(Blueprintable)
 class LEVELSEQUENCE_API ULevelSequence : public UMovieSceneSequence, public IInterface_AssetUserData {
     GENERATED_BODY()
 public:
-    UPROPERTY(Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UMovieScene* MovieScene;
     
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FLevelSequenceObjectReferenceMap ObjectReferences;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FLevelSequenceBindingReferences BindingReferences;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<FString, FLevelSequenceObject> PossessedObjects;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UClass* DirectorClass;
     
-    UPROPERTY(AdvancedDisplay, EditAnywhere, Instanced)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     TArray<UAssetUserData*> AssetUserData;
     
 public:
@@ -42,7 +42,7 @@ public:
     UFUNCTION(BlueprintCallable)
     UObject* FindOrAddMetaDataByClass(UClass* InClass);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UObject* FindMetaDataByClass(UClass* InClass) const;
     
     UFUNCTION(BlueprintCallable)

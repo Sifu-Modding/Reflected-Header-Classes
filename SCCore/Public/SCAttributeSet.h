@@ -3,7 +3,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=GameplayAbilities -ObjectName=AttributeSet -FallbackName=AttributeSet
 #include "SCAttributeSet.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class SCCORE_API USCAttributeSet : public UAttributeSet {
     GENERATED_BODY()
 public:

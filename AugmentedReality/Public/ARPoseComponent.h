@@ -5,12 +5,12 @@
 #include "EPoseComponentDebugMode.h"
 #include "ARPoseComponent.generated.h"
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class AUGMENTEDREALITY_API UARPoseComponent : public UARComponent {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_Payload)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_Payload, meta=(AllowPrivateAccess=true))
     FARPoseUpdatePayload ReplicatedPayload;
     
 public:
@@ -21,14 +21,14 @@ public:
     static void SetPoseComponentDebugMode(EPoseComponentDebugMode NewDebugMode);
     
 protected:
-    UFUNCTION(Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
     void ServerUpdatePayload(const FARPoseUpdatePayload& NewPayload);
     
 public:
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveUpdate(const FARPoseUpdatePayload& Payload);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveAdd(const FARPoseUpdatePayload& Payload);
     
 };

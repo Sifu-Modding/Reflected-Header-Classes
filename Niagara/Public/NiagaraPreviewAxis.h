@@ -10,10 +10,10 @@ class UNiagaraPreviewAxis : public UObject {
     GENERATED_BODY()
 public:
     UNiagaraPreviewAxis();
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     int32 Num();
     
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void ApplyToPreview(UNiagaraComponent* PreviewComponent, int32 PreviewIndex, bool bIsXAxis, FString& OutLabelText);
     
 };

@@ -8,6 +8,7 @@ UNavLinkCustomComponent::UNavLinkCustomComponent() {
     this->DisabledAreaClass = UNavArea_Null::StaticClass();
     this->LinkDirection = ENavLinkDirection::BothWays;
     this->bLinkEnabled = true;
+    this->bFreezeAgentSimulationWhenUsingSmartLink = true;
     this->bNotifyWhenEnabled = false;
     this->bNotifyWhenDisabled = false;
     this->bCreateBoxObstacle = false;

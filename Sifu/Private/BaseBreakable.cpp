@@ -1,11 +1,11 @@
 #include "BaseBreakable.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=PhysicalActorDependencyComponent -FallbackName=PhysicalActorDependencyComponent
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BoxComponent -FallbackName=BoxComponent
-#include "ReplayableDestructibleComponent.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=PhysicalActorDependencyComponent -FallbackName=PhysicalActorDependencyComponent
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCStreamingActorComponent -FallbackName=SCStreamingActorComponent
+#include "ReplayableDestructibleComponent.h"
 
-class UPrimitiveComponent;
 class AActor;
+class UPrimitiveComponent;
 
 void ABaseBreakable::OnWakeStateChanged(bool _bIsAwake) {
 }

@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FRigUnit_TransformConstraint_WorkData {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FConstraintData> ConstraintData;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<int32, int32> ConstraintDataToTargets;
     
     CONTROLRIG_API FRigUnit_TransformConstraint_WorkData();

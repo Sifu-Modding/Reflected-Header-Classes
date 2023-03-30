@@ -1,24 +1,24 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "AkSegmentInfo.h"
 #include "AkCallbackInfo.h"
+#include "AkSegmentInfo.h"
 #include "EAkCallbackType.h"
 #include "AkMusicSyncCallbackInfo.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UAkMusicSyncCallbackInfo : public UAkCallbackInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 PlayingID;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAkSegmentInfo SegmentInfo;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EAkCallbackType MusicSyncType;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString UserCueName;
     
     UAkMusicSyncCallbackInfo();

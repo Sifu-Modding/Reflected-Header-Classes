@@ -1,20 +1,20 @@
 #pragma once
 #include "CoreMinimal.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTag -FallbackName=GameplayTag
+//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTagQuery -FallbackName=GameplayTagQuery
 #include "AbilityTask.h"
 #include "GameplayTagRequirements.h"
 #include "WaitAbilityActivateDelegateDelegate.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTagQuery -FallbackName=GameplayTagQuery
-//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTag -FallbackName=GameplayTag
 #include "AbilityTask_WaitAbilityActivate.generated.h"
 
 class UAbilityTask_WaitAbilityActivate;
 class UGameplayAbility;
 
-UCLASS()
+UCLASS(Blueprintable)
 class GAMEPLAYABILITIES_API UAbilityTask_WaitAbilityActivate : public UAbilityTask {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FWaitAbilityActivateDelegate OnActivate;
     
     UAbilityTask_WaitAbilityActivate();
@@ -27,7 +27,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static UAbilityTask_WaitAbilityActivate* WaitForAbilityActivate(UGameplayAbility* OwningAbility, FGameplayTag WithTag, FGameplayTag WithoutTag, bool IncludeTriggeredAbilities, bool TriggerOnce);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnAbilityActivate(UGameplayAbility* ActivatedAbility);
     
 };

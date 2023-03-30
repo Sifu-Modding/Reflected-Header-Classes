@@ -1,36 +1,36 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "NiagaraVariableAttributeBinding.h"
-#include "NiagaraRendererProperties.h"
 #include "NiagaraComponentPropertyBinding.h"
+#include "NiagaraRendererProperties.h"
+#include "NiagaraVariableAttributeBinding.h"
+#include "Templates/SubclassOf.h"
 #include "NiagaraComponentRendererProperties.generated.h"
 
 class USceneComponent;
 
-UCLASS(EditInlineNew, MinimalAPI)
+UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UNiagaraComponentRendererProperties : public UNiagaraRendererProperties {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<USceneComponent> ComponentType;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint32 ComponentCountLimit;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FNiagaraVariableAttributeBinding EnabledBinding;
     
-    UPROPERTY(AdvancedDisplay, EditAnywhere)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bAssignComponentsOnParticleID;
     
-    UPROPERTY(AdvancedDisplay, EditAnywhere)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bOnlyCreateComponentsOnParticleSpawn;
     
-    UPROPERTY(EditAnywhere, Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USceneComponent* TemplateComponent;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FNiagaraComponentPropertyBinding> PropertyBindings;
     
     UNiagaraComponentRendererProperties();

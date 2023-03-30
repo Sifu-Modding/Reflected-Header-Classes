@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FMovieSceneEvaluationFieldSharedEntityMetaData {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGuid ObjectBindingID;
     
     MOVIESCENE_API FMovieSceneEvaluationFieldSharedEntityMetaData();

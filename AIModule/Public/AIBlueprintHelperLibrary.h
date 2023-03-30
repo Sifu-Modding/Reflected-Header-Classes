@@ -1,23 +1,23 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Rotator -FallbackName=Rotator
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Rotator -FallbackName=Rotator
+#include "Templates/SubclassOf.h"
 #include "AIBlueprintHelperLibrary.generated.h"
 
-class APawn;
-class UAnimInstance;
-class UBehaviorTree;
-class UObject;
 class AAIController;
 class AActor;
 class AController;
-class UNavigationPath;
-class UBlackboardComponent;
+class APawn;
 class UAIAsyncTaskBlueprintProxy;
+class UAnimInstance;
+class UBehaviorTree;
+class UBlackboardComponent;
+class UNavigationPath;
+class UObject;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class AIMODULE_API UAIBlueprintHelperLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
@@ -40,31 +40,31 @@ public:
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     static void LockAIResourcesWithAnimation(UAnimInstance* AnimInstance, bool bLockMovement, bool LockAILogic);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool IsValidAIRotation(FRotator Rotation);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool IsValidAILocation(FVector Location);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool IsValidAIDirection(FVector DirectionVector);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static int32 GetNextNavLinkIndex(const AController* Controller);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static TArray<FVector> GetCurrentPathPoints(AController* Controller);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static int32 GetCurrentPathIndex(const AController* Controller);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static UNavigationPath* GetCurrentPath(AController* Controller);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static UBlackboardComponent* GetBlackboard(AActor* Target);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static AAIController* GetAIController(AActor* ControlledActor);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))

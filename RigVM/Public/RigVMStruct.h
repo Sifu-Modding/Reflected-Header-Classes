@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "RigVMStruct.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct RIGVM_API FRigVMStruct {
     GENERATED_BODY()
 public:

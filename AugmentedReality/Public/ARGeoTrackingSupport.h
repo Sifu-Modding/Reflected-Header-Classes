@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
+#include "EARGeoTrackingAccuracy.h"
 #include "EARGeoTrackingState.h"
 #include "EARGeoTrackingStateReason.h"
-#include "EARGeoTrackingAccuracy.h"
 #include "ARGeoTrackingSupport.generated.h"
 
 class UARGeoTrackingSupport;
 
-UCLASS(Abstract, BlueprintType)
+UCLASS(Abstract, Blueprintable)
 class AUGMENTEDREALITY_API UARGeoTrackingSupport : public UObject {
     GENERATED_BODY()
 public:
@@ -16,13 +16,13 @@ public:
     UFUNCTION(BlueprintCallable)
     static UARGeoTrackingSupport* GetGeoTrackingSupport();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     EARGeoTrackingStateReason GetGeoTrackingStateReason() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     EARGeoTrackingState GetGeoTrackingState() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     EARGeoTrackingAccuracy GetGeoTrackingAccuracy() const;
     
     UFUNCTION(BlueprintCallable)

@@ -1,28 +1,28 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=UMG -ObjectName=Widget -FallbackName=Widget
-#include "OnItemPropertySelectionChangedDelegate.h"
 #include "OnItemPropertyDragDetectedDelegate.h"
+#include "OnItemPropertySelectionChangedDelegate.h"
 #include "AkItemProperties.generated.h"
 
-UCLASS(DefaultConfig, Config=Editor)
+UCLASS(Blueprintable, Config=Engine, DefaultConfig, Config=Editor)
 class AKAUDIO_API UAkItemProperties : public UWidget {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnItemPropertySelectionChanged OnSelectionChanged;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnItemPropertyDragDetected OnPropertyDragged;
     
     UAkItemProperties();
     UFUNCTION(BlueprintCallable, BlueprintCosmetic)
     void SetSearchText(const FString& newText);
     
-    UFUNCTION(BlueprintCosmetic, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintCosmetic, BlueprintPure)
     FString GetSelectedProperty() const;
     
-    UFUNCTION(BlueprintCosmetic, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintCosmetic, BlueprintPure)
     FString GetSearchText() const;
     
 };

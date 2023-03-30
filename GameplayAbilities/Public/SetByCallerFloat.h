@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FSetByCallerFloat {
     GENERATED_BODY()
 public:
-    UPROPERTY(VisibleDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName DataName;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayTag DataTag;
     
     GAMEPLAYABILITIES_API FSetByCallerFloat();

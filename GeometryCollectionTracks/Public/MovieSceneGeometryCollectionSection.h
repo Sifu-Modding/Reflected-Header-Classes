@@ -4,11 +4,11 @@
 #include "MovieSceneGeometryCollectionParams.h"
 #include "MovieSceneGeometryCollectionSection.generated.h"
 
-UCLASS(MinimalAPI)
+UCLASS(Blueprintable, MinimalAPI)
 class UMovieSceneGeometryCollectionSection : public UMovieSceneSection {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMovieSceneGeometryCollectionParams Params;
     
     UMovieSceneGeometryCollectionSection();

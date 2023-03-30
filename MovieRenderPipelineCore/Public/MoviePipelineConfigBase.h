@@ -1,21 +1,21 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
+#include "Templates/SubclassOf.h"
 #include "MoviePipelineConfigBase.generated.h"
 
-class UMoviePipelineSetting;
 class UMoviePipelineConfigBase;
+class UMoviePipelineSetting;
 
-UCLASS(Abstract, BlueprintType)
+UCLASS(Abstract, Blueprintable)
 class MOVIERENDERPIPELINECORE_API UMoviePipelineConfigBase : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString DisplayName;
     
 protected:
-    UPROPERTY(Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     TArray<UMoviePipelineSetting*> Settings;
     
 public:
@@ -23,13 +23,13 @@ public:
     UFUNCTION(BlueprintCallable)
     void RemoveSetting(UMoviePipelineSetting* InSetting);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     TArray<UMoviePipelineSetting*> GetUserSettings() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     TArray<UMoviePipelineSetting*> FindSettingsByClass(TSubclassOf<UMoviePipelineSetting> InClass, const bool bIncludeDisabledSettings) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UMoviePipelineSetting* FindSettingByClass(TSubclassOf<UMoviePipelineSetting> InClass, const bool bIncludeDisabledSettings) const;
     
     UFUNCTION(BlueprintCallable)

@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=LipSyncPhonemeInPhrase -FallbackName=LipSyncPhonemeInPhrase
-#include "LipSyncPhonemeInPhraseArray.h"
-#include "LipSyncEmotionDataArray.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=LipSyncEmotionData -FallbackName=LipSyncEmotionData
+//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=LipSyncPhonemeInPhrase -FallbackName=LipSyncPhonemeInPhrase
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCGestureContainer -FallbackName=SCGestureContainer
+#include "LipSyncEmotionDataArray.h"
+#include "LipSyncPhonemeInPhraseArray.h"
 #include "SCDialogData.generated.h"
 
 class UAkAudioEvent;
@@ -13,67 +13,79 @@ USTRUCT(BlueprintType)
 struct SCDIALOGMANAGERPLUGIN_API FSCDialogData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName AkEventName;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bUseLipSync;
     
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<float, float> Envelope;
     
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<float, float> EnvelopeForChinese;
     
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TMap<float, float> EnvelopeForCantonese;
+    
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<uint16, FLipSyncPhonemeInPhraseArray> phonemeInPhrase;
     
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<uint16, FLipSyncPhonemeInPhraseArray> phonemeInPhraseInChinese;
     
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    TMap<uint16, FLipSyncPhonemeInPhraseArray> phonemeInPhraseInCantonese;
+    
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<uint16, FLipSyncEmotionDataArray> emotionsInPhrase;
     
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FLipSyncPhonemeInPhraseArray m_phonemeForTest;
     
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FLipSyncPhonemeInPhraseArray m_phonemeForTestInChinese;
     
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FLipSyncPhonemeInPhraseArray m_phonemeForTestInCantonese;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FLipSyncEmotionDataArray m_emotionForTest;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UAkAudioEvent* AkEventObj;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName AkEventAltName;
     
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<float, float> EnvelopeAlt;
     
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<float, float> EnvelopeAltForChinese;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TMap<float, float> EnvelopeAltForCantonese;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UAkAudioEvent* AkEventAltObj;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FText Subtitles;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSCGestureContainer GestureContainer;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool ShouldDisplayText;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FText m_SubtitlesWithGender;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<FLipSyncPhonemeInPhrase> phonemeInPhraseWithGender;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<FLipSyncEmotionData> emotionsInPhraseWithGender;
     
     FSCDialogData();

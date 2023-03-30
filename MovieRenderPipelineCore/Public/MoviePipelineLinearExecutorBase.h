@@ -3,18 +3,18 @@
 #include "MoviePipelineExecutorBase.h"
 #include "MoviePipelineLinearExecutorBase.generated.h"
 
-class UMoviePipelineQueue;
 class UMoviePipeline;
+class UMoviePipelineQueue;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class MOVIERENDERPIPELINECORE_API UMoviePipelineLinearExecutorBase : public UMoviePipelineExecutorBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UMoviePipelineQueue* Queue;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UMoviePipeline* ActiveMoviePipeline;
     
 public:

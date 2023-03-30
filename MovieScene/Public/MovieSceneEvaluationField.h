@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "MovieSceneFrameRange.h"
 #include "MovieSceneEvaluationGroup.h"
 #include "MovieSceneEvaluationMetaData.h"
+#include "MovieSceneFrameRange.h"
 #include "MovieSceneEvaluationField.generated.h"
 
 USTRUCT(BlueprintType)
@@ -10,13 +10,13 @@ struct FMovieSceneEvaluationField {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FMovieSceneFrameRange> Ranges;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FMovieSceneEvaluationGroup> Groups;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FMovieSceneEvaluationMetaData> MetaData;
     
 public:

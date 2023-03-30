@@ -1,22 +1,22 @@
 #pragma once
 #include "CoreMinimal.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCUserDefinedEnumHandler -FallbackName=SCUserDefinedEnumHandler
 #include "BaseActorCondition.h"
 #include "EOrderAccessMode.h"
 #include "EOrderType.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCUserDefinedEnumHandler -FallbackName=SCUserDefinedEnumHandler
 #include "OrderCondition.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class SIFU_API UOrderCondition : public UBaseActorCondition {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EOrderType m_eOrderType;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSCUserDefinedEnumHandler m_BPOrderType;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EOrderAccessMode m_eAccessMode;
     
     UOrderCondition();

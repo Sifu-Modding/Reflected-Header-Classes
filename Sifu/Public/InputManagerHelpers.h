@@ -1,19 +1,19 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "InputAction.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector2D -FallbackName=Vector2D
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
+#include "InputAction.h"
 #include "InputManagerHelpers.generated.h"
 
-class UInputPad;
 class ASCPlayerController;
+class UInputPad;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class SIFU_API UInputManagerHelpers : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UInputManagerHelpers();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static UInputPad* BPF_GetControllerInputPad(ASCPlayerController* _playerController);
     
     UFUNCTION(BlueprintCallable)

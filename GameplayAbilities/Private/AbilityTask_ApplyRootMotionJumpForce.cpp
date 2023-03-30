@@ -2,9 +2,9 @@
 #include "Net/UnrealNetwork.h"
 
 class UAbilityTask_ApplyRootMotionJumpForce;
-class UGameplayAbility;
-class UCurveVector;
 class UCurveFloat;
+class UCurveVector;
+class UGameplayAbility;
 
 void UAbilityTask_ApplyRootMotionJumpForce::OnLandedCallback(const FHitResult& Hit) {
 }

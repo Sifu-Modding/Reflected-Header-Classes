@@ -2,11 +2,11 @@
 #include "CoreMinimal.h"
 #include "UdpMockMessage.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FUdpMockMessage {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<uint8> Data;
     
     UDPMESSAGING_API FUdpMockMessage();

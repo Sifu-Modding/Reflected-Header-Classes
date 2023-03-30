@@ -1,29 +1,29 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "ENiagaraGpuBufferFormat.h"
 #include "NiagaraDataInterfaceGrid2D.h"
 #include "NiagaraUserParameterBinding.h"
-#include "ENiagaraGpuBufferFormat.h"
 #include "NiagaraDataInterfaceGrid2DCollection.generated.h"
 
+class UNiagaraComponent;
 class UTextureRenderTarget2D;
 class UTextureRenderTarget2DArray;
-class UNiagaraComponent;
 
-UCLASS(BlueprintType, EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class NIAGARA_API UNiagaraDataInterfaceGrid2DCollection : public UNiagaraDataInterfaceGrid2D {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FNiagaraUserParameterBinding RenderTargetUserParameter;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ENiagaraGpuBufferFormat OverrideBufferFormat;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bOverrideFormat: 1;
     
 protected:
-    UPROPERTY(Transient)
+    UPROPERTY(EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TMap<uint64, UTextureRenderTarget2DArray*> ManagedRenderTargets;
     
 public:

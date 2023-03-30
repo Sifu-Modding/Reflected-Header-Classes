@@ -3,20 +3,20 @@
 #include "WeightmapLayerAllocationInfo.h"
 #include "WeightmapData.generated.h"
 
-class UTexture2D;
 class ULandscapeWeightmapUsage;
+class UTexture2D;
 
 USTRUCT(BlueprintType)
 struct FWeightmapData {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UTexture2D*> Textures;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FWeightmapLayerAllocationInfo> LayerAllocations;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<ULandscapeWeightmapUsage*> TextureUsages;
     
     LANDSCAPE_API FWeightmapData();

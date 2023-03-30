@@ -6,13 +6,13 @@ USTRUCT(BlueprintType)
 struct FMovieScenePropertyBinding {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName PropertyName;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName PropertyPath;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bCanUseClassLookup;
     
     MOVIESCENE_API FMovieScenePropertyBinding();

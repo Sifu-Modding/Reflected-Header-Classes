@@ -9,19 +9,19 @@ USTRUCT(BlueprintType)
 struct ANIMGRAPHRUNTIME_API FAnimNode_ModifyCurve : public FAnimNode_Base {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, EditFixedSize)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, EditFixedSize, meta=(AllowPrivateAccess=true))
     FPoseLink SourcePose;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, EditFixedSize)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, EditFixedSize, meta=(AllowPrivateAccess=true))
     TArray<float> CurveValues;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FName> CurveNames;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Alpha;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EModifyCurveApplyMode ApplyMode;
     
     FAnimNode_ModifyCurve();

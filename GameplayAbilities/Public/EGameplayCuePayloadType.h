@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EGameplayCuePayloadType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EGameplayCuePayloadType : uint8 {
     CueParameters,
     FromSpec,

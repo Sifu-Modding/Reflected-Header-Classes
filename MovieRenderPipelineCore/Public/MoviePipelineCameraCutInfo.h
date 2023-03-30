@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "MoviePipelineCameraCutInfo.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FMoviePipelineCameraCutInfo {
     GENERATED_BODY()
 public:

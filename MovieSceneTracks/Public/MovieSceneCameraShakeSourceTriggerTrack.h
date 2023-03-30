@@ -6,12 +6,12 @@
 
 class UMovieSceneSection;
 
-UCLASS()
+UCLASS(Blueprintable)
 class MOVIESCENETRACKS_API UMovieSceneCameraShakeSourceTriggerTrack : public UMovieSceneTrack, public IMovieSceneTrackTemplateProducer {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     TArray<UMovieSceneSection*> Sections;
     
 public:

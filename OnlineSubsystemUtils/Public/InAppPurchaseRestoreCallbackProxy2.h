@@ -1,21 +1,21 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
-#include "InAppPurchaseRestoreResult2Delegate.h"
 #include "InAppPurchaseProductRequest2.h"
+#include "InAppPurchaseRestoreResult2Delegate.h"
 #include "InAppPurchaseRestoreCallbackProxy2.generated.h"
 
-class UInAppPurchaseRestoreCallbackProxy2;
 class APlayerController;
+class UInAppPurchaseRestoreCallbackProxy2;
 
-UCLASS(BlueprintType, MinimalAPI)
+UCLASS(Blueprintable, MinimalAPI)
 class UInAppPurchaseRestoreCallbackProxy2 : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FInAppPurchaseRestoreResult2 OnSuccess;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FInAppPurchaseRestoreResult2 OnFailure;
     
     UInAppPurchaseRestoreCallbackProxy2();

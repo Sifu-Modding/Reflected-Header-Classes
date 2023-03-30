@@ -9,10 +9,10 @@ USTRUCT(BlueprintType)
 struct NIAGARA_API FNiagaraMeshMaterialOverride {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UMaterialInterface* ExplicitMat;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FNiagaraUserParameterBinding UserParamBinding;
     
     FNiagaraMeshMaterialOverride();

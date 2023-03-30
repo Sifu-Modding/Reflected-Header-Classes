@@ -3,26 +3,26 @@
 #include "NiagaraTypeDefinition.h"
 #include "NiagaraScriptDataInterfaceCompileInfo.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct NIAGARA_API FNiagaraScriptDataInterfaceCompileInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName Name;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 UserPtrIdx;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FNiagaraTypeDefinition Type;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName RegisteredParameterMapRead;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName RegisteredParameterMapWrite;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bIsPlaceholder;
     
     FNiagaraScriptDataInterfaceCompileInfo();

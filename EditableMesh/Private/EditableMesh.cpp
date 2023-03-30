@@ -1,7 +1,7 @@
 #include "EditableMesh.h"
 
-class UPrimitiveComponent;
 class UEditableMesh;
+class UPrimitiveComponent;
 
 void UEditableMesh::WeldVertices(const TArray<FVertexID>& VertexIDs, FVertexID& OutNewVertexID) {
 }

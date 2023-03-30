@@ -4,12 +4,12 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCReplayLevelStreamingData -FallbackName=SCReplayLevelStreamingData
 #include "ReplayLevelStreamingReplication.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class SIFU_API UReplayLevelStreamingReplication : public UObject {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSCReplayLevelStreamingData m_StreamingState;
     
 public:

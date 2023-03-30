@@ -1,32 +1,32 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTag -FallbackName=GameplayTag
 #include "AbilityTask.h"
-#include "WaitTargetDataDelegateDelegate.h"
 #include "EGameplayTargetingConfirmation.h"
 #include "GameplayAbilityTargetDataHandle.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTag -FallbackName=GameplayTag
+#include "Templates/SubclassOf.h"
+#include "WaitTargetDataDelegateDelegate.h"
 #include "AbilityTask_WaitTargetData.generated.h"
 
+class AGameplayAbilityTargetActor;
 class UAbilityTask_WaitTargetData;
 class UGameplayAbility;
-class AGameplayAbilityTargetActor;
 
-UCLASS(NotPlaceable)
+UCLASS(Blueprintable, NotPlaceable)
 class GAMEPLAYABILITIES_API UAbilityTask_WaitTargetData : public UAbilityTask {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FWaitTargetDataDelegate ValidData;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FWaitTargetDataDelegate Cancelled;
     
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<AGameplayAbilityTargetActor> TargetClass;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AGameplayAbilityTargetActor* TargetActor;
     
 public:
@@ -37,16 +37,16 @@ public:
     UFUNCTION(BlueprintCallable)
     static UAbilityTask_WaitTargetData* WaitTargetData(UGameplayAbility* OwningAbility, FName TaskInstanceName, TEnumAsByte<EGameplayTargetingConfirmation::Type> ConfirmationType, TSubclassOf<AGameplayAbilityTargetActor> Class);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnTargetDataReplicatedCancelledCallback();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnTargetDataReplicatedCallback(const FGameplayAbilityTargetDataHandle& Data, FGameplayTag ActivationTag);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnTargetDataReadyCallback(const FGameplayAbilityTargetDataHandle& Data);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnTargetDataCancelledCallback(const FGameplayAbilityTargetDataHandle& Data);
     
     UFUNCTION(BlueprintCallable)

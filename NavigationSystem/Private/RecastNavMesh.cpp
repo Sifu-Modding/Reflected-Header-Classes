@@ -26,6 +26,7 @@ ARecastNavMesh::ARecastNavMesh() {
     this->bDrawMarkedForbiddenPolys = false;
     this->bDistinctlyDrawTilesBeingBuilt = true;
     this->DrawOffset = 10.00f;
+    this->bForceStatic = false;
     this->bFixedTilePoolSize = false;
     this->TilePoolSize = 1024;
     this->TileSizeUU = 1000.00f;

@@ -2,17 +2,17 @@
 #include "CoreMinimal.h"
 #include "ProgressionDoorStruct.generated.h"
 
-class UQuestItemData;
 class UProgressionDoorData;
+class UQuestItemData;
 
 USTRUCT(BlueprintType)
 struct SIFU_API FProgressionDoorStruct {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UProgressionDoorData* m_ProgressionDoorData;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UQuestItemData*> m_Conditions;
     
     FProgressionDoorStruct();

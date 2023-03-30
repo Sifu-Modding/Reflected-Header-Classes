@@ -5,8 +5,8 @@
 #include "HitBox.h"
 #include "PushedObstacleComponent.generated.h"
 
-class UPushedObstacleComponent;
 class AFightingCharacter;
+class UPushedObstacleComponent;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UPushedObstacleComponent : public UActorComponent {
@@ -14,28 +14,28 @@ class UPushedObstacleComponent : public UActorComponent {
 public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FPushSignature, UPushedObstacleComponent*, _component, AFightingCharacter*, _pushedPlayer);
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bActive;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     EPushObstacleReaction m_ePushReaction;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FHitBox m_HitBox;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FPushSignature m_OnPushDetected;
     
     UPushedObstacleComponent();
 protected:
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BPE_OnPushInterruption(AFightingCharacter* _interruptedCharacter);
     
 public:
     UFUNCTION(BlueprintNativeEvent)
     EPushObstacleReaction BPE_GetPushReaction(AFightingCharacter* _pushedPlayer);
     
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     bool BPE_GetPushInterruptionHit(AFightingCharacter* _interruptedCharacter, FHitBox& _inOutResult);
     
 };

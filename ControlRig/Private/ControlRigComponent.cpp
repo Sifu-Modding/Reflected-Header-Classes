@@ -1,8 +1,8 @@
 #include "ControlRigComponent.h"
 
+class UControlRig;
 class UControlRigComponent;
 class USkeletalMesh;
-class UControlRig;
 class USkeletalMeshComponent;
 
 void UControlRigComponent::Update(float DeltaTime) {

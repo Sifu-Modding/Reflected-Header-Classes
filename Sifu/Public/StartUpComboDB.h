@@ -3,11 +3,11 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=DataAsset -FallbackName=DataAsset
 #include "StartUpComboDB.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class SIFU_API UStartUpComboDB : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FName> m_ComboSlotNames;
     
     UStartUpComboDB();

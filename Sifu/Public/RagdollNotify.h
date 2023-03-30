@@ -3,15 +3,15 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=AnimNotify -FallbackName=AnimNotify
 #include "RagdollNotify.generated.h"
 
-UCLASS(CollapseCategories)
+UCLASS(Blueprintable, CollapseCategories)
 class SIFU_API URagdollNotify : public UAnimNotify {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bRagdollEnabled;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bCollisionEnabled;
     
 public:

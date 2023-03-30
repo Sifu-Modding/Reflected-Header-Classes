@@ -12,29 +12,29 @@ UCLASS(Blueprintable)
 class GAMEPLAYABILITIES_API UGameplayCueNotify_Static : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayTag GameplayCueTag;
     
-    UPROPERTY(AssetRegistrySearchable)
+    UPROPERTY(AssetRegistrySearchable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName GameplayCueName;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool IsOverride;
     
     UGameplayCueNotify_Static();
-    UFUNCTION(BlueprintNativeEvent, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent, BlueprintPure)
     bool WhileActive(AActor* MyTarget, const FGameplayCueParameters& Parameters) const;
     
-    UFUNCTION(BlueprintNativeEvent, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent, BlueprintPure)
     bool OnRemove(AActor* MyTarget, const FGameplayCueParameters& Parameters) const;
     
-    UFUNCTION(BlueprintNativeEvent, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent, BlueprintPure)
     bool OnExecute(AActor* MyTarget, const FGameplayCueParameters& Parameters) const;
     
-    UFUNCTION(BlueprintNativeEvent, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent, BlueprintPure)
     bool OnActive(AActor* MyTarget, const FGameplayCueParameters& Parameters) const;
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void K2_HandleGameplayCue(AActor* MyTarget, TEnumAsByte<EGameplayCueEvent::Type> EventType, const FGameplayCueParameters& Parameters) const;
     
 };

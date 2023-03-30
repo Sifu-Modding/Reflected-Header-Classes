@@ -1,84 +1,84 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "GenericTeamAgentInterface.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=Controller -FallbackName=Controller
-#include "AIPerceptionListenerInterface.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTasks -ObjectName=GameplayTaskOwnerInterface -FallbackName=GameplayTaskOwnerInterface
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=VisualLoggerDebugSnapshotInterface -FallbackName=VisualLoggerDebugSnapshotInterface
-#include "AIMoveCompletedSignatureDelegate.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTasks -ObjectName=GameplayResourceSet -FallbackName=GameplayResourceSet
-#include "EPathFollowingRequestResult.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=Controller -FallbackName=Controller
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=VisualLoggerDebugSnapshotInterface -FallbackName=VisualLoggerDebugSnapshotInterface
+//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTasks -ObjectName=GameplayResourceSet -FallbackName=GameplayResourceSet
+//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTasks -ObjectName=GameplayTaskOwnerInterface -FallbackName=GameplayTaskOwnerInterface
+#include "AIMoveCompletedSignatureDelegate.h"
+#include "AIPerceptionListenerInterface.h"
+#include "EPathFollowingRequestResult.h"
 #include "EPathFollowingStatus.h"
+#include "GenericTeamAgentInterface.h"
+#include "Templates/SubclassOf.h"
 #include "AIController.generated.h"
 
 class AActor;
-class UPathFollowingComponent;
-class UBrainComponent;
-class UBlackboardComponent;
 class UAIPerceptionComponent;
-class UPawnActionsComponent;
+class UBehaviorTree;
+class UBlackboardComponent;
 class UBlackboardData;
+class UBrainComponent;
+class UGameplayTaskResource;
 class UGameplayTasksComponent;
 class UNavigationQueryFilter;
-class UGameplayTaskResource;
-class UBehaviorTree;
+class UPathFollowingComponent;
+class UPawnActionsComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class AIMODULE_API AAIController : public AController, public IAIPerceptionListenerInterface, public IGameplayTaskOwnerInterface, public IGenericTeamAgentInterface, public IVisualLoggerDebugSnapshotInterface {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bStartAILogicOnPossess: 1;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bStopAILogicOnUnposses: 1;
     
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bLOSflag: 1;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bSkipExtraLOSChecks: 1;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bAllowStrafe: 1;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bWantsPlayerState: 1;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bSetControlRotationFromPawnOrientation: 1;
     
 private:
-    UPROPERTY(Instanced, Transient, VisibleDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UPathFollowingComponent* PathFollowingComponent;
     
 public:
-    UPROPERTY(BlueprintReadWrite, Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UBrainComponent* BrainComponent;
     
-    UPROPERTY(Instanced, VisibleDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UAIPerceptionComponent* PerceptionComponent;
     
 private:
-    UPROPERTY(BlueprintReadOnly, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UPawnActionsComponent* ActionsComp;
     
 protected:
-    UPROPERTY(BlueprintReadOnly, Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UBlackboardComponent* Blackboard;
     
-    UPROPERTY(Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UGameplayTasksComponent* CachedGameplayTasksComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UNavigationQueryFilter> DefaultNavigationFilterClass;
     
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAIMoveCompletedSignature ReceiveMoveCompleted;
     
     AAIController();
@@ -98,11 +98,11 @@ public:
     bool RunBehaviorTree(UBehaviorTree* BTAsset);
     
 protected:
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnUsingBlackBoard(UBlackboardComponent* BlackboardComp, UBlackboardData* BlackboardAsset);
     
 public:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnGameplayTaskResourcesClaimed(FGameplayResourceSet NewlyClaimed, FGameplayResourceSet FreshlyReleased);
     
     UFUNCTION(BlueprintCallable)
@@ -120,28 +120,28 @@ public:
     UFUNCTION(BlueprintCallable)
     void K2_ClearFocus();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool HasPartialPath() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UPathFollowingComponent* GetPathFollowingComponent() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     TEnumAsByte<EPathFollowingStatus::Type> GetMoveStatus() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector GetImmediateMoveDestination() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     AActor* GetFocusActor() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector GetFocalPointOnActor(const AActor* Actor) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector GetFocalPoint() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UAIPerceptionComponent* GetAIPerceptionComponent();
     
     UFUNCTION(BlueprintCallable)

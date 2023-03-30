@@ -1,7 +1,7 @@
 #include "ARGetCandidateObjectAsyncTaskBlueprintProxy.h"
 
-class UObject;
 class UARGetCandidateObjectAsyncTaskBlueprintProxy;
+class UObject;
 
 UARGetCandidateObjectAsyncTaskBlueprintProxy* UARGetCandidateObjectAsyncTaskBlueprintProxy::ARGetCandidateObject(UObject* WorldContextObject, FVector Location, FVector Extent) {
     return NULL;

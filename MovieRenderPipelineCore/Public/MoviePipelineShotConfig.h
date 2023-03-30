@@ -3,7 +3,7 @@
 #include "MoviePipelineConfigBase.h"
 #include "MoviePipelineShotConfig.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class MOVIERENDERPIPELINECORE_API UMoviePipelineShotConfig : public UMoviePipelineConfigBase {
     GENERATED_BODY()
 public:

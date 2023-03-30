@@ -1,18 +1,18 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "EMagicLeapAutoPinType.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Guid -FallbackName=Guid
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=SceneComponent -FallbackName=SceneComponent
 #include "EMagicLeapARPinType.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Guid -FallbackName=Guid
+#include "EMagicLeapAutoPinType.h"
 #include "MagicLeapARPinState.h"
+#include "Templates/SubclassOf.h"
 #include "MagicLeapARPinComponent.generated.h"
 
-class USphereComponent;
-class UMagicLeapARPinSaveGame;
 class AActor;
+class UMagicLeapARPinSaveGame;
+class USphereComponent;
 
-UCLASS(BlueprintType, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class MAGICLEAPARPIN_API UMagicLeapARPinComponent : public USceneComponent {
     GENERATED_BODY()
 public:
@@ -20,44 +20,44 @@ public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE(FPersistentEntityPinLost);
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FMagicLeapARPinDataLoadAttemptCompleted, bool, bDataRestored);
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString ObjectUID;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 UserIndex;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EMagicLeapAutoPinType AutoPinType;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bShouldPinActor;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UMagicLeapARPinSaveGame> PinDataClass;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSet<EMagicLeapARPinType> SearchPinTypes;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USphereComponent* SearchVolume;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FPersistentEntityPinned OnPersistentEntityPinned;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FPersistentEntityPinLost OnPersistentEntityPinLost;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMagicLeapARPinDataLoadAttemptCompleted OnPinDataLoadAttemptCompleted;
     
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGuid PinnedCFUID;
     
-    UPROPERTY(Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USceneComponent* PinnedSceneComponent;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UMagicLeapARPinSaveGame* PinData;
     
 public:
@@ -80,19 +80,19 @@ public:
     UFUNCTION(BlueprintCallable)
     bool PinSceneComponent(USceneComponent* ComponentToPin);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool PinRestoredOrSynced() const;
     
     UFUNCTION(BlueprintCallable)
     bool PinActor(AActor* ActorToPin);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsPinned() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool GetPinState(FMagicLeapARPinState& State) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool GetPinnedPinID(FGuid& PinId) const;
     
     UFUNCTION(BlueprintCallable)

@@ -7,10 +7,10 @@ struct GAMEPLAYABILITIES_API FGameplayAttributeData {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float BaseValue;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float CurrentValue;
     
 public:

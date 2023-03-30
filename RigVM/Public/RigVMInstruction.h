@@ -7,13 +7,13 @@ USTRUCT(BlueprintType)
 struct RIGVM_API FRigVMInstruction {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint64 ByteCodeIndex;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ERigVMOpCode OpCode;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 OperandAlignment;
     
     FRigVMInstruction();

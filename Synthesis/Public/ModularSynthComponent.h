@@ -1,26 +1,26 @@
 #pragma once
 #include "CoreMinimal.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=AudioMixer -ObjectName=SynthComponent -FallbackName=SynthComponent
+#include "ESynth1OscType.h"
+#include "ESynth1PatchSource.h"
 #include "ESynthFilterAlgorithm.h"
+#include "ESynthFilterType.h"
+#include "ESynthLFOMode.h"
+#include "ESynthLFOPatchType.h"
+#include "ESynthLFOType.h"
+#include "ESynthModEnvBiasPatch.h"
+#include "ESynthModEnvPatch.h"
 #include "ESynthStereoDelayMode.h"
 #include "ModularSynthPreset.h"
-#include "ESynthFilterType.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=AudioMixer -ObjectName=SynthComponent -FallbackName=SynthComponent
-#include "ESynthLFOType.h"
-#include "ESynth1OscType.h"
-#include "ESynthModEnvBiasPatch.h"
-#include "ESynthLFOPatchType.h"
-#include "ESynthModEnvPatch.h"
-#include "ESynthLFOMode.h"
 #include "PatchId.h"
-#include "ESynth1PatchSource.h"
 #include "Synth1PatchCable.h"
 #include "ModularSynthComponent.generated.h"
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class SYNTHESIS_API UModularSynthComponent : public USynthComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 VoiceCount;
     
     UModularSynthComponent();

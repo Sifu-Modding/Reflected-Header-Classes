@@ -1,31 +1,31 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "AkCommonInitializationSettings.h"
-#include "AkPlatformInitialisationSettingsBase.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
+#include "AkCommonInitializationSettings.h"
 #include "AkCommunicationSettingsWithSystemInitialization.h"
-#include "AkXboxOneGDKApuHeapInitializationSettings.h"
+#include "AkPlatformInitialisationSettingsBase.h"
 #include "AkXboxOneGDKAdvancedInitializationSettings.h"
+#include "AkXboxOneGDKApuHeapInitializationSettings.h"
 #include "AkXboxOneGDKInitializationSettings.generated.h"
 
-UCLASS(DefaultConfig, Config=Game)
+UCLASS(Blueprintable, Config=Engine, DefaultConfig, Config=Game)
 class AKAUDIO_API UAkXboxOneGDKInitializationSettings : public UObject, public IAkPlatformInitialisationSettingsBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAkCommonInitializationSettings CommonSettings;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAkXboxOneGDKApuHeapInitializationSettings ApuHeapSettings;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAkCommunicationSettingsWithSystemInitialization CommunicationSettings;
     
-    UPROPERTY(AdvancedDisplay, Config, EditAnywhere)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAkXboxOneGDKAdvancedInitializationSettings AdvancedSettings;
     
     UAkXboxOneGDKInitializationSettings();
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void MigrateMultiCoreRendering(bool NewValue);
     
     

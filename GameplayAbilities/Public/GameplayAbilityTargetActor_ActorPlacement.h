@@ -5,14 +5,14 @@
 
 class UMaterialInterface;
 
-UCLASS()
+UCLASS(Blueprintable)
 class AGameplayAbilityTargetActor_ActorPlacement : public AGameplayAbilityTargetActor_GroundTrace {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UClass* PlacedActorClass;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UMaterialInterface* PlacedActorMaterial;
     
     AGameplayAbilityTargetActor_ActorPlacement();

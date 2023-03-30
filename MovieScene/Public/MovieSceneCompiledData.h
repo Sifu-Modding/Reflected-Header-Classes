@@ -1,49 +1,49 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "MovieSceneSequenceCompilerMaskStruct.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
-#include "MovieSceneEvaluationTemplate.h"
-#include "MovieSceneSequenceHierarchy.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=FrameTime -FallbackName=FrameTime
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Guid -FallbackName=Guid
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
+#include "EMovieSceneSequenceFlags.h"
 #include "MovieSceneEntityComponentField.h"
 #include "MovieSceneEvaluationField.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=FrameTime -FallbackName=FrameTime
-#include "EMovieSceneSequenceFlags.h"
+#include "MovieSceneEvaluationTemplate.h"
+#include "MovieSceneSequenceCompilerMaskStruct.h"
+#include "MovieSceneSequenceHierarchy.h"
 #include "MovieSceneCompiledData.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UMovieSceneCompiledData : public UObject {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMovieSceneEvaluationTemplate EvaluationTemplate;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMovieSceneSequenceHierarchy Hierarchy;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMovieSceneEntityComponentField EntityComponentField;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMovieSceneEvaluationField TrackTemplateField;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FFrameTime> DeterminismFences;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGuid CompiledSignature;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGuid CompilerVersion;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMovieSceneSequenceCompilerMaskStruct AccumulatedMask;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMovieSceneSequenceCompilerMaskStruct AllocatedMask;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EMovieSceneSequenceFlags AccumulatedFlags;
     
 public:

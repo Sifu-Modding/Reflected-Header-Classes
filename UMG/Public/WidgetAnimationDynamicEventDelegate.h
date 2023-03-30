@@ -2,5 +2,5 @@
 #include "CoreMinimal.h"
 #include "WidgetAnimationDynamicEventDelegate.generated.h"
 
-UDELEGATE() DECLARE_DYNAMIC_DELEGATE(FWidgetAnimationDynamicEvent);
+UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_DELEGATE(FWidgetAnimationDynamicEvent);
 

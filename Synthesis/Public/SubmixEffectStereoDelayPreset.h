@@ -4,11 +4,11 @@
 #include "SubmixEffectStereoDelaySettings.h"
 #include "SubmixEffectStereoDelayPreset.generated.h"
 
-UCLASS(BlueprintType, EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class SYNTHESIS_API USubmixEffectStereoDelayPreset : public USoundEffectSubmixPreset {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSubmixEffectStereoDelaySettings Settings;
     
     USubmixEffectStereoDelayPreset();

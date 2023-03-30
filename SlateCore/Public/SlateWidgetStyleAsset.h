@@ -5,11 +5,11 @@
 
 class USlateWidgetStyleContainerBase;
 
-UCLASS()
+UCLASS(Blueprintable)
 class SLATECORE_API USlateWidgetStyleAsset : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere, Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USlateWidgetStyleContainerBase* CustomStyle;
     
     USlateWidgetStyleAsset();

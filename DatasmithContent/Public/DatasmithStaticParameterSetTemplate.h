@@ -6,7 +6,7 @@ USTRUCT(BlueprintType)
 struct DATASMITHCONTENT_API FDatasmithStaticParameterSetTemplate {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<FName, bool> StaticSwitchParameters;
     
     FDatasmithStaticParameterSetTemplate();

@@ -3,7 +3,7 @@
 #include "RigUnit_MathFloatBinaryOp.h"
 #include "RigUnit_MathFloatMax.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_MathFloatMax : public FRigUnit_MathFloatBinaryOp {
     GENERATED_BODY()
 public:

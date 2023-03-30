@@ -1,39 +1,39 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "PropertyAccessPath.h"
-#include "PropertyAccessSegment.h"
 #include "PropertyAccessCopyBatch.h"
 #include "PropertyAccessIndirection.h"
 #include "PropertyAccessIndirectionChain.h"
+#include "PropertyAccessPath.h"
+#include "PropertyAccessSegment.h"
 #include "PropertyAccessLibrary.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FPropertyAccessLibrary {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FPropertyAccessSegment> PathSegments;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FPropertyAccessPath> SrcPaths;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FPropertyAccessPath> DestPaths;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     FPropertyAccessCopyBatch CopyBatches[4];
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<FPropertyAccessIndirectionChain> SrcAccesses;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<FPropertyAccessIndirectionChain> DestAccesses;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<FPropertyAccessIndirection> Indirections;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<int32> EventAccessIndices;
     
 public:

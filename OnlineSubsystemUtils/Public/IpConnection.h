@@ -3,12 +3,12 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=NetConnection -FallbackName=NetConnection
 #include "IpConnection.generated.h"
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class ONLINESUBSYSTEMUTILS_API UIpConnection : public UNetConnection {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     float SocketErrorDisconnectDelay;
     
 public:

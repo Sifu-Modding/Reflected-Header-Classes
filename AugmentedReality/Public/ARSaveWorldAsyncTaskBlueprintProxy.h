@@ -4,17 +4,17 @@
 #include "ARSaveWorldPinDelegate.h"
 #include "ARSaveWorldAsyncTaskBlueprintProxy.generated.h"
 
-class UObject;
 class UARSaveWorldAsyncTaskBlueprintProxy;
+class UObject;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UARSaveWorldAsyncTaskBlueprintProxy : public UARBaseAsyncTaskBlueprintProxy {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FARSaveWorldPin OnSuccess;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FARSaveWorldPin OnFailed;
     
     UARSaveWorldAsyncTaskBlueprintProxy();

@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EGameplayEffectReplicationMode.generated.h"
 
-UENUM()
-enum class EGameplayEffectReplicationMode {
+UENUM(BlueprintType)
+enum class EGameplayEffectReplicationMode : uint8 {
     Minimal,
     Mixed,
     Full,

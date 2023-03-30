@@ -2,19 +2,19 @@
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Rotator -FallbackName=Rotator
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCAnimInstance -FallbackName=SCAnimInstance
-#include "PropertyFloorBoneRepartition.h"
 #include "IKPropertyEvaluation.h"
+#include "PropertyFloorBoneRepartition.h"
 #include "IKSubAnimInstance.generated.h"
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class SIFU_API UIKSubAnimInstance : public USCAnimInstance {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_SlopeCurveName;
     
 protected:
-    UPROPERTY(BlueprintReadOnly, Replicated, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, Transient, meta=(AllowPrivateAccess=true))
     FRotator m_FloorAngleToTarget;
     
 public:

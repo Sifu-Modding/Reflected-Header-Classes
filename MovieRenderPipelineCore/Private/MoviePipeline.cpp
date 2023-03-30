@@ -2,8 +2,8 @@
 #include "MoviePipelineCustomTimeStep.h"
 
 class UMoviePipelineExecutorJob;
-class UTexture;
 class UMoviePipelineMasterConfig;
+class UTexture;
 
 void UMoviePipeline::Shutdown(bool bError) {
 }

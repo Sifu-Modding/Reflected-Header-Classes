@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct FAnimPhysPlanarLimit {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     FBoneReference DrivingBone;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTransform PlaneTransform;
     
     ANIMGRAPHRUNTIME_API FAnimPhysPlanarLimit();

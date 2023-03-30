@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct MOVIESCENETRACKS_API FBoolParameterNameAndCurve {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName ParameterName;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMovieSceneBoolChannel ParameterCurve;
     
     FBoolParameterNameAndCurve();

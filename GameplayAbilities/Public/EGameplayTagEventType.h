@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EGameplayTagEventType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 namespace EGameplayTagEventType {
     enum Type {
         NewOrRemoved,

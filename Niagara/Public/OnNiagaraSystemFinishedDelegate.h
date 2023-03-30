@@ -4,5 +4,5 @@
 
 class UNiagaraComponent;
 
-UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnNiagaraSystemFinished, UNiagaraComponent*, PSystem);
+UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnNiagaraSystemFinished, UNiagaraComponent*, PSystem);
 

@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FAkPS4AdvancedInitializationSettings : public FAkAdvancedInitializationSettingsWithMultiCoreRendering {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint32 ACPBatchBufferSize;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool UseHardwareCodecLowLatencyMode;
     
     AKAUDIO_API FAkPS4AdvancedInitializationSettings();

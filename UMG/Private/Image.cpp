@@ -1,13 +1,13 @@
 #include "Image.h"
 
-class USlateTextureAtlasInterface;
 class ISlateTextureAtlasInterface;
+class USlateTextureAtlasInterface;
+class UMaterialInstanceDynamic;
+class UMaterialInterface;
 class UObject;
+class USlateBrushAsset;
 class UTexture2D;
 class UTexture2DDynamic;
-class UMaterialInterface;
-class USlateBrushAsset;
-class UMaterialInstanceDynamic;
 
 void UImage::SetOpacity(float InOpacity) {
 }

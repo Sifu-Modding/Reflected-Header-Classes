@@ -6,14 +6,14 @@
 
 class UDataTable;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UPerPlatformRichTextBlock : public URichTextBlock, public IPerPlatformWidget {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UDataTable* NormalTextStyleSet;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UDataTable* SmallScreenTextStyleSet;
     
     UPerPlatformRichTextBlock();

@@ -1,79 +1,79 @@
 #pragma once
 #include "CoreMinimal.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=EMovementMode -FallbackName=EMovementMode
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ERootMotionFinishVelocityMode -FallbackName=ERootMotionFinishVelocityMode
 #include "AbilityTask_ApplyRootMotion_Base.h"
 #include "ApplyRootMotionMoveToActorForceDelegateDelegate.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 #include "ERootMotionMoveToActorTargetOffsetType.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=EMovementMode -FallbackName=EMovementMode
 #include "GameplayAbilityTargetDataHandle.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ERootMotionFinishVelocityMode -FallbackName=ERootMotionFinishVelocityMode
 #include "AbilityTask_ApplyRootMotionMoveToActorForce.generated.h"
 
-class UCurveVector;
 class AActor;
-class UCurveFloat;
 class UAbilityTask_ApplyRootMotionMoveToActorForce;
+class UCurveFloat;
+class UCurveVector;
 class UGameplayAbility;
 
-UCLASS()
+UCLASS(Blueprintable)
 class GAMEPLAYABILITIES_API UAbilityTask_ApplyRootMotionMoveToActorForce : public UAbilityTask_ApplyRootMotion_Base {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FApplyRootMotionMoveToActorForceDelegate OnFinished;
     
 protected:
-    UPROPERTY(Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     FVector StartLocation;
     
-    UPROPERTY(ReplicatedUsing=OnRep_TargetLocation)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_TargetLocation, meta=(AllowPrivateAccess=true))
     FVector TargetLocation;
     
-    UPROPERTY(Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     AActor* TargetActor;
     
-    UPROPERTY(Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     FVector TargetLocationOffset;
     
-    UPROPERTY(Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     ERootMotionMoveToActorTargetOffsetType OffsetAlignment;
     
-    UPROPERTY(Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     float Duration;
     
-    UPROPERTY(Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     bool bDisableDestinationReachedInterrupt;
     
-    UPROPERTY(Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     bool bSetNewMovementMode;
     
-    UPROPERTY(Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     TEnumAsByte<EMovementMode> NewMovementMode;
     
-    UPROPERTY(Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     bool bRestrictSpeedToExpected;
     
-    UPROPERTY(Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     UCurveVector* PathOffsetCurve;
     
-    UPROPERTY(Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     UCurveFloat* TimeMappingCurve;
     
-    UPROPERTY(Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     UCurveFloat* TargetLerpSpeedHorizontalCurve;
     
-    UPROPERTY(Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     UCurveFloat* TargetLerpSpeedVerticalCurve;
     
 public:
     UAbilityTask_ApplyRootMotionMoveToActorForce();
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnTargetActorSwapped(AActor* OriginalTarget, AActor* NewTarget);
     
 protected:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnRep_TargetLocation();
     
 public:

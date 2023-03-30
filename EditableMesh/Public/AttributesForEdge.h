@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct FAttributesForEdge {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FEdgeID EdgeID;
     
-    UPROPERTY(BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMeshElementAttributeList EdgeAttributes;
     
     EDITABLEMESH_API FAttributesForEdge();

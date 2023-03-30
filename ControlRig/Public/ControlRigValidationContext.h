@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ControlRigValidationContext.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FControlRigValidationContext {
     GENERATED_BODY()
 public:

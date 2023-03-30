@@ -3,24 +3,24 @@
 #include "ENiagaraVariantMode.h"
 #include "NiagaraVariant.generated.h"
 
-class UObject;
 class UNiagaraDataInterface;
+class UObject;
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct NIAGARA_API FNiagaraVariant {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UObject* Object;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UNiagaraDataInterface* DataInterface;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<uint8> Bytes;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     ENiagaraVariantMode CurrentMode;
     
 public:

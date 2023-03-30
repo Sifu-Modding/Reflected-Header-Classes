@@ -1,7 +1,7 @@
 #include "TextBlockScroll.h"
 
-class UTextBlock;
 class URetainerBox;
+class UTextBlock;
 
 void UTextBlockScroll::BPF_SetOpacity_Implementation(const float& _fOpacity) {
 }

@@ -8,7 +8,7 @@ struct GAMEPLAYABILITIES_API FGameplayModEvaluationChannelSettings {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EGameplayModEvaluationChannel Channel;
     
 public:

@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct DATASMITHCONTENT_API FDatasmithStaticMaterialTemplate {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName MaterialSlotName;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UMaterialInterface* MaterialInterface;
     
     FDatasmithStaticMaterialTemplate();

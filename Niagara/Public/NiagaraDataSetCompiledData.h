@@ -1,37 +1,37 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "NiagaraVariable.h"
-#include "NiagaraDataSetID.h"
-#include "NiagaraVariableLayoutInfo.h"
 #include "ENiagaraSimTarget.h"
+#include "NiagaraDataSetID.h"
+#include "NiagaraVariable.h"
+#include "NiagaraVariableLayoutInfo.h"
 #include "NiagaraDataSetCompiledData.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct NIAGARA_API FNiagaraDataSetCompiledData {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FNiagaraVariable> Variables;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FNiagaraVariableLayoutInfo> VariableLayouts;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FNiagaraDataSetID ID;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint32 TotalFloatComponents;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint32 TotalInt32Components;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint32 TotalHalfComponents;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bRequiresPersistentIDs: 1;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ENiagaraSimTarget SimTarget;
     
     FNiagaraDataSetCompiledData();

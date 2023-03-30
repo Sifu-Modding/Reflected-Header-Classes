@@ -3,7 +3,7 @@
 #include "MoviePipelineDeferredPassBase.h"
 #include "MoviePipelineDeferredPass_PathTracer.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UMoviePipelineDeferredPass_PathTracer : public UMoviePipelineDeferredPassBase {
     GENERATED_BODY()
 public:

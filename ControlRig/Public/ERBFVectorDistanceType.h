@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ERBFVectorDistanceType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class ERBFVectorDistanceType : uint8 {
     Euclidean,
     Manhattan,

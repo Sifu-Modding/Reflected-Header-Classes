@@ -3,12 +3,12 @@
 #include "MovieSceneParameterSectionTemplate.h"
 #include "MovieSceneComponentMaterialBySlotNameSectionTemplate.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FMovieSceneComponentMaterialBySlotNameSectionTemplate : public FMovieSceneParameterSectionTemplate {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName SlotName;
     
 public:

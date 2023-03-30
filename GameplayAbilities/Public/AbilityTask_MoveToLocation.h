@@ -1,36 +1,36 @@
 #pragma once
 #include "CoreMinimal.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 #include "AbilityTask.h"
 #include "MoveToLocationDelegateDelegate.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 #include "AbilityTask_MoveToLocation.generated.h"
 
-class UCurveFloat;
 class UAbilityTask_MoveToLocation;
+class UCurveFloat;
 class UCurveVector;
 class UGameplayAbility;
 
-UCLASS()
+UCLASS(Blueprintable)
 class GAMEPLAYABILITIES_API UAbilityTask_MoveToLocation : public UAbilityTask {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMoveToLocationDelegate OnTargetLocationReached;
     
 protected:
-    UPROPERTY(Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     FVector StartLocation;
     
-    UPROPERTY(Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     FVector TargetLocation;
     
-    UPROPERTY(Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     float DurationOfMovement;
     
-    UPROPERTY(Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     UCurveFloat* LerpCurve;
     
-    UPROPERTY(Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     UCurveVector* LerpCurveVector;
     
 public:

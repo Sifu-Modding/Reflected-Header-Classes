@@ -2,11 +2,11 @@
 #include "CoreMinimal.h"
 #include "MovieSceneEventPayloadVariable.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FMovieSceneEventPayloadVariable {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString Value;
     
     MOVIESCENETRACKS_API FMovieSceneEventPayloadVariable();

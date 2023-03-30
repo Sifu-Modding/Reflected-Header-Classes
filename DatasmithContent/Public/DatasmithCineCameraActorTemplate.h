@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "DatasmithObjectTemplate.h"
 #include "DatasmithCameraLookatTrackingSettingsTemplate.h"
+#include "DatasmithObjectTemplate.h"
 #include "DatasmithCineCameraActorTemplate.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class DATASMITHCONTENT_API UDatasmithCineCameraActorTemplate : public UDatasmithObjectTemplate {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FDatasmithCameraLookatTrackingSettingsTemplate LookatTrackingSettings;
     
     UDatasmithCineCameraActorTemplate();

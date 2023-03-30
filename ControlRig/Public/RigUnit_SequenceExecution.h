@@ -1,26 +1,26 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RigUnit.h"
 #include "ControlRigExecuteContext.h"
+#include "RigUnit.h"
 #include "RigUnit_SequenceExecution.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_SequenceExecution : public FRigUnit {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FControlRigExecuteContext ExecuteContext;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FControlRigExecuteContext A;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FControlRigExecuteContext B;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FControlRigExecuteContext C;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FControlRigExecuteContext D;
     
     CONTROLRIG_API FRigUnit_SequenceExecution();

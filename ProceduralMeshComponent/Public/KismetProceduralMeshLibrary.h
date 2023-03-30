@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
-#include "ProcMeshTangent.h"
-#include "EProcMeshSliceCapOption.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector2D -FallbackName=Vector2D
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
+#include "EProcMeshSliceCapOption.h"
+#include "ProcMeshTangent.h"
 #include "KismetProceduralMeshLibrary.generated.h"
 
 class UMaterialInterface;
@@ -12,7 +12,7 @@ class UProceduralMeshComponent;
 class UStaticMesh;
 class UStaticMeshComponent;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class PROCEDURALMESHCOMPONENT_API UKismetProceduralMeshLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

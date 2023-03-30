@@ -5,11 +5,11 @@
 
 class AActor;
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class NIAGARA_API UNiagaraDataInterfaceLandscape : public UNiagaraDataInterface {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AActor* SourceLandscape;
     
     UNiagaraDataInterfaceLandscape();

@@ -4,11 +4,11 @@
 #include "MovieSceneSkeletalAnimationSectionTemplateParameters.h"
 #include "MovieSceneSkeletalAnimationSectionTemplate.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FMovieSceneSkeletalAnimationSectionTemplate : public FMovieSceneEvalTemplate {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMovieSceneSkeletalAnimationSectionTemplateParameters Params;
     
     MOVIESCENETRACKS_API FMovieSceneSkeletalAnimationSectionTemplate();

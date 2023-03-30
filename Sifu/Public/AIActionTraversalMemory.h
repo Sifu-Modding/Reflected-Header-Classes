@@ -3,7 +3,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCAIActionMemoryEntry -FallbackName=SCAIActionMemoryEntry
 #include "AIActionTraversalMemory.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FAIActionTraversalMemory : public FSCAIActionMemoryEntry {
     GENERATED_BODY()
 public:

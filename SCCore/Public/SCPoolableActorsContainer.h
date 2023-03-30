@@ -1,18 +1,18 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=Actor -FallbackName=Actor
 #include "SCPoolableActorsContainerPoolEntry.h"
+#include "Templates/SubclassOf.h"
 #include "SCPoolableActorsContainer.generated.h"
 
 class ASCCharacterImpostor;
 
-UCLASS()
+UCLASS(Blueprintable)
 class SCCORE_API ASCPoolableActorsContainer : public AActor {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FSCPoolableActorsContainerPoolEntry> m_Pools;
     
 public:

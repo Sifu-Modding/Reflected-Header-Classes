@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct FReplayKeyDataCameraSettings {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FReplayKeyDataFocusSettings m_FocusSettings;
     
-    UPROPERTY(BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FReplayKeyDataLensSettings m_LensSettings;
     
     SIFU_API FReplayKeyDataCameraSettings();

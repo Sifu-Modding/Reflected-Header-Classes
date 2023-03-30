@@ -1,36 +1,36 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCActor -FallbackName=SCActor
-#include "EMenuEnum.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=UMG -ObjectName=ESlateVisibility -FallbackName=ESlateVisibility
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector2D -FallbackName=Vector2D
+//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCActor -FallbackName=SCActor
+//CROSS-MODULE INCLUDE V2: -ModuleName=UMG -ObjectName=ESlateVisibility -FallbackName=ESlateVisibility
+#include "EMenuEnum.h"
 #include "InteractiveMenu.generated.h"
 
-class AFightingPlayerController;
 class AActor;
+class AFightingPlayerController;
+class ASCPlayerController;
 class UInteractionObjectComponent;
 class UMenuWidget;
 class USceneComponent;
-class ASCPlayerController;
 
-UCLASS()
+UCLASS(Blueprintable)
 class SIFU_API AInteractiveMenu : public ASCActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EMenuEnum m_eMenu;
     
-    UPROPERTY(BlueprintReadWrite, Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UInteractionObjectComponent* m_InteractiveComp;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AActor* m_ActorToBlendTo;
     
-    UPROPERTY(BlueprintReadWrite, Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UMenuWidget* m_MenuToShow;
     
-    UPROPERTY(BlueprintReadWrite, Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USceneComponent* m_RootComponent;
     
 public:
@@ -38,7 +38,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void BPF_OpenMenu(AFightingPlayerController* _controller, float _fBlendTime, ESlateVisibility _eMenuVisibility);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector2D BPF_GetLeftStickValue(ASCPlayerController* _controller) const;
     
     UFUNCTION(BlueprintCallable)

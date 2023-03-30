@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EControlRigRotationOrder.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EControlRigRotationOrder : uint8 {
     XYZ,
     XZY,

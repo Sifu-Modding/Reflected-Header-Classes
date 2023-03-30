@@ -3,7 +3,7 @@
 #include "RigUnit_MathIntUnaryOp.h"
 #include "RigUnit_MathIntSign.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_MathIntSign : public FRigUnit_MathIntUnaryOp {
     GENERATED_BODY()
 public:

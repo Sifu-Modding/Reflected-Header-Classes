@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ActiveGameplayEffectQuery.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FActiveGameplayEffectQuery {
     GENERATED_BODY()
 public:

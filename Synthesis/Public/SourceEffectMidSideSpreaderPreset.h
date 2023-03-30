@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SourceEffectMidSideSpreaderSettings.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=SoundEffectSourcePreset -FallbackName=SoundEffectSourcePreset
+#include "SourceEffectMidSideSpreaderSettings.h"
 #include "SourceEffectMidSideSpreaderPreset.generated.h"
 
-UCLASS(BlueprintType, EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class SYNTHESIS_API USourceEffectMidSideSpreaderPreset : public USoundEffectSourcePreset {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSourceEffectMidSideSpreaderSettings Settings;
     
     USourceEffectMidSideSpreaderPreset();

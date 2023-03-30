@@ -3,7 +3,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=MovieScene -ObjectName=MovieSceneEvalTemplate -FallbackName=MovieSceneEvalTemplate
 #include "MovieSceneAdditiveCameraAnimationTemplate.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FMovieSceneAdditiveCameraAnimationTemplate : public FMovieSceneEvalTemplate {
     GENERATED_BODY()
 public:

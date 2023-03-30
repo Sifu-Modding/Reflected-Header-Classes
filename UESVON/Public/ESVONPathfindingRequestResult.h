@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ESVONPathfindingRequestResult.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 namespace ESVONPathfindingRequestResult {
     enum Type {
         Failed,

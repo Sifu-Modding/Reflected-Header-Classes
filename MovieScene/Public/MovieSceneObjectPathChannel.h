@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "MovieSceneObjectPathChannelKeyValue.h"
-#include "MovieSceneChannel.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=FrameNumber -FallbackName=FrameNumber
+#include "MovieSceneChannel.h"
+#include "MovieSceneObjectPathChannelKeyValue.h"
 #include "MovieSceneObjectPathChannel.generated.h"
 
 USTRUCT(BlueprintType)
@@ -10,16 +10,16 @@ struct MOVIESCENE_API FMovieSceneObjectPathChannel : public FMovieSceneChannel {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UClass* PropertyClass;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FFrameNumber> Times;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FMovieSceneObjectPathChannelKeyValue> Values;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMovieSceneObjectPathChannelKeyValue DefaultValue;
     
 public:

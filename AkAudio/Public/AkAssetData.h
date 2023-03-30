@@ -3,11 +3,11 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
 #include "AkAssetData.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class AKAUDIO_API UAkAssetData : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint32 CachedHash;
     
     UAkAssetData();

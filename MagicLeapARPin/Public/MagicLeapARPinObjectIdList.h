@@ -6,7 +6,7 @@ USTRUCT(BlueprintType)
 struct MAGICLEAPARPIN_API FMagicLeapARPinObjectIdList {
     GENERATED_BODY()
 public:
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSet<FString> ObjectIdList;
     
     FMagicLeapARPinObjectIdList();

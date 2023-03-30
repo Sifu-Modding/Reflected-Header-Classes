@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FRigCurve : public FRigElement {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Value;
     
     CONTROLRIG_API FRigCurve();

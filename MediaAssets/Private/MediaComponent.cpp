@@ -1,7 +1,7 @@
 #include "MediaComponent.h"
 
-class UMediaTexture;
 class UMediaPlayer;
+class UMediaTexture;
 
 UMediaTexture* UMediaComponent::GetMediaTexture() const {
     return NULL;

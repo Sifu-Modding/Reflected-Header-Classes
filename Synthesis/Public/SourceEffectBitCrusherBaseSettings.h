@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct SYNTHESIS_API FSourceEffectBitCrusherBaseSettings {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float SampleRate;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float BitDepth;
     
     FSourceEffectBitCrusherBaseSettings();

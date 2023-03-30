@@ -3,15 +3,15 @@
 #include "ENiagaraParameterScope.h"
 #include "NiagaraParameterScopeInfo.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct NIAGARA_API FNiagaraParameterScopeInfo {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     ENiagaraParameterScope Scope;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString NamespaceString;
     
 public:

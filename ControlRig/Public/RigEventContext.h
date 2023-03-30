@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "RigEventContext.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct CONTROLRIG_API FRigEventContext {
     GENERATED_BODY()
 public:

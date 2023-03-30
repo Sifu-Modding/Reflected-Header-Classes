@@ -1,11 +1,11 @@
 #include "UserWidget.h"
 
-class UWidgetAnimation;
+class APawn;
+class APlayerCameraManager;
 class APlayerController;
 class USoundBase;
 class UUMGSequencePlayer;
-class APawn;
-class APlayerCameraManager;
+class UWidgetAnimation;
 
 void UUserWidget::UnregisterInputComponent() {
 }

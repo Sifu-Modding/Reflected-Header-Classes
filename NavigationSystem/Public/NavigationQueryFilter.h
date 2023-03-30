@@ -5,17 +5,17 @@
 #include "NavigationFilterFlags.h"
 #include "NavigationQueryFilter.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class NAVIGATIONSYSTEM_API UNavigationQueryFilter : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FNavigationFilterArea> Areas;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FNavigationFilterFlags IncludeFlags;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FNavigationFilterFlags ExcludeFlags;
     
     UNavigationQueryFilter();

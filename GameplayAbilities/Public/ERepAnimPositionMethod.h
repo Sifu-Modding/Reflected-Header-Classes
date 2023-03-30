@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "ERepAnimPositionMethod.generated.h"
 
-UENUM()
-enum class ERepAnimPositionMethod {
+UENUM(BlueprintType)
+enum class ERepAnimPositionMethod : uint8 {
     Position,
     CurrentSectionId,
 };

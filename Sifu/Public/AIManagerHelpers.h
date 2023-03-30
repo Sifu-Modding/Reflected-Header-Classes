@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
-#include "EArchetypeType.h"
-#include "EAIPositioningOption.h"
 #include "AISituationNamedActor.h"
+#include "EAIPositioningOption.h"
+#include "EArchetypeType.h"
 #include "AIManagerHelpers.generated.h"
 
 class AAIDirectorActor;
+class AAISituationActor;
 class AActor;
 class UAIFightingComponent;
-class AAISituationActor;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class SIFU_API UAIManagerHelpers : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
@@ -23,18 +23,21 @@ public:
     static void BPF_SetAIPositioningOptionToggled(const AActor* _targetActor, EAIPositioningOption _eOption, bool _bToggled);
     
     UFUNCTION(BlueprintCallable)
+    static void BPF_SetAICanDropWeapon(bool _bCanDropWeapon);
+    
+    UFUNCTION(BlueprintCallable)
     static bool BPF_IsAIPositioningOptionToggled(const AActor* _targetActor, EAIPositioningOption _eOption);
     
     UFUNCTION(BlueprintCallable)
     static void BPF_GetRemainingAisInActiveSituations(TArray<UAIFightingComponent*>& _outAiComponents);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static int32 BPF_GetRawLastManGauge();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static AAIDirectorActor* BPF_GetDirectorActor();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static float BPF_GetDifficultyLevelGauge();
     
     UFUNCTION(BlueprintCallable)

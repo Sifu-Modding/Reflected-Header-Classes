@@ -5,26 +5,26 @@
 
 class UVariantSet;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class VARIANTMANAGERCONTENT_API ULevelVariantSets : public UObject {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UClass* DirectorClass;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UVariantSet*> VariantSets;
     
 public:
     ULevelVariantSets();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UVariantSet* GetVariantSetByName(const FString& VariantSetName);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UVariantSet* GetVariantSet(int32 VariantSetIndex);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetNumVariantSets();
     
 };

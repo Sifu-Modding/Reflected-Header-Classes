@@ -1,29 +1,29 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "AISenseAffiliationFilter.h"
 #include "AISenseConfig.h"
+#include "Templates/SubclassOf.h"
 #include "AISenseConfig_Hearing.generated.h"
 
 class UAISense_Hearing;
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class AIMODULE_API UAISenseConfig_Hearing : public UAISenseConfig {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, Config, EditDefaultsOnly, NoClear)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, NoClear, meta=(AllowPrivateAccess=true))
     TSubclassOf<UAISense_Hearing> Implementation;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float HearingRange;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float LoSHearingRange;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bUseLoSHearing: 1;
     
-    UPROPERTY(BlueprintReadOnly, Config, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAISenseAffiliationFilter DetectionByAffiliation;
     
     UAISenseConfig_Hearing();

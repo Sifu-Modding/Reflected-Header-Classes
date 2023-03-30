@@ -1,48 +1,48 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
-#include "LipSync_Pause.h"
 #include "LipSync_Interval.h"
+#include "LipSync_Pause.h"
 #include "LipSync_TimedPhrase.h"
 #include "SubtitlesCache.generated.h"
 
 class USoundBase;
 
-UCLASS()
+UCLASS(Blueprintable)
 class TEXT2LIPSYNC_API USubtitlesCache : public UObject {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<FName, FLipSync_Pause> Data;
     
 public:
     USubtitlesCache();
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     int32 SaveToDisk(const FString& Filename) const;
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     int32 SaveToBinaryFile(const FString& FullFileName) const;
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool RenameAsset(const FString& CurrentName, const FString& NewName);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool RemoveAsset(const USoundBase* SoundAsset);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     int32 LoadFromDisk(const FString& Filename);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     int32 LoadFromBinaryFile(const FString& FullFileName);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool GetPausesForVoiceAsset(const USoundBase* SoundAsset, TArray<FLipSync_Interval>& Pauses) const;
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void GetCachedKeys(TArray<FString>& CachedKeys) const;
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool AddAsset(const USoundBase* SoundAsset, const TArray<FLipSync_TimedPhrase>& PhraseData, const TArray<int32> PauseIndexes, const float PhraseDuration);
     
 };

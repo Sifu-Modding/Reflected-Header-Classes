@@ -7,14 +7,14 @@
 class APlayerController;
 class ULeaderboardFlushCallbackProxy;
 
-UCLASS(BlueprintType, MinimalAPI)
+UCLASS(Blueprintable, MinimalAPI)
 class ULeaderboardFlushCallbackProxy : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnLeaderboardFlushed OnSuccess;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnLeaderboardFlushed OnFailure;
     
     ULeaderboardFlushCallbackProxy();

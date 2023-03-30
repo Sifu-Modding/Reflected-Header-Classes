@@ -2,17 +2,17 @@
 #include "CoreMinimal.h"
 #include "MovieSceneTrackInstanceEntry.generated.h"
 
-class UObject;
 class UMovieSceneTrackInstance;
+class UObject;
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FMovieSceneTrackInstanceEntry {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UObject* BoundObject;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UMovieSceneTrackInstance* TrackInstance;
     
     MOVIESCENE_API FMovieSceneTrackInstanceEntry();

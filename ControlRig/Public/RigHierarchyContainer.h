@@ -2,27 +2,27 @@
 #include "CoreMinimal.h"
 #include "RigBoneHierarchy.h"
 #include "RigControlHierarchy.h"
-#include "RigSpaceHierarchy.h"
 #include "RigCurveContainer.h"
+#include "RigSpaceHierarchy.h"
 #include "RigHierarchyContainer.generated.h"
 
 USTRUCT(BlueprintType)
 struct CONTROLRIG_API FRigHierarchyContainer {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRigBoneHierarchy BoneHierarchy;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRigSpaceHierarchy SpaceHierarchy;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRigControlHierarchy ControlHierarchy;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRigCurveContainer CurveContainer;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     int32 Version;
     
     FRigHierarchyContainer();

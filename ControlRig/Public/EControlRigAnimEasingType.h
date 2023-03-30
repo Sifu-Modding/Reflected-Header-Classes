@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EControlRigAnimEasingType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EControlRigAnimEasingType : uint8 {
     Linear,
     QuadraticEaseIn,

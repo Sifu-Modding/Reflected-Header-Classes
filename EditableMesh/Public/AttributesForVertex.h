@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct FAttributesForVertex {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVertexID VertexID;
     
-    UPROPERTY(BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMeshElementAttributeList VertexAttributes;
     
     EDITABLEMESH_API FAttributesForVertex();

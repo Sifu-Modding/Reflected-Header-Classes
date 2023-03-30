@@ -1,61 +1,61 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=Actor -FallbackName=Actor
 #include "GameplayAbilityTargetingLocationInfo.h"
-#include "WorldReticleParameters.h"
 #include "GameplayTargetDataFilterHandle.h"
+#include "Templates/SubclassOf.h"
+#include "WorldReticleParameters.h"
 #include "GameplayAbilityTargetActor.generated.h"
 
-class UAbilitySystemComponent;
-class APlayerController;
-class UGameplayAbility;
 class AGameplayAbilityWorldReticle;
+class APlayerController;
+class UAbilitySystemComponent;
+class UGameplayAbility;
 
-UCLASS(Abstract, NotPlaceable)
+UCLASS(Abstract, Blueprintable, NotPlaceable)
 class GAMEPLAYABILITIES_API AGameplayAbilityTargetActor : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool ShouldProduceTargetDataOnServer;
     
-    UPROPERTY(BlueprintReadOnly, Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     FGameplayAbilityTargetingLocationInfo StartLocation;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     APlayerController* MasterPC;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UGameplayAbility* OwningAbility;
     
-    UPROPERTY(BlueprintReadOnly, Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     bool bDestroyOnConfirmation;
     
-    UPROPERTY(BlueprintReadOnly, Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     AActor* SourceActor;
     
-    UPROPERTY(BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FWorldReticleParameters ReticleParams;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<AGameplayAbilityWorldReticle> ReticleClass;
     
-    UPROPERTY(BlueprintReadWrite, Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     FGameplayTargetDataFilterHandle Filter;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     bool bDebug;
     
-    UPROPERTY(Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UAbilitySystemComponent* GenericDelegateBoundASC;
     
     AGameplayAbilityTargetActor();
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void ConfirmTargeting();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void CancelTargeting();
     
 };

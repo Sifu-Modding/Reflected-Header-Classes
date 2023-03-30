@@ -3,29 +3,29 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
 #include "SCVideoLightManager.generated.h"
 
-class UTextureRenderTarget2D;
 class UCanvas;
+class UCurveLinearColor;
+class ULocalLightComponent;
 class UMaterialInstanceDynamic;
-class UMediaTexture;
 class UMaterialInterface;
 class UMediaSource;
-class ULocalLightComponent;
-class UCurveLinearColor;
+class UMediaTexture;
+class UTextureRenderTarget2D;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class SCCORE_API USCVideoLightManager : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UTextureRenderTarget2D*> m_RTChain;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UMaterialInstanceDynamic* m_SamplerMaterialInstanceDynamic;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UMaterialInterface* m_SamplerMaterialBase;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UCanvas* m_CanvasTarget;
     
     USCVideoLightManager();

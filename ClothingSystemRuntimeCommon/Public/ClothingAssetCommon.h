@@ -1,56 +1,56 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=ClothingSystemRuntimeInterface -ObjectName=ClothingAssetBase -FallbackName=ClothingAssetBase
-#include "ClothLODDataCommon.h"
 #include "ClothConfig_Legacy.h"
+#include "ClothLODDataCommon.h"
 #include "ClothingAssetCommon.generated.h"
 
-class UClothLODDataCommon_Legacy;
 class UClothConfigBase;
-class UPhysicsAsset;
+class UClothLODDataCommon_Legacy;
 class UClothingAssetCustomData;
+class UPhysicsAsset;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class CLOTHINGSYSTEMRUNTIMECOMMON_API UClothingAssetCommon : public UClothingAssetBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UPhysicsAsset* PhysicsAsset;
     
-    UPROPERTY(BlueprintReadOnly, EditFixedSize, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, EditFixedSize, Instanced, meta=(AllowPrivateAccess=true))
     TMap<FName, UClothConfigBase*> ClothConfigs;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UClothConfigBase* ClothSharedSimConfig;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UClothConfigBase* ClothSimConfig;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UClothConfigBase* ChaosClothSimConfig;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UClothLODDataCommon_Legacy*> ClothLODData;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FClothLODDataCommon> LODData;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<int32> LodMap;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FName> UsedBoneNames;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<int32> UsedBoneIndices;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 ReferenceBoneIndex;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UClothingAssetCustomData* CustomData;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FClothConfig_Legacy ClothConfig;
     
     UClothingAssetCommon();

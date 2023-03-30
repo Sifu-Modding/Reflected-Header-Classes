@@ -5,11 +5,11 @@
 
 class USoundCue;
 
-UCLASS()
+UCLASS(Blueprintable)
 class AIMODULE_API UBTTask_PlaySound : public UBTTaskNode {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundCue* SoundToPlay;
     
     UBTTask_PlaySound();

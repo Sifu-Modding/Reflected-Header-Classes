@@ -1,25 +1,25 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "AISubsystem.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=EEndPlayReason -FallbackName=EEndPlayReason
 #include "AIStimulus.h"
+#include "AISubsystem.h"
+#include "Templates/SubclassOf.h"
 #include "AIPerceptionSystem.generated.h"
 
-class UAISenseEvent;
-class UAISense;
-class UObject;
 class AActor;
+class UAISense;
+class UAISenseEvent;
+class UObject;
 
-UCLASS(BlueprintType, Config=Game)
+UCLASS(Blueprintable, Config=Game)
 class AIMODULE_API UAIPerceptionSystem : public UAISubsystem {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UAISense*> Senses;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     float PerceptionAgingRate;
     
 public:
@@ -34,7 +34,7 @@ public:
     static bool RegisterPerceptionStimuliSource(UObject* WorldContextObject, TSubclassOf<UAISense> Sense, AActor* Target);
     
 protected:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnPerceptionStimuliSourceEndPlay(AActor* Actor, TEnumAsByte<EEndPlayReason::Type> EndPlayReason);
     
 public:

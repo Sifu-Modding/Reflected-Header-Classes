@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EBuildTrigger.generated.h"
 
-UENUM()
-enum class EBuildTrigger {
+UENUM(BlueprintType)
+enum class EBuildTrigger : uint8 {
     OnEdit,
     Manual,
 };

@@ -7,13 +7,13 @@ USTRUCT(BlueprintType)
 struct FClothCollisionPrim_Sphere {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 BoneIndex;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Radius;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector LocalPosition;
     
     CLOTHINGSYSTEMRUNTIMEINTERFACE_API FClothCollisionPrim_Sphere();

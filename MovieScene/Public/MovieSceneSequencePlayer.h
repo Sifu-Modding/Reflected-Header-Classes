@@ -1,82 +1,82 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "MovieSceneRootEvaluationTemplateInstance.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
-#include "MovieSceneSequenceReplProperties.h"
-#include "MovieSceneSequencePlaybackParams.h"
-#include "MovieSceneSequencePlaybackSettings.h"
-#include "OnMovieSceneSequencePlayerEventDelegate.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=FrameNumber -FallbackName=FrameNumber
-#include "EMovieScenePlayerStatus.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=FrameRate -FallbackName=FrameRate
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=FrameTime -FallbackName=FrameTime
-#include "EUpdatePositionMethod.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=QualifiedFrameTime -FallbackName=QualifiedFrameTime
+#include "EMovieScenePlayerStatus.h"
+#include "EUpdatePositionMethod.h"
 #include "MovieSceneObjectBindingID.h"
+#include "MovieSceneRootEvaluationTemplateInstance.h"
+#include "MovieSceneSequencePlaybackParams.h"
+#include "MovieSceneSequencePlaybackSettings.h"
+#include "MovieSceneSequenceReplProperties.h"
+#include "OnMovieSceneSequencePlayerEventDelegate.h"
 #include "MovieSceneSequencePlayer.generated.h"
 
-class UMovieSceneSequence;
-class UMovieScenePlaybackClient;
 class IMovieScenePlaybackClient;
+class UMovieScenePlaybackClient;
+class UMovieSceneSequence;
 class UMovieSceneSequenceTickManager;
 
-UCLASS(Abstract, BlueprintType)
+UCLASS(Abstract, Blueprintable)
 class MOVIESCENE_API UMovieSceneSequencePlayer : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnMovieSceneSequencePlayerEvent OnPlay;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnMovieSceneSequencePlayerEvent OnPlayReverse;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnMovieSceneSequencePlayerEvent OnStop;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnMovieSceneSequencePlayerEvent OnPreStop;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnMovieSceneSequencePlayerEvent OnPause;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnMovieSceneSequencePlayerEvent OnFinished;
     
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<EMovieScenePlayerStatus::Type> Status;
     
-    UPROPERTY(Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     uint8 bReversePlayback: 1;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UMovieSceneSequence* Sequence;
     
-    UPROPERTY(Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     FFrameNumber StartTime;
     
-    UPROPERTY(Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     int32 DurationFrames;
     
-    UPROPERTY(Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     float DurationSubFrames;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     int32 CurrentNumLoops;
     
-    UPROPERTY(Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     FMovieSceneSequencePlaybackSettings PlaybackSettings;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FMovieSceneRootEvaluationTemplateInstance RootTemplateInstance;
     
-    UPROPERTY(Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     FMovieSceneSequenceReplProperties NetSyncProps;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TScriptInterface<IMovieScenePlaybackClient> PlaybackClient;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UMovieSceneSequenceTickManager* TickManager;
     
 public:
@@ -120,10 +120,10 @@ public:
     void Scrub();
     
 private:
-    UFUNCTION(NetMulticast, Reliable)
+    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
     void RPC_OnStopEvent(FFrameTime StoppedTime);
     
-    UFUNCTION(NetMulticast, Reliable)
+    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
     void RPC_ExplicitServerUpdateEvent(EUpdatePositionMethod Method, FFrameTime RelevantTime);
     
 public:
@@ -160,52 +160,52 @@ public:
     UFUNCTION(BlueprintCallable)
     void JumpToFrame(FFrameTime NewPosition);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsReversed() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsPlaying() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsPaused() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsLooping() const;
     
     UFUNCTION(BlueprintCallable)
-    void GoToEndAndStop();
+    void GoToEndAndStop(EUpdatePositionMethod _eUpdatePositionMethod);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetTotalNumberOfLoopWanted() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FQualifiedFrameTime GetStartTime() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetPlayRate() const;
     
     UFUNCTION(BlueprintCallable)
     TArray<FMovieSceneObjectBindingID> GetObjectBindings(UObject* InObject);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FFrameRate GetFrameRate() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetFrameDuration() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FQualifiedFrameTime GetEndTime() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FQualifiedFrameTime GetDuration() const;
     
     UFUNCTION(BlueprintCallable)
     bool GetDisableCameraCuts();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FQualifiedFrameTime GetCurrentTime() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetCurrentLoopNumber() const;
     
     UFUNCTION(BlueprintCallable)

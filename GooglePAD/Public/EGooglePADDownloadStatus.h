@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EGooglePADDownloadStatus.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EGooglePADDownloadStatus : uint8 {
     AssetPack_UNKNOWN,
     AssetPack_DOWNLOAD_PENDING,

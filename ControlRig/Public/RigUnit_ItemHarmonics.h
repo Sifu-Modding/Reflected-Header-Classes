@@ -1,48 +1,48 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EControlRigRotationOrder.h"
-#include "EControlRigAnimEasingType.h"
-#include "RigUnit_HighlevelBaseMutable.h"
-#include "RigUnit_Harmonics_TargetItem.h"
-#include "RigUnit_BoneHarmonics_WorkData.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
+#include "EControlRigAnimEasingType.h"
+#include "EControlRigRotationOrder.h"
+#include "RigUnit_BoneHarmonics_WorkData.h"
+#include "RigUnit_Harmonics_TargetItem.h"
+#include "RigUnit_HighlevelBaseMutable.h"
 #include "RigUnit_ItemHarmonics.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_ItemHarmonics : public FRigUnit_HighlevelBaseMutable {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FRigUnit_Harmonics_TargetItem> Targets;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector WaveSpeed;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector WaveFrequency;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector WaveAmplitude;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector WaveOffset;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector WaveNoise;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EControlRigAnimEasingType WaveEase;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float WaveMinimum;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float WaveMaximum;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EControlRigRotationOrder RotationOrder;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FRigUnit_BoneHarmonics_WorkData WorkData;
     
     CONTROLRIG_API FRigUnit_ItemHarmonics();

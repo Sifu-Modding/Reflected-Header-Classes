@@ -4,11 +4,11 @@
 #include "MovieSceneGeometryCollectionSectionTemplateParameters.h"
 #include "MovieSceneGeometryCollectionSectionTemplate.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FMovieSceneGeometryCollectionSectionTemplate : public FMovieSceneEvalTemplate {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMovieSceneGeometryCollectionSectionTemplateParameters Params;
     
     GEOMETRYCOLLECTIONTRACKS_API FMovieSceneGeometryCollectionSectionTemplate();

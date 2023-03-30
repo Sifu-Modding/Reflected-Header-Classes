@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "ESequenceRoleCasting.generated.h"
 
-UENUM()
-enum class ESequenceRoleCasting {
+UENUM(BlueprintType)
+enum class ESequenceRoleCasting : uint8 {
     None,
     Role_A,
     Role_B,

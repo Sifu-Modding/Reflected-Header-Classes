@@ -1,20 +1,20 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "PropertyReaction.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=AnimContainer -FallbackName=AnimContainer
+#include "PropertyReaction.h"
 #include "DizzyReaction.generated.h"
 
 USTRUCT(BlueprintType)
 struct FDizzyReaction : public FPropertyReaction {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAnimContainer m_Loop;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bMirrorableLoop;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bAllowDizzyOnTopOfDizzy;
     
     SIFU_API FDizzyReaction();

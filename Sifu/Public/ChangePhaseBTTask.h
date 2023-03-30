@@ -3,7 +3,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=AIModule -ObjectName=BTTaskNode -FallbackName=BTTaskNode
 #include "ChangePhaseBTTask.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class SIFU_API UChangePhaseBTTask : public UBTTaskNode {
     GENERATED_BODY()
 public:

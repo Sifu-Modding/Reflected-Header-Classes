@@ -3,12 +3,12 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
 #include "MediaSource.generated.h"
 
-UCLASS(Abstract, BlueprintType, EditInlineNew)
+UCLASS(Abstract, Blueprintable, EditInlineNew)
 class MEDIAASSETS_API UMediaSource : public UObject {
     GENERATED_BODY()
 public:
     UMediaSource();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool Validate() const;
     
     UFUNCTION(BlueprintCallable)
@@ -23,7 +23,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetMediaOptionBool(const FName& Key, bool Value);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FString GetUrl() const;
     
 };

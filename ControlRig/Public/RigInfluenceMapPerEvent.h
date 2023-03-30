@@ -8,10 +8,10 @@ struct CONTROLRIG_API FRigInfluenceMapPerEvent {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FRigInfluenceMap> Maps;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<FName, int32> EventToIndex;
     
 public:

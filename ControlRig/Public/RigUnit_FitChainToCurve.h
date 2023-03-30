@@ -1,65 +1,65 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EControlRigAnimEasingType.h"
-#include "RigUnit_FitChainToCurve_Rotation.h"
-#include "RigUnit_HighlevelBaseMutable.h"
-#include "CRFourPointBezier.h"
-#include "RigUnit_FitChainToCurve_DebugSettings.h"
-#include "EControlRigCurveAlignment.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
+#include "CRFourPointBezier.h"
+#include "EControlRigAnimEasingType.h"
+#include "EControlRigCurveAlignment.h"
+#include "RigUnit_FitChainToCurve_DebugSettings.h"
+#include "RigUnit_FitChainToCurve_Rotation.h"
 #include "RigUnit_FitChainToCurve_WorkData.h"
+#include "RigUnit_HighlevelBaseMutable.h"
 #include "RigUnit_FitChainToCurve.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_FitChainToCurve : public FRigUnit_HighlevelBaseMutable {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName StartBone;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName EndBone;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FCRFourPointBezier Bezier;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EControlRigCurveAlignment Alignment;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Minimum;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Maximum;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 SamplingPrecision;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector PrimaryAxis;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector SecondaryAxis;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector PoleVectorPosition;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FRigUnit_FitChainToCurve_Rotation> Rotations;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EControlRigAnimEasingType RotationEaseType;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Weight;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bPropagateToChildren;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRigUnit_FitChainToCurve_DebugSettings DebugSettings;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FRigUnit_FitChainToCurve_WorkData WorkData;
     
     CONTROLRIG_API FRigUnit_FitChainToCurve();

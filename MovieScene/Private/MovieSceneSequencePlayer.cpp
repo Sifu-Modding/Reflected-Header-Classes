@@ -97,7 +97,7 @@ bool UMovieSceneSequencePlayer::IsLooping() const {
     return false;
 }
 
-void UMovieSceneSequencePlayer::GoToEndAndStop() {
+void UMovieSceneSequencePlayer::GoToEndAndStop(EUpdatePositionMethod _eUpdatePositionMethod) {
 }
 
 int32 UMovieSceneSequencePlayer::GetTotalNumberOfLoopWanted() const {

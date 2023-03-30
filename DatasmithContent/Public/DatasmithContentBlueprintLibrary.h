@@ -3,10 +3,10 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
 #include "DatasmithContentBlueprintLibrary.generated.h"
 
-class UObject;
 class UDatasmithAssetUserData;
+class UObject;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class DATASMITHCONTENT_API UDatasmithContentBlueprintLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

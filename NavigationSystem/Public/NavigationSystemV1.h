@@ -1,107 +1,107 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ENavDataGatheringModeConfig -FallbackName=ENavDataGatheringModeConfig
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=NavigationSystemBase -FallbackName=NavigationSystemBase
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=NavDataConfig -FallbackName=NavDataConfig
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=FNavigationSystemRunMode -FallbackName=FNavigationSystemRunMode
-#include "OnNavDataGenericEventDelegate.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=NavAgentSelector -FallbackName=NavAgentSelector
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ENavigationQueryResult -FallbackName=ENavigationQueryResult
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ENavDataGatheringModeConfig -FallbackName=ENavDataGatheringModeConfig
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ENavigationQueryResult -FallbackName=ENavigationQueryResult
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=FNavigationSystemRunMode -FallbackName=FNavigationSystemRunMode
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=NavAgentSelector -FallbackName=NavAgentSelector
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=NavDataConfig -FallbackName=NavDataConfig
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=NavigationSystemBase -FallbackName=NavigationSystemBase
+#include "OnNavDataGenericEventDelegate.h"
+#include "Templates/SubclassOf.h"
 #include "NavigationSystemV1.generated.h"
 
-class UObject;
-class ANavigationData;
-class UCrowdManagerBase;
-class UNavigationPath;
 class AActor;
 class AController;
-class UNavigationQueryFilter;
 class ANavMeshBoundsVolume;
+class ANavigationData;
+class UCrowdManagerBase;
 class UNavArea;
+class UNavigationPath;
+class UNavigationQueryFilter;
 class UNavigationSystemV1;
+class UObject;
 
-UCLASS(BlueprintType, NonTransient, Within=World)
+UCLASS(Blueprintable, NonTransient, Within=World)
 class NAVIGATIONSYSTEM_API UNavigationSystemV1 : public UNavigationSystemBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ANavigationData* MainNavData;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ANavigationData* AbstractNavData;
     
 protected:
-    UPROPERTY(BlueprintReadOnly, Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName DefaultAgentName;
     
-    UPROPERTY(BlueprintReadOnly, Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSoftClassPtr<UCrowdManagerBase> CrowdManagerClass;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bAutoCreateNavigationData: 1;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bSpawnNavDataInNavBoundsLevel: 1;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bAllowClientSideNavigation: 1;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bShouldDiscardSubLevelNavData: 1;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bTickWhilePaused: 1;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bSupportRebuilding: 1;
     
 public:
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bInitialBuildingLocked: 1;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bSkipAgentHeightCheckWhenPickingNavData: 1;
     
 protected:
-    UPROPERTY(Config, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bGenerateNavigationOnlyAroundNavigationInvokers: 1;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ActiveTilesUpdateInterval;
     
-    UPROPERTY(Config, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     ENavDataGatheringModeConfig DataGatheringMode;
     
-    UPROPERTY(AdvancedDisplay, Config, EditAnywhere)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DirtyAreaWarningSizeThreshold;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FNavDataConfig> SupportedAgents;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     FNavAgentSelector SupportedAgentsMask;
     
 public:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<ANavigationData*> NavDataSet;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<ANavigationData*> NavDataRegistrationQueue;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FOnNavDataGenericEvent OnNavDataRegisteredEvent;
     
-    UPROPERTY(BlueprintAssignable, Transient)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FOnNavDataGenericEvent OnNavigationGenerationFinishedDelegate;
     
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FNavigationSystemRunMode OperationMode;
     
 public:
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DirtyAreasUpdateFreq;
     
     UNavigationSystemV1();
@@ -126,7 +126,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void RegisterNavigationInvoker(AActor* Invoker, float TileGenerationRadius, float TileRemovalRadius);
     
-    UFUNCTION(BlueprintPure, meta=(WorldContext="WorldContextObject"))
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static FVector ProjectPointToNavigation(UObject* WorldContextObject, const FVector& Point, ANavigationData* NavData, TSubclassOf<UNavigationQueryFilter> FilterClass, const FVector QueryExtent);
     
     UFUNCTION(BlueprintCallable)
@@ -138,37 +138,37 @@ public:
     UFUNCTION(BlueprintCallable)
     bool K2_ReplaceAreaInOctreeData(const UObject* Object, TSubclassOf<UNavArea> OldArea, TSubclassOf<UNavArea> NewArea);
     
-    UFUNCTION(BlueprintPure, meta=(WorldContext="WorldContextObject"))
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static bool K2_ProjectPointToNavigation(UObject* WorldContextObject, const FVector& Point, FVector& ProjectedLocation, ANavigationData* NavData, TSubclassOf<UNavigationQueryFilter> FilterClass, const FVector QueryExtent);
     
-    UFUNCTION(BlueprintPure, meta=(WorldContext="WorldContextObject"))
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static bool K2_GetRandomReachablePointInRadius(UObject* WorldContextObject, const FVector& Origin, FVector& RandomLocation, float Radius, ANavigationData* NavData, TSubclassOf<UNavigationQueryFilter> FilterClass);
     
-    UFUNCTION(BlueprintPure, meta=(WorldContext="WorldContextObject"))
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static bool K2_GetRandomPointInNavigableRadius(UObject* WorldContextObject, const FVector& Origin, FVector& RandomLocation, float Radius, ANavigationData* NavData, TSubclassOf<UNavigationQueryFilter> FilterClass);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static bool K2_GetRandomLocationInNavigableRadius(UObject* WorldContextObject, const FVector& Origin, FVector& RandomLocation, float Radius, ANavigationData* NavData, TSubclassOf<UNavigationQueryFilter> FilterClass);
     
-    UFUNCTION(BlueprintPure, meta=(WorldContext="WorldContextObject"))
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static bool IsNavigationBeingBuiltOrLocked(UObject* WorldContextObject);
     
-    UFUNCTION(BlueprintPure, meta=(WorldContext="WorldContextObject"))
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static bool IsNavigationBeingBuilt(UObject* WorldContextObject);
     
-    UFUNCTION(BlueprintPure, meta=(WorldContext="WorldContextObject"))
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static FVector GetRandomReachablePointInRadius(UObject* WorldContextObject, const FVector& Origin, float Radius, ANavigationData* NavData, TSubclassOf<UNavigationQueryFilter> FilterClass);
     
-    UFUNCTION(BlueprintPure, meta=(WorldContext="WorldContextObject"))
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static FVector GetRandomPointInNavigableRadius(UObject* WorldContextObject, const FVector& Origin, float Radius, ANavigationData* NavData, TSubclassOf<UNavigationQueryFilter> FilterClass);
     
-    UFUNCTION(BlueprintPure, meta=(WorldContext="WorldContextObject"))
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static TEnumAsByte<ENavigationQueryResult::Type> GetPathLength(UObject* WorldContextObject, const FVector& PathStart, const FVector& PathEnd, float& PathLength, ANavigationData* NavData, TSubclassOf<UNavigationQueryFilter> FilterClass);
     
-    UFUNCTION(BlueprintPure, meta=(WorldContext="WorldContextObject"))
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static TEnumAsByte<ENavigationQueryResult::Type> GetPathCost(UObject* WorldContextObject, const FVector& PathStart, const FVector& PathEnd, float& PathCost, ANavigationData* NavData, TSubclassOf<UNavigationQueryFilter> FilterClass);
     
-    UFUNCTION(BlueprintPure, meta=(WorldContext="WorldContextObject"))
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static UNavigationSystemV1* GetNavigationSystem(UObject* WorldContextObject);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))

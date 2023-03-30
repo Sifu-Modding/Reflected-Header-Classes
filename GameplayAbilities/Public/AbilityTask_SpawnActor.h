@@ -1,23 +1,23 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "SpawnActorDelegateDelegate.h"
 #include "AbilityTask.h"
 #include "GameplayAbilityTargetDataHandle.h"
+#include "SpawnActorDelegateDelegate.h"
+#include "Templates/SubclassOf.h"
 #include "AbilityTask_SpawnActor.generated.h"
 
+class AActor;
 class UAbilityTask_SpawnActor;
 class UGameplayAbility;
-class AActor;
 
-UCLASS()
+UCLASS(Blueprintable)
 class GAMEPLAYABILITIES_API UAbilityTask_SpawnActor : public UAbilityTask {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSpawnActorDelegate Success;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSpawnActorDelegate DidNotSpawn;
     
     UAbilityTask_SpawnActor();

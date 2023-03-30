@@ -1,21 +1,21 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "OnlineShowLoginUIResultDelegate.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintAsyncActionBase -FallbackName=BlueprintAsyncActionBase
+#include "OnlineShowLoginUIResultDelegate.h"
 #include "ShowLoginUICallbackProxy.generated.h"
 
+class APlayerController;
 class UObject;
 class UShowLoginUICallbackProxy;
-class APlayerController;
 
-UCLASS(MinimalAPI)
+UCLASS(Blueprintable, MinimalAPI)
 class UShowLoginUICallbackProxy : public UBlueprintAsyncActionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnlineShowLoginUIResult OnSuccess;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnlineShowLoginUIResult OnFailure;
     
     UShowLoginUICallbackProxy();

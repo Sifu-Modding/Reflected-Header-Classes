@@ -1,6 +1,6 @@
 #include "RailForMovable.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=SplineComponent -FallbackName=SplineComponent
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BoxComponent -FallbackName=BoxComponent
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=SplineComponent -FallbackName=SplineComponent
 
 ARailForMovable::ARailForMovable() {
     this->m_Rail = CreateDefaultSubobject<USplineComponent>(TEXT("SplineComp"));

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EApplyTransformMode.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EApplyTransformMode : uint8 {
     Override,
     Additive,

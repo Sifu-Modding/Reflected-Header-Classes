@@ -4,14 +4,14 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=MeshDescription -ObjectName=TriangleID -FallbackName=TriangleID
 #include "RenderingPolygon.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRenderingPolygon {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FPolygonGroupID PolygonGroupID;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTriangleID> TriangulatedPolygonTriangleIndices;
     
     EDITABLEMESH_API FRenderingPolygon();

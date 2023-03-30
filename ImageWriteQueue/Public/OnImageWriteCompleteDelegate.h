@@ -2,5 +2,5 @@
 #include "CoreMinimal.h"
 #include "OnImageWriteCompleteDelegate.generated.h"
 
-UDELEGATE() DECLARE_DYNAMIC_DELEGATE_OneParam(FOnImageWriteComplete, bool, bSuccess);
+UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_DELEGATE_OneParam(FOnImageWriteComplete, bool, bSuccess);
 

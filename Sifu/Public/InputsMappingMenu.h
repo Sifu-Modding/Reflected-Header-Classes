@@ -1,59 +1,59 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "MenuWidget.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=LinearColor -FallbackName=LinearColor
+//CROSS-MODULE INCLUDE V2: -ModuleName=InputCore -ObjectName=Key -FallbackName=Key
 //CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=Margin -FallbackName=Margin
 //CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=SlateBrush -FallbackName=SlateBrush
 //CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=SlateFontInfo -FallbackName=SlateFontInfo
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=LinearColor -FallbackName=LinearColor
 #include "EMappableFieldScaleTypes.h"
-#include "InputKeyMappingHandler.h"
-#include "ERemappingFinishedStates.h"
 #include "ERemappingAllowedInputTypes.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=InputCore -ObjectName=Key -FallbackName=Key
+#include "ERemappingFinishedStates.h"
+#include "InputKeyMappingHandler.h"
+#include "MenuWidget.h"
+#include "Templates/SubclassOf.h"
 #include "InputsMappingMenu.generated.h"
 
+class UButtonUserWidget;
 class UInputMappingWidget;
 class UMappableInputsDB;
 class UPanelWidget;
-class UButtonUserWidget;
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class SIFU_API UInputsMappingMenu : public UMenuWidget {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UMappableInputsDB* m_MappableInputsDB;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UInputMappingWidget> m_InputMappingWidgetClass;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMargin m_sectionTitleMargin;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSlateFontInfo m_sectionTitleFont;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FLinearColor m_sectionTitleColorAndOpacity;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSlateBrush m_sectionTitleBrush;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bIsRemappingOccured;
     
     UInputsMappingMenu();
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnRemappingStarted(FName _ActionName, EMappableFieldScaleTypes _eScaleType);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnRemappingFieldFocusLost(FName _ActionName, EMappableFieldScaleTypes _ScaleType);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnRemappingFieldFocused(FName _ActionName, EMappableFieldScaleTypes _ScaleType);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnGamepadControllerTypeChanged(FName _gamepadControllerType);
     
     UFUNCTION(BlueprintCallable)
@@ -92,22 +92,22 @@ public:
     UFUNCTION(BlueprintCallable)
     void BPF_ApplyMapping(ERemappingAllowedInputTypes _eRemappingInputTypeToApply);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BPE_OnRemappingSucceed();
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BPE_OnRemappingStarted();
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BPE_OnRemappingFieldLostFocus(UInputMappingWidget* _focusedRemappingWidget, EMappableFieldScaleTypes _eScaleType);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BPE_OnRemappingFieldFocused(UInputMappingWidget* _focusedRemappingWidget, EMappableFieldScaleTypes _eScaleType);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BPE_OnRemappingFailed(ERemappingFinishedStates _eRemappingStates, FKey _keyPressed);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BPE_OnKeyPressedForRemapping(FName _ActionName, FInputKeyMappingHandler _NewKeyMapping, bool _bIsKeyboardRemapping);
     
 };

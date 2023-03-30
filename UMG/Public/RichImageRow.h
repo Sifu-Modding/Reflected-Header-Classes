@@ -4,11 +4,11 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=SlateBrush -FallbackName=SlateBrush
 #include "RichImageRow.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct UMG_API FRichImageRow : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSlateBrush Brush;
     
     FRichImageRow();

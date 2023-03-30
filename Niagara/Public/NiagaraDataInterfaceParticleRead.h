@@ -3,11 +3,11 @@
 #include "NiagaraDataInterfaceRWBase.h"
 #include "NiagaraDataInterfaceParticleRead.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class NIAGARA_API UNiagaraDataInterfaceParticleRead : public UNiagaraDataInterfaceRWBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString EmitterName;
     
     UNiagaraDataInterfaceParticleRead();

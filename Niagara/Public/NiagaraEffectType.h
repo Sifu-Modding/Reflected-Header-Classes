@@ -1,35 +1,35 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ENiagaraCullReaction.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
+#include "ENiagaraCullReaction.h"
 #include "ENiagaraScalabilityUpdateFrequency.h"
-#include "NiagaraSystemScalabilitySettingsArray.h"
-#include "NiagaraSystemScalabilitySettings.h"
 #include "NiagaraEmitterScalabilitySettingsArray.h"
+#include "NiagaraSystemScalabilitySettings.h"
+#include "NiagaraSystemScalabilitySettingsArray.h"
 #include "NiagaraEffectType.generated.h"
 
 class UNiagaraSignificanceHandler;
 
-UCLASS()
+UCLASS(Blueprintable)
 class NIAGARA_API UNiagaraEffectType : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     ENiagaraScalabilityUpdateFrequency UpdateFrequency;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     ENiagaraCullReaction CullReaction;
     
-    UPROPERTY(EditAnywhere, Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UNiagaraSignificanceHandler* SignificanceHandler;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FNiagaraSystemScalabilitySettings> DetailLevelScalabilitySettings;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FNiagaraSystemScalabilitySettingsArray SystemScalabilitySettings;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FNiagaraEmitterScalabilitySettingsArray EmitterScalabilitySettings;
     
     UNiagaraEffectType();

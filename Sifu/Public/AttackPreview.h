@@ -3,7 +3,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
 #include "AttackPreview.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class SIFU_API UAttackPreview : public UObject {
     GENERATED_BODY()
 public:

@@ -7,15 +7,15 @@
 class AAIController;
 class UBlackboardComponent;
 
-UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class AIMODULE_API UBrainComponent : public UActorComponent, public IAIResourceInterface {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(Instanced, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UBlackboardComponent* BlackboardComp;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     AAIController* AIOwner;
     
 public:
@@ -29,10 +29,10 @@ public:
     UFUNCTION(BlueprintCallable)
     void RestartLogic();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsRunning() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsPaused() const;
     
     

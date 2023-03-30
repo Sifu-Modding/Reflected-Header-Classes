@@ -1,51 +1,51 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
-#include "EPawnActionResult.h"
 #include "EAIRequestPriority.h"
+#include "EPawnActionResult.h"
+#include "Templates/SubclassOf.h"
 #include "PawnAction.generated.h"
 
-class UPawnActionsComponent;
-class UPawnAction;
 class UBrainComponent;
+class UPawnAction;
+class UPawnActionsComponent;
 
-UCLASS(Abstract, BlueprintType, EditInlineNew)
+UCLASS(Abstract, Blueprintable, EditInlineNew)
 class AIMODULE_API UPawnAction : public UObject {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UPawnAction* ChildAction;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UPawnAction* ParentAction;
     
-    UPROPERTY(Instanced, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UPawnActionsComponent* OwnerComponent;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UObject* Instigator;
     
 protected:
-    UPROPERTY(Instanced, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UBrainComponent* BrainComp;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bAllowNewSameClassInstance: 1;
     
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bReplaceActiveSameClassInstance: 1;
     
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bShouldPauseMovement: 1;
     
-    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditDefaultsOnly)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bAlwaysNotifyOnFinished: 1;
     
 public:
     UPawnAction();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     TEnumAsByte<EAIRequestPriority::Type> GetActionPriority();
     
 protected:

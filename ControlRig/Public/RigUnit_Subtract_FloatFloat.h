@@ -3,7 +3,7 @@
 #include "RigUnit_BinaryFloatOp.h"
 #include "RigUnit_Subtract_FloatFloat.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_Subtract_FloatFloat : public FRigUnit_BinaryFloatOp {
     GENERATED_BODY()
 public:

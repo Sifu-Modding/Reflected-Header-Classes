@@ -3,7 +3,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCBTDecorator -FallbackName=SCBTDecorator
 #include "AIActionFetchObjectBTDecorator.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class SIFU_API UAIActionFetchObjectBTDecorator : public USCBTDecorator {
     GENERATED_BODY()
 public:

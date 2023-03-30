@@ -6,14 +6,14 @@
 
 class UAsyncTaskDownloadImage;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UMG_API UAsyncTaskDownloadImage : public UBlueprintAsyncActionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FDownloadImageDelegate OnSuccess;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FDownloadImageDelegate OnFail;
     
     UAsyncTaskDownloadImage();

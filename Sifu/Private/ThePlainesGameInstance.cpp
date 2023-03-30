@@ -1,12 +1,12 @@
 #include "ThePlainesGameInstance.h"
 #include "PredictionManager.h"
 
-class UWGGameFlow;
-class USCLocalPlayer;
 class ALevelSequenceActor;
+class ASCPlayerStart;
 class ULocalPlayer;
 class UReplaySystem;
-class ASCPlayerStart;
+class USCLocalPlayer;
+class UWGGameFlow;
 
 void UThePlainesGameInstance::TriggerTakeKinectResources(bool _bTake) {
 }
@@ -56,6 +56,9 @@ void UThePlainesGameInstance::GoToNextMap() {
 void UThePlainesGameInstance::GoToMapInGameFlow(const FString& _sMapToTravelTo) {
 }
 
+void UThePlainesGameInstance::GiveBestScoreToAllChallenges() {
+}
+
 USCLocalPlayer* UThePlainesGameInstance::GetLocalPlayer() {
     return NULL;
 }
@@ -64,6 +67,10 @@ void UThePlainesGameInstance::DumpWorlds() {
 }
 
 void UThePlainesGameInstance::DumpLoadedLevels() {
+}
+
+bool UThePlainesGameInstance::BPF_WantToDisplayGamerTagOnLoadingScreen() const {
+    return false;
 }
 
 void UThePlainesGameInstance::BPF_StopSequence(ALevelSequenceActor* _levelSequenceActor) {
@@ -104,6 +111,10 @@ UReplaySystem* UThePlainesGameInstance::BPF_GetReplaySystem() const {
 
 ASCPlayerStart* UThePlainesGameInstance::BPF_GetPlayerStartUsedAtSpawn() {
     return NULL;
+}
+
+bool UThePlainesGameInstance::BPF_GetPlayerNameFromControllerID(int32 _iControllerID, FString& _outPlayerName) {
+    return false;
 }
 
 FString UThePlainesGameInstance::BPF_GetPlayerId(ULocalPlayer* _player) {

@@ -1,7 +1,7 @@
 #include "AkGameObject.h"
 
-class UObject;
 class UAkAudioEvent;
+class UObject;
 
 void UAkGameObject::Stop() {
 }

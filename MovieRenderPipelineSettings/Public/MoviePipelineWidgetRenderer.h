@@ -5,12 +5,12 @@
 
 class UTextureRenderTarget2D;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UMoviePipelineWidgetRenderer : public UMoviePipelineRenderPass {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTextureRenderTarget2D* RenderTarget;
     
 public:

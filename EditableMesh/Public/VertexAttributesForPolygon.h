@@ -9,13 +9,13 @@ USTRUCT(BlueprintType)
 struct FVertexAttributesForPolygon {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FPolygonID PolygonID;
     
-    UPROPERTY(BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FMeshElementAttributeList> PerimeterVertexAttributeLists;
     
-    UPROPERTY(BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FVertexAttributesForPolygonHole> VertexAttributeListsForEachHole;
     
     EDITABLEMESH_API FVertexAttributesForPolygon();

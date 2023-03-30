@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FRigUnit_BoneHarmonics_BoneTarget {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName Bone;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Ratio;
     
     CONTROLRIG_API FRigUnit_BoneHarmonics_BoneTarget();

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EGameplayEffectScopedModifierAggregatorType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EGameplayEffectScopedModifierAggregatorType : uint8 {
     CapturedAttributeBacked,
     Transient,

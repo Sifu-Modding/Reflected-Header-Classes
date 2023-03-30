@@ -1,40 +1,40 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "AISubsystem.h"
-#include "EnvQueryInstanceCache.h"
 #include "EEnvQueryRunMode.h"
+#include "EnvQueryInstanceCache.h"
+#include "Templates/SubclassOf.h"
 #include "EnvQueryManager.generated.h"
 
-class UObject;
+class UEnvQuery;
 class UEnvQueryContext;
 class UEnvQueryInstanceBlueprintWrapper;
-class UEnvQuery;
+class UObject;
 
-UCLASS(BlueprintType, Transient, Config=Game)
+UCLASS(Blueprintable, Transient, Config=Game)
 class AIMODULE_API UEnvQueryManager : public UAISubsystem {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<FEnvQueryInstanceCache> InstanceCache;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UEnvQueryContext*> LocalContexts;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UEnvQueryInstanceBlueprintWrapper*> GCShieldedWrappers;
     
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MaxAllowedTestingTime;
     
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bTestQueriesUsingBreadth;
     
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 QueryCountWarningThreshold;
     
-    UPROPERTY(Config)
+    UPROPERTY(Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     double QueryCountWarningInterval;
     
 public:

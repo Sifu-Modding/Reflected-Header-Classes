@@ -2,5 +2,5 @@
 #include "CoreMinimal.h"
 #include "OnSampleLoadedDelegate.generated.h"
 
-UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnSampleLoaded);
+UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnSampleLoaded);
 

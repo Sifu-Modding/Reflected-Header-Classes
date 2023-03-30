@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EControlRigClampSpatialMode.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 namespace EControlRigClampSpatialMode {
     enum Type {
         Plane,

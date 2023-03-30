@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct SIFU_API FAnimStructMoveTransition : public FAnimStructBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     EMoveTransitionType m_eTransitionType1;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     EMoveTransitionType m_eTransitionType2;
     
     FAnimStructMoveTransition();

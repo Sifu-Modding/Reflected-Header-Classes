@@ -4,12 +4,12 @@
 #include "GameplayEffectAttributeCaptureDefinition.h"
 #include "GameplayEffectCalculation.generated.h"
 
-UCLASS(Abstract, BlueprintType)
+UCLASS(Abstract, Blueprintable)
 class GAMEPLAYABILITIES_API UGameplayEffectCalculation : public UObject {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FGameplayEffectAttributeCaptureDefinition> RelevantAttributesToCapture;
     
 public:

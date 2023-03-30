@@ -4,7 +4,7 @@
 #include "GizmoFloatParameterSource.h"
 #include "GizmoBaseFloatParameterSource.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class INTERACTIVETOOLSFRAMEWORK_API UGizmoBaseFloatParameterSource : public UObject, public IGizmoFloatParameterSource {
     GENERATED_BODY()
 public:

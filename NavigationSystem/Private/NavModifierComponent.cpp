@@ -1,6 +1,6 @@
 #include "NavModifierComponent.h"
-#include "Templates/SubclassOf.h"
 #include "NavArea_Null.h"
+#include "Templates/SubclassOf.h"
 
 class UNavArea;
 

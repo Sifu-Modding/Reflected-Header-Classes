@@ -5,36 +5,36 @@
 
 class USceneComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class CINEMATICCAMERA_API ACameraRig_Crane : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Interp)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Interp, meta=(AllowPrivateAccess=true))
     float CranePitch;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Interp)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Interp, meta=(AllowPrivateAccess=true))
     float CraneYaw;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Interp)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Interp, meta=(AllowPrivateAccess=true))
     float CraneArmLength;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Interp)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Interp, meta=(AllowPrivateAccess=true))
     bool bLockMountPitch;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Interp)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Interp, meta=(AllowPrivateAccess=true))
     bool bLockMountYaw;
     
 private:
-    UPROPERTY(EditDefaultsOnly, Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USceneComponent* TransformComponent;
     
-    UPROPERTY(EditDefaultsOnly, Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USceneComponent* CraneYawControl;
     
-    UPROPERTY(EditDefaultsOnly, Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USceneComponent* CranePitchControl;
     
-    UPROPERTY(EditDefaultsOnly, Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USceneComponent* CraneCameraMount;
     
 public:

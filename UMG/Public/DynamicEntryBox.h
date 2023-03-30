@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "DynamicEntryBoxBase.h"
+#include "Templates/SubclassOf.h"
 #include "DynamicEntryBox.generated.h"
 
 class UUserWidget;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UMG_API UDynamicEntryBox : public UDynamicEntryBoxBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UUserWidget> EntryWidgetClass;
     
 public:

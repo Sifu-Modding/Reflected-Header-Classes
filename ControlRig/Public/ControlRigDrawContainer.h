@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct CONTROLRIG_API FControlRigDrawContainer {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FControlRigDrawInstruction> Instructions;
     
     FControlRigDrawContainer();

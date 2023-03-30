@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "MoviePipelineOutputBase.h"
 #include "FCPXMLExportDataSource.h"
+#include "MoviePipelineOutputBase.h"
 #include "MoviePipelineFCPXMLExporter.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class MOVIERENDERPIPELINECORE_API UMoviePipelineFCPXMLExporter : public UMoviePipelineOutputBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString FileNameFormat;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FCPXMLExportDataSource DataSource;
     
     UMoviePipelineFCPXMLExporter();

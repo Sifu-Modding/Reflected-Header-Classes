@@ -3,15 +3,15 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
 #include "ReplayCutManagement.generated.h"
 
-class UReplayTimelineModel;
 class UReplayKey;
+class UReplayTimelineModel;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class SIFU_API UReplayCutManagement : public UObject {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UReplayTimelineModel* m_Model;
     
 public:
@@ -19,7 +19,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void BPF_RemoveCut(UReplayKey* _key);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool BPF_CanAddCut(float _fDemoTime) const;
     
 };

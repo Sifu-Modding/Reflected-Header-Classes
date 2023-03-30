@@ -1,41 +1,41 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ActorComponent -FallbackName=ActorComponent
-#include "ActorPerceptionInfoUpdatedDelegateDelegate.h"
-#include "PerceptionUpdatedDelegateDelegate.h"
-#include "ActorPerceptionUpdatedDelegateDelegate.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=EEndPlayReason -FallbackName=EEndPlayReason
 #include "ActorPerceptionBlueprintInfo.h"
+#include "ActorPerceptionInfoUpdatedDelegateDelegate.h"
+#include "ActorPerceptionUpdatedDelegateDelegate.h"
+#include "PerceptionUpdatedDelegateDelegate.h"
+#include "Templates/SubclassOf.h"
 #include "AIPerceptionComponent.generated.h"
 
 class AAIController;
 class AActor;
-class UAISenseConfig;
 class UAISense;
+class UAISenseConfig;
 
-UCLASS(BlueprintType, ClassGroup=Custom, Config=Game, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, Config=Game, meta=(BlueprintSpawnableComponent))
 class AIMODULE_API UAIPerceptionComponent : public UActorComponent {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditDefaultsOnly, Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     TArray<UAISenseConfig*> SensesConfig;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UAISense> DominantSense;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     AAIController* AIOwner;
     
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FPerceptionUpdatedDelegate OnPerceptionUpdated;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FActorPerceptionUpdatedDelegate OnTargetPerceptionUpdated;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FActorPerceptionInfoUpdatedDelegate OnTargetPerceptionInfoUpdated;
     
     UAIPerceptionComponent();
@@ -45,22 +45,22 @@ public:
     UFUNCTION(BlueprintCallable)
     void RequestStimuliListenerUpdate();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnOwnerEndPlay(AActor* Actor, TEnumAsByte<EEndPlayReason::Type> EndPlayReason);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     void GetPerceivedHostileActorsBySense(const TSubclassOf<UAISense> SenseToUse, TArray<AActor*>& OutActors) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     void GetPerceivedHostileActors(TArray<AActor*>& OutActors) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     void GetPerceivedActors(TSubclassOf<UAISense> SenseToUse, TArray<AActor*>& OutActors) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     void GetKnownPerceivedActors(TSubclassOf<UAISense> SenseToUse, TArray<AActor*>& OutActors) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     void GetCurrentlyPerceivedActors(TSubclassOf<UAISense> SenseToUse, TArray<AActor*>& OutActors) const;
     
     UFUNCTION(BlueprintCallable)

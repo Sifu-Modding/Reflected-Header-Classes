@@ -1,26 +1,26 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "OrderService.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=AnimContainer -FallbackName=AnimContainer
 #include "HitBox.h"
 #include "HitDescription.h"
 #include "HittedAnimContainer.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=AnimContainer -FallbackName=AnimContainer
+#include "OrderService.h"
 #include "ParryToHitOrderService.generated.h"
 
 class AFightingCharacter;
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class SIFU_API UParryToHitOrderService : public UOrderService {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FHitBox m_HitToApply;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fFreezeFrames;
     
     UParryToHitOrderService();
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BPE_GetParryAnimations(const FHitDescription& _hitDescription, AFightingCharacter* _parriyer, FAnimContainer& _outParryierAnim, FHittedAnimContainer& _outParriedAnim) const;
     
 };

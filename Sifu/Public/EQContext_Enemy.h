@@ -3,7 +3,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=AIModule -ObjectName=EnvQueryContext -FallbackName=EnvQueryContext
 #include "EQContext_Enemy.generated.h"
 
-UCLASS(EditInlineNew, MinimalAPI)
+UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class UEQContext_Enemy : public UEnvQueryContext {
     GENERATED_BODY()
 public:

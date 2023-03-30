@@ -1,142 +1,142 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "EGameplayEffectStackingExpirationPolicy.h"
-#include "EGameplayEffectPeriodInhibitionRemovedPolicy.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
-//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTagAssetInterface -FallbackName=GameplayTagAssetInterface
 //CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTag -FallbackName=GameplayTag
-#include "GameplayEffectModifierMagnitude.h"
-#include "EGameplayEffectDurationType.h"
-#include "ScalableFloat.h"
-#include "GameplayEffectCue.h"
-#include "GameplayModifierInfo.h"
-#include "ConditionalGameplayEffect.h"
-#include "GameplayEffectExecutionDefinition.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTagAssetInterface -FallbackName=GameplayTagAssetInterface
 //CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTagContainer -FallbackName=GameplayTagContainer
-#include "InheritedTagContainer.h"
-#include "GameplayAbilitySpecDef.h"
-#include "GameplayTagRequirements.h"
-#include "GameplayEffectQuery.h"
-#include "EGameplayEffectStackingType.h"
+#include "ConditionalGameplayEffect.h"
+#include "EGameplayEffectDurationType.h"
+#include "EGameplayEffectPeriodInhibitionRemovedPolicy.h"
 #include "EGameplayEffectStackingDurationPolicy.h"
+#include "EGameplayEffectStackingExpirationPolicy.h"
 #include "EGameplayEffectStackingPeriodPolicy.h"
+#include "EGameplayEffectStackingType.h"
+#include "GameplayAbilitySpecDef.h"
+#include "GameplayEffectCue.h"
+#include "GameplayEffectExecutionDefinition.h"
+#include "GameplayEffectModifierMagnitude.h"
+#include "GameplayEffectQuery.h"
+#include "GameplayModifierInfo.h"
+#include "GameplayTagRequirements.h"
+#include "InheritedTagContainer.h"
+#include "ScalableFloat.h"
+#include "Templates/SubclassOf.h"
 #include "GameplayEffect.generated.h"
 
-class UGameplayEffectUIData;
-class UGameplayEffectCustomApplicationRequirement;
 class UGameplayEffect;
+class UGameplayEffectCustomApplicationRequirement;
+class UGameplayEffectUIData;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class GAMEPLAYABILITIES_API UGameplayEffect : public UObject, public IGameplayTagAssetInterface {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EGameplayEffectDurationType DurationPolicy;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayEffectModifierMagnitude DurationMagnitude;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FScalableFloat Period;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bExecutePeriodicEffectOnApplication;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EGameplayEffectPeriodInhibitionRemovedPolicy PeriodicInhibitionPolicy;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FGameplayModifierInfo> Modifiers;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FGameplayEffectExecutionDefinition> Executions;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FScalableFloat ChanceToApplyToTarget;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<TSubclassOf<UGameplayEffectCustomApplicationRequirement>> ApplicationRequirements;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<TSubclassOf<UGameplayEffect>> TargetEffectClasses;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FConditionalGameplayEffect> ConditionalGameplayEffects;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<TSubclassOf<UGameplayEffect>> OverflowEffects;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bDenyOverflowApplication;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bClearStackOnOverflow;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<TSubclassOf<UGameplayEffect>> PrematureExpirationEffectClasses;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<TSubclassOf<UGameplayEffect>> RoutineExpirationEffectClasses;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bRequireModifierSuccessToTriggerCues;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bSuppressStackingCues;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FGameplayEffectCue> GameplayCues;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UGameplayEffectUIData* UIData;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FInheritedTagContainer InheritableGameplayEffectTags;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FInheritedTagContainer InheritableOwnedTagsContainer;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayTagRequirements OngoingTagRequirements;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayTagRequirements OngoingTagHardRequirements;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayTagRequirements ApplicationTagRequirements;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayTagRequirements RemovalTagRequirements;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FInheritedTagContainer RemoveGameplayEffectsWithTags;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayTagRequirements GrantedApplicationImmunityTags;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayEffectQuery GrantedApplicationImmunityQuery;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayEffectQuery RemoveGameplayEffectQuery;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EGameplayEffectStackingType StackingType;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 StackLimitCount;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EGameplayEffectStackingDurationPolicy StackDurationRefreshPolicy;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EGameplayEffectStackingPeriodPolicy StackPeriodResetPolicy;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EGameplayEffectStackingExpirationPolicy StackExpirationPolicy;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FGameplayAbilitySpecDef> GrantedAbilities;
     
     UGameplayEffect();

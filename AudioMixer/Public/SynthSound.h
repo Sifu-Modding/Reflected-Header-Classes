@@ -5,12 +5,12 @@
 
 class USynthComponent;
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class AUDIOMIXER_API USynthSound : public USoundWaveProcedural {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USynthComponent* OwningSynthComponent;
     
 public:

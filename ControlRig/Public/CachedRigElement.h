@@ -3,18 +3,18 @@
 #include "RigElementKey.h"
 #include "CachedRigElement.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FCachedRigElement {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRigElementKey Key;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint16 Index;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 ContainerVersion;
     
 public:

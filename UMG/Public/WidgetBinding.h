@@ -5,12 +5,12 @@
 
 class UWidget;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UMG_API UWidgetBinding : public UPropertyBinding {
     GENERATED_BODY()
 public:
     UWidgetBinding();
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     UWidget* GetValue() const;
     
 };

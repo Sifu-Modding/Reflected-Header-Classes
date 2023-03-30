@@ -1,41 +1,41 @@
 #pragma once
 #include "CoreMinimal.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=DirectoryPath -FallbackName=DirectoryPath
 #include "MovieSceneSection.h"
 #include "MovieSceneSectionParameters.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=DirectoryPath -FallbackName=DirectoryPath
 #include "MovieSceneSubSection.generated.h"
 
-class UMovieSceneSequence;
 class AActor;
+class UMovieSceneSequence;
 
-UCLASS(Config=EditorPerProjectUserSettings)
+UCLASS(Blueprintable, Config=EditorPerProjectUserSettings)
 class MOVIESCENE_API UMovieSceneSubSection : public UMovieSceneSection {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMovieSceneSectionParameters Parameters;
     
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float StartOffset;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float TimeScale;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float PrerollTime;
     
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UMovieSceneSequence* SubSequence;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TLazyObjectPtr<AActor> ActorToRecord;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString TargetSequenceName;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FDirectoryPath TargetPathToRecordTo;
     
 public:
@@ -43,7 +43,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetSequence(UMovieSceneSequence* Sequence);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UMovieSceneSequence* GetSequence() const;
     
 };

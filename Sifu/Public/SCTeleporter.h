@@ -3,21 +3,21 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=Actor -FallbackName=Actor
 #include "SCTeleporter.generated.h"
 
-class USceneComponent;
 class UBoxComponent;
+class USceneComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class SIFU_API ASCTeleporter : public AActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USceneComponent* m_RootComponent;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UBoxComponent* m_EntryBoxComponent;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UBoxComponent* m_ExitBoxComponent;
     
 public:

@@ -6,25 +6,25 @@
 
 class UAIPerceptionSystem;
 
-UCLASS(Abstract, BlueprintType)
+UCLASS(Abstract, Blueprintable)
 class AIMODULE_API UAISense : public UObject {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DefaultExpirationAge;
     
-    UPROPERTY(BlueprintReadOnly, Config, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     EAISenseNotifyType NotifyType;
     
-    UPROPERTY(BlueprintReadOnly, Config, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bWantsNewPawnNotification: 1;
     
-    UPROPERTY(BlueprintReadOnly, Config, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bAutoRegisterAllPawnsAsSources: 1;
     
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UAIPerceptionSystem* PerceptionSystemInstance;
     
 public:

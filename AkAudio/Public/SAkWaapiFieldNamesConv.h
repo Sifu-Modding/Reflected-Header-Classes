@@ -1,18 +1,18 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "AkWaapiFieldNames.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
+#include "AkWaapiFieldNames.h"
 #include "SAkWaapiFieldNamesConv.generated.h"
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class AKAUDIO_API USAkWaapiFieldNamesConv : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     USAkWaapiFieldNamesConv();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static FText Conv_FAkWaapiFieldNamesToText(const FAkWaapiFieldNames& INAkWaapiFieldNames);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static FString Conv_FAkWaapiFieldNamesToString(const FAkWaapiFieldNames& INAkWaapiFieldNames);
     
 };

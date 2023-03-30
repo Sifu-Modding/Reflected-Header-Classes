@@ -3,7 +3,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
 #include "GauntletTestController.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class GAUNTLET_API UGauntletTestController : public UObject {
     GENERATED_BODY()
 public:

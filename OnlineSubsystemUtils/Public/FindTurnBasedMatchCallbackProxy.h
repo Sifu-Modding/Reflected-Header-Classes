@@ -4,20 +4,20 @@
 #include "OnlineTurnBasedMatchResultDelegate.h"
 #include "FindTurnBasedMatchCallbackProxy.generated.h"
 
-class UTurnBasedMatchInterface;
-class ITurnBasedMatchInterface;
-class UObject;
-class UFindTurnBasedMatchCallbackProxy;
 class APlayerController;
+class ITurnBasedMatchInterface;
+class UTurnBasedMatchInterface;
+class UFindTurnBasedMatchCallbackProxy;
+class UObject;
 
-UCLASS(MinimalAPI)
+UCLASS(Blueprintable, MinimalAPI)
 class UFindTurnBasedMatchCallbackProxy : public UOnlineBlueprintCallProxyBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnlineTurnBasedMatchResult OnSuccess;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnlineTurnBasedMatchResult OnFailure;
     
     UFindTurnBasedMatchCallbackProxy();

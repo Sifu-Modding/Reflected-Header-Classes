@@ -5,17 +5,17 @@
 #include "EActionType.h"
 #include "PlayerTargetCondition.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class SIFU_API UPlayerTargetCondition : public UBaseActorCondition {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EActionType m_eAction;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bUpdateTarget;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBaseActorTargetConditionInstance m_OptionalSubConditionOnTarget;
     
     UPlayerTargetCondition();

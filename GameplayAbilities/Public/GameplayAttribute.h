@@ -8,14 +8,14 @@ USTRUCT(BlueprintType)
 struct GAMEPLAYABILITIES_API FGameplayAttribute {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString AttributeName;
     
 private:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TFieldPath<FProperty> Attribute;
     
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UStruct* AttributeOwner;
     
 public:

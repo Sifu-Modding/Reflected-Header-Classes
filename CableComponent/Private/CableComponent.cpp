@@ -1,7 +1,7 @@
 #include "CableComponent.h"
 
-class USceneComponent;
 class AActor;
+class USceneComponent;
 
 void UCableComponent::SetAttachEndToComponent(USceneComponent* Component, FName SocketName) {
 }

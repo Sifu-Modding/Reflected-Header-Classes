@@ -1,24 +1,24 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ActorComponent -FallbackName=ActorComponent
+#include "Templates/SubclassOf.h"
 #include "TargetableWidgetUpdaterComponent.generated.h"
 
 class AActor;
 class UTargetableWidget;
 
-UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class SIFU_API UTargetableWidgetUpdaterComponent : public UActorComponent {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UTargetableWidget> m_TargetWidgetToUse;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fMaxDisplayDist;
     
-    UPROPERTY(Instanced, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     TArray<UTargetableWidget*> m_WidgetPool;
     
 public:
@@ -30,7 +30,7 @@ public:
     void RegisterTargetActor(AActor* _actor);
     
 private:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnLeavingMap();
     
 public:

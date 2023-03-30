@@ -1,6 +1,6 @@
 #include "AkSpatialAudioVolume.h"
-#include "AkRoomComponent.h"
 #include "AkLateReverbComponent.h"
+#include "AkRoomComponent.h"
 #include "AkSurfaceReflectorSetComponent.h"
 
 AAkSpatialAudioVolume::AAkSpatialAudioVolume() {

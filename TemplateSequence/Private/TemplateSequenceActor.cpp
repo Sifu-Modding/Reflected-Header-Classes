@@ -2,8 +2,8 @@
 #include "Net/UnrealNetwork.h"
 #include "TemplateSequencePlayer.h"
 
-class UTemplateSequence;
 class AActor;
+class UTemplateSequence;
 
 void ATemplateSequenceActor::SetSequence(UTemplateSequence* InSequence) {
 }

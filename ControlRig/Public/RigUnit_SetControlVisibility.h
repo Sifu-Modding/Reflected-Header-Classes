@@ -1,24 +1,24 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "CachedRigElement.h"
-#include "RigUnitMutable.h"
 #include "RigElementKey.h"
+#include "RigUnitMutable.h"
 #include "RigUnit_SetControlVisibility.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_SetControlVisibility : public FRigUnitMutable {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRigElementKey Item;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString Pattern;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bVisible;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FCachedRigElement> CachedControlIndices;
     
     CONTROLRIG_API FRigUnit_SetControlVisibility();

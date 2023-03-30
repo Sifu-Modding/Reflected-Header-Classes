@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EChaosClothTetherMode.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EChaosClothTetherMode : uint8 {
     FastTetherFastLength,
     AccurateTetherFastLength,

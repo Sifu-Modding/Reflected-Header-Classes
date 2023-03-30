@@ -4,17 +4,17 @@
 #include "RepeatedActionDelegateDelegate.h"
 #include "AbilityTask_Repeat.generated.h"
 
-class UGameplayAbility;
 class UAbilityTask_Repeat;
+class UGameplayAbility;
 
-UCLASS()
+UCLASS(Blueprintable)
 class GAMEPLAYABILITIES_API UAbilityTask_Repeat : public UAbilityTask {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRepeatedActionDelegate OnPerformAction;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRepeatedActionDelegate OnFinished;
     
     UAbilityTask_Repeat();

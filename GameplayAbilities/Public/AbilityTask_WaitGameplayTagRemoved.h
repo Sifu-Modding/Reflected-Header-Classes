@@ -5,15 +5,15 @@
 #include "WaitGameplayTagDelegateDelegate.h"
 #include "AbilityTask_WaitGameplayTagRemoved.generated.h"
 
-class UGameplayAbility;
-class UAbilityTask_WaitGameplayTagRemoved;
 class AActor;
+class UAbilityTask_WaitGameplayTagRemoved;
+class UGameplayAbility;
 
-UCLASS()
+UCLASS(Blueprintable)
 class GAMEPLAYABILITIES_API UAbilityTask_WaitGameplayTagRemoved : public UAbilityTask_WaitGameplayTag {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FWaitGameplayTagDelegate Removed;
     
     UAbilityTask_WaitGameplayTagRemoved();

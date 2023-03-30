@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Overlays.h"
 #include "OverlayItem.h"
+#include "Overlays.h"
 #include "BasicOverlays.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class OVERLAY_API UBasicOverlays : public UOverlays {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FOverlayItem> Overlays;
     
     UBasicOverlays();

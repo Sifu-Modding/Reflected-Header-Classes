@@ -1,26 +1,26 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "MoviePipelineConfigBase.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=FrameRate -FallbackName=FrameRate
+#include "MoviePipelineConfigBase.h"
 #include "MoviePipelineMasterConfig.generated.h"
 
-class UMoviePipelineShotConfig;
+class ULevelSequence;
 class UMoviePipelineOutputSetting;
 class UMoviePipelineSetting;
-class ULevelSequence;
+class UMoviePipelineShotConfig;
 
-UCLASS()
+UCLASS(Blueprintable)
 class MOVIERENDERPIPELINECORE_API UMoviePipelineMasterConfig : public UMoviePipelineConfigBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     TMap<FString, UMoviePipelineShotConfig*> PerShotConfigMapping;
     
 private:
-    UPROPERTY(Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UMoviePipelineOutputSetting* OutputSetting;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UMoviePipelineSetting*> TransientSettings;
     
 public:
@@ -28,13 +28,13 @@ public:
     UFUNCTION(BlueprintCallable)
     void InitializeTransientSettings();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     TArray<UMoviePipelineSetting*> GetTransientSettings() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FFrameRate GetEffectiveFrameRate(const ULevelSequence* InSequence) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     TArray<UMoviePipelineSetting*> GetAllSettings(const bool bIncludeDisabledSettings, const bool bIncludeTransientSettings) const;
     
 };

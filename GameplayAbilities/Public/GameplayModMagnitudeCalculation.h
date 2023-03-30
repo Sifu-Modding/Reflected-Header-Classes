@@ -9,12 +9,12 @@ class GAMEPLAYABILITIES_API UGameplayModMagnitudeCalculation : public UGameplayE
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(AdvancedDisplay, EditDefaultsOnly)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bAllowNonNetAuthorityDependencyRegistration;
     
 public:
     UGameplayModMagnitudeCalculation();
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     float CalculateBaseMagnitude(const FGameplayEffectSpec& Spec) const;
     
 };

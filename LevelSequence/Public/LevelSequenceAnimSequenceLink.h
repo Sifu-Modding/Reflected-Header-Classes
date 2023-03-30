@@ -4,11 +4,11 @@
 #include "LevelSequenceAnimSequenceLinkItem.h"
 #include "LevelSequenceAnimSequenceLink.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class LEVELSEQUENCE_API ULevelSequenceAnimSequenceLink : public UAssetUserData {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FLevelSequenceAnimSequenceLinkItem> AnimSequenceLinks;
     
     ULevelSequenceAnimSequenceLink();

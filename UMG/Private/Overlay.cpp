@@ -1,7 +1,7 @@
 #include "Overlay.h"
 
-class UWidget;
 class UOverlaySlot;
+class UWidget;
 
 UOverlaySlot* UOverlay::AddChildToOverlay(UWidget* Content) {
     return NULL;

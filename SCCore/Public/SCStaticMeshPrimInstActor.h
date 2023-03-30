@@ -3,7 +3,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=StaticMeshActor -FallbackName=StaticMeshActor
 #include "SCStaticMeshPrimInstActor.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class SCCORE_API ASCStaticMeshPrimInstActor : public AStaticMeshActor {
     GENERATED_BODY()
 public:

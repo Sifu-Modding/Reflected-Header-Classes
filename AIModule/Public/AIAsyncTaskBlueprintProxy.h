@@ -1,23 +1,23 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
-#include "OAISimpleDelegateDelegate.h"
 #include "AIRequestID.h"
 #include "EPathFollowingResult.h"
+#include "OAISimpleDelegateDelegate.h"
 #include "AIAsyncTaskBlueprintProxy.generated.h"
 
-UCLASS(MinimalAPI)
+UCLASS(Blueprintable, MinimalAPI)
 class UAIAsyncTaskBlueprintProxy : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOAISimpleDelegate OnSuccess;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOAISimpleDelegate OnFail;
     
     UAIAsyncTaskBlueprintProxy();
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnMoveCompleted(FAIRequestID RequestID, TEnumAsByte<EPathFollowingResult::Type> MovementResult);
     
 };

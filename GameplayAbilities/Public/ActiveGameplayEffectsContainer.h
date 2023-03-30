@@ -11,10 +11,10 @@ struct GAMEPLAYABILITIES_API FActiveGameplayEffectsContainer : public FFastArray
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FActiveGameplayEffect> GameplayEffects_Internal;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UGameplayEffect*> ApplicationImmunityQueryEffects;
     
 public:

@@ -5,12 +5,12 @@
 
 class UPawnAction;
 
-UCLASS()
+UCLASS(Blueprintable)
 class AIMODULE_API UBTTask_PushPawnAction : public UBTTask_PawnActionBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere, Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UPawnAction* Action;
     
 public:

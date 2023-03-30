@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "MovieSceneEventPtrs.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Guid -FallbackName=Guid
+#include "MovieSceneEventPtrs.h"
 #include "MovieSceneEventTriggerData.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FMovieSceneEventTriggerData {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMovieSceneEventPtrs Ptrs;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGuid ObjectBindingID;
     
     MOVIESCENETRACKS_API FMovieSceneEventTriggerData();

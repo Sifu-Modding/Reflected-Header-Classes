@@ -12,7 +12,7 @@ class SIFU_API UDodgeTypeUseCaseMatrix : public UObject {
     GENERATED_BODY()
 public:
     UDodgeTypeUseCaseMatrix();
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     EDodgeDirectionType BPE_GetDodgeToUseFromHitbox(const FHitBox& _hitbox, const UArchetypeAsset* _archetype) const;
     
 };

@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct FMovieSceneEventPtrs {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UFunction* Function;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TFieldPath<FProperty> BoundObjectProperty;
     
     MOVIESCENETRACKS_API FMovieSceneEventPtrs();

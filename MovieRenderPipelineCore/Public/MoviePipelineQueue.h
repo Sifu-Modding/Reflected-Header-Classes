@@ -1,23 +1,23 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
+#include "Templates/SubclassOf.h"
 #include "MoviePipelineQueue.generated.h"
 
 class UMoviePipelineExecutorJob;
 class UMoviePipelineQueue;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class MOVIERENDERPIPELINECORE_API UMoviePipelineQueue : public UObject {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     TArray<UMoviePipelineExecutorJob*> Jobs;
     
 public:
     UMoviePipelineQueue();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     TArray<UMoviePipelineExecutorJob*> GetJobs() const;
     
     UFUNCTION(BlueprintCallable)

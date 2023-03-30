@@ -1,9 +1,9 @@
 #include "BaseReplayController.h"
 #include "ReplaySpectatorPawn.h"
 
-class UHandleInput;
-class IHandleInput;
 class AReplayHUD;
+class IHandleInput;
+class UHandleInput;
 class UReplayCineCameraComponent;
 
 void ABaseReplayController::OnSaveGameStatusChanged(bool _bSaveInProgress, ESaveResult _eSaveResult) {
@@ -45,6 +45,9 @@ bool ABaseReplayController::BPF_IsInputActionAvailable(InputAction _eInputAction
 
 UReplayCineCameraComponent* ABaseReplayController::BPF_GetCineCameraComponent() const {
     return NULL;
+}
+
+void ABaseReplayController::BPF_ForceInputAvailabilityUpdate() {
 }
 
 ABaseReplayController::ABaseReplayController() {

@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EHandKeypoint.generated.h"
 
-UENUM()
-enum class EHandKeypoint {
+UENUM(BlueprintType)
+enum class EHandKeypoint : uint8 {
     Palm,
     Wrist,
     ThumbMetacarpal,

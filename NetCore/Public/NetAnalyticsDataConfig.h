@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FNetAnalyticsDataConfig {
     GENERATED_BODY()
 public:
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName DataName;
     
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bEnabled;
     
     NETCORE_API FNetAnalyticsDataConfig();

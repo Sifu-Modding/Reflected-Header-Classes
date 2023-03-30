@@ -4,11 +4,11 @@
 #include "EBTParallelMode.h"
 #include "BTComposite_SimpleParallel.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class AIMODULE_API UBTComposite_SimpleParallel : public UBTCompositeNode {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<EBTParallelMode::Type> FinishMode;
     
     UBTComposite_SimpleParallel();

@@ -1,43 +1,43 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ActorComponent -FallbackName=ActorComponent
+#include "EGameplayTaskRunResult.h"
 #include "GameplayTaskOwnerInterface.h"
 #include "OnClaimedResourcesChangeSignatureDelegate.h"
-#include "EGameplayTaskRunResult.h"
+#include "Templates/SubclassOf.h"
 #include "GameplayTasksComponent.generated.h"
 
-class UGameplayTaskResource;
 class UGameplayTask;
+class UGameplayTaskResource;
 
-UCLASS(BlueprintType, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class GAMEPLAYTASKS_API UGameplayTasksComponent : public UActorComponent, public IGameplayTaskOwnerInterface {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bIsNetDirty: 1;
     
 protected:
-    UPROPERTY(ReplicatedUsing=OnRep_SimulatedTasks)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_SimulatedTasks, meta=(AllowPrivateAccess=true))
     TArray<UGameplayTask*> SimulatedTasks;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UGameplayTask*> TaskPriorityQueue;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UGameplayTask*> TickingTasks;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UGameplayTask*> KnownTasks;
     
 public:
-    UPROPERTY(BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnClaimedResourcesChangeSignature OnClaimedResourcesChange;
     
     UGameplayTasksComponent();
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnRep_SimulatedTasks();
     
     UFUNCTION(BlueprintCallable)

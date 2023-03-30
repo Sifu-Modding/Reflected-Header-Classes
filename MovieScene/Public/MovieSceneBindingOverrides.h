@@ -4,12 +4,12 @@
 #include "MovieSceneBindingOverrideData.h"
 #include "MovieSceneBindingOverrides.generated.h"
 
-UCLASS(DefaultToInstanced, EditInlineNew)
+UCLASS(Blueprintable, DefaultToInstanced, EditInlineNew)
 class MOVIESCENE_API UMovieSceneBindingOverrides : public UObject {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FMovieSceneBindingOverrideData> BindingData;
     
 public:

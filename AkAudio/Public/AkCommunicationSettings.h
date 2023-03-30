@@ -2,23 +2,23 @@
 #include "CoreMinimal.h"
 #include "AkCommunicationSettings.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FAkCommunicationSettings {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint32 PoolSize;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint16 DiscoveryBroadcastPort;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint16 CommandPort;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint16 NotificationPort;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString NetworkName;
     
     AKAUDIO_API FAkCommunicationSettings();

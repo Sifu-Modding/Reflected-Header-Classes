@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EAbilityTaskNetSyncType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EAbilityTaskNetSyncType : uint8 {
     BothWait,
     OnlyServerWait,

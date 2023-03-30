@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RigUnit_CollectionBase.h"
 #include "RigElementKeyCollection.h"
+#include "RigUnit_CollectionBase.h"
 #include "RigUnit_CollectionCount.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_CollectionCount : public FRigUnit_CollectionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRigElementKeyCollection Collection;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 Count;
     
     CONTROLRIG_API FRigUnit_CollectionCount();

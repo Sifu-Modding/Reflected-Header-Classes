@@ -1,18 +1,18 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RigUnit_MathRBFInterpolateQuatBase.h"
-#include "MathRBFInterpolateQuatQuat_Target.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Quat -FallbackName=Quat
+#include "MathRBFInterpolateQuatQuat_Target.h"
+#include "RigUnit_MathRBFInterpolateQuatBase.h"
 #include "RigUnit_MathRBFInterpolateQuatQuat.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_MathRBFInterpolateQuatQuat : public FRigUnit_MathRBFInterpolateQuatBase {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FMathRBFInterpolateQuatQuat_Target> Targets;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FQuat Output;
     
     CONTROLRIG_API FRigUnit_MathRBFInterpolateQuatQuat();

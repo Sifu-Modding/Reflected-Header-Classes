@@ -4,11 +4,11 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCUserDefinedEnumHandler -FallbackName=SCUserDefinedEnumHandler
 #include "OrderPickupObjectHelper.generated.h"
 
-class AFightingCharacter;
 class AActor;
+class AFightingCharacter;
 class UAnimSequence;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class SIFU_API UOrderPickupObjectHelper : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

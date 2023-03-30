@@ -3,7 +3,7 @@
 #include "RigUnit_MathBase.h"
 #include "RigUnit_MathRBFInterpolateBase.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_MathRBFInterpolateBase : public FRigUnit_MathBase {
     GENERATED_BODY()
 public:

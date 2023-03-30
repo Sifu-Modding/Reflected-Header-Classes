@@ -1,10 +1,10 @@
 #include "BlueprintGameplayTagLibrary.h"
 #include "Templates/SubclassOf.h"
 
-class UGameplayTagAssetInterface;
-class IGameplayTagAssetInterface;
-class UObject;
 class AActor;
+class IGameplayTagAssetInterface;
+class UGameplayTagAssetInterface;
+class UObject;
 
 bool UBlueprintGameplayTagLibrary::RemoveGameplayTag(FGameplayTagContainer& TagContainer, FGameplayTag Tag) {
     return false;

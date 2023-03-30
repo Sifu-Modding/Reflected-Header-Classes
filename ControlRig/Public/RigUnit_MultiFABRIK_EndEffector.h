@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FRigUnit_MultiFABRIK_EndEffector {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName Bone;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector Location;
     
     CONTROLRIG_API FRigUnit_MultiFABRIK_EndEffector();

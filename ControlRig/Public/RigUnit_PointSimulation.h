@@ -1,65 +1,65 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RigUnit_SimBaseMutable.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
-#include "CRSimPoint.h"
+#include "CRFourPointBezier.h"
 #include "CRSimLinearSpring.h"
+#include "CRSimPoint.h"
 #include "CRSimPointForce.h"
 #include "CRSimSoftCollision.h"
 #include "ECRSimPointIntegrateType.h"
 #include "RigUnit_PointSimulation_BoneTarget.h"
-#include "RigUnit_PointSimulation_WorkData.h"
 #include "RigUnit_PointSimulation_DebugSettings.h"
-#include "CRFourPointBezier.h"
+#include "RigUnit_PointSimulation_WorkData.h"
+#include "RigUnit_SimBaseMutable.h"
 #include "RigUnit_PointSimulation.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_PointSimulation : public FRigUnit_SimBaseMutable {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FCRSimPoint> Points;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FCRSimLinearSpring> Links;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FCRSimPointForce> Forces;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FCRSimSoftCollision> CollisionVolumes;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float SimulatedStepsPerSecond;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ECRSimPointIntegrateType IntegratorType;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float VerletBlend;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FRigUnit_PointSimulation_BoneTarget> BoneTargets;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bLimitLocalPosition;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bPropagateToChildren;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector PrimaryAimAxis;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector SecondaryAimAxis;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRigUnit_PointSimulation_DebugSettings DebugSettings;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FCRFourPointBezier Bezier;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FRigUnit_PointSimulation_WorkData WorkData;
     
     CONTROLRIG_API FRigUnit_PointSimulation();

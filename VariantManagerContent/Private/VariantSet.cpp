@@ -1,9 +1,9 @@
 #include "VariantSet.h"
 
-class UTexture2D;
-class UObject;
-class UVariant;
 class ULevelVariantSets;
+class UObject;
+class UTexture2D;
+class UVariant;
 
 void UVariantSet::SetThumbnailFromTexture(UTexture2D* NewThumbnail) {
 }

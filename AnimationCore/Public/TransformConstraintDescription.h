@@ -4,11 +4,11 @@
 #include "ETransformConstraintType.h"
 #include "TransformConstraintDescription.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct ANIMATIONCORE_API FTransformConstraintDescription : public FConstraintDescriptionEx {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETransformConstraintType TransformType;
     
     FTransformConstraintDescription();

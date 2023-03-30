@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FGameplayTagResponseTableEntry {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayTagReponsePair Positive;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayTagReponsePair Negative;
     
     GAMEPLAYABILITIES_API FGameplayTagResponseTableEntry();

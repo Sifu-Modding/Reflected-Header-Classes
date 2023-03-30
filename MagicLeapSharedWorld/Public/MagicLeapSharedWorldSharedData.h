@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct MAGICLEAPSHAREDWORLD_API FMagicLeapSharedWorldSharedData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FGuid> PinIDs;
     
     FMagicLeapSharedWorldSharedData();

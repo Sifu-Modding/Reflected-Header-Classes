@@ -3,7 +3,7 @@
 #include "RigUnit_MathQuaternionUnaryOp.h"
 #include "RigUnit_MathQuaternionInverse.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_MathQuaternionInverse : public FRigUnit_MathQuaternionUnaryOp {
     GENERATED_BODY()
 public:

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EGameplayEffectGrantedAbilityRemovePolicy.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EGameplayEffectGrantedAbilityRemovePolicy : uint8 {
     CancelAbilityImmediately,
     RemoveAbilityOnEnd,

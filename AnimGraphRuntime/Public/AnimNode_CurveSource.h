@@ -4,23 +4,23 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=PoseLink -FallbackName=PoseLink
 #include "AnimNode_CurveSource.generated.h"
 
-class UCurveSourceInterface;
 class ICurveSourceInterface;
+class UCurveSourceInterface;
 
 USTRUCT(BlueprintType)
 struct ANIMGRAPHRUNTIME_API FAnimNode_CurveSource : public FAnimNode_Base {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FPoseLink SourcePose;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName SourceBinding;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Alpha;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TScriptInterface<ICurveSourceInterface> CurveSource;
     
     FAnimNode_CurveSource();

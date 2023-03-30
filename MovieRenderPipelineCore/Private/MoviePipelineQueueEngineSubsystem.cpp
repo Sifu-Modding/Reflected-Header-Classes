@@ -1,6 +1,6 @@
 #include "MoviePipelineQueueEngineSubsystem.h"
-#include "Templates/SubclassOf.h"
 #include "MoviePipelineQueue.h"
+#include "Templates/SubclassOf.h"
 
 class UMoviePipelineExecutorBase;
 

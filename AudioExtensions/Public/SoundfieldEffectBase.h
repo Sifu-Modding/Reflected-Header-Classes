@@ -5,11 +5,11 @@
 
 class USoundfieldEffectSettingsBase;
 
-UCLASS(Abstract, EditInlineNew)
+UCLASS(Abstract, Blueprintable, EditInlineNew)
 class AUDIOEXTENSIONS_API USoundfieldEffectBase : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundfieldEffectSettingsBase* Settings;
     
     USoundfieldEffectBase();

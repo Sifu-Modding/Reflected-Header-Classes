@@ -2,17 +2,17 @@
 #include "CoreMinimal.h"
 #include "NiagaraRandInfo.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FNiagaraRandInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 Seed1;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 Seed2;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 Seed3;
     
     NIAGARA_API FNiagaraRandInfo();

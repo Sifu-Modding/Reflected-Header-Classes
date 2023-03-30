@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FPositionHistory {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FVector> Positions;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Range;
     
     ANIMGRAPHRUNTIME_API FPositionHistory();

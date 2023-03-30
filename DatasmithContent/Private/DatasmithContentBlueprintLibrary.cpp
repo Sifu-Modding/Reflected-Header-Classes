@@ -1,7 +1,7 @@
 #include "DatasmithContentBlueprintLibrary.h"
 
-class UObject;
 class UDatasmithAssetUserData;
+class UObject;
 
 FString UDatasmithContentBlueprintLibrary::GetDatasmithUserDataValueForKey(UObject* Object, FName Key) {
     return TEXT("");

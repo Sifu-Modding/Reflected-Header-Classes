@@ -3,11 +3,11 @@
 #include "CachedRigElement.h"
 #include "RigUnit_ModifyTransforms_WorkData.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_ModifyTransforms_WorkData {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FCachedRigElement> CachedItems;
     
     CONTROLRIG_API FRigUnit_ModifyTransforms_WorkData();

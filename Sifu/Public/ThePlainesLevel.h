@@ -1,68 +1,68 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCLevelScriptActor -FallbackName=SCLevelScriptActor
-#include "SoundStateInfo.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=EEndPlayReason -FallbackName=EEndPlayReason
+//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCLevelScriptActor -FallbackName=SCLevelScriptActor
 #include "AIPhaseTransitionData.h"
+#include "SoundStateInfo.h"
 #include "ThePlainesLevel.generated.h"
 
+class AActor;
+class AFightingCharacter;
 class ASCBlenderManager;
 class UAkAudioBank;
 class ULevelSequence;
-class AActor;
-class AFightingCharacter;
 
-UCLASS()
+UCLASS(Blueprintable)
 class SIFU_API AThePlainesLevel : public ASCLevelScriptActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ASCBlenderManager* m_BlenderManager;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ULevelSequence* m_StartupSequence;
     
 private:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bInChargeOfSoundSave;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UAkAudioBank*> m_AudioBanksToLoad;
     
-    UPROPERTY(SaveGame)
+    UPROPERTY(EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
     TMap<uint32, FSoundStateInfo> m_AKStateGroupValues;
     
-    UPROPERTY(SaveGame)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
     TArray<UAkAudioBank*> m_SavedSoundBanksToLoad;
     
 public:
     AThePlainesLevel();
 private:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void UnregisterFromSignificanceOnActorEndPlay(AActor* _actor, TEnumAsByte<EEndPlayReason::Type> _eEndPlayReason);
     
 protected:
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool BPF_IsSoundStateContainedInSaved(const FString& _SoundState) const;
     
     UFUNCTION(BlueprintCallable)
     void BPF_InitSoundState(const FString& _StateGroup, const FString& _state, bool _bReplicates, bool _bSaveGame);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BPE_OnStartAIPhaseChanged(AFightingCharacter* _fightingChar, const FAIPhaseTransitionData& _phaseTransition);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BPE_OnLevelTransition(int32 _iTransitionIndex);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BPE_OnEndAIPhaseChanged(AFightingCharacter* _fightingChar, int32 _iPreviousPhaseIndex, int32 _iCurrentPhaseIndex);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BPE_OnAppliedSoundStateFromSave();
     
 public:
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BPE_AllSoundBanksLoaded();
     
 };

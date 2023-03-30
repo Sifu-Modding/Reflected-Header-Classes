@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ECRSimPointForceType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class ECRSimPointForceType : uint8 {
     Direction,
 };

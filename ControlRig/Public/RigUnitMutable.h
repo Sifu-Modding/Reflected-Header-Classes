@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RigUnit.h"
 #include "ControlRigExecuteContext.h"
+#include "RigUnit.h"
 #include "RigUnitMutable.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct CONTROLRIG_API FRigUnitMutable : public FRigUnit {
     GENERATED_BODY()
 public:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FControlRigExecuteContext ExecuteContext;
     
     FRigUnitMutable();

@@ -2,35 +2,35 @@
 #include "CoreMinimal.h"
 #include "GameplayCueObjectLibrary.generated.h"
 
-class UObjectLibrary;
 class UGameplayCueSet;
+class UObjectLibrary;
 
 USTRUCT(BlueprintType)
 struct FGameplayCueObjectLibrary {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FString> Paths;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UObjectLibrary* ActorObjectLibrary;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UObjectLibrary* StaticObjectLibrary;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UGameplayCueSet* CueSet;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bShouldSyncScan;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bShouldAsyncLoad;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bShouldSyncLoad;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bHasBeenInitialized;
     
     GAMEPLAYABILITIES_API FGameplayCueObjectLibrary();

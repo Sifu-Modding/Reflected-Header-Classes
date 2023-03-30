@@ -3,17 +3,17 @@
 #include "DatasmithObjectTemplate.h"
 #include "DatasmithStaticMeshComponentTemplate.generated.h"
 
-class UStaticMesh;
 class UMaterialInterface;
+class UStaticMesh;
 
-UCLASS()
+UCLASS(Blueprintable)
 class DATASMITHCONTENT_API UDatasmithStaticMeshComponentTemplate : public UDatasmithObjectTemplate {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UStaticMesh* StaticMesh;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UMaterialInterface*> OverrideMaterials;
     
     UDatasmithStaticMeshComponentTemplate();

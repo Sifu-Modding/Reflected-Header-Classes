@@ -2,5 +2,5 @@
 #include "CoreMinimal.h"
 #include "OnMouseCaptureEndEventDelegate2.generated.h"
 
-UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnMouseCaptureEndEvent);
+UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnMouseCaptureEndEvent);
 

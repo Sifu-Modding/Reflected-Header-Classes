@@ -3,10 +3,10 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
 #include "SkillButtonHelper.generated.h"
 
-class USkillsDB;
 class USkillButton;
+class USkillsDB;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class USkillButtonHelper : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

@@ -4,11 +4,11 @@
 #include "OnEnvelopeFollowerUpdateDelegate.h"
 #include "EnvelopeFollowerListener.generated.h"
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class SYNTHESIS_API UEnvelopeFollowerListener : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnEnvelopeFollowerUpdate OnEnvelopeFollowerUpdate;
     
     UEnvelopeFollowerListener();

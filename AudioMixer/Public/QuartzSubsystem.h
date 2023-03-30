@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=WorldSubsystem -FallbackName=WorldSubsystem
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=QuartzClockSettings -FallbackName=QuartzClockSettings
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=WorldSubsystem -FallbackName=WorldSubsystem
 #include "QuartzSubsystem.generated.h"
 
 class UObject;
 class UQuartzClockHandle;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class AUDIOMIXER_API UQuartzSubsystem : public UWorldSubsystem {
     GENERATED_BODY()
 public:

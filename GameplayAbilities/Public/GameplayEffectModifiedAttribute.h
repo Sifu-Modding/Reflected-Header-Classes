@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct GAMEPLAYABILITIES_API FGameplayEffectModifiedAttribute {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayAttribute Attribute;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float TotalMagnitude;
     
     FGameplayEffectModifiedAttribute();

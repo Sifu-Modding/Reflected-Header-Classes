@@ -4,14 +4,14 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=AIModule -ObjectName=BlackboardKeySelector -FallbackName=BlackboardKeySelector
 #include "BTTask_DynamicCameraNode.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class SIFU_API UBTTask_DynamicCameraNode : public UBTTaskNode {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBlackboardKeySelector m_CameraDataBlackboardKeySelector;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBlackboardKeySelector m_ActorRefBlackboardKeySelector;
     
     UBTTask_DynamicCameraNode();

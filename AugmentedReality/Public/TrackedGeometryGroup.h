@@ -6,17 +6,17 @@ class AARActor;
 class UARComponent;
 class UARTrackedGeometry;
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct AUGMENTEDREALITY_API FTrackedGeometryGroup {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AARActor* ARActor;
     
-    UPROPERTY(Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UARComponent* ARComponent;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UARTrackedGeometry* TrackedGeometry;
     
     FTrackedGeometryGroup();

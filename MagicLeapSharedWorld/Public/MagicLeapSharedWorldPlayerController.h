@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=PlayerController -FallbackName=PlayerController
-#include "MagicLeapSharedWorldLocalData.h"
 #include "MagicLeapSharedWorldAlignmentTransforms.h"
+#include "MagicLeapSharedWorldLocalData.h"
 #include "MagicLeapSharedWorldPlayerController.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class MAGICLEAPSHAREDWORLD_API AMagicLeapSharedWorldPlayerController : public APlayerController {
     GENERATED_BODY()
 public:
@@ -16,16 +16,16 @@ public:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void ServerSetAlignmentTransforms(const FMagicLeapSharedWorldAlignmentTransforms& InAlignmentTransforms);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsChosenOne() const;
     
     UFUNCTION(BlueprintCallable, Client, Reliable)
     void ClientSetChosenOne(bool bChosenOne);
     
-    UFUNCTION(Client, Reliable)
+    UFUNCTION(BlueprintCallable, Client, Reliable)
     void ClientMarkReadyForSendingLocalData();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool CanSendLocalDataToServer() const;
     
 };

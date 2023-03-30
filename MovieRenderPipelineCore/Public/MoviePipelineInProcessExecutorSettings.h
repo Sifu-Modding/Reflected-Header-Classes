@@ -3,20 +3,20 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=DeveloperSettings -ObjectName=DeveloperSettings -FallbackName=DeveloperSettings
 #include "MoviePipelineInProcessExecutorSettings.generated.h"
 
-UCLASS(BlueprintType, DefaultConfig)
+UCLASS(Blueprintable, Config=Engine, DefaultConfig)
 class MOVIERENDERPIPELINECORE_API UMoviePipelineInProcessExecutorSettings : public UDeveloperSettings {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bCloseEditor;
     
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString AdditionalCommandLineArguments;
     
-    UPROPERTY(BlueprintReadOnly, Config, Transient, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FString InheritedCommandLineArguments;
     
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 InitialDelayFrameCount;
     
     UMoviePipelineInProcessExecutorSettings();

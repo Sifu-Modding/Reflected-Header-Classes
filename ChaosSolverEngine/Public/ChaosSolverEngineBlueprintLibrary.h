@@ -5,12 +5,12 @@
 #include "ChaosPhysicsCollisionInfo.h"
 #include "ChaosSolverEngineBlueprintLibrary.generated.h"
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class CHAOSSOLVERENGINE_API UChaosSolverEngineBlueprintLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UChaosSolverEngineBlueprintLibrary();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static FHitResult ConvertPhysicsCollisionToHitResult(const FChaosPhysicsCollisionInfo& PhysicsCollision);
     
 };

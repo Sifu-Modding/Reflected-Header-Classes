@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FMathRBFInterpolateQuatFloat_Target {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FQuat Target;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Value;
     
     CONTROLRIG_API FMathRBFInterpolateQuatFloat_Target();

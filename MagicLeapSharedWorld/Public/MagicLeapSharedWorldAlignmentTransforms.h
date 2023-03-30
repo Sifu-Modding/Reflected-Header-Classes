@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct MAGICLEAPSHAREDWORLD_API FMagicLeapSharedWorldAlignmentTransforms {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTransform> AlignmentTransforms;
     
     FMagicLeapSharedWorldAlignmentTransforms();

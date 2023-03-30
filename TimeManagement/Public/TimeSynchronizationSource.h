@@ -3,14 +3,14 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
 #include "TimeSynchronizationSource.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class TIMEMANAGEMENT_API UTimeSynchronizationSource : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bUseForSynchronization;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 FrameOffset;
     
     UTimeSynchronizationSource();

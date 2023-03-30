@@ -6,7 +6,7 @@ USTRUCT(BlueprintType)
 struct GAMEPLAYABILITIES_API FGameplayCueTranslatorNodeIndex {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 Index;
     
     FGameplayCueTranslatorNodeIndex();

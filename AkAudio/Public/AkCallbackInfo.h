@@ -5,11 +5,11 @@
 
 class UAkComponent;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class AKAUDIO_API UAkCallbackInfo : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UAkComponent* AkComponent;
     
     UAkCallbackInfo();

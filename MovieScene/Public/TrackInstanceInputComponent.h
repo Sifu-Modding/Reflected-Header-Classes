@@ -4,14 +4,14 @@
 
 class UMovieSceneSection;
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTrackInstanceInputComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UMovieSceneSection* Section;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 OutputIndex;
     
     MOVIESCENE_API FTrackInstanceInputComponent();

@@ -1,25 +1,25 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "EEnvTestDot.h"
 #include "EnvDirection.h"
 #include "EnvQueryTest.h"
-#include "EEnvTestDot.h"
 #include "EnvQueryTest_Dot.generated.h"
 
-UCLASS(MinimalAPI)
+UCLASS(Blueprintable, MinimalAPI)
 class UEnvQueryTest_Dot : public UEnvQueryTest {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FEnvDirection LineA;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FEnvDirection LineB;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EEnvTestDot TestMode;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bAbsoluteValue;
     
 public:

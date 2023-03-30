@@ -1,24 +1,24 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "ENDIExport_GPUAllocationMode.h"
-#include "NiagaraUserParameterBinding.h"
 #include "NiagaraDataInterface.h"
+#include "NiagaraUserParameterBinding.h"
 #include "NiagaraDataInterfaceExport.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class NIAGARA_API UNiagaraDataInterfaceExport : public UNiagaraDataInterface {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FNiagaraUserParameterBinding CallbackHandlerParameter;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ENDIExport_GPUAllocationMode GPUAllocationMode;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 GPUAllocationFixedSize;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float GPUAllocationPerParticleSize;
     
     UNiagaraDataInterfaceExport();

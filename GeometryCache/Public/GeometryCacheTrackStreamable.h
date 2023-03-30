@@ -5,15 +5,15 @@
 
 class UGeometryCacheCodecBase;
 
-UCLASS(CollapseCategories)
+UCLASS(Blueprintable, CollapseCategories)
 class GEOMETRYCACHE_API UGeometryCacheTrackStreamable : public UGeometryCacheTrack {
     GENERATED_BODY()
 public:
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UGeometryCacheCodecBase* Codec;
     
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float StartSampleTime;
     
 public:

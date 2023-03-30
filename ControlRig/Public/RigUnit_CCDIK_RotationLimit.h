@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FRigUnit_CCDIK_RotationLimit {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName Bone;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Limit;
     
     CONTROLRIG_API FRigUnit_CCDIK_RotationLimit();

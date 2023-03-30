@@ -4,11 +4,11 @@
 #include "MovieSceneEntitySystemGraph.h"
 #include "MovieSceneEntitySystemLinker.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class MOVIESCENE_API UMovieSceneEntitySystemLinker : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMovieSceneEntitySystemGraph SystemGraph;
     
     UMovieSceneEntitySystemLinker();

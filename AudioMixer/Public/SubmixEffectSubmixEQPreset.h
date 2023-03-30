@@ -4,11 +4,11 @@
 #include "SubmixEffectSubmixEQSettings.h"
 #include "SubmixEffectSubmixEQPreset.generated.h"
 
-UCLASS(BlueprintType, EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class AUDIOMIXER_API USubmixEffectSubmixEQPreset : public USoundEffectSubmixPreset {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSubmixEffectSubmixEQSettings Settings;
     
     USubmixEffectSubmixEQPreset();

@@ -1,130 +1,130 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=Vector_NetQuantize100 -FallbackName=Vector_NetQuantize100
+//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTag -FallbackName=GameplayTag
 //CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTagAssetInterface -FallbackName=GameplayTagAssetInterface
+//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTagContainer -FallbackName=GameplayTagContainer
 //CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTasks -ObjectName=GameplayTasksComponent -FallbackName=GameplayTasksComponent
-#include "GameplayAbilitySpecContainer.h"
-#include "GameplayEffectSpecForRPC.h"
 #include "AbilitySystemReplicationProxyInterface.h"
-#include "GameplayEffectContextHandle.h"
+#include "ActiveGameplayCueContainer.h"
+#include "ActiveGameplayEffectHandle.h"
+#include "ActiveGameplayEffectsContainer.h"
 #include "AttributeDefaults.h"
+#include "EAbilityGenericReplicatedEvent.h"
 #include "GameplayAbilityActivationInfo.h"
-#include "GameplayEffectQuery.h"
 #include "GameplayAbilityLocalAnimMontage.h"
 #include "GameplayAbilityRepAnimMontage.h"
-#include "ActiveGameplayEffectsContainer.h"
-#include "MinimalReplicationTagCountMap.h"
-#include "ActiveGameplayCueContainer.h"
-#include "ReplicatedPredictionKeyMap.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTagContainer -FallbackName=GameplayTagContainer
-#include "GameplayAttribute.h"
-#include "ActiveGameplayEffectHandle.h"
+#include "GameplayAbilitySpecContainer.h"
 #include "GameplayAbilitySpecHandle.h"
-#include "PredictionKey.h"
-#include "GameplayEventData.h"
 #include "GameplayAbilityTargetDataHandle.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTag -FallbackName=GameplayTag
-#include "EAbilityGenericReplicatedEvent.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=Vector_NetQuantize100 -FallbackName=Vector_NetQuantize100
-#include "ServerAbilityRPCBatch.h"
+#include "GameplayAttribute.h"
 #include "GameplayCueParameters.h"
+#include "GameplayEffectContextHandle.h"
+#include "GameplayEffectQuery.h"
+#include "GameplayEffectSpecForRPC.h"
 #include "GameplayEffectSpecHandle.h"
+#include "GameplayEventData.h"
+#include "MinimalReplicationTagCountMap.h"
+#include "PredictionKey.h"
+#include "ReplicatedPredictionKeyMap.h"
+#include "ServerAbilityRPCBatch.h"
+#include "Templates/SubclassOf.h"
 #include "AbilitySystemComponent.generated.h"
 
-class UAttributeSet;
 class AActor;
 class AGameplayAbilityTargetActor;
+class UAbilitySystemComponent;
+class UAnimMontage;
+class UAttributeSet;
+class UDataTable;
 class UGameplayAbility;
 class UGameplayEffect;
-class UDataTable;
-class UAnimMontage;
-class UAbilitySystemComponent;
 
-UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class GAMEPLAYABILITIES_API UAbilitySystemComponent : public UGameplayTasksComponent, public IGameplayTagAssetInterface, public IAbilitySystemReplicationProxyInterface {
     GENERATED_BODY()
 public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE(FAbilityConfirmOrCancel);
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FAbilityAbilityKey, int32, InputID);
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FAttributeDefaults> DefaultStartingData;
     
-    UPROPERTY(Instanced, Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Replicated, meta=(AllowPrivateAccess=true))
     TArray<UAttributeSet*> SpawnedAttributes;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName AffectedAnimInstanceTag;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float OutgoingDuration;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float IncomingDuration;
     
-    UPROPERTY(ReplicatedUsing=OnRep_ClientDebugString)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_ClientDebugString, meta=(AllowPrivateAccess=true))
     TArray<FString> ClientDebugStrings;
     
-    UPROPERTY(ReplicatedUsing=OnRep_ServerDebugString)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_ServerDebugString, meta=(AllowPrivateAccess=true))
     TArray<FString> ServerDebugStrings;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool UserAbilityActivationInhibited;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool ReplicationProxyEnabled;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bSuppressGrantAbility;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bSuppressGameplayCues;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<AGameplayAbilityTargetActor*> SpawnedTargetActors;
     
-    UPROPERTY(ReplicatedUsing=OnRep_OwningActor)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_OwningActor, meta=(AllowPrivateAccess=true))
     AActor* OwnerActor;
     
-    UPROPERTY(ReplicatedUsing=OnRep_OwningActor)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_OwningActor, meta=(AllowPrivateAccess=true))
     AActor* AvatarActor;
     
 protected:
-    UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_ActivateAbilities)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_ActivateAbilities, meta=(AllowPrivateAccess=true))
     FGameplayAbilitySpecContainer ActivatableAbilities;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UGameplayAbility*> AllReplicatedInstancedAbilities;
     
-    UPROPERTY(ReplicatedUsing=OnRep_ReplicatedAnimMontage)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_ReplicatedAnimMontage, meta=(AllowPrivateAccess=true))
     FGameplayAbilityRepAnimMontage RepAnimMontageInfo;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bCachedIsNetSimulated;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bPendingMontageRep;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayAbilityLocalAnimMontage LocalAnimMontageInfo;
     
-    UPROPERTY(Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     FActiveGameplayEffectsContainer ActiveGameplayEffects;
     
-    UPROPERTY(Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     FActiveGameplayCueContainer ActiveGameplayCues;
     
-    UPROPERTY(Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     FActiveGameplayCueContainer MinimalReplicationGameplayCues;
     
-    UPROPERTY(Replicated, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, Transient, meta=(AllowPrivateAccess=true))
     TArray<uint8> BlockedAbilityBindings;
     
-    UPROPERTY(Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     FMinimalReplicationTagCountMap MinimalReplicationTags;
     
 public:
-    UPROPERTY(Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     FReplicatedPredictionKeyMap ReplicatedPredictionKeyMap;
     
     UAbilitySystemComponent();
@@ -152,55 +152,55 @@ public:
     void SetActiveGameplayEffectLevel(FActiveGameplayEffectHandle ActiveHandle, int32 NewLevel);
     
 protected:
-    UFUNCTION(Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
     void ServerTryActivateAbilityWithEventData(FGameplayAbilitySpecHandle AbilityToActivate, bool InputPressed, FPredictionKey PredictionKey, FGameplayEventData TriggerEventData);
     
-    UFUNCTION(Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
     void ServerTryActivateAbility(FGameplayAbilitySpecHandle AbilityToActivate, bool InputPressed, FPredictionKey PredictionKey);
     
 public:
-    UFUNCTION(Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
     void ServerSetReplicatedTargetDataCancelled(FGameplayAbilitySpecHandle AbilityHandle, FPredictionKey AbilityOriginalPredictionKey, FPredictionKey CurrentPredictionKey);
     
-    UFUNCTION(Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
     void ServerSetReplicatedTargetData(FGameplayAbilitySpecHandle AbilityHandle, FPredictionKey AbilityOriginalPredictionKey, const FGameplayAbilityTargetDataHandle& ReplicatedTargetDataHandle, FGameplayTag ApplicationTag, FPredictionKey CurrentPredictionKey);
     
-    UFUNCTION(Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
     void ServerSetReplicatedEventWithPayload(TEnumAsByte<EAbilityGenericReplicatedEvent::Type> EventType, FGameplayAbilitySpecHandle AbilityHandle, FPredictionKey AbilityOriginalPredictionKey, FPredictionKey CurrentPredictionKey, FVector_NetQuantize100 VectorPayload);
     
-    UFUNCTION(Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
     void ServerSetReplicatedEvent(TEnumAsByte<EAbilityGenericReplicatedEvent::Type> EventType, FGameplayAbilitySpecHandle AbilityHandle, FPredictionKey AbilityOriginalPredictionKey, FPredictionKey CurrentPredictionKey);
     
-    UFUNCTION(Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
     void ServerSetInputReleased(FGameplayAbilitySpecHandle AbilityHandle);
     
-    UFUNCTION(Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
     void ServerSetInputPressed(FGameplayAbilitySpecHandle AbilityHandle);
     
-    UFUNCTION(Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
     void ServerPrintDebug_RequestWithStrings(const TArray<FString>& Strings);
     
-    UFUNCTION(Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
     void ServerPrintDebug_Request();
     
 protected:
-    UFUNCTION(Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
     void ServerEndAbility(FGameplayAbilitySpecHandle AbilityToEnd, FGameplayAbilityActivationInfo ActivationInfo, FPredictionKey PredictionKey);
     
-    UFUNCTION(Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
     void ServerCurrentMontageSetPlayRate(UAnimMontage* ClientAnimMontage, float InPlayRate);
     
-    UFUNCTION(Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
     void ServerCurrentMontageSetNextSectionName(UAnimMontage* ClientAnimMontage, float ClientPosition, FName SectionName, FName NextSectionName);
     
-    UFUNCTION(Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
     void ServerCurrentMontageJumpToSectionName(UAnimMontage* ClientAnimMontage, FName SectionName);
     
-    UFUNCTION(Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
     void ServerCancelAbility(FGameplayAbilitySpecHandle AbilityToCancel, FGameplayAbilityActivationInfo ActivationInfo);
     
 public:
-    UFUNCTION(Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
     void ServerAbilityRPCBatch(FServerAbilityRPCBatch BatchInfo);
     
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
@@ -221,74 +221,74 @@ public:
     UFUNCTION(BlueprintCallable)
     int32 RemoveActiveEffectsWithAppliedTags(FGameplayTagContainer Tags);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnRep_ServerDebugString();
     
 protected:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnRep_ReplicatedAnimMontage();
     
 public:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnRep_OwningActor();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnRep_ClientDebugString();
     
 protected:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnRep_ActivateAbilities();
     
 public:
-    UFUNCTION(NetMulticast, Unreliable)
+    UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
     void NetMulticast_InvokeGameplayCuesExecuted_WithParams(const FGameplayTagContainer GameplayCueTags, FPredictionKey PredictionKey, FGameplayCueParameters GameplayCueParameters);
     
-    UFUNCTION(NetMulticast, Unreliable)
+    UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
     void NetMulticast_InvokeGameplayCuesExecuted(const FGameplayTagContainer GameplayCueTags, FPredictionKey PredictionKey, FGameplayEffectContextHandle EffectContext);
     
-    UFUNCTION(NetMulticast, Unreliable)
+    UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
     void NetMulticast_InvokeGameplayCuesAddedAndWhileActive_WithParams(const FGameplayTagContainer GameplayCueTags, FPredictionKey PredictionKey, FGameplayCueParameters GameplayCueParameters);
     
-    UFUNCTION(NetMulticast, Unreliable)
+    UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
     void NetMulticast_InvokeGameplayCueExecuted_WithParams(const FGameplayTag GameplayCueTag, FPredictionKey PredictionKey, FGameplayCueParameters GameplayCueParameters);
     
-    UFUNCTION(NetMulticast, Unreliable)
+    UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
     void NetMulticast_InvokeGameplayCueExecuted_FromSpec(const FGameplayEffectSpecForRPC Spec, FPredictionKey PredictionKey);
     
-    UFUNCTION(NetMulticast, Unreliable)
+    UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
     void NetMulticast_InvokeGameplayCueExecuted(const FGameplayTag GameplayCueTag, FPredictionKey PredictionKey, FGameplayEffectContextHandle EffectContext);
     
-    UFUNCTION(NetMulticast, Unreliable)
+    UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
     void NetMulticast_InvokeGameplayCueAddedAndWhileActive_WithParams(const FGameplayTag GameplayCueTag, FPredictionKey PredictionKey, FGameplayCueParameters GameplayCueParameters);
     
-    UFUNCTION(NetMulticast, Unreliable)
+    UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
     void NetMulticast_InvokeGameplayCueAddedAndWhileActive_FromSpec(const FGameplayEffectSpecForRPC& Spec, FPredictionKey PredictionKey);
     
-    UFUNCTION(NetMulticast, Unreliable)
+    UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
     void NetMulticast_InvokeGameplayCueAdded_WithParams(const FGameplayTag GameplayCueTag, FPredictionKey PredictionKey, FGameplayCueParameters Parameters);
     
-    UFUNCTION(NetMulticast, Unreliable)
+    UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
     void NetMulticast_InvokeGameplayCueAdded(const FGameplayTag GameplayCueTag, FPredictionKey PredictionKey, FGameplayEffectContextHandle EffectContext);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FGameplayEffectSpecHandle MakeOutgoingSpec(TSubclassOf<UGameplayEffect> GameplayEffectClass, float Level, FGameplayEffectContextHandle Context) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FGameplayEffectContextHandle MakeEffectContext() const;
     
     UFUNCTION(BlueprintCallable)
     void K2_InitStats(TSubclassOf<UAttributeSet> Attributes, const UDataTable* DataTable);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsGameplayCueActive(const FGameplayTag GameplayCueTag) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool GetUserAbilityActivationInhibited() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetGameplayEffectMagnitude(FActiveGameplayEffectHandle Handle, FGameplayAttribute Attribute) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetGameplayEffectCount(TSubclassOf<UGameplayEffect> SourceGameplayEffect, UAbilitySystemComponent* OptionalInstigatorFilterComponent, bool bEnforceOnGoingCheck);
     
     UFUNCTION(BlueprintCallable, BlueprintPure=false)
@@ -298,27 +298,27 @@ public:
     TArray<FActiveGameplayEffectHandle> GetActiveEffects(const FGameplayEffectQuery& Query) const;
     
 protected:
-    UFUNCTION(Client, Reliable)
+    UFUNCTION(BlueprintCallable, Client, Reliable)
     void ClientTryActivateAbility(FGameplayAbilitySpecHandle AbilityToActivate);
     
 public:
-    UFUNCTION(Client, Reliable)
+    UFUNCTION(BlueprintCallable, Client, Reliable)
     void ClientSetReplicatedEvent(TEnumAsByte<EAbilityGenericReplicatedEvent::Type> EventType, FGameplayAbilitySpecHandle AbilityHandle, FPredictionKey AbilityOriginalPredictionKey);
     
-    UFUNCTION(Client, Reliable)
+    UFUNCTION(BlueprintCallable, Client, Reliable)
     void ClientPrintDebug_Response(const TArray<FString>& Strings, int32 GameFlags);
     
 protected:
-    UFUNCTION(Client, Reliable)
+    UFUNCTION(BlueprintCallable, Client, Reliable)
     void ClientEndAbility(FGameplayAbilitySpecHandle AbilityToEnd, FGameplayAbilityActivationInfo ActivationInfo);
     
-    UFUNCTION(Client, Reliable)
+    UFUNCTION(BlueprintCallable, Client, Reliable)
     void ClientCancelAbility(FGameplayAbilitySpecHandle AbilityToCancel, FGameplayAbilityActivationInfo ActivationInfo);
     
-    UFUNCTION(Client, Reliable)
+    UFUNCTION(BlueprintCallable, Client, Reliable)
     void ClientActivateAbilitySucceedWithEventData(FGameplayAbilitySpecHandle AbilityToActivate, FPredictionKey PredictionKey, FGameplayEventData TriggerEventData);
     
-    UFUNCTION(Client, Reliable)
+    UFUNCTION(BlueprintCallable, Client, Reliable)
     void ClientActivateAbilitySucceed(FGameplayAbilitySpecHandle AbilityToActivate, FPredictionKey PredictionKey);
     
     UFUNCTION(Client, Reliable)

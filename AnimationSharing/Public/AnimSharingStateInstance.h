@@ -3,29 +3,29 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=AnimInstance -FallbackName=AnimInstance
 #include "AnimSharingStateInstance.generated.h"
 
+class AActor;
 class UAnimSequence;
 class UAnimSharingInstance;
-class AActor;
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class ANIMATIONSHARING_API UAnimSharingStateInstance : public UAnimInstance {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UAnimSequence* AnimationToPlay;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float PermutationTimeOffset;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float PlayRate;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     bool bStateBool;
     
 private:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UAnimSharingInstance* Instance;
     
 public:

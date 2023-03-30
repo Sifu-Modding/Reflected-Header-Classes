@@ -5,12 +5,12 @@
 
 class UMovieSceneSection;
 
-UCLASS()
+UCLASS(Blueprintable)
 class MOVIESCENE_API UMovieSceneSubTrack : public UMovieSceneNameableTrack {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     TArray<UMovieSceneSection*> Sections;
     
 public:

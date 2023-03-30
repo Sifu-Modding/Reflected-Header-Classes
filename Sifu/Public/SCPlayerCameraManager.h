@@ -4,12 +4,12 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=TViewTarget -FallbackName=TViewTarget
 #include "SCPlayerCameraManager.generated.h"
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class SIFU_API ASCPlayerCameraManager : public APlayerCameraManager {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<FTViewTarget> m_ForcedViewTargetToUpdateUnderneath;
     
 public:

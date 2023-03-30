@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTag -FallbackName=GameplayTag
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCSaveObjectGameData -FallbackName=SCSaveObjectGameData
+#include "DuplicatedSaveData.h"
 #include "ECharacterStat.h"
 #include "GameSaveData.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTag -FallbackName=GameplayTag
-#include "DuplicatedSaveData.h"
 #include "WGSaveObjectGameData.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class SIFU_API UWGSaveObjectGameData : public USCSaveObjectGameData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, SaveGame, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
     FGameSaveData m_SavedData;
     
     UWGSaveObjectGameData();
@@ -24,7 +24,7 @@ public:
     UFUNCTION(BlueprintCallable)
     bool BPF_HasGameplayTag(FGameplayTag _gameplayTagToAdd);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float BPF_GetDefaultStatValue(ECharacterStat _eStat, bool& _bFound) const;
     
     UFUNCTION(BlueprintCallable)
@@ -33,22 +33,22 @@ public:
     UFUNCTION(BlueprintCallable)
     void BPF_AddGameplayTag(FGameplayTag _gameplayTagToAdd);
     
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     bool BPE_SynchronizeAchievementProgress(const TMap<FString, float>& _achievementProgress);
     
-    UFUNCTION(BlueprintNativeEvent)
-    FString BPE_SnapshotSaveMask(int32 _iSaveMaskToBackup);
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    FString BPE_SnapshotSaveMask(int32 _iSaveMaskToBackup, int32 _iSaveEntryToExclude);
     
-    UFUNCTION(BlueprintImplementableEvent, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, BlueprintPure)
     bool BPE_ShouldLoadAntiCheatMap() const;
     
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     FString BPE_OverrideSaveMaskWithSnapshot(int32 _iSnapshotIdx);
     
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     int32 BPE_GenerateGlobalAllowedSaveMask() const;
     
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void BPE_CopyToSaveWithMask(USCSaveObjectGameData* _inSaveTo, int32 _iTestMask);
     
 };

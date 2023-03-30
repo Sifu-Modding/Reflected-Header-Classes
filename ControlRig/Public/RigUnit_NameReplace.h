@@ -3,20 +3,20 @@
 #include "RigUnit_NameBase.h"
 #include "RigUnit_NameReplace.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_NameReplace : public FRigUnit_NameBase {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName Name;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName Old;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName New;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName Result;
     
     CONTROLRIG_API FRigUnit_NameReplace();

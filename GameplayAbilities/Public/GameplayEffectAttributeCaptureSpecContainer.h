@@ -8,13 +8,13 @@ struct GAMEPLAYABILITIES_API FGameplayEffectAttributeCaptureSpecContainer {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FGameplayEffectAttributeCaptureSpec> SourceAttributes;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FGameplayEffectAttributeCaptureSpec> TargetAttributes;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bHasNonSnapshottedAttributes;
     
 public:

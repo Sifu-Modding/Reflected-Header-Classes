@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "MovieSceneEvaluationFieldEntityTree.h"
-#include "MovieSceneEvaluationFieldEntityMetaData.h"
 #include "MovieSceneEvaluationFieldEntity.h"
+#include "MovieSceneEvaluationFieldEntityMetaData.h"
+#include "MovieSceneEvaluationFieldEntityTree.h"
 #include "MovieSceneEvaluationFieldSharedEntityMetaData.h"
 #include "MovieSceneEntityComponentField.generated.h"
 
@@ -11,19 +11,19 @@ struct MOVIESCENE_API FMovieSceneEntityComponentField {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMovieSceneEvaluationFieldEntityTree PersistentEntityTree;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMovieSceneEvaluationFieldEntityTree OneShotEntityTree;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FMovieSceneEvaluationFieldEntity> Entities;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FMovieSceneEvaluationFieldEntityMetaData> EntityMetaData;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FMovieSceneEvaluationFieldSharedEntityMetaData> SharedMetaData;
     
 public:

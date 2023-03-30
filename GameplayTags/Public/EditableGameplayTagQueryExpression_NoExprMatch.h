@@ -3,11 +3,11 @@
 #include "EditableGameplayTagQueryExpression.h"
 #include "EditableGameplayTagQueryExpression_NoExprMatch.generated.h"
 
-UCLASS(CollapseCategories, EditInlineNew, NonTransient)
+UCLASS(Blueprintable, CollapseCategories, EditInlineNew, NonTransient)
 class UEditableGameplayTagQueryExpression_NoExprMatch : public UEditableGameplayTagQueryExpression {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere, Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     TArray<UEditableGameplayTagQueryExpression*> Expressions;
     
     UEditableGameplayTagQueryExpression_NoExprMatch();

@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EChaosWeightMapTarget.generated.h"
 
-UENUM()
-enum class EChaosWeightMapTarget {
+UENUM(BlueprintType)
+enum class EChaosWeightMapTarget : uint8 {
     None,
     MaxDistance,
     BackstopDistance,

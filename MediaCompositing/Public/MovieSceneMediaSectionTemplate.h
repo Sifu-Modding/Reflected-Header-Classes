@@ -4,12 +4,12 @@
 #include "MovieSceneMediaSectionParams.h"
 #include "MovieSceneMediaSectionTemplate.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FMovieSceneMediaSectionTemplate : public FMovieSceneEvalTemplate {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMovieSceneMediaSectionParams Params;
     
 public:

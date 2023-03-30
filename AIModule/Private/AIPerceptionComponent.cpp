@@ -1,8 +1,8 @@
 #include "AIPerceptionComponent.h"
 #include "Templates/SubclassOf.h"
 
-class UAISense;
 class AActor;
+class UAISense;
 
 void UAIPerceptionComponent::SetSenseEnabled(TSubclassOf<UAISense> SenseClass, const bool bEnable) {
 }

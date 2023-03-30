@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EHitDismissReason.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=GameplayAbilities -ObjectName=AbilityTask -FallbackName=AbilityTask
+#include "EHitDismissReason.h"
 #include "AbilityTask_HandleDefense.generated.h"
 
 class UAbilityTask_HandleDefense;
 class UGameplayAbility;
 
-UCLASS()
+UCLASS(Blueprintable)
 class SIFU_API UAbilityTask_HandleDefense : public UAbilityTask {
     GENERATED_BODY()
 public:

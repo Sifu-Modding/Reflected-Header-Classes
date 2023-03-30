@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FRigUnit_Harmonics_TargetItem {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRigElementKey Item;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Ratio;
     
     CONTROLRIG_API FRigUnit_Harmonics_TargetItem();

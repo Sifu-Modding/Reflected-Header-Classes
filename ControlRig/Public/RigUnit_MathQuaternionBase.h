@@ -3,7 +3,7 @@
 #include "RigUnit_MathBase.h"
 #include "RigUnit_MathQuaternionBase.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_MathQuaternionBase : public FRigUnit_MathBase {
     GENERATED_BODY()
 public:

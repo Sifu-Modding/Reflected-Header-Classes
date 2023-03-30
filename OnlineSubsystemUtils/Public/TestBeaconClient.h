@@ -3,15 +3,15 @@
 #include "OnlineBeaconClient.h"
 #include "TestBeaconClient.generated.h"
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class ONLINESUBSYSTEMUTILS_API ATestBeaconClient : public AOnlineBeaconClient {
     GENERATED_BODY()
 public:
     ATestBeaconClient();
-    UFUNCTION(Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
     void ServerPong();
     
-    UFUNCTION(Client, Reliable)
+    UFUNCTION(BlueprintCallable, Client, Reliable)
     void ClientPing();
     
 };

@@ -3,7 +3,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=DataAsset -FallbackName=DataAsset
 #include "AttackCookingDB.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class SIFU_API UAttackCookingDB : public UDataAsset {
     GENERATED_BODY()
 public:

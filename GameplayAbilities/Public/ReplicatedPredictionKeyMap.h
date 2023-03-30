@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FReplicatedPredictionKeyMap : public FFastArraySerializer {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FReplicatedPredictionKeyItem> PredictionKeys;
     
     GAMEPLAYABILITIES_API FReplicatedPredictionKeyMap();

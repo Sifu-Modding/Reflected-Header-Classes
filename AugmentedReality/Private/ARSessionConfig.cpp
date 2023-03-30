@@ -1,17 +1,17 @@
 #include "ARSessionConfig.h"
-#include "ARTrackedQRCode.h"
-#include "ARPointComponent.h"
-#include "ARPlaneComponent.h"
-#include "ARFaceComponent.h"
-#include "ARImageComponent.h"
-#include "ARGeoAnchorComponent.h"
-#include "ARPoseComponent.h"
 #include "AREnvironmentProbeComponent.h"
-#include "ARObjectComponent.h"
+#include "ARFaceComponent.h"
+#include "ARGeoAnchorComponent.h"
+#include "ARImageComponent.h"
 #include "ARMeshComponent.h"
+#include "ARObjectComponent.h"
+#include "ARPlaneComponent.h"
+#include "ARPointComponent.h"
+#include "ARPoseComponent.h"
+#include "ARTrackedQRCode.h"
 
-class UARCandidateObject;
 class UARCandidateImage;
+class UARCandidateObject;
 
 bool UARSessionConfig::ShouldResetTrackedObjects() const {
     return false;

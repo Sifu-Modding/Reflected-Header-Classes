@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ERigUnitDebugTransformMode.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class ERigUnitDebugTransformMode : uint8 {
     Point,
     Axes,

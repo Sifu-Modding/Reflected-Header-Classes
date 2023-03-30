@@ -1,7 +1,7 @@
 #include "PagingScrollBox.h"
 
-class UUserWidget;
 class UButtonUserWidget;
+class UUserWidget;
 
 void UPagingScrollBox::OnItemSelected(UButtonUserWidget* _button, UButtonUserWidget* _prevButton) {
 }

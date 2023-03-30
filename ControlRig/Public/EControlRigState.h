@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EControlRigState.generated.h"
 
-UENUM()
-enum class EControlRigState {
+UENUM(BlueprintType)
+enum class EControlRigState : uint8 {
     Init,
     Update,
     Invalid,

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "RigVMSlice.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct RIGVM_API FRigVMSlice {
     GENERATED_BODY()
 public:

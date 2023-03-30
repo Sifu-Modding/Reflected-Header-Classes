@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EGameplayModEvaluationChannel.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EGameplayModEvaluationChannel : uint8 {
     Channel0,
     Channel1,

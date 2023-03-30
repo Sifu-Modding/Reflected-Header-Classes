@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=CurveTableRowHandle -FallbackName=CurveTableRowHandle
 #include "ScalableFloat.h"
+#include "Templates/SubclassOf.h"
 #include "CustomCalculationBasedFloat.generated.h"
 
 class UGameplayModMagnitudeCalculation;
@@ -11,19 +11,19 @@ USTRUCT(BlueprintType)
 struct FCustomCalculationBasedFloat {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UGameplayModMagnitudeCalculation> CalculationClassMagnitude;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FScalableFloat Coefficient;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FScalableFloat PreMultiplyAdditiveValue;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FScalableFloat PostMultiplyAdditiveValue;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FCurveTableRowHandle FinalLookupCurve;
     
     GAMEPLAYABILITIES_API FCustomCalculationBasedFloat();

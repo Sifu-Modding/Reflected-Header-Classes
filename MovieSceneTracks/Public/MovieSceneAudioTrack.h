@@ -6,12 +6,12 @@
 
 class UMovieSceneSection;
 
-UCLASS()
+UCLASS(Blueprintable)
 class MOVIESCENETRACKS_API UMovieSceneAudioTrack : public UMovieSceneNameableTrack, public IMovieSceneTrackTemplateProducer {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     TArray<UMovieSceneSection*> AudioSections;
     
 public:

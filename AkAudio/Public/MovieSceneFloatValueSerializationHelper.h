@@ -9,16 +9,16 @@ USTRUCT(BlueprintType)
 struct FMovieSceneFloatValueSerializationHelper {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Value;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<ERichCurveInterpMode> InterpMode;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<ERichCurveTangentMode> TangentMode;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMovieSceneTangentDataSerializationHelper Tangent;
     
     AKAUDIO_API FMovieSceneFloatValueSerializationHelper();

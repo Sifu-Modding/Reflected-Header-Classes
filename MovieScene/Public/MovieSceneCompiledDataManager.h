@@ -1,27 +1,27 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
-#include "MovieSceneSequenceHierarchy.h"
-#include "MovieSceneEvaluationTemplate.h"
-#include "MovieSceneEvaluationField.h"
 #include "MovieSceneEntityComponentField.h"
+#include "MovieSceneEvaluationField.h"
+#include "MovieSceneEvaluationTemplate.h"
+#include "MovieSceneSequenceHierarchy.h"
 #include "MovieSceneCompiledDataManager.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class MOVIESCENE_API UMovieSceneCompiledDataManager : public UObject {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<int32, FMovieSceneSequenceHierarchy> Hierarchies;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<int32, FMovieSceneEvaluationTemplate> TrackTemplates;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<int32, FMovieSceneEvaluationField> TrackTemplateFields;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<int32, FMovieSceneEntityComponentField> EntityComponentFields;
     
 public:

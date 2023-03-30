@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "PathFollowingComponent.h"
-#include "CrowdAgentInterface.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
+#include "CrowdAgentInterface.h"
+#include "PathFollowingComponent.h"
 #include "CrowdFollowingComponent.generated.h"
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class AIMODULE_API UCrowdFollowingComponent : public UPathFollowingComponent, public ICrowdAgentInterface {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector CrowdAgentMoveDirection;
     
     UCrowdFollowingComponent();

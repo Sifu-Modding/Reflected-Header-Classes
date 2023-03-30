@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SubZoneShortcutStruct.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Interface -FallbackName=Interface
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
+#include "SubZoneShortcutStruct.h"
 #include "GhostGateCarrierInterface.generated.h"
 
-class UStaticMeshComponent;
 class UShapeComponent;
+class UStaticMeshComponent;
 
 UINTERFACE(Blueprintable)
 class SIFU_API UGhostGateCarrierInterface : public UInterface {

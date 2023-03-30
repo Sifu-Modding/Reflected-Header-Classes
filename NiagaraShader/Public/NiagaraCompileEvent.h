@@ -1,26 +1,26 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "FNiagaraCompileEventSeverity.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Guid -FallbackName=Guid
+#include "FNiagaraCompileEventSeverity.h"
 #include "NiagaraCompileEvent.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FNiagaraCompileEvent {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FNiagaraCompileEventSeverity Severity;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString Message;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGuid NodeGuid;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGuid PinGuid;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FGuid> StackGuids;
     
     NIAGARASHADER_API FNiagaraCompileEvent();

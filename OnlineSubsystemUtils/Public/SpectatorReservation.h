@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct ONLINESUBSYSTEMUTILS_API FSpectatorReservation {
     GENERATED_BODY()
 public:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FUniqueNetIdRepl SpectatorId;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FPlayerReservation Spectator;
     
     FSpectatorReservation();

@@ -5,14 +5,14 @@
 
 class UBasicOverlays;
 
-UCLASS()
+UCLASS(Blueprintable)
 class OVERLAY_API ULocalizedOverlays : public UOverlays {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UBasicOverlays* DefaultOverlays;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<FString, UBasicOverlays*> LocaleToOverlaysMap;
     
     ULocalizedOverlays();

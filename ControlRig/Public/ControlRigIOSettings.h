@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct CONTROLRIG_API FControlRigIOSettings {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bUpdatePose;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bUpdateCurves;
     
     FControlRigIOSettings();

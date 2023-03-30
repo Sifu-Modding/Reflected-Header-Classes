@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ERigVMParameterType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class ERigVMParameterType : uint8 {
     Input,
     Output,

@@ -10,11 +10,11 @@ USTRUCT(BlueprintType)
 struct GAMEPLAYABILITIES_API FActiveGameplayCueContainer : public FFastArraySerializer {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FActiveGameplayCue> GameplayCues;
     
 private:
-    UPROPERTY(Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UAbilitySystemComponent* Owner;
     
 public:

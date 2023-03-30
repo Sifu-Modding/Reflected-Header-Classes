@@ -6,15 +6,15 @@
 
 class UCineCameraComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class CINEMATICCAMERA_API ACineCameraActor : public ACameraActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FCameraLookatTrackingSettings LookatTrackingSettings;
     
     ACineCameraActor();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UCineCameraComponent* GetCineCameraComponent() const;
     
 };

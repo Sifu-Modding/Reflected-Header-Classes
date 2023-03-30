@@ -5,12 +5,12 @@
 
 class UBehaviorTree;
 
-UCLASS()
+UCLASS(Blueprintable)
 class AIMODULE_API UBTTask_RunBehavior : public UBTTaskNode {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UBehaviorTree* BehaviorAsset;
     
 public:

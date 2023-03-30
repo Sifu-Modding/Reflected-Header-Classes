@@ -1,24 +1,24 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "BaseNotification.h"
-#include "ECharacterProgressionRewardTypes.h"
 #include "CharacterProgressionReward.h"
+#include "ECharacterProgressionRewardTypes.h"
 #include "ProgressionRewardNotification.generated.h"
 
 class UCharacterProgressionUnlockDB;
 class UProgressionRewardNotification;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UProgressionRewardNotification : public UBaseNotification {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ECharacterProgressionRewardTypes m_eRewardType;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FCharacterProgressionReward m_Reward;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UCharacterProgressionUnlockDB* m_Unlock;
     
     UProgressionRewardNotification();

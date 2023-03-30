@@ -7,23 +7,23 @@ class UAnimationAsset;
 class UBehaviorTreeComponent;
 class USkeletalMeshComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class AIMODULE_API UBTTask_PlayAnimation : public UBTTaskNode {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UAnimationAsset* AnimationToPlay;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bLooping: 1;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bNonBlocking: 1;
     
-    UPROPERTY(Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UBehaviorTreeComponent* MyOwnerComp;
     
-    UPROPERTY(Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USkeletalMeshComponent* CachedSkelMesh;
     
     UBTTask_PlayAnimation();

@@ -1,68 +1,68 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCCharacter -FallbackName=SCCharacter
 //CROSS-MODULE INCLUDE V2: -ModuleName=AIModule -ObjectName=AISightTargetInterface -FallbackName=AISightTargetInterface
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=LinearColor -FallbackName=LinearColor
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=HitResult -FallbackName=HitResult
+//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=ECharacterGender -FallbackName=ECharacterGender
+//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCCharacter -FallbackName=SCCharacter
 #include "DynamicMaterialInput.h"
 #include "DynamicMaterialsPerType.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=HitResult -FallbackName=HitResult
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=LinearColor -FallbackName=LinearColor
-//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=ECharacterGender -FallbackName=ECharacterGender
-#include "InputContext.h"
-#include "InputAction.h"
-#include "ERelationshipTypes.h"
 #include "EControllerNature.h"
 #include "EFXMaterials.h"
+#include "ERelationshipTypes.h"
+#include "InputAction.h"
+#include "InputContext.h"
 #include "BaseCharacter.generated.h"
 
-class UCharacterTextLipSync;
-class USocialComponent;
-class UOrderComponent;
-class USkinTonesDB;
-class USCDialogComponent;
-class UPrimitiveComponent;
 class AActor;
-class APlayerState;
-class UMaterialInstanceDynamic;
 class APlayerController;
+class APlayerState;
+class UCharacterTextLipSync;
+class UMaterialInstanceDynamic;
+class UOrderComponent;
+class UPrimitiveComponent;
+class USCDialogComponent;
+class USkinTonesDB;
+class USocialComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class SIFU_API ABaseCharacter : public ASCCharacter, public IAISightTargetInterface {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USocialComponent* m_SocialComponent;
     
-    UPROPERTY(Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UOrderComponent* m_OrderComponent;
     
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UCharacterTextLipSync* m_LipSyncComp;
     
 private:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_iBuildUpMaxShrinkingFrames;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USkinTonesDB* m_SkinTones;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<FDynamicMaterialsPerType> m_DynamicMaterialsPerFxType;
     
-    UPROPERTY(Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USCDialogComponent* m_DialogComponent;
     
 public:
     ABaseCharacter();
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnLandedRaw(const FHitResult& _Impact);
     
 protected:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnCapsuleBeginOverlap(UPrimitiveComponent* _overlappedComponent, AActor* _otherActor, UPrimitiveComponent* _otherComp, int32 _otherBodyIndex, bool _bFromSweep, const FHitResult& _sweepResult);
     
 public:
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsDead() const;
     
     UFUNCTION(BlueprintCallable)
@@ -78,42 +78,45 @@ public:
     void BPF_SetGenderInSave(ECharacterGender _eNewGender, bool _bSendTrackingData);
     
     UFUNCTION(BlueprintCallable)
+    void BPF_SetGenderInProfile(ECharacterGender _eNewGender);
+    
+    UFUNCTION(BlueprintCallable)
     bool BPF_PopAvailabilityLayer(int32 _iId, InputContext _eInputContext);
     
     UFUNCTION(BlueprintCallable)
     bool BPF_IsCurrentGameModeCoopAlly(AActor* _otherActor);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool BPF_IsAvailable(InputAction _eAction) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     USocialComponent* BPF_GetSocialComponent() const;
     
     UFUNCTION(BlueprintCallable)
     ERelationshipTypes BPF_GetRelationship(AActor* _actor);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UOrderComponent* BPF_GetOrderComponent() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ECharacterGender BPF_GetGenderInSave() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     TArray<UMaterialInstanceDynamic*> BPF_GetCurrentMaterialInstances();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     EControllerNature BPF_GetControllerNature() const;
     
     UFUNCTION(BlueprintCallable)
     void BPF_CreateDynamicMaterials(EFXMaterials _eFxType, bool _bFromItemLoading);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BPE_PlayerStateInitialized(APlayerState* _playerState);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BPE_ControllerReplicated(APlayerController* _controller);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BPE_BodyPartsUpdated();
     
     

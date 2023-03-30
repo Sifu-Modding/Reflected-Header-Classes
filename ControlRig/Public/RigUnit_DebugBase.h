@@ -3,7 +3,7 @@
 #include "RigUnit.h"
 #include "RigUnit_DebugBase.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FRigUnit_DebugBase : public FRigUnit {
     GENERATED_BODY()
 public:

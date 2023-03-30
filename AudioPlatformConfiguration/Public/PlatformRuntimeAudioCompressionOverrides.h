@@ -2,20 +2,20 @@
 #include "CoreMinimal.h"
 #include "PlatformRuntimeAudioCompressionOverrides.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct AUDIOPLATFORMCONFIGURATION_API FPlatformRuntimeAudioCompressionOverrides {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bOverrideCompressionTimes;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DurationThreshold;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 MaxNumRandomBranches;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 SoundCueQualityIndex;
     
     FPlatformRuntimeAudioCompressionOverrides();

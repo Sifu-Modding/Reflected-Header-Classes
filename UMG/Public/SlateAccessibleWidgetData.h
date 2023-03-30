@@ -4,29 +4,29 @@
 #include "ESlateAccessibleBehavior.h"
 #include "SlateAccessibleWidgetData.generated.h"
 
-UCLASS(DefaultToInstanced)
+UCLASS(Blueprintable, DefaultToInstanced)
 class USlateAccessibleWidgetData : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bCanChildrenBeAccessible;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ESlateAccessibleBehavior AccessibleBehavior;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ESlateAccessibleBehavior AccessibleSummaryBehavior;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FText AccessibleText;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGetText AccessibleTextDelegate;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FText AccessibleSummaryText;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGetText AccessibleSummaryTextDelegate;
     
     USlateAccessibleWidgetData();

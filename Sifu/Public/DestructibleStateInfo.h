@@ -9,13 +9,13 @@ USTRUCT(BlueprintType)
 struct FDestructibleStateInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_iHealthThreshold;
     
-    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UStaticMesh* m_StateStaticMesh;
     
-    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USkeletalMesh* m_StateSkeletalMesh;
     
     SIFU_API FDestructibleStateInfo();

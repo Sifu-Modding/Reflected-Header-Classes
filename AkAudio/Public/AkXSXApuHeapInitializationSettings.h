@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FAkXSXApuHeapInitializationSettings {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint32 CachedSize;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint32 NonCachedSize;
     
     AKAUDIO_API FAkXSXApuHeapInitializationSettings();

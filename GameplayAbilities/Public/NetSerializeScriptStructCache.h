@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FNetSerializeScriptStructCache {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UScriptStruct*> ScriptStructs;
     
     GAMEPLAYABILITIES_API FNetSerializeScriptStructCache();

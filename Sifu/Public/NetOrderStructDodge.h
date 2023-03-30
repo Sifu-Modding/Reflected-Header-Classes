@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "InputAction.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
-#include "EDodgeType.h"
-#include "NetOrderStruct.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector2D -FallbackName=Vector2D
+#include "EDodgeType.h"
+#include "InputAction.h"
+#include "NetOrderStruct.h"
 #include "NetOrderStructDodge.generated.h"
 
 class AActor;
@@ -13,22 +13,22 @@ USTRUCT(BlueprintType)
 struct FNetOrderStructDodge : public FNetOrderStruct {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EDodgeType m_eDodgeType;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector m_vDirection;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector m_vOrientation;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<AActor> m_Target;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector2D m_vDirOnStick;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     InputAction m_eInputAction;
     
     SIFU_API FNetOrderStructDodge();
