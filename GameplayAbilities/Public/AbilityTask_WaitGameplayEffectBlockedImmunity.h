@@ -23,6 +23,7 @@ protected:
     
 public:
     UAbilityTask_WaitGameplayEffectBlockedImmunity();
+
     UFUNCTION(BlueprintCallable)
     static UAbilityTask_WaitGameplayEffectBlockedImmunity* WaitGameplayEffectBlockedByImmunity(UGameplayAbility* OwningAbility, FGameplayTagRequirements SourceTagRequirements, FGameplayTagRequirements TargetTagRequirements, AActor* OptionalExternalTarget, bool OnlyTriggerOnce);
     

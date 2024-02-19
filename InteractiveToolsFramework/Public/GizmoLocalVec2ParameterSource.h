@@ -16,5 +16,6 @@ public:
     FGizmoVec2ParameterChange LastChange;
     
     UGizmoLocalVec2ParameterSource();
+
 };
 

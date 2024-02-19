@@ -14,6 +14,7 @@ protected:
     UNavLocalGridManager* GridManager;
     
 public:
-    UGridPathFollowingComponent();
+    UGridPathFollowingComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

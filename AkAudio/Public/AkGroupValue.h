@@ -16,5 +16,6 @@ public:
     uint32 GroupShortID;
     
     UAkGroupValue();
+
 };
 

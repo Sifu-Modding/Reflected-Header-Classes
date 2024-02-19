@@ -12,5 +12,6 @@ public:
     FDatasmithTessellationOptions Options;
     
     UDatasmithCommonTessellationOptions();
+
 };
 

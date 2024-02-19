@@ -72,6 +72,7 @@ public:
     FIconTextures m_StanceIcons[4];
     
     UMenuDB();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UTexture2D* BPF_GetStanceIcon(EQuadrantTypes _eQuadrant, EIconStyle _eIconStyle) const;
     

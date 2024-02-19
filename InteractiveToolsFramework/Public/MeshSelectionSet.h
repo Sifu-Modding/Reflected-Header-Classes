@@ -20,5 +20,6 @@ public:
     TArray<int32> Groups;
     
     UMeshSelectionSet();
+
 };
 

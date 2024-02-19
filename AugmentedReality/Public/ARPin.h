@@ -40,6 +40,7 @@ private:
     
 public:
     UARPin();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     EARTrackingState GetTrackingState() const;
     

@@ -1,5 +1,9 @@
 #include "ARFaceGeometry.h"
 
+UARFaceGeometry::UARFaceGeometry() {
+    this->bIsTracked = false;
+}
+
 FTransform UARFaceGeometry::GetWorldSpaceEyeTransform(EAREye Eye) const {
     return FTransform{};
 }
@@ -16,7 +20,4 @@ TMap<EARFaceBlendShape, float> UARFaceGeometry::GetBlendShapes() const {
     return TMap<EARFaceBlendShape, float>();
 }
 
-UARFaceGeometry::UARFaceGeometry() {
-    this->bIsTracked = false;
-}
 

@@ -11,3 +11,4 @@ UNiagaraDataInterfaceCurveBase::UNiagaraDataInterfaceCurveBase() {
     this->ExposedTexture = NULL;
 }
 
+

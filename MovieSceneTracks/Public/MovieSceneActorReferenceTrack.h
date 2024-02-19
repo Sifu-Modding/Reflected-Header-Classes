@@ -9,7 +9,8 @@ class UMovieSceneActorReferenceTrack : public UMovieScenePropertyTrack, public I
     GENERATED_BODY()
 public:
     UMovieSceneActorReferenceTrack();
-    
+
+
     // Fix for true pure virtual functions not being implemented
 };
 

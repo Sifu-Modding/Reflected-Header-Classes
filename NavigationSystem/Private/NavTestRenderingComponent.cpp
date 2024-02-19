@@ -1,5 +1,6 @@
 #include "NavTestRenderingComponent.h"
 
-UNavTestRenderingComponent::UNavTestRenderingComponent() {
+UNavTestRenderingComponent::UNavTestRenderingComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

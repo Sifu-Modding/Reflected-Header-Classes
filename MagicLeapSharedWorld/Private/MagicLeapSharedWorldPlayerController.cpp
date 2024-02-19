@@ -1,5 +1,9 @@
 #include "MagicLeapSharedWorldPlayerController.h"
 
+AMagicLeapSharedWorldPlayerController::AMagicLeapSharedWorldPlayerController(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->ClickEventKeys.AddDefaulted(1);
+}
+
 void AMagicLeapSharedWorldPlayerController::ServerSetLocalWorldData_Implementation(const FMagicLeapSharedWorldLocalData& LocalWorldReplicationData) {
 }
 
@@ -20,6 +24,4 @@ bool AMagicLeapSharedWorldPlayerController::CanSendLocalDataToServer() const {
     return false;
 }
 
-AMagicLeapSharedWorldPlayerController::AMagicLeapSharedWorldPlayerController() {
-}
 

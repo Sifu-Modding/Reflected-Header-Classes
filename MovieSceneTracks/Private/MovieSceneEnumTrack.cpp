@@ -4,3 +4,4 @@ UMovieSceneEnumTrack::UMovieSceneEnumTrack() {
     this->Enum = NULL;
 }
 
+

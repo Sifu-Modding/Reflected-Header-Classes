@@ -8,9 +8,10 @@ UCLASS(Blueprintable)
 class UEnvQueryTest_PathfindingBatch : public UEnvQueryTest_Pathfinding {
     GENERATED_BODY()
 public:
-    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(AdvancedDisplay, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAIDataProviderFloatValue ScanRangeMultiplier;
     
     UEnvQueryTest_PathfindingBatch();
+
 };
 

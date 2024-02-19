@@ -21,6 +21,6 @@ enum EFieldPhysicsType {
     Field_DynamicConstraint,
     Field_CollisionGroup,
     Field_ActivateDisabled,
-    Field_PhysicsType_Max,
+    Field_PhysicsType_Max UMETA(Hidden),
 };
 

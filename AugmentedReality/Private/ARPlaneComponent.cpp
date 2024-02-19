@@ -1,6 +1,9 @@
 #include "ARPlaneComponent.h"
 #include "Net/UnrealNetwork.h"
 
+UARPlaneComponent::UARPlaneComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+}
+
 void UARPlaneComponent::SetPlaneComponentDebugMode(EPlaneComponentDebugMode NewDebugMode) {
 }
 
@@ -25,6 +28,4 @@ void UARPlaneComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& Ou
     DOREPLIFETIME(UARPlaneComponent, ReplicatedPayload);
 }
 
-UARPlaneComponent::UARPlaneComponent() {
-}
 

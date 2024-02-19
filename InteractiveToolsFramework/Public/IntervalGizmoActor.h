@@ -18,6 +18,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UGizmoLineHandleComponent* ForwardIntervalComponent;
     
-    AIntervalGizmoActor();
+    AIntervalGizmoActor(const FObjectInitializer& ObjectInitializer);
+
 };
 

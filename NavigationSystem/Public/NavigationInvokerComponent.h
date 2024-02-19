@@ -15,6 +15,7 @@ protected:
     float TileRemovalRadius;
     
 public:
-    UNavigationInvokerComponent();
+    UNavigationInvokerComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

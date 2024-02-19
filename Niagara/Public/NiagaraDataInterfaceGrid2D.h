@@ -27,5 +27,6 @@ public:
     FVector2D WorldBBoxSize;
     
     UNiagaraDataInterfaceGrid2D();
+
 };
 

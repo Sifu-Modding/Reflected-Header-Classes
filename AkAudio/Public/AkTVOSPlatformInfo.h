@@ -8,5 +8,6 @@ class UAkTVOSPlatformInfo : public UAkPlatformInfo {
     GENERATED_BODY()
 public:
     UAkTVOSPlatformInfo();
+
 };
 

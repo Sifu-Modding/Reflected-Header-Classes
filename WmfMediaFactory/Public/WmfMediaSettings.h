@@ -3,7 +3,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
 #include "WmfMediaSettings.generated.h"
 
-UCLASS(Blueprintable, Config=Engine, DefaultConfig)
+UCLASS(Blueprintable, DefaultConfig, Config=Engine)
 class WMFMEDIAFACTORY_API UWmfMediaSettings : public UObject {
     GENERATED_BODY()
 public:
@@ -20,5 +20,6 @@ public:
     bool HardwareAcceleratedVideoDecoding;
     
     UWmfMediaSettings();
+
 };
 

@@ -8,5 +8,6 @@ class UJsonUtilitiesDummyObject : public UObject {
     GENERATED_BODY()
 public:
     UJsonUtilitiesDummyObject();
+
 };
 

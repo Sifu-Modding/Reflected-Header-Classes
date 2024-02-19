@@ -13,5 +13,6 @@ public:
     UMovieScene* MovieScene;
     
     UTestMovieSceneSequence();
+
 };
 

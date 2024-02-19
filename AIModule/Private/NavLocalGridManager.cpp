@@ -1,6 +1,7 @@
 #include "NavLocalGridManager.h"
 
-class UObject;
+UNavLocalGridManager::UNavLocalGridManager() {
+}
 
 bool UNavLocalGridManager::SetLocalNavigationGridDensity(UObject* WorldContextObject, float CellSize) {
     return false;
@@ -29,6 +30,4 @@ int32 UNavLocalGridManager::AddLocalNavigationGridForBox(UObject* WorldContextOb
     return 0;
 }
 
-UNavLocalGridManager::UNavLocalGridManager() {
-}
 

@@ -1,7 +1,9 @@
 #include "DynamicEntryBox.h"
 #include "Templates/SubclassOf.h"
 
-class UUserWidget;
+UDynamicEntryBox::UDynamicEntryBox() {
+    this->EntryWidgetClass = NULL;
+}
 
 void UDynamicEntryBox::Reset(bool bDeleteWidgets) {
 }
@@ -17,7 +19,4 @@ UUserWidget* UDynamicEntryBox::BP_CreateEntry() {
     return NULL;
 }
 
-UDynamicEntryBox::UDynamicEntryBox() {
-    this->EntryWidgetClass = NULL;
-}
 

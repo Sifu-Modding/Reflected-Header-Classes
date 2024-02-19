@@ -1,11 +1,20 @@
 #include "UserWidget.h"
+#include "ESlateVisibility.h"
 
-class APawn;
-class APlayerCameraManager;
-class APlayerController;
-class USoundBase;
-class UUMGSequencePlayer;
-class UWidgetAnimation;
+UUserWidget::UUserWidget() {
+    this->Visibility = ESlateVisibility::SelfHitTestInvisible;
+    this->bInvalidateOnAnimation = true;
+    this->AnimationTickManager = NULL;
+    this->WidgetTree = NULL;
+    this->Priority = 0;
+    this->bSupportsKeyboardFocus = true;
+    this->bIsFocusable = false;
+    this->bStopAction = false;
+    this->bHasScriptImplementedTick = true;
+    this->bHasScriptImplementedPaint = true;
+    this->TickFrequency = EWidgetTickFrequency::Auto;
+    this->InputComponent = NULL;
+}
 
 void UUserWidget::UnregisterInputComponent() {
 }
@@ -224,17 +233,4 @@ bool UUserWidget::AddToPlayerScreen(int32 ZOrder) {
     return false;
 }
 
-UUserWidget::UUserWidget() {
-    this->bInvalidateOnAnimation = true;
-    this->AnimationTickManager = NULL;
-    this->WidgetTree = NULL;
-    this->Priority = 0;
-    this->bSupportsKeyboardFocus = true;
-    this->bIsFocusable = false;
-    this->bStopAction = false;
-    this->bHasScriptImplementedTick = true;
-    this->bHasScriptImplementedPaint = true;
-    this->TickFrequency = EWidgetTickFrequency::Auto;
-    this->InputComponent = NULL;
-}
 

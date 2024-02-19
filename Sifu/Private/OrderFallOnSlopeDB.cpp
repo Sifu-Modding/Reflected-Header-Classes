@@ -1,8 +1,5 @@
 #include "OrderFallOnSlopeDB.h"
 
-
-
-
 UOrderFallOnSlopeDB::UOrderFallOnSlopeDB() {
     this->m_bPhysicAnimEnabled = true;
     this->m_fFallVelocityThreshold = 10.00f;
@@ -24,4 +21,8 @@ UOrderFallOnSlopeDB::UOrderFallOnSlopeDB() {
     this->m_RTCPSpeed = NULL;
     this->m_bCallRTPCOnSelf = false;
 }
+
+
+
+
 

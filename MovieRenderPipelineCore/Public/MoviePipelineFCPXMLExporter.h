@@ -15,5 +15,6 @@ public:
     FCPXMLExportDataSource DataSource;
     
     UMoviePipelineFCPXMLExporter();
+
 };
 

@@ -19,6 +19,7 @@ public:
     FARGetCandidateObjectPin OnFailed;
     
     UARGetCandidateObjectAsyncTaskBlueprintProxy();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static UARGetCandidateObjectAsyncTaskBlueprintProxy* ARGetCandidateObject(UObject* WorldContextObject, FVector Location, FVector Extent);
     

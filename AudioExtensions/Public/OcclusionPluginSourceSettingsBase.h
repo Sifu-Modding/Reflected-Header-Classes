@@ -8,5 +8,6 @@ class AUDIOEXTENSIONS_API UOcclusionPluginSourceSettingsBase : public UObject {
     GENERATED_BODY()
 public:
     UOcclusionPluginSourceSettingsBase();
+
 };
 

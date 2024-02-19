@@ -8,6 +8,5 @@ enum ETerrainCoordMappingType {
     TCMT_XY,
     TCMT_XZ,
     TCMT_YZ,
-    TCMT_MAX UMETA(Hidden),
 };
 

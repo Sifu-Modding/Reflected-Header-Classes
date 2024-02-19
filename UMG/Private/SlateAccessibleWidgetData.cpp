@@ -6,3 +6,4 @@ USlateAccessibleWidgetData::USlateAccessibleWidgetData() {
     this->AccessibleSummaryBehavior = ESlateAccessibleBehavior::Auto;
 }
 
+

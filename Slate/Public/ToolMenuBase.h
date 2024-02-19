@@ -8,5 +8,6 @@ class SLATE_API UToolMenuBase : public UObject {
     GENERATED_BODY()
 public:
     UToolMenuBase();
+
 };
 

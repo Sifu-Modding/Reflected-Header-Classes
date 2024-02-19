@@ -50,5 +50,6 @@ public:
     FString FilePath;
     
     UDatasmithImportOptions();
+
 };
 

@@ -8,5 +8,6 @@ class MOVIESCENETRACKS_API UMovieSceneQuaternionInterpolationRotationSystem : pu
     GENERATED_BODY()
 public:
     UMovieSceneQuaternionInterpolationRotationSystem();
+
 };
 

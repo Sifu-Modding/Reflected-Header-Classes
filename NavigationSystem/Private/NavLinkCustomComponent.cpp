@@ -2,7 +2,7 @@
 #include "NavArea_Default.h"
 #include "NavArea_Null.h"
 
-UNavLinkCustomComponent::UNavLinkCustomComponent() {
+UNavLinkCustomComponent::UNavLinkCustomComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->NavLinkUserId = 0;
     this->EnabledAreaClass = UNavArea_Default::StaticClass();
     this->DisabledAreaClass = UNavArea_Null::StaticClass();
@@ -17,4 +17,5 @@ UNavLinkCustomComponent::UNavLinkCustomComponent() {
     this->BroadcastInterval = 0.00f;
     this->BroadcastChannel = ECC_Pawn;
 }
+
 

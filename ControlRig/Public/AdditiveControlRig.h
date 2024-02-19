@@ -8,5 +8,6 @@ class CONTROLRIG_API UAdditiveControlRig : public UControlRig {
     GENERATED_BODY()
 public:
     UAdditiveControlRig();
+
 };
 

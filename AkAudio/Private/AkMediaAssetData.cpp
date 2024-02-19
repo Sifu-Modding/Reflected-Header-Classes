@@ -5,3 +5,4 @@ UAkMediaAssetData::UAkMediaAssetData() {
     this->UseDeviceMemory = false;
 }
 
+

@@ -8,5 +8,6 @@ class UClothingAssetCustomData : public UObject {
     GENERATED_BODY()
 public:
     UClothingAssetCustomData();
+
 };
 

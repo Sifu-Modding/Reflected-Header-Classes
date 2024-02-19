@@ -4,7 +4,7 @@
 #include "ImageSequenceProtocol.h"
 #include "ImageSequenceProtocol_EXR.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS(Blueprintable, Config=Engine)
 class MOVIESCENECAPTURE_API UImageSequenceProtocol_EXR : public UImageSequenceProtocol {
     GENERATED_BODY()
 public:
@@ -15,5 +15,6 @@ public:
     TEnumAsByte<EHDRCaptureGamut> CaptureGamut;
     
     UImageSequenceProtocol_EXR();
+
 };
 

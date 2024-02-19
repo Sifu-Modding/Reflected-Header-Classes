@@ -18,6 +18,7 @@ public:
     FRepeatedActionDelegate OnFinished;
     
     UAbilityTask_Repeat();
+
     UFUNCTION(BlueprintCallable)
     static UAbilityTask_Repeat* RepeatAction(UGameplayAbility* OwningAbility, float TimeBetweenActions, int32 TotalActionCount);
     

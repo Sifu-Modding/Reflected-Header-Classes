@@ -78,11 +78,12 @@ public:
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnChaosPhysicsCollision OnChaosPhysicsCollision;
     
-    USkeletalMeshSimulationComponent();
+    USkeletalMeshSimulationComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceivePhysicsCollision(const FChaosPhysicsCollisionInfo& CollisionInfo);
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

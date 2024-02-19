@@ -12,5 +12,6 @@ public:
     FMotoSynthRuntimeSettings Settings;
     
     UMotoSynthPreset();
+
 };
 

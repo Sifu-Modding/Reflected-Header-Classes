@@ -3,7 +3,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=DeveloperSettings -ObjectName=DeveloperSettings -FallbackName=DeveloperSettings
 #include "MoviePipelineInProcessExecutorSettings.generated.h"
 
-UCLASS(Blueprintable, Config=Engine, DefaultConfig)
+UCLASS(Blueprintable, DefaultConfig, Config=Engine)
 class MOVIERENDERPIPELINECORE_API UMoviePipelineInProcessExecutorSettings : public UDeveloperSettings {
     GENERATED_BODY()
 public:
@@ -20,5 +20,6 @@ public:
     int32 InitialDelayFrameCount;
     
     UMoviePipelineInProcessExecutorSettings();
+
 };
 

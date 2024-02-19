@@ -8,5 +8,6 @@ class INTERACTIVETOOLSFRAMEWORK_API UAnyButtonInputBehavior : public UInputBehav
     GENERATED_BODY()
 public:
     UAnyButtonInputBehavior();
+
 };
 

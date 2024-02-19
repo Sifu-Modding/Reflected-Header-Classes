@@ -8,5 +8,6 @@ class UNiagaraScriptSourceBase : public UObject {
     GENERATED_BODY()
 public:
     UNiagaraScriptSourceBase();
+
 };
 

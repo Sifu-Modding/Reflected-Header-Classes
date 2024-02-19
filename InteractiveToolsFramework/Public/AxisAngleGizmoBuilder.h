@@ -8,5 +8,6 @@ class INTERACTIVETOOLSFRAMEWORK_API UAxisAngleGizmoBuilder : public UInteractive
     GENERATED_BODY()
 public:
     UAxisAngleGizmoBuilder();
+
 };
 

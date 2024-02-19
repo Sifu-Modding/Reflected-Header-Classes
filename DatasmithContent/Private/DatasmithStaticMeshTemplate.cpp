@@ -5,3 +5,4 @@ UDatasmithStaticMeshTemplate::UDatasmithStaticMeshTemplate() {
     this->LightMapResolution = 0;
 }
 
+

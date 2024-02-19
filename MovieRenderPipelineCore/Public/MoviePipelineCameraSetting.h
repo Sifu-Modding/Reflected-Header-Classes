@@ -12,5 +12,6 @@ public:
     EMoviePipelineShutterTiming ShutterTiming;
     
     UMoviePipelineCameraSetting();
+
 };
 

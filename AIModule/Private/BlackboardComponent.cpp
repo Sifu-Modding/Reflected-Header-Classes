@@ -1,6 +1,10 @@
 #include "BlackboardComponent.h"
 
-class UObject;
+UBlackboardComponent::UBlackboardComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->BrainComp = NULL;
+    this->DefaultBlackboardAsset = NULL;
+    this->BlackboardAsset = NULL;
+}
 
 void UBlackboardComponent::SetValueAsVector(const FName& KeyName, FVector VectorValue) {
 }
@@ -87,9 +91,4 @@ bool UBlackboardComponent::GetLocationFromEntry(const FName& KeyName, FVector& R
 void UBlackboardComponent::ClearValue(const FName& KeyName) {
 }
 
-UBlackboardComponent::UBlackboardComponent() {
-    this->BrainComp = NULL;
-    this->DefaultBlackboardAsset = NULL;
-    this->BlackboardAsset = NULL;
-}
 

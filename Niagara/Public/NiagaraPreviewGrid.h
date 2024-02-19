@@ -47,7 +47,8 @@ private:
     TArray<UChildActorComponent*> PreviewComponents;
     
 public:
-    ANiagaraPreviewGrid();
+    ANiagaraPreviewGrid(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetPaused(bool bPaused);
     

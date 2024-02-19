@@ -8,5 +8,6 @@ class AUDIOANALYZER_API UAudioAnalyzerNRTSettings : public UAudioAnalyzerAsset {
     GENERATED_BODY()
 public:
     UAudioAnalyzerNRTSettings();
+
 };
 

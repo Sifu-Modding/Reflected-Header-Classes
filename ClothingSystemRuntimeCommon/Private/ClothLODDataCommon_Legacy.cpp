@@ -4,3 +4,4 @@ UClothLODDataCommon_Legacy::UClothLODDataCommon_Legacy() {
     this->PhysicalMeshData = NULL;
 }
 
+

@@ -13,5 +13,6 @@ public:
     UTransformProxy* Proxy;
     
     UGizmoTransformProxyTransformSource();
+
 };
 

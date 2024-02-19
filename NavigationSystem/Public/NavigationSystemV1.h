@@ -22,7 +22,7 @@ class UNavigationQueryFilter;
 class UNavigationSystemV1;
 class UObject;
 
-UCLASS(Blueprintable, NonTransient, Within=World)
+UCLASS(Blueprintable, NonTransient, Config=Engine, Within=World)
 class NAVIGATIONSYSTEM_API UNavigationSystemV1 : public UNavigationSystemBase {
     GENERATED_BODY()
 public:
@@ -105,6 +105,7 @@ public:
     float DirtyAreasUpdateFreq;
     
     UNavigationSystemV1();
+
     UFUNCTION(BlueprintCallable)
     void UnregisterNavigationInvoker(AActor* Invoker);
     

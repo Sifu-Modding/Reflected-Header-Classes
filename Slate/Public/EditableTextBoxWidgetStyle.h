@@ -12,5 +12,6 @@ public:
     FEditableTextBoxStyle EditableTextBoxStyle;
     
     UEditableTextBoxWidgetStyle();
+
 };
 

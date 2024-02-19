@@ -1,6 +1,7 @@
 #include "AkReplication.h"
 
-class AActor;
+UAkReplication::UAkReplication(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+}
 
 void UAkReplication::MulticastSetSwitch_Implementation(uint32 _uiGroupID, uint32 _uiValueID, AActor* _actor) const {
 }
@@ -20,6 +21,4 @@ void UAkReplication::MulticastPostEventAtLocation_Implementation(const FString& 
 void UAkReplication::MulticastPostEvent_Implementation(const FString& _eventName, const AActor* _owner, uint32 _uFlags) const {
 }
 
-UAkReplication::UAkReplication() {
-}
 

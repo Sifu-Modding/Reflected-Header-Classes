@@ -1,5 +1,27 @@
 #include "SpinBox.h"
 
+USpinBox::USpinBox() {
+    this->Value = 0.00f;
+    this->Style = NULL;
+    this->MinFractionalDigits = 1;
+    this->MaxFractionalDigits = 6;
+    this->bAlwaysUsesDeltaSnap = false;
+    this->Delta = 0.00f;
+    this->SliderExponent = 1.00f;
+    this->Justification = ETextJustify::Left;
+    this->MinDesiredWidth = 0.00f;
+    this->ClearKeyboardFocusOnCommit = false;
+    this->SelectAllTextOnCommit = true;
+    this->bOverride_MinValue = false;
+    this->bOverride_MaxValue = false;
+    this->bOverride_MinSliderValue = false;
+    this->bOverride_MaxSliderValue = false;
+    this->MinValue = 0.00f;
+    this->MaxValue = 0.00f;
+    this->MinSliderValue = 0.00f;
+    this->MaxSliderValue = 0.00f;
+}
+
 void USpinBox::SetValue(float NewValue) {
 }
 
@@ -78,25 +100,4 @@ void USpinBox::ClearMaxValue() {
 void USpinBox::ClearMaxSliderValue() {
 }
 
-USpinBox::USpinBox() {
-    this->Value = 0.00f;
-    this->Style = NULL;
-    this->MinFractionalDigits = 1;
-    this->MaxFractionalDigits = 6;
-    this->bAlwaysUsesDeltaSnap = false;
-    this->Delta = 0.00f;
-    this->SliderExponent = 1.00f;
-    this->Justification = ETextJustify::Left;
-    this->MinDesiredWidth = 0.00f;
-    this->ClearKeyboardFocusOnCommit = false;
-    this->SelectAllTextOnCommit = true;
-    this->bOverride_MinValue = false;
-    this->bOverride_MaxValue = false;
-    this->bOverride_MinSliderValue = false;
-    this->bOverride_MaxSliderValue = false;
-    this->MinValue = 0.00f;
-    this->MaxValue = 0.00f;
-    this->MinSliderValue = 0.00f;
-    this->MaxSliderValue = 0.00f;
-}
 

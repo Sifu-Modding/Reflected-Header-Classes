@@ -1,5 +1,6 @@
 #include "FieldNodeVector.h"
 
-UFieldNodeVector::UFieldNodeVector() {
+UFieldNodeVector::UFieldNodeVector(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

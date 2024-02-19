@@ -14,7 +14,7 @@ struct FMovieSceneParameterSectionTemplate : public FMovieSceneEvalTemplate {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FScalarParameterNameAndCurve> Scalars;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

@@ -12,6 +12,7 @@ public:
     FSourceEffectFilterSettings Settings;
     
     USourceEffectFilterPreset();
+
     UFUNCTION(BlueprintCallable)
     void SetSettings(const FSourceEffectFilterSettings& InSettings);
     

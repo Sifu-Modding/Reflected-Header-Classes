@@ -1,5 +1,6 @@
 #include "ChaosGameplayEventDispatcher.h"
 
-UChaosGameplayEventDispatcher::UChaosGameplayEventDispatcher() {
+UChaosGameplayEventDispatcher::UChaosGameplayEventDispatcher(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

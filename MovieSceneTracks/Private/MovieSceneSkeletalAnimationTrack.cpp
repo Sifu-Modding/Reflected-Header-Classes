@@ -5,3 +5,4 @@ UMovieSceneSkeletalAnimationTrack::UMovieSceneSkeletalAnimationTrack() {
     this->bBlendFirstChildOfRoot = false;
 }
 
+

@@ -81,7 +81,8 @@ public:
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAIMoveCompletedSignature ReceiveMoveCompleted;
     
-    AAIController();
+    AAIController(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     bool UseBlackboard(UBlackboardData* BlackboardAsset, UBlackboardComponent*& BlackboardComponent);
     
@@ -147,7 +148,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void ClaimTaskResource(TSubclassOf<UGameplayTaskResource> ResourceClass);
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

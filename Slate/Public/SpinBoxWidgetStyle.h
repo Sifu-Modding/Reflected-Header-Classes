@@ -12,5 +12,6 @@ public:
     FSpinBoxStyle SpinBoxStyle;
     
     USpinBoxWidgetStyle();
+
 };
 

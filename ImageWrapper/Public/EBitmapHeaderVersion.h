@@ -9,6 +9,5 @@ enum class EBitmapHeaderVersion : uint8 {
     BHV_BITMAPV3INFOHEADER,
     BHV_BITMAPV4HEADER,
     BHV_BITMAPV5HEADER,
-    BHV_MAX UMETA(Hidden),
 };
 

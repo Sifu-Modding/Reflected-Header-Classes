@@ -12,7 +12,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 Magnitude;
     
-    UUniformInteger();
+    UUniformInteger(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UUniformInteger* SetUniformInteger(int32 NewMagnitude);
     

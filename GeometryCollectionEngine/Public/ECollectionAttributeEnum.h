@@ -7,6 +7,5 @@ enum class ECollectionAttributeEnum : uint8 {
     Chaos_Active,
     Chaos_DynamicState,
     Chaos_CollisionGroup,
-    Chaos_Max,
 };
 

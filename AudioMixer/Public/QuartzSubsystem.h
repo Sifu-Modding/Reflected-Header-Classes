@@ -12,6 +12,7 @@ class AUDIOMIXER_API UQuartzSubsystem : public UWorldSubsystem {
     GENERATED_BODY()
 public:
     UQuartzSubsystem();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     float GetRoundTripMinLatency(const UObject* WorldContextObject);
     

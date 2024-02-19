@@ -8,23 +8,10 @@ public class MovieRenderPipelineRenderPasses : ModuleRules {
         
         PublicDependencyModuleNames.AddRange(new string[] {
             "ActorLayerUtilities",
-            "AudioMixer",
             "Core",
             "CoreUObject",
-            "DeveloperSettings",
             "Engine",
-            "InputCore",
-            "LevelSequence",
-            "MediaAssets",
-            "MediaUtils",
             "MovieRenderPipelineCore",
-            "MovieScene",
-            "MovieSceneTracks",
-            "OpenColorIO",
-            "PropertyPath",
-            "Slate",
-            "SlateCore",
-            "UMG",
         });
     }
 }

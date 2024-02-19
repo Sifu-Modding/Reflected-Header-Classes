@@ -6,7 +6,7 @@
 #include "EFrictionCombineMode.h"
 #include "PhysicsSettingsCore.generated.h"
 
-UCLASS(Blueprintable, Config=Engine, DefaultConfig)
+UCLASS(Blueprintable, DefaultConfig, Config=Engine)
 class PHYSICSCORE_API UPhysicsSettingsCore : public UDeveloperSettings {
     GENERATED_BODY()
 public:
@@ -80,5 +80,6 @@ public:
     FChaosSolverConfiguration SolverOptions;
     
     UPhysicsSettingsCore();
+
 };
 

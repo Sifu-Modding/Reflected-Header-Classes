@@ -21,7 +21,8 @@ public:
     bool bLocalAxes;
     
     UGizmoComponentAxisSource();
-    
+
+
     // Fix for true pure virtual functions not being implemented
     UFUNCTION()
     bool HasTangentVectors() const override PURE_VIRTUAL(HasTangentVectors, return false;);

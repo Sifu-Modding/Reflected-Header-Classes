@@ -10,6 +10,7 @@ class MRMESH_API UMeshReconstructorBase : public UObject {
     GENERATED_BODY()
 public:
     UMeshReconstructorBase();
+
     UFUNCTION(BlueprintCallable)
     void StopReconstruction();
     

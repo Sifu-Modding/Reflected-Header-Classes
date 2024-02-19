@@ -25,6 +25,7 @@ private:
     
 public:
     UMoviePipelineMasterConfig();
+
     UFUNCTION(BlueprintCallable)
     void InitializeTransientSettings();
     

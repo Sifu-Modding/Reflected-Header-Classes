@@ -1,9 +1,15 @@
 #include "MediaPlayer.h"
 
-class UMediaPlaylist;
-class UMediaSource;
-class UMediaTimeStampInfo;
-class UObject;
+UMediaPlayer::UMediaPlayer() {
+    this->NativeAudioOut = false;
+    this->PlayOnOpen = true;
+    this->Shuffle = false;
+    this->Loop = false;
+    this->Playlist = NULL;
+    this->PlaylistIndex = -1;
+    this->HorizontalFieldOfView = 90.00f;
+    this->VerticalFieldOfView = 60.00f;
+}
 
 bool UMediaPlayer::SupportsSeeking() const {
     return false;
@@ -285,14 +291,4 @@ bool UMediaPlayer::CanPause() const {
     return false;
 }
 
-UMediaPlayer::UMediaPlayer() {
-    this->NativeAudioOut = false;
-    this->PlayOnOpen = true;
-    this->Shuffle = false;
-    this->Loop = false;
-    this->Playlist = NULL;
-    this->PlaylistIndex = -1;
-    this->HorizontalFieldOfView = 90.00f;
-    this->VerticalFieldOfView = 60.00f;
-}
 

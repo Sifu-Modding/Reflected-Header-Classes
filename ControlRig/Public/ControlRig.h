@@ -64,6 +64,7 @@ protected:
     
 public:
     UControlRig();
+
     UFUNCTION(BlueprintCallable)
     void SetInteractionRigClass(TSubclassOf<UControlRig> InInteractionRigClass);
     
@@ -76,7 +77,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UControlRig* GetInteractionRig() const;
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

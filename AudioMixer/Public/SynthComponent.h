@@ -87,7 +87,8 @@ private:
     UAudioComponent* AudioComponent;
     
 public:
-    USynthComponent();
+    USynthComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void Stop();
     

@@ -8,5 +8,6 @@ class EDITABLEMESH_API UEditableMeshAdapter : public UObject {
     GENERATED_BODY()
 public:
     UEditableMeshAdapter();
+
 };
 

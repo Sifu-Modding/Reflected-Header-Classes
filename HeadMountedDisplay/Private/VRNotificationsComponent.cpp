@@ -1,5 +1,6 @@
 #include "VRNotificationsComponent.h"
 
-UVRNotificationsComponent::UVRNotificationsComponent() {
+UVRNotificationsComponent::UVRNotificationsComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

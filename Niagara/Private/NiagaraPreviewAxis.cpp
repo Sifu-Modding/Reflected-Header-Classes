@@ -1,6 +1,7 @@
 #include "NiagaraPreviewAxis.h"
 
-class UNiagaraComponent;
+UNiagaraPreviewAxis::UNiagaraPreviewAxis() {
+}
 
 int32 UNiagaraPreviewAxis::Num_Implementation() {
     return 0;
@@ -9,6 +10,4 @@ int32 UNiagaraPreviewAxis::Num_Implementation() {
 void UNiagaraPreviewAxis::ApplyToPreview_Implementation(UNiagaraComponent* PreviewComponent, int32 PreviewIndex, bool bIsXAxis, FString& OutLabelText) {
 }
 
-UNiagaraPreviewAxis::UNiagaraPreviewAxis() {
-}
 

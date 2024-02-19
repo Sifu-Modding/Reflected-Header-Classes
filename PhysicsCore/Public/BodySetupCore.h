@@ -23,5 +23,6 @@ public:
     TEnumAsByte<EBodyCollisionResponse::Type> CollisionReponse;
     
     UBodySetupCore();
+
 };
 

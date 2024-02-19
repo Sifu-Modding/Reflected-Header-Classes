@@ -7,3 +7,4 @@ UAkAudioEventData::UAkAudioEventData() {
     this->MaximumDuration = 0.00f;
 }
 
+

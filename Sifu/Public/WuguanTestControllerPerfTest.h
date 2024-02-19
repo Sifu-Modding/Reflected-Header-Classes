@@ -8,5 +8,6 @@ class UWuguanTestControllerPerfTest : public UWuguanTestControllerBase {
     GENERATED_BODY()
 public:
     UWuguanTestControllerPerfTest();
+
 };
 

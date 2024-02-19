@@ -19,6 +19,7 @@ public:
     FEmptyOnlineDelegate OnFailure;
     
     UCreateSessionCallbackProxy();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static UCreateSessionCallbackProxy* CreateSession(UObject* WorldContextObject, APlayerController* PlayerController, int32 PublicConnections, bool bUseLAN);
     

@@ -6,3 +6,4 @@ UNavCollision::UNavCollision() {
     this->bCreateOnClient = true;
 }
 
+

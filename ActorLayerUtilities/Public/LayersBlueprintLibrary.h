@@ -12,6 +12,7 @@ class ULayersBlueprintLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     ULayersBlueprintLibrary();
+
     UFUNCTION(BlueprintCallable)
     static void RemoveActorFromLayer(AActor* InActor, const FActorLayer& Layer);
     

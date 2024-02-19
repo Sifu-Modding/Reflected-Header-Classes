@@ -28,6 +28,7 @@ protected:
     
 public:
     UNiagaraDataInterfaceGrid2DCollection();
+
     UFUNCTION(BlueprintCallable)
     void GetTextureSize(const UNiagaraComponent* Component, int32& SizeX, int32& SizeY);
     

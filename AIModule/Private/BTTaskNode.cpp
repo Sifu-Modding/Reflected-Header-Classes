@@ -4,3 +4,4 @@ UBTTaskNode::UBTTaskNode() {
     this->bIgnoreRestartSelf = false;
 }
 
+

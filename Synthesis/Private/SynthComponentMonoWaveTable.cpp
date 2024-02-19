@@ -1,5 +1,9 @@
 #include "SynthComponentMonoWaveTable.h"
 
+USynthComponentMonoWaveTable::USynthComponentMonoWaveTable(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->CurrentPreset = NULL;
+}
+
 void USynthComponentMonoWaveTable::SetWaveTablePosition(float InPosition) {
 }
 
@@ -139,7 +143,4 @@ float USynthComponentMonoWaveTable::GetCurveTangent(int32 TableIndex) {
     return 0.0f;
 }
 
-USynthComponentMonoWaveTable::USynthComponentMonoWaveTable() {
-    this->CurrentPreset = NULL;
-}
 

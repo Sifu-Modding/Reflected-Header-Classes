@@ -8,3 +8,4 @@ UNiagaraComponentRendererProperties::UNiagaraComponentRendererProperties() {
     this->TemplateComponent = NULL;
 }
 
+

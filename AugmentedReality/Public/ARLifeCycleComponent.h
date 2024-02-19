@@ -19,7 +19,8 @@ public:
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FInstanceARActorToBeDestroyedDelegate OnARActorToBeDestroyedDelegate;
     
-    UARLifeCycleComponent();
+    UARLifeCycleComponent(const FObjectInitializer& ObjectInitializer);
+
 private:
     UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
     void ServerSpawnARActor(UClass* ComponentClass, FGuid NativeID);

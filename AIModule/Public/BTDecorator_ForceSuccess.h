@@ -8,5 +8,6 @@ class AIMODULE_API UBTDecorator_ForceSuccess : public UBTDecorator {
     GENERATED_BODY()
 public:
     UBTDecorator_ForceSuccess();
+
 };
 

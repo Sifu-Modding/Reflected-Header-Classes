@@ -18,5 +18,6 @@ public:
     TEnumAsByte<EPawnActionFailHandling::Type> ChildFailureHandlingMode;
     
     UPawnAction_Repeat();
+
 };
 

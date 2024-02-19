@@ -8,5 +8,6 @@ class UMG_API UMovieScene2DTransformPropertySystem : public UMovieScenePropertyS
     GENERATED_BODY()
 public:
     UMovieScene2DTransformPropertySystem();
+
 };
 

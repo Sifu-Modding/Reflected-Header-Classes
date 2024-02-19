@@ -8,5 +8,6 @@ class VARIANTMANAGERCONTENT_API UPropertyValueVisibility : public UPropertyValue
     GENERATED_BODY()
 public:
     UPropertyValueVisibility();
+
 };
 

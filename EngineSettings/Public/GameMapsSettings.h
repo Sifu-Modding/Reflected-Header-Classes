@@ -11,7 +11,7 @@
 
 class UGameMapsSettings;
 
-UCLASS(Blueprintable, Config=Engine, DefaultConfig)
+UCLASS(Blueprintable, DefaultConfig, Config=Engine)
 class ENGINESETTINGS_API UGameMapsSettings : public UObject {
     GENERATED_BODY()
 public:
@@ -60,6 +60,7 @@ private:
     
 public:
     UGameMapsSettings();
+
     UFUNCTION(BlueprintCallable)
     void SetSkipAssigningGamepadToPlayer1(bool bSkipFirstPlayer);
     

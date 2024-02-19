@@ -4,3 +4,4 @@ USlateVectorArtData::USlateVectorArtData() {
     this->Material = NULL;
 }
 
+

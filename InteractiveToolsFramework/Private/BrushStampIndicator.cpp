@@ -13,3 +13,4 @@ UBrushStampIndicator::UBrushStampIndicator() {
     this->AttachedComponent = NULL;
 }
 
+

@@ -12,6 +12,7 @@ public:
     FSourceEffectPhaserSettings Settings;
     
     USourceEffectPhaserPreset();
+
     UFUNCTION(BlueprintCallable)
     void SetSettings(const FSourceEffectPhaserSettings& InSettings);
     

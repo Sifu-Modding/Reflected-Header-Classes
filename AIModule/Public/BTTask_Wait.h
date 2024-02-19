@@ -14,5 +14,6 @@ public:
     float RandomDeviation;
     
     UBTTask_Wait();
+
 };
 

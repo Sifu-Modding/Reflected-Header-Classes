@@ -17,5 +17,6 @@ public:
     UParticleSystem* ParticleSystem;
     
     UGameplayCueNotify_HitImpact();
+
 };
 

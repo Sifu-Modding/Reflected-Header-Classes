@@ -66,6 +66,7 @@ protected:
     
 public:
     UMovieSceneSection();
+
     UFUNCTION(BlueprintCallable)
     void SetRowIndex(int32 NewRowIndex);
     

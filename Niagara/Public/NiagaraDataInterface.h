@@ -8,5 +8,6 @@ class NIAGARA_API UNiagaraDataInterface : public UNiagaraDataInterfaceBase {
     GENERATED_BODY()
 public:
     UNiagaraDataInterface();
+
 };
 

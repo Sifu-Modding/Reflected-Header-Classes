@@ -13,6 +13,7 @@ class HEADMOUNTEDDISPLAY_API UXRLoadingScreenFunctionLibrary : public UBlueprint
     GENERATED_BODY()
 public:
     UXRLoadingScreenFunctionLibrary();
+
     UFUNCTION(BlueprintCallable)
     static void ShowLoadingScreen();
     

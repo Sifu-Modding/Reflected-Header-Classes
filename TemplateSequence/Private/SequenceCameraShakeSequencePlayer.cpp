@@ -5,3 +5,4 @@ USequenceCameraShakeSequencePlayer::USequenceCameraShakeSequencePlayer() {
     this->Sequence = NULL;
 }
 
+

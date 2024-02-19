@@ -63,6 +63,7 @@ protected:
     
 public:
     UTextBlock();
+
     UFUNCTION(BlueprintCallable)
     void SetTextTransformPolicy(ETextTransformPolicy InTransformPolicy);
     

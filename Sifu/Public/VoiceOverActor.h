@@ -14,7 +14,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fDelayBetweenVoiceOvers;
     
-    AVoiceOverActor();
+    AVoiceOverActor(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     void OnLoadingCompleted();

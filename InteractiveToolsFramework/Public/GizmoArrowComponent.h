@@ -20,6 +20,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Thickness;
     
-    UGizmoArrowComponent();
+    UGizmoArrowComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

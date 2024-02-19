@@ -26,6 +26,7 @@ class AUDIOMIXER_API UAudioMixerBlueprintLibrary : public UBlueprintFunctionLibr
     GENERATED_BODY()
 public:
     UAudioMixerBlueprintLibrary();
+
     UFUNCTION(BlueprintCallable)
     static float TrimAudioCache(float InMegabytesToFree);
     

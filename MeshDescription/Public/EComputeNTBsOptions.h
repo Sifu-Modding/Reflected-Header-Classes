@@ -7,6 +7,6 @@ enum class EComputeNTBsOptions : uint8 {
     None,
     Normals,
     Tangents,
-    WeightedNTBs = 0x4,
+    WeightedNTBs = 4,
 };
 

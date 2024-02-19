@@ -20,6 +20,7 @@ public:
     FGetGeoLocationDelegate OnFailed;
     
     UGetGeoLocationAsyncTaskBlueprintProxy();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static UGetGeoLocationAsyncTaskBlueprintProxy* GetGeoLocationAtWorldPosition(UObject* WorldContextObject, const FVector& WorldPosition);
     

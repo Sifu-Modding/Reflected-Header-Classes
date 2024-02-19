@@ -8,5 +8,6 @@ class MOVIESCENECAPTURE_API UNullAudioCaptureProtocol : public UMovieSceneAudioC
     GENERATED_BODY()
 public:
     UNullAudioCaptureProtocol();
+
 };
 

@@ -12,6 +12,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TLazyObjectPtr<ALandscape> LandscapeActor;
     
-    ALandscapeStreamingProxy();
+    ALandscapeStreamingProxy(const FObjectInitializer& ObjectInitializer);
+
 };
 

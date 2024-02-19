@@ -4,7 +4,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
 #include "GeneralProjectSettings.generated.h"
 
-UCLASS(Blueprintable, Config=Engine, DefaultConfig, Config=Game)
+UCLASS(Blueprintable, DefaultConfig, Config=Game)
 class ENGINESETTINGS_API UGeneralProjectSettings : public UObject {
     GENERATED_BODY()
 public:
@@ -69,5 +69,6 @@ public:
     bool bAllowMinimize;
     
     UGeneralProjectSettings();
+
 };
 

@@ -12,5 +12,6 @@ public:
     FGameplayTagContainer Tags;
     
     UEditableGameplayTagQueryExpression_NoTagsMatch();
+
 };
 

@@ -9,7 +9,6 @@ enum class EObjectStateTypeEnum : uint8 {
     Chaos_Object_Kinematic,
     Chaos_Object_Static,
     Chaos_Object_Dynamic,
-    Chaos_Object_UserDefined = 0x64,
-    Chaos_Max,
+    Chaos_Object_UserDefined = 100,
 };
 

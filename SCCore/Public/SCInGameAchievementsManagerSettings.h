@@ -53,6 +53,7 @@ public:
     FOnAchievementsInit m_OnAchievementsInit;
     
     USCInGameAchievementsManagerSettings();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FAchievementUnlockConditionStruct BPF_GetUnlockConditionStructFromTag(const FGameplayTag& _ObjectTag) const;
     

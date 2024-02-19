@@ -1,8 +1,10 @@
 #include "AIPerceptionComponent.h"
 #include "Templates/SubclassOf.h"
 
-class AActor;
-class UAISense;
+UAIPerceptionComponent::UAIPerceptionComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->DominantSense = NULL;
+    this->AIOwner = NULL;
+}
 
 void UAIPerceptionComponent::SetSenseEnabled(TSubclassOf<UAISense> SenseClass, const bool bEnable) {
 }
@@ -35,8 +37,4 @@ bool UAIPerceptionComponent::GetActorsPerception(AActor* Actor, FActorPerception
 void UAIPerceptionComponent::ForgetAll() {
 }
 
-UAIPerceptionComponent::UAIPerceptionComponent() {
-    this->DominantSense = NULL;
-    this->AIOwner = NULL;
-}
 

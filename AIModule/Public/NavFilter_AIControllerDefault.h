@@ -8,5 +8,6 @@ class AIMODULE_API UNavFilter_AIControllerDefault : public UNavigationQueryFilte
     GENERATED_BODY()
 public:
     UNavFilter_AIControllerDefault();
+
 };
 

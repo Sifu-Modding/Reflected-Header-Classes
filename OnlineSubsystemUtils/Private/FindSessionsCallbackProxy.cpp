@@ -1,8 +1,7 @@
 #include "FindSessionsCallbackProxy.h"
 
-class APlayerController;
-class UFindSessionsCallbackProxy;
-class UObject;
+UFindSessionsCallbackProxy::UFindSessionsCallbackProxy() {
+}
 
 FString UFindSessionsCallbackProxy::GetServerName(const FBlueprintSessionResult& Result) {
     return TEXT("");
@@ -24,6 +23,4 @@ UFindSessionsCallbackProxy* UFindSessionsCallbackProxy::FindSessions(UObject* Wo
     return NULL;
 }
 
-UFindSessionsCallbackProxy::UFindSessionsCallbackProxy() {
-}
 

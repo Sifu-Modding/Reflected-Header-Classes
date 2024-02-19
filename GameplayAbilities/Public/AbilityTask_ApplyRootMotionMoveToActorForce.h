@@ -67,8 +67,9 @@ protected:
     
 public:
     UAbilityTask_ApplyRootMotionMoveToActorForce();
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     void OnTargetActorSwapped(AActor* OriginalTarget, AActor* NewTarget);
     

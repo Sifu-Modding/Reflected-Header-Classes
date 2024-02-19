@@ -1,5 +1,8 @@
 #include "AkWwiseTree.h"
 
+UAkWwiseTree::UAkWwiseTree() {
+}
+
 void UAkWwiseTree::SetSearchText(const FString& newText) {
 }
 
@@ -11,6 +14,4 @@ FString UAkWwiseTree::GetSearchText() const {
     return TEXT("");
 }
 
-UAkWwiseTree::UAkWwiseTree() {
-}
 

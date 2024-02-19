@@ -1,5 +1,9 @@
 #include "ModularSynthComponent.h"
 
+UModularSynthComponent::UModularSynthComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->VoiceCount = 8;
+}
+
 void UModularSynthComponent::SetSynthPreset(const FModularSynthPreset& SynthPreset) {
 }
 
@@ -179,7 +183,4 @@ FPatchId UModularSynthComponent::CreatePatch(const ESynth1PatchSource PatchSourc
     return FPatchId{};
 }
 
-UModularSynthComponent::UModularSynthComponent() {
-    this->VoiceCount = 8;
-}
 

@@ -1,5 +1,11 @@
 #include "PartyBeaconClient.h"
 
+APartyBeaconClient::APartyBeaconClient(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->RequestType = EClientRequestType::NonePending;
+    this->bPendingReservationSent = false;
+    this->bCancelReservation = false;
+}
+
 void APartyBeaconClient::ServerUpdateReservationRequest_Implementation(const FString& SessionId, const FPartyReservation& ReservationUpdate) {
 }
 bool APartyBeaconClient::ServerUpdateReservationRequest_Validate(const FString& SessionId, const FPartyReservation& ReservationUpdate) {
@@ -36,9 +42,4 @@ void APartyBeaconClient::ClientReservationResponse_Implementation(TEnumAsByte<EP
 void APartyBeaconClient::ClientCancelReservationResponse_Implementation(TEnumAsByte<EPartyReservationResult::Type> ReservationResponse) {
 }
 
-APartyBeaconClient::APartyBeaconClient() {
-    this->RequestType = EClientRequestType::NonePending;
-    this->bPendingReservationSent = false;
-    this->bCancelReservation = false;
-}
 

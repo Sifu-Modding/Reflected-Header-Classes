@@ -16,5 +16,6 @@ public:
     FSoftObjectPath PathToLevelSequence;
     
     UAnimSequenceLevelSequenceLink();
+
 };
 

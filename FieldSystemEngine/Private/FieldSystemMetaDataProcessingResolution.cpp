@@ -1,12 +1,11 @@
 #include "FieldSystemMetaDataProcessingResolution.h"
 
-class UFieldSystemMetaDataProcessingResolution;
+UFieldSystemMetaDataProcessingResolution::UFieldSystemMetaDataProcessingResolution(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->ResolutionType = Field_Resolution_Minimal;
+}
 
 UFieldSystemMetaDataProcessingResolution* UFieldSystemMetaDataProcessingResolution::SetMetaDataaProcessingResolutionType(TEnumAsByte<EFieldResolutionType> NewResolutionType) {
     return NULL;
 }
 
-UFieldSystemMetaDataProcessingResolution::UFieldSystemMetaDataProcessingResolution() {
-    this->ResolutionType = Field_Resolution_Minimal;
-}
 

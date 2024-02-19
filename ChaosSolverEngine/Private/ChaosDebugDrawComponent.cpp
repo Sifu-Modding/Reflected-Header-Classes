@@ -1,5 +1,6 @@
 #include "ChaosDebugDrawComponent.h"
 
-UChaosDebugDrawComponent::UChaosDebugDrawComponent() {
+UChaosDebugDrawComponent::UChaosDebugDrawComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

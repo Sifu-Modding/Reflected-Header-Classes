@@ -7,3 +7,4 @@ UMovieSceneNiagaraSystemSpawnSection::UMovieSceneNiagaraSystemSpawnSection() {
     this->AgeUpdateMode = ENiagaraAgeUpdateMode::TickDeltaTime;
 }
 
+

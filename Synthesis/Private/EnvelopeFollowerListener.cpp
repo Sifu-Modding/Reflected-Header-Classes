@@ -1,5 +1,6 @@
 #include "EnvelopeFollowerListener.h"
 
-UEnvelopeFollowerListener::UEnvelopeFollowerListener() {
+UEnvelopeFollowerListener::UEnvelopeFollowerListener(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

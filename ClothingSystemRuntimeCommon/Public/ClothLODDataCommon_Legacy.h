@@ -21,5 +21,6 @@ public:
     FClothCollisionData CollisionData;
     
     UClothLODDataCommon_Legacy();
+
 };
 

@@ -8,5 +8,6 @@ class UMovieSceneNameableTrack : public UMovieSceneTrack {
     GENERATED_BODY()
 public:
     UMovieSceneNameableTrack();
+
 };
 

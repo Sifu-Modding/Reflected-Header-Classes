@@ -1,10 +1,7 @@
 #include "AnimationSharingManager.h"
 
-class AActor;
-class UAnimationSharingManager;
-class UAnimationSharingSetup;
-class UObject;
-class USkeleton;
+UAnimationSharingManager::UAnimationSharingManager() {
+}
 
 void UAnimationSharingManager::RegisterActorWithSkeletonBP(AActor* InActor, const USkeleton* SharingSkeleton) {
 }
@@ -21,6 +18,4 @@ bool UAnimationSharingManager::AnimationSharingEnabled() {
     return false;
 }
 
-UAnimationSharingManager::UAnimationSharingManager() {
-}
 

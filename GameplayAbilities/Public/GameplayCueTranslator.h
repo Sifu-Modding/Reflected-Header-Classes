@@ -8,5 +8,6 @@ class GAMEPLAYABILITIES_API UGameplayCueTranslator : public UObject {
     GENERATED_BODY()
 public:
     UGameplayCueTranslator();
+
 };
 

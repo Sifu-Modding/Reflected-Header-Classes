@@ -13,5 +13,6 @@ public:
     TArray<UAkMediaAsset*> MediaList;
     
     UAkAssetDataWithMedia();
+
 };
 

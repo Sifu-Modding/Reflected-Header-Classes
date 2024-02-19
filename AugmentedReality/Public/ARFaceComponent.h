@@ -24,9 +24,10 @@ protected:
     FARFaceUpdatePayload ReplicatedPayload;
     
 public:
-    UARFaceComponent();
+    UARFaceComponent(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     static void SetFaceComponentDebugMode(EFaceComponentDebugMode NewDebugMode);
     

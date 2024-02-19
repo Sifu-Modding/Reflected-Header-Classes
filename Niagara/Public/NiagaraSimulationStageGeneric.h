@@ -25,5 +25,6 @@ public:
     FNiagaraVariableDataInterfaceBinding DataInterface;
     
     UNiagaraSimulationStageGeneric();
+
 };
 

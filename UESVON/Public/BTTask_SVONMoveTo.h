@@ -3,7 +3,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=AIModule -ObjectName=BTTask_BlackboardBase -FallbackName=BTTask_BlackboardBase
 #include "BTTask_SVONMoveTo.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS(Blueprintable, Config=Engine)
 class UESVON_API UBTTask_SVONMoveTo : public UBTTask_BlackboardBase {
     GENERATED_BODY()
 public:
@@ -29,5 +29,6 @@ public:
     bool bUseAsyncPathfinding;
     
     UBTTask_SVONMoveTo();
+
 };
 

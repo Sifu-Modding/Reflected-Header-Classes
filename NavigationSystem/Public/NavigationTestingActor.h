@@ -115,8 +115,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float OffsetFromCornersDistance;
     
-    ANavigationTestingActor();
-    
+    ANavigationTestingActor(const FObjectInitializer& ObjectInitializer);
+
+
     // Fix for true pure virtual functions not being implemented
 };
 

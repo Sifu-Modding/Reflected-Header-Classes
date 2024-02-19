@@ -1,12 +1,11 @@
 #include "UniformInteger.h"
 
-class UUniformInteger;
+UUniformInteger::UUniformInteger(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->Magnitude = 0;
+}
 
 UUniformInteger* UUniformInteger::SetUniformInteger(int32 NewMagnitude) {
     return NULL;
 }
 
-UUniformInteger::UUniformInteger() {
-    this->Magnitude = 0;
-}
 

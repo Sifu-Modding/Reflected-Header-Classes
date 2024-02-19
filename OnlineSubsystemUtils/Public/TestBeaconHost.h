@@ -7,6 +7,7 @@ UCLASS(Blueprintable, NonTransient)
 class ONLINESUBSYSTEMUTILS_API ATestBeaconHost : public AOnlineBeaconHostObject {
     GENERATED_BODY()
 public:
-    ATestBeaconHost();
+    ATestBeaconHost(const FObjectInitializer& ObjectInitializer);
+
 };
 

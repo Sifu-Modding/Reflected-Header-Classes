@@ -15,6 +15,7 @@ class AUGMENTEDREALITY_API UARDependencyHandler : public UObject {
     GENERATED_BODY()
 public:
     UARDependencyHandler();
+
     UFUNCTION(BlueprintCallable, meta=(Latent, LatentInfo="LatentInfo", WorldContext="WorldContextObject"))
     void StartARSessionLatent(UObject* WorldContextObject, UARSessionConfig* SessionConfig, FLatentActionInfo LatentInfo);
     

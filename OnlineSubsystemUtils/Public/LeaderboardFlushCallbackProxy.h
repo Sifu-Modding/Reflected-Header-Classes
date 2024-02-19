@@ -18,6 +18,7 @@ public:
     FOnLeaderboardFlushed OnFailure;
     
     ULeaderboardFlushCallbackProxy();
+
     UFUNCTION(BlueprintCallable)
     static ULeaderboardFlushCallbackProxy* CreateProxyObjectForFlush(APlayerController* PlayerController, FName SessionName);
     

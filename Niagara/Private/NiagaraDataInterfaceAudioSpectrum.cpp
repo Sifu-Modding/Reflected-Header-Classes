@@ -7,3 +7,4 @@ UNiagaraDataInterfaceAudioSpectrum::UNiagaraDataInterfaceAudioSpectrum() {
     this->NoiseFloorDb = -60.00f;
 }
 
+

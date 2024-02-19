@@ -1,15 +1,24 @@
 #include "NavigationSystemV1.h"
 #include "Templates/SubclassOf.h"
 
-class AActor;
-class AController;
-class ANavMeshBoundsVolume;
-class ANavigationData;
-class UNavArea;
-class UNavigationPath;
-class UNavigationQueryFilter;
-class UNavigationSystemV1;
-class UObject;
+UNavigationSystemV1::UNavigationSystemV1() {
+    this->MainNavData = NULL;
+    this->AbstractNavData = NULL;
+    this->bAutoCreateNavigationData = true;
+    this->bSpawnNavDataInNavBoundsLevel = false;
+    this->bAllowClientSideNavigation = false;
+    this->bShouldDiscardSubLevelNavData = true;
+    this->bTickWhilePaused = false;
+    this->bSupportRebuilding = false;
+    this->bInitialBuildingLocked = false;
+    this->bSkipAgentHeightCheckWhenPickingNavData = false;
+    this->bGenerateNavigationOnlyAroundNavigationInvokers = false;
+    this->ActiveTilesUpdateInterval = 1.00f;
+    this->DataGatheringMode = ENavDataGatheringModeConfig::Instant;
+    this->DirtyAreaWarningSizeThreshold = -1.00f;
+    this->OperationMode = FNavigationSystemRunMode::InvalidMode;
+    this->DirtyAreasUpdateFreq = 60.00f;
+}
 
 void UNavigationSystemV1::UnregisterNavigationInvoker(AActor* Invoker) {
 }
@@ -99,22 +108,4 @@ UNavigationPath* UNavigationSystemV1::FindPathToActorSynchronously(UObject* Worl
     return NULL;
 }
 
-UNavigationSystemV1::UNavigationSystemV1() {
-    this->MainNavData = NULL;
-    this->AbstractNavData = NULL;
-    this->bAutoCreateNavigationData = true;
-    this->bSpawnNavDataInNavBoundsLevel = false;
-    this->bAllowClientSideNavigation = false;
-    this->bShouldDiscardSubLevelNavData = true;
-    this->bTickWhilePaused = false;
-    this->bSupportRebuilding = false;
-    this->bInitialBuildingLocked = false;
-    this->bSkipAgentHeightCheckWhenPickingNavData = false;
-    this->bGenerateNavigationOnlyAroundNavigationInvokers = false;
-    this->ActiveTilesUpdateInterval = 1.00f;
-    this->DataGatheringMode = ENavDataGatheringModeConfig::Instant;
-    this->DirtyAreaWarningSizeThreshold = -1.00f;
-    this->OperationMode = FNavigationSystemRunMode::InvalidMode;
-    this->DirtyAreasUpdateFreq = 60.00f;
-}
 

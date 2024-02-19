@@ -1,46 +1,8 @@
 #include "LandscapeProxy.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=SceneComponent -FallbackName=SceneComponent
 
-class ULandscapeLayerInfoObject;
-class UMaterialInterface;
-class USplineComponent;
-class UTexture;
-class UTextureRenderTarget2D;
-
-void ALandscapeProxy::SetLandscapeMaterialVectorParameterValue(FName ParameterName, FLinearColor Value) {
-}
-
-void ALandscapeProxy::SetLandscapeMaterialTextureParameterValue(FName ParameterName, UTexture* Value) {
-}
-
-void ALandscapeProxy::SetLandscapeMaterialScalarParameterValue(FName ParameterName, float Value) {
-}
-
-bool ALandscapeProxy::LandscapeExportHeightmapToRenderTarget(UTextureRenderTarget2D* InRenderTarget, bool InExportHeightIntoRGChannel, bool InExportLandscapeProxies) {
-    return false;
-}
-
-void ALandscapeProxy::EditorSetLandscapeMaterial(UMaterialInterface* NewLandscapeMaterial) {
-}
-
-void ALandscapeProxy::EditorApplySpline(USplineComponent* InSplineComponent, float StartWidth, float EndWidth, float StartSideFalloff, float EndSideFalloff, float StartRoll, float EndRoll, int32 NumSubdivisions, bool bRaiseHeights, bool bLowerHeights, ULandscapeLayerInfoObject* PaintLayer, FName EditLayerName) {
-}
-
-void ALandscapeProxy::ChangeUseTessellationComponentScreenSizeFalloff(bool InComponentScreenSizeToUseSubSections) {
-}
-
-void ALandscapeProxy::ChangeTessellationComponentScreenSizeFalloff(float InUseTessellationComponentScreenSizeFalloff) {
-}
-
-void ALandscapeProxy::ChangeTessellationComponentScreenSize(float InTessellationComponentScreenSize) {
-}
-
-void ALandscapeProxy::ChangeLODDistanceFactor(float InLODDistanceFactor) {
-}
-
-void ALandscapeProxy::ChangeComponentScreenSizeToUseSubSections(float InComponentScreenSizeToUseSubSections) {
-}
-
-ALandscapeProxy::ALandscapeProxy() {
+ALandscapeProxy::ALandscapeProxy(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("RootComponent0"));
     this->SplineComponent = NULL;
     this->MaxLODLevel = -1;
     this->LODDistanceFactor = 0.00f;
@@ -94,4 +56,39 @@ ALandscapeProxy::ALandscapeProxy() {
     this->bUseLandscapeForCullingInvisibleHLODVertices = false;
     this->bHasLayersContent = false;
 }
+
+void ALandscapeProxy::SetLandscapeMaterialVectorParameterValue(FName ParameterName, FLinearColor Value) {
+}
+
+void ALandscapeProxy::SetLandscapeMaterialTextureParameterValue(FName ParameterName, UTexture* Value) {
+}
+
+void ALandscapeProxy::SetLandscapeMaterialScalarParameterValue(FName ParameterName, float Value) {
+}
+
+bool ALandscapeProxy::LandscapeExportHeightmapToRenderTarget(UTextureRenderTarget2D* InRenderTarget, bool InExportHeightIntoRGChannel, bool InExportLandscapeProxies) {
+    return false;
+}
+
+void ALandscapeProxy::EditorSetLandscapeMaterial(UMaterialInterface* NewLandscapeMaterial) {
+}
+
+void ALandscapeProxy::EditorApplySpline(USplineComponent* InSplineComponent, float StartWidth, float EndWidth, float StartSideFalloff, float EndSideFalloff, float StartRoll, float EndRoll, int32 NumSubdivisions, bool bRaiseHeights, bool bLowerHeights, ULandscapeLayerInfoObject* PaintLayer, FName EditLayerName) {
+}
+
+void ALandscapeProxy::ChangeUseTessellationComponentScreenSizeFalloff(bool InComponentScreenSizeToUseSubSections) {
+}
+
+void ALandscapeProxy::ChangeTessellationComponentScreenSizeFalloff(float InUseTessellationComponentScreenSizeFalloff) {
+}
+
+void ALandscapeProxy::ChangeTessellationComponentScreenSize(float InTessellationComponentScreenSize) {
+}
+
+void ALandscapeProxy::ChangeLODDistanceFactor(float InLODDistanceFactor) {
+}
+
+void ALandscapeProxy::ChangeComponentScreenSizeToUseSubSections(float InComponentScreenSizeToUseSubSections) {
+}
+
 

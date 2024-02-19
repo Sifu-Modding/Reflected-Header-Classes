@@ -7,6 +7,7 @@ UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class CHAOSSOLVERENGINE_API UChaosDebugDrawComponent : public UActorComponent {
     GENERATED_BODY()
 public:
-    UChaosDebugDrawComponent();
+    UChaosDebugDrawComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

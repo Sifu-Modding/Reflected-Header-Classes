@@ -8,6 +8,5 @@ enum EHorizontalAlignment {
     HAlign_Left,
     HAlign_Center,
     HAlign_Right,
-    HAlign_MAX UMETA(Hidden),
 };
 

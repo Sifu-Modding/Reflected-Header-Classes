@@ -12,7 +12,8 @@ public:
     FName SlotName;
     
     UMovieSceneMeshMaterialBySlotNameTrack();
-    
+
+
     // Fix for true pure virtual functions not being implemented
 };
 

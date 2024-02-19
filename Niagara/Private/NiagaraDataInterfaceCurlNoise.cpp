@@ -4,3 +4,4 @@ UNiagaraDataInterfaceCurlNoise::UNiagaraDataInterfaceCurlNoise() {
     this->Seed = 0;
 }
 
+

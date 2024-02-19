@@ -24,6 +24,7 @@ protected:
     
 public:
     UAIPerceptionSystem();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void ReportPerceptionEvent(UObject* WorldContextObject, UAISenseEvent* PerceptionEvent);
     

@@ -1,5 +1,6 @@
 #include "FieldNodeBase.h"
 
-UFieldNodeBase::UFieldNodeBase() {
+UFieldNodeBase::UFieldNodeBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

@@ -9,7 +9,8 @@ class UMovieSceneFadeTrack : public UMovieSceneFloatTrack, public IMovieSceneTra
     GENERATED_BODY()
 public:
     UMovieSceneFadeTrack();
-    
+
+
     // Fix for true pure virtual functions not being implemented
 };
 

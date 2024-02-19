@@ -53,5 +53,6 @@ public:
     TArray<FCustomFieldData> CustomFields;
     
     UBuildPatchManifest();
+
 };
 

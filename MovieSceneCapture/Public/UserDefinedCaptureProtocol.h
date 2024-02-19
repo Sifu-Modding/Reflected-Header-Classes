@@ -19,6 +19,7 @@ protected:
     
 public:
     UUserDefinedCaptureProtocol();
+
     UFUNCTION(BlueprintCallable)
     void StopCapturingFinalPixels();
     

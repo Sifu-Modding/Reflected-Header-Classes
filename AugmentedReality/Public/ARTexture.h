@@ -23,5 +23,6 @@ public:
     FVector2D Size;
     
     UARTexture();
+
 };
 

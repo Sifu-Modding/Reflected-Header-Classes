@@ -1,12 +1,13 @@
 #include "Overlay.h"
+#include "ESlateVisibility.h"
 
-class UOverlaySlot;
-class UWidget;
+UOverlay::UOverlay() {
+    this->bIsVariable = false;
+    this->Visibility = ESlateVisibility::SelfHitTestInvisible;
+}
 
 UOverlaySlot* UOverlay::AddChildToOverlay(UWidget* Content) {
     return NULL;
 }
 
-UOverlay::UOverlay() {
-}
 

@@ -12,5 +12,6 @@ public:
     FMovieSceneByteChannel EnumCurve;
     
     UMovieSceneEnumSection();
+
 };
 

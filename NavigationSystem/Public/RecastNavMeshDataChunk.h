@@ -8,5 +8,6 @@ class NAVIGATIONSYSTEM_API URecastNavMeshDataChunk : public UNavigationDataChunk
     GENERATED_BODY()
 public:
     URecastNavMeshDataChunk();
+
 };
 

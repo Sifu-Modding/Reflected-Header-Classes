@@ -1,8 +1,8 @@
 #include "Viewport.h"
 #include "Templates/SubclassOf.h"
 
-class AActor;
-class UWorld;
+UViewport::UViewport() {
+}
 
 AActor* UViewport::Spawn(TSubclassOf<AActor> ActorClass) {
     return NULL;
@@ -26,6 +26,4 @@ FVector UViewport::GetViewLocation() const {
     return FVector{};
 }
 
-UViewport::UViewport() {
-}
 

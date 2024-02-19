@@ -78,7 +78,8 @@ private:
     UChaosGameplayEventDispatcher* GameplayEventDispatcherComponent;
     
 public:
-    AChaosSolverActor();
+    AChaosSolverActor(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetSolverActive(bool bActive);
     

@@ -8,5 +8,6 @@ class INTERACTIVETOOLSFRAMEWORK_API UAxisPositionGizmoBuilder : public UInteract
     GENERATED_BODY()
 public:
     UAxisPositionGizmoBuilder();
+
 };
 

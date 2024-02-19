@@ -7,6 +7,7 @@ UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnable
 class UInteractiveFoliageComponent : public UStaticMeshComponent {
     GENERATED_BODY()
 public:
-    UInteractiveFoliageComponent();
+    UInteractiveFoliageComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

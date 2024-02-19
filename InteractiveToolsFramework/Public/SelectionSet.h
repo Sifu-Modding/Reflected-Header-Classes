@@ -8,5 +8,6 @@ class INTERACTIVETOOLSFRAMEWORK_API USelectionSet : public UObject {
     GENERATED_BODY()
 public:
     USelectionSet();
+
 };
 

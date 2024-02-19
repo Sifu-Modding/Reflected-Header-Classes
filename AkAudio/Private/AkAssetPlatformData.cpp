@@ -4,3 +4,4 @@ UAkAssetPlatformData::UAkAssetPlatformData() {
     this->CurrentAssetData = NULL;
 }
 
+

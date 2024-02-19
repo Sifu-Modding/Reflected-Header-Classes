@@ -28,7 +28,8 @@ protected:
     TArray<UBlackboardKeyType*> KeyInstances;
     
 public:
-    UBlackboardComponent();
+    UBlackboardComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetValueAsVector(const FName& KeyName, FVector VectorValue);
     

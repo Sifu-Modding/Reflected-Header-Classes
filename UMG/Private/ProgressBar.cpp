@@ -1,5 +1,15 @@
 #include "ProgressBar.h"
 
+UProgressBar::UProgressBar() {
+    this->Style = NULL;
+    this->BackgroundImage = NULL;
+    this->FillImage = NULL;
+    this->MarqueeImage = NULL;
+    this->Percent = 0.00f;
+    this->BarFillType = EProgressBarFillType::LeftToRight;
+    this->bIsMarquee = false;
+}
+
 void UProgressBar::SetPercent(float InPercent) {
 }
 
@@ -13,13 +23,4 @@ float UProgressBar::GetPercent() {
     return 0.0f;
 }
 
-UProgressBar::UProgressBar() {
-    this->Style = NULL;
-    this->BackgroundImage = NULL;
-    this->FillImage = NULL;
-    this->MarqueeImage = NULL;
-    this->Percent = 0.00f;
-    this->BarFillType = EProgressBarFillType::LeftToRight;
-    this->bIsMarquee = false;
-}
 

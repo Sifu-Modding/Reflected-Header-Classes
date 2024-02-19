@@ -7,3 +7,4 @@ ULandscapeWeightmapUsage::ULandscapeWeightmapUsage() {
     this->ChannelUsage[3] = NULL;
 }
 
+

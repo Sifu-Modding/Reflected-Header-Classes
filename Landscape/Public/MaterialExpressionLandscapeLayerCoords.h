@@ -28,5 +28,6 @@ public:
     float MappingPanV;
     
     UMaterialExpressionLandscapeLayerCoords();
+
 };
 

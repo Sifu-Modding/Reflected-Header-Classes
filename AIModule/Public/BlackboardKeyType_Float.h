@@ -8,5 +8,6 @@ class AIMODULE_API UBlackboardKeyType_Float : public UBlackboardKeyType {
     GENERATED_BODY()
 public:
     UBlackboardKeyType_Float();
+
 };
 

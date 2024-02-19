@@ -11,6 +11,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FNavAgentSelector SupportedAgents;
     
-    ANavMeshBoundsVolume();
+    ANavMeshBoundsVolume(const FObjectInitializer& ObjectInitializer);
+
 };
 

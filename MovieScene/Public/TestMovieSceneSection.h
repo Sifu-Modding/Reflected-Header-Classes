@@ -8,5 +8,6 @@ class UTestMovieSceneSection : public UMovieSceneSection {
     GENERATED_BODY()
 public:
     UTestMovieSceneSection();
+
 };
 

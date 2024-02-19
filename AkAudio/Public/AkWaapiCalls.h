@@ -9,11 +9,12 @@
 #include "OnWaapiProjectLoadedDelegate.h"
 #include "AkWaapiCalls.generated.h"
 
-UCLASS(Blueprintable, Config=Engine, DefaultConfig, Within=World)
+UCLASS(Blueprintable, DefaultConfig, Config=Engine, Within=World)
 class AKAUDIO_API UAkWaapiCalls : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UAkWaapiCalls();
+
     UFUNCTION(BlueprintCallable, BlueprintCosmetic)
     static FAKWaapiJsonObject Unsubscribe(const FAkWaapiSubscriptionId& SubscriptionId, bool& UnsubscriptionDone);
     

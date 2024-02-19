@@ -1,8 +1,9 @@
 #include "MoviePipelineConfigBase.h"
 #include "Templates/SubclassOf.h"
 
-class UMoviePipelineConfigBase;
-class UMoviePipelineSetting;
+UMoviePipelineConfigBase::UMoviePipelineConfigBase() {
+    this->DisplayName = TEXT("Unsaved Config");
+}
 
 void UMoviePipelineConfigBase::RemoveSetting(UMoviePipelineSetting* InSetting) {
 }
@@ -26,7 +27,4 @@ UMoviePipelineSetting* UMoviePipelineConfigBase::FindOrAddSettingByClass(TSubcla
 void UMoviePipelineConfigBase::CopyFrom(UMoviePipelineConfigBase* InConfig) {
 }
 
-UMoviePipelineConfigBase::UMoviePipelineConfigBase() {
-    this->DisplayName = TEXT("Unsaved Config");
-}
 

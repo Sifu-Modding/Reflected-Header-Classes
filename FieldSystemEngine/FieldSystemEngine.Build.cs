@@ -11,7 +11,6 @@ public class FieldSystemEngine : ModuleRules {
             "ChaosSolverEngine",
             "Core",
             "CoreUObject",
-            "DeveloperSettings",
             "Engine",
         });
     }

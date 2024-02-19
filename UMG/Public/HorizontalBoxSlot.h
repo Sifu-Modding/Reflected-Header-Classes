@@ -24,6 +24,7 @@ public:
     TEnumAsByte<EVerticalAlignment> VerticalAlignment;
     
     UHorizontalBoxSlot();
+
     UFUNCTION(BlueprintCallable)
     void SetVerticalAlignment(TEnumAsByte<EVerticalAlignment> InVerticalAlignment);
     

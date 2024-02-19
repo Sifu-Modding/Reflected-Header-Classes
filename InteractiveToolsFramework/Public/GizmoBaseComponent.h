@@ -17,7 +17,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float PixelHitDistanceThreshold;
     
-    UGizmoBaseComponent();
+    UGizmoBaseComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void UpdateWorldLocalState(bool bWorldIn);
     

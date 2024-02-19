@@ -12,6 +12,7 @@ class GAMEPLAYABILITIES_API UGameplayEffectCustomApplicationRequirement : public
     GENERATED_BODY()
 public:
     UGameplayEffectCustomApplicationRequirement();
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     bool CanApplyGameplayEffect(const UGameplayEffect* GameplayEffect, const FGameplayEffectSpec& Spec, UAbilitySystemComponent* ASC) const;
     

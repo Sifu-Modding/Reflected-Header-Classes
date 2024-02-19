@@ -8,5 +8,6 @@ class INTERACTIVETOOLSFRAMEWORK_API ULocalClickDragInputBehavior : public UClick
     GENERATED_BODY()
 public:
     ULocalClickDragInputBehavior();
+
 };
 

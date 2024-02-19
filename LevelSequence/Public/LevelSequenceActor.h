@@ -60,9 +60,10 @@ private:
     bool bShowBurnin;
     
 public:
-    ALevelSequenceActor();
+    ALevelSequenceActor(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     void ShowBurnin();
     
@@ -114,7 +115,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void AddBinding(FMovieSceneObjectBindingID Binding, AActor* Actor, bool bAllowBindingsFromAsset);
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

@@ -8,5 +8,6 @@ class CHAOSSOLVERENGINE_API UChaosSolver : public UObject {
     GENERATED_BODY()
 public:
     UChaosSolver();
+
 };
 

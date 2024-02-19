@@ -9,3 +9,4 @@ UMovieSceneAkAudioEventSection::UMovieSceneAkAudioEventSection() {
     this->MaxSourceDuration = -1.00f;
 }
 
+

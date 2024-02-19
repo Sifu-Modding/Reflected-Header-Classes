@@ -8,5 +8,6 @@ class UTemplateSequenceSystem : public UMovieSceneEntitySystem {
     GENERATED_BODY()
 public:
     UTemplateSequenceSystem();
+
 };
 

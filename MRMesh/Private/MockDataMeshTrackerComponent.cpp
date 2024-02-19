@@ -1,14 +1,7 @@
 #include "MockDataMeshTrackerComponent.h"
 
-class UMRMeshComponent;
-
-void UMockDataMeshTrackerComponent::DisconnectMRMesh(UMRMeshComponent* InMRMeshPtr) {
-}
-
-void UMockDataMeshTrackerComponent::ConnectMRMesh(UMRMeshComponent* InMRMeshPtr) {
-}
-
-UMockDataMeshTrackerComponent::UMockDataMeshTrackerComponent() {
+UMockDataMeshTrackerComponent::UMockDataMeshTrackerComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bAutoActivate = true;
     this->ScanWorld = true;
     this->RequestNormals = true;
     this->RequestVertexConfidence = false;
@@ -17,4 +10,11 @@ UMockDataMeshTrackerComponent::UMockDataMeshTrackerComponent() {
     this->UpdateInterval = 3.00f;
     this->MRMesh = NULL;
 }
+
+void UMockDataMeshTrackerComponent::DisconnectMRMesh(UMRMeshComponent* InMRMeshPtr) {
+}
+
+void UMockDataMeshTrackerComponent::ConnectMRMesh(UMRMeshComponent* InMRMeshPtr) {
+}
+
 

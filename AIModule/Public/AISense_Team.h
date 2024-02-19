@@ -12,5 +12,6 @@ public:
     TArray<FAITeamStimulusEvent> RegisteredEvents;
     
     UAISense_Team();
+
 };
 

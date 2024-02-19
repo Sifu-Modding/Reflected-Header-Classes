@@ -1,5 +1,8 @@
 #include "GooglePADFunctionLibrary.h"
 
+UGooglePADFunctionLibrary::UGooglePADFunctionLibrary() {
+}
+
 EGooglePADErrorCode UGooglePADFunctionLibrary::ShowCellularDataConfirmation() {
     return EGooglePADErrorCode::AssetPack_NO_ERROR;
 }
@@ -58,6 +61,4 @@ EGooglePADErrorCode UGooglePADFunctionLibrary::CancelDownload(const TArray<FStri
     return EGooglePADErrorCode::AssetPack_NO_ERROR;
 }
 
-UGooglePADFunctionLibrary::UGooglePADFunctionLibrary() {
-}
 

@@ -3,7 +3,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
 #include "TcpMessagingSettings.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS(Blueprintable, Config=Engine)
 class UTcpMessagingSettings : public UObject {
     GENERATED_BODY()
 public:
@@ -25,5 +25,6 @@ private:
     
 public:
     UTcpMessagingSettings();
+
 };
 

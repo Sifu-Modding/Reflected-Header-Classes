@@ -10,10 +10,10 @@ UCLASS(Blueprintable, CollapseCategories)
 class LANDSCAPE_API UMaterialExpressionLandscapeLayerWeight : public UMaterialExpression {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     FExpressionInput Base;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     FExpressionInput Layer;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -29,5 +29,6 @@ public:
     FGuid ExpressionGUID;
     
     UMaterialExpressionLandscapeLayerWeight();
+
 };
 

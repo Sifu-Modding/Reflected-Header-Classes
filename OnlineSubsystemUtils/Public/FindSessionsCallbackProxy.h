@@ -20,6 +20,7 @@ public:
     FBlueprintFindSessionsResultDelegate OnFailure;
     
     UFindSessionsCallbackProxy();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static FString GetServerName(const FBlueprintSessionResult& Result);
     

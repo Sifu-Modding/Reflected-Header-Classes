@@ -5,3 +5,4 @@ UAkMusicSyncCallbackInfo::UAkMusicSyncCallbackInfo() {
     this->MusicSyncType = EAkCallbackType::EndOfEvent;
 }
 
+

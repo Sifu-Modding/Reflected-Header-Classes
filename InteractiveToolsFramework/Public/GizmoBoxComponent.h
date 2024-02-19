@@ -27,6 +27,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bEnableAxisFlip;
     
-    UGizmoBoxComponent();
+    UGizmoBoxComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

@@ -18,6 +18,7 @@ public:
     FPostEventAtLocationAsyncOutputPin Completed;
     
     UPostEventAtLocationAsync();
+
     UFUNCTION(BlueprintCallable, BlueprintCosmetic, meta=(WorldContext="WorldContextObject"))
     static UPostEventAtLocationAsync* PostEventAtLocationAsync(const UObject* WorldContextObject, UAkAudioEvent* AkEvent, FVector Location, FRotator Orientation);
     

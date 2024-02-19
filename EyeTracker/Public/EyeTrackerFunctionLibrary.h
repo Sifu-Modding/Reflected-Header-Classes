@@ -12,6 +12,7 @@ class EYETRACKER_API UEyeTrackerFunctionLibrary : public UBlueprintFunctionLibra
     GENERATED_BODY()
 public:
     UEyeTrackerFunctionLibrary();
+
     UFUNCTION(BlueprintCallable)
     static void SetEyeTrackedPlayer(APlayerController* PlayerController);
     

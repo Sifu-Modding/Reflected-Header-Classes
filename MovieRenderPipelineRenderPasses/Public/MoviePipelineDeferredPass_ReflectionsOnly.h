@@ -8,5 +8,6 @@ class UMoviePipelineDeferredPass_ReflectionsOnly : public UMoviePipelineDeferred
     GENERATED_BODY()
 public:
     UMoviePipelineDeferredPass_ReflectionsOnly();
+
 };
 

@@ -43,6 +43,7 @@ public:
     FString InheritedCommandLineArguments;
     
     UMovieSceneCapture();
+
     UFUNCTION(BlueprintCallable)
     void SetImageCaptureProtocolType(TSubclassOf<UMovieSceneCaptureProtocolBase> ProtocolType);
     
@@ -55,7 +56,7 @@ public:
     UFUNCTION(BlueprintCallable)
     UMovieSceneCaptureProtocolBase* GetAudioCaptureProtocol();
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

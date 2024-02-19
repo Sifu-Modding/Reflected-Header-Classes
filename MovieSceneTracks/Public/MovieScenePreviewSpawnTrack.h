@@ -8,5 +8,6 @@ class MOVIESCENETRACKS_API UMovieScenePreviewSpawnTrack : public UMovieSceneSpaw
     GENERATED_BODY()
 public:
     UMovieScenePreviewSpawnTrack();
+
 };
 

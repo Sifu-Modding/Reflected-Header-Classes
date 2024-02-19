@@ -16,6 +16,7 @@ public:
     TArray<FAIDamageEvent> RegisteredEvents;
     
     UAISense_Damage();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void ReportDamageEvent(UObject* WorldContextObject, AActor* DamagedActor, AActor* Instigator, float DamageAmount, FVector EventLocation, FVector HitLocation);
     

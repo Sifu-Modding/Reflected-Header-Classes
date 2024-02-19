@@ -11,7 +11,8 @@ UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class AKAUDIO_API UAkReplication : public UReplayReplicationComponentBase {
     GENERATED_BODY()
 public:
-    UAkReplication();
+    UAkReplication(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(NetMulticast, Reliable)
     void MulticastSetSwitch(uint32 _uiGroupID, uint32 _uiValueID, AActor* _actor) const;

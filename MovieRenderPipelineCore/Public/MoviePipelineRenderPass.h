@@ -8,5 +8,6 @@ class MOVIERENDERPIPELINECORE_API UMoviePipelineRenderPass : public UMoviePipeli
     GENERATED_BODY()
 public:
     UMoviePipelineRenderPass();
+
 };
 

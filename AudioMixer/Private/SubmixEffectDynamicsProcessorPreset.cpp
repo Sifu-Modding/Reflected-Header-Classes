@@ -1,6 +1,7 @@
 #include "SubmixEffectDynamicsProcessorPreset.h"
 
-class USoundSubmix;
+USubmixEffectDynamicsProcessorPreset::USubmixEffectDynamicsProcessorPreset() {
+}
 
 void USubmixEffectDynamicsProcessorPreset::SetSettings(const FSubmixEffectDynamicsProcessorSettings& NewSettings) {
 }
@@ -8,6 +9,4 @@ void USubmixEffectDynamicsProcessorPreset::SetSettings(const FSubmixEffectDynami
 void USubmixEffectDynamicsProcessorPreset::SetExternalSubmix(USoundSubmix* Submix) {
 }
 
-USubmixEffectDynamicsProcessorPreset::USubmixEffectDynamicsProcessorPreset() {
-}
 

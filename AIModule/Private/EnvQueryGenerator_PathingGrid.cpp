@@ -4,3 +4,4 @@ UEnvQueryGenerator_PathingGrid::UEnvQueryGenerator_PathingGrid() {
     this->NavigationFilter = NULL;
 }
 
+

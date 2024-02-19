@@ -12,6 +12,7 @@ class UEnvQueryContext_BlueprintBase : public UEnvQueryContext {
     GENERATED_BODY()
 public:
     UEnvQueryContext_BlueprintBase();
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ProvideSingleLocation(UObject* QuerierObject, AActor* QuerierActor, FVector& ResultingLocation) const;
     

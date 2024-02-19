@@ -19,6 +19,7 @@ protected:
     
 public:
     UARTrackedImage();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector2D GetEstimateSize();
     

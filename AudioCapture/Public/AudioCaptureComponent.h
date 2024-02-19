@@ -10,6 +10,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 JitterLatencyFrames;
     
-    UAudioCaptureComponent();
+    UAudioCaptureComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

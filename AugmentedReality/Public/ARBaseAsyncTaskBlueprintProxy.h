@@ -8,5 +8,6 @@ class AUGMENTEDREALITY_API UARBaseAsyncTaskBlueprintProxy : public UBlueprintAsy
     GENERATED_BODY()
 public:
     UARBaseAsyncTaskBlueprintProxy();
+
 };
 

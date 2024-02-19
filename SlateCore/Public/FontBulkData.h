@@ -8,5 +8,6 @@ class SLATECORE_API UFontBulkData : public UObject {
     GENERATED_BODY()
 public:
     UFontBulkData();
+
 };
 

@@ -34,5 +34,6 @@ public:
     TArray<uint32> SelfCollisionIndices;
     
     UClothPhysicalMeshDataBase_Legacy();
+
 };
 

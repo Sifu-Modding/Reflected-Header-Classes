@@ -28,6 +28,7 @@ class UMG_API UWidgetLayoutLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UWidgetLayoutLibrary();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static UWrapBoxSlot* SlotAsWrapBoxSlot(UWidget* Widget);
     

@@ -10,6 +10,5 @@ enum class EDatasmithImportLightmapMin : uint8 {
     LIGHTMAP_128,
     LIGHTMAP_256,
     LIGHTMAP_512,
-    LIGHTMAP_MAX UMETA(Hidden),
 };
 

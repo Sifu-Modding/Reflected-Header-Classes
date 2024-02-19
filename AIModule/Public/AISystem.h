@@ -12,7 +12,7 @@ class UBehaviorTreeManager;
 class UEnvQueryManager;
 class UNavLocalGridManager;
 
-UCLASS(Blueprintable)
+UCLASS(Blueprintable, Config=Engine)
 class AIMODULE_API UAISystem : public UAISystemBase {
     GENERATED_BODY()
 public:
@@ -81,6 +81,7 @@ protected:
     
 public:
     UAISystem();
+
     UFUNCTION(BlueprintCallable, Exec)
     void AILoggingVerbose();
     

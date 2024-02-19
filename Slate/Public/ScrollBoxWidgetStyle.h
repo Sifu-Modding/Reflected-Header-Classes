@@ -12,5 +12,6 @@ public:
     FScrollBoxStyle ScrollBoxStyle;
     
     UScrollBoxWidgetStyle();
+
 };
 

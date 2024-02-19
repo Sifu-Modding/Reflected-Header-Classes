@@ -4,3 +4,4 @@ UBehaviorTreeManager::UBehaviorTreeManager() {
     this->MaxDebuggerSteps = 100;
 }
 
+

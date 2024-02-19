@@ -1,11 +1,10 @@
 #include "ReturnResultsTerminal.h"
 
-class UReturnResultsTerminal;
+UReturnResultsTerminal::UReturnResultsTerminal(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+}
 
 UReturnResultsTerminal* UReturnResultsTerminal::SetReturnResultsTerminal() {
     return NULL;
 }
 
-UReturnResultsTerminal::UReturnResultsTerminal() {
-}
 

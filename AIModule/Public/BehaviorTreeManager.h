@@ -6,7 +6,7 @@
 
 class UBehaviorTreeComponent;
 
-UCLASS(Blueprintable, Transient)
+UCLASS(Blueprintable, Transient, Config=Engine)
 class AIMODULE_API UBehaviorTreeManager : public UObject {
     GENERATED_BODY()
 public:
@@ -22,5 +22,6 @@ protected:
     
 public:
     UBehaviorTreeManager();
+
 };
 

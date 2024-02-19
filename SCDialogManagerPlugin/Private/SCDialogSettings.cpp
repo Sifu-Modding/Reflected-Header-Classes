@@ -8,3 +8,4 @@ USCDialogSettings::USCDialogSettings() {
     this->m_fDefaultTimeBetweenLines = 0.15f;
 }
 
+

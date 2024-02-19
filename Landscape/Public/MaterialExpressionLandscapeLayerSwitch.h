@@ -9,10 +9,10 @@ UCLASS(Blueprintable, CollapseCategories)
 class LANDSCAPE_API UMaterialExpressionLandscapeLayerSwitch : public UMaterialExpression {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     FExpressionInput LayerUsed;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     FExpressionInput LayerNotUsed;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -25,5 +25,6 @@ public:
     FGuid ExpressionGUID;
     
     UMaterialExpressionLandscapeLayerSwitch();
+
 };
 

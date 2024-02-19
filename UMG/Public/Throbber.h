@@ -29,6 +29,7 @@ public:
     FSlateBrush Image;
     
     UThrobber();
+
     UFUNCTION(BlueprintCallable)
     void SetNumberOfPieces(int32 InNumberOfPieces);
     

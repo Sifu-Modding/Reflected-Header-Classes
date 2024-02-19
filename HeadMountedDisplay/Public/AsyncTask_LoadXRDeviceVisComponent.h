@@ -26,6 +26,7 @@ private:
     
 public:
     UAsyncTask_LoadXRDeviceVisComponent();
+
     UFUNCTION(BlueprintCallable)
     static UAsyncTask_LoadXRDeviceVisComponent* AddNamedDeviceVisualizationComponentAsync(AActor* Target, const FName SystemName, const FName DeviceName, bool bManualAttachment, const FTransform& RelativeTransform, FXRDeviceId& XRDeviceId, UPrimitiveComponent*& NewComponent);
     

@@ -9,7 +9,8 @@ class UMovieSceneMarginTrack : public UMovieScenePropertyTrack, public IMovieSce
     GENERATED_BODY()
 public:
     UMovieSceneMarginTrack();
-    
+
+
     // Fix for true pure virtual functions not being implemented
 };
 

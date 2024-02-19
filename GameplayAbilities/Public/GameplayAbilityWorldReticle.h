@@ -34,7 +34,8 @@ protected:
     AActor* TargetingActor;
     
 public:
-    AGameplayAbilityWorldReticle();
+    AGameplayAbilityWorldReticle(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetReticleMaterialParamVector(FName ParamName, FVector Value);
     

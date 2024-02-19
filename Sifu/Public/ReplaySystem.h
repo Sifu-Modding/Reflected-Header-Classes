@@ -13,12 +13,14 @@
 #include "ReplaySizeManagement.h"
 #include "ReplayTimeDilationChangeDelegateDelegate.h"
 #include "StopRecordingContinueDelegate.h"
+#include "Templates/SubclassOf.h"
 #include "ReplaySystem.generated.h"
 
 class AActor;
 class AFightingCharacter;
 class APlayerController;
 class AReplayController;
+class ASCCharacterImpostor;
 class UReplayLevelStreamingReplication;
 class UReplayManagement;
 class UReplaySoundReplication;
@@ -73,8 +75,12 @@ private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FReplayInitialStateToggleEvent> m_InitialStateToggleEvents;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    TSubclassOf<ASCCharacterImpostor> m_DefaultImpostorClass;
+    
 public:
     UReplaySystem();
+
     UFUNCTION(BlueprintCallable)
     static void BPF_StopRecordingAndContinueWith(APlayerController* _controller, FStopRecordingContinue _onContinue, const EReplayStopRecordingReason _eReason);
     

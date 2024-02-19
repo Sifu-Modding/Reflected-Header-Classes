@@ -42,6 +42,7 @@ protected:
     float m_MoanIntensityThresold;
     
 public:
-    ABaseCharacterImpostor();
+    ABaseCharacterImpostor(const FObjectInitializer& ObjectInitializer);
+
 };
 

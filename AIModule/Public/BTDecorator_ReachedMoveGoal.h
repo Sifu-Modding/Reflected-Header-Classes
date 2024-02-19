@@ -8,5 +8,6 @@ class AIMODULE_API UBTDecorator_ReachedMoveGoal : public UBTDecorator {
     GENERATED_BODY()
 public:
     UBTDecorator_ReachedMoveGoal();
+
 };
 

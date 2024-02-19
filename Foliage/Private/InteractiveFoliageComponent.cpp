@@ -1,5 +1,6 @@
 #include "InteractiveFoliageComponent.h"
 
-UInteractiveFoliageComponent::UInteractiveFoliageComponent() {
+UInteractiveFoliageComponent::UInteractiveFoliageComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

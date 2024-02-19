@@ -5,3 +5,4 @@ UDatasmithLandscapeTemplate::UDatasmithLandscapeTemplate() {
     this->StaticLightingLOD = 0;
 }
 
+

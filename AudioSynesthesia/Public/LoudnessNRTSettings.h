@@ -24,5 +24,6 @@ public:
     float NoiseFloorDb;
     
     ULoudnessNRTSettings();
+
 };
 

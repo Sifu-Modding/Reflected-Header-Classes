@@ -6,3 +6,4 @@ UEnvQueryGenerator_Cone::UEnvQueryGenerator_Cone() {
     this->bIncludeContextLocation = false;
 }
 
+

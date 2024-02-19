@@ -1,5 +1,7 @@
 #include "AbilitySystemDebugHUD.h"
 
-AAbilitySystemDebugHUD::AAbilitySystemDebugHUD() {
+AAbilitySystemDebugHUD::AAbilitySystemDebugHUD(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->DebugDisplay.AddDefaulted(1);
 }
+
 

@@ -141,7 +141,8 @@ private:
     UUserWidget* Widget;
     
 public:
-    UWidgetComponent();
+    UWidgetComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetWindowVisibility(EWindowVisibility InVisibility);
     

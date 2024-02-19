@@ -33,5 +33,6 @@ public:
     FNiagaraEmitterScalabilitySettingsArray EmitterScalabilitySettings;
     
     UNiagaraEffectType();
+
 };
 

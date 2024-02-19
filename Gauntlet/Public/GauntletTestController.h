@@ -8,5 +8,6 @@ class GAUNTLET_API UGauntletTestController : public UObject {
     GENERATED_BODY()
 public:
     UGauntletTestController();
+
 };
 

@@ -31,6 +31,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UAkLateReverbComponent* NextLowerPriorityComponent;
     
-    UAkLateReverbComponent();
+    UAkLateReverbComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

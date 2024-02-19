@@ -32,6 +32,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ESVONPathCostType PathCostType;
     
-    USVONNavigationComponent();
+    USVONNavigationComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

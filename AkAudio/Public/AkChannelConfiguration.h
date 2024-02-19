@@ -26,6 +26,5 @@ enum class AkChannelConfiguration : uint8 {
     Ak_Ambisonics_1st_order,
     Ak_Ambisonics_2nd_order,
     Ak_Ambisonics_3rd_order,
-    Ak_MAX UMETA(Hidden),
 };
 

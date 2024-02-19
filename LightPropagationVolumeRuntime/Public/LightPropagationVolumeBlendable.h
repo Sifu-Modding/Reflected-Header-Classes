@@ -16,7 +16,8 @@ public:
     float BlendWeight;
     
     ULightPropagationVolumeBlendable();
-    
+
+
     // Fix for true pure virtual functions not being implemented
 };
 

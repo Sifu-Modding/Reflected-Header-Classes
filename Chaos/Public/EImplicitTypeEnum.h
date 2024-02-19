@@ -9,6 +9,5 @@ enum class EImplicitTypeEnum : uint8 {
     Chaos_Implicit_Capsule,
     Chaos_Implicit_LevelSet,
     Chaos_Implicit_None,
-    Chaos_Max,
 };
 

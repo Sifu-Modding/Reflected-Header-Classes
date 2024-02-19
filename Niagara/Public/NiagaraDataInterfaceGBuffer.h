@@ -8,5 +8,6 @@ class NIAGARA_API UNiagaraDataInterfaceGBuffer : public UNiagaraDataInterface {
     GENERATED_BODY()
 public:
     UNiagaraDataInterfaceGBuffer();
+
 };
 

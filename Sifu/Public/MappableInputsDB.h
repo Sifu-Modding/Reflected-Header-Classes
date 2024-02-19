@@ -33,5 +33,6 @@ public:
     TArray<FRemappingSectionStruct> m_MappableInputsSection;
     
     UMappableInputsDB();
+
 };
 

@@ -18,3 +18,4 @@ UNiagaraSpriteRendererProperties::UNiagaraSpriteRendererProperties() {
     this->RendererVisibility = 0;
 }
 
+

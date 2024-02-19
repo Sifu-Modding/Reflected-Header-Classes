@@ -8,5 +8,6 @@ class INTERACTIVETOOLSFRAMEWORK_API UIntervalGizmoBuilder : public UInteractiveG
     GENERATED_BODY()
 public:
     UIntervalGizmoBuilder();
+
 };
 

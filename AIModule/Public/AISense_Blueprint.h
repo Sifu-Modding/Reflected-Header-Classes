@@ -26,6 +26,7 @@ protected:
     
 public:
     UAISense_Blueprint();
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     float OnUpdate(const TArray<UAISenseEvent*>& EventsToProcess);
     

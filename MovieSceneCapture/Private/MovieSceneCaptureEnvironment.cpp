@@ -1,7 +1,7 @@
 #include "MovieSceneCaptureEnvironment.h"
 
-class UMovieSceneAudioCaptureProtocolBase;
-class UMovieSceneImageCaptureProtocolBase;
+UMovieSceneCaptureEnvironment::UMovieSceneCaptureEnvironment() {
+}
 
 bool UMovieSceneCaptureEnvironment::IsCaptureInProgress() {
     return false;
@@ -23,6 +23,4 @@ UMovieSceneAudioCaptureProtocolBase* UMovieSceneCaptureEnvironment::FindAudioCap
     return NULL;
 }
 
-UMovieSceneCaptureEnvironment::UMovieSceneCaptureEnvironment() {
-}
 

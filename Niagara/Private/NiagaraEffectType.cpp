@@ -6,3 +6,4 @@ UNiagaraEffectType::UNiagaraEffectType() {
     this->SignificanceHandler = NULL;
 }
 
+

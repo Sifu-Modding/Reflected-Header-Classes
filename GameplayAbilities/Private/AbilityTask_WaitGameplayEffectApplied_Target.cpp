@@ -1,8 +1,7 @@
 #include "AbilityTask_WaitGameplayEffectApplied_Target.h"
 
-class AActor;
-class UAbilityTask_WaitGameplayEffectApplied_Target;
-class UGameplayAbility;
+UAbilityTask_WaitGameplayEffectApplied_Target::UAbilityTask_WaitGameplayEffectApplied_Target() {
+}
 
 UAbilityTask_WaitGameplayEffectApplied_Target* UAbilityTask_WaitGameplayEffectApplied_Target::WaitGameplayEffectAppliedToTarget_Query(UGameplayAbility* OwningAbility, const FGameplayTargetDataFilterHandle SourceFilter, FGameplayTagQuery SourceTagQuery, FGameplayTagQuery TargetTagQuery, bool TriggerOnce, AActor* OptionalExternalOwner, bool ListenForPeriodicEffect) {
     return NULL;
@@ -12,6 +11,4 @@ UAbilityTask_WaitGameplayEffectApplied_Target* UAbilityTask_WaitGameplayEffectAp
     return NULL;
 }
 
-UAbilityTask_WaitGameplayEffectApplied_Target::UAbilityTask_WaitGameplayEffectApplied_Target() {
-}
 

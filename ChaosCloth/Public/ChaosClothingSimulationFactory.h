@@ -8,5 +8,6 @@ class CHAOSCLOTH_API UChaosClothingSimulationFactory : public UClothingSimulatio
     GENERATED_BODY()
 public:
     UChaosClothingSimulationFactory();
+
 };
 

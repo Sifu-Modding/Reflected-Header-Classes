@@ -1,23 +1,6 @@
 #include "AbilitySystemTestAttributeSet.h"
 #include "Net/UnrealNetwork.h"
 
-void UAbilitySystemTestAttributeSet::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
-    Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
-    DOREPLIFETIME(UAbilitySystemTestAttributeSet, MaxHealth);
-    DOREPLIFETIME(UAbilitySystemTestAttributeSet, Health);
-    DOREPLIFETIME(UAbilitySystemTestAttributeSet, Mana);
-    DOREPLIFETIME(UAbilitySystemTestAttributeSet, MaxMana);
-    DOREPLIFETIME(UAbilitySystemTestAttributeSet, SpellDamage);
-    DOREPLIFETIME(UAbilitySystemTestAttributeSet, PhysicalDamage);
-    DOREPLIFETIME(UAbilitySystemTestAttributeSet, CritChance);
-    DOREPLIFETIME(UAbilitySystemTestAttributeSet, CritMultiplier);
-    DOREPLIFETIME(UAbilitySystemTestAttributeSet, ArmorDamageReduction);
-    DOREPLIFETIME(UAbilitySystemTestAttributeSet, DodgeChance);
-    DOREPLIFETIME(UAbilitySystemTestAttributeSet, LifeSteal);
-    DOREPLIFETIME(UAbilitySystemTestAttributeSet, Strength);
-}
-
 UAbilitySystemTestAttributeSet::UAbilitySystemTestAttributeSet() {
     this->MaxHealth = 100.00f;
     this->Health = 100.00f;
@@ -36,4 +19,22 @@ UAbilitySystemTestAttributeSet::UAbilitySystemTestAttributeSet() {
     this->StackingAttribute2 = 0.00f;
     this->NoStackAttribute = 0.00f;
 }
+
+void UAbilitySystemTestAttributeSet::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
+    Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+    
+    DOREPLIFETIME(UAbilitySystemTestAttributeSet, MaxHealth);
+    DOREPLIFETIME(UAbilitySystemTestAttributeSet, Health);
+    DOREPLIFETIME(UAbilitySystemTestAttributeSet, Mana);
+    DOREPLIFETIME(UAbilitySystemTestAttributeSet, MaxMana);
+    DOREPLIFETIME(UAbilitySystemTestAttributeSet, SpellDamage);
+    DOREPLIFETIME(UAbilitySystemTestAttributeSet, PhysicalDamage);
+    DOREPLIFETIME(UAbilitySystemTestAttributeSet, CritChance);
+    DOREPLIFETIME(UAbilitySystemTestAttributeSet, CritMultiplier);
+    DOREPLIFETIME(UAbilitySystemTestAttributeSet, ArmorDamageReduction);
+    DOREPLIFETIME(UAbilitySystemTestAttributeSet, DodgeChance);
+    DOREPLIFETIME(UAbilitySystemTestAttributeSet, LifeSteal);
+    DOREPLIFETIME(UAbilitySystemTestAttributeSet, Strength);
+}
+
 

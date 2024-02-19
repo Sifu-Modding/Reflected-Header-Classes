@@ -8,5 +8,6 @@ class AIMODULE_API UAISenseBlueprintListener : public UUserDefinedStruct {
     GENERATED_BODY()
 public:
     UAISenseBlueprintListener();
+
 };
 

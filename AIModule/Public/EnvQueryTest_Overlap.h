@@ -12,5 +12,6 @@ public:
     FEnvOverlapData OverlapData;
     
     UEnvQueryTest_Overlap();
+
 };
 

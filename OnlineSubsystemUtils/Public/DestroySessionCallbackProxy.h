@@ -19,6 +19,7 @@ public:
     FEmptyOnlineDelegate OnFailure;
     
     UDestroySessionCallbackProxy();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static UDestroySessionCallbackProxy* DestroySession(UObject* WorldContextObject, APlayerController* PlayerController);
     

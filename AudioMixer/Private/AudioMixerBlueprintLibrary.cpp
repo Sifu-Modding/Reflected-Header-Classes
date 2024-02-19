@@ -1,12 +1,7 @@
 #include "AudioMixerBlueprintLibrary.h"
 
-class UAudioBus;
-class UObject;
-class USoundCue;
-class USoundEffectSourcePresetChain;
-class USoundEffectSubmixPreset;
-class USoundSubmix;
-class USoundWave;
+UAudioMixerBlueprintLibrary::UAudioMixerBlueprintLibrary() {
+}
 
 float UAudioMixerBlueprintLibrary::TrimAudioCache(float InMegabytesToFree) {
     return 0.0f;
@@ -109,6 +104,4 @@ void UAudioMixerBlueprintLibrary::AddSourceEffectToPresetChain(const UObject* Wo
 void UAudioMixerBlueprintLibrary::AddMasterSubmixEffect(const UObject* WorldContextObject, USoundEffectSubmixPreset* SubmixEffectPreset) {
 }
 
-UAudioMixerBlueprintLibrary::UAudioMixerBlueprintLibrary() {
-}
 

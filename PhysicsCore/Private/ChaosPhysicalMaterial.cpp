@@ -10,3 +10,4 @@ UChaosPhysicalMaterial::UChaosPhysicalMaterial() {
     this->SleepingAngularVelocityThreshold = 1.00f;
 }
 
+

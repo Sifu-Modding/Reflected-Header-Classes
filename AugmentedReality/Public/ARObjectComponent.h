@@ -13,9 +13,10 @@ protected:
     FARObjectUpdatePayload ReplicatedPayload;
     
 public:
-    UARObjectComponent();
+    UARObjectComponent(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
     void ServerUpdatePayload(const FARObjectUpdatePayload& NewPayload);

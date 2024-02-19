@@ -1,7 +1,8 @@
 #include "AkReverbVolume.h"
 #include "AkLateReverbComponent.h"
 
-AAkReverbVolume::AAkReverbVolume() {
+AAkReverbVolume::AAkReverbVolume(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bColored = true;
     this->bEnabled = true;
     this->AuxBus = NULL;
     this->SendLevel = 1.00f;
@@ -9,4 +10,5 @@ AAkReverbVolume::AAkReverbVolume() {
     this->Priority = 1.00f;
     this->LateReverbComponent = CreateDefaultSubobject<UAkLateReverbComponent>(TEXT("LateReverb"));
 }
+
 

@@ -69,6 +69,7 @@ public:
     FArenaChallengeRefillDescription m_RefillDescription;
     
     UArenaChallengeDescription();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     AAIWaveRefillDirector* BPF_GetRefillDirector() const;
     

@@ -13,9 +13,10 @@ protected:
     TArray<FSCImpostorReplicationInfos> m_Impostors;
     
 public:
-    UImpostorReplication();
+    UImpostorReplication(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable)
     void OnRep_Impostors();

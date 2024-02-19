@@ -1,7 +1,10 @@
 #include "GridPanel.h"
+#include "ESlateVisibility.h"
 
-class UGridSlot;
-class UWidget;
+UGridPanel::UGridPanel() {
+    this->bIsVariable = false;
+    this->Visibility = ESlateVisibility::SelfHitTestInvisible;
+}
 
 void UGridPanel::SetRowFill(int32 ColumnIndex, float Coefficient) {
 }
@@ -13,6 +16,4 @@ UGridSlot* UGridPanel::AddChildToGrid(UWidget* Content, int32 InRow, int32 InCol
     return NULL;
 }
 
-UGridPanel::UGridPanel() {
-}
 

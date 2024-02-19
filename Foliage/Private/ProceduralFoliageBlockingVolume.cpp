@@ -1,6 +1,7 @@
 #include "ProceduralFoliageBlockingVolume.h"
 
-AProceduralFoliageBlockingVolume::AProceduralFoliageBlockingVolume() {
+AProceduralFoliageBlockingVolume::AProceduralFoliageBlockingVolume(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->ProceduralFoliageVolume = NULL;
 }
+
 

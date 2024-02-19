@@ -8,5 +8,6 @@ class UAkWindowsPlatformInfo : public UAkWin64PlatformInfo {
     GENERATED_BODY()
 public:
     UAkWindowsPlatformInfo();
+
 };
 

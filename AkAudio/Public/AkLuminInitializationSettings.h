@@ -6,7 +6,7 @@
 #include "AkCommunicationSettingsWithSystemInitialization.h"
 #include "AkLuminInitializationSettings.generated.h"
 
-UCLASS(Blueprintable, Config=Engine, DefaultConfig, Config=Game)
+UCLASS(Blueprintable, DefaultConfig, Config=Game)
 class AKAUDIO_API UAkLuminInitializationSettings : public UObject {
     GENERATED_BODY()
 public:
@@ -20,6 +20,7 @@ public:
     FAkAdvancedInitializationSettingsWithMultiCoreRendering AdvancedSettings;
     
     UAkLuminInitializationSettings();
+
     UFUNCTION(BlueprintCallable)
     void MigrateMultiCoreRendering(bool NewValue);
     

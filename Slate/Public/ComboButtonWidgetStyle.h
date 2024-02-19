@@ -12,5 +12,6 @@ public:
     FComboButtonStyle ComboButtonStyle;
     
     UComboButtonWidgetStyle();
+
 };
 

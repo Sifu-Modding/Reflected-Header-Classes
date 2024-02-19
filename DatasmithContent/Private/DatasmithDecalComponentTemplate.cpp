@@ -5,3 +5,4 @@ UDatasmithDecalComponentTemplate::UDatasmithDecalComponentTemplate() {
     this->Material = NULL;
 }
 
+

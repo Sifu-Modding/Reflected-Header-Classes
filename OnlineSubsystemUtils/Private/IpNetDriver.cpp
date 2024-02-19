@@ -1,6 +1,8 @@
 #include "IpNetDriver.h"
 
 UIpNetDriver::UIpNetDriver() {
+    this->NetConnectionClassName = TEXT("/Script/OnlineSubsystemUtils.IpConnection");
+    this->ChannelDefinitions.AddDefaulted(3);
     this->LogPortUnreach = false;
     this->AllowPlayerPortUnreach = false;
     this->MaxPortCountToTry = 512;
@@ -12,4 +14,5 @@ UIpNetDriver::UIpNetDriver() {
     this->NbPacketsBetweenReceiveTimeTest = 0;
     this->ResolutionConnectionTimeout = 20.00f;
 }
+
 

@@ -24,9 +24,10 @@ private:
     float ServerStartTimeSeconds;
     
 public:
-    ALevelSequenceMediaController();
+    ALevelSequenceMediaController(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     void SynchronizeToServer(float DesyncThresholdSeconds);
     
@@ -44,7 +45,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UMediaComponent* GetMediaComponent() const;
     
-    
+
     // Fix for true pure virtual functions not being implemented
     UFUNCTION()
     void OnTick(float DeltaSeconds, float InPlayRate) override PURE_VIRTUAL(OnTick,);

@@ -8,6 +8,5 @@ enum class ENDIStaticMesh_SourceMode : uint8 {
     Source,
     AttachParent,
     DefaultMeshOnly,
-    ENDIStaticMesh_MAX UMETA(Hidden),
 };
 

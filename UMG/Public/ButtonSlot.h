@@ -20,6 +20,7 @@ public:
     TEnumAsByte<EVerticalAlignment> VerticalAlignment;
     
     UButtonSlot();
+
     UFUNCTION(BlueprintCallable)
     void SetVerticalAlignment(TEnumAsByte<EVerticalAlignment> InVerticalAlignment);
     

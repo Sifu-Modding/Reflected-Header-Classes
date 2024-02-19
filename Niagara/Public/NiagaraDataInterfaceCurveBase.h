@@ -39,5 +39,6 @@ public:
     UTexture2D* ExposedTexture;
     
     UNiagaraDataInterfaceCurveBase();
+
 };
 

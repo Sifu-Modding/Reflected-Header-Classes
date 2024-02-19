@@ -4,3 +4,4 @@ UNiagaraPreviewAxis_InterpParamBase::UNiagaraPreviewAxis_InterpParamBase() {
     this->Count = 0;
 }
 
+

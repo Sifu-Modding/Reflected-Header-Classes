@@ -17,5 +17,6 @@ private:
     
 public:
     UNiagaraPreviewAxis_InterpParamVector();
+
 };
 

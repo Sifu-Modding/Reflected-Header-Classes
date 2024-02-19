@@ -8,5 +8,6 @@ class MOVIERENDERPIPELINERENDERPASSES_API UMoviePipelineImageSequenceOutputBase 
     GENERATED_BODY()
 public:
     UMoviePipelineImageSequenceOutputBase();
+
 };
 

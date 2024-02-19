@@ -1,12 +1,13 @@
 #include "VerticalBox.h"
+#include "ESlateVisibility.h"
 
-class UVerticalBoxSlot;
-class UWidget;
+UVerticalBox::UVerticalBox() {
+    this->bIsVariable = false;
+    this->Visibility = ESlateVisibility::SelfHitTestInvisible;
+}
 
 UVerticalBoxSlot* UVerticalBox::AddChildToVerticalBox(UWidget* Content) {
     return NULL;
 }
 
-UVerticalBox::UVerticalBox() {
-}
 

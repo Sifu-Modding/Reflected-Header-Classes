@@ -6,6 +6,5 @@ UENUM(BlueprintType)
 enum EOrientation {
     Orient_Horizontal,
     Orient_Vertical,
-    Orient_MAX UMETA(Hidden),
 };
 

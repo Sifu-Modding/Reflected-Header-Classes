@@ -1,6 +1,7 @@
 #include "MotionTrackedDeviceFunctionLibrary.h"
 
-class UMotionControllerComponent;
+UMotionTrackedDeviceFunctionLibrary::UMotionTrackedDeviceFunctionLibrary() {
+}
 
 void UMotionTrackedDeviceFunctionLibrary::SetIsControllerMotionTrackingEnabledByDefault(bool Enable) {
 }
@@ -68,6 +69,4 @@ void UMotionTrackedDeviceFunctionLibrary::DisableMotionTrackingOfAllControllers(
 void UMotionTrackedDeviceFunctionLibrary::DisableMotionTrackingForComponent(const UMotionControllerComponent* MotionControllerComponent) {
 }
 
-UMotionTrackedDeviceFunctionLibrary::UMotionTrackedDeviceFunctionLibrary() {
-}
 

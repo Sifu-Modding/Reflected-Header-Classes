@@ -13,6 +13,7 @@ class STATICMESHDESCRIPTION_API UStaticMeshDescription : public UMeshDescription
     GENERATED_BODY()
 public:
     UStaticMeshDescription();
+
     UFUNCTION(BlueprintCallable)
     void SetVertexInstanceUV(FVertexInstanceID VertexInstanceID, FVector2D UV, int32 UVIndex);
     

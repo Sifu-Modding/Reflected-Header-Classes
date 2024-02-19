@@ -1,7 +1,9 @@
 #include "FieldSystemActor.h"
 #include "FieldSystemComponent.h"
 
-AFieldSystemActor::AFieldSystemActor() {
-    this->FieldSystemComponent = CreateDefaultSubobject<UFieldSystemComponent>(TEXT("FieldSystemComponent"));
+AFieldSystemActor::AFieldSystemActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->RootComponent = CreateDefaultSubobject<UFieldSystemComponent>(TEXT("FieldSystemComponent"));
+    this->FieldSystemComponent = (UFieldSystemComponent*)RootComponent;
 }
+
 

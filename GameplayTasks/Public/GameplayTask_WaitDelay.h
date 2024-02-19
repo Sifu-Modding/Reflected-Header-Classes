@@ -17,6 +17,7 @@ public:
     FTaskDelayDelegate OnFinish;
     
     UGameplayTask_WaitDelay();
+
     UFUNCTION(BlueprintCallable)
     static UGameplayTask_WaitDelay* TaskWaitDelay(TScriptInterface<IGameplayTaskOwnerInterface> TaskOwner, float Time, const uint8 Priority);
     

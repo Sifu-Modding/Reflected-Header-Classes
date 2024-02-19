@@ -6,3 +6,4 @@ UNiagaraDataInterfaceExport::UNiagaraDataInterfaceExport() {
     this->GPUAllocationPerParticleSize = 1.00f;
 }
 
+

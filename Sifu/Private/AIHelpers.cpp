@@ -1,11 +1,7 @@
 #include "AIHelpers.h"
 
-class AAISpawner;
-class AActor;
-class AFightingCharacter;
-class APawn;
-class UAIFightingComponent;
-class UObject;
+UAIHelpers::UAIHelpers() {
+}
 
 FSCAITicketEnum UAIHelpers::Conv_SCEnumToAITicketEnum(const FSCUserDefinedEnumHandler& _scEnum) {
     return FSCAITicketEnum{};
@@ -87,6 +83,10 @@ bool UAIHelpers::BPF_HasAttackTicket(UAIFightingComponent* _resquester, const FS
 void UAIHelpers::BPF_GetTicketCooldownRemaining(const UAIFightingComponent* _requester, const FSCAITicketEnum& _ticketEnum, float& _fOutMin, float& _fOutMax, int32& _iOutTicketsCount) {
 }
 
+UAIPositionningPOIComponent* UAIHelpers::BPF_GetPOIAssignedWithCharacter(const AFightingCharacter* _AICharacter) {
+    return NULL;
+}
+
 void UAIHelpers::BPF_GetOwnedAttackTickets(UAIFightingComponent* _resquester, TArray<FSCAITicketEnum>& _outOwnedTickets) {
 }
 
@@ -100,6 +100,4 @@ void UAIHelpers::BPF_ForceAssignAICharacterToSanctuary(const UAIFightingComponen
 void UAIHelpers::BPF_AddDomination(float _fDominationBonus) {
 }
 
-UAIHelpers::UAIHelpers() {
-}
 

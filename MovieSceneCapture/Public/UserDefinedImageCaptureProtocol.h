@@ -9,7 +9,7 @@
 
 class UTexture;
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Abstract, Blueprintable, Config=Engine)
 class MOVIESCENECAPTURE_API UUserDefinedImageCaptureProtocol : public UUserDefinedCaptureProtocol {
     GENERATED_BODY()
 public:
@@ -23,6 +23,7 @@ public:
     int32 CompressionQuality;
     
     UUserDefinedImageCaptureProtocol();
+
     UFUNCTION(BlueprintCallable)
     void WriteImageToDisk(const FCapturedPixels& PixelData, const FCapturedPixelsID& StreamID, const FFrameMetrics& FrameMetrics, bool bCopyImageData);
     

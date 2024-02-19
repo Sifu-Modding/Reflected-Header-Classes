@@ -1,10 +1,7 @@
 #include "MoviePipelineBlueprintLibrary.h"
 
-class ULevelSequence;
-class UMoviePipeline;
-class UMoviePipelineExecutorJob;
-class UMovieSceneSequence;
-class UObject;
+UMoviePipelineBlueprintLibrary::UMoviePipelineBlueprintLibrary() {
+}
 
 void UMoviePipelineBlueprintLibrary::UpdateJobShotListFromSequence(ULevelSequence* InSequence, UMoviePipelineExecutorJob* InJob) {
 }
@@ -78,6 +75,4 @@ UMovieSceneSequence* UMoviePipelineBlueprintLibrary::DuplicateSequence(UObject* 
     return NULL;
 }
 
-UMoviePipelineBlueprintLibrary::UMoviePipelineBlueprintLibrary() {
-}
 

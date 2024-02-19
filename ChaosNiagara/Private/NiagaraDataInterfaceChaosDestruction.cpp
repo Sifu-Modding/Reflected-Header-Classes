@@ -29,3 +29,4 @@ UNiagaraDataInterfaceChaosDestruction::UNiagaraDataInterfaceChaosDestruction() {
     this->TimeStampOfLastProcessedData = -1.00f;
 }
 
+

@@ -1,10 +1,21 @@
 #include "Widget.h"
 
-class APlayerController;
-class UGameInstance;
-class ULocalPlayer;
-class UPanelWidget;
-class UWidget;
+UWidget::UWidget() {
+    this->Slot = NULL;
+    this->ToolTipWidget = NULL;
+    this->bIsVariable = true;
+    this->bCreatedByConstructionScript = false;
+    this->bIsEnabled = true;
+    this->bOverride_Cursor = false;
+    this->AccessibleWidgetData = NULL;
+    this->bIsVolatile = false;
+    this->Cursor = EMouseCursor::Default;
+    this->Clipping = EWidgetClipping::Inherit;
+    this->Visibility = ESlateVisibility::Visible;
+    this->RenderOpacity = 1.00f;
+    this->Navigation = NULL;
+    this->FlowDirectionPreference = EFlowDirectionPreference::Inherit;
+}
 
 void UWidget::SetVisibility(ESlateVisibility InVisibility) {
 }
@@ -183,20 +194,4 @@ void UWidget::ForceVolatile(bool bForce) {
 void UWidget::ForceLayoutPrepass() {
 }
 
-UWidget::UWidget() {
-    this->Slot = NULL;
-    this->ToolTipWidget = NULL;
-    this->bIsVariable = true;
-    this->bCreatedByConstructionScript = false;
-    this->bIsEnabled = true;
-    this->bOverride_Cursor = false;
-    this->AccessibleWidgetData = NULL;
-    this->bIsVolatile = false;
-    this->Cursor = EMouseCursor::Default;
-    this->Clipping = EWidgetClipping::Inherit;
-    this->Visibility = ESlateVisibility::Visible;
-    this->RenderOpacity = 1.00f;
-    this->Navigation = NULL;
-    this->FlowDirectionPreference = EFlowDirectionPreference::Inherit;
-}
 

@@ -41,5 +41,6 @@ public:
     float JoinInProgressStandbyWaitTime;
     
     UGameNetworkManagerSettings();
+
 };
 

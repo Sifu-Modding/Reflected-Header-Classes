@@ -1,6 +1,7 @@
 #include "ARTraceResultLibrary.h"
 
-class UARTrackedGeometry;
+UARTraceResultLibrary::UARTraceResultLibrary() {
+}
 
 UARTrackedGeometry* UARTraceResultLibrary::GetTrackedGeometry(const FARTraceResult& TraceResult) {
     return NULL;
@@ -26,6 +27,4 @@ float UARTraceResultLibrary::GetDistanceFromCamera(const FARTraceResult& TraceRe
     return 0.0f;
 }
 
-UARTraceResultLibrary::UARTraceResultLibrary() {
-}
 

@@ -1,7 +1,7 @@
 #include "XRAssetFunctionLibrary.h"
 
-class AActor;
-class UPrimitiveComponent;
+UXRAssetFunctionLibrary::UXRAssetFunctionLibrary() {
+}
 
 UPrimitiveComponent* UXRAssetFunctionLibrary::AddNamedDeviceVisualizationComponentBlocking(AActor* Target, const FName SystemName, const FName DeviceName, bool bManualAttachment, const FTransform& RelativeTransform, FXRDeviceId& XRDeviceId) {
     return NULL;
@@ -11,6 +11,4 @@ UPrimitiveComponent* UXRAssetFunctionLibrary::AddDeviceVisualizationComponentBlo
     return NULL;
 }
 
-UXRAssetFunctionLibrary::UXRAssetFunctionLibrary() {
-}
 

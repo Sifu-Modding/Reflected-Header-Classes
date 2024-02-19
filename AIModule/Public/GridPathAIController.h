@@ -7,6 +7,7 @@ UCLASS(Blueprintable)
 class AGridPathAIController : public AAIController {
     GENERATED_BODY()
 public:
-    AGridPathAIController();
+    AGridPathAIController(const FObjectInitializer& ObjectInitializer);
+
 };
 

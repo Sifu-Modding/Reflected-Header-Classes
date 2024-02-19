@@ -16,6 +16,7 @@ class UAkMIDIEventCallbackInfo : public UAkEventCallbackInfo {
     GENERATED_BODY()
 public:
     UAkMIDIEventCallbackInfo();
+
     UFUNCTION(BlueprintCallable)
     EAkMidiEventType GetType();
     

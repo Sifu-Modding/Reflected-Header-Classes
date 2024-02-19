@@ -5,3 +5,4 @@ UAnimSharingTransitionInstance::UAnimSharingTransitionInstance() {
     this->bBlendBool = false;
 }
 
+

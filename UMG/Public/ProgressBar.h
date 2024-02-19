@@ -53,6 +53,7 @@ public:
     UWidget::FGetLinearColor FillColorAndOpacityDelegate;
     
     UProgressBar();
+
     UFUNCTION(BlueprintCallable)
     void SetPercent(float InPercent);
     

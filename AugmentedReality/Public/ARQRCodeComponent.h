@@ -14,9 +14,10 @@ protected:
     FARQRCodeUpdatePayload ReplicatedPayload;
     
 public:
-    UARQRCodeComponent();
+    UARQRCodeComponent(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     static void SetQRCodeComponentDebugMode(EQRCodeComponentDebugMode NewDebugMode);
     

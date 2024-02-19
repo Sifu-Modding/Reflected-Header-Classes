@@ -15,3 +15,4 @@ UGeneralProjectSettings::UGeneralProjectSettings() {
     this->bAllowMinimize = true;
 }
 
+

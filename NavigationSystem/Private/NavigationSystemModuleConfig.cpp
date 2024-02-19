@@ -7,3 +7,4 @@ UNavigationSystemModuleConfig::UNavigationSystemModuleConfig() {
     this->bSpawnNavDataInNavBoundsLevel = false;
 }
 
+

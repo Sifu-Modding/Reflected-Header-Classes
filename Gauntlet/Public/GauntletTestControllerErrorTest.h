@@ -8,5 +8,6 @@ class GAUNTLET_API UGauntletTestControllerErrorTest : public UGauntletTestContro
     GENERATED_BODY()
 public:
     UGauntletTestControllerErrorTest();
+
 };
 

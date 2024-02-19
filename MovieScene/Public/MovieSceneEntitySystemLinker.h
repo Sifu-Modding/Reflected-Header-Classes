@@ -12,5 +12,6 @@ public:
     FMovieSceneEntitySystemGraph SystemGraph;
     
     UMovieSceneEntitySystemLinker();
+
 };
 

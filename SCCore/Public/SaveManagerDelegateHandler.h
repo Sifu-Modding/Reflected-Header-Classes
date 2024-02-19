@@ -20,5 +20,6 @@ public:
     FFileLoaded m_OnProfileLoaded;
     
     USaveManagerDelegateHandler();
+
 };
 

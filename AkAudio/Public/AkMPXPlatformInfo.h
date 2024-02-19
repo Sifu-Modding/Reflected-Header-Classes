@@ -8,5 +8,6 @@ class UAkMPXPlatformInfo : public UAkChinookPlatformInfo {
     GENERATED_BODY()
 public:
     UAkMPXPlatformInfo();
+
 };
 

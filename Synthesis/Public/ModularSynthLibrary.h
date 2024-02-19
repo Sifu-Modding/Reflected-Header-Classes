@@ -11,6 +11,7 @@ class SYNTHESIS_API UModularSynthLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UModularSynthLibrary();
+
 private:
     UFUNCTION(BlueprintCallable)
     static void AddModularSynthPresetToBankAsset(UModularSynthPresetBank* InBank, const FModularSynthPreset& Preset, const FString& PresetName);

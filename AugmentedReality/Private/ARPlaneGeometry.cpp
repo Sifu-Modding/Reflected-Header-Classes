@@ -1,6 +1,9 @@
 #include "ARPlaneGeometry.h"
 
-class UARPlaneGeometry;
+UARPlaneGeometry::UARPlaneGeometry() {
+    this->Orientation = EARPlaneOrientation::Horizontal;
+    this->SubsumedBy = NULL;
+}
 
 UARPlaneGeometry* UARPlaneGeometry::GetSubsumedBy() const {
     return NULL;
@@ -22,8 +25,4 @@ TArray<FVector> UARPlaneGeometry::GetBoundaryPolygonInLocalSpace() const {
     return TArray<FVector>();
 }
 
-UARPlaneGeometry::UARPlaneGeometry() {
-    this->Orientation = EARPlaneOrientation::Horizontal;
-    this->SubsumedBy = NULL;
-}
 

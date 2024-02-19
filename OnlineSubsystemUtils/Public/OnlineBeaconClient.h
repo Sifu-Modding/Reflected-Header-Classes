@@ -22,7 +22,8 @@ protected:
     EBeaconConnectionState ConnectionState;
     
 public:
-    AOnlineBeaconClient();
+    AOnlineBeaconClient(const FObjectInitializer& ObjectInitializer);
+
 private:
     UFUNCTION(BlueprintCallable, Client, Reliable)
     void ClientOnConnected();

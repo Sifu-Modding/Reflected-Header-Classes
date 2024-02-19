@@ -13,5 +13,6 @@ public:
     UAkAssetData* CurrentAssetData;
     
     UAkAssetPlatformData();
+
 };
 

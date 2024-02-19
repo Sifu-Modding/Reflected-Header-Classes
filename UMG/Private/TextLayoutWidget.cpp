@@ -1,8 +1,5 @@
 #include "TextLayoutWidget.h"
 
-void UTextLayoutWidget::SetJustification(TEnumAsByte<ETextJustify::Type> InJustification) {
-}
-
 UTextLayoutWidget::UTextLayoutWidget() {
     this->Justification = ETextJustify::Left;
     this->WrappingPolicy = ETextWrappingPolicy::DefaultWrapping;
@@ -10,4 +7,8 @@ UTextLayoutWidget::UTextLayoutWidget() {
     this->WrapTextAt = 0.00f;
     this->LineHeightPercentage = 1.00f;
 }
+
+void UTextLayoutWidget::SetJustification(TEnumAsByte<ETextJustify::Type> InJustification) {
+}
+
 

@@ -7,6 +7,7 @@ UCLASS(Blueprintable, NonTransient)
 class MOVIERENDERPIPELINECORE_API AMoviePipelineGameMode : public AGameModeBase {
     GENERATED_BODY()
 public:
-    AMoviePipelineGameMode();
+    AMoviePipelineGameMode(const FObjectInitializer& ObjectInitializer);
+
 };
 

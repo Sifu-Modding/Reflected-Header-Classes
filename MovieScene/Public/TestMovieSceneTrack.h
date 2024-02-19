@@ -17,7 +17,8 @@ public:
     TArray<UMovieSceneSection*> SectionArray;
     
     UTestMovieSceneTrack();
-    
+
+
     // Fix for true pure virtual functions not being implemented
 };
 

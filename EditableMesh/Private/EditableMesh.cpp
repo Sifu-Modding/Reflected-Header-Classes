@@ -1,7 +1,10 @@
 #include "EditableMesh.h"
 
-class UEditableMesh;
-class UPrimitiveComponent;
+UEditableMesh::UEditableMesh() {
+    this->TextureCoordinateCount = 0;
+    this->PendingCompactCounter = 0;
+    this->SubdivisionCount = 0;
+}
 
 void UEditableMesh::WeldVertices(const TArray<FVertexID>& VertexIDs, FVertexID& OutNewVertexID) {
 }
@@ -449,9 +452,4 @@ bool UEditableMesh::AnyChangesToUndo() const {
     return false;
 }
 
-UEditableMesh::UEditableMesh() {
-    this->TextureCoordinateCount = 0;
-    this->PendingCompactCounter = 0;
-    this->SubdivisionCount = 0;
-}
 

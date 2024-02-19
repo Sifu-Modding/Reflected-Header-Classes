@@ -8,5 +8,6 @@ class ULandscapeLODStreamingProxy : public UStreamableRenderAsset {
     GENERATED_BODY()
 public:
     ULandscapeLODStreamingProxy();
+
 };
 

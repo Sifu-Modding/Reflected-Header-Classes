@@ -14,6 +14,7 @@ public:
     FSubmixEffectDynamicsProcessorSettings Settings;
     
     USubmixEffectDynamicsProcessorPreset();
+
     UFUNCTION(BlueprintCallable)
     void SetSettings(const FSubmixEffectDynamicsProcessorSettings& NewSettings);
     

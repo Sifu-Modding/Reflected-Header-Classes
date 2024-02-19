@@ -113,6 +113,7 @@ protected:
     
 public:
     UUserWidget();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void UnregisterInputComponent();
@@ -400,7 +401,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintCosmetic)
     bool AddToPlayerScreen(int32 ZOrder);
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

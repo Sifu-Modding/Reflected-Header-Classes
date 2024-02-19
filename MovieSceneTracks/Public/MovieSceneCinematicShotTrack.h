@@ -8,5 +8,6 @@ class UMovieSceneCinematicShotTrack : public UMovieSceneSubTrack {
     GENERATED_BODY()
 public:
     UMovieSceneCinematicShotTrack();
+
 };
 

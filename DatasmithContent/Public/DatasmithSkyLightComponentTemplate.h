@@ -20,5 +20,6 @@ public:
     UTextureCube* Cubemap;
     
     UDatasmithSkyLightComponentTemplate();
+
 };
 

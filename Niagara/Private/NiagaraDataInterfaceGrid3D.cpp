@@ -6,3 +6,4 @@ UNiagaraDataInterfaceGrid3D::UNiagaraDataInterfaceGrid3D() {
     this->SetResolutionMethod = ESetResolutionMethod::Independent;
 }
 
+

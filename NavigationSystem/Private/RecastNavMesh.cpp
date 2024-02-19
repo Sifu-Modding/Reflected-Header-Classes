@@ -1,13 +1,10 @@
 #include "RecastNavMesh.h"
+#include "ERuntimeGenerationType.h"
 #include "Templates/SubclassOf.h"
 
-class UNavArea;
-
-bool ARecastNavMesh::K2_ReplaceAreaInTileBounds(FBox Bounds, TSubclassOf<UNavArea> OldArea, TSubclassOf<UNavArea> NewArea, bool ReplaceLinks) {
-    return false;
-}
-
-ARecastNavMesh::ARecastNavMesh() {
+ARecastNavMesh::ARecastNavMesh(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bForceRebuildOnLoad = true;
+    this->RuntimeGeneration = ERuntimeGenerationType::DynamicModifiersOnly;
     this->bDrawTriangleEdges = false;
     this->bDrawPolyEdges = false;
     this->bDrawFilledPolys = true;
@@ -67,4 +64,9 @@ ARecastNavMesh::ARecastNavMesh() {
     this->HeuristicScale = 1.00f;
     this->VerticalDeviationFromGroundCompensation = 0.00f;
 }
+
+bool ARecastNavMesh::K2_ReplaceAreaInTileBounds(FBox Bounds, TSubclassOf<UNavArea> OldArea, TSubclassOf<UNavArea> NewArea, bool ReplaceLinks) {
+    return false;
+}
+
 

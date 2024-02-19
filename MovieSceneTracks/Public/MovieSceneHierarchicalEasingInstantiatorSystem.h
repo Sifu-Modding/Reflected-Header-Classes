@@ -8,5 +8,6 @@ class MOVIESCENETRACKS_API UMovieSceneHierarchicalEasingInstantiatorSystem : pub
     GENERATED_BODY()
 public:
     UMovieSceneHierarchicalEasingInstantiatorSystem();
+
 };
 

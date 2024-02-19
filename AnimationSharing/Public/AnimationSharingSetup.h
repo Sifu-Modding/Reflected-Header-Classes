@@ -5,7 +5,7 @@
 #include "PerSkeletonAnimationSharingSetup.h"
 #include "AnimationSharingSetup.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS(Blueprintable, Config=Engine)
 class ANIMATIONSHARING_API UAnimationSharingSetup : public UObject {
     GENERATED_BODY()
 public:
@@ -16,5 +16,6 @@ public:
     FAnimationSharingScalability ScalabilitySettings;
     
     UAnimationSharingSetup();
+
 };
 

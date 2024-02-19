@@ -8,5 +8,6 @@ class AIMODULE_API UEnvQueryItemType_Actor : public UEnvQueryItemType_ActorBase 
     GENERATED_BODY()
 public:
     UEnvQueryItemType_Actor();
+
 };
 

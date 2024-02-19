@@ -15,6 +15,7 @@ public:
     UGameplayTask::FGenericGameplayTaskDelegate OnConfirm;
     
     UAbilityTask_WaitConfirm();
+
     UFUNCTION(BlueprintCallable)
     static UAbilityTask_WaitConfirm* WaitConfirm(UGameplayAbility* OwningAbility);
     

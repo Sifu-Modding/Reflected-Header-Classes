@@ -56,6 +56,7 @@ public:
     uint8 bOverride_MaxAspectRatio: 1;
     
     USizeBox();
+
     UFUNCTION(BlueprintCallable)
     void SetWidthOverride(float InWidthOverride);
     

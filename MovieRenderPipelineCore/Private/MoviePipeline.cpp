@@ -1,9 +1,16 @@
 #include "MoviePipeline.h"
 #include "MoviePipelineCustomTimeStep.h"
 
-class UMoviePipelineExecutorJob;
-class UMoviePipelineMasterConfig;
-class UTexture;
+UMoviePipeline::UMoviePipeline() {
+    this->CustomTimeStep = CreateDefaultSubobject<UMoviePipelineCustomTimeStep>(TEXT("MoviePipelineCustomTimeStep"));
+    this->CachedPrevCustomTimeStep = NULL;
+    this->TargetSequence = NULL;
+    this->LevelSequenceActor = NULL;
+    this->DebugWidget = NULL;
+    this->PreviewTexture = NULL;
+    this->DebugWidgetClass = NULL;
+    this->CurrentJob = NULL;
+}
 
 void UMoviePipeline::Shutdown(bool bError) {
 }
@@ -29,14 +36,4 @@ UMoviePipelineMasterConfig* UMoviePipeline::GetPipelineMasterConfig() const {
     return NULL;
 }
 
-UMoviePipeline::UMoviePipeline() {
-    this->CustomTimeStep = CreateDefaultSubobject<UMoviePipelineCustomTimeStep>(TEXT("MoviePipelineCustomTimeStep"));
-    this->CachedPrevCustomTimeStep = NULL;
-    this->TargetSequence = NULL;
-    this->LevelSequenceActor = NULL;
-    this->DebugWidget = NULL;
-    this->PreviewTexture = NULL;
-    this->DebugWidgetClass = NULL;
-    this->CurrentJob = NULL;
-}
 

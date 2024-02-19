@@ -12,6 +12,5 @@ enum class EGeometryCollectionPhysicsTypeEnum : uint8 {
     Chaos_CollisionGroup,
     Chaos_LinearForce,
     Chaos_AngularTorque,
-    Chaos_Max,
 };
 

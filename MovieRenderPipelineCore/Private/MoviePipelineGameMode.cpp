@@ -1,5 +1,6 @@
 #include "MoviePipelineGameMode.h"
 
-AMoviePipelineGameMode::AMoviePipelineGameMode() {
+AMoviePipelineGameMode::AMoviePipelineGameMode(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

@@ -7,6 +7,5 @@ enum EImpactDamageOverride {
     IDO_None,
     IDO_On,
     IDO_Off,
-    IDO_MAX UMETA(Hidden),
 };
 

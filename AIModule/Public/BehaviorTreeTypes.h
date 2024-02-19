@@ -8,5 +8,6 @@ class AIMODULE_API UBehaviorTreeTypes : public UObject {
     GENERATED_BODY()
 public:
     UBehaviorTreeTypes();
+
 };
 

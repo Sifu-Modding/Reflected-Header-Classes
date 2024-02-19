@@ -17,6 +17,5 @@ enum EMenuPlacement {
     MenuPlacement_Center,
     MenuPlacement_RightLeftCenter,
     MenuPlacement_MatchBottomLeft,
-    MenuPlacement_MAX UMETA(Hidden),
 };
 

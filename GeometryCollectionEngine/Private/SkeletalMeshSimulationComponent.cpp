@@ -1,7 +1,6 @@
 #include "SkeletalMeshSimulationComponent.h"
 
-
-USkeletalMeshSimulationComponent::USkeletalMeshSimulationComponent() {
+USkeletalMeshSimulationComponent::USkeletalMeshSimulationComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->PhysicalMaterial = NULL;
     this->ChaosSolverActor = NULL;
     this->OverridePhysicsAsset = NULL;
@@ -20,4 +19,6 @@ USkeletalMeshSimulationComponent::USkeletalMeshSimulationComponent() {
     this->CollisionGroup = 0;
     this->InitialVelocityType = EInitialVelocityTypeEnum::Chaos_Initial_Velocity_User_Defined;
 }
+
+
 

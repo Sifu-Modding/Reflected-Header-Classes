@@ -4,8 +4,8 @@
 
 UENUM(BlueprintType)
 enum class EToolSide : uint8 {
-    Left = 0x1,
-    Mouse = 0x1,
+    Left = 1,
+    Mouse = Left,
     Right,
 };
 

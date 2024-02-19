@@ -22,5 +22,6 @@ public:
     bool bTileZ;
     
     UNiagaraDataInterfaceVectorField();
+
 };
 

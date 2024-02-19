@@ -1,13 +1,7 @@
 #include "ControlRigControlActor.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=SceneComponent -FallbackName=SceneComponent
 
-void AControlRigControlActor::Refresh() {
-}
-
-void AControlRigControlActor::Clear() {
-}
-
-AControlRigControlActor::AControlRigControlActor() {
+AControlRigControlActor::AControlRigControlActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->ActorToTrack = NULL;
     this->ControlRigClass = NULL;
     this->bRefreshOnTick = true;
@@ -18,4 +12,11 @@ AControlRigControlActor::AControlRigControlActor() {
     this->ActorRootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("SceneComponent0"));
     this->ControlRig = NULL;
 }
+
+void AControlRigControlActor::Refresh() {
+}
+
+void AControlRigControlActor::Clear() {
+}
+
 

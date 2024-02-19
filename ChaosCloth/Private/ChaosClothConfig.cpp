@@ -34,3 +34,4 @@ UChaosClothConfig::UChaosClothConfig() {
     this->bUseContinuousCollisionDetection = false;
 }
 
+

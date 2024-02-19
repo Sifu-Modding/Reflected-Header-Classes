@@ -1,7 +1,12 @@
 #include "UniformGridPanel.h"
+#include "ESlateVisibility.h"
 
-class UUniformGridSlot;
-class UWidget;
+UUniformGridPanel::UUniformGridPanel() {
+    this->bIsVariable = false;
+    this->Visibility = ESlateVisibility::SelfHitTestInvisible;
+    this->MinDesiredSlotWidth = 0.00f;
+    this->MinDesiredSlotHeight = 0.00f;
+}
 
 void UUniformGridPanel::SetSlotPadding(FMargin InSlotPadding) {
 }
@@ -16,8 +21,4 @@ UUniformGridSlot* UUniformGridPanel::AddChildToUniformGrid(UWidget* Content, int
     return NULL;
 }
 
-UUniformGridPanel::UUniformGridPanel() {
-    this->MinDesiredSlotWidth = 0.00f;
-    this->MinDesiredSlotHeight = 0.00f;
-}
 

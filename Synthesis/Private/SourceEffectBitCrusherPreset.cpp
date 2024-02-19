@@ -1,6 +1,7 @@
 #include "SourceEffectBitCrusherPreset.h"
 
-class USoundModulatorBase;
+USourceEffectBitCrusherPreset::USourceEffectBitCrusherPreset() {
+}
 
 void USourceEffectBitCrusherPreset::SetSettings(const FSourceEffectBitCrusherBaseSettings& NewSettings) {
 }
@@ -20,6 +21,4 @@ void USourceEffectBitCrusherPreset::SetBits(float Bits) {
 void USourceEffectBitCrusherPreset::SetBitModulator(const USoundModulatorBase* Modulator) {
 }
 
-USourceEffectBitCrusherPreset::USourceEffectBitCrusherPreset() {
-}
 

@@ -12,5 +12,6 @@ public:
     FButtonStyle ButtonStyle;
     
     UButtonWidgetStyle();
+
 };
 

@@ -1,6 +1,7 @@
 #include "SubmixEffectReverbPreset.h"
 
-class UReverbEffect;
+USubmixEffectReverbPreset::USubmixEffectReverbPreset() {
+}
 
 void USubmixEffectReverbPreset::SetSettingsWithReverbEffect(const UReverbEffect* InReverbEffect, const float WetLevel, const float DryLevel) {
 }
@@ -8,6 +9,4 @@ void USubmixEffectReverbPreset::SetSettingsWithReverbEffect(const UReverbEffect*
 void USubmixEffectReverbPreset::SetSettings(const FSubmixEffectReverbSettings& InSettings) {
 }
 
-USubmixEffectReverbPreset::USubmixEffectReverbPreset() {
-}
 

@@ -1,5 +1,6 @@
 #include "InternalToolFrameworkActor.h"
 
-AInternalToolFrameworkActor::AInternalToolFrameworkActor() {
+AInternalToolFrameworkActor::AInternalToolFrameworkActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

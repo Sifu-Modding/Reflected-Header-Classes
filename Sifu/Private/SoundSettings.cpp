@@ -23,3 +23,4 @@ USoundSettings::USoundSettings() {
     this->m_VoiceGenderSwitchValues[1] = TEXT("Male");
 }
 
+

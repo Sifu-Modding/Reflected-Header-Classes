@@ -9,7 +9,8 @@ class UTemplateSequenceSection : public UMovieSceneSubSection, public IMovieScen
     GENERATED_BODY()
 public:
     UTemplateSequenceSection();
-    
+
+
     // Fix for true pure virtual functions not being implemented
 };
 

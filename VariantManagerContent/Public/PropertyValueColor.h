@@ -8,5 +8,6 @@ class VARIANTMANAGERCONTENT_API UPropertyValueColor : public UPropertyValue {
     GENERATED_BODY()
 public:
     UPropertyValueColor();
+
 };
 

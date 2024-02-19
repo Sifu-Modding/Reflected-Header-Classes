@@ -18,6 +18,7 @@ public:
     FLeaderboardQueryResult OnFailure;
     
     ULeaderboardQueryCallbackProxy();
+
     UFUNCTION(BlueprintCallable)
     static ULeaderboardQueryCallbackProxy* CreateProxyObjectForIntQuery(APlayerController* PlayerController, FName StatName);
     

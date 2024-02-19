@@ -1,6 +1,18 @@
 #include "GameplayCueNotify_Actor.h"
 
-class AActor;
+AGameplayCueNotify_Actor::AGameplayCueNotify_Actor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bAutoDestroyOnRemove = false;
+    this->AutoDestroyDelay = 0.00f;
+    this->WarnIfTimelineIsStillRunning = true;
+    this->WarnIfLatentActionIsStillRunning = true;
+    this->bAutoAttachToOwner = false;
+    this->IsOverride = true;
+    this->bUniqueInstancePerInstigator = false;
+    this->bUniqueInstancePerSourceObject = false;
+    this->bAllowMultipleOnActiveEvents = true;
+    this->bAllowMultipleWhileActiveEvents = true;
+    this->NumPreallocatedInstances = 0;
+}
 
 bool AGameplayCueNotify_Actor::WhileActive_Implementation(AActor* MyTarget, const FGameplayCueParameters& Parameters) {
     return false;
@@ -25,17 +37,4 @@ bool AGameplayCueNotify_Actor::OnActive_Implementation(AActor* MyTarget, const F
 void AGameplayCueNotify_Actor::K2_EndGameplayCue() {
 }
 
-AGameplayCueNotify_Actor::AGameplayCueNotify_Actor() {
-    this->bAutoDestroyOnRemove = false;
-    this->AutoDestroyDelay = 0.00f;
-    this->WarnIfTimelineIsStillRunning = true;
-    this->WarnIfLatentActionIsStillRunning = true;
-    this->bAutoAttachToOwner = false;
-    this->IsOverride = true;
-    this->bUniqueInstancePerInstigator = false;
-    this->bUniqueInstancePerSourceObject = false;
-    this->bAllowMultipleOnActiveEvents = true;
-    this->bAllowMultipleWhileActiveEvents = true;
-    this->NumPreallocatedInstances = 0;
-}
 

@@ -1,5 +1,8 @@
 #include "DLSSLibrary.h"
 
+UDLSSLibrary::UDLSSLibrary() {
+}
+
 void UDLSSLibrary::SetDLSSSharpness(float Sharpness) {
 }
 
@@ -43,6 +46,4 @@ UDLSSMode UDLSSLibrary::GetDefaultDLSSMode() {
     return UDLSSMode::Off;
 }
 
-UDLSSLibrary::UDLSSLibrary() {
-}
 

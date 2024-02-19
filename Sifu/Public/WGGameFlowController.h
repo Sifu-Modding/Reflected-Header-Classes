@@ -11,6 +11,7 @@ class SIFU_API UWGGameFlowController : public UGameFlowController {
     GENERATED_BODY()
 public:
     UWGGameFlowController();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool BPF_FindMapOptionInTags(const FGameplayTagContainer& _tagsToSearch, EWGGameFlowMapOption _eMapOption) const;
     

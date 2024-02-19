@@ -1,7 +1,11 @@
 #include "MoviePipelineExecutorShot.h"
 #include "Templates/SubclassOf.h"
 
-class UMoviePipelineShotConfig;
+UMoviePipelineExecutorShot::UMoviePipelineExecutorShot() {
+    this->bEnabled = true;
+    this->Progress = 0.00f;
+    this->ShotOverrideConfig = NULL;
+}
 
 void UMoviePipelineExecutorShot::SetStatusProgress_Implementation(const float InProgress) {
 }
@@ -35,9 +39,4 @@ UMoviePipelineShotConfig* UMoviePipelineExecutorShot::AllocateNewShotOverrideCon
     return NULL;
 }
 
-UMoviePipelineExecutorShot::UMoviePipelineExecutorShot() {
-    this->bEnabled = true;
-    this->Progress = 0.00f;
-    this->ShotOverrideConfig = NULL;
-}
 

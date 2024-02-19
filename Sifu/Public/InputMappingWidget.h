@@ -61,6 +61,7 @@ public:
     ERemappingAllowedInputTypes m_eRemappingAllowedType;
     
     UInputMappingWidget();
+
     UFUNCTION(BlueprintCallable)
     void BPF_WaitingKeyInput(EMappableFieldScaleTypes _eScaleType);
     

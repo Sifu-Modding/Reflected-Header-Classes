@@ -16,6 +16,7 @@ protected:
     
 public:
     UAbilityTask_WaitGameplayTag();
+
     UFUNCTION(BlueprintCallable)
     void GameplayTagCallback(const FGameplayTag Tag, int32 NewCount);
     

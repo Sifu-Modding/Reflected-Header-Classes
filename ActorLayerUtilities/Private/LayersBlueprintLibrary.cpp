@@ -1,7 +1,7 @@
 #include "LayersBlueprintLibrary.h"
 
-class AActor;
-class UObject;
+ULayersBlueprintLibrary::ULayersBlueprintLibrary() {
+}
 
 void ULayersBlueprintLibrary::RemoveActorFromLayer(AActor* InActor, const FActorLayer& Layer) {
 }
@@ -13,6 +13,4 @@ TArray<AActor*> ULayersBlueprintLibrary::GetActors(UObject* WorldContextObject, 
 void ULayersBlueprintLibrary::AddActorToLayer(AActor* InActor, const FActorLayer& Layer) {
 }
 
-ULayersBlueprintLibrary::ULayersBlueprintLibrary() {
-}
 

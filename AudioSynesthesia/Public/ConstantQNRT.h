@@ -13,6 +13,7 @@ public:
     UConstantQNRTSettings* Settings;
     
     UConstantQNRT();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     void GetNormalizedChannelConstantQAtTime(const float InSeconds, const int32 InChannel, TArray<float>& OutConstantQ) const;
     

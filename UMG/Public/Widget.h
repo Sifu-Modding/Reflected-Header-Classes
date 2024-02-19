@@ -122,6 +122,7 @@ protected:
     
 public:
     UWidget();
+
     UFUNCTION(BlueprintCallable)
     void SetVisibility(ESlateVisibility InVisibility);
     

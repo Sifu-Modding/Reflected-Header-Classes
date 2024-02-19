@@ -8,5 +8,6 @@ class AUGMENTEDREALITY_API UARTrackedPoint : public UARTrackedGeometry {
     GENERATED_BODY()
 public:
     UARTrackedPoint();
+
 };
 

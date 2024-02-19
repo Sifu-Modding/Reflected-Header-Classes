@@ -1,6 +1,6 @@
 #include "EQSTestingPawn.h"
 
-AEQSTestingPawn::AEQSTestingPawn() {
+AEQSTestingPawn::AEQSTestingPawn(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->QueryTemplate = NULL;
     this->TimeLimitPerStep = -1.00f;
     this->StepToDebugDraw = 0;
@@ -12,4 +12,5 @@ AEQSTestingPawn::AEQSTestingPawn() {
     this->bTickDuringGame = false;
     this->QueryingMode = EEnvQueryRunMode::AllMatching;
 }
+
 

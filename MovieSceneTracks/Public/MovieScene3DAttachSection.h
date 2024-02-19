@@ -44,7 +44,8 @@ public:
     EDetachmentRule DetachmentScaleRule;
     
     UMovieScene3DAttachSection();
-    
+
+
     // Fix for true pure virtual functions not being implemented
 };
 

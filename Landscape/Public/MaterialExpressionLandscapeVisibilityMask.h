@@ -12,5 +12,6 @@ public:
     FGuid ExpressionGUID;
     
     UMaterialExpressionLandscapeVisibilityMask();
+
 };
 

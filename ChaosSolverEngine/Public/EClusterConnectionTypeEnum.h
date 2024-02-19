@@ -9,7 +9,6 @@ enum class EClusterConnectionTypeEnum : uint8 {
     Chaos_MinimalSpanningSubsetDelaunayTriangulation,
     Chaos_PointImplicitAugmentedWithMinimalDelaunay,
     Chaos_None,
-    Chaos_EClsuterCreationParameters_Max,
-    Chaos_MAX UMETA(Hidden),
+    Chaos_EClsuterCreationParameters_Max UMETA(Hidden),
 };
 

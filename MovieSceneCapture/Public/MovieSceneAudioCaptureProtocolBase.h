@@ -8,5 +8,6 @@ class MOVIESCENECAPTURE_API UMovieSceneAudioCaptureProtocolBase : public UMovieS
     GENERATED_BODY()
 public:
     UMovieSceneAudioCaptureProtocolBase();
+
 };
 

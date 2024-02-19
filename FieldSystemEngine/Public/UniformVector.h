@@ -16,7 +16,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector Direction;
     
-    UUniformVector();
+    UUniformVector(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UUniformVector* SetUniformVector(float NewMagnitude, FVector NewDirection);
     

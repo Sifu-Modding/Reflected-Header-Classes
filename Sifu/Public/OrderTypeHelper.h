@@ -13,6 +13,7 @@ class SIFU_API UOrderTypeHelper : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UOrderTypeHelper();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static FOrderType MakeOrderTypeFromEnum(EOrderType _eOrderType);
     

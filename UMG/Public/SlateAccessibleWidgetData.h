@@ -30,5 +30,6 @@ public:
     FGetText AccessibleSummaryTextDelegate;
     
     USlateAccessibleWidgetData();
+
 };
 

@@ -8,3 +8,4 @@ UOnsetNRTSettings::UOnsetNRTSettings() {
     this->MaximumFrequency = 16000.00f;
 }
 
+

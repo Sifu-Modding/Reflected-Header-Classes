@@ -38,5 +38,6 @@ public:
     FString TmlPath;
     
     UDatasmithDeltaGenSceneImportData();
+
 };
 

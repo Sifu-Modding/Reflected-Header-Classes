@@ -4,7 +4,7 @@
 #include "SpectatorReservation.h"
 #include "SpectatorBeaconState.generated.h"
 
-UCLASS(Blueprintable, NotPlaceable, Transient)
+UCLASS(Blueprintable, NotPlaceable, Transient, Config=Engine)
 class ONLINESUBSYSTEMUTILS_API USpectatorBeaconState : public UObject {
     GENERATED_BODY()
 public:
@@ -26,5 +26,6 @@ protected:
     
 public:
     USpectatorBeaconState();
+
 };
 

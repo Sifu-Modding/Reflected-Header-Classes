@@ -1,6 +1,11 @@
 #include "ARTrackedGeometry.h"
 
-class UMRMeshComponent;
+UARTrackedGeometry::UARTrackedGeometry() {
+    this->TrackingState = EARTrackingState::Tracking;
+    this->UnderlyingMesh = NULL;
+    this->ObjectClassification = EARObjectClassification::NotApplicable;
+    this->LastUpdateFrameNumber = 0;
+}
 
 bool UARTrackedGeometry::IsTracked() const {
     return false;
@@ -42,10 +47,4 @@ FName UARTrackedGeometry::GetDebugName() const {
     return NAME_None;
 }
 
-UARTrackedGeometry::UARTrackedGeometry() {
-    this->TrackingState = EARTrackingState::Tracking;
-    this->UnderlyingMesh = NULL;
-    this->ObjectClassification = EARObjectClassification::NotApplicable;
-    this->LastUpdateFrameNumber = 0;
-}
 

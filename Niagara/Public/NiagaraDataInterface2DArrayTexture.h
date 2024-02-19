@@ -13,5 +13,6 @@ public:
     UTexture2DArray* Texture;
     
     UNiagaraDataInterface2DArrayTexture();
+
 };
 

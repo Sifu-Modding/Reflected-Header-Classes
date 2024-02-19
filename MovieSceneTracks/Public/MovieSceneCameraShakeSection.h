@@ -29,5 +29,6 @@ public:
     FRotator UserDefinedPlaySpace;
     
     UMovieSceneCameraShakeSection();
+
 };
 

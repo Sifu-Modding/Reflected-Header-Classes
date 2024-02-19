@@ -12,5 +12,6 @@ public:
     TArray<FQuat> QuatData;
     
     UNiagaraDataInterfaceArrayQuat();
+
 };
 

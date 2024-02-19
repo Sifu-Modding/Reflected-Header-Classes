@@ -12,5 +12,6 @@ public:
     TArray<FAITouchEvent> RegisteredEvents;
     
     UAISense_Touch();
+
 };
 

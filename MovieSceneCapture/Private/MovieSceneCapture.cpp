@@ -1,7 +1,13 @@
 #include "MovieSceneCapture.h"
 #include "Templates/SubclassOf.h"
 
-class UMovieSceneCaptureProtocolBase;
+UMovieSceneCapture::UMovieSceneCapture() {
+    this->ImageCaptureProtocol = NULL;
+    this->AudioCaptureProtocol = NULL;
+    this->bUseSeparateProcess = false;
+    this->bCloseEditorWhenCaptureStarts = false;
+    this->AdditionalCommandLineArguments = TEXT("-NOSCREENMESSAGES");
+}
 
 void UMovieSceneCapture::SetImageCaptureProtocolType(TSubclassOf<UMovieSceneCaptureProtocolBase> ProtocolType) {
 }
@@ -17,11 +23,4 @@ UMovieSceneCaptureProtocolBase* UMovieSceneCapture::GetAudioCaptureProtocol() {
     return NULL;
 }
 
-UMovieSceneCapture::UMovieSceneCapture() {
-    this->ImageCaptureProtocol = NULL;
-    this->AudioCaptureProtocol = NULL;
-    this->bUseSeparateProcess = false;
-    this->bCloseEditorWhenCaptureStarts = false;
-    this->AdditionalCommandLineArguments = TEXT("-NOSCREENMESSAGES");
-}
 

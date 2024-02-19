@@ -1,7 +1,7 @@
 #include "HeadMountedDisplayFunctionLibrary.h"
 
-class UObject;
-class UTexture;
+UHeadMountedDisplayFunctionLibrary::UHeadMountedDisplayFunctionLibrary() {
+}
 
 void UHeadMountedDisplayFunctionLibrary::UpdateExternalTrackingHMDPosition(const FTransform& ExternalTrackingTransform) {
 }
@@ -153,6 +153,4 @@ void UHeadMountedDisplayFunctionLibrary::ClearXRTimedInputActionDelegate(const F
 void UHeadMountedDisplayFunctionLibrary::CalibrateExternalTrackingToHMD(const FTransform& ExternalTrackingTransform) {
 }
 
-UHeadMountedDisplayFunctionLibrary::UHeadMountedDisplayFunctionLibrary() {
-}
 

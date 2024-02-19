@@ -196,6 +196,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UBillboardComponent* SpriteComponent;
     
-    AGeometryCollectionDebugDrawActor();
+    AGeometryCollectionDebugDrawActor(const FObjectInitializer& ObjectInitializer);
+
 };
 

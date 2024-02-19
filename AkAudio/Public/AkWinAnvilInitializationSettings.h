@@ -8,5 +8,6 @@ class AKAUDIO_API UAkWinAnvilInitializationSettings : public UAkWinGDKInitializa
     GENERATED_BODY()
 public:
     UAkWinAnvilInitializationSettings();
+
 };
 

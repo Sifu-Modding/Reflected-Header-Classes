@@ -1,6 +1,7 @@
 #include "SourceEffectChorusPreset.h"
 
-class USoundModulatorBase;
+USourceEffectChorusPreset::USourceEffectChorusPreset() {
+}
 
 void USourceEffectChorusPreset::SetWetModulator(const USoundModulatorBase* Modulator) {
 }
@@ -44,6 +45,4 @@ void USourceEffectChorusPreset::SetDepthModulator(const USoundModulatorBase* Mod
 void USourceEffectChorusPreset::SetDepth(float Depth) {
 }
 
-USourceEffectChorusPreset::USourceEffectChorusPreset() {
-}
 

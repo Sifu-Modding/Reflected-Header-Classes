@@ -15,6 +15,7 @@ protected:
     
 public:
     UPanelWidget();
+
     UFUNCTION(BlueprintCallable)
     bool RemoveChildAt(int32 Index);
     

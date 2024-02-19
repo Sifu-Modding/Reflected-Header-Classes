@@ -21,6 +21,7 @@ protected:
     uint8 bLoadOnClient: 1;
     
 public:
-    ANavSystemConfigOverride();
+    ANavSystemConfigOverride(const FObjectInitializer& ObjectInitializer);
+
 };
 

@@ -42,6 +42,7 @@ protected:
     
 public:
     UPropertyValue();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool HasRecordedData() const;
     

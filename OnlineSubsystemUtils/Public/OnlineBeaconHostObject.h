@@ -21,6 +21,7 @@ protected:
     TArray<AOnlineBeaconClient*> ClientActors;
     
 public:
-    AOnlineBeaconHostObject();
+    AOnlineBeaconHostObject(const FObjectInitializer& ObjectInitializer);
+
 };
 

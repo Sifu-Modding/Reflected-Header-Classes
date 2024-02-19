@@ -15,5 +15,6 @@ public:
     bool bMultilayer;
     
     UMoviePipelineImageSequenceOutput_EXR();
+
 };
 

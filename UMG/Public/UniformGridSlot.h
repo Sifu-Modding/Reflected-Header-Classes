@@ -22,6 +22,7 @@ public:
     int32 Column;
     
     UUniformGridSlot();
+
     UFUNCTION(BlueprintCallable)
     void SetVerticalAlignment(TEnumAsByte<EVerticalAlignment> InVerticalAlignment);
     

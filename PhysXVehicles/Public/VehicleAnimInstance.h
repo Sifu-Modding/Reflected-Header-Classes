@@ -16,6 +16,7 @@ private:
     
 public:
     UVehicleAnimInstance();
+
     UFUNCTION(BlueprintCallable)
     AWheeledVehicle* GetVehicle();
     

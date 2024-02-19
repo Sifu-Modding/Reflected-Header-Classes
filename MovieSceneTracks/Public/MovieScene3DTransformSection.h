@@ -23,7 +23,7 @@ private:
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     FMovieSceneFloatChannel Scale[3];
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     FMovieSceneFloatChannel ManualWeight;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -31,7 +31,8 @@ private:
     
 public:
     UMovieScene3DTransformSection();
-    
+
+
     // Fix for true pure virtual functions not being implemented
 };
 

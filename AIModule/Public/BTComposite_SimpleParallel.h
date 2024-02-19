@@ -12,5 +12,6 @@ public:
     TEnumAsByte<EBTParallelMode::Type> FinishMode;
     
     UBTComposite_SimpleParallel();
+
 };
 

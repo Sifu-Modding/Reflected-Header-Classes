@@ -1,5 +1,22 @@
 #include "EditableTextBox.h"
 
+UEditableTextBox::UEditableTextBox() {
+    this->Style = NULL;
+    this->IsReadOnly = false;
+    this->IsPassword = false;
+    this->MinimumDesiredWidth = 0.00f;
+    this->IsCaretMovedWhenGainFocus = true;
+    this->SelectAllTextWhenFocused = false;
+    this->RevertTextOnEscape = false;
+    this->ClearKeyboardFocusOnCommit = true;
+    this->SelectAllTextOnCommit = false;
+    this->AllowContextMenu = true;
+    this->KeyboardType = EVirtualKeyboardType::Default;
+    this->VirtualKeyboardTrigger = EVirtualKeyboardTrigger::OnFocusByPointer;
+    this->VirtualKeyboardDismissAction = EVirtualKeyboardDismissAction::TextChangeOnDismiss;
+    this->Justification = ETextJustify::Left;
+}
+
 void UEditableTextBox::SetText(FText InText) {
 }
 
@@ -29,20 +46,4 @@ FText UEditableTextBox::GetText() const {
 void UEditableTextBox::ClearError() {
 }
 
-UEditableTextBox::UEditableTextBox() {
-    this->Style = NULL;
-    this->IsReadOnly = false;
-    this->IsPassword = false;
-    this->MinimumDesiredWidth = 0.00f;
-    this->IsCaretMovedWhenGainFocus = true;
-    this->SelectAllTextWhenFocused = false;
-    this->RevertTextOnEscape = false;
-    this->ClearKeyboardFocusOnCommit = true;
-    this->SelectAllTextOnCommit = false;
-    this->AllowContextMenu = true;
-    this->KeyboardType = EVirtualKeyboardType::Default;
-    this->VirtualKeyboardTrigger = EVirtualKeyboardTrigger::OnFocusByPointer;
-    this->VirtualKeyboardDismissAction = EVirtualKeyboardDismissAction::TextChangeOnDismiss;
-    this->Justification = ETextJustify::Left;
-}
 

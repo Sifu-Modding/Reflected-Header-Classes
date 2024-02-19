@@ -1,6 +1,6 @@
 #include "DatasmithAreaLightActor.h"
 
-ADatasmithAreaLightActor::ADatasmithAreaLightActor() {
+ADatasmithAreaLightActor::ADatasmithAreaLightActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->LightType = EDatasmithAreaLightActorType::Point;
     this->LightShape = EDatasmithAreaLightActorShape::Rectangle;
     this->Intensity = 10.00f;
@@ -15,4 +15,5 @@ ADatasmithAreaLightActor::ADatasmithAreaLightActor() {
     this->SpotlightInnerAngle = 1.00f;
     this->SpotlightOuterAngle = 44.00f;
 }
+
 

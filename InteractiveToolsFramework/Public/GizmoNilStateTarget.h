@@ -9,7 +9,8 @@ class INTERACTIVETOOLSFRAMEWORK_API UGizmoNilStateTarget : public UObject, publi
     GENERATED_BODY()
 public:
     UGizmoNilStateTarget();
-    
+
+
     // Fix for true pure virtual functions not being implemented
     UFUNCTION()
     void EndUpdate() override PURE_VIRTUAL(EndUpdate,);

@@ -13,5 +13,6 @@ public:
     UTexture* Texture;
     
     UNiagaraDataInterfaceTexture();
+
 };
 

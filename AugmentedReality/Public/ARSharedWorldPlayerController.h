@@ -7,7 +7,8 @@ UCLASS(Blueprintable)
 class AUGMENTEDREALITY_API AARSharedWorldPlayerController : public APlayerController {
     GENERATED_BODY()
 public:
-    AARSharedWorldPlayerController();
+    AARSharedWorldPlayerController(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
     void ServerMarkReadyForReceiving();
     

@@ -8,5 +8,6 @@ class AUDIOEXTENSIONS_API USoundfieldEncodingSettingsBase : public UObject {
     GENERATED_BODY()
 public:
     USoundfieldEncodingSettingsBase();
+
 };
 

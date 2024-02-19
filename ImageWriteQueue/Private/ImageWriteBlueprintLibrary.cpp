@@ -1,10 +1,9 @@
 #include "ImageWriteBlueprintLibrary.h"
 
-class UTexture;
+UImageWriteBlueprintLibrary::UImageWriteBlueprintLibrary() {
+}
 
 void UImageWriteBlueprintLibrary::ExportToDisk(UTexture* Texture, const FString& Filename, const FImageWriteOptions& Options) {
 }
 
-UImageWriteBlueprintLibrary::UImageWriteBlueprintLibrary() {
-}
 

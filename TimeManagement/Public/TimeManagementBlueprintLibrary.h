@@ -13,6 +13,7 @@ class TIMEMANAGEMENT_API UTimeManagementBlueprintLibrary : public UBlueprintFunc
     GENERATED_BODY()
 public:
     UTimeManagementBlueprintLibrary();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static FFrameTime TransformTime(const FFrameTime& SourceTime, const FFrameRate& SourceRate, const FFrameRate& DestinationRate);
     

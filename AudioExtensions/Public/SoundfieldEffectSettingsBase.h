@@ -8,5 +8,6 @@ class AUDIOEXTENSIONS_API USoundfieldEffectSettingsBase : public UObject {
     GENERATED_BODY()
 public:
     USoundfieldEffectSettingsBase();
+
 };
 

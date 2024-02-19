@@ -13,6 +13,7 @@ class UXRAssetFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UXRAssetFunctionLibrary();
+
     UFUNCTION(BlueprintCallable)
     static UPrimitiveComponent* AddNamedDeviceVisualizationComponentBlocking(AActor* Target, const FName SystemName, const FName DeviceName, bool bManualAttachment, const FTransform& RelativeTransform, FXRDeviceId& XRDeviceId);
     

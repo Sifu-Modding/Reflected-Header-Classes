@@ -1,5 +1,11 @@
 #include "ProceduralMeshComponent.h"
 
+UProceduralMeshComponent::UProceduralMeshComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bUseComplexAsSimpleCollision = true;
+    this->bUseAsyncCooking = false;
+    this->ProcMeshBodySetup = NULL;
+}
+
 void UProceduralMeshComponent::UpdateMeshSection_LinearColor(int32 SectionIndex, const TArray<FVector>& Vertices, const TArray<FVector>& Normals, const TArray<FVector2D>& UV0, const TArray<FVector2D>& UV1, const TArray<FVector2D>& UV2, const TArray<FVector2D>& UV3, const TArray<FLinearColor>& VertexColors, const TArray<FProcMeshTangent>& Tangents) {
 }
 
@@ -35,9 +41,4 @@ void UProceduralMeshComponent::ClearAllMeshSections() {
 void UProceduralMeshComponent::AddCollisionConvexMesh(TArray<FVector> ConvexVerts) {
 }
 
-UProceduralMeshComponent::UProceduralMeshComponent() {
-    this->bUseComplexAsSimpleCollision = true;
-    this->bUseAsyncCooking = false;
-    this->ProcMeshBodySetup = NULL;
-}
 

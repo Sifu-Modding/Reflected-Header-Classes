@@ -10,6 +10,7 @@ class UMovieRenderDebugWidget : public UUserWidget {
     GENERATED_BODY()
 public:
     UMovieRenderDebugWidget();
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnInitializedForPipeline(UMoviePipeline* ForPipeline);
     

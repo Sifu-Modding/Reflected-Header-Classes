@@ -13,5 +13,6 @@ public:
     TMap<FGuid, FMagicLeapARPinObjectIdList> AllContentBindings;
     
     UMagicLeapARPinContentBindings();
+
 };
 

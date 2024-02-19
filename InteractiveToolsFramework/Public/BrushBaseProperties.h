@@ -29,5 +29,6 @@ public:
     bool bShowFalloff;
     
     UBrushBaseProperties();
+
 };
 

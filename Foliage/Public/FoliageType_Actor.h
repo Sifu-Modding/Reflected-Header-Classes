@@ -17,5 +17,6 @@ public:
     bool bShouldAttachToBaseComponent;
     
     UFoliageType_Actor();
+
 };
 

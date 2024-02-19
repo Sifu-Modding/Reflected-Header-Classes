@@ -4,3 +4,4 @@ UEditableGameplayTagQuery::UEditableGameplayTagQuery() {
     this->RootExpression = NULL;
 }
 
+

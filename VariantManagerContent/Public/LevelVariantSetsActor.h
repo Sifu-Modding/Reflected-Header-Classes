@@ -13,7 +13,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSoftObjectPath LevelVariantSets;
     
-    ALevelVariantSetsActor();
+    ALevelVariantSetsActor(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     bool SwitchOnVariantByName(const FString& VariantSetName, const FString& VariantName);
     

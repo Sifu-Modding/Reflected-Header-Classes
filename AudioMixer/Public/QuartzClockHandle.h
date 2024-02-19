@@ -12,6 +12,7 @@ class AUDIOMIXER_API UQuartzClockHandle : public UObject {
     GENERATED_BODY()
 public:
     UQuartzClockHandle();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     void UnsubscribeFromTimeDivision(const UObject* WorldContextObject, EQuartzCommandQuantization InQuantizationBoundary);
     

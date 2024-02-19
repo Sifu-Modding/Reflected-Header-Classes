@@ -4,3 +4,4 @@ UNiagaraDataInterface2DArrayTexture::UNiagaraDataInterface2DArrayTexture() {
     this->Texture = NULL;
 }
 
+

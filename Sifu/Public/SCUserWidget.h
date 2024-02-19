@@ -90,6 +90,7 @@ private:
     
 public:
     USCUserWidget();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void OnDataUpdated();

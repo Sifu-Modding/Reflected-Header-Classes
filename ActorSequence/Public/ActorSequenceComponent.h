@@ -22,6 +22,7 @@ protected:
     UActorSequencePlayer* SequencePlayer;
     
 public:
-    UActorSequenceComponent();
+    UActorSequenceComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

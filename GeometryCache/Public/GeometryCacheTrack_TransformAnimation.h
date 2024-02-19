@@ -9,6 +9,7 @@ class GEOMETRYCACHE_API UDEPRECATED_GeometryCacheTrack_TransformAnimation : publ
     GENERATED_BODY()
 public:
     UDEPRECATED_GeometryCacheTrack_TransformAnimation();
+
     UFUNCTION(BlueprintCallable)
     void SetMesh(const FGeometryCacheMeshData& NewMeshData);
     

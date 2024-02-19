@@ -5,3 +5,4 @@ UMovieSceneControlRigParameterTrack::UMovieSceneControlRigParameterTrack() {
     this->SectionToKey = NULL;
 }
 
+

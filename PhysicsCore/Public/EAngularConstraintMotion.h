@@ -7,6 +7,5 @@ enum EAngularConstraintMotion {
     ACM_Free,
     ACM_Limited,
     ACM_Locked,
-    ACM_MAX UMETA(Hidden),
 };
 

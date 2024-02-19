@@ -4,3 +4,4 @@ UAmbisonicsEncodingSettings::UAmbisonicsEncodingSettings() {
     this->AmbisonicsOrder = 0;
 }
 
+

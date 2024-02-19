@@ -14,5 +14,6 @@ public:
     TScriptInterface<IGizmoTransformSource> ChildTransformSource;
     
     UGizmoScaledTransformSource();
+
 };
 

@@ -5,3 +5,4 @@ UFoliageType_Actor::UFoliageType_Actor() {
     this->bShouldAttachToBaseComponent = true;
 }
 
+

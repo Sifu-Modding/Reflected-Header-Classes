@@ -12,6 +12,7 @@ class AIMODULE_API UAITask_RunEQS : public UAITask {
     GENERATED_BODY()
 public:
     UAITask_RunEQS();
+
     UFUNCTION(BlueprintCallable)
     static UAITask_RunEQS* RunEQS(AAIController* Controller, UEnvQuery* QueryTemplate);
     

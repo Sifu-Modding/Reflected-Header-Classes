@@ -3,7 +3,6 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Color -FallbackName=Color
 //CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=SlateBrush -FallbackName=SlateBrush
 //CROSS-MODULE INCLUDE V2: -ModuleName=UMG -ObjectName=Widget -FallbackName=Widget
-//CROSS-MODULE INCLUDE V2: -ModuleName=UMG -ObjectName=Widget -FallbackName=Widget
 #include "TriangleStatsWidget.generated.h"
 
 UCLASS(Blueprintable)
@@ -47,6 +46,7 @@ public:
     float m_fCrossLineWidth;
     
     UTriangleStatsWidget();
+
     UFUNCTION(BlueprintCallable)
     void BPF_SetUpValue(float _fValue);
     

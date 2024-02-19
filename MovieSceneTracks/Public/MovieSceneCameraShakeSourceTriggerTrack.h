@@ -16,7 +16,8 @@ protected:
     
 public:
     UMovieSceneCameraShakeSourceTriggerTrack();
-    
+
+
     // Fix for true pure virtual functions not being implemented
 };
 

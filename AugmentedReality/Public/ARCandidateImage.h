@@ -28,6 +28,7 @@ protected:
     
 public:
     UARCandidateImage();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetPhysicalWidth() const;
     

@@ -6,3 +6,4 @@ USpectatorBeaconState::USpectatorBeaconState() {
     this->bRestrictCrossConsole = false;
 }
 
+

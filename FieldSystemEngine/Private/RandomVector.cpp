@@ -1,12 +1,11 @@
 #include "RandomVector.h"
 
-class URandomVector;
+URandomVector::URandomVector(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->Magnitude = 1.00f;
+}
 
 URandomVector* URandomVector::SetRandomVector(float NewMagnitude) {
     return NULL;
 }
 
-URandomVector::URandomVector() {
-    this->Magnitude = 1.00f;
-}
 

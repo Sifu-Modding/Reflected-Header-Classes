@@ -19,6 +19,7 @@ public:
     FGameplayEffectAppliedTargetDelegate OnApplied;
     
     UAbilityTask_WaitGameplayEffectApplied_Target();
+
     UFUNCTION(BlueprintCallable)
     static UAbilityTask_WaitGameplayEffectApplied_Target* WaitGameplayEffectAppliedToTarget_Query(UGameplayAbility* OwningAbility, const FGameplayTargetDataFilterHandle SourceFilter, FGameplayTagQuery SourceTagQuery, FGameplayTagQuery TargetTagQuery, bool TriggerOnce, AActor* OptionalExternalOwner, bool ListenForPeriodicEffect);
     

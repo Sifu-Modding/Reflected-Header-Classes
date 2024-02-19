@@ -8,5 +8,6 @@ class CLOTHINGSYSTEMRUNTIMEINTERFACE_API UDEPRECATED_ClothSharedSimConfigBase : 
     GENERATED_BODY()
 public:
     UDEPRECATED_ClothSharedSimConfigBase();
+
 };
 

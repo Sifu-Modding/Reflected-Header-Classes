@@ -19,3 +19,4 @@ UTransformGizmo::UTransformGizmo() {
     this->ScaledTransformSource = NULL;
 }
 
+

@@ -19,6 +19,7 @@ public:
     FEmptyOnlineDelegate OnFailure;
     
     UAchievementQueryCallbackProxy();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static UAchievementQueryCallbackProxy* CacheAchievements(UObject* WorldContextObject, APlayerController* PlayerController);
     

@@ -8,5 +8,6 @@ class AIMODULE_API UAISenseConfig_Prediction : public UAISenseConfig {
     GENERATED_BODY()
 public:
     UAISenseConfig_Prediction();
+
 };
 

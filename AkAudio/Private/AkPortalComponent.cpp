@@ -1,5 +1,6 @@
 #include "AkPortalComponent.h"
 
-UAkPortalComponent::UAkPortalComponent() {
+UAkPortalComponent::UAkPortalComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

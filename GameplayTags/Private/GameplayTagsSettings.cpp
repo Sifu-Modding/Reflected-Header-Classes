@@ -1,6 +1,8 @@
 #include "GameplayTagsSettings.h"
 
 UGameplayTagsSettings::UGameplayTagsSettings() {
+    this->ConfigFileName = TEXT("../../../Sifu/Config/DefaultGameplayTags.ini");
+    this->GameplayTagList.AddDefaulted(787);
     this->ImportTagsFromConfig = true;
     this->WarnOnInvalidTags = true;
     this->FastReplication = false;
@@ -9,4 +11,5 @@ UGameplayTagsSettings::UGameplayTagsSettings() {
     this->NumBitsForContainerSize = 6;
     this->NetIndexFirstBitSegment = 16;
 }
+
 

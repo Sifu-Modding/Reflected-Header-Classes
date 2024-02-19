@@ -9,7 +9,8 @@ class UMovieSceneLevelVisibilitySystem : public UMovieSceneEntitySystem, public 
     GENERATED_BODY()
 public:
     UMovieSceneLevelVisibilitySystem();
-    
+
+
     // Fix for true pure virtual functions not being implemented
 };
 

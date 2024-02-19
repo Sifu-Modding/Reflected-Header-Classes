@@ -1,6 +1,9 @@
 #include "ARImageComponent.h"
 #include "Net/UnrealNetwork.h"
 
+UARImageComponent::UARImageComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+}
+
 void UARImageComponent::SetImageComponentDebugMode(EImageComponentDebugMode NewDebugMode) {
 }
 
@@ -18,6 +21,4 @@ void UARImageComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& Ou
     DOREPLIFETIME(UARImageComponent, ReplicatedPayload);
 }
 
-UARImageComponent::UARImageComponent() {
-}
 

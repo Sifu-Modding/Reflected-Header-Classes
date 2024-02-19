@@ -17,6 +17,7 @@ public:
     FDownloadImageDelegate OnFail;
     
     UAsyncTaskDownloadImage();
+
     UFUNCTION(BlueprintCallable)
     static UAsyncTaskDownloadImage* DownloadImage(const FString& URL);
     

@@ -8,5 +8,6 @@ class NIAGARA_API UNiagaraMessageDataBase : public UObject {
     GENERATED_BODY()
 public:
     UNiagaraMessageDataBase();
+
 };
 

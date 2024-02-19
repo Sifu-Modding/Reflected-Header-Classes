@@ -17,5 +17,6 @@ public:
     TArray<UMaterialInterface*> OverrideMaterials;
     
     UDatasmithStaticMeshComponentTemplate();
+
 };
 

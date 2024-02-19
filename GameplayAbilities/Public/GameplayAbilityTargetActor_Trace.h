@@ -17,6 +17,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bTraceAffectsAimPitch;
     
-    AGameplayAbilityTargetActor_Trace();
+    AGameplayAbilityTargetActor_Trace(const FObjectInitializer& ObjectInitializer);
+
 };
 

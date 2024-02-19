@@ -1,5 +1,8 @@
 #include "AbstractNavData.h"
 
-AAbstractNavData::AAbstractNavData() {
+AAbstractNavData::AAbstractNavData(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bCanBeMainNavData = false;
+    this->bCanSpawnOnRebuild = false;
 }
+
 

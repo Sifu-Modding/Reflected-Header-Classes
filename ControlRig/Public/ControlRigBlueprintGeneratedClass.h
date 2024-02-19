@@ -8,5 +8,6 @@ class CONTROLRIG_API UControlRigBlueprintGeneratedClass : public UBlueprintGener
     GENERATED_BODY()
 public:
     UControlRigBlueprintGeneratedClass();
+
 };
 

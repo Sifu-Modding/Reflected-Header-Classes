@@ -24,5 +24,6 @@ public:
     TMap<FGuid, FName> BoundActorComponents;
     
     UTemplateSequence();
+
 };
 

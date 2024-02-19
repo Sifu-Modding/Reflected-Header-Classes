@@ -6,3 +6,4 @@ UNiagaraRendererProperties::UNiagaraRendererProperties() {
     this->bMotionBlurEnabled = true;
 }
 
+

@@ -8,5 +8,6 @@ class AKAUDIO_API UAkXboxOneAnvilInitializationSettings : public UAkXboxOneGDKIn
     GENERATED_BODY()
 public:
     UAkXboxOneAnvilInitializationSettings();
+
 };
 

@@ -9,7 +9,8 @@ class MOVIESCENETRACKS_API UMovieScenePiecewiseFloatBlenderSystem : public UMovi
     GENERATED_BODY()
 public:
     UMovieScenePiecewiseFloatBlenderSystem();
-    
+
+
     // Fix for true pure virtual functions not being implemented
 };
 

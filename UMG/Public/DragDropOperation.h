@@ -38,6 +38,7 @@ public:
     FOnDragDropMulticast OnDragged;
     
     UDragDropOperation();
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void Drop(const FPointerEvent& PointerEvent);
     

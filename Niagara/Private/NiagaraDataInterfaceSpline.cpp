@@ -4,3 +4,4 @@ UNiagaraDataInterfaceSpline::UNiagaraDataInterfaceSpline() {
     this->Source = NULL;
 }
 
+

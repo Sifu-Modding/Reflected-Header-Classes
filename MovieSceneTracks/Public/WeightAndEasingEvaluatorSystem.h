@@ -8,5 +8,6 @@ class MOVIESCENETRACKS_API UWeightAndEasingEvaluatorSystem : public UMovieSceneE
     GENERATED_BODY()
 public:
     UWeightAndEasingEvaluatorSystem();
+
 };
 

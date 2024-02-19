@@ -9,7 +9,6 @@ enum EFieldPhysicsDefaultFields {
     Field_UniformVector,
     Field_RadialVector,
     Field_RadialVectorFalloff,
-    Field_EFieldPhysicsDefaultFields_Max,
-    Field_MAX UMETA(Hidden),
+    Field_EFieldPhysicsDefaultFields_Max UMETA(Hidden),
 };
 

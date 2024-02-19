@@ -7,6 +7,7 @@ UCLASS(Blueprintable)
 class SIFU_API AReplayReplicationProxy : public AReplayReplicationProxyBase {
     GENERATED_BODY()
 public:
-    AReplayReplicationProxy();
+    AReplayReplicationProxy(const FObjectInitializer& ObjectInitializer);
+
 };
 

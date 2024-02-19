@@ -1,6 +1,7 @@
 #include "AudioCaptureComponent.h"
 
-UAudioCaptureComponent::UAudioCaptureComponent() {
+UAudioCaptureComponent::UAudioCaptureComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->JitterLatencyFrames = 0;
 }
+
 

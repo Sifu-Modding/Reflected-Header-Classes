@@ -11,6 +11,7 @@ class UMG_API UOverlay : public UPanelWidget {
     GENERATED_BODY()
 public:
     UOverlay();
+
     UFUNCTION(BlueprintCallable)
     UOverlaySlot* AddChildToOverlay(UWidget* Content);
     

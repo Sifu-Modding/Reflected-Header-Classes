@@ -12,7 +12,7 @@ class UDestructibleMesh;
 class UDestructibleSnapshot;
 class UMaterialInterface;
 
-UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, Config=Engine, meta=(BlueprintSpawnableComponent))
 class APEXDESTRUCTION_API UDestructibleComponent : public USkinnedMeshComponent, public IDestructibleInterface {
     GENERATED_BODY()
 public:
@@ -51,7 +51,8 @@ private:
     UDestructibleSnapshot* Snapshot;
     
 public:
-    UDestructibleComponent();
+    UDestructibleComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetDestructibleMesh(UDestructibleMesh* NewMesh);
     
@@ -70,7 +71,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void ApplyDamage(float DamageAmount, const FVector& HitLocation, const FVector& ImpulseDir, float ImpulseStrength);
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

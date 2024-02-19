@@ -14,6 +14,7 @@ public:
     FSourceEffectEnvelopeFollowerSettings Settings;
     
     USourceEffectEnvelopeFollowerPreset();
+
     UFUNCTION(BlueprintCallable)
     void UnregisterEnvelopeFollowerListener(UEnvelopeFollowerListener* EnvelopeFollowerListener);
     

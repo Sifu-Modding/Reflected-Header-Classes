@@ -28,7 +28,8 @@ protected:
     bool bCancelReservation;
     
 public:
-    ASpectatorBeaconClient();
+    ASpectatorBeaconClient(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
     void ServerReservationRequest(const FString& SessionId, const FSpectatorReservation& Reservation);

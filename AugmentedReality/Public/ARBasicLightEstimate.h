@@ -20,6 +20,7 @@ private:
     
 public:
     UARBasicLightEstimate();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetAmbientIntensityLumens() const;
     

@@ -8,5 +8,6 @@ class MOVIESCENECAPTURE_API UMovieSceneImageCaptureProtocolBase : public UMovieS
     GENERATED_BODY()
 public:
     UMovieSceneImageCaptureProtocolBase();
+
 };
 

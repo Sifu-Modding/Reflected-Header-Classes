@@ -50,6 +50,7 @@ private:
     
 public:
     UMoviePipeline();
+
     UFUNCTION(BlueprintCallable)
     void Shutdown(bool bError);
     

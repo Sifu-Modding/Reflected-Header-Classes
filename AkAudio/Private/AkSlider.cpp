@@ -1,5 +1,14 @@
 #include "AkSlider.h"
 
+UAkSlider::UAkSlider() {
+    this->Value = 0.00f;
+    this->Orientation = Orient_Horizontal;
+    this->IndentHandle = false;
+    this->Locked = false;
+    this->StepSize = 0.01f;
+    this->IsFocusable = true;
+}
+
 void UAkSlider::SetValue(float InValue) {
 }
 
@@ -36,12 +45,4 @@ FGuid UAkSlider::GetAkSliderItemId() const {
     return FGuid{};
 }
 
-UAkSlider::UAkSlider() {
-    this->Value = 0.00f;
-    this->Orientation = Orient_Horizontal;
-    this->IndentHandle = false;
-    this->Locked = false;
-    this->StepSize = 0.01f;
-    this->IsFocusable = true;
-}
 

@@ -16,9 +16,10 @@ protected:
     FARPlaneUpdatePayload ReplicatedPayload;
     
 public:
-    UARPlaneComponent();
+    UARPlaneComponent(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     static void SetPlaneComponentDebugMode(EPlaneComponentDebugMode NewDebugMode);
     

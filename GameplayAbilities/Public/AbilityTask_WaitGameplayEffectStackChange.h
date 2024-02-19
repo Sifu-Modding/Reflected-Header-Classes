@@ -19,6 +19,7 @@ public:
     FWaitGameplayEffectStackChangeDelegate InvalidHandle;
     
     UAbilityTask_WaitGameplayEffectStackChange();
+
     UFUNCTION(BlueprintCallable)
     static UAbilityTask_WaitGameplayEffectStackChange* WaitForGameplayEffectStackChange(UGameplayAbility* OwningAbility, FActiveGameplayEffectHandle Handle);
     

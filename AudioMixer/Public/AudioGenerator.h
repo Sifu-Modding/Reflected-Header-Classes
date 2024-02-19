@@ -8,5 +8,6 @@ class AUDIOMIXER_API UAudioGenerator : public UObject {
     GENERATED_BODY()
 public:
     UAudioGenerator();
+
 };
 

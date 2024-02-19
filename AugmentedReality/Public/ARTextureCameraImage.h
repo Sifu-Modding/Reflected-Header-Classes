@@ -8,5 +8,6 @@ class AUGMENTEDREALITY_API UARTextureCameraImage : public UARTexture {
     GENERATED_BODY()
 public:
     UARTextureCameraImage();
+
 };
 

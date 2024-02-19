@@ -11,5 +11,6 @@ public:
     FString StringValue;
     
     UBlackboardKeyType_String();
+
 };
 

@@ -19,6 +19,7 @@ public:
     FOnlineConnectionResult OnFailure;
     
     UConnectionCallbackProxy();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static UConnectionCallbackProxy* ConnectToService(UObject* WorldContextObject, APlayerController* PlayerController);
     

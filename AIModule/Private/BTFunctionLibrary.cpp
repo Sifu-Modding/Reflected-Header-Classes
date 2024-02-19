@@ -1,10 +1,7 @@
 #include "BTFunctionLibrary.h"
 
-class AActor;
-class UBTNode;
-class UBehaviorTreeComponent;
-class UBlackboardComponent;
-class UObject;
+UBTFunctionLibrary::UBTFunctionLibrary() {
+}
 
 void UBTFunctionLibrary::StopUsingExternalEvent(UBTNode* NodeOwner) {
 }
@@ -100,6 +97,4 @@ void UBTFunctionLibrary::ClearBlackboardValueAsVector(UBTNode* NodeOwner, const 
 void UBTFunctionLibrary::ClearBlackboardValue(UBTNode* NodeOwner, const FBlackboardKeySelector& Key) {
 }
 
-UBTFunctionLibrary::UBTFunctionLibrary() {
-}
 

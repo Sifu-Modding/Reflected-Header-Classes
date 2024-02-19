@@ -10,6 +10,7 @@ class AKAUDIO_API UAkWaapiJsonManager : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UAkWaapiJsonManager();
+
     UFUNCTION(BlueprintCallable)
     static FAKWaapiJsonObject SetStringField(const FAkWaapiFieldNames& FieldName, const FString& FieldValue, FAKWaapiJsonObject Target);
     

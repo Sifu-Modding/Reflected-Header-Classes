@@ -27,5 +27,6 @@ public:
     uint8 bNormalizeWaveTables: 1;
     
     UMonoWaveTableSynthPreset();
+
 };
 

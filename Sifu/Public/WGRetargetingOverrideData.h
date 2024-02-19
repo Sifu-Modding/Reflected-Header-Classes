@@ -19,7 +19,8 @@ public:
     TMap<FBoneReference, TEnumAsByte<EBoneTranslationRetargetingMode::Type>> m_BoneRetargetingOverrideMap;
     
     UWGRetargetingOverrideData();
-    
+
+
     // Fix for true pure virtual functions not being implemented
 };
 

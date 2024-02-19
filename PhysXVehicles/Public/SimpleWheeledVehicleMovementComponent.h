@@ -7,7 +7,8 @@ UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class PHYSXVEHICLES_API USimpleWheeledVehicleMovementComponent : public UWheeledVehicleMovementComponent {
     GENERATED_BODY()
 public:
-    USimpleWheeledVehicleMovementComponent();
+    USimpleWheeledVehicleMovementComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetSteerAngle(float SteerAngle, int32 WheelIndex);
     

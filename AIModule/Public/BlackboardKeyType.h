@@ -8,5 +8,6 @@ class AIMODULE_API UBlackboardKeyType : public UObject {
     GENERATED_BODY()
 public:
     UBlackboardKeyType();
+
 };
 

@@ -1,12 +1,11 @@
 #include "FieldSystemMetaDataIteration.h"
 
-class UFieldSystemMetaDataIteration;
+UFieldSystemMetaDataIteration::UFieldSystemMetaDataIteration(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->Iterations = 0;
+}
 
 UFieldSystemMetaDataIteration* UFieldSystemMetaDataIteration::SetMetaDataIteration(int32 NewIterations) {
     return NULL;
 }
 
-UFieldSystemMetaDataIteration::UFieldSystemMetaDataIteration() {
-    this->Iterations = 0;
-}
 

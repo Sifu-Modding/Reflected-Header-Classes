@@ -19,7 +19,8 @@ protected:
     AAIController* AIOwner;
     
 public:
-    UBrainComponent();
+    UBrainComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void StopLogic(const FString& Reason);
     
@@ -35,7 +36,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsPaused() const;
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

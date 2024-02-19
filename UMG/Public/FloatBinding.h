@@ -8,6 +8,7 @@ class UMG_API UFloatBinding : public UPropertyBinding {
     GENERATED_BODY()
 public:
     UFloatBinding();
+
     UFUNCTION(BlueprintCallable)
     float GetValue() const;
     

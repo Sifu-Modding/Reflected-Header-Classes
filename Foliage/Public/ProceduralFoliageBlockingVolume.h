@@ -12,6 +12,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AProceduralFoliageVolume* ProceduralFoliageVolume;
     
-    AProceduralFoliageBlockingVolume();
+    AProceduralFoliageBlockingVolume(const FObjectInitializer& ObjectInitializer);
+
 };
 

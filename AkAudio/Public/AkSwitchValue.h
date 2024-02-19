@@ -8,5 +8,6 @@ class AKAUDIO_API UAkSwitchValue : public UAkGroupValue {
     GENERATED_BODY()
 public:
     UAkSwitchValue();
+
 };
 

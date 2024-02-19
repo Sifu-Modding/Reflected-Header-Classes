@@ -5,3 +5,4 @@ UAnimSharingAdditiveInstance::UAnimSharingAdditiveInstance() {
     this->bStateBool = false;
 }
 
+

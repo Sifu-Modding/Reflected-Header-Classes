@@ -8,5 +8,6 @@ class GAMEPLAYTAGS_API UEditableGameplayTagQueryExpression : public UObject {
     GENERATED_BODY()
 public:
     UEditableGameplayTagQueryExpression();
+
 };
 

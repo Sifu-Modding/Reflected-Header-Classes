@@ -16,5 +16,6 @@ public:
     TMap<FString, UBasicOverlays*> LocaleToOverlaysMap;
     
     ULocalizedOverlays();
+
 };
 

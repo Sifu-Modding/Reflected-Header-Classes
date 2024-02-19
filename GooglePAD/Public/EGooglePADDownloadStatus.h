@@ -17,6 +17,5 @@ enum class EGooglePADDownloadStatus : uint8 {
     AssetPack_INFO_FAILED,
     AssetPack_REMOVAL_PENDING,
     AssetPack_REMOVAL_FAILED,
-    AssetPack_MAX UMETA(Hidden),
 };
 

@@ -19,5 +19,6 @@ public:
     uint8 bIsEnumNameValid: 1;
     
     UBlackboardKeyType_Enum();
+
 };
 

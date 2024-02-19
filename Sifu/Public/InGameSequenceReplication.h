@@ -18,9 +18,10 @@ protected:
     TArray<FInGameSequenceReplicationInfo> m_InGameSequenceReplicationInfo;
     
 public:
-    UInGameSequenceReplication();
+    UInGameSequenceReplication(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable)
     void OnRep_InGameSequenceReplicationInfo();

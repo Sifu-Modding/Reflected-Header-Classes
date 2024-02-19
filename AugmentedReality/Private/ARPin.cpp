@@ -1,8 +1,10 @@
 #include "ARPin.h"
 
-class UARTrackedGeometry;
-class USceneComponent;
-class UWorld;
+UARPin::UARPin() {
+    this->TrackedGeometry = NULL;
+    this->PinnedComponent = NULL;
+    this->TrackingState = EARTrackingState::Unknown;
+}
 
 EARTrackingState UARPin::GetTrackingState() const {
     return EARTrackingState::Unknown;
@@ -31,9 +33,4 @@ FName UARPin::GetDebugName() const {
 void UARPin::DebugDraw(UWorld* World, const FLinearColor& Color, float Scale, float PersistForSeconds) const {
 }
 
-UARPin::UARPin() {
-    this->TrackedGeometry = NULL;
-    this->PinnedComponent = NULL;
-    this->TrackingState = EARTrackingState::Unknown;
-}
 

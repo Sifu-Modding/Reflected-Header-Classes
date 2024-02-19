@@ -23,7 +23,8 @@ protected:
     TArray<UMeshComponent*> CookedForeignMeshComponents;
     
 public:
-    ULandscapeSplinesComponent();
+    ULandscapeSplinesComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     TArray<USplineMeshComponent*> GetSplineMeshComponents();
     

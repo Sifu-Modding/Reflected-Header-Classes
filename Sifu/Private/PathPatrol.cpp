@@ -1,8 +1,11 @@
 #include "PathPatrol.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=SceneComponent -FallbackName=SceneComponent
 
-APathPatrol::APathPatrol() {
+APathPatrol::APathPatrol(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("SceneComp"));
     this->m_patrolControlPoints.AddDefaulted(1);
     this->m_ePatrolType = EPatrolType::Loop;
     this->m_lookAtTarget = NULL;
 }
+
 

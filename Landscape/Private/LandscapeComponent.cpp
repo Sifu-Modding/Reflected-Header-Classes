@@ -1,22 +1,12 @@
 #include "LandscapeComponent.h"
 #include "LandscapeLODStreamingProxy.h"
 
-class ULandscapeLayerInfoObject;
-class UMaterialInstanceDynamic;
-
-UMaterialInstanceDynamic* ULandscapeComponent::GetMaterialInstanceDynamic(int32 InIndex) const {
-    return NULL;
-}
-
-float ULandscapeComponent::EditorGetPaintLayerWeightByNameAtLocation(const FVector& InLocation, const FName InPaintLayerName) {
-    return 0.0f;
-}
-
-float ULandscapeComponent::EditorGetPaintLayerWeightAtLocation(const FVector& InLocation, ULandscapeLayerInfoObject* PaintLayer) {
-    return 0.0f;
-}
-
-ULandscapeComponent::ULandscapeComponent() {
+ULandscapeComponent::ULandscapeComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bBoundsChangeTriggersStreamingDataRebuild = true;
+    this->Mobility = EComponentMobility::Static;
+    this->bAllowCullDistanceVolume = false;
+    this->bUseAsOccluder = true;
+    this->AlwaysLoadOnServer = false;
     this->SectionBaseX = 0;
     this->SectionBaseY = 0;
     this->ComponentSizeQuads = 0;
@@ -41,4 +31,17 @@ ULandscapeComponent::ULandscapeComponent() {
     this->MobileBlendableLayerMask = 0;
     this->MobileMaterialInterface = NULL;
 }
+
+UMaterialInstanceDynamic* ULandscapeComponent::GetMaterialInstanceDynamic(int32 InIndex) const {
+    return NULL;
+}
+
+float ULandscapeComponent::EditorGetPaintLayerWeightByNameAtLocation(const FVector& InLocation, const FName InPaintLayerName) {
+    return 0.0f;
+}
+
+float ULandscapeComponent::EditorGetPaintLayerWeightAtLocation(const FVector& InLocation, ULandscapeLayerInfoObject* PaintLayer) {
+    return 0.0f;
+}
+
 

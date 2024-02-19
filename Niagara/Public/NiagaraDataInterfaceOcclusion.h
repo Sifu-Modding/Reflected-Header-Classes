@@ -8,5 +8,6 @@ class NIAGARA_API UNiagaraDataInterfaceOcclusion : public UNiagaraDataInterface 
     GENERATED_BODY()
 public:
     UNiagaraDataInterfaceOcclusion();
+
 };
 

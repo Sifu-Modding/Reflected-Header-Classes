@@ -1,10 +1,11 @@
 #include "AbilityTask_MoveToLocation.h"
 #include "Net/UnrealNetwork.h"
 
-class UAbilityTask_MoveToLocation;
-class UCurveFloat;
-class UCurveVector;
-class UGameplayAbility;
+UAbilityTask_MoveToLocation::UAbilityTask_MoveToLocation() {
+    this->DurationOfMovement = 0.00f;
+    this->LerpCurve = NULL;
+    this->LerpCurveVector = NULL;
+}
 
 UAbilityTask_MoveToLocation* UAbilityTask_MoveToLocation::MoveToLocation(UGameplayAbility* OwningAbility, FName TaskInstanceName, FVector Location, float Duration, UCurveFloat* OptionalInterpolationCurve, UCurveVector* OptionalVectorInterpolationCurve) {
     return NULL;
@@ -20,9 +21,4 @@ void UAbilityTask_MoveToLocation::GetLifetimeReplicatedProps(TArray<FLifetimePro
     DOREPLIFETIME(UAbilityTask_MoveToLocation, LerpCurveVector);
 }
 
-UAbilityTask_MoveToLocation::UAbilityTask_MoveToLocation() {
-    this->DurationOfMovement = 0.00f;
-    this->LerpCurve = NULL;
-    this->LerpCurveVector = NULL;
-}
 

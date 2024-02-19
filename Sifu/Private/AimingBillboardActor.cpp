@@ -1,7 +1,13 @@
 #include "AimingBillboardActor.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BoxComponent -FallbackName=BoxComponent
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=SceneComponent -FallbackName=SceneComponent
 
-class AActor;
+AAimingBillboardActor::AAimingBillboardActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("rootSceneComponent"));
+    this->m_BoxComponent = CreateDefaultSubobject<UBoxComponent>(TEXT("BoxComponent"));
+    this->m_bDebug = false;
+    this->m_BoxComponent->SetupAttachment(RootComponent);
+}
 
 float AAimingBillboardActor::BPF_GetScore() const {
     return 0.0f;
@@ -19,8 +25,4 @@ float AAimingBillboardActor::BPE_ComputeScore_Implementation(FVector _v3DPointTo
     return 0.0f;
 }
 
-AAimingBillboardActor::AAimingBillboardActor() {
-    this->m_BoxComponent = CreateDefaultSubobject<UBoxComponent>(TEXT("BoxComponent"));
-    this->m_bDebug = false;
-}
 

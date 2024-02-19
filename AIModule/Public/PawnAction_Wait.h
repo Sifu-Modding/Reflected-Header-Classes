@@ -11,5 +11,6 @@ public:
     float TimeToWait;
     
     UPawnAction_Wait();
+
 };
 

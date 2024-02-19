@@ -1,5 +1,8 @@
 #include "MagicLeapARPinFunctionLibrary.h"
 
+UMagicLeapARPinFunctionLibrary::UMagicLeapARPinFunctionLibrary() {
+}
+
 void UMagicLeapARPinFunctionLibrary::UnBindToOnMagicLeapContentBindingFoundDelegate(const FMagicLeapContentBindingFoundDelegate& Delegate) {
 }
 
@@ -79,6 +82,4 @@ FString UMagicLeapARPinFunctionLibrary::ARPinIdToString(const FGuid& ARPinId) {
     return TEXT("");
 }
 
-UMagicLeapARPinFunctionLibrary::UMagicLeapARPinFunctionLibrary() {
-}
 

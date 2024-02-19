@@ -10,6 +10,7 @@ class ONLINESUBSYSTEMUTILS_API ULeaderboardBlueprintLibrary : public UBlueprintF
     GENERATED_BODY()
 public:
     ULeaderboardBlueprintLibrary();
+
     UFUNCTION(BlueprintCallable)
     static bool WriteLeaderboardInteger(APlayerController* PlayerController, FName StatName, int32 StatValue);
     

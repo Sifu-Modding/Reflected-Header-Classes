@@ -12,3 +12,4 @@ ULandscapeSplineControlPoint::ULandscapeSplineControlPoint() {
     this->LocalMeshComponent = NULL;
 }
 
+

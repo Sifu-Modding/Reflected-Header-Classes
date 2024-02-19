@@ -45,7 +45,8 @@ private:
     UPrimitiveComponent* DisplayComponent;
     
 public:
-    UMotionControllerComponent();
+    UMotionControllerComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetTrackingSource(const EControllerHand NewSource);
     

@@ -1,5 +1,6 @@
 #include "WuguanPerfTestingLocations.h"
 
-AWuguanPerfTestingLocations::AWuguanPerfTestingLocations() {
+AWuguanPerfTestingLocations::AWuguanPerfTestingLocations(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

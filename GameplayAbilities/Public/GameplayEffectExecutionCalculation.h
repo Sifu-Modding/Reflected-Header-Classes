@@ -15,6 +15,7 @@ protected:
     
 public:
     UGameplayEffectExecutionCalculation();
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void Execute(const FGameplayEffectCustomExecutionParameters& ExecutionParams, FGameplayEffectCustomExecutionOutput& OutExecutionOutput) const;
     

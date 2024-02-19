@@ -14,7 +14,8 @@ public:
     UPrimitiveComponent* Component;
     
     UGizmoComponentHitTarget();
-    
+
+
     // Fix for true pure virtual functions not being implemented
     UFUNCTION()
     void UpdateHoverState(bool bHovering) const override PURE_VIRTUAL(UpdateHoverState,);

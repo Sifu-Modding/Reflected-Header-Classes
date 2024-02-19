@@ -8,5 +8,6 @@ class GAMEPLAYABILITIES_API UGameplayAbilityBlueprint : public UBlueprint {
     GENERATED_BODY()
 public:
     UGameplayAbilityBlueprint();
+
 };
 

@@ -13,5 +13,6 @@ public:
     UVolumeTexture* Texture;
     
     UNiagaraDataInterfaceVolumeTexture();
+
 };
 

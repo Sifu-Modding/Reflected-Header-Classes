@@ -1,9 +1,12 @@
 #include "TemplateSequenceActor.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=SceneComponent -FallbackName=SceneComponent
 #include "Net/UnrealNetwork.h"
 #include "TemplateSequencePlayer.h"
 
-class AActor;
-class UTemplateSequence;
+ATemplateSequenceActor::ATemplateSequenceActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("SceneComp"));
+    this->SequencePlayer = CreateDefaultSubobject<UTemplateSequencePlayer>(TEXT("AnimationPlayer"));
+}
 
 void ATemplateSequenceActor::SetSequence(UTemplateSequence* InSequence) {
 }
@@ -29,7 +32,4 @@ void ATemplateSequenceActor::GetLifetimeReplicatedProps(TArray<FLifetimeProperty
     DOREPLIFETIME(ATemplateSequenceActor, SequencePlayer);
 }
 
-ATemplateSequenceActor::ATemplateSequenceActor() {
-    this->SequencePlayer = CreateDefaultSubobject<UTemplateSequencePlayer>(TEXT("AnimationPlayer"));
-}
 

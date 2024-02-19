@@ -5,7 +5,7 @@
 #include "AutoCompleteCommand.h"
 #include "ConsoleSettings.generated.h"
 
-UCLASS(Blueprintable, Config=Engine, DefaultConfig, Config=Input)
+UCLASS(Blueprintable, DefaultConfig, Config=Input)
 class ENGINESETTINGS_API UConsoleSettings : public UObject {
     GENERATED_BODY()
 public:
@@ -43,5 +43,6 @@ public:
     FColor AutoCompleteFadedColor;
     
     UConsoleSettings();
+
 };
 

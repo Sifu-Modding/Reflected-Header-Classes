@@ -11,6 +11,5 @@ enum class EDatasmithImportLightmapMax : uint8 {
     LIGHTMAP_1024,
     LIGHTMAP_2048,
     LIGHTMAP_4096,
-    LIGHTMAP_MAX UMETA(Hidden),
 };
 

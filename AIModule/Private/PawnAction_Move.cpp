@@ -1,6 +1,8 @@
 #include "PawnAction_Move.h"
 
 UPawnAction_Move::UPawnAction_Move() {
+    this->bShouldPauseMovement = true;
+    this->bAlwaysNotifyOnFinished = true;
     this->GoalActor = NULL;
     this->AcceptableRadius = 30.00f;
     this->FilterClass = NULL;
@@ -12,4 +14,5 @@ UPawnAction_Move::UPawnAction_Move() {
     this->bUpdatePathToGoal = true;
     this->bAbortChildActionOnPathChange = false;
 }
+
 

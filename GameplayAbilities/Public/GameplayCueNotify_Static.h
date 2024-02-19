@@ -22,6 +22,7 @@ public:
     bool IsOverride;
     
     UGameplayCueNotify_Static();
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent, BlueprintPure)
     bool WhileActive(AActor* MyTarget, const FGameplayCueParameters& Parameters) const;
     

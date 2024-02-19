@@ -3,7 +3,6 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=FloatRange -FallbackName=FloatRange
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=AnimContainer -FallbackName=AnimContainer
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCDelegate -FallbackName=SCDelegate
-//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCDelegate -FallbackName=SCDelegate
 #include "AIComponent.h"
 #include "AIDefenseTargetAttackInfos.h"
 #include "AIPhaseNodeHardLink.h"
@@ -21,6 +20,7 @@
 #include "HitDescription.h"
 #include "HitRequest.h"
 #include "OnCombatRoleChangedDynamicDelegate.h"
+#include "OutfitData.h"
 #include "PhasesTransitionObjectCache.h"
 #include "Templates/SubclassOf.h"
 #include "TurnAnimationArray.h"
@@ -156,6 +156,9 @@ private:
     bool m_bCanBeAlerted;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool m_bChangementOnComboAllowed;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FVariableWeightEnumHandler> m_DisabledVariableWeightsOnSpawnerIdle;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, Transient, meta=(AllowPrivateAccess=true))
@@ -176,14 +179,17 @@ private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FFloatRange m_fAbandoningPlayRateRange;
     
-    UPROPERTY(EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
-    TWeakObjectPtr<UAIPhaseScenario> m_PhaseScenario;
-    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    UAIPhaseScenario* m_PhaseScenario;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_CurrentPhaseNodeIndex, meta=(AllowPrivateAccess=true))
     int32 m_iCurrentPhaseNodeIndex;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FPhasesTransitionObjectCache m_PhaseTransitionObjects;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    int32 m_iLastPhaseNodeIndex;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UAIPhaseTransition*> m_CurrentPhaseTransitions;
@@ -192,12 +198,16 @@ private:
     TArray<FCarriedPropDataRow> m_carriedPropsInfoRep;
     
 public:
-    UAIFightingComponent();
+    UAIFightingComponent(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 private:
     UFUNCTION(BlueprintCallable)
     void OnTargetHitDuringAttack(const FHitDescription& _hitDescription);
+    
+    UFUNCTION(BlueprintCallable)
+    void OnRep_CurrentPhaseNodeIndex();
     
     UFUNCTION(BlueprintCallable)
     void OnRep_CarriedProps();
@@ -261,6 +271,9 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void BPF_SwitchToAbandoning(const bool _bFromDialog, const bool _bShouldStayInAbandonStateForever);
+    
+    UFUNCTION(BlueprintCallable)
+    void BPF_SwapOutfitForAI(FOutfitData _outfitData);
     
     UFUNCTION(BlueprintCallable)
     void BPF_SpawnCarriedProps();

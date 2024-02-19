@@ -5,3 +5,4 @@ UNiagaraSimulationStageBase::UNiagaraSimulationStageBase() {
     this->bEnabled = true;
 }
 
+

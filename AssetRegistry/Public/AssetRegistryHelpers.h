@@ -15,6 +15,7 @@ class UAssetRegistryHelpers : public UObject {
     GENERATED_BODY()
 public:
     UAssetRegistryHelpers();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static FSoftObjectPath ToSoftObjectPath(const FAssetData& InAssetData);
     

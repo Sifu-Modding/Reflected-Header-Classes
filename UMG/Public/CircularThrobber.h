@@ -31,6 +31,7 @@ private:
     
 public:
     UCircularThrobber();
+
     UFUNCTION(BlueprintCallable)
     void SetRadius(float InRadius);
     

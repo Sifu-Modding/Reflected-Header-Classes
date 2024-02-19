@@ -18,6 +18,7 @@ public:
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FActorFractureSignature OnActorFracture;
     
-    ADestructibleActor();
+    ADestructibleActor(const FObjectInitializer& ObjectInitializer);
+
 };
 

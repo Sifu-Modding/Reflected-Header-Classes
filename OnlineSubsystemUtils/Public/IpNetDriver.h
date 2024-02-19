@@ -3,7 +3,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=NetDriver -FallbackName=NetDriver
 #include "IpNetDriver.generated.h"
 
-UCLASS(Blueprintable, NonTransient)
+UCLASS(Blueprintable, NonTransient, Config=Engine)
 class ONLINESUBSYSTEMUTILS_API UIpNetDriver : public UNetDriver {
     GENERATED_BODY()
 public:
@@ -40,5 +40,6 @@ private:
     
 public:
     UIpNetDriver();
+
 };
 

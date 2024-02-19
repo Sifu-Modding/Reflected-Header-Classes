@@ -9,7 +9,8 @@ class INTERACTIVETOOLSFRAMEWORK_API UGizmoBaseFloatParameterSource : public UObj
     GENERATED_BODY()
 public:
     UGizmoBaseFloatParameterSource();
-    
+
+
     // Fix for true pure virtual functions not being implemented
     UFUNCTION()
     void SetParameter(float NewValue) override PURE_VIRTUAL(SetParameter,);

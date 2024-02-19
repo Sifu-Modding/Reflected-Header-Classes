@@ -11,3 +11,4 @@ UMovieScene3DAttachSection::UMovieScene3DAttachSection() {
     this->DetachmentScaleRule = EDetachmentRule::KeepRelative;
 }
 
+

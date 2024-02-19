@@ -13,7 +13,7 @@ struct FMovieSceneRootEvaluationTemplateInstance {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<UMovieSceneSequence> WeakRootSequence;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

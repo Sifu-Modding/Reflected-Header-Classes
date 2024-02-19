@@ -1,5 +1,18 @@
 #include "MovieSceneSection.h"
 
+UMovieSceneSection::UMovieSceneSection() {
+    this->RowIndex = 0;
+    this->OverlapPriority = 0;
+    this->bIsActive = true;
+    this->bIsLocked = false;
+    this->StartTime = 0.00f;
+    this->EndTime = 0.00f;
+    this->PrerollTime = 0.00f;
+    this->PostrollTime = 0.00f;
+    this->bIsInfinite = false;
+    this->bSupportsInfiniteRange = false;
+}
+
 void UMovieSceneSection::SetRowIndex(int32 NewRowIndex) {
 }
 
@@ -56,16 +69,4 @@ FOptionalMovieSceneBlendType UMovieSceneSection::GetBlendType() const {
     return FOptionalMovieSceneBlendType{};
 }
 
-UMovieSceneSection::UMovieSceneSection() {
-    this->RowIndex = 0;
-    this->OverlapPriority = 0;
-    this->bIsActive = true;
-    this->bIsLocked = false;
-    this->StartTime = 0.00f;
-    this->EndTime = 0.00f;
-    this->PrerollTime = 0.00f;
-    this->PostrollTime = 0.00f;
-    this->bIsInfinite = false;
-    this->bSupportsInfiniteRange = false;
-}
 

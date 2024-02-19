@@ -8,5 +8,6 @@ class SCCORE_API USCDelegate : public UObject {
     GENERATED_BODY()
 public:
     USCDelegate();
+
 };
 

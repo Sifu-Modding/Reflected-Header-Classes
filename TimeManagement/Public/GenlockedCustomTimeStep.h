@@ -8,5 +8,6 @@ class TIMEMANAGEMENT_API UGenlockedCustomTimeStep : public UFixedFrameRateCustom
     GENERATED_BODY()
 public:
     UGenlockedCustomTimeStep();
+
 };
 

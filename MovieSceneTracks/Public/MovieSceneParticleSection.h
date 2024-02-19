@@ -12,5 +12,6 @@ public:
     FMovieSceneParticleChannel ParticleKeys;
     
     UMovieSceneParticleSection();
+
 };
 

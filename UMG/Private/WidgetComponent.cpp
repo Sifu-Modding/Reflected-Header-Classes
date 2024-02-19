@@ -1,9 +1,34 @@
 #include "WidgetComponent.h"
 
-class ULocalPlayer;
-class UMaterialInstanceDynamic;
-class UTextureRenderTarget2D;
-class UUserWidget;
+UWidgetComponent::UWidgetComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->Space = EWidgetSpace::World;
+    this->TimingPolicy = EWidgetTimingPolicy::RealTime;
+    this->WidgetClass = NULL;
+    this->bManuallyRedraw = false;
+    this->bRedrawRequested = true;
+    this->RedrawTime = 0.00f;
+    this->bDrawAtDesiredSize = false;
+    this->bReceiveHardwareInput = false;
+    this->bWindowFocusable = true;
+    this->WindowVisibility = EWindowVisibility::SelfHitTestInvisible;
+    this->bApplyGammaCorrection = false;
+    this->OwnerPlayer = NULL;
+    this->OpacityFromTexture = 1.00f;
+    this->BlendMode = EWidgetBlendMode::Masked;
+    this->bIsTwoSided = false;
+    this->TickWhenOffscreen = false;
+    this->BodySetup = NULL;
+    this->RenderTarget = NULL;
+    this->MaterialInstance = NULL;
+    this->bAddedToScreen = false;
+    this->bEditTimeUsable = false;
+    this->SharedLayerName = TEXT("WidgetComponentScreenLayer");
+    this->LayerZOrder = -100;
+    this->GeometryMode = EWidgetGeometryMode::Plane;
+    this->CylinderArcAngle = 180.00f;
+    this->TickMode = ETickMode::Enabled;
+    this->Widget = NULL;
+}
 
 void UWidgetComponent::SetWindowVisibility(EWindowVisibility InVisibility) {
 }
@@ -135,33 +160,4 @@ FVector2D UWidgetComponent::GetCurrentDrawSize() const {
     return FVector2D{};
 }
 
-UWidgetComponent::UWidgetComponent() {
-    this->Space = EWidgetSpace::World;
-    this->TimingPolicy = EWidgetTimingPolicy::RealTime;
-    this->WidgetClass = NULL;
-    this->bManuallyRedraw = false;
-    this->bRedrawRequested = true;
-    this->RedrawTime = 0.00f;
-    this->bDrawAtDesiredSize = false;
-    this->bReceiveHardwareInput = false;
-    this->bWindowFocusable = true;
-    this->WindowVisibility = EWindowVisibility::SelfHitTestInvisible;
-    this->bApplyGammaCorrection = false;
-    this->OwnerPlayer = NULL;
-    this->OpacityFromTexture = 1.00f;
-    this->BlendMode = EWidgetBlendMode::Masked;
-    this->bIsTwoSided = false;
-    this->TickWhenOffscreen = false;
-    this->BodySetup = NULL;
-    this->RenderTarget = NULL;
-    this->MaterialInstance = NULL;
-    this->bAddedToScreen = false;
-    this->bEditTimeUsable = false;
-    this->SharedLayerName = TEXT("WidgetComponentScreenLayer");
-    this->LayerZOrder = -100;
-    this->GeometryMode = EWidgetGeometryMode::Plane;
-    this->CylinderArcAngle = 180.00f;
-    this->TickMode = ETickMode::Enabled;
-    this->Widget = NULL;
-}
 

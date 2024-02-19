@@ -26,6 +26,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bOnlyAllowFrontFacingHits;
     
-    UGizmoCircleComponent();
+    UGizmoCircleComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

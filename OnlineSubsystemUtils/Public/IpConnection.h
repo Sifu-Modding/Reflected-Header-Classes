@@ -3,7 +3,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=NetConnection -FallbackName=NetConnection
 #include "IpConnection.generated.h"
 
-UCLASS(Blueprintable, NonTransient)
+UCLASS(Blueprintable, NonTransient, Config=Engine)
 class ONLINESUBSYSTEMUTILS_API UIpConnection : public UNetConnection {
     GENERATED_BODY()
 public:
@@ -13,5 +13,6 @@ private:
     
 public:
     UIpConnection();
+
 };
 

@@ -1,12 +1,11 @@
 #include "UniformScalar.h"
 
-class UUniformScalar;
+UUniformScalar::UUniformScalar(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->Magnitude = 1.00f;
+}
 
 UUniformScalar* UUniformScalar::SetUniformScalar(float NewMagnitude) {
     return NULL;
 }
 
-UUniformScalar::UUniformScalar() {
-    this->Magnitude = 1.00f;
-}
 

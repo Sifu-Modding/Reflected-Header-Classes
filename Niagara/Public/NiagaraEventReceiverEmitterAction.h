@@ -8,5 +8,6 @@ class UNiagaraEventReceiverEmitterAction : public UObject {
     GENERATED_BODY()
 public:
     UNiagaraEventReceiverEmitterAction();
+
 };
 

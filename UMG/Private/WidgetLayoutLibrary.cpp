@@ -1,21 +1,7 @@
 #include "WidgetLayoutLibrary.h"
 
-class APlayerController;
-class UBorderSlot;
-class UCanvasPanelSlot;
-class UGridSlot;
-class UHorizontalBoxSlot;
-class UObject;
-class UOverlaySlot;
-class USafeZoneSlot;
-class UScaleBoxSlot;
-class UScrollBoxSlot;
-class USizeBoxSlot;
-class UUniformGridSlot;
-class UVerticalBoxSlot;
-class UWidget;
-class UWidgetSwitcherSlot;
-class UWrapBoxSlot;
+UWidgetLayoutLibrary::UWidgetLayoutLibrary() {
+}
 
 UWrapBoxSlot* UWidgetLayoutLibrary::SlotAsWrapBoxSlot(UWidget* Widget) {
     return NULL;
@@ -104,6 +90,4 @@ FVector2D UWidgetLayoutLibrary::GetMousePositionOnPlatform() {
     return FVector2D{};
 }
 
-UWidgetLayoutLibrary::UWidgetLayoutLibrary() {
-}
 

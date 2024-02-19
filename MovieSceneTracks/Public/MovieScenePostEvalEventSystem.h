@@ -8,5 +8,6 @@ class MOVIESCENETRACKS_API UMovieScenePostEvalEventSystem : public UMovieSceneEv
     GENERATED_BODY()
 public:
     UMovieScenePostEvalEventSystem();
+
 };
 

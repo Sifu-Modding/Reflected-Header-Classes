@@ -15,7 +15,8 @@ public:
     TScriptInterface<IToolContextTransactionProvider> TransactionManager;
     
     UGizmoTransformChangeStateTarget();
-    
+
+
     // Fix for true pure virtual functions not being implemented
     UFUNCTION()
     void EndUpdate() override PURE_VIRTUAL(EndUpdate,);

@@ -117,5 +117,6 @@ public:
     FNiagaraVariableAttributeBinding RendererVisibilityTagBinding;
     
     UNiagaraMeshRendererProperties();
+
 };
 

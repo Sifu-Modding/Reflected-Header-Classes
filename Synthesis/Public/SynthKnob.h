@@ -1,7 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=UMG -ObjectName=Widget -FallbackName=Widget
-//CROSS-MODULE INCLUDE V2: -ModuleName=UMG -ObjectName=Widget -FallbackName=Widget
 #include "OnControllerCaptureBeginEventDelegate.h"
 #include "OnControllerCaptureEndEventDelegate.h"
 #include "OnFloatValueChangedEventDelegate.h"
@@ -63,6 +62,7 @@ public:
     FOnFloatValueChangedEvent OnValueChanged;
     
     USynthKnob();
+
     UFUNCTION(BlueprintCallable)
     void SetValue(float InValue);
     

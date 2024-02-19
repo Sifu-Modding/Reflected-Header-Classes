@@ -8,5 +8,6 @@ class INTERACTIVETOOLSFRAMEWORK_API UBrushStampIndicatorBuilder : public UIntera
     GENERATED_BODY()
 public:
     UBrushStampIndicatorBuilder();
+
 };
 

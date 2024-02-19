@@ -45,7 +45,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UMRMeshComponent* MRMesh;
     
-    UMockDataMeshTrackerComponent();
+    UMockDataMeshTrackerComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void DisconnectMRMesh(UMRMeshComponent* InMRMeshPtr);
     

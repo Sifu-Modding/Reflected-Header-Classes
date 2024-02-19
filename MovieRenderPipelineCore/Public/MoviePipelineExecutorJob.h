@@ -47,6 +47,7 @@ private:
     
 public:
     UMoviePipelineExecutorJob();
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void SetStatusProgress(const float InProgress);
     

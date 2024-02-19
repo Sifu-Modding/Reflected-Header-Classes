@@ -6,6 +6,5 @@ UENUM(BlueprintType)
 enum ELandscapeBlendMode {
     LSBM_AdditiveBlend,
     LSBM_AlphaBlend,
-    LSBM_MAX UMETA(Hidden),
 };
 

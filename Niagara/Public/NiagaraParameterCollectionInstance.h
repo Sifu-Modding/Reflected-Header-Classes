@@ -28,6 +28,7 @@ private:
     
 public:
     UNiagaraParameterCollectionInstance();
+
     UFUNCTION(BlueprintCallable)
     void SetVectorParameter(const FString& InVariableName, FVector InValue);
     

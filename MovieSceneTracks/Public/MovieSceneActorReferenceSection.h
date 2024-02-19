@@ -10,7 +10,7 @@ class UMovieSceneActorReferenceSection : public UMovieSceneSection {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     FMovieSceneActorReferenceData ActorReferenceData;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -21,5 +21,6 @@ private:
     
 public:
     UMovieSceneActorReferenceSection();
+
 };
 

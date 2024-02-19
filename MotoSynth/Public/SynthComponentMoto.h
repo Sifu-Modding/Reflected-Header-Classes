@@ -16,7 +16,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float RPM;
     
-    USynthComponentMoto();
+    USynthComponentMoto(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetSettings(const FMotoSynthRuntimeSettings& InSettings);
     

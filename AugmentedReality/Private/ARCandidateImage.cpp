@@ -1,6 +1,11 @@
 #include "ARCandidateImage.h"
 
-class UTexture2D;
+UARCandidateImage::UARCandidateImage() {
+    this->CandidateTexture = NULL;
+    this->Width = 0.00f;
+    this->Height = 0.00f;
+    this->Orientation = EARCandidateImageOrientation::Landscape;
+}
 
 float UARCandidateImage::GetPhysicalWidth() const {
     return 0.0f;
@@ -22,10 +27,4 @@ UTexture2D* UARCandidateImage::GetCandidateTexture() const {
     return NULL;
 }
 
-UARCandidateImage::UARCandidateImage() {
-    this->CandidateTexture = NULL;
-    this->Width = 0.00f;
-    this->Height = 0.00f;
-    this->Orientation = EARCandidateImageOrientation::Landscape;
-}
 

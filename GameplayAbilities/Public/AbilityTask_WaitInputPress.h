@@ -15,6 +15,7 @@ public:
     FInputPressDelegate OnPress;
     
     UAbilityTask_WaitInputPress();
+
     UFUNCTION(BlueprintCallable)
     static UAbilityTask_WaitInputPress* WaitInputPress(UGameplayAbility* OwningAbility, bool bTestAlreadyPressed);
     

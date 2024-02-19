@@ -1,10 +1,15 @@
 #include "AbilityTask_ApplyRootMotionJumpForce.h"
 #include "Net/UnrealNetwork.h"
 
-class UAbilityTask_ApplyRootMotionJumpForce;
-class UCurveFloat;
-class UCurveVector;
-class UGameplayAbility;
+UAbilityTask_ApplyRootMotionJumpForce::UAbilityTask_ApplyRootMotionJumpForce() {
+    this->Distance = 0.00f;
+    this->Height = 0.00f;
+    this->Duration = 0.00f;
+    this->MinimumLandedTriggerTime = 0.00f;
+    this->bFinishOnLanded = false;
+    this->PathOffsetCurve = NULL;
+    this->TimeMappingCurve = NULL;
+}
 
 void UAbilityTask_ApplyRootMotionJumpForce::OnLandedCallback(const FHitResult& Hit) {
 }
@@ -29,13 +34,4 @@ void UAbilityTask_ApplyRootMotionJumpForce::GetLifetimeReplicatedProps(TArray<FL
     DOREPLIFETIME(UAbilityTask_ApplyRootMotionJumpForce, TimeMappingCurve);
 }
 
-UAbilityTask_ApplyRootMotionJumpForce::UAbilityTask_ApplyRootMotionJumpForce() {
-    this->Distance = 0.00f;
-    this->Height = 0.00f;
-    this->Duration = 0.00f;
-    this->MinimumLandedTriggerTime = 0.00f;
-    this->bFinishOnLanded = false;
-    this->PathOffsetCurve = NULL;
-    this->TimeMappingCurve = NULL;
-}
 

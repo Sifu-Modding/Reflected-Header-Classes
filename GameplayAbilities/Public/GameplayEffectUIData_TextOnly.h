@@ -11,5 +11,6 @@ public:
     FText Description;
     
     UGameplayEffectUIData_TextOnly();
+
 };
 

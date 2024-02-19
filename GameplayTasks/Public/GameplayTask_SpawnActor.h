@@ -29,6 +29,7 @@ protected:
     
 public:
     UGameplayTask_SpawnActor();
+
     UFUNCTION(BlueprintCallable)
     static UGameplayTask_SpawnActor* SpawnActor(TScriptInterface<IGameplayTaskOwnerInterface> TaskOwner, FVector SpawnLocation, FRotator SpawnRotation, TSubclassOf<AActor> Class, bool bSpawnOnlyOnAuthority);
     

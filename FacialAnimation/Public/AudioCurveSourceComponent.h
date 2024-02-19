@@ -14,8 +14,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float CurveSyncOffset;
     
-    UAudioCurveSourceComponent();
-    
+    UAudioCurveSourceComponent(const FObjectInitializer& ObjectInitializer);
+
+
     // Fix for true pure virtual functions not being implemented
 };
 

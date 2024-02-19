@@ -3,3 +3,4 @@
 UMovieSceneNiagaraColorParameterTrack::UMovieSceneNiagaraColorParameterTrack() {
 }
 
+

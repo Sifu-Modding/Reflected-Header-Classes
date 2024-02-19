@@ -34,5 +34,6 @@ public:
     TArray<FNiagaraComponentPropertyBinding> PropertyBindings;
     
     UNiagaraComponentRendererProperties();
+
 };
 

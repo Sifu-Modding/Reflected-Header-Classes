@@ -8,6 +8,6 @@ enum class EInputCaptureSide : uint8 {
     Left,
     Right,
     Both,
-    Any = 0x63,
+    Any = 99,
 };
 

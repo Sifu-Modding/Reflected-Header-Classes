@@ -14,6 +14,7 @@ protected:
     
 public:
     UGameplayModMagnitudeCalculation();
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     float CalculateBaseMagnitude(const FGameplayEffectSpec& Spec) const;
     

@@ -12,6 +12,7 @@ public:
     FSubmixEffectStereoDelaySettings Settings;
     
     USubmixEffectStereoDelayPreset();
+
     UFUNCTION(BlueprintCallable)
     void SetSettings(const FSubmixEffectStereoDelaySettings& InSettings);
     

@@ -20,6 +20,7 @@ private:
     
 public:
     UTreeView();
+
     UFUNCTION(BlueprintCallable)
     void SetItemExpansion(UObject* Item, bool bExpandItem);
     

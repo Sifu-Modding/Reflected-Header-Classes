@@ -41,7 +41,8 @@ private:
     TArray<UBodySetup*> AsyncBodySetupQueue;
     
 public:
-    UProceduralMeshComponent();
+    UProceduralMeshComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void UpdateMeshSection_LinearColor(int32 SectionIndex, const TArray<FVector>& Vertices, const TArray<FVector>& Normals, const TArray<FVector2D>& UV0, const TArray<FVector2D>& UV1, const TArray<FVector2D>& UV2, const TArray<FVector2D>& UV3, const TArray<FLinearColor>& VertexColors, const TArray<FProcMeshTangent>& Tangents);
     
@@ -75,7 +76,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void AddCollisionConvexMesh(TArray<FVector> ConvexVerts);
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

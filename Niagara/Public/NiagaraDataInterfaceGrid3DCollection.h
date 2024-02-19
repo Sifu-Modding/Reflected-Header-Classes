@@ -22,6 +22,7 @@ public:
     ENiagaraGpuBufferFormat BufferFormat;
     
     UNiagaraDataInterfaceGrid3DCollection();
+
     UFUNCTION(BlueprintCallable)
     void GetTextureSize(const UNiagaraComponent* Component, int32& SizeX, int32& SizeY, int32& SizeZ);
     

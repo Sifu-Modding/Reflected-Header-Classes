@@ -24,5 +24,6 @@ public:
     uint8 bUseSelfAsObserved: 1;
     
     UBTDecorator_KeepInCone();
+
 };
 

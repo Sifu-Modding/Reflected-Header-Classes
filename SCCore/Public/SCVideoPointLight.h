@@ -7,6 +7,7 @@ UCLASS(Blueprintable)
 class SCCORE_API ASCVideoPointLight : public APointLight {
     GENERATED_BODY()
 public:
-    ASCVideoPointLight();
+    ASCVideoPointLight(const FObjectInitializer& ObjectInitializer);
+
 };
 

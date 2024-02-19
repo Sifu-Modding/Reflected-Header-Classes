@@ -8,5 +8,6 @@ class VARIANTMANAGERCONTENT_API UPropertyValueMaterial : public UPropertyValue {
     GENERATED_BODY()
 public:
     UPropertyValueMaterial();
+
 };
 

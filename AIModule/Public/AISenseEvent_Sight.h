@@ -12,5 +12,6 @@ public:
     FAISightEvent Event;
     
     UAISenseEvent_Sight();
+
 };
 

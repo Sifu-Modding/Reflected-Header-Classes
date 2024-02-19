@@ -1,6 +1,24 @@
 #include "ScrollBox.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=EWidgetClipping -FallbackName=EWidgetClipping
 
-class UWidget;
+UScrollBox::UScrollBox() {
+    this->bIsVariable = false;
+    this->Clipping = EWidgetClipping::ClipToBounds;
+    this->Style = NULL;
+    this->BarStyle = NULL;
+    this->Orientation = Orient_Vertical;
+    this->ScrollBarVisibility = ESlateVisibility::Visible;
+    this->ConsumeMouseWheel = EConsumeMouseWheel::WhenScrollingPossible;
+    this->AlwaysShowScrollbar = false;
+    this->AlwaysShowScrollbarTrack = false;
+    this->AllowOverscroll = true;
+    this->bAnimateWheelScrolling = false;
+    this->NavigationDestination = EDescendantScrollDestination::IntoView;
+    this->NavigationScrollPadding = 0.00f;
+    this->ScrollWhenFocusChanges = EScrollWhenFocusChanges::NoScroll;
+    this->bAllowRightClickDragScrolling = true;
+    this->WheelScrollMultiplier = 1.00f;
+}
 
 void UScrollBox::SetWheelScrollMultiplier(float NewWheelScrollMultiplier) {
 }
@@ -56,20 +74,4 @@ float UScrollBox::GetScrollOffset() const {
 void UScrollBox::EndInertialScrolling() {
 }
 
-UScrollBox::UScrollBox() {
-    this->Style = NULL;
-    this->BarStyle = NULL;
-    this->Orientation = Orient_Vertical;
-    this->ScrollBarVisibility = ESlateVisibility::Visible;
-    this->ConsumeMouseWheel = EConsumeMouseWheel::WhenScrollingPossible;
-    this->AlwaysShowScrollbar = false;
-    this->AlwaysShowScrollbarTrack = false;
-    this->AllowOverscroll = true;
-    this->bAnimateWheelScrolling = false;
-    this->NavigationDestination = EDescendantScrollDestination::IntoView;
-    this->NavigationScrollPadding = 0.00f;
-    this->ScrollWhenFocusChanges = EScrollWhenFocusChanges::NoScroll;
-    this->bAllowRightClickDragScrolling = true;
-    this->WheelScrollMultiplier = 1.00f;
-}
 

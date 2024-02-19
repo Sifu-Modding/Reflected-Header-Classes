@@ -8,6 +8,7 @@ class CLOTHINGSYSTEMRUNTIMENV_API UClothingSimulationInteractorNv : public UClot
     GENERATED_BODY()
 public:
     UClothingSimulationInteractorNv();
+
     UFUNCTION(BlueprintCallable)
     void SetAnimDriveDamperStiffness(float InStiffness);
     

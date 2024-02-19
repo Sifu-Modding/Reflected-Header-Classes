@@ -8,5 +8,6 @@ class SCCORE_API USCAISystem : public UAISystem {
     GENERATED_BODY()
 public:
     USCAISystem();
+
 };
 

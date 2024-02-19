@@ -5,7 +5,6 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=EOrientation -FallbackName=EOrientation
 //CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=SliderStyle -FallbackName=SliderStyle
 //CROSS-MODULE INCLUDE V2: -ModuleName=UMG -ObjectName=Widget -FallbackName=Widget
-//CROSS-MODULE INCLUDE V2: -ModuleName=UMG -ObjectName=Widget -FallbackName=Widget
 #include "AkOnFloatValueChangedEventDelegate.h"
 #include "AkPropertyToControl.h"
 #include "AkWwiseItemToControl.h"
@@ -13,7 +12,7 @@
 #include "OnPropertyDropDetectedDelegate.h"
 #include "AkSlider.generated.h"
 
-UCLASS(Blueprintable, Config=Engine, DefaultConfig, Config=Editor)
+UCLASS(Blueprintable, DefaultConfig, Config=Editor)
 class AKAUDIO_API UAkSlider : public UWidget {
     GENERATED_BODY()
 public:
@@ -63,6 +62,7 @@ public:
     FOnPropertyDropDetected OnPropertyDropped;
     
     UAkSlider();
+
     UFUNCTION(BlueprintCallable)
     void SetValue(float InValue);
     

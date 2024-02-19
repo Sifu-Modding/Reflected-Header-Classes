@@ -12,3 +12,4 @@ UPartyBeaconState::UPartyBeaconState() {
     this->bEnableRemovalRequests = false;
 }
 
+

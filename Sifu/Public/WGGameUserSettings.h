@@ -12,5 +12,6 @@ public:
     UDLSSMode DLSSQuality;
     
     UWGGameUserSettings();
+
 };
 

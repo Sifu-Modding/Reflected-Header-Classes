@@ -7,7 +7,7 @@
 
 class UAISense_Sight;
 
-UCLASS(Blueprintable, EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew, Config=Engine)
 class AIMODULE_API UAISenseConfig_Sight : public UAISenseConfig {
     GENERATED_BODY()
 public:
@@ -36,5 +36,6 @@ public:
     float NearClippingRadius;
     
     UAISenseConfig_Sight();
+
 };
 

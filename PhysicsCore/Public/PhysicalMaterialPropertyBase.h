@@ -8,5 +8,6 @@ class UDEPRECATED_PhysicalMaterialPropertyBase : public UObject {
     GENERATED_BODY()
 public:
     UDEPRECATED_PhysicalMaterialPropertyBase();
+
 };
 

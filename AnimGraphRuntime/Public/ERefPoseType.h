@@ -6,6 +6,5 @@ UENUM(BlueprintType)
 enum ERefPoseType {
     EIT_LocalSpace,
     EIT_Additive,
-    EIT_MAX UMETA(Hidden),
 };
 

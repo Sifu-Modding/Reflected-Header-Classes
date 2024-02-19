@@ -8,5 +8,6 @@ class NAVIGATIONSYSTEM_API UNavLinkTrivial : public UNavLinkDefinition {
     GENERATED_BODY()
 public:
     UNavLinkTrivial();
+
 };
 

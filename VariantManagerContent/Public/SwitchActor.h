@@ -17,7 +17,8 @@ private:
     int32 LastSelectedOption;
     
 public:
-    ASwitchActor();
+    ASwitchActor(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SelectOption(int32 OptionIndex);
     

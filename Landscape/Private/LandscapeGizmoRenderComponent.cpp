@@ -1,5 +1,8 @@
 #include "LandscapeGizmoRenderComponent.h"
 
-ULandscapeGizmoRenderComponent::ULandscapeGizmoRenderComponent() {
+ULandscapeGizmoRenderComponent::ULandscapeGizmoRenderComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bIsEditorOnly = true;
+    this->bHiddenInGame = true;
 }
+
 

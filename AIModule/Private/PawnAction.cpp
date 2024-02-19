@@ -1,8 +1,17 @@
 #include "PawnAction.h"
 #include "Templates/SubclassOf.h"
 
-class UObject;
-class UPawnAction;
+UPawnAction::UPawnAction() {
+    this->ChildAction = NULL;
+    this->ParentAction = NULL;
+    this->OwnerComponent = NULL;
+    this->Instigator = NULL;
+    this->BrainComp = NULL;
+    this->bAllowNewSameClassInstance = false;
+    this->bReplaceActiveSameClassInstance = false;
+    this->bShouldPauseMovement = false;
+    this->bAlwaysNotifyOnFinished = false;
+}
 
 TEnumAsByte<EAIRequestPriority::Type> UPawnAction::GetActionPriority() {
     return EAIRequestPriority::SoftScript;
@@ -15,15 +24,4 @@ UPawnAction* UPawnAction::CreateActionInstance(UObject* WorldContextObject, TSub
     return NULL;
 }
 
-UPawnAction::UPawnAction() {
-    this->ChildAction = NULL;
-    this->ParentAction = NULL;
-    this->OwnerComponent = NULL;
-    this->Instigator = NULL;
-    this->BrainComp = NULL;
-    this->bAllowNewSameClassInstance = false;
-    this->bReplaceActiveSameClassInstance = false;
-    this->bShouldPauseMovement = false;
-    this->bAlwaysNotifyOnFinished = false;
-}
 

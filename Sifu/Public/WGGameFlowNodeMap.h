@@ -16,5 +16,6 @@ public:
     ESCGameInstanceState m_eGameState;
     
     UWGGameFlowNodeMap();
+
 };
 

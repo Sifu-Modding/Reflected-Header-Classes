@@ -1,5 +1,6 @@
 #include "ARTrackableNotifyComponent.h"
 
-UARTrackableNotifyComponent::UARTrackableNotifyComponent() {
+UARTrackableNotifyComponent::UARTrackableNotifyComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

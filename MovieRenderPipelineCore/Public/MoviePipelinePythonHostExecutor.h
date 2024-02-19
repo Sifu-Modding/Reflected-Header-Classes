@@ -24,6 +24,7 @@ private:
     
 public:
     UMoviePipelinePythonHostExecutor();
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void OnMapLoad(UWorld* InWorld);
     

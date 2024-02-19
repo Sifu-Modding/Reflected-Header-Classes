@@ -72,7 +72,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float TileMaterial;
     
-    UCableComponent();
+    UCableComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetAttachEndToComponent(USceneComponent* Component, FName SocketName);
     

@@ -18,6 +18,7 @@ public:
     FAbilityStateDelegate OnStateInterrupted;
     
     UAbilityTask_StartAbilityState();
+
     UFUNCTION(BlueprintCallable)
     static UAbilityTask_StartAbilityState* StartAbilityState(UGameplayAbility* OwningAbility, FName StateName, bool bEndCurrentState);
     

@@ -1,5 +1,9 @@
 #include "MovieSceneLevelVisibilitySection.h"
 
+UMovieSceneLevelVisibilitySection::UMovieSceneLevelVisibilitySection() {
+    this->Visibility = ELevelVisibility::Visible;
+}
+
 void UMovieSceneLevelVisibilitySection::SetVisibility(ELevelVisibility InVisibility) {
 }
 
@@ -14,7 +18,4 @@ TArray<FName> UMovieSceneLevelVisibilitySection::GetLevelNames() const {
     return TArray<FName>();
 }
 
-UMovieSceneLevelVisibilitySection::UMovieSceneLevelVisibilitySection() {
-    this->Visibility = ELevelVisibility::Visible;
-}
 

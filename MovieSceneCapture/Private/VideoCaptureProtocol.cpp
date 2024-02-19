@@ -5,3 +5,4 @@ UVideoCaptureProtocol::UVideoCaptureProtocol() {
     this->CompressionQuality = 75.00f;
 }
 
+

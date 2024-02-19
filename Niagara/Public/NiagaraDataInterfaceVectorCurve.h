@@ -18,5 +18,6 @@ public:
     FRichCurve ZCurve;
     
     UNiagaraDataInterfaceVectorCurve();
+
 };
 

@@ -1,6 +1,8 @@
 #include "GameplayCueNotify_Static.h"
 
-class AActor;
+UGameplayCueNotify_Static::UGameplayCueNotify_Static() {
+    this->IsOverride = true;
+}
 
 bool UGameplayCueNotify_Static::WhileActive_Implementation(AActor* MyTarget, const FGameplayCueParameters& Parameters) const {
     return false;
@@ -19,7 +21,4 @@ bool UGameplayCueNotify_Static::OnActive_Implementation(AActor* MyTarget, const 
 }
 
 
-UGameplayCueNotify_Static::UGameplayCueNotify_Static() {
-    this->IsOverride = true;
-}
 

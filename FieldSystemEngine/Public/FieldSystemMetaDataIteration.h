@@ -12,7 +12,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 Iterations;
     
-    UFieldSystemMetaDataIteration();
+    UFieldSystemMetaDataIteration(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UFieldSystemMetaDataIteration* SetMetaDataIteration(int32 NewIterations);
     

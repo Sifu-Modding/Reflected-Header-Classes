@@ -22,6 +22,7 @@ protected:
     
 public:
     UAbilityTask_WaitVelocityChange();
+
     UFUNCTION(BlueprintCallable)
     static UAbilityTask_WaitVelocityChange* CreateWaitVelocityChange(UGameplayAbility* OwningAbility, FVector Direction, float MinimumMagnitude);
     

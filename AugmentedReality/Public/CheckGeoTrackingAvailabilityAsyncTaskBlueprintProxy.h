@@ -19,6 +19,7 @@ public:
     FGeoTrackingAvailabilityDelegate OnFailed;
     
     UCheckGeoTrackingAvailabilityAsyncTaskBlueprintProxy();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static UCheckGeoTrackingAvailabilityAsyncTaskBlueprintProxy* CheckGeoTrackingAvailabilityAtLocation(UObject* WorldContextObject, float Longitude, float Latitude);
     

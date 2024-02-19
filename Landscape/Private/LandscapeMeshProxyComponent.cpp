@@ -1,6 +1,7 @@
 #include "LandscapeMeshProxyComponent.h"
 
-ULandscapeMeshProxyComponent::ULandscapeMeshProxyComponent() {
+ULandscapeMeshProxyComponent::ULandscapeMeshProxyComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->ProxyLOD = 0;
 }
+
 

@@ -6,7 +6,7 @@
 
 class UAISense_Damage;
 
-UCLASS(Blueprintable, EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew, Config=Engine)
 class AIMODULE_API UAISenseConfig_Damage : public UAISenseConfig {
     GENERATED_BODY()
 public:
@@ -14,5 +14,6 @@ public:
     TSubclassOf<UAISense_Damage> Implementation;
     
     UAISenseConfig_Damage();
+
 };
 

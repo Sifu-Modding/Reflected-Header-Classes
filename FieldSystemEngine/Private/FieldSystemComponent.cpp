@@ -1,7 +1,8 @@
 #include "FieldSystemComponent.h"
 
-class UFieldNodeBase;
-class UFieldSystemMetaData;
+UFieldSystemComponent::UFieldSystemComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->FieldSystem = NULL;
+}
 
 void UFieldSystemComponent::ResetFieldSystem() {
 }
@@ -30,7 +31,4 @@ void UFieldSystemComponent::ApplyLinearForce(bool Enabled, FVector Direction, fl
 void UFieldSystemComponent::AddFieldCommand(bool Enabled, TEnumAsByte<EFieldPhysicsType> Target, UFieldSystemMetaData* MetaData, UFieldNodeBase* Field) {
 }
 
-UFieldSystemComponent::UFieldSystemComponent() {
-    this->FieldSystem = NULL;
-}
 

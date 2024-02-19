@@ -8,5 +8,6 @@ class UAkPS4PlatformInfo : public UAkPlatformInfo {
     GENERATED_BODY()
 public:
     UAkPS4PlatformInfo();
+
 };
 

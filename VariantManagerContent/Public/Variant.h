@@ -31,6 +31,7 @@ private:
     
 public:
     UVariant();
+
     UFUNCTION(BlueprintCallable)
     void SwitchOn();
     

@@ -28,5 +28,6 @@ public:
     AActor* SharingActor;
     
     UAnimSharingInstance();
+
 };
 

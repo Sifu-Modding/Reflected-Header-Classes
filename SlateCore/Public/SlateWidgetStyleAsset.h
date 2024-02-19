@@ -13,5 +13,6 @@ public:
     USlateWidgetStyleContainerBase* CustomStyle;
     
     USlateWidgetStyleAsset();
+
 };
 

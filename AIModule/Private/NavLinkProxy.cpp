@@ -1,7 +1,13 @@
 #include "NavLinkProxy.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=SceneComponent -FallbackName=SceneComponent
 //CROSS-MODULE INCLUDE V2: -ModuleName=NavigationSystem -ObjectName=NavLinkCustomComponent -FallbackName=NavLinkCustomComponent
 
-class AActor;
+ANavLinkProxy::ANavLinkProxy(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("PositionComponent"));
+    this->PointLinks.AddDefaulted(1);
+    this->SmartLinkComp = CreateDefaultSubobject<UNavLinkCustomComponent>(TEXT("SmartLinkComp"));
+    this->bSmartLinkIsRelevant = false;
+}
 
 void ANavLinkProxy::SetSmartLinkEnabled(bool bEnabled) {
 }
@@ -18,9 +24,4 @@ bool ANavLinkProxy::HasMovingAgents() const {
     return false;
 }
 
-ANavLinkProxy::ANavLinkProxy() {
-    this->PointLinks.AddDefaulted(1);
-    this->SmartLinkComp = CreateDefaultSubobject<UNavLinkCustomComponent>(TEXT("SmartLinkComp"));
-    this->bSmartLinkIsRelevant = false;
-}
 

@@ -48,6 +48,7 @@ protected:
     
 public:
     UControllerButtonWidget();
+
     UFUNCTION(BlueprintCallable)
     void BPF_SetMappingID(const FMappingID& _mappingID, bool _bRefresh);
     

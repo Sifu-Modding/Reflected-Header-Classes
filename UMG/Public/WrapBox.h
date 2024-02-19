@@ -31,6 +31,7 @@ public:
     TEnumAsByte<EOrientation> Orientation;
     
     UWrapBox();
+
     UFUNCTION(BlueprintCallable)
     void SetInnerSlotPadding(FVector2D InPadding);
     

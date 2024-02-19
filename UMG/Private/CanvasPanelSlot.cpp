@@ -1,5 +1,10 @@
 #include "CanvasPanelSlot.h"
 
+UCanvasPanelSlot::UCanvasPanelSlot() {
+    this->bAutoSize = false;
+    this->ZOrder = 0;
+}
+
 void UCanvasPanelSlot::SetZOrder(int32 InZOrder) {
 }
 
@@ -68,8 +73,4 @@ FVector2D UCanvasPanelSlot::GetAlignment() const {
     return FVector2D{};
 }
 
-UCanvasPanelSlot::UCanvasPanelSlot() {
-    this->bAutoSize = false;
-    this->ZOrder = 0;
-}
 

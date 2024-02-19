@@ -17,6 +17,7 @@ class GAMEPLAYTAGS_API UBlueprintGameplayTagLibrary : public UBlueprintFunctionL
     GENERATED_BODY()
 public:
     UBlueprintGameplayTagLibrary();
+
     UFUNCTION(BlueprintCallable)
     static bool RemoveGameplayTag(UPARAM(Ref) FGameplayTagContainer& TagContainer, FGameplayTag Tag);
     

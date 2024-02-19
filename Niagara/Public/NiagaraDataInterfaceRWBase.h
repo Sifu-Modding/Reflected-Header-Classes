@@ -14,5 +14,6 @@ public:
     TSet<int32> IterationShaderStages;
     
     UNiagaraDataInterfaceRWBase();
+
 };
 

@@ -36,6 +36,7 @@ protected:
     
 public:
     URetainerBox();
+
     UFUNCTION(BlueprintCallable)
     void SetTextureParameter(FName NewTextureParameter);
     

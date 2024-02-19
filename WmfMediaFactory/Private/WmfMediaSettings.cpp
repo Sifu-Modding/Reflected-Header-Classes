@@ -7,3 +7,4 @@ UWmfMediaSettings::UWmfMediaSettings() {
     this->HardwareAcceleratedVideoDecoding = false;
 }
 
+

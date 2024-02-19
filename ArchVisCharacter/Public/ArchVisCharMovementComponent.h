@@ -32,6 +32,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float WalkingAcceleration;
     
-    UArchVisCharMovementComponent();
+    UArchVisCharMovementComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

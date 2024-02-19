@@ -5,3 +5,4 @@ UMoviePipelineImageSequenceOutput_EXR::UMoviePipelineImageSequenceOutput_EXR() {
     this->bMultilayer = true;
 }
 
+

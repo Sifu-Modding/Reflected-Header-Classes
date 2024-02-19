@@ -16,6 +16,7 @@ private:
     
 public:
     UDynamicEntryBox();
+
     UFUNCTION(BlueprintCallable)
     void Reset(bool bDeleteWidgets);
     

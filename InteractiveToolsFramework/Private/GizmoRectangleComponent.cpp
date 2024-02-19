@@ -1,6 +1,6 @@
 #include "GizmoRectangleComponent.h"
 
-UGizmoRectangleComponent::UGizmoRectangleComponent() {
+UGizmoRectangleComponent::UGizmoRectangleComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->OffsetX = 0.00f;
     this->OffsetY = 0.00f;
     this->LengthX = 20.00f;
@@ -8,4 +8,5 @@ UGizmoRectangleComponent::UGizmoRectangleComponent() {
     this->Thickness = 2.00f;
     this->SegmentFlags = 15;
 }
+
 

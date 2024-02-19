@@ -22,6 +22,7 @@ protected:
     
 public:
     ULevelSequenceBurnIn();
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetSettings(UObject* InSettings);
     

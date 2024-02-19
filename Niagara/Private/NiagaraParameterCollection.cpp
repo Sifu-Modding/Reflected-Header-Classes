@@ -7,3 +7,4 @@ UNiagaraParameterCollection::UNiagaraParameterCollection() {
     this->DefaultInstance = CreateDefaultSubobject<UNiagaraParameterCollectionInstance>(TEXT("Default Instance"));
 }
 
+

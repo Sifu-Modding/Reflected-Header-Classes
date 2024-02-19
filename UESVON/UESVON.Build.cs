@@ -10,11 +10,8 @@ public class UESVON : ModuleRules {
             "AIModule",
             "Core",
             "CoreUObject",
-            "DeveloperSettings",
             "Engine",
-            "GameplayTags",
             "GameplayTasks",
-            "NavigationSystem",
         });
     }
 }

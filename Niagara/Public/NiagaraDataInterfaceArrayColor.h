@@ -12,5 +12,6 @@ public:
     TArray<FLinearColor> ColorData;
     
     UNiagaraDataInterfaceArrayColor();
+
 };
 

@@ -6,3 +6,4 @@ UEditableGeometryCollectionAdapter::UEditableGeometryCollectionAdapter() {
     this->GeometryCollectionLODIndex = 0;
 }
 
+

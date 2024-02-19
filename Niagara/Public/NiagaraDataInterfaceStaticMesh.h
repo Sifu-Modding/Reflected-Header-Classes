@@ -35,5 +35,6 @@ public:
     TArray<FName> FilteredSockets;
     
     UNiagaraDataInterfaceStaticMesh();
+
 };
 

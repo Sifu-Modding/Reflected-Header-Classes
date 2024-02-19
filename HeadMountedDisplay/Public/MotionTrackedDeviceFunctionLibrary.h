@@ -11,6 +11,7 @@ class HEADMOUNTEDDISPLAY_API UMotionTrackedDeviceFunctionLibrary : public UBluep
     GENERATED_BODY()
 public:
     UMotionTrackedDeviceFunctionLibrary();
+
     UFUNCTION(BlueprintCallable)
     static void SetIsControllerMotionTrackingEnabledByDefault(bool Enable);
     

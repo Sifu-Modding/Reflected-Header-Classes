@@ -6,3 +6,4 @@ UEditableStaticMeshAdapter::UEditableStaticMeshAdapter() {
     this->StaticMeshLODIndex = 0;
 }
 
+

@@ -195,9 +195,10 @@ private:
     FName m_EmissiveMultiplierMPCParameterName;
     
 public:
-    AFightingPlayerController();
+    AFightingPlayerController(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable, Exec)
     void ToggleWaterMark();
     

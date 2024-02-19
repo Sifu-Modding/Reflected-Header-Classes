@@ -1,5 +1,6 @@
 #include "GizmoActor.h"
 
-AGizmoActor::AGizmoActor() {
+AGizmoActor::AGizmoActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

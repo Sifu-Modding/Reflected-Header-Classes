@@ -1,6 +1,9 @@
 #include "ARGeoAnchorComponent.h"
 #include "Net/UnrealNetwork.h"
 
+UARGeoAnchorComponent::UARGeoAnchorComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+}
+
 void UARGeoAnchorComponent::SetGeoAnchorComponentDebugMode(EGeoAnchorComponentDebugMode NewDebugMode) {
 }
 
@@ -18,6 +21,4 @@ void UARGeoAnchorComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>
     DOREPLIFETIME(UARGeoAnchorComponent, ReplicatedPayload);
 }
 
-UARGeoAnchorComponent::UARGeoAnchorComponent() {
-}
 

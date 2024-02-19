@@ -12,5 +12,6 @@ public:
     FAIDamageEvent Event;
     
     UAISenseEvent_Damage();
+
 };
 

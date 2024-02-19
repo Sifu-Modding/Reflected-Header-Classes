@@ -9,6 +9,7 @@ class AKAUDIO_API UAkItemPropertiesConv : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UAkItemPropertiesConv();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static FText Conv_FAkPropertyToControlToText(const FAkPropertyToControl& INAkPropertyToControl);
     

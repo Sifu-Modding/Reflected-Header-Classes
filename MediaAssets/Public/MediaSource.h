@@ -8,6 +8,7 @@ class MEDIAASSETS_API UMediaSource : public UObject {
     GENERATED_BODY()
 public:
     UMediaSource();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool Validate() const;
     

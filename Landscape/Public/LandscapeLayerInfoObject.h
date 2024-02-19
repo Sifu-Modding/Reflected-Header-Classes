@@ -23,5 +23,6 @@ public:
     FLinearColor LayerUsageDebugColor;
     
     ULandscapeLayerInfoObject();
+
 };
 

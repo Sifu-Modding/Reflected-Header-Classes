@@ -13,5 +13,6 @@ public:
     UAkAudioBank* RequiredBank;
     
     UAkAuxBus();
+
 };
 

@@ -9,7 +9,8 @@ UCLASS(Abstract, Blueprintable, Transient)
 class ANiagaraPreviewBase : public AActor {
     GENERATED_BODY()
 public:
-    ANiagaraPreviewBase();
+    ANiagaraPreviewBase(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetSystem(UNiagaraSystem* InSystem);
     

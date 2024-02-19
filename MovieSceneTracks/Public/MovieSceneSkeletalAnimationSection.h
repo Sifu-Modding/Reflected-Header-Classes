@@ -73,5 +73,6 @@ public:
     bool bMatchRotationRoll;
     
     UMovieSceneSkeletalAnimationSection();
+
 };
 

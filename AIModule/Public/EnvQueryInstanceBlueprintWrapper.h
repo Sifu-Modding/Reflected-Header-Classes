@@ -32,6 +32,7 @@ protected:
     
 public:
     UEnvQueryInstanceBlueprintWrapper();
+
     UFUNCTION(BlueprintCallable)
     void SetNamedParam(FName ParamName, float Value);
     
@@ -50,7 +51,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetItemScore(int32 ItemIndex) const;
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

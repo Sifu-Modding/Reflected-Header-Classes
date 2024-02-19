@@ -8,5 +8,6 @@ class MOVIESCENE_API UMovieSceneBlenderSystem : public UMovieSceneEntitySystem {
     GENERATED_BODY()
 public:
     UMovieSceneBlenderSystem();
+
 };
 

@@ -44,5 +44,6 @@ public:
     FTransform InitialTransform;
     
     UGizmoPlaneTranslationParameterSource();
+
 };
 

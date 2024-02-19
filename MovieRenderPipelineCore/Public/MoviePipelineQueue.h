@@ -17,6 +17,7 @@ private:
     
 public:
     UMoviePipelineQueue();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     TArray<UMoviePipelineExecutorJob*> GetJobs() const;
     

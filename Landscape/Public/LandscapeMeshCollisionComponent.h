@@ -11,6 +11,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGuid MeshGuid;
     
-    ULandscapeMeshCollisionComponent();
+    ULandscapeMeshCollisionComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

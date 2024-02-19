@@ -1,5 +1,8 @@
 #include "AkItemBoolProperties.h"
 
+UAkItemBoolProperties::UAkItemBoolProperties() {
+}
+
 void UAkItemBoolProperties::SetSearchText(const FString& newText) {
 }
 
@@ -11,6 +14,4 @@ FString UAkItemBoolProperties::GetSearchText() const {
     return TEXT("");
 }
 
-UAkItemBoolProperties::UAkItemBoolProperties() {
-}
 

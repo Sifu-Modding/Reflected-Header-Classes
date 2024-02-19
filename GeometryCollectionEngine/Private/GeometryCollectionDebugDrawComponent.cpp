@@ -1,7 +1,8 @@
 #include "GeometryCollectionDebugDrawComponent.h"
 
-UGeometryCollectionDebugDrawComponent::UGeometryCollectionDebugDrawComponent() {
+UGeometryCollectionDebugDrawComponent::UGeometryCollectionDebugDrawComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->GeometryCollectionDebugDrawActor = NULL;
     this->GeometryCollectionRenderLevelSetActor = NULL;
 }
+
 

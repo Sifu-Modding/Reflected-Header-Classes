@@ -1,7 +1,9 @@
 #include "VitalPointActor.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=SceneComponent -FallbackName=SceneComponent
 
-class AActor;
-class AAimingBillboardActor;
+AVitalPointActor::AVitalPointActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("rootSceneComponent"));
+}
 
 void AVitalPointActor::OnBillBoardSelectionChanged(bool _bSelected, AAimingBillboardActor* _billboard) {
 }
@@ -14,6 +16,4 @@ AActor* AVitalPointActor::BPF_GetActorOwner() const {
     return NULL;
 }
 
-AVitalPointActor::AVitalPointActor() {
-}
 

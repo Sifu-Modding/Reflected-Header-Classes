@@ -8,5 +8,6 @@ class NIAGARA_API UNiagaraDataInterfaceCollisionQuery : public UNiagaraDataInter
     GENERATED_BODY()
 public:
     UNiagaraDataInterfaceCollisionQuery();
+
 };
 

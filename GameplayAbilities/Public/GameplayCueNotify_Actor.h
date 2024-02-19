@@ -49,7 +49,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 NumPreallocatedInstances;
     
-    AGameplayCueNotify_Actor();
+    AGameplayCueNotify_Actor(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     bool WhileActive(AActor* MyTarget, const FGameplayCueParameters& Parameters);
     

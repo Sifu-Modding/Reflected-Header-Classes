@@ -7,3 +7,4 @@ UNiagaraSimulationStageGeneric::UNiagaraSimulationStageGeneric() {
     this->bDisablePartialParticleUpdate = false;
 }
 
+

@@ -18,7 +18,8 @@ protected:
     TArray<TSubclassOf<UAISense>> RegisterAsSourceForSenses;
     
 public:
-    UAIPerceptionStimuliSourceComponent();
+    UAIPerceptionStimuliSourceComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void UnregisterFromSense(TSubclassOf<UAISense> SenseClass);
     

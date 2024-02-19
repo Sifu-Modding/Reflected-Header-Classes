@@ -1,6 +1,17 @@
 #include "GameplayAbilityTargetActor.h"
 #include "Net/UnrealNetwork.h"
 
+AGameplayAbilityTargetActor::AGameplayAbilityTargetActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->ShouldProduceTargetDataOnServer = false;
+    this->MasterPC = NULL;
+    this->OwningAbility = NULL;
+    this->bDestroyOnConfirmation = true;
+    this->SourceActor = NULL;
+    this->ReticleClass = NULL;
+    this->bDebug = false;
+    this->GenericDelegateBoundASC = NULL;
+}
+
 void AGameplayAbilityTargetActor::ConfirmTargeting() {
 }
 
@@ -17,14 +28,4 @@ void AGameplayAbilityTargetActor::GetLifetimeReplicatedProps(TArray<FLifetimePro
     DOREPLIFETIME(AGameplayAbilityTargetActor, bDebug);
 }
 
-AGameplayAbilityTargetActor::AGameplayAbilityTargetActor() {
-    this->ShouldProduceTargetDataOnServer = false;
-    this->MasterPC = NULL;
-    this->OwningAbility = NULL;
-    this->bDestroyOnConfirmation = true;
-    this->SourceActor = NULL;
-    this->ReticleClass = NULL;
-    this->bDebug = false;
-    this->GenericDelegateBoundASC = NULL;
-}
 

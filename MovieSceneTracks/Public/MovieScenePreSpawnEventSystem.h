@@ -8,5 +8,6 @@ class MOVIESCENETRACKS_API UMovieScenePreSpawnEventSystem : public UMovieSceneEv
     GENERATED_BODY()
 public:
     UMovieScenePreSpawnEventSystem();
+
 };
 

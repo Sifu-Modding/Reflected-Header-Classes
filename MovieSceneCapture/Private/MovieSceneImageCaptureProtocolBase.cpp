@@ -3,3 +3,4 @@
 UMovieSceneImageCaptureProtocolBase::UMovieSceneImageCaptureProtocolBase() {
 }
 
+

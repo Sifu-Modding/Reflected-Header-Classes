@@ -71,8 +71,9 @@ protected:
     TEnumAsByte<ECollisionChannel> BroadcastChannel;
     
 public:
-    UNavLinkCustomComponent();
-    
+    UNavLinkCustomComponent(const FObjectInitializer& ObjectInitializer);
+
+
     // Fix for true pure virtual functions not being implemented
 };
 

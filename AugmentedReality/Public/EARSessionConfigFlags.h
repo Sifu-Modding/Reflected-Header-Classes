@@ -7,8 +7,8 @@ enum class EARSessionConfigFlags : uint8 {
     None,
     GenerateMeshData,
     RenderMeshDataInWireframe,
-    GenerateCollisionForMeshData = 0x4,
-    GenerateNavMeshForMeshData = 0x8,
-    UseMeshDataForOcclusion = 0x10,
+    GenerateCollisionForMeshData = 4,
+    GenerateNavMeshForMeshData = 8,
+    UseMeshDataForOcclusion = 16,
 };
 

@@ -2,7 +2,14 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=MediaAssets -ObjectName=MediaComponent -FallbackName=MediaComponent
 #include "Net/UnrealNetwork.h"
 
-class ALevelSequenceActor;
+ALevelSequenceMediaController::ALevelSequenceMediaController(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bReplicates = true;
+    const FProperty* p_RemoteRole = GetClass()->FindPropertyByName("RemoteRole");
+    (*p_RemoteRole->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(this)) = ROLE_SimulatedProxy;
+    this->Sequence = NULL;
+    this->MediaComponent = CreateDefaultSubobject<UMediaComponent>(TEXT("MediaComponent"));
+    this->ServerStartTimeSeconds = -0.00f;
+}
 
 void ALevelSequenceMediaController::SynchronizeToServer(float DesyncThresholdSeconds) {
 }
@@ -27,9 +34,4 @@ void ALevelSequenceMediaController::GetLifetimeReplicatedProps(TArray<FLifetimeP
     DOREPLIFETIME(ALevelSequenceMediaController, ServerStartTimeSeconds);
 }
 
-ALevelSequenceMediaController::ALevelSequenceMediaController() {
-    this->Sequence = NULL;
-    this->MediaComponent = CreateDefaultSubobject<UMediaComponent>(TEXT("MediaComponent"));
-    this->ServerStartTimeSeconds = -0.00f;
-}
 

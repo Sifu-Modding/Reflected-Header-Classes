@@ -8,5 +8,6 @@ class UMovieScene3DAttachTrack : public UMovieScene3DConstraintTrack {
     GENERATED_BODY()
 public:
     UMovieScene3DAttachTrack();
+
 };
 

@@ -8,6 +8,7 @@ class AUTOMATIONUTILS_API UAutomationUtilsBlueprintLibrary : public UBlueprintFu
     GENERATED_BODY()
 public:
     UAutomationUtilsBlueprintLibrary();
+
     UFUNCTION(BlueprintCallable)
     static void TakeGameplayAutomationScreenshot(const FString& ScreenshotName, float MaxGlobalError, float MaxLocalError, const FString& MapNameOverride);
     

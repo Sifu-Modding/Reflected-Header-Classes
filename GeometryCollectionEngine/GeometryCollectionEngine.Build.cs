@@ -11,7 +11,6 @@ public class GeometryCollectionEngine : ModuleRules {
             "ChaosSolverEngine",
             "Core",
             "CoreUObject",
-            "DeveloperSettings",
             "Engine",
             "FieldSystemEngine",
             "PhysicsCore",

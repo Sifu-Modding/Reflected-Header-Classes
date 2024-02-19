@@ -8,5 +8,6 @@ class UMG_API UNamedSlot : public UContentWidget {
     GENERATED_BODY()
 public:
     UNamedSlot();
+
 };
 

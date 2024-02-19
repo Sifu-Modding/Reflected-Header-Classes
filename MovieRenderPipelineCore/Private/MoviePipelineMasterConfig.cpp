@@ -1,8 +1,9 @@
 #include "MoviePipelineMasterConfig.h"
 #include "MoviePipelineOutputSetting.h"
 
-class ULevelSequence;
-class UMoviePipelineSetting;
+UMoviePipelineMasterConfig::UMoviePipelineMasterConfig() {
+    this->OutputSetting = CreateDefaultSubobject<UMoviePipelineOutputSetting>(TEXT("DefaultOutputSetting"));
+}
 
 void UMoviePipelineMasterConfig::InitializeTransientSettings() {
 }
@@ -19,7 +20,4 @@ TArray<UMoviePipelineSetting*> UMoviePipelineMasterConfig::GetAllSettings(const 
     return TArray<UMoviePipelineSetting*>();
 }
 
-UMoviePipelineMasterConfig::UMoviePipelineMasterConfig() {
-    this->OutputSetting = CreateDefaultSubobject<UMoviePipelineOutputSetting>(TEXT("DefaultOutputSetting"));
-}
 

@@ -18,5 +18,6 @@ public:
     uint8 bUnbound: 1;
     
     UDatasmithPostProcessVolumeTemplate();
+
 };
 

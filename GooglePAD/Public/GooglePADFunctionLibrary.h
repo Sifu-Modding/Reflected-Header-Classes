@@ -12,6 +12,7 @@ class GOOGLEPAD_API UGooglePADFunctionLibrary : public UBlueprintFunctionLibrary
     GENERATED_BODY()
 public:
     UGooglePADFunctionLibrary();
+
     UFUNCTION(BlueprintCallable)
     static EGooglePADErrorCode ShowCellularDataConfirmation();
     

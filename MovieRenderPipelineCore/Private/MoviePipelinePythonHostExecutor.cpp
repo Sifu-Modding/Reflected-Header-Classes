@@ -1,7 +1,10 @@
 #include "MoviePipelinePythonHostExecutor.h"
 
-class UMoviePipelineQueue;
-class UWorld;
+UMoviePipelinePythonHostExecutor::UMoviePipelinePythonHostExecutor() {
+    this->ExecutorClass = NULL;
+    this->PipelineQueue = NULL;
+    this->LastLoadedWorld = NULL;
+}
 
 void UMoviePipelinePythonHostExecutor::OnMapLoad_Implementation(UWorld* InWorld) {
 }
@@ -13,9 +16,4 @@ UWorld* UMoviePipelinePythonHostExecutor::GetLastLoadedWorld() const {
 void UMoviePipelinePythonHostExecutor::ExecuteDelayed_Implementation(UMoviePipelineQueue* InPipelineQueue) {
 }
 
-UMoviePipelinePythonHostExecutor::UMoviePipelinePythonHostExecutor() {
-    this->ExecutorClass = NULL;
-    this->PipelineQueue = NULL;
-    this->LastLoadedWorld = NULL;
-}
 

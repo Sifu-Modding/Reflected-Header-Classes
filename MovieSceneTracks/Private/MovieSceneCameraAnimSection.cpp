@@ -9,3 +9,4 @@ UMovieSceneCameraAnimSection::UMovieSceneCameraAnimSection() {
     this->bLooping = false;
 }
 
+

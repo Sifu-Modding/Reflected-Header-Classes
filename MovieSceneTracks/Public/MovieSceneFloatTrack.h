@@ -8,5 +8,6 @@ class UMovieSceneFloatTrack : public UMovieScenePropertyTrack {
     GENERATED_BODY()
 public:
     UMovieSceneFloatTrack();
+
 };
 

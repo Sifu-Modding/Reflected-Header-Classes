@@ -45,5 +45,6 @@ public:
     float NoiseFloorDb;
     
     UConstantQNRTSettings();
+
 };
 

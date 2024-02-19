@@ -10,6 +10,7 @@ class AUGMENTEDREALITY_API UARMeshGeometry : public UARTrackedGeometry {
     GENERATED_BODY()
 public:
     UARMeshGeometry();
+
     UFUNCTION(BlueprintCallable)
     bool GetObjectClassificationAtLocation(const FVector& InWorldLocation, EARObjectClassification& OutClassification, FVector& OutClassificationLocation, float MaxLocationDiff);
     

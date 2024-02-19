@@ -1,6 +1,9 @@
 #include "WidgetAnimation.h"
 
-class UUserWidget;
+UWidgetAnimation::UWidgetAnimation() {
+    this->MovieScene = NULL;
+    this->bLegacyFinishOnStop = true;
+}
 
 void UWidgetAnimation::UnbindFromAnimationStarted(UUserWidget* Widget, FWidgetAnimationDynamicEvent Delegate) {
 }
@@ -28,8 +31,4 @@ void UWidgetAnimation::BindToAnimationStarted(UUserWidget* Widget, FWidgetAnimat
 void UWidgetAnimation::BindToAnimationFinished(UUserWidget* Widget, FWidgetAnimationDynamicEvent Delegate) {
 }
 
-UWidgetAnimation::UWidgetAnimation() {
-    this->MovieScene = NULL;
-    this->bLegacyFinishOnStop = true;
-}
 

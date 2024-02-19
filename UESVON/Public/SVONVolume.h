@@ -45,6 +45,7 @@ public:
     UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     USVONVolumeRenderingComponent* RenderingComp;
     
-    ASVONVolume();
+    ASVONVolume(const FObjectInitializer& ObjectInitializer);
+
 };
 

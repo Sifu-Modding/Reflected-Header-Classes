@@ -14,6 +14,7 @@ public:
     FSubmixEffectFilterSettings Settings;
     
     USubmixEffectFilterPreset();
+
     UFUNCTION(BlueprintCallable)
     void SetSettings(const FSubmixEffectFilterSettings& InSettings);
     

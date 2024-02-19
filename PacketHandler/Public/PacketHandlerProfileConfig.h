@@ -3,7 +3,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
 #include "PacketHandlerProfileConfig.generated.h"
 
-UCLASS(Blueprintable, PerObjectConfig)
+UCLASS(Blueprintable, PerObjectConfig, Config=Engine)
 class UPacketHandlerProfileConfig : public UObject {
     GENERATED_BODY()
 public:
@@ -11,5 +11,6 @@ public:
     TArray<FString> Components;
     
     UPacketHandlerProfileConfig();
+
 };
 

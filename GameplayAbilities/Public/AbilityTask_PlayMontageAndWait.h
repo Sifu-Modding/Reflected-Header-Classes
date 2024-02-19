@@ -45,6 +45,7 @@ private:
     
 public:
     UAbilityTask_PlayMontageAndWait();
+
     UFUNCTION(BlueprintCallable)
     void OnMontageInterrupted();
     

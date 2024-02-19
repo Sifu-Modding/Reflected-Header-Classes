@@ -12,7 +12,8 @@ public:
     int32 MaterialIndex;
     
     UMovieScenePrimitiveMaterialTrack();
-    
+
+
     // Fix for true pure virtual functions not being implemented
 };
 

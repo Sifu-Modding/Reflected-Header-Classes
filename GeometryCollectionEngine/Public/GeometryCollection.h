@@ -77,5 +77,6 @@ private:
     
 public:
     UGeometryCollection();
+
 };
 

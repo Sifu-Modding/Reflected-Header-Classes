@@ -3,8 +3,16 @@
 #include "MagicLeapARPinSaveGame.h"
 #include "Templates/SubclassOf.h"
 
-class AActor;
-class USceneComponent;
+UMagicLeapARPinComponent::UMagicLeapARPinComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bAutoActivate = true;
+    this->UserIndex = 0;
+    this->AutoPinType = EMagicLeapAutoPinType::OnlyOnDataRestoration;
+    this->bShouldPinActor = false;
+    this->PinDataClass = UMagicLeapARPinSaveGame::StaticClass();
+    this->SearchVolume = CreateDefaultSubobject<USphereComponent>(TEXT("SearchVolume"));
+    this->PinnedSceneComponent = NULL;
+    this->PinData = NULL;
+}
 
 void UMagicLeapARPinComponent::UnPin() {
 }
@@ -59,13 +67,4 @@ bool UMagicLeapARPinComponent::AttemptPinDataRestoration() {
     return false;
 }
 
-UMagicLeapARPinComponent::UMagicLeapARPinComponent() {
-    this->UserIndex = 0;
-    this->AutoPinType = EMagicLeapAutoPinType::OnlyOnDataRestoration;
-    this->bShouldPinActor = false;
-    this->PinDataClass = UMagicLeapARPinSaveGame::StaticClass();
-    this->SearchVolume = CreateDefaultSubobject<USphereComponent>(TEXT("SearchVolume"));
-    this->PinnedSceneComponent = NULL;
-    this->PinData = NULL;
-}
 

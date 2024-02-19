@@ -7,7 +7,7 @@
 
 class UAISense_Hearing;
 
-UCLASS(Blueprintable, EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew, Config=Engine)
 class AIMODULE_API UAISenseConfig_Hearing : public UAISenseConfig {
     GENERATED_BODY()
 public:
@@ -27,5 +27,6 @@ public:
     FAISenseAffiliationFilter DetectionByAffiliation;
     
     UAISenseConfig_Hearing();
+
 };
 

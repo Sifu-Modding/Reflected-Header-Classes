@@ -8,5 +8,6 @@ class CONTROLRIG_API UControlRigValidationPass : public UObject {
     GENERATED_BODY()
 public:
     UControlRigValidationPass();
+
 };
 

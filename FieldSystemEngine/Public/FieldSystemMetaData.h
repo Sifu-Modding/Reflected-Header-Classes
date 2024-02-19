@@ -7,6 +7,7 @@ UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FIELDSYSTEMENGINE_API UFieldSystemMetaData : public UActorComponent {
     GENERATED_BODY()
 public:
-    UFieldSystemMetaData();
+    UFieldSystemMetaData(const FObjectInitializer& ObjectInitializer);
+
 };
 

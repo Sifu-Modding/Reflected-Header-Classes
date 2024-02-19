@@ -8,5 +8,6 @@ class INTERACTIVETOOLSFRAMEWORK_API UInteractionMechanic : public UObject {
     GENERATED_BODY()
 public:
     UInteractionMechanic();
+
 };
 

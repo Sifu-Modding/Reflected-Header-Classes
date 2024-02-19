@@ -9,6 +9,6 @@ enum EFieldFalloffType {
     Field_Falloff_Inverse,
     Field_Falloff_Squared,
     Field_Falloff_Logarithmic,
-    Field_Falloff_Max,
+    Field_Falloff_Max UMETA(Hidden),
 };
 

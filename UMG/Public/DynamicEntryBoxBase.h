@@ -47,6 +47,7 @@ private:
     
 public:
     UDynamicEntryBoxBase();
+
     UFUNCTION(BlueprintCallable)
     void SetRadialSettings(const FRadialBoxSettings& InSettings);
     

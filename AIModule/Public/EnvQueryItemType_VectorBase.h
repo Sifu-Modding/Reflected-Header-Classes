@@ -8,5 +8,6 @@ class AIMODULE_API UEnvQueryItemType_VectorBase : public UEnvQueryItemType {
     GENERATED_BODY()
 public:
     UEnvQueryItemType_VectorBase();
+
 };
 

@@ -1,5 +1,12 @@
 #include "TileView.h"
 
+UTileView::UTileView() : UListView(FObjectInitializer::Get()) {
+    this->EntryHeight = 128.00f;
+    this->EntryWidth = 128.00f;
+    this->TileAlignment = EListItemAlignment::EvenlyDistributed;
+    this->bWrapHorizontalNavigation = false;
+}
+
 void UTileView::SetEntryWidth(float NewWidth) {
 }
 
@@ -14,10 +21,4 @@ float UTileView::GetEntryHeight() const {
     return 0.0f;
 }
 
-UTileView::UTileView() {
-    this->EntryHeight = 128.00f;
-    this->EntryWidth = 128.00f;
-    this->TileAlignment = EListItemAlignment::EvenlyDistributed;
-    this->bWrapHorizontalNavigation = false;
-}
 

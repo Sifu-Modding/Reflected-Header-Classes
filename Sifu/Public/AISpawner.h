@@ -4,8 +4,6 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=AnimContainer -FallbackName=AnimContainer
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCAiActionClassInstance -FallbackName=SCAiActionClassInstance
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCDelegate -FallbackName=SCDelegate
-//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCDelegate -FallbackName=SCDelegate
-//CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCDelegate -FallbackName=SCDelegate
 #include "AICharacterSpawnParams.h"
 #include "CarriedProps.h"
 #include "EFactionsEnums.h"
@@ -160,7 +158,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<float> m_rawCustomPrimitiveData;
     
-    AAISpawner();
+    AAISpawner(const FObjectInitializer& ObjectInitializer);
+
 private:
     UFUNCTION(BlueprintCallable)
     void OnAiBehaviorChanged(EGlobalBehaviors _eNewBehavior, const bool _bFromDialog);

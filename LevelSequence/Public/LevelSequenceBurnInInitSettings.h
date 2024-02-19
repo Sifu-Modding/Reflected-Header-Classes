@@ -8,5 +8,6 @@ class LEVELSEQUENCE_API ULevelSequenceBurnInInitSettings : public UObject {
     GENERATED_BODY()
 public:
     ULevelSequenceBurnInInitSettings();
+
 };
 

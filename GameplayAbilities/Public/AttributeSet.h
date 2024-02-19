@@ -8,5 +8,6 @@ class GAMEPLAYABILITIES_API UAttributeSet : public UObject {
     GENERATED_BODY()
 public:
     UAttributeSet();
+
 };
 

@@ -8,5 +8,6 @@ class U__Delegates__UBP_ArenaTargetsObjective_C__pf2051899726 : public UObject {
     GENERATED_BODY()
 public:
     U__Delegates__UBP_ArenaTargetsObjective_C__pf2051899726();
+
 };
 

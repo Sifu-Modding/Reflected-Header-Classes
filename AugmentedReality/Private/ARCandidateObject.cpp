@@ -1,5 +1,8 @@
 #include "ARCandidateObject.h"
 
+UARCandidateObject::UARCandidateObject() {
+}
+
 void UARCandidateObject::SetFriendlyName(const FString& NewName) {
 }
 
@@ -21,6 +24,4 @@ FBox UARCandidateObject::GetBoundingBox() const {
     return FBox{};
 }
 
-UARCandidateObject::UARCandidateObject() {
-}
 

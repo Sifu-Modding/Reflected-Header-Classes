@@ -1,5 +1,13 @@
 #include "Button.h"
 
+UButton::UButton() {
+    this->Style = NULL;
+    this->ClickMethod = EButtonClickMethod::DownAndUp;
+    this->TouchMethod = EButtonTouchMethod::DownAndUp;
+    this->PressMethod = EButtonPressMethod::DownAndUp;
+    this->IsFocusable = true;
+}
+
 void UButton::SetTouchMethod(TEnumAsByte<EButtonTouchMethod::Type> InTouchMethod) {
 }
 
@@ -22,11 +30,4 @@ bool UButton::IsPressed() const {
     return false;
 }
 
-UButton::UButton() {
-    this->Style = NULL;
-    this->ClickMethod = EButtonClickMethod::DownAndUp;
-    this->TouchMethod = EButtonTouchMethod::DownAndUp;
-    this->PressMethod = EButtonPressMethod::DownAndUp;
-    this->IsFocusable = true;
-}
 

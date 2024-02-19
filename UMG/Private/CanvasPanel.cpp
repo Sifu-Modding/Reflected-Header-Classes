@@ -1,12 +1,13 @@
 #include "CanvasPanel.h"
+#include "ESlateVisibility.h"
 
-class UCanvasPanelSlot;
-class UWidget;
+UCanvasPanel::UCanvasPanel() {
+    this->bIsVariable = false;
+    this->Visibility = ESlateVisibility::SelfHitTestInvisible;
+}
 
 UCanvasPanelSlot* UCanvasPanel::AddChildToCanvas(UWidget* Content) {
     return NULL;
 }
 
-UCanvasPanel::UCanvasPanel() {
-}
 

@@ -8,5 +8,6 @@ class UAkDPXPlatformInfo : public UAkPellegrinoPlatformInfo {
     GENERATED_BODY()
 public:
     UAkDPXPlatformInfo();
+
 };
 

@@ -14,6 +14,7 @@ private:
     ULandscapeMeshProxyComponent* LandscapeMeshProxyComponent;
     
 public:
-    ALandscapeMeshProxyActor();
+    ALandscapeMeshProxyActor(const FObjectInitializer& ObjectInitializer);
+
 };
 

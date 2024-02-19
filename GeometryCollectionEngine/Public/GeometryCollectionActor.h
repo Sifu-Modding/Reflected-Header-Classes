@@ -18,7 +18,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UGeometryCollectionDebugDrawComponent* GeometryCollectionDebugDrawComponent;
     
-    AGeometryCollectionActor();
+    AGeometryCollectionActor(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool RaycastSingle(FVector Start, FVector End, FHitResult& OutHit) const;
     

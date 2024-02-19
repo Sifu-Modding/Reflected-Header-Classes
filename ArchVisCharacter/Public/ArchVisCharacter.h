@@ -31,6 +31,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MouseSensitivityScale_Yaw;
     
-    AArchVisCharacter();
+    AArchVisCharacter(const FObjectInitializer& ObjectInitializer);
+
 };
 

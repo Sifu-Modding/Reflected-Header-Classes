@@ -5,3 +5,4 @@ UPawnAction_Sequence::UPawnAction_Sequence() {
     this->RecentActionCopy = NULL;
 }
 
+

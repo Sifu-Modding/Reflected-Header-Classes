@@ -1,6 +1,16 @@
 #include "GeometryCacheComponent.h"
 
-class UGeometryCache;
+UGeometryCacheComponent::UGeometryCacheComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->GeometryCache = NULL;
+    this->bRunning = true;
+    this->bLooping = true;
+    this->StartTimeOffset = 0.00f;
+    this->PlaybackSpeed = 1.00f;
+    this->NumTracks = 0;
+    this->ElapsedTime = 0.00f;
+    this->Duration = 0.00f;
+    this->bManualTick = false;
+}
 
 void UGeometryCacheComponent::TickAtThisTime(const float Time, bool bInIsRunning, bool bInBackwards, bool bInIsLooping) {
 }
@@ -72,15 +82,4 @@ float UGeometryCacheComponent::GetAnimationTime() const {
     return 0.0f;
 }
 
-UGeometryCacheComponent::UGeometryCacheComponent() {
-    this->GeometryCache = NULL;
-    this->bRunning = true;
-    this->bLooping = true;
-    this->StartTimeOffset = 0.00f;
-    this->PlaybackSpeed = 1.00f;
-    this->NumTracks = 0;
-    this->ElapsedTime = 0.00f;
-    this->Duration = 0.00f;
-    this->bManualTick = false;
-}
 

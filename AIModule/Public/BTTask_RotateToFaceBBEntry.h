@@ -3,7 +3,7 @@
 #include "BTTask_BlackboardBase.h"
 #include "BTTask_RotateToFaceBBEntry.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS(Blueprintable, Config=Engine)
 class AIMODULE_API UBTTask_RotateToFaceBBEntry : public UBTTask_BlackboardBase {
     GENERATED_BODY()
 public:
@@ -13,5 +13,6 @@ protected:
     
 public:
     UBTTask_RotateToFaceBBEntry();
+
 };
 

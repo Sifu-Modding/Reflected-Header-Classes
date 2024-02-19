@@ -16,7 +16,7 @@ public:
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     FMovieSceneFloatChannel Translation[2];
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     FMovieSceneFloatChannel Rotation;
     
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -26,7 +26,8 @@ public:
     FMovieSceneFloatChannel Shear[2];
     
     UMovieScene2DTransformSection();
-    
+
+
     // Fix for true pure virtual functions not being implemented
 };
 

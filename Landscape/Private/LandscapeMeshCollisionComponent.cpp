@@ -1,5 +1,7 @@
 #include "LandscapeMeshCollisionComponent.h"
 
-ULandscapeMeshCollisionComponent::ULandscapeMeshCollisionComponent() {
+ULandscapeMeshCollisionComponent::ULandscapeMeshCollisionComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bAlwaysCreatePhysicsState = true;
 }
+
 

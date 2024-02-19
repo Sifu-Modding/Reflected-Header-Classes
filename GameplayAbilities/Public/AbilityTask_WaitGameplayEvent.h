@@ -21,6 +21,7 @@ public:
     UAbilitySystemComponent* OptionalExternalTarget;
     
     UAbilityTask_WaitGameplayEvent();
+
     UFUNCTION(BlueprintCallable)
     static UAbilityTask_WaitGameplayEvent* WaitGameplayEvent(UGameplayAbility* OwningAbility, FGameplayTag EventTag, AActor* NewOptionalExternalTarget, bool OnlyTriggerOnce, bool OnlyMatchExact);
     

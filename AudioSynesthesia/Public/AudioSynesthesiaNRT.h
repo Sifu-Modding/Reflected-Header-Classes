@@ -8,5 +8,6 @@ class AUDIOSYNESTHESIA_API UAudioSynesthesiaNRT : public UAudioAnalyzerNRT {
     GENERATED_BODY()
 public:
     UAudioSynesthesiaNRT();
+
 };
 

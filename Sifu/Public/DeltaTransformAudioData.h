@@ -18,6 +18,7 @@ public:
     TArray<FDeltaTransformAudioStep> m_Steps;
     
     UDeltaTransformAudioData();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UAkAudioEvent* GetAudioEvent(FTransform _from, FTransform _to) const;
     

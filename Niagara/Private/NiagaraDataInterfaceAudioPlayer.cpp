@@ -9,3 +9,4 @@ UNiagaraDataInterfaceAudioPlayer::UNiagaraDataInterfaceAudioPlayer() {
     this->bStopWhenComponentIsDestroyed = true;
 }
 
+

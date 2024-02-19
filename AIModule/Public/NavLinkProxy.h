@@ -34,7 +34,8 @@ protected:
     FSmartLinkReachedSignature OnSmartLinkReached;
     
 public:
-    ANavLinkProxy();
+    ANavLinkProxy(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetSmartLinkEnabled(bool bEnabled);
     
@@ -50,7 +51,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool HasMovingAgents() const;
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

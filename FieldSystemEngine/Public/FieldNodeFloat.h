@@ -7,6 +7,7 @@ UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FIELDSYSTEMENGINE_API UFieldNodeFloat : public UFieldNodeBase {
     GENERATED_BODY()
 public:
-    UFieldNodeFloat();
+    UFieldNodeFloat(const FObjectInitializer& ObjectInitializer);
+
 };
 

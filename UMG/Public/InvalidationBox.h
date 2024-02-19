@@ -16,6 +16,7 @@ protected:
     
 public:
     UInvalidationBox();
+
     UFUNCTION(BlueprintCallable)
     void SetCanCache(bool CanCache);
     

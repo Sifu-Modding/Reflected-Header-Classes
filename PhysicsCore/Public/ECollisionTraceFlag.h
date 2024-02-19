@@ -8,6 +8,5 @@ enum ECollisionTraceFlag {
     CTF_UseSimpleAndComplex,
     CTF_UseSimpleAsComplex,
     CTF_UseComplexAsSimple,
-    CTF_MAX UMETA(Hidden),
 };
 

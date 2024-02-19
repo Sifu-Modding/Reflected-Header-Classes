@@ -8,5 +8,6 @@ class NIAGARACORE_API UNiagaraMergeable : public UObject {
     GENERATED_BODY()
 public:
     UNiagaraMergeable();
+
 };
 

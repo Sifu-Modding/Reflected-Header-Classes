@@ -13,6 +13,7 @@ class UMG_API USlateBlueprintLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     USlateBlueprintLibrary();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static FVector2D TransformVectorLocalToAbsolute(const FGeometry& Geometry, FVector2D LocalVector);
     

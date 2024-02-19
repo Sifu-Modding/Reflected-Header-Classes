@@ -1,7 +1,21 @@
 #include "WidgetInteractionComponent.h"
 
-class UWidget;
-class UWidgetComponent;
+UWidgetInteractionComponent::UWidgetInteractionComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bAutoActivate = true;
+    this->VirtualUserIndex = 0;
+    this->PointerIndex = 0;
+    this->TraceChannel = ECC_Visibility;
+    this->InteractionDistance = 500.00f;
+    this->InteractionSource = EWidgetInteractionSource::World;
+    this->bEnableHitTesting = true;
+    this->bShowDebug = false;
+    this->DebugSphereLineThickness = 2.00f;
+    this->DebugLineThickness = 1.00f;
+    this->HoveredWidgetComponent = NULL;
+    this->bIsHoveredWidgetInteractable = false;
+    this->bIsHoveredWidgetFocusable = false;
+    this->bIsHoveredWidgetHitTestVisible = false;
+}
 
 void UWidgetInteractionComponent::SetFocus(UWidget* FocusWidget) {
 }
@@ -58,19 +72,4 @@ FVector2D UWidgetInteractionComponent::Get2DHitLocation() const {
     return FVector2D{};
 }
 
-UWidgetInteractionComponent::UWidgetInteractionComponent() {
-    this->VirtualUserIndex = 0;
-    this->PointerIndex = 0;
-    this->TraceChannel = ECC_Visibility;
-    this->InteractionDistance = 500.00f;
-    this->InteractionSource = EWidgetInteractionSource::World;
-    this->bEnableHitTesting = true;
-    this->bShowDebug = false;
-    this->DebugSphereLineThickness = 2.00f;
-    this->DebugLineThickness = 1.00f;
-    this->HoveredWidgetComponent = NULL;
-    this->bIsHoveredWidgetInteractable = false;
-    this->bIsHoveredWidgetFocusable = false;
-    this->bIsHoveredWidgetHitTestVisible = false;
-}
 

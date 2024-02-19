@@ -1,9 +1,9 @@
 #include "VariantSet.h"
 
-class ULevelVariantSets;
-class UObject;
-class UTexture2D;
-class UVariant;
+UVariantSet::UVariantSet() {
+    this->bExpanded = true;
+    this->Thumbnail = NULL;
+}
 
 void UVariantSet::SetThumbnailFromTexture(UTexture2D* NewThumbnail) {
 }
@@ -44,8 +44,4 @@ FText UVariantSet::GetDisplayText() const {
     return FText::GetEmpty();
 }
 
-UVariantSet::UVariantSet() {
-    this->bExpanded = true;
-    this->Thumbnail = NULL;
-}
 

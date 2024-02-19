@@ -7,17 +7,11 @@ public class AkAudio : ModuleRules {
         ShadowVariableWarningLevel = WarningLevel.Warning;
         
         PublicDependencyModuleNames.AddRange(new string[] {
-            "Chaos",
             "Core",
             "CoreUObject",
-            "DeveloperSettings",
             "Engine",
-            "InputCore",
             "MovieScene",
-            "MovieSceneTracks",
             "PhysicsCore",
-            "PropertyPath",
-            "Slate",
             "SlateCore",
             "UMG",
         });

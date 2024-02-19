@@ -17,3 +17,4 @@ UNiagaraMeshRendererProperties::UNiagaraMeshRendererProperties() {
     this->RendererVisibility = 0;
 }
 
+

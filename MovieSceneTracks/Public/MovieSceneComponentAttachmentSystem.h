@@ -9,7 +9,8 @@ class UMovieSceneComponentAttachmentSystem : public UMovieSceneEntityInstantiato
     GENERATED_BODY()
 public:
     UMovieSceneComponentAttachmentSystem();
-    
+
+
     // Fix for true pure virtual functions not being implemented
 };
 

@@ -11,5 +11,6 @@ public:
     UClass* BaseClass;
     
     UBlackboardKeyType_Class();
+
 };
 

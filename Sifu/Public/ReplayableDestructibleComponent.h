@@ -54,9 +54,10 @@ private:
     EReplayableDestructibleState m_eReplayableDestructibleState;
     
 public:
-    UReplayableDestructibleComponent();
+    UReplayableDestructibleComponent(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 private:
     UFUNCTION(BlueprintCallable)
     void OnReplayTimeDilationChanged(float _fDilation);

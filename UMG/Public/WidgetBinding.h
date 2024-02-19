@@ -10,6 +10,7 @@ class UMG_API UWidgetBinding : public UPropertyBinding {
     GENERATED_BODY()
 public:
     UWidgetBinding();
+
     UFUNCTION(BlueprintCallable)
     UWidget* GetValue() const;
     

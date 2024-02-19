@@ -6,3 +6,4 @@ UMoviePipelineBurnInSetting::UMoviePipelineBurnInSetting() {
     this->BurnInWidgetInstance = NULL;
 }
 
+

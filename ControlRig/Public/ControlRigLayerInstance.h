@@ -9,7 +9,8 @@ class CONTROLRIG_API UControlRigLayerInstance : public UAnimInstance, public ISe
     GENERATED_BODY()
 public:
     UControlRigLayerInstance();
-    
+
+
     // Fix for true pure virtual functions not being implemented
 };
 

@@ -11,5 +11,6 @@ public:
     TArray<int32> IntData;
     
     UNiagaraDataInterfaceArrayInt32();
+
 };
 

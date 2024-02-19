@@ -8,5 +8,6 @@ class NAVIGATIONSYSTEM_API UNavArea_Default : public UNavArea {
     GENERATED_BODY()
 public:
     UNavArea_Default();
+
 };
 

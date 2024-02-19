@@ -42,7 +42,8 @@ private:
     FAkGeometryData GeometryData;
     
 public:
-    UAkGeometryComponent();
+    UAkGeometryComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void UpdateGeometry();
     

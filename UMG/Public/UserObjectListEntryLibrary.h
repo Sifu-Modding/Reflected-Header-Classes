@@ -12,6 +12,7 @@ class UMG_API UUserObjectListEntryLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UUserObjectListEntryLibrary();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static UObject* GetListItemObject(TScriptInterface<IUserObjectListEntry> UserObjectListEntry);
     

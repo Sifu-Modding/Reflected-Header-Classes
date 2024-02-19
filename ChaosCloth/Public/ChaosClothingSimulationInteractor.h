@@ -8,5 +8,6 @@ class CHAOSCLOTH_API UChaosClothingSimulationInteractor : public UClothingSimula
     GENERATED_BODY()
 public:
     UChaosClothingSimulationInteractor();
+
 };
 

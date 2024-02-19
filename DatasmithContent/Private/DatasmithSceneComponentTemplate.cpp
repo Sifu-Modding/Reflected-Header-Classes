@@ -5,3 +5,4 @@ UDatasmithSceneComponentTemplate::UDatasmithSceneComponentTemplate() {
     this->bVisible = false;
 }
 
+

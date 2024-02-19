@@ -25,6 +25,7 @@ protected:
     
 public:
     UAbilityTask_WaitAttributeChange();
+
     UFUNCTION(BlueprintCallable)
     static UAbilityTask_WaitAttributeChange* WaitForAttributeChangeWithComparison(UGameplayAbility* OwningAbility, FGameplayAttribute InAttribute, FGameplayTag InWithTag, FGameplayTag InWithoutTag, TEnumAsByte<EWaitAttributeChangeComparison::Type> InComparisonType, float InComparisonValue, bool TriggerOnce, AActor* OptionalExternalOwner);
     

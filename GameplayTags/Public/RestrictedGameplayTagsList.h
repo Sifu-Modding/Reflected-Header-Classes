@@ -15,5 +15,6 @@ public:
     TArray<FRestrictedGameplayTagTableRow> RestrictedGameplayTagList;
     
     URestrictedGameplayTagsList();
+
 };
 

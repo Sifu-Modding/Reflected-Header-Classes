@@ -1,6 +1,9 @@
 #include "AREnvironmentProbeComponent.h"
 #include "Net/UnrealNetwork.h"
 
+UAREnvironmentProbeComponent::UAREnvironmentProbeComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+}
+
 void UAREnvironmentProbeComponent::ServerUpdatePayload_Implementation(const FAREnvironmentProbeUpdatePayload& NewPayload) {
 }
 bool UAREnvironmentProbeComponent::ServerUpdatePayload_Validate(const FAREnvironmentProbeUpdatePayload& NewPayload) {
@@ -15,6 +18,4 @@ void UAREnvironmentProbeComponent::GetLifetimeReplicatedProps(TArray<FLifetimePr
     DOREPLIFETIME(UAREnvironmentProbeComponent, ReplicatedPayload);
 }
 
-UAREnvironmentProbeComponent::UAREnvironmentProbeComponent() {
-}
 

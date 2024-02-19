@@ -41,6 +41,7 @@ public:
     FOnMenuOpenChangedEvent OnMenuOpenChanged;
     
     UMenuAnchor();
+
     UFUNCTION(BlueprintCallable)
     void ToggleOpen(bool bFocusOnOpen);
     

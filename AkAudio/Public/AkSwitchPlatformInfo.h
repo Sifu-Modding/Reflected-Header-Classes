@@ -8,5 +8,6 @@ class UAkSwitchPlatformInfo : public UAkPlatformInfo {
     GENERATED_BODY()
 public:
     UAkSwitchPlatformInfo();
+
 };
 

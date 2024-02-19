@@ -4,7 +4,7 @@
 
 UENUM(BlueprintType)
 enum class EInputCaptureState : uint8 {
-    Begin = 0x1,
+    Begin = 1,
     Continue,
     End,
     Ignore,

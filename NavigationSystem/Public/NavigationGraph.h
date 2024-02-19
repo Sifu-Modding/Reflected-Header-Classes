@@ -7,6 +7,7 @@ UCLASS(Abstract, Blueprintable, MinimalAPI)
 class ANavigationGraph : public ANavigationData {
     GENERATED_BODY()
 public:
-    ANavigationGraph();
+    ANavigationGraph(const FObjectInitializer& ObjectInitializer);
+
 };
 

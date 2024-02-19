@@ -8,5 +8,6 @@ class MOVIESCENECAPTURE_API UFrameGrabberProtocol : public UMovieSceneImageCaptu
     GENERATED_BODY()
 public:
     UFrameGrabberProtocol();
+
 };
 

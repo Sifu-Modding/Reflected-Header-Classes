@@ -9,7 +9,8 @@ class UMovieSceneComponentMobilitySystem : public UMovieSceneEntityInstantiatorS
     GENERATED_BODY()
 public:
     UMovieSceneComponentMobilitySystem();
-    
+
+
     // Fix for true pure virtual functions not being implemented
 };
 

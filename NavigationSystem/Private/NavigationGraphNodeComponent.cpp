@@ -1,7 +1,8 @@
 #include "NavigationGraphNodeComponent.h"
 
-UNavigationGraphNodeComponent::UNavigationGraphNodeComponent() {
+UNavigationGraphNodeComponent::UNavigationGraphNodeComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->NextNodeComponent = NULL;
     this->PrevNodeComponent = NULL;
 }
+
 

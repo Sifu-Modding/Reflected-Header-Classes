@@ -7,7 +7,7 @@
 
 class ANavigationData;
 
-UCLASS(Blueprintable, Config=Engine, DefaultConfig, NonTransient)
+UCLASS(Blueprintable, DefaultConfig, NonTransient, Config=Engine)
 class AIMODULE_API UCrowdManager : public UCrowdManagerBase {
     GENERATED_BODY()
 public:
@@ -50,5 +50,6 @@ protected:
     
 public:
     UCrowdManager();
+
 };
 

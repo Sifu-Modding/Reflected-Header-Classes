@@ -5,3 +5,4 @@ UNiagaraDataInterfaceRenderTarget2DArray::UNiagaraDataInterfaceRenderTarget2DArr
     this->bOverrideFormat = false;
 }
 
+

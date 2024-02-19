@@ -8,5 +8,6 @@ class MOVIESCENECAPTURE_API UImageSequenceProtocol_BMP : public UImageSequencePr
     GENERATED_BODY()
 public:
     UImageSequenceProtocol_BMP();
+
 };
 

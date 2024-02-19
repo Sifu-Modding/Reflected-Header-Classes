@@ -8,5 +8,6 @@ class UMoviePipelineCustomTimeStep : public UEngineCustomTimeStep {
     GENERATED_BODY()
 public:
     UMoviePipelineCustomTimeStep();
+
 };
 

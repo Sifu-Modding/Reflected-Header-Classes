@@ -9,7 +9,8 @@ class UMovieSceneNiagaraSystemTrack : public UMovieSceneNiagaraTrack, public IMo
     GENERATED_BODY()
 public:
     UMovieSceneNiagaraSystemTrack();
-    
+
+
     // Fix for true pure virtual functions not being implemented
 };
 

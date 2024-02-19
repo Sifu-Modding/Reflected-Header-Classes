@@ -106,5 +106,6 @@ public:
     FNiagaraVariableAttributeBinding V1RangeOverrideBinding;
     
     UNiagaraRibbonRendererProperties();
+
 };
 

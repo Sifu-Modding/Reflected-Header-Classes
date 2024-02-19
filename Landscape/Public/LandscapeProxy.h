@@ -226,7 +226,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TMap<UTexture2D*, ULandscapeWeightmapUsage*> WeightmapUsageMap;
     
-    ALandscapeProxy();
+    ALandscapeProxy(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetLandscapeMaterialVectorParameterValue(FName ParameterName, FLinearColor Value);
     

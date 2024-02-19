@@ -8,5 +8,6 @@ class CLOTHINGSYSTEMRUNTIMECOMMON_API UClothConfigCommon : public UClothConfigBa
     GENERATED_BODY()
 public:
     UClothConfigCommon();
+
 };
 

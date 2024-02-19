@@ -5,3 +5,4 @@ UInputRouter::UInputRouter() {
     this->bAutoInvalidateOnCapture = false;
 }
 
+

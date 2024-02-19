@@ -9,7 +9,8 @@ class SLATECORE_API USlateWidgetStyleContainerBase : public UObject, public ISla
     GENERATED_BODY()
 public:
     USlateWidgetStyleContainerBase();
-    
+
+
     // Fix for true pure virtual functions not being implemented
 };
 

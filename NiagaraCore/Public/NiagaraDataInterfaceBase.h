@@ -8,5 +8,6 @@ class NIAGARACORE_API UNiagaraDataInterfaceBase : public UNiagaraMergeable {
     GENERATED_BODY()
 public:
     UNiagaraDataInterfaceBase();
+
 };
 

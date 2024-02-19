@@ -8,8 +8,8 @@ namespace EXRSystemFlags {
         NoFlags,
         IsAR,
         IsTablet,
-        IsHeadMounted = 0x4,
-        SupportsHandTracking = 0x8,
+        IsHeadMounted = 4,
+        SupportsHandTracking = 8,
     };
 }
 

@@ -8,5 +8,6 @@ class CLOTHINGSYSTEMRUNTIMEINTERFACE_API UClothingSimulationFactory : public UOb
     GENERATED_BODY()
 public:
     UClothingSimulationFactory();
+
 };
 

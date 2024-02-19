@@ -26,7 +26,8 @@ public:
     TArray<FBTDecoratorLogic> RootDecoratorOps;
     
     UBehaviorTree();
-    
+
+
     // Fix for true pure virtual functions not being implemented
     UFUNCTION(BlueprintCallable)
     UBlackboardData* GetBlackboardAsset() const override PURE_VIRTUAL(GetBlackboardAsset, return NULL;);

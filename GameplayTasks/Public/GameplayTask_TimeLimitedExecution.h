@@ -14,5 +14,6 @@ public:
     FTaskFinishDelegate OnTimeExpired;
     
     UGameplayTask_TimeLimitedExecution();
+
 };
 

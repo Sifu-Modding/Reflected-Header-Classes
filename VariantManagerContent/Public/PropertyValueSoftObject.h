@@ -8,5 +8,6 @@ class VARIANTMANAGERCONTENT_API UPropertyValueSoftObject : public UPropertyValue
     GENERATED_BODY()
 public:
     UPropertyValueSoftObject();
+
 };
 

@@ -1,6 +1,7 @@
 #include "BTTask_MoveTo.h"
 
 UBTTask_MoveTo::UBTTask_MoveTo() {
+    this->NodeName = TEXT("Move To");
     this->AcceptableRadius = 5.00f;
     this->FilterClass = NULL;
     this->ObservedBlackboardValueTolerance = 4.75f;
@@ -14,4 +15,5 @@ UBTTask_MoveTo::UBTTask_MoveTo() {
     this->bStopOnOverlap = true;
     this->bStopOnOverlapNeedsUpdate = true;
 }
+
 

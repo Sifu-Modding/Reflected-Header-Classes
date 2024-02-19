@@ -1,5 +1,6 @@
 #include "ReplayReplicationProxy.h"
 
-AReplayReplicationProxy::AReplayReplicationProxy() {
+AReplayReplicationProxy::AReplayReplicationProxy(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

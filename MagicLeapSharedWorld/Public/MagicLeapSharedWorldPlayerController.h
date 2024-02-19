@@ -9,7 +9,8 @@ UCLASS(Blueprintable)
 class MAGICLEAPSHAREDWORLD_API AMagicLeapSharedWorldPlayerController : public APlayerController {
     GENERATED_BODY()
 public:
-    AMagicLeapSharedWorldPlayerController();
+    AMagicLeapSharedWorldPlayerController(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void ServerSetLocalWorldData(const FMagicLeapSharedWorldLocalData& LocalWorldReplicationData);
     

@@ -21,6 +21,7 @@ public:
     FSpawnActorDelegate DidNotSpawn;
     
     UAbilityTask_SpawnActor();
+
     UFUNCTION(BlueprintCallable)
     static UAbilityTask_SpawnActor* SpawnActor(UGameplayAbility* OwningAbility, FGameplayAbilityTargetDataHandle TargetData, TSubclassOf<AActor> Class);
     

@@ -4,3 +4,4 @@ UMovieScenePrimitiveMaterialTrack::UMovieScenePrimitiveMaterialTrack() {
     this->MaterialIndex = 0;
 }
 
+

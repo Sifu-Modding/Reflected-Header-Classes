@@ -8,5 +8,6 @@ class UNiagaraEditorDataBase : public UObject {
     GENERATED_BODY()
 public:
     UNiagaraEditorDataBase();
+
 };
 

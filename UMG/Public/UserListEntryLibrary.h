@@ -12,6 +12,7 @@ class UMG_API UUserListEntryLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UUserListEntryLibrary();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool IsListItemSelected(TScriptInterface<IUserListEntry> UserListEntry);
     

@@ -8,5 +8,6 @@ class MOVIESCENE_API UMovieSceneTrackInstanceInstantiator : public UMovieSceneEn
     GENERATED_BODY()
 public:
     UMovieSceneTrackInstanceInstantiator();
+
 };
 

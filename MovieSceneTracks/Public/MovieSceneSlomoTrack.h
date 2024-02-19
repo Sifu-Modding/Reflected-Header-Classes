@@ -9,7 +9,8 @@ class UMovieSceneSlomoTrack : public UMovieSceneFloatTrack, public IMovieSceneTr
     GENERATED_BODY()
 public:
     UMovieSceneSlomoTrack();
-    
+
+
     // Fix for true pure virtual functions not being implemented
 };
 

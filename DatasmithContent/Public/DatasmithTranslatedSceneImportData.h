@@ -8,5 +8,6 @@ class DATASMITHCONTENT_API UDatasmithTranslatedSceneImportData : public UDatasmi
     GENERATED_BODY()
 public:
     UDatasmithTranslatedSceneImportData();
+
 };
 

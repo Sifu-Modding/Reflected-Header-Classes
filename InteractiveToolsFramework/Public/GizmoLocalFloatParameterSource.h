@@ -15,5 +15,6 @@ public:
     FGizmoFloatParameterChange LastChange;
     
     UGizmoLocalFloatParameterSource();
+
 };
 

@@ -8,5 +8,6 @@ class AIMODULE_API UEnvQueryTypes : public UObject {
     GENERATED_BODY()
 public:
     UEnvQueryTypes();
+
 };
 

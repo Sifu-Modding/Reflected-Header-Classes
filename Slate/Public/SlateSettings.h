@@ -3,7 +3,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
 #include "SlateSettings.generated.h"
 
-UCLASS(Blueprintable, Config=Engine, DefaultConfig)
+UCLASS(Blueprintable, DefaultConfig, Config=Engine)
 class SLATE_API USlateSettings : public UObject {
     GENERATED_BODY()
 public:
@@ -11,5 +11,6 @@ public:
     bool bExplicitCanvasChildZOrder;
     
     USlateSettings();
+
 };
 

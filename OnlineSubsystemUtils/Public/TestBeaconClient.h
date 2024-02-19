@@ -7,7 +7,8 @@ UCLASS(Blueprintable, NonTransient)
 class ONLINESUBSYSTEMUTILS_API ATestBeaconClient : public AOnlineBeaconClient {
     GENERATED_BODY()
 public:
-    ATestBeaconClient();
+    ATestBeaconClient(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
     void ServerPong();
     

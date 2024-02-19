@@ -7,3 +7,4 @@ UNiagaraSettings::UNiagaraSettings() {
     this->DefaultEffectTypePtr = NULL;
 }
 
+

@@ -8,5 +8,6 @@ class MOVIESCENETRACKS_API UMovieSceneEulerTransformPropertySystem : public UMov
     GENERATED_BODY()
 public:
     UMovieSceneEulerTransformPropertySystem();
+
 };
 

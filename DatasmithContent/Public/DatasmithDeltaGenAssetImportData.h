@@ -8,5 +8,6 @@ class DATASMITHCONTENT_API UDatasmithDeltaGenAssetImportData : public UDatasmith
     GENERATED_BODY()
 public:
     UDatasmithDeltaGenAssetImportData();
+
 };
 

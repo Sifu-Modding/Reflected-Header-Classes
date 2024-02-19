@@ -28,6 +28,7 @@ protected:
     
 public:
     UAITask_SVONMoveTo();
+
     UFUNCTION(BlueprintCallable)
     static UAITask_SVONMoveTo* SVONAIMoveTo(AAIController* Controller, FVector GoalLocation, bool aUseAsyncPathfinding, AActor* GoalActor, float AcceptanceRadius, TEnumAsByte<EAIOptionFlag::Type> StopOnOverlap, bool bLockAILogic, bool bUseContinuosGoalTracking);
     

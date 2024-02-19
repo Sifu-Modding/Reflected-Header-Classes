@@ -8,5 +8,6 @@ class MOVIESCENE_API UMovieSceneGenericBoundObjectInstantiator : public UMovieSc
     GENERATED_BODY()
 public:
     UMovieSceneGenericBoundObjectInstantiator();
+
 };
 

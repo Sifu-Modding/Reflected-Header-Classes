@@ -5,3 +5,4 @@ UGameplayCueNotify_HitImpact::UGameplayCueNotify_HitImpact() {
     this->ParticleSystem = NULL;
 }
 
+

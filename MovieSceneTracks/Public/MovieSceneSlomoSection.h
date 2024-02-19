@@ -8,9 +8,10 @@ UCLASS(Blueprintable, MinimalAPI)
 class UMovieSceneSlomoSection : public UMovieSceneSection {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     FMovieSceneFloatChannel FloatCurve;
     
     UMovieSceneSlomoSection();
+
 };
 

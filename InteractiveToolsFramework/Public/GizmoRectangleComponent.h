@@ -32,6 +32,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 SegmentFlags;
     
-    UGizmoRectangleComponent();
+    UGizmoRectangleComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

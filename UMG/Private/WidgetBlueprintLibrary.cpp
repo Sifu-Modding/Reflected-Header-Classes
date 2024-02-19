@@ -1,18 +1,8 @@
 #include "WidgetBlueprintLibrary.h"
 #include "Templates/SubclassOf.h"
 
-class APlayerController;
-class IInterface;
-class UInterface;
-class UDragDropOperation;
-class UFont;
-class UMaterialInstanceDynamic;
-class UMaterialInterface;
-class UObject;
-class USlateBrushAsset;
-class UTexture2D;
-class UUserWidget;
-class UWidget;
+UWidgetBlueprintLibrary::UWidgetBlueprintLibrary() {
+}
 
 FEventReply UWidgetBlueprintLibrary::UnlockMouse(FEventReply& Reply) {
     return FEventReply{};
@@ -211,6 +201,4 @@ FEventReply UWidgetBlueprintLibrary::CaptureJoystick(FEventReply& Reply, UWidget
 void UWidgetBlueprintLibrary::CancelDragDrop() {
 }
 
-UWidgetBlueprintLibrary::UWidgetBlueprintLibrary() {
-}
 

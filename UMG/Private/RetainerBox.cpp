@@ -1,7 +1,14 @@
 #include "RetainerBox.h"
 
-class UMaterialInstanceDynamic;
-class UMaterialInterface;
+URetainerBox::URetainerBox() {
+    this->bRetainRender = true;
+    this->RenderOnInvalidation = false;
+    this->RenderOnPhase = true;
+    this->Phase = 0;
+    this->PhaseCount = 1;
+    this->EffectMaterial = NULL;
+    this->TextureParameter = TEXT("Texture");
+}
 
 void URetainerBox::SetTextureParameter(FName NewTextureParameter) {
 }
@@ -22,13 +29,4 @@ UMaterialInstanceDynamic* URetainerBox::GetEffectMaterial() const {
     return NULL;
 }
 
-URetainerBox::URetainerBox() {
-    this->bRetainRender = true;
-    this->RenderOnInvalidation = false;
-    this->RenderOnPhase = true;
-    this->Phase = 0;
-    this->PhaseCount = 1;
-    this->EffectMaterial = NULL;
-    this->TextureParameter = TEXT("Texture");
-}
 

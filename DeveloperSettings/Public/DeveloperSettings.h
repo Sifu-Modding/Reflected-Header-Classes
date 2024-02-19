@@ -8,5 +8,6 @@ class DEVELOPERSETTINGS_API UDeveloperSettings : public UObject {
     GENERATED_BODY()
 public:
     UDeveloperSettings();
+
 };
 

@@ -8,5 +8,6 @@ class UAkWinAnvilPlatformInfo : public UAkWinGDKPlatformInfo {
     GENERATED_BODY()
 public:
     UAkWinAnvilPlatformInfo();
+
 };
 

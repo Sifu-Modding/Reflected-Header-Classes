@@ -5,3 +5,4 @@ UClothPhysicalMeshDataBase_Legacy::UClothPhysicalMeshDataBase_Legacy() {
     this->MaxBoneWeights = 0;
 }
 
+

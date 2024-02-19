@@ -18,6 +18,7 @@ private:
     
 public:
     UMovieSceneLevelVisibilitySection();
+
     UFUNCTION(BlueprintCallable)
     void SetVisibility(ELevelVisibility InVisibility);
     
@@ -30,7 +31,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     TArray<FName> GetLevelNames() const;
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

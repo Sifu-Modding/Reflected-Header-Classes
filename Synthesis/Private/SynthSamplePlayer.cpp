@@ -1,6 +1,8 @@
 #include "SynthSamplePlayer.h"
 
-class USoundWave;
+USynthSamplePlayer::USynthSamplePlayer(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->SoundWave = NULL;
+}
 
 void USynthSamplePlayer::SetSoundWave(USoundWave* InSoundWave) {
 }
@@ -33,7 +35,4 @@ float USynthSamplePlayer::GetCurrentPlaybackProgressPercent() const {
     return 0.0f;
 }
 
-USynthSamplePlayer::USynthSamplePlayer() {
-    this->SoundWave = NULL;
-}
 

@@ -18,5 +18,6 @@ public:
     UPawnAction* RecentActionCopy;
     
     UPawnAction_Sequence();
+
 };
 

@@ -13,7 +13,8 @@ public:
     EMovieSceneBuiltInEasing Type;
     
     UMovieSceneBuiltInEasingFunction();
-    
+
+
     // Fix for true pure virtual functions not being implemented
 };
 

@@ -1,7 +1,7 @@
 #include "DatasmithContentBlueprintLibrary.h"
 
-class UDatasmithAssetUserData;
-class UObject;
+UDatasmithContentBlueprintLibrary::UDatasmithContentBlueprintLibrary() {
+}
 
 FString UDatasmithContentBlueprintLibrary::GetDatasmithUserDataValueForKey(UObject* Object, FName Key) {
     return TEXT("");
@@ -14,6 +14,4 @@ UDatasmithAssetUserData* UDatasmithContentBlueprintLibrary::GetDatasmithUserData
     return NULL;
 }
 
-UDatasmithContentBlueprintLibrary::UDatasmithContentBlueprintLibrary() {
-}
 

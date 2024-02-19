@@ -293,5 +293,6 @@ public:
     ERuntimeVirtualTextureMainPassType VirtualTextureRenderPassType;
     
     UFoliageType();
+
 };
 

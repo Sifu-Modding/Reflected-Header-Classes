@@ -21,6 +21,7 @@ public:
     float MinDesiredSlotHeight;
     
     UUniformGridPanel();
+
     UFUNCTION(BlueprintCallable)
     void SetSlotPadding(FMargin InSlotPadding);
     

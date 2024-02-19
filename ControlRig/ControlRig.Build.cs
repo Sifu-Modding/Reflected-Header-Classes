@@ -9,22 +9,15 @@ public class ControlRig : ModuleRules {
         PublicDependencyModuleNames.AddRange(new string[] {
             "AnimGraphRuntime",
             "AnimationCore",
-            "AudioMixer",
             "Core",
             "CoreUObject",
             "DeveloperSettings",
             "Engine",
-            "InputCore",
             "LevelSequence",
-            "MediaAssets",
-            "MediaUtils",
             "MovieScene",
             "MovieSceneTracks",
             "PropertyPath",
             "RigVM",
-            "Slate",
-            "SlateCore",
-            "UMG",
         });
     }
 }

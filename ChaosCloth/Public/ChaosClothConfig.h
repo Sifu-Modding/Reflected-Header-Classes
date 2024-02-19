@@ -110,5 +110,6 @@ public:
     bool bUseContinuousCollisionDetection;
     
     UChaosClothConfig();
+
 };
 

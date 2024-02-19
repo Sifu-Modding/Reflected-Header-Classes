@@ -4,7 +4,7 @@
 #include "MaterialQualityOverrides.h"
 #include "ShaderPlatformQualitySettings.generated.h"
 
-UCLASS(Blueprintable, Config=Engine, DefaultConfig, PerObjectConfig)
+UCLASS(Blueprintable, DefaultConfig, PerObjectConfig, Config=Engine)
 class MATERIALSHADERQUALITYSETTINGS_API UShaderPlatformQualitySettings : public UObject {
     GENERATED_BODY()
 public:
@@ -12,5 +12,6 @@ public:
     FMaterialQualityOverrides QualityOverrides[4];
     
     UShaderPlatformQualitySettings();
+
 };
 

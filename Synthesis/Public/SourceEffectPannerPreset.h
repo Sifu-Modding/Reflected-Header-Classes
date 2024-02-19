@@ -12,6 +12,7 @@ public:
     FSourceEffectPannerSettings Settings;
     
     USourceEffectPannerPreset();
+
     UFUNCTION(BlueprintCallable)
     void SetSettings(const FSourceEffectPannerSettings& InSettings);
     

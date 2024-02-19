@@ -7,6 +7,7 @@ UCLASS(Blueprintable)
 class AUGMENTEDREALITY_API AAROriginActor : public AActor {
     GENERATED_BODY()
 public:
-    AAROriginActor();
+    AAROriginActor(const FObjectInitializer& ObjectInitializer);
+
 };
 

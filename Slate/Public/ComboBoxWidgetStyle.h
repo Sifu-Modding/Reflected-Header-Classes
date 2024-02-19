@@ -12,5 +12,6 @@ public:
     FComboBoxStyle ComboBoxStyle;
     
     UComboBoxWidgetStyle();
+
 };
 

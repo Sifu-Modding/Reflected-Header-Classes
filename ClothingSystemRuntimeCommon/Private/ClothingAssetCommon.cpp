@@ -9,3 +9,4 @@ UClothingAssetCommon::UClothingAssetCommon() {
     this->CustomData = NULL;
 }
 
+

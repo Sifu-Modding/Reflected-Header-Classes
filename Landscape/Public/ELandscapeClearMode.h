@@ -4,9 +4,8 @@
 
 UENUM(BlueprintType)
 enum ELandscapeClearMode {
-    Clear_Weightmap = 0x1,
+    Clear_Weightmap = 1,
     Clear_Heightmap,
     Clear_All,
-    Clear_MAX UMETA(Hidden),
 };
 

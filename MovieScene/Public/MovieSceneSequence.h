@@ -8,7 +8,7 @@
 
 class UMovieSceneCompiledData;
 
-UCLASS(Blueprintable, MinimalAPI)
+UCLASS(Blueprintable, MinimalAPI, Config=Engine)
 class UMovieSceneSequence : public UMovieSceneSignedObject {
     GENERATED_BODY()
 public:
@@ -32,6 +32,7 @@ protected:
     
 public:
     UMovieSceneSequence();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     TArray<FMovieSceneObjectBindingID> FindBindingsByTag(FName InBindingName) const;
     

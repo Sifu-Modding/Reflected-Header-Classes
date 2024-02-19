@@ -1,5 +1,24 @@
 #include "CheckBox.h"
 
+UCheckBox::UCheckBox() {
+    this->CheckedState = ECheckBoxState::Unchecked;
+    this->Style = NULL;
+    this->UncheckedImage = NULL;
+    this->UncheckedHoveredImage = NULL;
+    this->UncheckedPressedImage = NULL;
+    this->CheckedImage = NULL;
+    this->CheckedHoveredImage = NULL;
+    this->CheckedPressedImage = NULL;
+    this->UndeterminedImage = NULL;
+    this->UndeterminedHoveredImage = NULL;
+    this->UndeterminedPressedImage = NULL;
+    this->HorizontalAlignment = HAlign_Fill;
+    this->ClickMethod = EButtonClickMethod::DownAndUp;
+    this->TouchMethod = EButtonTouchMethod::DownAndUp;
+    this->PressMethod = EButtonPressMethod::DownAndUp;
+    this->IsFocusable = true;
+}
+
 void UCheckBox::SetTouchMethod(TEnumAsByte<EButtonTouchMethod::Type> InTouchMethod) {
 }
 
@@ -27,22 +46,4 @@ ECheckBoxState UCheckBox::GetCheckedState() const {
     return ECheckBoxState::Unchecked;
 }
 
-UCheckBox::UCheckBox() {
-    this->CheckedState = ECheckBoxState::Unchecked;
-    this->Style = NULL;
-    this->UncheckedImage = NULL;
-    this->UncheckedHoveredImage = NULL;
-    this->UncheckedPressedImage = NULL;
-    this->CheckedImage = NULL;
-    this->CheckedHoveredImage = NULL;
-    this->CheckedPressedImage = NULL;
-    this->UndeterminedImage = NULL;
-    this->UndeterminedHoveredImage = NULL;
-    this->UndeterminedPressedImage = NULL;
-    this->HorizontalAlignment = HAlign_Fill;
-    this->ClickMethod = EButtonClickMethod::DownAndUp;
-    this->TouchMethod = EButtonTouchMethod::DownAndUp;
-    this->PressMethod = EButtonPressMethod::DownAndUp;
-    this->IsFocusable = true;
-}
 

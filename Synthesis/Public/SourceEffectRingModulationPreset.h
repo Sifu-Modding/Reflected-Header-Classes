@@ -12,6 +12,7 @@ public:
     FSourceEffectRingModulationSettings Settings;
     
     USourceEffectRingModulationPreset();
+
     UFUNCTION(BlueprintCallable)
     void SetSettings(const FSourceEffectRingModulationSettings& InSettings);
     

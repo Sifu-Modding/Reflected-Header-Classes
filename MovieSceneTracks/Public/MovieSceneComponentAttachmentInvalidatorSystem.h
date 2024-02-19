@@ -8,5 +8,6 @@ class UMovieSceneComponentAttachmentInvalidatorSystem : public UMovieSceneEntity
     GENERATED_BODY()
 public:
     UMovieSceneComponentAttachmentInvalidatorSystem();
+
 };
 

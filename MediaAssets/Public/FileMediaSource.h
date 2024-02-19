@@ -14,6 +14,7 @@ public:
     bool PrecacheFile;
     
     UFileMediaSource();
+
     UFUNCTION(BlueprintCallable)
     void SetFilePath(const FString& Path);
     

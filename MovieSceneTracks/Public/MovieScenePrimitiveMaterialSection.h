@@ -12,5 +12,6 @@ public:
     FMovieSceneObjectPathChannel MaterialChannel;
     
     UMovieScenePrimitiveMaterialSection();
+
 };
 

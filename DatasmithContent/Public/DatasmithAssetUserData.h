@@ -11,5 +11,6 @@ public:
     TMap<FName, FString> MetaData;
     
     UDatasmithAssetUserData();
+
 };
 

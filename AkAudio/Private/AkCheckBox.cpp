@@ -1,5 +1,11 @@
 #include "AkCheckBox.h"
 
+UAkCheckBox::UAkCheckBox() {
+    this->CheckedState = ECheckBoxState::Unchecked;
+    this->HorizontalAlignment = HAlign_Fill;
+    this->IsFocusable = true;
+}
+
 void UAkCheckBox::SetIsChecked(bool InIsChecked) {
 }
 
@@ -32,9 +38,4 @@ FGuid UAkCheckBox::GetAkItemId() const {
     return FGuid{};
 }
 
-UAkCheckBox::UAkCheckBox() {
-    this->CheckedState = ECheckBoxState::Unchecked;
-    this->HorizontalAlignment = HAlign_Fill;
-    this->IsFocusable = true;
-}
 

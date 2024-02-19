@@ -8,5 +8,6 @@ class UMovieSceneComponentTransformSystem : public UMovieScenePropertySystem {
     GENERATED_BODY()
 public:
     UMovieSceneComponentTransformSystem();
+
 };
 

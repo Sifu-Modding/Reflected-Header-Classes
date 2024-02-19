@@ -1,6 +1,7 @@
 #include "AssetTagsSubsystem.h"
 
-class UObject;
+UAssetTagsSubsystem::UAssetTagsSubsystem() {
+}
 
 TArray<FName> UAssetTagsSubsystem::GetCollectionsContainingAssetPtr(const UObject* AssetPtr) {
     return TArray<FName>();
@@ -26,6 +27,4 @@ bool UAssetTagsSubsystem::CollectionExists(const FName Name) {
     return false;
 }
 
-UAssetTagsSubsystem::UAssetTagsSubsystem() {
-}
 

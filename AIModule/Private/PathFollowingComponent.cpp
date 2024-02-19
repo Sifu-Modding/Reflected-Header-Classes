@@ -1,7 +1,10 @@
 #include "PathFollowingComponent.h"
 
-class AActor;
-class ANavigationData;
+UPathFollowingComponent::UPathFollowingComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bAutoActivate = true;
+    this->MovementComp = NULL;
+    this->MyNavData = NULL;
+}
 
 void UPathFollowingComponent::OnNavDataRegistered(ANavigationData* NavData) {
 }
@@ -17,8 +20,4 @@ TEnumAsByte<EPathFollowingAction::Type> UPathFollowingComponent::GetPathActionTy
     return EPathFollowingAction::Error;
 }
 
-UPathFollowingComponent::UPathFollowingComponent() {
-    this->MovementComp = NULL;
-    this->MyNavData = NULL;
-}
 

@@ -11,6 +11,7 @@ class UImageWriteBlueprintLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UImageWriteBlueprintLibrary();
+
     UFUNCTION(BlueprintCallable)
     static void ExportToDisk(UTexture* Texture, const FString& Filename, const FImageWriteOptions& Options);
     

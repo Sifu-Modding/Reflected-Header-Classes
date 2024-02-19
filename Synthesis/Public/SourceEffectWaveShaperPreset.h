@@ -12,6 +12,7 @@ public:
     FSourceEffectWaveShaperSettings Settings;
     
     USourceEffectWaveShaperPreset();
+
     UFUNCTION(BlueprintCallable)
     void SetSettings(const FSourceEffectWaveShaperSettings& InSettings);
     

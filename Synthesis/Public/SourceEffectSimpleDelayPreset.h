@@ -12,6 +12,7 @@ public:
     FSourceEffectSimpleDelaySettings Settings;
     
     USourceEffectSimpleDelayPreset();
+
     UFUNCTION(BlueprintCallable)
     void SetSettings(const FSourceEffectSimpleDelaySettings& InSettings);
     

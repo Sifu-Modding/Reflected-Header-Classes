@@ -27,5 +27,6 @@ public:
     TArray<UGameplayEffect*> GameplayEffectsWhileAnimating;
     
     UGameplayAbility_Montage();
+
 };
 

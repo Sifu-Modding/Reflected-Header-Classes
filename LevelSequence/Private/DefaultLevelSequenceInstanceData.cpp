@@ -4,3 +4,4 @@ UDefaultLevelSequenceInstanceData::UDefaultLevelSequenceInstanceData() {
     this->TransformOriginActor = NULL;
 }
 
+

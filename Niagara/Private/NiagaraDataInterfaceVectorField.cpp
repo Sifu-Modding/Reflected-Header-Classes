@@ -7,3 +7,4 @@ UNiagaraDataInterfaceVectorField::UNiagaraDataInterfaceVectorField() {
     this->bTileZ = false;
 }
 
+

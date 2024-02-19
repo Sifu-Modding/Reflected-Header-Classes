@@ -19,7 +19,8 @@ protected:
     UBehaviorTree* DefaultBehaviorTreeAsset;
     
 public:
-    UBehaviorTreeComponent();
+    UBehaviorTreeComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetDynamicSubtree(FGameplayTag InjectTag, UBehaviorTree* BehaviorAsset);
     

@@ -31,6 +31,7 @@ protected:
     
 public:
     UAbilityTask_WaitTargetData();
+
     UFUNCTION(BlueprintCallable)
     static UAbilityTask_WaitTargetData* WaitTargetDataUsingActor(UGameplayAbility* OwningAbility, FName TaskInstanceName, TEnumAsByte<EGameplayTargetingConfirmation::Type> ConfirmationType, AGameplayAbilityTargetActor* NewTargetActor);
     

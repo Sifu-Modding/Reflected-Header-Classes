@@ -8,5 +8,6 @@ class UMovieScenePreview3DAttachTrack : public UMovieScene3DAttachTrack {
     GENERATED_BODY()
 public:
     UMovieScenePreview3DAttachTrack();
+
 };
 

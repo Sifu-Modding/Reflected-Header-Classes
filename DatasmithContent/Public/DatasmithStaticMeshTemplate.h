@@ -26,5 +26,6 @@ public:
     TArray<FDatasmithStaticMaterialTemplate> StaticMaterials;
     
     UDatasmithStaticMeshTemplate();
+
 };
 

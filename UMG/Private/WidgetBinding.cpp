@@ -1,11 +1,10 @@
 #include "WidgetBinding.h"
 
-class UWidget;
+UWidgetBinding::UWidgetBinding() {
+}
 
 UWidget* UWidgetBinding::GetValue() const {
     return NULL;
 }
 
-UWidgetBinding::UWidgetBinding() {
-}
 

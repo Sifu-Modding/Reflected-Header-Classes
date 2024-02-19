@@ -1,8 +1,12 @@
 #include "AbilityTask_PlayMontageAndWait.h"
 
-class UAbilityTask_PlayMontageAndWait;
-class UAnimMontage;
-class UGameplayAbility;
+UAbilityTask_PlayMontageAndWait::UAbilityTask_PlayMontageAndWait() {
+    this->MontageToPlay = NULL;
+    this->Rate = 1.00f;
+    this->AnimRootMotionTranslationScale = 0.00f;
+    this->StartTimeSeconds = 0.00f;
+    this->bStopWhenAbilityEnds = true;
+}
 
 void UAbilityTask_PlayMontageAndWait::OnMontageInterrupted() {
 }
@@ -17,11 +21,4 @@ UAbilityTask_PlayMontageAndWait* UAbilityTask_PlayMontageAndWait::CreatePlayMont
     return NULL;
 }
 
-UAbilityTask_PlayMontageAndWait::UAbilityTask_PlayMontageAndWait() {
-    this->MontageToPlay = NULL;
-    this->Rate = 1.00f;
-    this->AnimRootMotionTranslationScale = 0.00f;
-    this->StartTimeSeconds = 0.00f;
-    this->bStopWhenAbilityEnds = true;
-}
 

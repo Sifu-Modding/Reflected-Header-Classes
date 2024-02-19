@@ -1,12 +1,26 @@
 #include "LevelSequenceActor.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=SceneComponent -FallbackName=SceneComponent
 //CROSS-MODULE INCLUDE V2: -ModuleName=MovieScene -ObjectName=MovieSceneBindingOverrides -FallbackName=MovieSceneBindingOverrides
 #include "DefaultLevelSequenceInstanceData.h"
 #include "LevelSequenceBurnInOptions.h"
 #include "LevelSequencePlayer.h"
 #include "Net/UnrealNetwork.h"
 
-class AActor;
-class ULevelSequence;
+ALevelSequenceActor::ALevelSequenceActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bReplicates = true;
+    const FProperty* p_RemoteRole = GetClass()->FindPropertyByName("RemoteRole");
+    (*p_RemoteRole->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(this)) = ROLE_SimulatedProxy;
+    this->RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("SceneComp"));
+    this->SequencePlayer = CreateDefaultSubobject<ULevelSequencePlayer>(TEXT("AnimationPlayer"));
+    this->BurnInOptions = CreateDefaultSubobject<ULevelSequenceBurnInOptions>(TEXT("BurnInOptions"));
+    this->BindingOverrides = CreateDefaultSubobject<UMovieSceneBindingOverrides>(TEXT("BindingOverrides"));
+    this->bAutoPlay = false;
+    this->bOverrideInstanceData = false;
+    this->bReplicatePlayback = false;
+    this->DefaultInstanceData = CreateDefaultSubobject<UDefaultLevelSequenceInstanceData>(TEXT("InstanceData"));
+    this->BurnInInstance = NULL;
+    this->bShowBurnin = true;
+}
 
 void ALevelSequenceActor::ShowBurnin() {
 }
@@ -70,15 +84,4 @@ void ALevelSequenceActor::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& 
     DOREPLIFETIME(ALevelSequenceActor, SequencePlayer);
 }
 
-ALevelSequenceActor::ALevelSequenceActor() {
-    this->SequencePlayer = CreateDefaultSubobject<ULevelSequencePlayer>(TEXT("AnimationPlayer"));
-    this->BurnInOptions = CreateDefaultSubobject<ULevelSequenceBurnInOptions>(TEXT("BurnInOptions"));
-    this->BindingOverrides = CreateDefaultSubobject<UMovieSceneBindingOverrides>(TEXT("BindingOverrides"));
-    this->bAutoPlay = false;
-    this->bOverrideInstanceData = false;
-    this->bReplicatePlayback = false;
-    this->DefaultInstanceData = CreateDefaultSubobject<UDefaultLevelSequenceInstanceData>(TEXT("InstanceData"));
-    this->BurnInInstance = NULL;
-    this->bShowBurnin = true;
-}
 

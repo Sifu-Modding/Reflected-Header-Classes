@@ -18,6 +18,5 @@ enum class EGooglePADErrorCode : uint8 {
     AssetPack_INTERNAL_ERROR,
     AssetPack_INITIALIZATION_NEEDED,
     AssetPack_INITIALIZATION_FAILED,
-    AssetPack_MAX UMETA(Hidden),
 };
 

@@ -1,7 +1,7 @@
 #include "AbilityTask_WaitAbilityCommit.h"
 
-class UAbilityTask_WaitAbilityCommit;
-class UGameplayAbility;
+UAbilityTask_WaitAbilityCommit::UAbilityTask_WaitAbilityCommit() {
+}
 
 UAbilityTask_WaitAbilityCommit* UAbilityTask_WaitAbilityCommit::WaitForAbilityCommit_Query(UGameplayAbility* OwningAbility, FGameplayTagQuery Query, bool TriggerOnce) {
     return NULL;
@@ -14,6 +14,4 @@ UAbilityTask_WaitAbilityCommit* UAbilityTask_WaitAbilityCommit::WaitForAbilityCo
 void UAbilityTask_WaitAbilityCommit::OnAbilityCommit(UGameplayAbility* ActivatedAbility) {
 }
 
-UAbilityTask_WaitAbilityCommit::UAbilityTask_WaitAbilityCommit() {
-}
 

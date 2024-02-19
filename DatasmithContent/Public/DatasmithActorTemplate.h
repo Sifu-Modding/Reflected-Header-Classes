@@ -14,5 +14,6 @@ public:
     TSet<FName> Tags;
     
     UDatasmithActorTemplate();
+
 };
 

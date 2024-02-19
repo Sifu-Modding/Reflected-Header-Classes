@@ -1,7 +1,13 @@
 #include "ARComponent.h"
 #include "Net/UnrealNetwork.h"
 
-class UMRMeshComponent;
+UARComponent::UARComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bUseDefaultReplication = true;
+    this->DefaultMeshMaterial = NULL;
+    this->DefaultWireframeMeshMaterial = NULL;
+    this->MRMeshComponent = NULL;
+    this->MyTrackedGeometry = NULL;
+}
 
 void UARComponent::UpdateVisualization_Implementation() {
 }
@@ -23,11 +29,4 @@ void UARComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLife
     DOREPLIFETIME(UARComponent, NativeID);
 }
 
-UARComponent::UARComponent() {
-    this->bUseDefaultReplication = true;
-    this->DefaultMeshMaterial = NULL;
-    this->DefaultWireframeMeshMaterial = NULL;
-    this->MRMeshComponent = NULL;
-    this->MyTrackedGeometry = NULL;
-}
 

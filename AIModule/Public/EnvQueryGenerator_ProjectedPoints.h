@@ -12,5 +12,6 @@ public:
     FEnvTraceData ProjectionData;
     
     UEnvQueryGenerator_ProjectedPoints();
+
 };
 

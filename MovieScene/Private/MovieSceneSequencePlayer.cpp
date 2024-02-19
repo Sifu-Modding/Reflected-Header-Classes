@@ -1,7 +1,15 @@
 #include "MovieSceneSequencePlayer.h"
 #include "Net/UnrealNetwork.h"
 
-class UObject;
+UMovieSceneSequencePlayer::UMovieSceneSequencePlayer() {
+    this->Status = EMovieScenePlayerStatus::Stopped;
+    this->bReversePlayback = false;
+    this->Sequence = NULL;
+    this->DurationFrames = 0;
+    this->DurationSubFrames = 0.00f;
+    this->CurrentNumLoops = 0;
+    this->TickManager = NULL;
+}
 
 void UMovieSceneSequencePlayer::StopAtCurrentTime() {
 }
@@ -162,13 +170,4 @@ void UMovieSceneSequencePlayer::GetLifetimeReplicatedProps(TArray<FLifetimePrope
     DOREPLIFETIME(UMovieSceneSequencePlayer, NetSyncProps);
 }
 
-UMovieSceneSequencePlayer::UMovieSceneSequencePlayer() {
-    this->Status = EMovieScenePlayerStatus::Stopped;
-    this->bReversePlayback = false;
-    this->Sequence = NULL;
-    this->DurationFrames = 0;
-    this->DurationSubFrames = 0.00f;
-    this->CurrentNumLoops = 0;
-    this->TickManager = NULL;
-}
 

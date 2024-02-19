@@ -69,6 +69,7 @@ public:
     FOnMultiLineEditableTextBoxCommittedEvent OnTextCommitted;
     
     UMultiLineEditableTextBox();
+
     UFUNCTION(BlueprintCallable)
     void SetTextStyle(const FTextBlockStyle& InTextStyle);
     

@@ -7,6 +7,5 @@ enum ELandscapeLayerBlendType {
     LB_WeightBlend,
     LB_AlphaBlend,
     LB_HeightBlend,
-    LB_MAX UMETA(Hidden),
 };
 

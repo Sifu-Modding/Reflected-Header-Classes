@@ -9,6 +9,7 @@ class UMG_API UMouseCursorBinding : public UPropertyBinding {
     GENERATED_BODY()
 public:
     UMouseCursorBinding();
+
     UFUNCTION(BlueprintCallable)
     TEnumAsByte<EMouseCursor::Type> GetValue() const;
     

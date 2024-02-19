@@ -1,5 +1,8 @@
 #include "AudioCapture.h"
 
+UAudioCapture::UAudioCapture() {
+}
+
 void UAudioCapture::StopCapturingAudio() {
 }
 
@@ -14,6 +17,4 @@ bool UAudioCapture::GetAudioCaptureDeviceInfo(FAudioCaptureDeviceInfo& OutInfo) 
     return false;
 }
 
-UAudioCapture::UAudioCapture() {
-}
 

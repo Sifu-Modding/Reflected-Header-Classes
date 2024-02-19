@@ -20,6 +20,7 @@ public:
     TEnumAsByte<EVerticalAlignment> VerticalAlignment;
     
     UWidgetSwitcherSlot();
+
     UFUNCTION(BlueprintCallable)
     void SetVerticalAlignment(TEnumAsByte<EVerticalAlignment> InVerticalAlignment);
     

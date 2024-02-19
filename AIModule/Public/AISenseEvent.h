@@ -8,5 +8,6 @@ class AIMODULE_API UAISenseEvent : public UObject {
     GENERATED_BODY()
 public:
     UAISenseEvent();
+
 };
 

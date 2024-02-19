@@ -8,5 +8,6 @@ class U__Delegates__ABP_HardpointAreaActor_C__pf26150045 : public UObject {
     GENERATED_BODY()
 public:
     U__Delegates__ABP_HardpointAreaActor_C__pf26150045();
+
 };
 

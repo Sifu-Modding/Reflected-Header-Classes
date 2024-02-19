@@ -20,6 +20,7 @@ public:
     FWaitGameplayEffectRemovedDelegate InvalidHandle;
     
     UAbilityTask_WaitGameplayEffectRemoved();
+
     UFUNCTION(BlueprintCallable)
     static UAbilityTask_WaitGameplayEffectRemoved* WaitForGameplayEffectRemoved(UGameplayAbility* OwningAbility, FActiveGameplayEffectHandle Handle);
     

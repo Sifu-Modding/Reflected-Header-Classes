@@ -9,7 +9,8 @@ class UMovieSceneStringTrack : public UMovieScenePropertyTrack, public IMovieSce
     GENERATED_BODY()
 public:
     UMovieSceneStringTrack();
-    
+
+
     // Fix for true pure virtual functions not being implemented
 };
 

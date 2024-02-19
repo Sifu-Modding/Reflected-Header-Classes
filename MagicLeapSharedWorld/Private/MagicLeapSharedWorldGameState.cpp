@@ -1,6 +1,9 @@
 #include "MagicLeapSharedWorldGameState.h"
 #include "Net/UnrealNetwork.h"
 
+AMagicLeapSharedWorldGameState::AMagicLeapSharedWorldGameState(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+}
+
 void AMagicLeapSharedWorldGameState::OnReplicate_SharedWorldData() {
 }
 
@@ -18,6 +21,4 @@ void AMagicLeapSharedWorldGameState::GetLifetimeReplicatedProps(TArray<FLifetime
     DOREPLIFETIME(AMagicLeapSharedWorldGameState, AlignmentTransforms);
 }
 
-AMagicLeapSharedWorldGameState::AMagicLeapSharedWorldGameState() {
-}
 

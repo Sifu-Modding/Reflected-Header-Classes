@@ -4,3 +4,4 @@ USlateWidgetStyleAsset::USlateWidgetStyleAsset() {
     this->CustomStyle = NULL;
 }
 
+

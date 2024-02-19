@@ -15,6 +15,7 @@ public:
     FSubmixEffectDelaySettings DynamicSettings;
     
     USubmixEffectDelayPreset();
+
     UFUNCTION(BlueprintCallable)
     void SetSettings(const FSubmixEffectDelaySettings& InSettings);
     

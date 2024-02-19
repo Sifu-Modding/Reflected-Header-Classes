@@ -13,5 +13,6 @@ public:
     AActor* Source;
     
     UNiagaraDataInterfaceSpline();
+
 };
 

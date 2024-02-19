@@ -17,5 +17,6 @@ public:
     float InfiniteLoopTimeoutTime;
     
     UBTDecorator_Loop();
+
 };
 

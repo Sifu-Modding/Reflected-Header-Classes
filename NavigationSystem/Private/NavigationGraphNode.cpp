@@ -1,5 +1,6 @@
 #include "NavigationGraphNode.h"
 
-ANavigationGraphNode::ANavigationGraphNode() {
+ANavigationGraphNode::ANavigationGraphNode(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

@@ -16,5 +16,6 @@ public:
     TArray<FFractureEffect> FractureEffects;
     
     UDestructibleMesh();
+
 };
 

@@ -1,11 +1,10 @@
 #include "AudioCaptureFunctionLibrary.h"
 
-class UAudioCapture;
+UAudioCaptureFunctionLibrary::UAudioCaptureFunctionLibrary() {
+}
 
 UAudioCapture* UAudioCaptureFunctionLibrary::CreateAudioCapture() {
     return NULL;
 }
 
-UAudioCaptureFunctionLibrary::UAudioCaptureFunctionLibrary() {
-}
 

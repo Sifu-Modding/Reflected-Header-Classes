@@ -66,7 +66,8 @@ private:
     TSubclassOf<UMatineeCameraShake> m_CameraShakeClass;
     
 public:
-    ASCPlayerStart();
+    ASCPlayerStart(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool BPF_WantKeepBackgroundDuringStartupMenu() const;
     

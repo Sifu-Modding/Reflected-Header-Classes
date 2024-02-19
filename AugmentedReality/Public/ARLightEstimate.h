@@ -8,5 +8,6 @@ class UARLightEstimate : public UObject {
     GENERATED_BODY()
 public:
     UARLightEstimate();
+
 };
 

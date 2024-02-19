@@ -1,13 +1,11 @@
 #include "ToIntegerField.h"
 
-class UFieldNodeFloat;
-class UToIntegerField;
+UToIntegerField::UToIntegerField(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->FloatField = NULL;
+}
 
 UToIntegerField* UToIntegerField::SetToIntegerField(const UFieldNodeFloat* NewFloatField) {
     return NULL;
 }
 
-UToIntegerField::UToIntegerField() {
-    this->FloatField = NULL;
-}
 

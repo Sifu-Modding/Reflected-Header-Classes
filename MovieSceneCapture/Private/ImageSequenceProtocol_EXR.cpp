@@ -5,3 +5,4 @@ UImageSequenceProtocol_EXR::UImageSequenceProtocol_EXR() {
     this->CaptureGamut = HCGM_Rec709;
 }
 
+

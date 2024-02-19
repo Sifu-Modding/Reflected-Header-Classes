@@ -1,13 +1,10 @@
 #include "UserObjectListEntryLibrary.h"
 
-class IUserObjectListEntry;
-class UUserObjectListEntry;
-class UObject;
+UUserObjectListEntryLibrary::UUserObjectListEntryLibrary() {
+}
 
 UObject* UUserObjectListEntryLibrary::GetListItemObject(TScriptInterface<IUserObjectListEntry> UserObjectListEntry) {
     return NULL;
 }
 
-UUserObjectListEntryLibrary::UUserObjectListEntryLibrary() {
-}
 

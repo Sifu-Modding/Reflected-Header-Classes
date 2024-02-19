@@ -8,5 +8,6 @@ class DATASMITHCONTENT_API UDatasmithMDLSceneImportData : public UDatasmithScene
     GENERATED_BODY()
 public:
     UDatasmithMDLSceneImportData();
+
 };
 

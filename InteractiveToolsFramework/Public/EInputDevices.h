@@ -2,15 +2,15 @@
 #include "CoreMinimal.h"
 #include "EInputDevices.generated.h"
 
-UENUM(BlueprintType)
-enum class EInputDevices : uint8 {
+UENUM()
+enum class EInputDevices {
     None,
     Keyboard,
     Mouse,
-    Gamepad = 0x4,
-    OculusTouch = 0x8,
-    HTCViveWands = 0x10,
-    AnySpatialDevice = 0x18,
-    TabletFingers = 0x400,
+    Gamepad = 4,
+    OculusTouch = 8,
+    HTCViveWands = 16,
+    AnySpatialDevice = 24,
+    TabletFingers = 1024,
 };
 

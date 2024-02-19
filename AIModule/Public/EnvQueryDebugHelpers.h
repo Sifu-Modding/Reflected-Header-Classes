@@ -8,5 +8,6 @@ class AIMODULE_API UEnvQueryDebugHelpers : public UObject {
     GENERATED_BODY()
 public:
     UEnvQueryDebugHelpers();
+
 };
 

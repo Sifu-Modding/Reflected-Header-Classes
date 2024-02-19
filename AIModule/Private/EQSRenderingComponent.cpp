@@ -1,5 +1,6 @@
 #include "EQSRenderingComponent.h"
 
-UEQSRenderingComponent::UEQSRenderingComponent() {
+UEQSRenderingComponent::UEQSRenderingComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

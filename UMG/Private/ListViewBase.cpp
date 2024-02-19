@@ -1,6 +1,14 @@
 #include "ListViewBase.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=EWidgetClipping -FallbackName=EWidgetClipping
 
-class UUserWidget;
+UListViewBase::UListViewBase() {
+    this->Clipping = EWidgetClipping::ClipToBounds;
+    this->EntryWidgetClass = NULL;
+    this->WheelScrollMultiplier = 1.00f;
+    this->bEnableScrollAnimation = false;
+    this->bEnableFixedLineOffset = false;
+    this->FixedLineScrollOffset = 0.00f;
+}
 
 void UListViewBase::SetWheelScrollMultiplier(float NewWheelScrollMultiplier) {
 }
@@ -27,11 +35,4 @@ TArray<UUserWidget*> UListViewBase::GetDisplayedEntryWidgets() const {
     return TArray<UUserWidget*>();
 }
 
-UListViewBase::UListViewBase() {
-    this->EntryWidgetClass = NULL;
-    this->WheelScrollMultiplier = 1.00f;
-    this->bEnableScrollAnimation = false;
-    this->bEnableFixedLineOffset = false;
-    this->FixedLineScrollOffset = 0.00f;
-}
 

@@ -27,5 +27,6 @@ public:
     TSet<FName> Tags;
     
     UDatasmithSceneComponentTemplate();
+
 };
 

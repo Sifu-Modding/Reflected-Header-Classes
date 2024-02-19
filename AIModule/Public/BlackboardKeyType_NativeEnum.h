@@ -16,5 +16,6 @@ public:
     UEnum* EnumType;
     
     UBlackboardKeyType_NativeEnum();
+
 };
 

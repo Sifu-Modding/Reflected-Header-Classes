@@ -10,12 +10,13 @@ class UMovieSceneFloatSection : public UMovieSceneSection, public IMovieSceneEnt
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     FMovieSceneFloatChannel FloatCurve;
     
 public:
     UMovieSceneFloatSection();
-    
+
+
     // Fix for true pure virtual functions not being implemented
 };
 

@@ -1,10 +1,8 @@
 #include "GameplayTask_ClaimResource.h"
 #include "Templates/SubclassOf.h"
 
-class IGameplayTaskOwnerInterface;
-class UGameplayTaskOwnerInterface;
-class UGameplayTaskResource;
-class UGameplayTask_ClaimResource;
+UGameplayTask_ClaimResource::UGameplayTask_ClaimResource() {
+}
 
 UGameplayTask_ClaimResource* UGameplayTask_ClaimResource::ClaimResources(TScriptInterface<IGameplayTaskOwnerInterface> InTaskOwner, TArray<TSubclassOf<UGameplayTaskResource>> ResourceClasses, const uint8 Priority, const FName TaskInstanceName) {
     return NULL;
@@ -14,6 +12,4 @@ UGameplayTask_ClaimResource* UGameplayTask_ClaimResource::ClaimResource(TScriptI
     return NULL;
 }
 
-UGameplayTask_ClaimResource::UGameplayTask_ClaimResource() {
-}
 

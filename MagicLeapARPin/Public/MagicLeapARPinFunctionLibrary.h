@@ -16,6 +16,7 @@ class MAGICLEAPARPIN_API UMagicLeapARPinFunctionLibrary : public UBlueprintFunct
     GENERATED_BODY()
 public:
     UMagicLeapARPinFunctionLibrary();
+
     UFUNCTION(BlueprintCallable)
     static void UnBindToOnMagicLeapContentBindingFoundDelegate(const FMagicLeapContentBindingFoundDelegate& Delegate);
     

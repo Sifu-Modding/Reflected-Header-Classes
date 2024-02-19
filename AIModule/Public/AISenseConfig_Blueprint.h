@@ -6,7 +6,7 @@
 
 class UAISense_Blueprint;
 
-UCLASS(Abstract, Blueprintable, EditInlineNew, HideDropdown)
+UCLASS(Abstract, Blueprintable, EditInlineNew, HideDropdown, Config=Engine)
 class AIMODULE_API UAISenseConfig_Blueprint : public UAISenseConfig {
     GENERATED_BODY()
 public:
@@ -14,5 +14,6 @@ public:
     TSubclassOf<UAISense_Blueprint> Implementation;
     
     UAISenseConfig_Blueprint();
+
 };
 

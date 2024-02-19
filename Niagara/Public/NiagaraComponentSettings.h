@@ -4,7 +4,7 @@
 #include "NiagaraEmitterNameSettingsRef.h"
 #include "NiagaraComponentSettings.generated.h"
 
-UCLASS(Blueprintable, Config=Engine, DefaultConfig, Config=Game)
+UCLASS(Blueprintable, DefaultConfig, Config=Game)
 class NIAGARA_API UNiagaraComponentSettings : public UObject {
     GENERATED_BODY()
 public:
@@ -18,5 +18,6 @@ public:
     TSet<FNiagaraEmitterNameSettingsRef> SuppressEmitterList;
     
     UNiagaraComponentSettings();
+
 };
 

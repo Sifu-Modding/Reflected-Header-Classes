@@ -8,5 +8,6 @@ class UTemplateSequenceTrack : public UMovieSceneSubTrack {
     GENERATED_BODY()
 public:
     UTemplateSequenceTrack();
+
 };
 

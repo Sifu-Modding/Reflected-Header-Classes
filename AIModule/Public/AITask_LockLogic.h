@@ -8,5 +8,6 @@ class AIMODULE_API UAITask_LockLogic : public UAITask {
     GENERATED_BODY()
 public:
     UAITask_LockLogic();
+
 };
 

@@ -11,6 +11,7 @@ class DATASMITHCONTENT_API UDatasmithContentBlueprintLibrary : public UBlueprint
     GENERATED_BODY()
 public:
     UDatasmithContentBlueprintLibrary();
+
     UFUNCTION(BlueprintCallable)
     static FString GetDatasmithUserDataValueForKey(UObject* Object, FName Key);
     

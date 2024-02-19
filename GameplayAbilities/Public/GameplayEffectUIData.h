@@ -8,5 +8,6 @@ class GAMEPLAYABILITIES_API UGameplayEffectUIData : public UObject {
     GENERATED_BODY()
 public:
     UGameplayEffectUIData();
+
 };
 

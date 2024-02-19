@@ -4,3 +4,4 @@ UNiagaraEventReceiverEmitterAction_SpawnParticles::UNiagaraEventReceiverEmitterA
     this->NumParticles = 0;
 }
 
+

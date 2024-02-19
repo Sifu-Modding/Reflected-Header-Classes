@@ -17,6 +17,7 @@ class PROCEDURALMESHCOMPONENT_API UKismetProceduralMeshLibrary : public UBluepri
     GENERATED_BODY()
 public:
     UKismetProceduralMeshLibrary();
+
     UFUNCTION(BlueprintCallable)
     static void SliceProceduralMesh(UProceduralMeshComponent* InProcMesh, FVector PlanePosition, FVector PlaneNormal, bool bCreateOtherHalf, UProceduralMeshComponent*& OutOtherHalfProcMesh, EProcMeshSliceCapOption CapOption, UMaterialInterface* CapMaterial);
     

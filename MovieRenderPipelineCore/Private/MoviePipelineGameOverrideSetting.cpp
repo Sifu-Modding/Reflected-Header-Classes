@@ -14,3 +14,4 @@ UMoviePipelineGameOverrideSetting::UMoviePipelineGameOverrideSetting() {
     this->ViewDistanceScale = 50;
 }
 
+

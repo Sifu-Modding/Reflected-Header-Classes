@@ -117,6 +117,7 @@ public:
     FVector Velocity;
     
     UVehicleWheel();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsInAir() const;
     

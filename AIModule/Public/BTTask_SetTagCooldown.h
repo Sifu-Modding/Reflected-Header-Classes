@@ -18,5 +18,6 @@ public:
     float CooldownDuration;
     
     UBTTask_SetTagCooldown();
+
 };
 

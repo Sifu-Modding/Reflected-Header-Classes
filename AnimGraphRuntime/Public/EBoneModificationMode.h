@@ -7,6 +7,5 @@ enum EBoneModificationMode {
     BMM_Ignore,
     BMM_Replace,
     BMM_Additive,
-    BMM_MAX UMETA(Hidden),
 };
 

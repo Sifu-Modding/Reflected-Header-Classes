@@ -5,3 +5,4 @@ UNiagaraPreviewAxis_InterpParamInt32::UNiagaraPreviewAxis_InterpParamInt32() {
     this->Max = 0;
 }
 
+

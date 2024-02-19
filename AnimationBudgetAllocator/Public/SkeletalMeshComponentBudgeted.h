@@ -18,7 +18,8 @@ private:
     uint8 bShouldUseActorRenderedFlag: 1;
     
 public:
-    USkeletalMeshComponentBudgeted();
+    USkeletalMeshComponentBudgeted(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetAutoRegisterWithBudgetAllocator(bool bInAutoRegisterWithBudgetAllocator);
     

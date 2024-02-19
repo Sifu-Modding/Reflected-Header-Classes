@@ -24,6 +24,7 @@ protected:
     
 public:
     UAbilityTask_WaitAttributeChangeRatioThreshold();
+
     UFUNCTION(BlueprintCallable)
     static UAbilityTask_WaitAttributeChangeRatioThreshold* WaitForAttributeChangeRatioThreshold(UGameplayAbility* OwningAbility, FGameplayAttribute AttributeNumerator, FGameplayAttribute AttributeDenominator, TEnumAsByte<EWaitAttributeChangeComparison::Type> ComparisonType, float ComparisonValue, bool bTriggerOnce, AActor* OptionalExternalOwner);
     

@@ -46,6 +46,7 @@ protected:
     
 public:
     UExpandableArea();
+
     UFUNCTION(BlueprintCallable)
     void SetIsExpanded_Animated(bool IsExpanded);
     
@@ -55,7 +56,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool GetIsExpanded() const;
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

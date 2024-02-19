@@ -1,6 +1,9 @@
 #include "ARObjectComponent.h"
 #include "Net/UnrealNetwork.h"
 
+UARObjectComponent::UARObjectComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+}
+
 void UARObjectComponent::ServerUpdatePayload_Implementation(const FARObjectUpdatePayload& NewPayload) {
 }
 bool UARObjectComponent::ServerUpdatePayload_Validate(const FARObjectUpdatePayload& NewPayload) {
@@ -15,6 +18,4 @@ void UARObjectComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& O
     DOREPLIFETIME(UARObjectComponent, ReplicatedPayload);
 }
 
-UARObjectComponent::UARObjectComponent() {
-}
 

@@ -8,6 +8,5 @@ enum class EDataSortTypeEnum : uint8 {
     ChaosNiagara_DataSortType_RandomShuffle,
     ChaosNiagara_DataSortType_SortByMassMaxToMin,
     ChaosNiagara_DataSortType_SortByMassMinToMax,
-    ChaosNiagara_Max,
 };
 

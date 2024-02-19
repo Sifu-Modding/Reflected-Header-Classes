@@ -8,7 +8,7 @@
 
 class UNiagaraEffectType;
 
-UCLASS(Blueprintable, Config=Engine, DefaultConfig, Config=Niagara)
+UCLASS(Blueprintable, DefaultConfig, Config=Niagara)
 class NIAGARA_API UNiagaraSettings : public UDeveloperSettings {
     GENERATED_BODY()
 public:
@@ -33,5 +33,6 @@ private:
     
 public:
     UNiagaraSettings();
+
 };
 

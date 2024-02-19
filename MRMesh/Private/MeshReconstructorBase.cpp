@@ -1,6 +1,7 @@
 #include "MeshReconstructorBase.h"
 
-class UMRMeshComponent;
+UMeshReconstructorBase::UMeshReconstructorBase() {
+}
 
 void UMeshReconstructorBase::StopReconstruction() {
 }
@@ -25,6 +26,4 @@ void UMeshReconstructorBase::DisconnectMRMesh() {
 void UMeshReconstructorBase::ConnectMRMesh(UMRMeshComponent* Mesh) {
 }
 
-UMeshReconstructorBase::UMeshReconstructorBase() {
-}
 

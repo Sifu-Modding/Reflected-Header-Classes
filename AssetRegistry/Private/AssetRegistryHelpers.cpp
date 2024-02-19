@@ -1,8 +1,7 @@
 #include "AssetRegistryHelpers.h"
 
-class IAssetRegistry;
-class UAssetRegistry;
-class UObject;
+UAssetRegistryHelpers::UAssetRegistryHelpers() {
+}
 
 FSoftObjectPath UAssetRegistryHelpers::ToSoftObjectPath(const FAssetData& InAssetData) {
     return FSoftObjectPath{};
@@ -56,6 +55,4 @@ FAssetData UAssetRegistryHelpers::CreateAssetData(const UObject* InAsset, bool b
     return FAssetData{};
 }
 
-UAssetRegistryHelpers::UAssetRegistryHelpers() {
-}
 

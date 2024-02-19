@@ -3,7 +3,7 @@
 #include "MovieSceneAudioCaptureProtocolBase.h"
 #include "MasterAudioSubmixCaptureProtocol.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS(Blueprintable, Config=Engine)
 class MOVIESCENECAPTURE_API UMasterAudioSubmixCaptureProtocol : public UMovieSceneAudioCaptureProtocolBase {
     GENERATED_BODY()
 public:
@@ -13,5 +13,6 @@ protected:
     
 public:
     UMasterAudioSubmixCaptureProtocol();
+
 };
 

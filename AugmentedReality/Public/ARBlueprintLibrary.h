@@ -46,6 +46,7 @@ class AUGMENTEDREALITY_API UARBlueprintLibrary : public UBlueprintFunctionLibrar
     GENERATED_BODY()
 public:
     UARBlueprintLibrary();
+
     UFUNCTION(BlueprintCallable)
     static void UnpinComponent(USceneComponent* ComponentToUnpin);
     

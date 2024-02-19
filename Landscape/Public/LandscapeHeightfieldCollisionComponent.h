@@ -46,7 +46,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UPhysicalMaterial*> CookedPhysicalMaterials;
     
-    ULandscapeHeightfieldCollisionComponent();
+    ULandscapeHeightfieldCollisionComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     ULandscapeComponent* GetRenderComponent() const;
     

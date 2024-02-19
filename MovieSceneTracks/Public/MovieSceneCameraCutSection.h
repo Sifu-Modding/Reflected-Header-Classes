@@ -29,13 +29,14 @@ private:
     
 public:
     UMovieSceneCameraCutSection();
+
     UFUNCTION(BlueprintCallable)
     void SetCameraBindingID(const FMovieSceneObjectBindingID& InCameraBindingID);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FMovieSceneObjectBindingID GetCameraBindingID() const;
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

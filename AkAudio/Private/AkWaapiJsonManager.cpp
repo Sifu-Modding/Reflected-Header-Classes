@@ -1,5 +1,8 @@
 #include "AkWaapiJsonManager.h"
 
+UAkWaapiJsonManager::UAkWaapiJsonManager() {
+}
+
 FAKWaapiJsonObject UAkWaapiJsonManager::SetStringField(const FAkWaapiFieldNames& FieldName, const FString& FieldValue, FAKWaapiJsonObject Target) {
     return FAKWaapiJsonObject{};
 }
@@ -56,6 +59,4 @@ FString UAkWaapiJsonManager::Conv_FAKWaapiJsonObjectToString(FAKWaapiJsonObject 
     return TEXT("");
 }
 
-UAkWaapiJsonManager::UAkWaapiJsonManager() {
-}
 

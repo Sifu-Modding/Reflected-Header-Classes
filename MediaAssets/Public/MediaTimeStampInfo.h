@@ -15,5 +15,6 @@ public:
     int64 SequenceIndex;
     
     UMediaTimeStampInfo();
+
 };
 

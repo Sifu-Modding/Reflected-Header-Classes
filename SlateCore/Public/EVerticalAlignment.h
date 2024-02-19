@@ -8,6 +8,5 @@ enum EVerticalAlignment {
     VAlign_Top,
     VAlign_Center,
     VAlign_Bottom,
-    VAlign_MAX UMETA(Hidden),
 };
 

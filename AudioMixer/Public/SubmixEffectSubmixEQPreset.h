@@ -12,6 +12,7 @@ public:
     FSubmixEffectSubmixEQSettings Settings;
     
     USubmixEffectSubmixEQPreset();
+
     UFUNCTION(BlueprintCallable)
     void SetSettings(const FSubmixEffectSubmixEQSettings& InSettings);
     

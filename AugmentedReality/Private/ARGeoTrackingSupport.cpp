@@ -1,6 +1,7 @@
 #include "ARGeoTrackingSupport.h"
 
-class UARGeoTrackingSupport;
+UARGeoTrackingSupport::UARGeoTrackingSupport() {
+}
 
 UARGeoTrackingSupport* UARGeoTrackingSupport::GetGeoTrackingSupport() {
     return NULL;
@@ -26,6 +27,4 @@ bool UARGeoTrackingSupport::AddGeoAnchorAtLocation(float Longitude, float Latitu
     return false;
 }
 
-UARGeoTrackingSupport::UARGeoTrackingSupport() {
-}
 

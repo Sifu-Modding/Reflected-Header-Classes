@@ -8,3 +8,4 @@ UMovieScene3DPathSection::UMovieScene3DPathSection() {
     this->bForceUpright = false;
 }
 
+

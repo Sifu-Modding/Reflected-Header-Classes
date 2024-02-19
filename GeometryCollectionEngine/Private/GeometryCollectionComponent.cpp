@@ -1,32 +1,9 @@
 #include "GeometryCollectionComponent.h"
 #include "Net/UnrealNetwork.h"
 
-class UFieldNodeBase;
-class UFieldSystemMetaData;
-
-void UGeometryCollectionComponent::SetNotifyBreaks(bool bNewNotifyBreaks) {
-}
-
-
-void UGeometryCollectionComponent::OnRep_RepData(const FGeometryCollectionRepData& OldData) {
-}
-
-void UGeometryCollectionComponent::NetAbandonCluster_Implementation(int32 TransformIndex) {
-}
-
-void UGeometryCollectionComponent::ApplyPhysicsField(bool Enabled, EGeometryCollectionPhysicsTypeEnum Target, UFieldSystemMetaData* MetaData, UFieldNodeBase* Field) {
-}
-
-void UGeometryCollectionComponent::ApplyKinematicField(float Radius, FVector Position) {
-}
-
-void UGeometryCollectionComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
-    Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
-    DOREPLIFETIME(UGeometryCollectionComponent, RepData);
-}
-
-UGeometryCollectionComponent::UGeometryCollectionComponent() {
+UGeometryCollectionComponent::UGeometryCollectionComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bAutoActivate = true;
+    this->bHasCustomNavigableGeometry = EHasCustomNavigableGeometry::Yes;
     this->ChaosSolverActor = NULL;
     this->RestCollection = NULL;
     this->Simulating = true;
@@ -52,4 +29,27 @@ UGeometryCollectionComponent::UGeometryCollectionComponent() {
     this->ReplicationAbandonClusterLevel = 0;
     this->DummyBodySetup = NULL;
 }
+
+void UGeometryCollectionComponent::SetNotifyBreaks(bool bNewNotifyBreaks) {
+}
+
+
+void UGeometryCollectionComponent::OnRep_RepData(const FGeometryCollectionRepData& OldData) {
+}
+
+void UGeometryCollectionComponent::NetAbandonCluster_Implementation(int32 TransformIndex) {
+}
+
+void UGeometryCollectionComponent::ApplyPhysicsField(bool Enabled, EGeometryCollectionPhysicsTypeEnum Target, UFieldSystemMetaData* MetaData, UFieldNodeBase* Field) {
+}
+
+void UGeometryCollectionComponent::ApplyKinematicField(float Radius, FVector Position) {
+}
+
+void UGeometryCollectionComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
+    Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+    
+    DOREPLIFETIME(UGeometryCollectionComponent, RepData);
+}
+
 

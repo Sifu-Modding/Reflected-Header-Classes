@@ -20,7 +20,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<TSoftObjectPtr<AChaosSolverActor>> SupportedSolvers;
     
-    UFieldSystemComponent();
+    UFieldSystemComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void ResetFieldSystem();
     

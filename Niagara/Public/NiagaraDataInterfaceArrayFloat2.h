@@ -12,5 +12,6 @@ public:
     TArray<FVector2D> FloatData;
     
     UNiagaraDataInterfaceArrayFloat2();
+
 };
 

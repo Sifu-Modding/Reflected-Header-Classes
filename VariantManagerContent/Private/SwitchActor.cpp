@@ -1,7 +1,11 @@
 #include "SwitchActor.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=SceneComponent -FallbackName=SceneComponent
 
-class AActor;
+ASwitchActor::ASwitchActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
+    this->SceneComponent = (USceneComponent*)RootComponent;
+    this->LastSelectedOption = 0;
+}
 
 void ASwitchActor::SelectOption(int32 OptionIndex) {
 }
@@ -14,8 +18,4 @@ TArray<AActor*> ASwitchActor::GetOptions() const {
     return TArray<AActor*>();
 }
 
-ASwitchActor::ASwitchActor() {
-    this->SceneComponent = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
-    this->LastSelectedOption = 0;
-}
 

@@ -8,5 +8,6 @@ class AIMODULE_API UAIDataProvider : public UObject {
     GENERATED_BODY()
 public:
     UAIDataProvider();
+
 };
 

@@ -18,6 +18,7 @@ private:
     
 public:
     ULevelVariantSets();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UVariantSet* GetVariantSetByName(const FString& VariantSetName);
     

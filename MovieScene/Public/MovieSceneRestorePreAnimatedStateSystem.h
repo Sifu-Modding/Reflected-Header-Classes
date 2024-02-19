@@ -8,5 +8,6 @@ class UMovieSceneRestorePreAnimatedStateSystem : public UMovieSceneEntityInstant
     GENERATED_BODY()
 public:
     UMovieSceneRestorePreAnimatedStateSystem();
+
 };
 

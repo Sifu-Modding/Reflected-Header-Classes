@@ -5,3 +5,4 @@ UDatasmithCineCameraComponentTemplate::UDatasmithCineCameraComponentTemplate() {
     this->CurrentAperture = 0.00f;
 }
 
+

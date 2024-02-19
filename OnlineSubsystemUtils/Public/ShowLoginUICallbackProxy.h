@@ -19,6 +19,7 @@ public:
     FOnlineShowLoginUIResult OnFailure;
     
     UShowLoginUICallbackProxy();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static UShowLoginUICallbackProxy* ShowExternalLoginUI(UObject* WorldContextObject, APlayerController* InPlayerController);
     

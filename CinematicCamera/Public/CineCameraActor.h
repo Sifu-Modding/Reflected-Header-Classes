@@ -13,7 +13,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FCameraLookatTrackingSettings LookatTrackingSettings;
     
-    ACineCameraActor();
+    ACineCameraActor(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UCineCameraComponent* GetCineCameraComponent() const;
     

@@ -9,7 +9,7 @@ class UBlackboardData;
 class UDataTable;
 class USCDialogRealOverrideDb;
 
-UCLASS(Blueprintable, Config=Engine, DefaultConfig, Config=Game)
+UCLASS(Blueprintable, DefaultConfig, Config=Game)
 class SCDIALOGMANAGERPLUGIN_API USCDialogSettings : public UDeveloperSettings {
     GENERATED_BODY()
 public:
@@ -86,5 +86,6 @@ public:
     FDirectoryPath m_DialogEnvelopeFilesPathForCantonese;
     
     USCDialogSettings();
+
 };
 

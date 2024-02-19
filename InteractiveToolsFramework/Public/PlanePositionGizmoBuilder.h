@@ -8,5 +8,6 @@ class INTERACTIVETOOLSFRAMEWORK_API UPlanePositionGizmoBuilder : public UInterac
     GENERATED_BODY()
 public:
     UPlanePositionGizmoBuilder();
+
 };
 

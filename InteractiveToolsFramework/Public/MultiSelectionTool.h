@@ -8,5 +8,6 @@ class INTERACTIVETOOLSFRAMEWORK_API UMultiSelectionTool : public UInteractiveToo
     GENERATED_BODY()
 public:
     UMultiSelectionTool();
+
 };
 

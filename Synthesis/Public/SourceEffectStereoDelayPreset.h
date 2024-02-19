@@ -12,6 +12,7 @@ public:
     FSourceEffectStereoDelaySettings Settings;
     
     USourceEffectStereoDelayPreset();
+
     UFUNCTION(BlueprintCallable)
     void SetSettings(const FSourceEffectStereoDelaySettings& InSettings);
     

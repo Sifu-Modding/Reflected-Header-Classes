@@ -7,3 +7,4 @@ UBaseBrushTool::UBaseBrushTool() {
     this->BrushStampIndicator = NULL;
 }
 
+

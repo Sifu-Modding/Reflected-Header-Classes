@@ -8,7 +8,7 @@
 
 class UMaterialInterface;
 
-UCLASS(Blueprintable)
+UCLASS(Blueprintable, Config=Engine)
 class MOVIESCENECAPTURE_API UCompositionGraphCaptureProtocol : public UMovieSceneImageCaptureProtocolBase {
     GENERATED_BODY()
 public:
@@ -36,5 +36,6 @@ private:
     
 public:
     UCompositionGraphCaptureProtocol();
+
 };
 

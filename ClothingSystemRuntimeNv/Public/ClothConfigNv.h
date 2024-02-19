@@ -109,5 +109,6 @@ public:
     FClothConstraintSetup_Legacy ShearConstraintConfig;
     
     UClothConfigNv();
+
 };
 

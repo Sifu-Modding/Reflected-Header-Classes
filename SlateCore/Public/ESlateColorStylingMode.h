@@ -9,7 +9,6 @@ namespace ESlateColorStylingMode {
         UseColor_Specified_Link,
         UseColor_Foreground,
         UseColor_Foreground_Subdued,
-        UseColor_MAX UMETA(Hidden),
     };
 }
 

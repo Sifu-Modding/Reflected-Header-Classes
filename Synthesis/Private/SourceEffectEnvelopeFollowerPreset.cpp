@@ -1,6 +1,7 @@
 #include "SourceEffectEnvelopeFollowerPreset.h"
 
-class UEnvelopeFollowerListener;
+USourceEffectEnvelopeFollowerPreset::USourceEffectEnvelopeFollowerPreset() {
+}
 
 void USourceEffectEnvelopeFollowerPreset::UnregisterEnvelopeFollowerListener(UEnvelopeFollowerListener* EnvelopeFollowerListener) {
 }
@@ -11,6 +12,4 @@ void USourceEffectEnvelopeFollowerPreset::SetSettings(const FSourceEffectEnvelop
 void USourceEffectEnvelopeFollowerPreset::RegisterEnvelopeFollowerListener(UEnvelopeFollowerListener* EnvelopeFollowerListener) {
 }
 
-USourceEffectEnvelopeFollowerPreset::USourceEffectEnvelopeFollowerPreset() {
-}
 

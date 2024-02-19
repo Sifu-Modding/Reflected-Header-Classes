@@ -1,6 +1,16 @@
 #include "MotionControllerComponent.h"
 
-class UStaticMesh;
+UMotionControllerComponent::UMotionControllerComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bAutoActivate = true;
+    this->PlayerIndex = 0;
+    this->Hand = EControllerHand::Left;
+    this->MotionSource = TEXT("Left");
+    this->bDisableLowLatencyUpdate = false;
+    this->CurrentTrackingStatus = ETrackingStatus::NotTracked;
+    this->bDisplayDeviceModel = false;
+    this->CustomDisplayMesh = NULL;
+    this->DisplayComponent = NULL;
+}
 
 void UMotionControllerComponent::SetTrackingSource(const EControllerHand NewSource) {
 }
@@ -37,14 +47,4 @@ FVector UMotionControllerComponent::GetHandJointPosition(int32 jointIndex, bool&
     return FVector{};
 }
 
-UMotionControllerComponent::UMotionControllerComponent() {
-    this->PlayerIndex = 0;
-    this->Hand = EControllerHand::Left;
-    this->MotionSource = TEXT("Left");
-    this->bDisableLowLatencyUpdate = false;
-    this->CurrentTrackingStatus = ETrackingStatus::NotTracked;
-    this->bDisplayDeviceModel = false;
-    this->CustomDisplayMesh = NULL;
-    this->DisplayComponent = NULL;
-}
 

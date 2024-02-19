@@ -21,7 +21,8 @@ public:
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnSamplePlaybackProgress OnSamplePlaybackProgress;
     
-    USynthSamplePlayer();
+    USynthSamplePlayer(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetSoundWave(USoundWave* InSoundWave);
     

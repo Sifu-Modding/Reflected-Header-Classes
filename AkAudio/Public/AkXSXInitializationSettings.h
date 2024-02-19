@@ -8,7 +8,7 @@
 #include "AkXSXApuHeapInitializationSettings.h"
 #include "AkXSXInitializationSettings.generated.h"
 
-UCLASS(Blueprintable, Config=Engine, DefaultConfig, Config=Game)
+UCLASS(Blueprintable, DefaultConfig, Config=Game)
 class AKAUDIO_API UAkXSXInitializationSettings : public UObject, public IAkPlatformInitialisationSettingsBase {
     GENERATED_BODY()
 public:
@@ -25,10 +25,11 @@ public:
     FAkXSXAdvancedInitializationSettings AdvancedSettings;
     
     UAkXSXInitializationSettings();
+
     UFUNCTION(BlueprintCallable)
     void MigrateMultiCoreRendering(bool NewValue);
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

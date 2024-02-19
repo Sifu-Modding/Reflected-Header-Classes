@@ -28,5 +28,6 @@ public:
     FDatasmithStaticParameterSetTemplate StaticParameters;
     
     UDatasmithMaterialInstanceTemplate();
+
 };
 

@@ -8,5 +8,6 @@ class UWuguanTestControllerMemoryTest : public UWuguanTestControllerBase {
     GENERATED_BODY()
 public:
     UWuguanTestControllerMemoryTest();
+
 };
 

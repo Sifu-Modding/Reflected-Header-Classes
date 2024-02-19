@@ -8,5 +8,6 @@ class UMovieSceneCachePreAnimatedStateSystem : public UMovieSceneEntityInstantia
     GENERATED_BODY()
 public:
     UMovieSceneCachePreAnimatedStateSystem();
+
 };
 

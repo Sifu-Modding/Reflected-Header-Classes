@@ -5,3 +5,4 @@ UAREnvironmentCaptureProbeTexture::UAREnvironmentCaptureProbeTexture() {
     this->Timestamp = 0.00f;
 }
 
+

@@ -8,5 +8,6 @@ class SCCORE_API USCBaseDemoNetDriver : public UDemoNetDriver {
     GENERATED_BODY()
 public:
     USCBaseDemoNetDriver();
+
 };
 

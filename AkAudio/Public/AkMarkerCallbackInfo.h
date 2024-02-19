@@ -17,5 +17,6 @@ public:
     FString Label;
     
     UAkMarkerCallbackInfo();
+
 };
 

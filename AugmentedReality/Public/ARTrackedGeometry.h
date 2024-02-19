@@ -41,6 +41,7 @@ private:
     
 public:
     UARTrackedGeometry();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsTracked() const;
     

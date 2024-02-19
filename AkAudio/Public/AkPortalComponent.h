@@ -7,6 +7,7 @@ UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class AKAUDIO_API UAkPortalComponent : public USceneComponent {
     GENERATED_BODY()
 public:
-    UAkPortalComponent();
+    UAkPortalComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

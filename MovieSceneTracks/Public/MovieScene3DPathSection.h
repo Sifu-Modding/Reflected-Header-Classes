@@ -9,7 +9,7 @@ UCLASS(Blueprintable, MinimalAPI)
 class UMovieScene3DPathSection : public UMovieScene3DConstraintSection {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     FMovieSceneFloatChannel TimingCurve;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -28,5 +28,6 @@ public:
     uint8 bForceUpright: 1;
     
     UMovieScene3DPathSection();
+
 };
 

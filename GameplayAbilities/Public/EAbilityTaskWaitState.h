@@ -4,8 +4,8 @@
 
 UENUM(BlueprintType)
 enum class EAbilityTaskWaitState : uint8 {
-    WaitingOnGame = 0x1,
+    WaitingOnGame = 1,
     WaitingOnUser,
-    WaitingOnAvatar = 0x4,
+    WaitingOnAvatar = 4,
 };
 

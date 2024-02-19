@@ -8,3 +8,4 @@ UNiagaraDataInterfaceGrid2D::UNiagaraDataInterfaceGrid2D() {
     this->SetGridFromMaxAxis = false;
 }
 
+

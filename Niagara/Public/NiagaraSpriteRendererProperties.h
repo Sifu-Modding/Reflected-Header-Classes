@@ -129,5 +129,6 @@ public:
     TArray<FNiagaraMaterialAttributeBinding> MaterialParameterBindings;
     
     UNiagaraSpriteRendererProperties();
+
 };
 

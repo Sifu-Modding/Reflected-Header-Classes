@@ -24,7 +24,8 @@ public:
     bool bBlendFirstChildOfRoot;
     
     UMovieSceneSkeletalAnimationTrack();
-    
+
+
     // Fix for true pure virtual functions not being implemented
 };
 

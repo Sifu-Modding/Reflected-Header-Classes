@@ -15,5 +15,6 @@ public:
     TArray<FGameplayTagTableRow> GameplayTagList;
     
     UGameplayTagsList();
+
 };
 

@@ -14,7 +14,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bVisibilityOverride;
     
-    AMagicLeapARPinInfoActorBase();
+    AMagicLeapARPinInfoActorBase(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnUpdateARPinState();
     

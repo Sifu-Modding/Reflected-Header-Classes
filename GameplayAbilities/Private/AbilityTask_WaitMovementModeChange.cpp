@@ -1,8 +1,7 @@
 #include "AbilityTask_WaitMovementModeChange.h"
 
-class ACharacter;
-class UAbilityTask_WaitMovementModeChange;
-class UGameplayAbility;
+UAbilityTask_WaitMovementModeChange::UAbilityTask_WaitMovementModeChange() {
+}
 
 void UAbilityTask_WaitMovementModeChange::OnMovementModeChange(ACharacter* Character, TEnumAsByte<EMovementMode> PrevMovementMode, uint8 PreviousCustomMode) {
 }
@@ -11,6 +10,4 @@ UAbilityTask_WaitMovementModeChange* UAbilityTask_WaitMovementModeChange::Create
     return NULL;
 }
 
-UAbilityTask_WaitMovementModeChange::UAbilityTask_WaitMovementModeChange() {
-}
 

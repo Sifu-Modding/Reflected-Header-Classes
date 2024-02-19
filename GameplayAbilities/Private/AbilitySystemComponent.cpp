@@ -2,12 +2,20 @@
 #include "Net/UnrealNetwork.h"
 #include "Templates/SubclassOf.h"
 
-class UAbilitySystemComponent;
-class UAnimMontage;
-class UAttributeSet;
-class UDataTable;
-class UGameplayAbility;
-class UGameplayEffect;
+UAbilitySystemComponent::UAbilitySystemComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bAutoActivate = true;
+    this->bIsNetDirty = true;
+    this->OutgoingDuration = 0.00f;
+    this->IncomingDuration = 0.00f;
+    this->UserAbilityActivationInhibited = false;
+    this->ReplicationProxyEnabled = false;
+    this->bSuppressGrantAbility = false;
+    this->bSuppressGameplayCues = false;
+    this->OwnerActor = NULL;
+    this->AvatarActor = NULL;
+    this->bCachedIsNetSimulated = false;
+    this->bPendingMontageRep = false;
+}
 
 bool UAbilitySystemComponent::TryActivateAbilityByClass(TSubclassOf<UGameplayAbility> InAbilityToActivate, bool bAllowRemoteActivation) {
     return false;
@@ -289,16 +297,4 @@ void UAbilitySystemComponent::GetLifetimeReplicatedProps(TArray<FLifetimePropert
     DOREPLIFETIME(UAbilitySystemComponent, ReplicatedPredictionKeyMap);
 }
 
-UAbilitySystemComponent::UAbilitySystemComponent() {
-    this->OutgoingDuration = 0.00f;
-    this->IncomingDuration = 0.00f;
-    this->UserAbilityActivationInhibited = false;
-    this->ReplicationProxyEnabled = false;
-    this->bSuppressGrantAbility = false;
-    this->bSuppressGameplayCues = false;
-    this->OwnerActor = NULL;
-    this->AvatarActor = NULL;
-    this->bCachedIsNetSimulated = false;
-    this->bPendingMontageRep = false;
-}
 

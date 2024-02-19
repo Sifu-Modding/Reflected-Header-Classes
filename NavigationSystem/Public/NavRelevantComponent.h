@@ -18,11 +18,12 @@ protected:
     UObject* CachedNavParent;
     
 public:
-    UNavRelevantComponent();
+    UNavRelevantComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetNavigationRelevancy(bool bRelevant);
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

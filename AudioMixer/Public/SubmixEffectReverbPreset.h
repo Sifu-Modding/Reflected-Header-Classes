@@ -14,6 +14,7 @@ public:
     FSubmixEffectReverbSettings Settings;
     
     USubmixEffectReverbPreset();
+
     UFUNCTION(BlueprintCallable)
     void SetSettingsWithReverbEffect(const UReverbEffect* InReverbEffect, const float WetLevel, const float DryLevel);
     

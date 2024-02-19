@@ -8,5 +8,6 @@ class AKAUDIO_API UAkLocalizedMediaAsset : public UAkMediaAsset {
     GENERATED_BODY()
 public:
     UAkLocalizedMediaAsset();
+
 };
 

@@ -5,3 +5,4 @@ UMoviePipelineFCPXMLExporter::UMoviePipelineFCPXMLExporter() {
     this->DataSource = FCPXMLExportDataSource::OutputMetadata;
 }
 
+

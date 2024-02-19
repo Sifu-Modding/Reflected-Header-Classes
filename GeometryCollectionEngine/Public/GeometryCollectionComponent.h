@@ -133,9 +133,10 @@ private:
     UBodySetup* DummyBodySetup;
     
 public:
-    UGeometryCollectionComponent();
+    UGeometryCollectionComponent(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     void SetNotifyBreaks(bool bNewNotifyBreaks);
     
@@ -157,7 +158,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void ApplyKinematicField(float Radius, FVector Position);
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

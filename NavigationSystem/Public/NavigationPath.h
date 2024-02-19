@@ -21,6 +21,7 @@ public:
     TEnumAsByte<ENavigationOptionFlag::Type> RecalculateOnInvalidation;
     
     UNavigationPath();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsValid() const;
     

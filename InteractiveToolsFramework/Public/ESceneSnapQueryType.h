@@ -4,7 +4,7 @@
 
 UENUM(BlueprintType)
 enum class ESceneSnapQueryType : uint8 {
-    Position = 0x1,
+    Position = 1,
     Rotation,
 };
 

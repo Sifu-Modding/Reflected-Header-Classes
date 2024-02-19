@@ -8,5 +8,6 @@ class UMovieSceneCameraCutTrackInstance : public UMovieSceneTrackInstance {
     GENERATED_BODY()
 public:
     UMovieSceneCameraCutTrackInstance();
+
 };
 

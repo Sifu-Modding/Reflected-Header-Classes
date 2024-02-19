@@ -22,6 +22,7 @@ protected:
     
 public:
     UBackgroundBlurSlot();
+
     UFUNCTION(BlueprintCallable)
     void SetVerticalAlignment(TEnumAsByte<EVerticalAlignment> InVerticalAlignment);
     

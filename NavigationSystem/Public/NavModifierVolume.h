@@ -19,11 +19,12 @@ protected:
     bool bMaskFillCollisionUnderneathForNavmesh;
     
 public:
-    ANavModifierVolume();
+    ANavModifierVolume(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetAreaClass(TSubclassOf<UNavArea> NewAreaClass);
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

@@ -8,5 +8,6 @@ class INTERACTIVETOOLSFRAMEWORK_API UMeshSurfacePointTool : public USingleSelect
     GENERATED_BODY()
 public:
     UMeshSurfacePointTool();
+
 };
 

@@ -1,13 +1,8 @@
 #include "Image.h"
 
-class ISlateTextureAtlasInterface;
-class USlateTextureAtlasInterface;
-class UMaterialInstanceDynamic;
-class UMaterialInterface;
-class UObject;
-class USlateBrushAsset;
-class UTexture2D;
-class UTexture2DDynamic;
+UImage::UImage() {
+    this->bFlipForRightToLeftFlowDirection = false;
+}
 
 void UImage::SetOpacity(float InOpacity) {
 }
@@ -52,7 +47,4 @@ UMaterialInstanceDynamic* UImage::GetDynamicMaterial() {
     return NULL;
 }
 
-UImage::UImage() {
-    this->bFlipForRightToLeftFlowDirection = false;
-}
 

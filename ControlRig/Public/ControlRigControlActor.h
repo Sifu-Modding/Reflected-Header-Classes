@@ -59,7 +59,8 @@ private:
     FName ColorParameterName;
     
 public:
-    AControlRigControlActor();
+    AControlRigControlActor(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void Refresh();
     

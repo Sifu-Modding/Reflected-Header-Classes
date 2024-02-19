@@ -40,6 +40,7 @@ protected:
     
 public:
     UMovieSceneSubSection();
+
     UFUNCTION(BlueprintCallable)
     void SetSequence(UMovieSceneSequence* Sequence);
     

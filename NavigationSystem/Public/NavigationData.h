@@ -9,7 +9,7 @@
 
 class UPrimitiveComponent;
 
-UCLASS(Abstract, Blueprintable, Config=Engine, DefaultConfig)
+UCLASS(Abstract, Blueprintable, DefaultConfig, Config=Engine)
 class NAVIGATIONSYSTEM_API ANavigationData : public AActor, public INavigationDataInterface {
     GENERATED_BODY()
 public:
@@ -51,8 +51,9 @@ protected:
     TArray<FSupportedAreaData> SupportedAreas;
     
 public:
-    ANavigationData();
-    
+    ANavigationData(const FObjectInitializer& ObjectInitializer);
+
+
     // Fix for true pure virtual functions not being implemented
 };
 

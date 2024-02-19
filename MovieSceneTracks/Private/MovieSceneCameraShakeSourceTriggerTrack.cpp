@@ -3,3 +3,4 @@
 UMovieSceneCameraShakeSourceTriggerTrack::UMovieSceneCameraShakeSourceTriggerTrack() : UMovieSceneTrack(FObjectInitializer::Get()) {
 }
 
+

@@ -26,5 +26,6 @@ public:
     FVector WorldBBoxSize;
     
     UNiagaraDataInterfaceGrid3D();
+
 };
 

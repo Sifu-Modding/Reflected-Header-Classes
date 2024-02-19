@@ -7,6 +7,7 @@ UCLASS(Blueprintable, NonTransient)
 class INTERACTIVETOOLSFRAMEWORK_API AGizmoActor : public AInternalToolFrameworkActor {
     GENERATED_BODY()
 public:
-    AGizmoActor();
+    AGizmoActor(const FObjectInitializer& ObjectInitializer);
+
 };
 

@@ -1,7 +1,8 @@
 #include "AkGameObject.h"
 
-class UAkAudioEvent;
-class UObject;
+UAkGameObject::UAkGameObject(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->AkAudioEvent = NULL;
+}
 
 void UAkGameObject::Stop() {
 }
@@ -20,7 +21,4 @@ int32 UAkGameObject::PostAkEvent(UAkAudioEvent* AkEvent, int32 CallbackMask, con
     return 0;
 }
 
-UAkGameObject::UAkGameObject() {
-    this->AkAudioEvent = NULL;
-}
 

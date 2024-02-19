@@ -1,5 +1,18 @@
 #include "Slider.h"
 
+USlider::USlider() {
+    this->Value = 0.00f;
+    this->MinValue = 0.00f;
+    this->MaxValue = 1.00f;
+    this->Orientation = Orient_Horizontal;
+    this->IndentHandle = false;
+    this->Locked = false;
+    this->MouseUsesStep = false;
+    this->RequiresControllerLock = true;
+    this->StepSize = 0.01f;
+    this->IsFocusable = true;
+}
+
 void USlider::SetValue(float InValue) {
 }
 
@@ -32,16 +45,4 @@ float USlider::GetNormalizedValue() const {
     return 0.0f;
 }
 
-USlider::USlider() {
-    this->Value = 0.00f;
-    this->MinValue = 0.00f;
-    this->MaxValue = 1.00f;
-    this->Orientation = Orient_Horizontal;
-    this->IndentHandle = false;
-    this->Locked = false;
-    this->MouseUsesStep = false;
-    this->RequiresControllerLock = true;
-    this->StepSize = 0.01f;
-    this->IsFocusable = true;
-}
 

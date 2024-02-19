@@ -17,5 +17,6 @@ public:
     TArray<FString> EndConsoleCommands;
     
     UMoviePipelineConsoleVariableSetting();
+
 };
 

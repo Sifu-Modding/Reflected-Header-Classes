@@ -15,6 +15,7 @@ protected:
     
 public:
     UMediaPlaylist();
+
     UFUNCTION(BlueprintCallable)
     bool Replace(int32 Index, UMediaSource* Replacement);
     

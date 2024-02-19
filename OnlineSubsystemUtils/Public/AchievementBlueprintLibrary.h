@@ -11,6 +11,7 @@ class ONLINESUBSYSTEMUTILS_API UAchievementBlueprintLibrary : public UBlueprintF
     GENERATED_BODY()
 public:
     UAchievementBlueprintLibrary();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void GetCachedAchievementProgress(UObject* WorldContextObject, APlayerController* PlayerController, FName achievementId, bool& bFoundID, float& Progress);
     

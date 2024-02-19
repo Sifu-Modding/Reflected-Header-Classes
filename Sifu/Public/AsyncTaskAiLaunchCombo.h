@@ -21,6 +21,7 @@ public:
     USCDelegate::FDynamicMulticast OnFailure;
     
     UAsyncTaskAiLaunchCombo();
+
     UFUNCTION(BlueprintCallable)
     static UAsyncTaskAiLaunchCombo* BPF_AIAction_LaunchCombo(UAIFightingComponent* _aiComponent, TSubclassOf<UAIActionLaunchCombo> _actionClass, const FAIComboLaunchParameters& _parameters, UAIActionLaunchCombo*& _action);
     

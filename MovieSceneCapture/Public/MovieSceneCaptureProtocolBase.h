@@ -14,6 +14,7 @@ private:
     
 public:
     UMovieSceneCaptureProtocolBase();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsCapturing() const;
     

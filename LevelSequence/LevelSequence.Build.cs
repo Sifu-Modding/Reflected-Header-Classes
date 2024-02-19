@@ -7,18 +7,12 @@ public class LevelSequence : ModuleRules {
         ShadowVariableWarningLevel = WarningLevel.Warning;
         
         PublicDependencyModuleNames.AddRange(new string[] {
-            "AudioMixer",
             "Core",
             "CoreUObject",
             "Engine",
-            "InputCore",
             "MediaAssets",
-            "MediaUtils",
             "MovieScene",
             "MovieSceneTracks",
-            "PropertyPath",
-            "Slate",
-            "SlateCore",
             "UMG",
         });
     }

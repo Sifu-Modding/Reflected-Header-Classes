@@ -12,6 +12,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UFieldSystemComponent* FieldSystemComponent;
     
-    AFieldSystemActor();
+    AFieldSystemActor(const FObjectInitializer& ObjectInitializer);
+
 };
 

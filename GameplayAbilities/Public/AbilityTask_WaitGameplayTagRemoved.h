@@ -17,6 +17,7 @@ public:
     FWaitGameplayTagDelegate Removed;
     
     UAbilityTask_WaitGameplayTagRemoved();
+
     UFUNCTION(BlueprintCallable)
     static UAbilityTask_WaitGameplayTagRemoved* WaitGameplayTagRemove(UGameplayAbility* OwningAbility, FGameplayTag Tag, AActor* InOptionalExternalTarget, bool OnlyTriggerOnce);
     

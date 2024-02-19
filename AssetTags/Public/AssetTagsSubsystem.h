@@ -11,6 +11,7 @@ class ASSETTAGS_API UAssetTagsSubsystem : public UEngineSubsystem {
     GENERATED_BODY()
 public:
     UAssetTagsSubsystem();
+
     UFUNCTION(BlueprintCallable)
     TArray<FName> GetCollectionsContainingAssetPtr(const UObject* AssetPtr);
     

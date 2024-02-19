@@ -8,6 +8,5 @@ enum ELandscapeSetupErrors {
     LSE_NoLandscapeInfo,
     LSE_CollsionXY,
     LSE_NoLayerInfo,
-    LSE_MAX UMETA(Hidden),
 };
 

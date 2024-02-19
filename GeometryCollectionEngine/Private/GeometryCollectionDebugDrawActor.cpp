@@ -1,6 +1,8 @@
 #include "GeometryCollectionDebugDrawActor.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=SceneComponent -FallbackName=SceneComponent
 
-AGeometryCollectionDebugDrawActor::AGeometryCollectionDebugDrawActor() {
+AGeometryCollectionDebugDrawActor::AGeometryCollectionDebugDrawActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("SceneComponent"));
     this->bDebugDrawWholeCollection = false;
     this->bDebugDrawHierarchy = false;
     this->bDebugDrawClustering = false;
@@ -43,4 +45,5 @@ AGeometryCollectionDebugDrawActor::AGeometryCollectionDebugDrawActor() {
     this->GeometryTransformScale = 1.00f;
     this->SpriteComponent = NULL;
 }
+
 

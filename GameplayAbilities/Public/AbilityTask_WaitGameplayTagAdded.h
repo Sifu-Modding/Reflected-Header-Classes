@@ -17,6 +17,7 @@ public:
     FWaitGameplayTagDelegate Added;
     
     UAbilityTask_WaitGameplayTagAdded();
+
     UFUNCTION(BlueprintCallable)
     static UAbilityTask_WaitGameplayTagAdded* WaitGameplayTagAdd(UGameplayAbility* OwningAbility, FGameplayTag Tag, AActor* InOptionalExternalTarget, bool OnlyTriggerOnce);
     

@@ -22,7 +22,8 @@ private:
     TSubclassOf<AMagicLeapARPinInfoActorBase> ClassToSpawn;
     
 public:
-    AMagicLeapARPinRenderer();
+    AMagicLeapARPinRenderer(const FObjectInitializer& ObjectInitializer);
+
 private:
     UFUNCTION(BlueprintCallable)
     void SetVisibilityOverride(const bool InVisibilityOverride);

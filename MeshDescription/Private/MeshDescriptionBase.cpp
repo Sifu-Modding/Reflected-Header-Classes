@@ -1,5 +1,8 @@
 #include "MeshDescriptionBase.h"
 
+UMeshDescriptionBase::UMeshDescriptionBase() {
+}
+
 void UMeshDescriptionBase::SetVertexPosition(FVertexID VertexID, const FVector& Position) {
 }
 
@@ -295,6 +298,4 @@ FEdgeID UMeshDescriptionBase::CreateEdge(FVertexID VertexID0, FVertexID VertexID
 void UMeshDescriptionBase::ComputePolygonTriangulation(FPolygonID PolygonID) {
 }
 
-UMeshDescriptionBase::UMeshDescriptionBase() {
-}
 

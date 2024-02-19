@@ -18,6 +18,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     TArray<UActorComponent*> VisualizationComponents;
     
-    AGameplayAbilityWorldReticle_ActorVisualization();
+    AGameplayAbilityWorldReticle_ActorVisualization(const FObjectInitializer& ObjectInitializer);
+
 };
 

@@ -6,3 +6,4 @@ UMovieSceneControlRigParameterSection::UMovieSceneControlRigParameterSection() {
     this->bApplyBoneFilter = false;
 }
 
+

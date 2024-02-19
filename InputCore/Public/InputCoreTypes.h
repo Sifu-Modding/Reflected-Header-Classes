@@ -8,5 +8,6 @@ class UInputCoreTypes : public UObject {
     GENERATED_BODY()
 public:
     UInputCoreTypes();
+
 };
 

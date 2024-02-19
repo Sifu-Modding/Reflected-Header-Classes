@@ -8,5 +8,6 @@ class UMG_API UNativeWidgetHost : public UWidget {
     GENERATED_BODY()
 public:
     UNativeWidgetHost();
+
 };
 

@@ -16,3 +16,4 @@ UAkSettings::UAkSettings() {
     this->ReverbVolumeUpdateDelay = 0.20f;
 }
 
+

@@ -19,6 +19,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UNavigationGraphNodeComponent* PrevNodeComponent;
     
-    UNavigationGraphNodeComponent();
+    UNavigationGraphNodeComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

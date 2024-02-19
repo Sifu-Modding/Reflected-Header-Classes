@@ -8,5 +8,6 @@ class AUDIOEXTENSIONS_API UReverbPluginSourceSettingsBase : public UObject {
     GENERATED_BODY()
 public:
     UReverbPluginSourceSettingsBase();
+
 };
 

@@ -20,5 +20,6 @@ public:
     uint8 bManuallySetID: 1;
     
     UGameplayTaskResource();
+
 };
 

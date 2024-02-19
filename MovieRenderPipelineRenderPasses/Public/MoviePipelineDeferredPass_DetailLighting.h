@@ -8,5 +8,6 @@ class UMoviePipelineDeferredPass_DetailLighting : public UMoviePipelineDeferredP
     GENERATED_BODY()
 public:
     UMoviePipelineDeferredPass_DetailLighting();
+
 };
 

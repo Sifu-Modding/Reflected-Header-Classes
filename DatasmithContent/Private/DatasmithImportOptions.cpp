@@ -11,3 +11,4 @@ UDatasmithImportOptions::UDatasmithImportOptions() {
     this->MaterialQuality = EDatasmithImportMaterialQuality::UseNoFresnelCurves;
 }
 
+

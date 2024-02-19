@@ -1,6 +1,8 @@
 #include "UserDefinedCaptureProtocol.h"
 
-class UTexture;
+UUserDefinedCaptureProtocol::UUserDefinedCaptureProtocol() {
+    this->World = NULL;
+}
 
 void UUserDefinedCaptureProtocol::StopCapturingFinalPixels() {
 }
@@ -36,7 +38,4 @@ FString UUserDefinedCaptureProtocol::GenerateFilename(const FFrameMetrics& InFra
     return TEXT("");
 }
 
-UUserDefinedCaptureProtocol::UUserDefinedCaptureProtocol() {
-    this->World = NULL;
-}
 

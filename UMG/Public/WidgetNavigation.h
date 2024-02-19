@@ -27,5 +27,6 @@ public:
     FWidgetNavigationData Previous;
     
     UWidgetNavigation();
+
 };
 

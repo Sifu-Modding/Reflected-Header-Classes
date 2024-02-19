@@ -10,6 +10,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Radius;
     
-    AGameplayAbilityTargetActor_Radius();
+    AGameplayAbilityTargetActor_Radius(const FObjectInitializer& ObjectInitializer);
+
 };
 

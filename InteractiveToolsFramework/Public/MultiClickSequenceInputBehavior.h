@@ -8,5 +8,6 @@ class INTERACTIVETOOLSFRAMEWORK_API UMultiClickSequenceInputBehavior : public UA
     GENERATED_BODY()
 public:
     UMultiClickSequenceInputBehavior();
+
 };
 

@@ -8,5 +8,6 @@ class UAkMacPlatformInfo : public UAkPlatformInfo {
     GENERATED_BODY()
 public:
     UAkMacPlatformInfo();
+
 };
 

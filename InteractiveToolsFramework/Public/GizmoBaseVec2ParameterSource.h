@@ -10,7 +10,8 @@ class INTERACTIVETOOLSFRAMEWORK_API UGizmoBaseVec2ParameterSource : public UObje
     GENERATED_BODY()
 public:
     UGizmoBaseVec2ParameterSource();
-    
+
+
     // Fix for true pure virtual functions not being implemented
     UFUNCTION()
     void SetParameter(const FVector2D& NewValue) override PURE_VIRTUAL(SetParameter,);

@@ -26,6 +26,7 @@ protected:
     
 public:
     UBTService_BlueprintBase();
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveTickAI(AAIController* OwnerController, APawn* ControlledPawn, float DeltaSeconds);

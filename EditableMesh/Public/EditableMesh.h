@@ -52,6 +52,7 @@ public:
     int32 SubdivisionCount;
     
     UEditableMesh();
+
     UFUNCTION(BlueprintCallable)
     void WeldVertices(const TArray<FVertexID>& VertexIDs, FVertexID& OutNewVertexID);
     

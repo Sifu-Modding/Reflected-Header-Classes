@@ -22,6 +22,7 @@ protected:
     
 public:
     UBorderSlot();
+
     UFUNCTION(BlueprintCallable)
     void SetVerticalAlignment(TEnumAsByte<EVerticalAlignment> InVerticalAlignment);
     

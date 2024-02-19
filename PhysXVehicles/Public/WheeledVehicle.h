@@ -18,6 +18,7 @@ private:
     UWheeledVehicleMovementComponent* VehicleMovement;
     
 public:
-    AWheeledVehicle();
+    AWheeledVehicle(const FObjectInitializer& ObjectInitializer);
+
 };
 

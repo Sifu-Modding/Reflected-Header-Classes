@@ -28,6 +28,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool RenderVolumeBoundingBox;
     
-    AGeometryCollectionRenderLevelSetActor();
+    AGeometryCollectionRenderLevelSetActor(const FObjectInitializer& ObjectInitializer);
+
 };
 

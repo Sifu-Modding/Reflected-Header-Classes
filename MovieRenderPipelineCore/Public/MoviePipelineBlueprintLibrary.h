@@ -21,6 +21,7 @@ class MOVIERENDERPIPELINECORE_API UMoviePipelineBlueprintLibrary : public UBluep
     GENERATED_BODY()
 public:
     UMoviePipelineBlueprintLibrary();
+
     UFUNCTION(BlueprintCallable)
     static void UpdateJobShotListFromSequence(ULevelSequence* InSequence, UMoviePipelineExecutorJob* InJob);
     

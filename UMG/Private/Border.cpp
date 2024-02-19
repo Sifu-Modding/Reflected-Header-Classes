@@ -1,9 +1,12 @@
 #include "Border.h"
 
-class UMaterialInstanceDynamic;
-class UMaterialInterface;
-class USlateBrushAsset;
-class UTexture2D;
+UBorder::UBorder() {
+    this->bIsVariable = false;
+    this->HorizontalAlignment = HAlign_Fill;
+    this->VerticalAlignment = VAlign_Fill;
+    this->bShowEffectWhenDisabled = true;
+    this->bFlipForRightToLeftFlowDirection = false;
+}
 
 void UBorder::SetVerticalAlignment(TEnumAsByte<EVerticalAlignment> InVerticalAlignment) {
 }
@@ -39,10 +42,4 @@ UMaterialInstanceDynamic* UBorder::GetDynamicMaterial() {
     return NULL;
 }
 
-UBorder::UBorder() {
-    this->HorizontalAlignment = HAlign_Fill;
-    this->VerticalAlignment = VAlign_Fill;
-    this->bShowEffectWhenDisabled = true;
-    this->bFlipForRightToLeftFlowDirection = false;
-}
 

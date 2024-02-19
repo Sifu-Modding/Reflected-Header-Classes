@@ -5,3 +5,4 @@ UBlackboardKeyType_Class::UBlackboardKeyType_Class() {
     this->BaseClass = UObject::StaticClass();
 }
 
+

@@ -8,7 +8,7 @@
 
 class UNavArea;
 
-UCLASS(Blueprintable)
+UCLASS(Blueprintable, Config=Engine)
 class NAVIGATIONSYSTEM_API UNavCollision : public UNavCollisionBase {
     GENERATED_BODY()
 public:
@@ -28,5 +28,6 @@ public:
     uint8 bCreateOnClient: 1;
     
     UNavCollision();
+
 };
 

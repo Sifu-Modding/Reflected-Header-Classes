@@ -13,6 +13,7 @@ class FOLIAGE_API UFoliageStatistics : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UFoliageStatistics();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static int32 FoliageOverlappingSphereCount(UObject* WorldContextObject, const UStaticMesh* StaticMesh, FVector CenterPosition, float Radius);
     

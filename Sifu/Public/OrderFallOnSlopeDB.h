@@ -97,6 +97,7 @@ public:
     bool m_bCallRTPCOnSelf;
     
     UOrderFallOnSlopeDB();
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BPE_StopBodyRollLoop(UObject* _owner, uint8 _uiOrderId) const;
     

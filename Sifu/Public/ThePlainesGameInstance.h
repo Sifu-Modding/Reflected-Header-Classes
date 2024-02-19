@@ -100,6 +100,7 @@ private:
     
 public:
     UThePlainesGameInstance();
+
     UFUNCTION(BlueprintCallable, Exec)
     void TriggerTakeKinectResources(bool _bTake);
     
@@ -152,7 +153,7 @@ public:
     
 private:
     UFUNCTION(BlueprintCallable, Exec)
-    void GiveBestScoreToAllChallenges();
+    void GiveBestScoreToAllChallenges(const FString& _batchCategory);
     
 public:
     UFUNCTION(BlueprintCallable)

@@ -11,5 +11,6 @@ public:
     float CoolDownTime;
     
     UBTDecorator_Cooldown();
+
 };
 

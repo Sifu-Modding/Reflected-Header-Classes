@@ -3,3 +3,4 @@
 UMovieSceneNiagaraBoolParameterTrack::UMovieSceneNiagaraBoolParameterTrack() {
 }
 
+

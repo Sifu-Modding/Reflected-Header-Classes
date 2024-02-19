@@ -6,3 +6,4 @@ UNiagaraDataInterfaceAudioOscilloscope::UNiagaraDataInterfaceAudioOscilloscope()
     this->ScopeInMilliseconds = 20.00f;
 }
 
+

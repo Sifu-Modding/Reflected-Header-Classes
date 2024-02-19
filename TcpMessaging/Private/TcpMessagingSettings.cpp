@@ -6,3 +6,4 @@ UTcpMessagingSettings::UTcpMessagingSettings() {
     this->bStopServiceWhenAppDeactivates = true;
 }
 
+

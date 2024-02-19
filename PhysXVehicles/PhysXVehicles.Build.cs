@@ -8,11 +8,8 @@ public class PhysXVehicles : ModuleRules {
         
         PublicDependencyModuleNames.AddRange(new string[] {
             "AnimGraphRuntime",
-            "AnimationCore",
-            "Chaos",
             "Core",
             "CoreUObject",
-            "DeveloperSettings",
             "Engine",
             "PhysicsCore",
         });

@@ -1,6 +1,12 @@
 #include "MediaSoundComponent.h"
 
-class UMediaPlayer;
+UMediaSoundComponent::UMediaSoundComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bAutoActivate = true;
+    this->Channels = EMediaSoundChannels::Stereo;
+    this->DynamicRateAdjustment = false;
+    this->RateAdjustmentFactor = 0.00f;
+    this->MediaPlayer = NULL;
+}
 
 void UMediaSoundComponent::SetSpectralAnalysisSettings(TArray<float> InFrequenciesToAnalyze, EMediaSoundComponentFFTSize InFFTSize) {
 }
@@ -37,10 +43,4 @@ bool UMediaSoundComponent::BP_GetAttenuationSettingsToApply(FSoundAttenuationSet
     return false;
 }
 
-UMediaSoundComponent::UMediaSoundComponent() {
-    this->Channels = EMediaSoundChannels::Stereo;
-    this->DynamicRateAdjustment = false;
-    this->RateAdjustmentFactor = 0.00f;
-    this->MediaPlayer = NULL;
-}
 

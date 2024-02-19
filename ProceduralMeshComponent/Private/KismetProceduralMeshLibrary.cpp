@@ -1,9 +1,7 @@
 #include "KismetProceduralMeshLibrary.h"
 
-class UMaterialInterface;
-class UProceduralMeshComponent;
-class UStaticMesh;
-class UStaticMeshComponent;
+UKismetProceduralMeshLibrary::UKismetProceduralMeshLibrary() {
+}
 
 void UKismetProceduralMeshLibrary::SliceProceduralMesh(UProceduralMeshComponent* InProcMesh, FVector PlanePosition, FVector PlaneNormal, bool bCreateOtherHalf, UProceduralMeshComponent*& OutOtherHalfProcMesh, EProcMeshSliceCapOption CapOption, UMaterialInterface* CapMaterial) {
 }
@@ -35,6 +33,4 @@ void UKismetProceduralMeshLibrary::ConvertQuadToTriangles(TArray<int32>& Triangl
 void UKismetProceduralMeshLibrary::CalculateTangentsForMesh(const TArray<FVector>& Vertices, const TArray<int32>& Triangles, const TArray<FVector2D>& UVs, TArray<FVector>& Normals, TArray<FProcMeshTangent>& Tangents) {
 }
 
-UKismetProceduralMeshLibrary::UKismetProceduralMeshLibrary() {
-}
 

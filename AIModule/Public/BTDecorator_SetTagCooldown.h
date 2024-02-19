@@ -18,5 +18,6 @@ public:
     bool bAddToExistingDuration;
     
     UBTDecorator_SetTagCooldown();
+
 };
 

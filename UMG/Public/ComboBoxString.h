@@ -62,6 +62,7 @@ public:
     FOnOpeningEvent OnOpening;
     
     UComboBoxString();
+
     UFUNCTION(BlueprintCallable)
     void SetSelectedOption(const FString& Option);
     

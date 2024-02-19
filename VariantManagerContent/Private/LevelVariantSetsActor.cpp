@@ -1,6 +1,9 @@
 #include "LevelVariantSetsActor.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=SceneComponent -FallbackName=SceneComponent
 
-class ULevelVariantSets;
+ALevelVariantSetsActor::ALevelVariantSetsActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("SceneComp"));
+}
 
 bool ALevelVariantSetsActor::SwitchOnVariantByName(const FString& VariantSetName, const FString& VariantName) {
     return false;
@@ -17,6 +20,4 @@ ULevelVariantSets* ALevelVariantSetsActor::GetLevelVariantSets(bool bLoad) {
     return NULL;
 }
 
-ALevelVariantSetsActor::ALevelVariantSetsActor() {
-}
 

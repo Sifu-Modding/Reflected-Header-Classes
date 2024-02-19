@@ -24,6 +24,7 @@ public:
     TSubclassOf<UEnvQueryItemType> GeneratedItemType;
     
     UEnvQueryGenerator_BlueprintBase();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UObject* GetQuerier() const;
     

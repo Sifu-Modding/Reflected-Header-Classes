@@ -6,7 +6,7 @@
 
 class UNavigationQueryFilter;
 
-UCLASS(Blueprintable)
+UCLASS(Blueprintable, Config=Engine)
 class AIMODULE_API UBTTask_MoveTo : public UBTTask_BlackboardBase {
     GENERATED_BODY()
 public:
@@ -47,5 +47,6 @@ public:
     uint8 bStopOnOverlapNeedsUpdate: 1;
     
     UBTTask_MoveTo();
+
 };
 

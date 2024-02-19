@@ -49,6 +49,7 @@ protected:
     
 public:
     UMediaTexture();
+
     UFUNCTION(BlueprintCallable)
     void SetMediaPlayer(UMediaPlayer* NewMediaPlayer);
     

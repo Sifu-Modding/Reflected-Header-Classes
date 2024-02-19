@@ -29,6 +29,7 @@ private:
     
 public:
     UARFaceGeometry();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FTransform GetWorldSpaceEyeTransform(EAREye Eye) const;
     

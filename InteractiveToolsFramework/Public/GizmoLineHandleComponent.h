@@ -26,6 +26,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bImageScale;
     
-    UGizmoLineHandleComponent();
+    UGizmoLineHandleComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

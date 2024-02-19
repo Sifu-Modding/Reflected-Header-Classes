@@ -16,6 +16,7 @@ public:
     USCDelegate::FDynamicMulticast OnInputAvailable;
     
     UAsyncWaitForInputAvailability();
+
     UFUNCTION(BlueprintCallable)
     static UAsyncWaitForInputAvailability* BPF_WaitForInputAvailability(ABaseCharacter* _inCharacter, InputAction _eInInputAction);
     

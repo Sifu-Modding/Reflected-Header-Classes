@@ -7,6 +7,7 @@ UCLASS(Blueprintable)
 class SCCORE_API ASCVideoRectLight : public ARectLight {
     GENERATED_BODY()
 public:
-    ASCVideoRectLight();
+    ASCVideoRectLight(const FObjectInitializer& ObjectInitializer);
+
 };
 

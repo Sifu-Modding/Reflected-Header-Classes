@@ -44,6 +44,7 @@ public:
     bool m_bIsRemappingOccured;
     
     UInputsMappingMenu();
+
     UFUNCTION(BlueprintCallable)
     void OnRemappingStarted(FName _ActionName, EMappableFieldScaleTypes _eScaleType);
     

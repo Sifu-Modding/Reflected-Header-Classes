@@ -19,5 +19,6 @@ public:
     FString DestinationColorSpace;
     
     UOpenColorIOColorTransform();
+
 };
 

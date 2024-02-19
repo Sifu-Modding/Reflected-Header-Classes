@@ -8,5 +8,6 @@ class INTERACTIVETOOLSFRAMEWORK_API UMeshSurfacePointToolBuilder : public UInter
     GENERATED_BODY()
 public:
     UMeshSurfacePointToolBuilder();
+
 };
 

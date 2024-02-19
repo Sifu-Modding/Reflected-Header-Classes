@@ -8,5 +8,6 @@ class AKAUDIO_API UAkTrigger : public UAkAudioType {
     GENERATED_BODY()
 public:
     UAkTrigger();
+
 };
 

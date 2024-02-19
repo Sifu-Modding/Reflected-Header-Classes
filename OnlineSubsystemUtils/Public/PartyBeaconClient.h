@@ -28,7 +28,8 @@ protected:
     bool bCancelReservation;
     
 public:
-    APartyBeaconClient();
+    APartyBeaconClient(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
     void ServerUpdateReservationRequest(const FString& SessionId, const FPartyReservation& ReservationUpdate);

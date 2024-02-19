@@ -22,7 +22,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FBoolParameterNameAndCurve> BoolParameterNamesAndCurves;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FScalarParameterNameAndCurve> ScalarParameterNamesAndCurves;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -39,6 +39,7 @@ protected:
     
 public:
     UMovieSceneParameterSection();
+
     UFUNCTION(BlueprintCallable)
     bool RemoveVectorParameter(FName InParameterName);
     

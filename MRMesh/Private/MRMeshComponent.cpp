@@ -1,6 +1,13 @@
 #include "MRMeshComponent.h"
 
-class UMaterialInterface;
+UMRMeshComponent::UMRMeshComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->Material = NULL;
+    this->WireframeMaterial = NULL;
+    this->bCreateMeshProxySections = true;
+    this->bUpdateNavMeshOnMeshUpdate = true;
+    this->bNeverCreateCollisionMesh = false;
+    this->CachedBodySetup = NULL;
+}
 
 void UMRMeshComponent::SetWireframeMaterial(UMaterialInterface* InMaterial) {
 }
@@ -36,12 +43,4 @@ void UMRMeshComponent::ForceNavMeshUpdate() {
 void UMRMeshComponent::Clear() {
 }
 
-UMRMeshComponent::UMRMeshComponent() {
-    this->Material = NULL;
-    this->WireframeMaterial = NULL;
-    this->bCreateMeshProxySections = true;
-    this->bUpdateNavMeshOnMeshUpdate = true;
-    this->bNeverCreateCollisionMesh = false;
-    this->CachedBodySetup = NULL;
-}
 

@@ -10,7 +10,8 @@ class INTERACTIVETOOLSFRAMEWORK_API UGizmoBaseTransformSource : public UObject, 
     GENERATED_BODY()
 public:
     UGizmoBaseTransformSource();
-    
+
+
     // Fix for true pure virtual functions not being implemented
     UFUNCTION()
     void SetTransform(const FTransform& NewTransform) override PURE_VIRTUAL(SetTransform,);

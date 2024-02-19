@@ -54,5 +54,6 @@ public:
     FClothConfig_Legacy ClothConfig;
     
     UClothingAssetCommon();
+
 };
 

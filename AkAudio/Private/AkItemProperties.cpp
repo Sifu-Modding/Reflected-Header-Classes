@@ -1,5 +1,8 @@
 #include "AkItemProperties.h"
 
+UAkItemProperties::UAkItemProperties() {
+}
+
 void UAkItemProperties::SetSearchText(const FString& newText) {
 }
 
@@ -11,6 +14,4 @@ FString UAkItemProperties::GetSearchText() const {
     return TEXT("");
 }
 
-UAkItemProperties::UAkItemProperties() {
-}
 

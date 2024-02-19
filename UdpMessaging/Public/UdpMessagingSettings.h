@@ -4,7 +4,7 @@
 #include "EUdpMessageFormat.h"
 #include "UdpMessagingSettings.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS(Blueprintable, Config=Engine)
 class UUdpMessagingSettings : public UObject {
     GENERATED_BODY()
 public:
@@ -48,5 +48,6 @@ public:
     TArray<FString> RemoteTunnelEndpoints;
     
     UUdpMessagingSettings();
+
 };
 

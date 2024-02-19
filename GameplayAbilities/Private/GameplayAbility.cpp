@@ -1,12 +1,23 @@
 #include "GameplayAbility.h"
 #include "Templates/SubclassOf.h"
 
-class AActor;
-class UAbilitySystemComponent;
-class UAnimMontage;
-class UGameplayEffect;
-class UObject;
-class USkeletalMeshComponent;
+UGameplayAbility::UGameplayAbility() {
+    this->bReplicateInputDirectly = false;
+    this->RemoteInstanceEnded = false;
+    this->ReplicationPolicy = EGameplayAbilityReplicationPolicy::ReplicateNo;
+    this->InstancingPolicy = EGameplayAbilityInstancingPolicy::InstancedPerExecution;
+    this->bServerRespectsRemoteAbilityCancellation = true;
+    this->bRetriggerInstancedAbility = false;
+    this->NetExecutionPolicy = EGameplayAbilityNetExecutionPolicy::LocalPredicted;
+    this->NetSecurityPolicy = EGameplayAbilityNetSecurityPolicy::ClientOrServer;
+    this->CostGameplayEffectClass = NULL;
+    this->CooldownGameplayEffectClass = NULL;
+    this->CurrentMontage = NULL;
+    this->bIsActive = false;
+    this->bIsCancelable = false;
+    this->bIsBlockingOtherAbilities = false;
+    this->bMarkPendingKillOnAbilityEnd = false;
+}
 
 void UGameplayAbility::SetShouldBlockOtherAbilities(bool bShouldBlockAbilities) {
 }
@@ -180,21 +191,4 @@ FActiveGameplayEffectHandle UGameplayAbility::BP_ApplyGameplayEffectToOwner(TSub
     return FActiveGameplayEffectHandle{};
 }
 
-UGameplayAbility::UGameplayAbility() {
-    this->bReplicateInputDirectly = false;
-    this->RemoteInstanceEnded = false;
-    this->ReplicationPolicy = EGameplayAbilityReplicationPolicy::ReplicateNo;
-    this->InstancingPolicy = EGameplayAbilityInstancingPolicy::InstancedPerExecution;
-    this->bServerRespectsRemoteAbilityCancellation = true;
-    this->bRetriggerInstancedAbility = false;
-    this->NetExecutionPolicy = EGameplayAbilityNetExecutionPolicy::LocalPredicted;
-    this->NetSecurityPolicy = EGameplayAbilityNetSecurityPolicy::ClientOrServer;
-    this->CostGameplayEffectClass = NULL;
-    this->CooldownGameplayEffectClass = NULL;
-    this->CurrentMontage = NULL;
-    this->bIsActive = false;
-    this->bIsCancelable = false;
-    this->bIsBlockingOtherAbilities = false;
-    this->bMarkPendingKillOnAbilityEnd = false;
-}
 

@@ -8,5 +8,6 @@ class UAkLuminPlatformInfo : public UAkPlatformInfo {
     GENERATED_BODY()
 public:
     UAkLuminPlatformInfo();
+
 };
 

@@ -20,6 +20,7 @@ public:
     bool PadBottom;
     
     USafeZone();
+
     UFUNCTION(BlueprintCallable)
     void SetSidesToPad(bool InPadLeft, bool InPadRight, bool InPadTop, bool InPadBottom);
     

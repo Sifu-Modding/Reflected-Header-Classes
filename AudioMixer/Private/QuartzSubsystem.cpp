@@ -1,7 +1,7 @@
 #include "QuartzSubsystem.h"
 
-class UObject;
-class UQuartzClockHandle;
+UQuartzSubsystem::UQuartzSubsystem() {
+}
 
 float UQuartzSubsystem::GetRoundTripMinLatency(const UObject* WorldContextObject) {
     return 0.0f;
@@ -51,6 +51,4 @@ UQuartzClockHandle* UQuartzSubsystem::CreateNewClock(const UObject* WorldContext
     return NULL;
 }
 
-UQuartzSubsystem::UQuartzSubsystem() {
-}
 

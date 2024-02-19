@@ -84,6 +84,7 @@ public:
     FOnCheckBoxComponentStateChanged OnCheckStateChanged;
     
     UCheckBox();
+
     UFUNCTION(BlueprintCallable)
     void SetTouchMethod(TEnumAsByte<EButtonTouchMethod::Type> InTouchMethod);
     

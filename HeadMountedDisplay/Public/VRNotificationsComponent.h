@@ -34,6 +34,7 @@ public:
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVRNotificationsDelegate VRControllerRecenteredDelegate;
     
-    UVRNotificationsComponent();
+    UVRNotificationsComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

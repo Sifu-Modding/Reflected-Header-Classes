@@ -7,3 +7,4 @@ ULandscapeMaterialInstanceConstant::ULandscapeMaterialInstanceConstant() {
     this->bEditorToolUsage = false;
 }
 
+

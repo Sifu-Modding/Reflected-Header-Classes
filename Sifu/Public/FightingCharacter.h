@@ -82,6 +82,7 @@ UCLASS(Blueprintable)
 class SIFU_API AFightingCharacter : public ABaseCharacter, public ITargetableActor, public IHittableActor, public IGenericTeamAgentInterface, public IAbilitySystemInterface {
     GENERATED_BODY()
 public:
+    DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnThrowableBroke);
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnResilienceChanged, int32, _iNewResilience);
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnRecoveryFromDamageDealt, float, _fHealAmount);
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnEquip, bool, _bEquipmentSuccessful);
@@ -114,6 +115,9 @@ public:
     
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnAvoidSuccessDelegate OnAvoidSuccessDynamic;
+    
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FOnThrowableBroke OnThrowableBroke;
     
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnEffectAddedOrRemoved OnEffectAddedOrRemoved;
@@ -254,9 +258,10 @@ protected:
     USCDelegate::FDynamicMulticast OnRemoveSlapstick;
     
 public:
-    AFightingCharacter();
+    AFightingCharacter(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     void SetTarget(AActor* _target);
     
@@ -379,6 +384,9 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void BPF_SetFaction(EFactionsEnums _eFaction);
+    
+    UFUNCTION(BlueprintCallable)
+    void BPF_SetCanDropWeapon(const bool _CanDropWeapon);
     
     UFUNCTION(BlueprintCallable)
     void BPF_SaveAnimInstanceReference();
@@ -594,6 +602,9 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BPE_Hit(const FHitDescription& _hit);
     
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent, BlueprintPure)
+    bool BPE_GetContextualCanDieByDamaged(bool _bDefaultValue) const;
+    
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BPE_EndRevive(bool _bSuccess);
     
@@ -653,7 +664,7 @@ private:
     UFUNCTION(BlueprintCallable, Exec)
     void AddGameplayTag(const FString& _tag);
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

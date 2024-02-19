@@ -12,6 +12,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UCableComponent* CableComponent;
     
-    ACableActor();
+    ACableActor(const FObjectInitializer& ObjectInitializer);
+
 };
 

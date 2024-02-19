@@ -34,6 +34,7 @@ public:
     FName SocketName;
     
     UAnimNotify_PlayNiagaraEffect();
+
     UFUNCTION(BlueprintCallable, BlueprintPure=false)
     UFXSystemComponent* GetSpawnedEffect() const;
     

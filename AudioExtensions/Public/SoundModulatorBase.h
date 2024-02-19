@@ -8,5 +8,6 @@ class AUDIOEXTENSIONS_API USoundModulatorBase : public UObject {
     GENERATED_BODY()
 public:
     USoundModulatorBase();
+
 };
 

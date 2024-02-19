@@ -1,11 +1,5 @@
 #include "AISystem.h"
 
-void UAISystem::AILoggingVerbose() {
-}
-
-void UAISystem::AIIgnorePlayers() {
-}
-
 UAISystem::UAISystem() {
     this->AcceptanceRadius = 5.00f;
     this->PathfollowingRegularPathPointAcceptanceRadius = 0.00f;
@@ -25,4 +19,11 @@ UAISystem::UAISystem() {
     this->HotSpotManager = NULL;
     this->NavLocalGrids = NULL;
 }
+
+void UAISystem::AILoggingVerbose() {
+}
+
+void UAISystem::AIIgnorePlayers() {
+}
+
 

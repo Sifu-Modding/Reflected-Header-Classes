@@ -1,6 +1,7 @@
 #include "OrderTypeHelper.h"
 
-class ABaseCharacter;
+UOrderTypeHelper::UOrderTypeHelper() {
+}
 
 FOrderType UOrderTypeHelper::MakeOrderTypeFromEnum(EOrderType _eOrderType) {
     return FOrderType{};
@@ -14,6 +15,4 @@ FOrderType UOrderTypeHelper::MakeFromEditableOrderType(const ABaseCharacter*& _o
     return FOrderType{};
 }
 
-UOrderTypeHelper::UOrderTypeHelper() {
-}
 

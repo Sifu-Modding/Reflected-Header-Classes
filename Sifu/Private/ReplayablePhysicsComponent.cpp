@@ -1,6 +1,11 @@
 #include "ReplayablePhysicsComponent.h"
 #include "Net/UnrealNetwork.h"
 
+UReplayablePhysicsComponent::UReplayablePhysicsComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->m_SkeletalMeshComp = NULL;
+    this->m_bActive = false;
+}
+
 void UReplayablePhysicsComponent::OnReplaySystemRecordingChanged(bool _bIsRecording) {
 }
 
@@ -17,8 +22,4 @@ void UReplayablePhysicsComponent::GetLifetimeReplicatedProps(TArray<FLifetimePro
     DOREPLIFETIME(UReplayablePhysicsComponent, m_bActive);
 }
 
-UReplayablePhysicsComponent::UReplayablePhysicsComponent() {
-    this->m_SkeletalMeshComp = NULL;
-    this->m_bActive = false;
-}
 

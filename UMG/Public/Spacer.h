@@ -12,6 +12,7 @@ public:
     FVector2D Size;
     
     USpacer();
+
     UFUNCTION(BlueprintCallable)
     void SetSize(FVector2D InSize);
     

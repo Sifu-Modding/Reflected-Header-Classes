@@ -5,3 +5,4 @@ UNiagaraDataInterfaceCamera::UNiagaraDataInterfaceCamera() {
     this->bRequireCurrentFrameData = true;
 }
 
+

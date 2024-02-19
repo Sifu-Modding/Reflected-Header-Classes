@@ -10,3 +10,4 @@ UControlRigNumericalValidationPass::UControlRigNumericalValidationPass() {
     this->CurvePrecision = 0.01f;
 }
 
+

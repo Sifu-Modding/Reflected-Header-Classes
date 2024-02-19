@@ -19,6 +19,7 @@ private:
     
 public:
     UMovieSceneCinematicShotSection();
+
     UFUNCTION(BlueprintCallable)
     void SetShotDisplayName(const FString& InShotDisplayName);
     

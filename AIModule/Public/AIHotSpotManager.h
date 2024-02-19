@@ -8,5 +8,6 @@ class AIMODULE_API UAIHotSpotManager : public UObject {
     GENERATED_BODY()
 public:
     UAIHotSpotManager();
+
 };
 

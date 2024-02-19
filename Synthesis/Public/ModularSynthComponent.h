@@ -23,7 +23,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 VoiceCount;
     
-    UModularSynthComponent();
+    UModularSynthComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetSynthPreset(const FModularSynthPreset& SynthPreset);
     

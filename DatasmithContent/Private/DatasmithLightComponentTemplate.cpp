@@ -12,3 +12,4 @@ UDatasmithLightComponentTemplate::UDatasmithLightComponentTemplate() {
     this->IESTexture = NULL;
 }
 
+

@@ -4,7 +4,7 @@
 #include "PartyReservation.h"
 #include "PartyBeaconState.generated.h"
 
-UCLASS(Blueprintable, NotPlaceable, Transient)
+UCLASS(Blueprintable, NotPlaceable, Transient, Config=Engine)
 class ONLINESUBSYSTEMUTILS_API UPartyBeaconState : public UObject {
     GENERATED_BODY()
 public:
@@ -44,5 +44,6 @@ protected:
     
 public:
     UPartyBeaconState();
+
 };
 

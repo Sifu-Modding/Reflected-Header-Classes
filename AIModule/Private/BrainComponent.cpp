@@ -1,5 +1,10 @@
 #include "BrainComponent.h"
 
+UBrainComponent::UBrainComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->BlackboardComp = NULL;
+    this->AIOwner = NULL;
+}
+
 void UBrainComponent::StopLogic(const FString& Reason) {
 }
 
@@ -17,8 +22,4 @@ bool UBrainComponent::IsPaused() const {
     return false;
 }
 
-UBrainComponent::UBrainComponent() {
-    this->BlackboardComp = NULL;
-    this->AIOwner = NULL;
-}
 

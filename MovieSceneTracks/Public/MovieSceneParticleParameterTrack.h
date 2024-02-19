@@ -16,7 +16,8 @@ private:
     
 public:
     UMovieSceneParticleParameterTrack();
-    
+
+
     // Fix for true pure virtual functions not being implemented
 };
 

@@ -15,6 +15,7 @@ class MESHDESCRIPTION_API UMeshDescriptionBase : public UObject {
     GENERATED_BODY()
 public:
     UMeshDescriptionBase();
+
     UFUNCTION(BlueprintCallable)
     void SetVertexPosition(FVertexID VertexID, const FVector& Position);
     

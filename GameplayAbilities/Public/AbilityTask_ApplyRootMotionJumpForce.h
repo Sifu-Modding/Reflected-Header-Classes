@@ -50,8 +50,9 @@ protected:
     
 public:
     UAbilityTask_ApplyRootMotionJumpForce();
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     void OnLandedCallback(const FHitResult& Hit);
     

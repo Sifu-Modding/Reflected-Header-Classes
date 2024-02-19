@@ -20,3 +20,4 @@ UClothConfigNv::UClothConfigNv() {
     this->WindMethod = EClothingWindMethod_Legacy::Legacy;
 }
 
+

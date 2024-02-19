@@ -29,6 +29,7 @@ class HEADMOUNTEDDISPLAY_API UHeadMountedDisplayFunctionLibrary : public UBluepr
     GENERATED_BODY()
 public:
     UHeadMountedDisplayFunctionLibrary();
+
     UFUNCTION(BlueprintCallable)
     static void UpdateExternalTrackingHMDPosition(const FTransform& ExternalTrackingTransform);
     

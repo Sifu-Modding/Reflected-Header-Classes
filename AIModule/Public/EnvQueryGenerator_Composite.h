@@ -23,5 +23,6 @@ public:
     TSubclassOf<UEnvQueryItemType> ForcedItemType;
     
     UEnvQueryGenerator_Composite();
+
 };
 

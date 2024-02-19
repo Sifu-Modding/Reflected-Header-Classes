@@ -20,6 +20,7 @@ public:
     TEnumAsByte<EVerticalAlignment> VerticalAlignment;
     
     UScrollBoxSlot();
+
     UFUNCTION(BlueprintCallable)
     void SetVerticalAlignment(TEnumAsByte<EVerticalAlignment> InVerticalAlignment);
     

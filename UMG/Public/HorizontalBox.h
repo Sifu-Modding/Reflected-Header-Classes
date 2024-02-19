@@ -11,6 +11,7 @@ class UMG_API UHorizontalBox : public UPanelWidget {
     GENERATED_BODY()
 public:
     UHorizontalBox();
+
     UFUNCTION(BlueprintCallable)
     UHorizontalBoxSlot* AddChildToHorizontalBox(UWidget* Content);
     

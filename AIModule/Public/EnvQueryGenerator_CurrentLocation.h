@@ -16,5 +16,6 @@ protected:
     
 public:
     UEnvQueryGenerator_CurrentLocation();
+
 };
 

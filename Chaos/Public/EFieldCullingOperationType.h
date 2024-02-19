@@ -6,7 +6,6 @@ UENUM(BlueprintType)
 enum EFieldCullingOperationType {
     Field_Culling_Inside,
     Field_Culling_Outside,
-    Field_Culling_Operation_Max,
-    Field_Culling_MAX UMETA(Hidden),
+    Field_Culling_Operation_Max UMETA(Hidden),
 };
 

@@ -1,7 +1,8 @@
 #include "NiagaraPreviewBase.h"
 
-
-
-ANiagaraPreviewBase::ANiagaraPreviewBase() {
+ANiagaraPreviewBase::ANiagaraPreviewBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
+
+
 

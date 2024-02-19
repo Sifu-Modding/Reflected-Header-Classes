@@ -8,5 +8,6 @@ class AIMODULE_API UAISenseConfig_Touch : public UAISenseConfig {
     GENERATED_BODY()
 public:
     UAISenseConfig_Touch();
+
 };
 

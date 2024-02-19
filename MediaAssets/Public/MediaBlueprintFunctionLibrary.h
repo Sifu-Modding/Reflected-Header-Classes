@@ -9,6 +9,7 @@ class UMediaBlueprintFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UMediaBlueprintFunctionLibrary();
+
     UFUNCTION(BlueprintCallable)
     static void EnumerateWebcamCaptureDevices(TArray<FMediaCaptureDevice>& OutDevices, int32 Filter);
     

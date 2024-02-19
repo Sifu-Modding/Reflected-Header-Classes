@@ -9,7 +9,8 @@ class UMovieSceneMediaPlayerPropertyTrack : public UMovieScenePropertyTrack, pub
     GENERATED_BODY()
 public:
     UMovieSceneMediaPlayerPropertyTrack();
-    
+
+
     // Fix for true pure virtual functions not being implemented
 };
 

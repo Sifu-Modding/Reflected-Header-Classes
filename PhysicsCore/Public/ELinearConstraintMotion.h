@@ -7,6 +7,5 @@ enum ELinearConstraintMotion {
     LCM_Free,
     LCM_Limited,
     LCM_Locked,
-    LCM_MAX UMETA(Hidden),
 };
 

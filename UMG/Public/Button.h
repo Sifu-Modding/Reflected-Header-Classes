@@ -58,6 +58,7 @@ public:
     FOnButtonHoverEvent OnUnhovered;
     
     UButton();
+
     UFUNCTION(BlueprintCallable)
     void SetTouchMethod(TEnumAsByte<EButtonTouchMethod::Type> InTouchMethod);
     

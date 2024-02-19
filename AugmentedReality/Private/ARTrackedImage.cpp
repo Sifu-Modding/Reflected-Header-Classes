@@ -1,6 +1,8 @@
 #include "ARTrackedImage.h"
 
-class UARCandidateImage;
+UARTrackedImage::UARTrackedImage() {
+    this->DetectedImage = NULL;
+}
 
 FVector2D UARTrackedImage::GetEstimateSize() {
     return FVector2D{};
@@ -10,7 +12,4 @@ UARCandidateImage* UARTrackedImage::GetDetectedImage() const {
     return NULL;
 }
 
-UARTrackedImage::UARTrackedImage() {
-    this->DetectedImage = NULL;
-}
 

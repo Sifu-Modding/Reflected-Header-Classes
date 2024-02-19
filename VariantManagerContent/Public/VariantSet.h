@@ -27,6 +27,7 @@ private:
     
 public:
     UVariantSet();
+
     UFUNCTION(BlueprintCallable)
     void SetThumbnailFromTexture(UTexture2D* NewThumbnail);
     

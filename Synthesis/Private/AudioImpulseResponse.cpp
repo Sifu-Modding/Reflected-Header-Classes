@@ -7,3 +7,4 @@ UAudioImpulseResponse::UAudioImpulseResponse() {
     this->bTrueStereo = false;
 }
 
+

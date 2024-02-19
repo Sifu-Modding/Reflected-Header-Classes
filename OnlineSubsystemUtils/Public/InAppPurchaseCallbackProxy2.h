@@ -19,6 +19,7 @@ public:
     FInAppPurchaseResult2 OnFailure;
     
     UInAppPurchaseCallbackProxy2();
+
     UFUNCTION(BlueprintCallable)
     static UInAppPurchaseCallbackProxy2* CreateProxyObjectForInAppPurchaseUnprocessedPurchases(APlayerController* PlayerController);
     

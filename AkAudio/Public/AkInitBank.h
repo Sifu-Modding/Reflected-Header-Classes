@@ -14,5 +14,6 @@ public:
     FString DefaultLanguage;
     
     UAkInitBank();
+
 };
 

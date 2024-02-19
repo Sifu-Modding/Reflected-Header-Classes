@@ -15,6 +15,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UMaterialInterface* PlacedActorMaterial;
     
-    AGameplayAbilityTargetActor_ActorPlacement();
+    AGameplayAbilityTargetActor_ActorPlacement(const FObjectInitializer& ObjectInitializer);
+
 };
 

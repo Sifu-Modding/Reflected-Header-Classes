@@ -6,6 +6,5 @@ UENUM(BlueprintType)
 enum ERadialImpulseFalloff {
     RIF_Constant,
     RIF_Linear,
-    RIF_MAX UMETA(Hidden),
 };
 

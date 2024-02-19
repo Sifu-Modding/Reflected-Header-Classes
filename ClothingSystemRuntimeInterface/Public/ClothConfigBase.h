@@ -8,5 +8,6 @@ class CLOTHINGSYSTEMRUNTIMEINTERFACE_API UClothConfigBase : public UObject {
     GENERATED_BODY()
 public:
     UClothConfigBase();
+
 };
 

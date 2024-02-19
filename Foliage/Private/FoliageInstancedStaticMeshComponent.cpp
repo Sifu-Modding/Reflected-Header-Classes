@@ -1,5 +1,6 @@
 #include "FoliageInstancedStaticMeshComponent.h"
 
-UFoliageInstancedStaticMeshComponent::UFoliageInstancedStaticMeshComponent() {
+UFoliageInstancedStaticMeshComponent::UFoliageInstancedStaticMeshComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

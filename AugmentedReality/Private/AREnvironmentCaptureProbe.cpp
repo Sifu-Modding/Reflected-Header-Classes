@@ -1,6 +1,8 @@
 #include "AREnvironmentCaptureProbe.h"
 
-class UAREnvironmentCaptureProbeTexture;
+UAREnvironmentCaptureProbe::UAREnvironmentCaptureProbe() {
+    this->EnvironmentCaptureTexture = NULL;
+}
 
 FVector UAREnvironmentCaptureProbe::GetExtent() const {
     return FVector{};
@@ -10,7 +12,4 @@ UAREnvironmentCaptureProbeTexture* UAREnvironmentCaptureProbe::GetEnvironmentCap
     return NULL;
 }
 
-UAREnvironmentCaptureProbe::UAREnvironmentCaptureProbe() {
-    this->EnvironmentCaptureTexture = NULL;
-}
 

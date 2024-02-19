@@ -13,7 +13,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UFieldNodeInt* IntField;
     
-    UToFloatField();
+    UToFloatField(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UToFloatField* SetToFloatField(const UFieldNodeInt* IntegerField);
     

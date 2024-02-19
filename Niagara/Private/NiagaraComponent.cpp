@@ -1,11 +1,20 @@
 #include "NiagaraComponent.h"
 
-class AActor;
-class UMaterialInterface;
-class UNiagaraDataInterface;
-class UNiagaraSystem;
-class UObject;
-class UTextureRenderTarget;
+UNiagaraComponent::UNiagaraComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bAutoActivate = true;
+    this->Asset = NULL;
+    this->TickBehavior = ENiagaraTickBehavior::UsePrereqs;
+    this->bForceSolo = false;
+    this->bEnableGpuComputeDebug = false;
+    this->bAutoDestroy = false;
+    this->bRenderingEnabled = true;
+    this->bAutoManageAttachment = false;
+    this->bAutoAttachWeldSimulatedBodies = false;
+    this->MaxTimeBeforeForceUpdateTransform = 5.00f;
+    this->AutoAttachLocationRule = EAttachmentRule::KeepRelative;
+    this->AutoAttachRotationRule = EAttachmentRule::KeepRelative;
+    this->AutoAttachScaleRule = EAttachmentRule::KeepRelative;
+}
 
 void UNiagaraComponent::SetVariableVec4(FName InVariableName, const FVector4& InValue) {
 }
@@ -186,18 +195,4 @@ void UNiagaraComponent::AdvanceSimulationByTime(float SimulateTime, float TickDe
 void UNiagaraComponent::AdvanceSimulation(int32 TickCount, float TickDeltaSeconds) {
 }
 
-UNiagaraComponent::UNiagaraComponent() {
-    this->Asset = NULL;
-    this->TickBehavior = ENiagaraTickBehavior::UsePrereqs;
-    this->bForceSolo = false;
-    this->bEnableGpuComputeDebug = false;
-    this->bAutoDestroy = false;
-    this->bRenderingEnabled = true;
-    this->bAutoManageAttachment = false;
-    this->bAutoAttachWeldSimulatedBodies = false;
-    this->MaxTimeBeforeForceUpdateTransform = 5.00f;
-    this->AutoAttachLocationRule = EAttachmentRule::KeepRelative;
-    this->AutoAttachRotationRule = EAttachmentRule::KeepRelative;
-    this->AutoAttachScaleRule = EAttachmentRule::KeepRelative;
-}
 

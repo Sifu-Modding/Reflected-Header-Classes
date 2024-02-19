@@ -9,12 +9,8 @@ public class NiagaraAnimNotifies : ModuleRules {
         PublicDependencyModuleNames.AddRange(new string[] {
             "Core",
             "CoreUObject",
-            "DeveloperSettings",
             "Engine",
-            "MovieScene",
             "Niagara",
-            "NiagaraCore",
-            "NiagaraShader",
         });
     }
 }

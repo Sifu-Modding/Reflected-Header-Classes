@@ -8,5 +8,6 @@ class DATASMITHCONTENT_API UDatasmithAdditionalData : public UObject {
     GENERATED_BODY()
 public:
     UDatasmithAdditionalData();
+
 };
 

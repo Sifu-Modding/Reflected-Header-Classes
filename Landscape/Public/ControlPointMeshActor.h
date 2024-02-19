@@ -14,6 +14,7 @@ private:
     UControlPointMeshComponent* ControlPointMeshComponent;
     
 public:
-    AControlPointMeshActor();
+    AControlPointMeshActor(const FObjectInitializer& ObjectInitializer);
+
 };
 

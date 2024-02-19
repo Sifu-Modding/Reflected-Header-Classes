@@ -72,3 +72,4 @@ UFoliageType::UFoliageType() {
     this->VirtualTextureRenderPassType = ERuntimeVirtualTextureMainPassType::Exclusive;
 }
 
+

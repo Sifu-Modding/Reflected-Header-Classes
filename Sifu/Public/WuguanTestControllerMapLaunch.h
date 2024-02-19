@@ -8,5 +8,6 @@ class UWuguanTestControllerMapLaunch : public UWuguanTestControllerBase {
     GENERATED_BODY()
 public:
     UWuguanTestControllerMapLaunch();
+
 };
 

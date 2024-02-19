@@ -4,3 +4,4 @@ ULightPropagationVolumeBlendable::ULightPropagationVolumeBlendable() {
     this->BlendWeight = 1.00f;
 }
 
+

@@ -6,3 +6,4 @@ UMovieSceneEventTrack::UMovieSceneEventTrack() {
     this->EventPosition = EFireEventsAtPosition::AtEndOfEvaluation;
 }
 
+

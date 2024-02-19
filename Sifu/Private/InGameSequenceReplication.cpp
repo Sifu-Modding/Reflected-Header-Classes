@@ -1,8 +1,8 @@
 #include "InGameSequenceReplication.h"
 #include "Net/UnrealNetwork.h"
 
-class ULevelSequence;
-class UObject;
+UInGameSequenceReplication::UInGameSequenceReplication(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+}
 
 void UInGameSequenceReplication::OnRep_InGameSequenceReplicationInfo() {
 }
@@ -16,6 +16,4 @@ void UInGameSequenceReplication::GetLifetimeReplicatedProps(TArray<FLifetimeProp
     DOREPLIFETIME(UInGameSequenceReplication, m_InGameSequenceReplicationInfo);
 }
 
-UInGameSequenceReplication::UInGameSequenceReplication() {
-}
 

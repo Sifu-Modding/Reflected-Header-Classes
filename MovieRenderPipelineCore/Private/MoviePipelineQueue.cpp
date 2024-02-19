@@ -1,8 +1,8 @@
 #include "MoviePipelineQueue.h"
 #include "Templates/SubclassOf.h"
 
-class UMoviePipelineExecutorJob;
-class UMoviePipelineQueue;
+UMoviePipelineQueue::UMoviePipelineQueue() {
+}
 
 TArray<UMoviePipelineExecutorJob*> UMoviePipelineQueue::GetJobs() const {
     return TArray<UMoviePipelineExecutorJob*>();
@@ -22,6 +22,4 @@ UMoviePipelineExecutorJob* UMoviePipelineQueue::AllocateNewJob(TSubclassOf<UMovi
     return NULL;
 }
 
-UMoviePipelineQueue::UMoviePipelineQueue() {
-}
 

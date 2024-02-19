@@ -8,5 +8,6 @@ class MOVIESCENETRACKS_API UMovieSceneInterrogatedPropertyInstantiatorSystem : p
     GENERATED_BODY()
 public:
     UMovieSceneInterrogatedPropertyInstantiatorSystem();
+
 };
 

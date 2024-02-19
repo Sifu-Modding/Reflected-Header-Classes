@@ -8,5 +8,6 @@ class ENGINESETTINGS_API UGeneralEngineSettings : public UObject {
     GENERATED_BODY()
 public:
     UGeneralEngineSettings();
+
 };
 

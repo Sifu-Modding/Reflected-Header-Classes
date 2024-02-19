@@ -12,6 +12,7 @@ public:
     FSubmixEffectMultibandCompressorSettings Settings;
     
     USubmixEffectMultibandCompressorPreset();
+
     UFUNCTION(BlueprintCallable)
     void SetSettings(const FSubmixEffectMultibandCompressorSettings& InSettings);
     

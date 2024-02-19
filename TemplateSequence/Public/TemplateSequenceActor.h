@@ -26,9 +26,10 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTemplateSequenceBindingOverrideData BindingOverride;
     
-    ATemplateSequenceActor();
+    ATemplateSequenceActor(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     void SetSequence(UTemplateSequence* InSequence);
     
@@ -44,7 +45,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UTemplateSequence* GetSequence() const;
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

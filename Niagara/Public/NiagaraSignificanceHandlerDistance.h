@@ -8,5 +8,6 @@ class NIAGARA_API UNiagaraSignificanceHandlerDistance : public UNiagaraSignifica
     GENERATED_BODY()
 public:
     UNiagaraSignificanceHandlerDistance();
+
 };
 

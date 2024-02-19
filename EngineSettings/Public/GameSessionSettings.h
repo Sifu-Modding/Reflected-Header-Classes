@@ -17,5 +17,6 @@ public:
     uint8 bRequiresPushToTalk: 1;
     
     UGameSessionSettings();
+
 };
 

@@ -27,6 +27,7 @@ private:
     
 public:
     UWidgetAnimation();
+
     UFUNCTION(BlueprintCallable)
     void UnbindFromAnimationStarted(UUserWidget* Widget, FWidgetAnimationDynamicEvent Delegate);
     

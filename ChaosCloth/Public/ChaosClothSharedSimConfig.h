@@ -42,5 +42,6 @@ public:
     bool bUseXPBDConstraints;
     
     UChaosClothSharedSimConfig();
+
 };
 

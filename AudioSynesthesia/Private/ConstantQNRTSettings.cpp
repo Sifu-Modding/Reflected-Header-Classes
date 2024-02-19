@@ -14,3 +14,4 @@ UConstantQNRTSettings::UConstantQNRTSettings() {
     this->NoiseFloorDb = -60.00f;
 }
 
+

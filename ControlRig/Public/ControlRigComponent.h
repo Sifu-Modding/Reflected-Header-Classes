@@ -65,7 +65,8 @@ private:
     UControlRig* ControlRig;
     
 public:
-    UControlRigComponent();
+    UControlRigComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void Update(float DeltaTime);
     

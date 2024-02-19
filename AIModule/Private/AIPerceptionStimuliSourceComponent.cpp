@@ -1,7 +1,9 @@
 #include "AIPerceptionStimuliSourceComponent.h"
 #include "Templates/SubclassOf.h"
 
-class UAISense;
+UAIPerceptionStimuliSourceComponent::UAIPerceptionStimuliSourceComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bAutoRegisterAsSource = false;
+}
 
 void UAIPerceptionStimuliSourceComponent::UnregisterFromSense(TSubclassOf<UAISense> SenseClass) {
 }
@@ -15,7 +17,4 @@ void UAIPerceptionStimuliSourceComponent::RegisterWithPerceptionSystem() {
 void UAIPerceptionStimuliSourceComponent::RegisterForSense(TSubclassOf<UAISense> SenseClass) {
 }
 
-UAIPerceptionStimuliSourceComponent::UAIPerceptionStimuliSourceComponent() {
-    this->bAutoRegisterAsSource = false;
-}
 

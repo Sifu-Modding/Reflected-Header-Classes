@@ -7,6 +7,5 @@ enum EPhysicsType {
     PhysType_Default,
     PhysType_Kinematic,
     PhysType_Simulated,
-    PhysType_MAX UMETA(Hidden),
 };
 

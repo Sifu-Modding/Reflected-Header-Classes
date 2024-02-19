@@ -33,5 +33,6 @@ public:
     bool bStopWhenComponentIsDestroyed;
     
     UNiagaraDataInterfaceAudioPlayer();
+
 };
 

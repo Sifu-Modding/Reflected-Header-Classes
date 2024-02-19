@@ -16,6 +16,7 @@ public:
     TArray<FAIPredictionEvent> RegisteredEvents;
     
     UAISense_Prediction();
+
     UFUNCTION(BlueprintCallable)
     static void RequestPawnPredictionEvent(APawn* Requestor, AActor* PredictedActor, float PredictionTime);
     

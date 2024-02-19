@@ -40,5 +40,6 @@ public:
     FNiagaraVariableAttributeBinding VolumetricScatteringBinding;
     
     UNiagaraLightRendererProperties();
+
 };
 

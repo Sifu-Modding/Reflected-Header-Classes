@@ -19,6 +19,7 @@ public:
     FInAppPurchaseRestoreResult2 OnFailure;
     
     UInAppPurchaseRestoreCallbackProxy2();
+
     UFUNCTION(BlueprintCallable)
     static UInAppPurchaseRestoreCallbackProxy2* CreateProxyObjectForInAppPurchaseRestore(const TArray<FInAppPurchaseProductRequest2>& ConsumableProductFlags, APlayerController* PlayerController);
     

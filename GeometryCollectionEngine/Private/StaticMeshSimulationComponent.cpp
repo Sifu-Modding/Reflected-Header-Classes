@@ -1,10 +1,6 @@
 #include "StaticMeshSimulationComponent.h"
 
-
-void UStaticMeshSimulationComponent::ForceRecreatePhysicsState() {
-}
-
-UStaticMeshSimulationComponent::UStaticMeshSimulationComponent() {
+UStaticMeshSimulationComponent::UStaticMeshSimulationComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->Simulating = true;
     this->bNotifyCollisions = false;
     this->ObjectType = EObjectStateTypeEnum::Chaos_Object_Dynamic;
@@ -18,4 +14,9 @@ UStaticMeshSimulationComponent::UStaticMeshSimulationComponent() {
     this->PhysicalMaterial = NULL;
     this->ChaosSolverActor = NULL;
 }
+
+
+void UStaticMeshSimulationComponent::ForceRecreatePhysicsState() {
+}
+
 

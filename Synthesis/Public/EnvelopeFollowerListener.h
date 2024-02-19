@@ -11,6 +11,7 @@ public:
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnEnvelopeFollowerUpdate OnEnvelopeFollowerUpdate;
     
-    UEnvelopeFollowerListener();
+    UEnvelopeFollowerListener(const FObjectInitializer& ObjectInitializer);
+
 };
 

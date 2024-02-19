@@ -9,7 +9,8 @@ class MOVIESCENETRACKS_API UMovieSceneIntegerTrack : public UMovieScenePropertyT
     GENERATED_BODY()
 public:
     UMovieSceneIntegerTrack();
-    
+
+
     // Fix for true pure virtual functions not being implemented
 };
 

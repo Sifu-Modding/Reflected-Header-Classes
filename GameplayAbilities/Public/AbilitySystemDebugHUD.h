@@ -7,6 +7,7 @@ UCLASS(Blueprintable, NonTransient)
 class AAbilitySystemDebugHUD : public AHUD {
     GENERATED_BODY()
 public:
-    AAbilitySystemDebugHUD();
+    AAbilitySystemDebugHUD(const FObjectInitializer& ObjectInitializer);
+
 };
 

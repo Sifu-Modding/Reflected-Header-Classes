@@ -15,6 +15,7 @@ private:
     
 public:
     UWuguanTestControllerBase();
+
 private:
     UFUNCTION(BlueprintCallable)
     void StopProfiling();

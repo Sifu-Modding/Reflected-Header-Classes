@@ -67,6 +67,6 @@ enum EPhysicalSurface {
     SurfaceType60,
     SurfaceType61,
     SurfaceType62,
-    SurfaceType_Max,
+    SurfaceType_Max UMETA(Hidden),
 };
 

@@ -11,5 +11,6 @@ public:
     TArray<UObject*> Objects;
     
     UControlRigObjectHolder();
+
 };
 

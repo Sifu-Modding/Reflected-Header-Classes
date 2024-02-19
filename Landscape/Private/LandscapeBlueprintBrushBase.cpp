@@ -1,6 +1,7 @@
 #include "LandscapeBlueprintBrushBase.h"
 
-class UTextureRenderTarget2D;
+ALandscapeBlueprintBrushBase::ALandscapeBlueprintBrushBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+}
 
 void ALandscapeBlueprintBrushBase::RequestLandscapeUpdate() {
 }
@@ -13,6 +14,4 @@ void ALandscapeBlueprintBrushBase::Initialize_Implementation(const FTransform& I
 }
 
 
-ALandscapeBlueprintBrushBase::ALandscapeBlueprintBrushBase() {
-}
 

@@ -7,10 +7,8 @@ public class GameplayAbilities : ModuleRules {
         ShadowVariableWarningLevel = WarningLevel.Warning;
         
         PublicDependencyModuleNames.AddRange(new string[] {
-            "Chaos",
             "Core",
             "CoreUObject",
-            "DeveloperSettings",
             "Engine",
             "GameplayTags",
             "GameplayTasks",

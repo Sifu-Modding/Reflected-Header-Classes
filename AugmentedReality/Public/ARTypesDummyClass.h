@@ -8,5 +8,6 @@ class UARTypesDummyClass : public UObject {
     GENERATED_BODY()
 public:
     UARTypesDummyClass();
+
 };
 

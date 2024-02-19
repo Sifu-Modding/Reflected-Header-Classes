@@ -5,3 +5,4 @@ UNiagaraDataInterfaceFieldSystem::UNiagaraDataInterfaceFieldSystem() {
     this->SourceActor = NULL;
 }
 
+

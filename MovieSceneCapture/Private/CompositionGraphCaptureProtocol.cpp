@@ -8,3 +8,4 @@ UCompositionGraphCaptureProtocol::UCompositionGraphCaptureProtocol() {
     this->PostProcessingMaterialPtr = NULL;
 }
 
+

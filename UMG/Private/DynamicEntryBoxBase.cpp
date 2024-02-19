@@ -1,6 +1,13 @@
 #include "DynamicEntryBoxBase.h"
+#include "ESlateVisibility.h"
 
-class UUserWidget;
+UDynamicEntryBoxBase::UDynamicEntryBoxBase() {
+    this->Visibility = ESlateVisibility::SelfHitTestInvisible;
+    this->EntryBoxType = EDynamicBoxType::Horizontal;
+    this->EntryHorizontalAlignment = HAlign_Fill;
+    this->EntryVerticalAlignment = VAlign_Fill;
+    this->MaxElementSize = 0;
+}
 
 void UDynamicEntryBoxBase::SetRadialSettings(const FRadialBoxSettings& InSettings) {
 }
@@ -16,10 +23,4 @@ TArray<UUserWidget*> UDynamicEntryBoxBase::GetAllEntries() const {
     return TArray<UUserWidget*>();
 }
 
-UDynamicEntryBoxBase::UDynamicEntryBoxBase() {
-    this->EntryBoxType = EDynamicBoxType::Horizontal;
-    this->EntryHorizontalAlignment = HAlign_Fill;
-    this->EntryVerticalAlignment = VAlign_Fill;
-    this->MaxElementSize = 0;
-}
 

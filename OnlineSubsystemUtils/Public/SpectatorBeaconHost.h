@@ -5,7 +5,7 @@
 
 class USpectatorBeaconState;
 
-UCLASS(Blueprintable, NonTransient)
+UCLASS(Blueprintable, NonTransient, Config=Engine)
 class ONLINESUBSYSTEMUTILS_API ASpectatorBeaconHost : public AOnlineBeaconHostObject {
     GENERATED_BODY()
 public:
@@ -23,6 +23,7 @@ protected:
     float TravelSessionTimeoutSecs;
     
 public:
-    ASpectatorBeaconHost();
+    ASpectatorBeaconHost(const FObjectInitializer& ObjectInitializer);
+
 };
 

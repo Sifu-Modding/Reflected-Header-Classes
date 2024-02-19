@@ -8,5 +8,6 @@ class MOVIESCENE_API UMovieSceneNodeGroupCollection : public UObject {
     GENERATED_BODY()
 public:
     UMovieSceneNodeGroupCollection();
+
 };
 

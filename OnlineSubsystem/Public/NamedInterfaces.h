@@ -5,7 +5,7 @@
 #include "NamedInterfaceDef.h"
 #include "NamedInterfaces.generated.h"
 
-UCLASS(Blueprintable, Transient)
+UCLASS(Blueprintable, Transient, Config=Engine)
 class UNamedInterfaces : public UObject {
     GENERATED_BODY()
 public:
@@ -18,5 +18,6 @@ private:
     
 public:
     UNamedInterfaces();
+
 };
 

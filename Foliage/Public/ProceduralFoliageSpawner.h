@@ -26,6 +26,7 @@ private:
     
 public:
     UProceduralFoliageSpawner();
+
     UFUNCTION(BlueprintCallable)
     void Simulate(int32 NumSteps);
     

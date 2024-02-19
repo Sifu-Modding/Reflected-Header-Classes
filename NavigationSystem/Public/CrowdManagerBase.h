@@ -8,5 +8,6 @@ class NAVIGATIONSYSTEM_API UCrowdManagerBase : public UObject {
     GENERATED_BODY()
 public:
     UCrowdManagerBase();
+
 };
 

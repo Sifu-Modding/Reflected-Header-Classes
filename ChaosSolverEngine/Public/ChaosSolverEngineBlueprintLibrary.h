@@ -10,6 +10,7 @@ class CHAOSSOLVERENGINE_API UChaosSolverEngineBlueprintLibrary : public UBluepri
     GENERATED_BODY()
 public:
     UChaosSolverEngineBlueprintLibrary();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static FHitResult ConvertPhysicsCollisionToHitResult(const FChaosPhysicsCollisionInfo& PhysicsCollision);
     

@@ -1,6 +1,8 @@
 #include "ArchVisCharacter.h"
+#include "ArchVisCharMovementComponent.h"
 
-AArchVisCharacter::AArchVisCharacter() {
+AArchVisCharacter::AArchVisCharacter(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer.SetDefaultSubobjectClass<UArchVisCharMovementComponent>(TEXT("CharMoveComp"))) {
+    this->bUseControllerRotationYaw = false;
     this->LookUpAxisName = TEXT("LookUp");
     this->LookUpAtRateAxisName = TEXT("LookUpRate");
     this->TurnAxisName = TEXT("Turn");
@@ -10,4 +12,5 @@ AArchVisCharacter::AArchVisCharacter() {
     this->MouseSensitivityScale_Pitch = 0.03f;
     this->MouseSensitivityScale_Yaw = 0.03f;
 }
+
 

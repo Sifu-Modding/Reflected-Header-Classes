@@ -1,7 +1,12 @@
 #include "ChaosDestructionListener.h"
 
-class AChaosSolverActor;
-class AGeometryCollectionActor;
+UChaosDestructionListener::UChaosDestructionListener(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bAutoActivate = true;
+    this->bUseAttachParentBound = true;
+    this->bIsCollisionEventListeningEnabled = false;
+    this->bIsBreakingEventListeningEnabled = false;
+    this->bIsTrailingEventListeningEnabled = false;
+}
 
 void UChaosDestructionListener::SortTrailingEvents(TArray<FChaosTrailingEventData>& TrailingEvents, EChaosTrailingSortMethod SortMethod) {
 }
@@ -46,9 +51,4 @@ void UChaosDestructionListener::AddGeometryCollectionActor(AGeometryCollectionAc
 void UChaosDestructionListener::AddChaosSolverActor(AChaosSolverActor* ChaosSolverActor) {
 }
 
-UChaosDestructionListener::UChaosDestructionListener() {
-    this->bIsCollisionEventListeningEnabled = false;
-    this->bIsBreakingEventListeningEnabled = false;
-    this->bIsTrailingEventListeningEnabled = false;
-}
 

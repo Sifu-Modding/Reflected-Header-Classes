@@ -42,6 +42,7 @@ private:
     
 public:
     UListViewBase();
+
     UFUNCTION(BlueprintCallable)
     void SetWheelScrollMultiplier(float NewWheelScrollMultiplier);
     

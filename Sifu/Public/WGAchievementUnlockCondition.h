@@ -66,6 +66,7 @@ protected:
     
 public:
     UWGAchievementUnlockCondition();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool BPF_IsPlatformAuthorized(EPlatform _ePlatform) const;
     

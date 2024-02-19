@@ -1,13 +1,9 @@
 #include "ChaosSolverActor.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=SceneComponent -FallbackName=SceneComponent
 #include "ChaosGameplayEventDispatcher.h"
 
-void AChaosSolverActor::SetSolverActive(bool bActive) {
-}
-
-void AChaosSolverActor::SetAsCurrentWorldSolver() {
-}
-
-AChaosSolverActor::AChaosSolverActor() {
+AChaosSolverActor::AChaosSolverActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("SceneComp"));
     this->TimeStepMultiplier = 1.00f;
     this->CollisionIterations = 1;
     this->PushOutIterations = 3;
@@ -24,4 +20,11 @@ AChaosSolverActor::AChaosSolverActor() {
     this->SpriteComponent = NULL;
     this->GameplayEventDispatcherComponent = CreateDefaultSubobject<UChaosGameplayEventDispatcher>(TEXT("GameplayEventDispatcher"));
 }
+
+void AChaosSolverActor::SetSolverActive(bool bActive) {
+}
+
+void AChaosSolverActor::SetAsCurrentWorldSolver() {
+}
+
 

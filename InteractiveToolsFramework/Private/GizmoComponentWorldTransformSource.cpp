@@ -5,3 +5,4 @@ UGizmoComponentWorldTransformSource::UGizmoComponentWorldTransformSource() {
     this->bModifyComponentOnTransform = true;
 }
 
+

@@ -7,7 +7,8 @@ UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class ONLINESUBSYSTEMUTILS_API UVoipListenerSynthComponent : public USynthComponent {
     GENERATED_BODY()
 public:
-    UVoipListenerSynthComponent();
+    UVoipListenerSynthComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     bool IsIdling();
     

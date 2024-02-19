@@ -43,6 +43,7 @@ protected:
     
 public:
     UArenaHardpointsObjective();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 BPF_GetTotalNumberOfHardpoints() const;
     

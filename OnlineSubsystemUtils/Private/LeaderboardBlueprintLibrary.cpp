@@ -1,11 +1,10 @@
 #include "LeaderboardBlueprintLibrary.h"
 
-class APlayerController;
+ULeaderboardBlueprintLibrary::ULeaderboardBlueprintLibrary() {
+}
 
 bool ULeaderboardBlueprintLibrary::WriteLeaderboardInteger(APlayerController* PlayerController, FName StatName, int32 StatValue) {
     return false;
 }
 
-ULeaderboardBlueprintLibrary::ULeaderboardBlueprintLibrary() {
-}
 

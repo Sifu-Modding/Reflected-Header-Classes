@@ -15,6 +15,7 @@ public:
     FWaitDelayDelegate OnFinish;
     
     UAbilityTask_WaitDelay();
+
     UFUNCTION(BlueprintCallable)
     static UAbilityTask_WaitDelay* WaitDelay(UGameplayAbility* OwningAbility, float Time);
     

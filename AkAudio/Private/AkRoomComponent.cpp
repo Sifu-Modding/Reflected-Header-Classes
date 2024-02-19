@@ -1,6 +1,6 @@
 #include "AkRoomComponent.h"
 
-UAkRoomComponent::UAkRoomComponent() {
+UAkRoomComponent::UAkRoomComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->bEnable = true;
     this->NextLowerPriorityComponent = NULL;
     this->Priority = 0.00f;
@@ -8,4 +8,5 @@ UAkRoomComponent::UAkRoomComponent() {
     this->AuxSendLevel = 0.00f;
     this->AutoPost = false;
 }
+
 

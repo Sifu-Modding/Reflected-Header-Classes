@@ -4,3 +4,4 @@ UCompressedImageSequenceProtocol::UCompressedImageSequenceProtocol() {
     this->CompressionQuality = 100;
 }
 
+

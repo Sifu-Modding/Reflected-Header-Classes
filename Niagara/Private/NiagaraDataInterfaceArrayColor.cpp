@@ -3,3 +3,4 @@
 UNiagaraDataInterfaceArrayColor::UNiagaraDataInterfaceArrayColor() {
 }
 
+

@@ -14,6 +14,7 @@ private:
     
 public:
     UARTrackedPose();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FARPose3D GetTrackedPoseData() const;
     

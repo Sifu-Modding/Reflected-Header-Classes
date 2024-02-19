@@ -11,6 +11,7 @@ class UMG_API UContentWidget : public UPanelWidget {
     GENERATED_BODY()
 public:
     UContentWidget();
+
     UFUNCTION(BlueprintCallable)
     UPanelSlot* SetContent(UWidget* Content);
     

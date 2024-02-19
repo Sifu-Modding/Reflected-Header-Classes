@@ -14,7 +14,8 @@ private:
     UGeometryCacheComponent* GeometryCacheComponent;
     
 public:
-    AGeometryCacheActor();
+    AGeometryCacheActor(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UGeometryCacheComponent* GetGeometryCacheComponent() const;
     

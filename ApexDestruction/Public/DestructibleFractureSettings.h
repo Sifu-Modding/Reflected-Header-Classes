@@ -34,5 +34,6 @@ public:
     TArray<FDestructibleChunkParameters> ChunkParameters;
     
     UDestructibleFractureSettings();
+
 };
 

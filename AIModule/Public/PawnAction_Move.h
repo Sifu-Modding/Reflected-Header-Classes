@@ -48,5 +48,6 @@ protected:
     
 public:
     UPawnAction_Move();
+
 };
 

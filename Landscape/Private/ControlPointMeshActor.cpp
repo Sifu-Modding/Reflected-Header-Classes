@@ -1,7 +1,9 @@
 #include "ControlPointMeshActor.h"
 #include "ControlPointMeshComponent.h"
 
-AControlPointMeshActor::AControlPointMeshActor() {
-    this->ControlPointMeshComponent = CreateDefaultSubobject<UControlPointMeshComponent>(TEXT("ControlPointMeshComponent0"));
+AControlPointMeshActor::AControlPointMeshActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->RootComponent = CreateDefaultSubobject<UControlPointMeshComponent>(TEXT("ControlPointMeshComponent0"));
+    this->ControlPointMeshComponent = (UControlPointMeshComponent*)RootComponent;
 }
+
 

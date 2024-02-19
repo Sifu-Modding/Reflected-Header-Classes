@@ -7,6 +7,7 @@ UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class ULandscapeGizmoRenderComponent : public UPrimitiveComponent {
     GENERATED_BODY()
 public:
-    ULandscapeGizmoRenderComponent();
+    ULandscapeGizmoRenderComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

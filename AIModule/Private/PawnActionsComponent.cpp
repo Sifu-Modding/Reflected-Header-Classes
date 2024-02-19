@@ -1,8 +1,11 @@
 #include "PawnActionsComponent.h"
 
-class APawn;
-class UObject;
-class UPawnAction;
+UPawnActionsComponent::UPawnActionsComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bAutoActivate = true;
+    this->ControlledPawn = NULL;
+    this->ActionStacks.AddDefaulted(5);
+    this->CurrentAction = NULL;
+}
 
 bool UPawnActionsComponent::K2_PushAction(UPawnAction* NewAction, TEnumAsByte<EAIRequestPriority::Type> Priority, UObject* Instigator) {
     return false;
@@ -20,9 +23,4 @@ TEnumAsByte<EPawnActionAbortState::Type> UPawnActionsComponent::K2_AbortAction(U
     return EPawnActionAbortState::NeverStarted;
 }
 
-UPawnActionsComponent::UPawnActionsComponent() {
-    this->ControlledPawn = NULL;
-    this->ActionStacks.AddDefaulted(5);
-    this->CurrentAction = NULL;
-}
 

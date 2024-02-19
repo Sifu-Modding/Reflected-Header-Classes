@@ -19,5 +19,6 @@ private:
     
 public:
     UBTTask_MoveDirectlyToward();
+
 };
 

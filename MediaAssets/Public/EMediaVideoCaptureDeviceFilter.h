@@ -7,7 +7,7 @@ enum class EMediaVideoCaptureDeviceFilter : uint8 {
     None,
     Card,
     Software,
-    Unknown = 0x4,
-    Webcam = 0x8,
+    Unknown = 4,
+    Webcam = 8,
 };
 

@@ -8,5 +8,6 @@ class AIMODULE_API UBTComposite_Selector : public UBTCompositeNode {
     GENERATED_BODY()
 public:
     UBTComposite_Selector();
+
 };
 

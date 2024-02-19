@@ -1,7 +1,9 @@
 #include "NiagaraDataInterfaceGrid3DCollection.h"
 
-class UNiagaraComponent;
-class UVolumeTexture;
+UNiagaraDataInterfaceGrid3DCollection::UNiagaraDataInterfaceGrid3DCollection() {
+    this->NumAttributes = 1;
+    this->BufferFormat = ENiagaraGpuBufferFormat::Float;
+}
 
 void UNiagaraDataInterfaceGrid3DCollection::GetTextureSize(const UNiagaraComponent* Component, int32& SizeX, int32& SizeY, int32& SizeZ) {
 }
@@ -17,8 +19,4 @@ bool UNiagaraDataInterfaceGrid3DCollection::FillRawVolumeTexture(const UNiagaraC
     return false;
 }
 
-UNiagaraDataInterfaceGrid3DCollection::UNiagaraDataInterfaceGrid3DCollection() {
-    this->NumAttributes = 1;
-    this->BufferFormat = ENiagaraGpuBufferFormat::Float;
-}
 

@@ -8,5 +8,6 @@ class UMovieSceneEventSectionBase : public UMovieSceneSection {
     GENERATED_BODY()
 public:
     UMovieSceneEventSectionBase();
+
 };
 

@@ -57,6 +57,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UPrimitiveComponent* PlaneScaleXY;
     
-    ATransformGizmoActor();
+    ATransformGizmoActor(const FObjectInitializer& ObjectInitializer);
+
 };
 

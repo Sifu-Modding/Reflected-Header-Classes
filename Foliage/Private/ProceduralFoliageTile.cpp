@@ -4,3 +4,4 @@ UProceduralFoliageTile::UProceduralFoliageTile() {
     this->FoliageSpawner = NULL;
 }
 
+

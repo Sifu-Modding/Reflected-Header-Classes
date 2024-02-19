@@ -8,5 +8,6 @@ class NIAGARA_API UNiagaraSignificanceHandlerAge : public UNiagaraSignificanceHa
     GENERATED_BODY()
 public:
     UNiagaraSignificanceHandlerAge();
+
 };
 

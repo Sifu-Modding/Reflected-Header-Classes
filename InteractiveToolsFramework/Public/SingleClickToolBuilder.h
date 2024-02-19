@@ -8,5 +8,6 @@ class INTERACTIVETOOLSFRAMEWORK_API USingleClickToolBuilder : public UInteractiv
     GENERATED_BODY()
 public:
     USingleClickToolBuilder();
+
 };
 

@@ -8,7 +8,8 @@ UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnable
 class CUSTOMMESHCOMPONENT_API UCustomMeshComponent : public UMeshComponent {
     GENERATED_BODY()
 public:
-    UCustomMeshComponent();
+    UCustomMeshComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     bool SetCustomMeshTriangles(const TArray<FCustomMeshTriangle>& Triangles);
     

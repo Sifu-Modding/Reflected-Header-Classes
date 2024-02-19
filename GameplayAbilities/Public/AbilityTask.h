@@ -17,5 +17,6 @@ public:
     UAbilitySystemComponent* AbilitySystemComponent;
     
     UAbilityTask();
+
 };
 

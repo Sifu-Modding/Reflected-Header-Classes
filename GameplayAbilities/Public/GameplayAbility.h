@@ -122,6 +122,7 @@ protected:
     
 public:
     UGameplayAbility();
+
     UFUNCTION(BlueprintCallable)
     void SetShouldBlockOtherAbilities(bool bShouldBlockAbilities);
     
@@ -292,7 +293,7 @@ protected:
     UFUNCTION(BlueprintCallable)
     FActiveGameplayEffectHandle BP_ApplyGameplayEffectToOwner(TSubclassOf<UGameplayEffect> GameplayEffectClass, int32 GameplayEffectLevel, int32 Stacks);
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

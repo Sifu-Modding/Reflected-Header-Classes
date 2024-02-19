@@ -6,3 +6,4 @@ UDatasmithSkyLightComponentTemplate::UDatasmithSkyLightComponentTemplate() {
     this->Cubemap = NULL;
 }
 
+

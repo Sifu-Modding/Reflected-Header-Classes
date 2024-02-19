@@ -8,5 +8,6 @@ class INTERACTIVETOOLSFRAMEWORK_API UKeyAsModifierInputBehavior : public UInputB
     GENERATED_BODY()
 public:
     UKeyAsModifierInputBehavior();
+
 };
 

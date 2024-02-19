@@ -8,5 +8,6 @@ class MOVIESCENETRACKS_API UFloatChannelEvaluatorSystem : public UMovieSceneEnti
     GENERATED_BODY()
 public:
     UFloatChannelEvaluatorSystem();
+
 };
 

@@ -20,5 +20,6 @@ public:
     float LastExportedFrameRate;
     
     UControlRigSequence();
+
 };
 

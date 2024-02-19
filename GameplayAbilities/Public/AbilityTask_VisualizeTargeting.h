@@ -17,6 +17,7 @@ public:
     FVisualizeTargetingDelegate TimeElapsed;
     
     UAbilityTask_VisualizeTargeting();
+
     UFUNCTION(BlueprintCallable)
     static UAbilityTask_VisualizeTargeting* VisualizeTargetingUsingActor(UGameplayAbility* OwningAbility, AGameplayAbilityTargetActor* TargetActor, FName TaskInstanceName, float Duration);
     

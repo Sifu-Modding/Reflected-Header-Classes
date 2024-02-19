@@ -8,5 +8,6 @@ class AUDIOANALYZER_API UAudioAnalyzerAsset : public UObject {
     GENERATED_BODY()
 public:
     UAudioAnalyzerAsset();
+
 };
 

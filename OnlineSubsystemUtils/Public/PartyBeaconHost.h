@@ -5,7 +5,7 @@
 
 class UPartyBeaconState;
 
-UCLASS(Blueprintable, NonTransient)
+UCLASS(Blueprintable, NonTransient, Config=Engine)
 class ONLINESUBSYSTEMUTILS_API APartyBeaconHost : public AOnlineBeaconHostObject {
     GENERATED_BODY()
 public:
@@ -23,6 +23,7 @@ protected:
     float TravelSessionTimeoutSecs;
     
 public:
-    APartyBeaconHost();
+    APartyBeaconHost(const FObjectInitializer& ObjectInitializer);
+
 };
 

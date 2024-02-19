@@ -38,7 +38,8 @@ protected:
     bool bManualTick;
     
 public:
-    UGeometryCacheComponent();
+    UGeometryCacheComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void TickAtThisTime(const float Time, bool bInIsRunning, bool bInBackwards, bool bInIsLooping);
     

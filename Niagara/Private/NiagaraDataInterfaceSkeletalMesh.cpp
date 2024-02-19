@@ -11,3 +11,4 @@ UNiagaraDataInterfaceSkeletalMesh::UNiagaraDataInterfaceSkeletalMesh() {
     this->bRequireCurrentFrameData = true;
 }
 
+

@@ -93,7 +93,8 @@ protected:
     AReplayVideoRecorder* m_VideoRecorder;
     
 public:
-    AReplayController();
+    AReplayController(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     void OnKeysLoaded();

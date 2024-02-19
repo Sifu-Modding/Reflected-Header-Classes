@@ -1,7 +1,9 @@
 #include "MoviePipelineExecutorBase.h"
 
-class UMoviePipeline;
-class UMoviePipelineQueue;
+UMoviePipelineExecutorBase::UMoviePipelineExecutorBase() {
+    this->DebugWidgetClass = NULL;
+    this->TargetPipelineClass = NULL;
+}
 
 void UMoviePipelineExecutorBase::SetStatusProgress_Implementation(const float InProgress) {
 }
@@ -61,8 +63,4 @@ void UMoviePipelineExecutorBase::CancelCurrentJob_Implementation() {
 void UMoviePipelineExecutorBase::CancelAllJobs_Implementation() {
 }
 
-UMoviePipelineExecutorBase::UMoviePipelineExecutorBase() {
-    this->DebugWidgetClass = NULL;
-    this->TargetPipelineClass = NULL;
-}
 

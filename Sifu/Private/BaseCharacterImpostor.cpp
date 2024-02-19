@@ -1,6 +1,6 @@
 #include "BaseCharacterImpostor.h"
 
-ABaseCharacterImpostor::ABaseCharacterImpostor() {
+ABaseCharacterImpostor::ABaseCharacterImpostor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_eMoanMinBucket = ESCSignificanceBuckets::High;
     this->m_MoanEvent = NULL;
     this->m_MoanIntensityRTPC = NULL;
@@ -9,4 +9,5 @@ ABaseCharacterImpostor::ABaseCharacterImpostor() {
     this->m_MoanRefBoneName = TEXT("head");
     this->m_MoanIntensityThresold = 1.00f;
 }
+
 

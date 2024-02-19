@@ -1,5 +1,6 @@
 #include "LandscapeStreamingProxy.h"
 
-ALandscapeStreamingProxy::ALandscapeStreamingProxy() {
+ALandscapeStreamingProxy::ALandscapeStreamingProxy(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

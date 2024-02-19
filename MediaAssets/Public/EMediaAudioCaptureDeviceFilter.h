@@ -7,7 +7,7 @@ enum class EMediaAudioCaptureDeviceFilter : uint8 {
     None,
     Card,
     Microphone,
-    Software = 0x4,
-    Unknown = 0x8,
+    Software = 4,
+    Unknown = 8,
 };
 

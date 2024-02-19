@@ -16,5 +16,6 @@ public:
     float DurationInSeconds;
     
     UAudioAnalyzerNRT();
+
 };
 

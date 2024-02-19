@@ -1,6 +1,7 @@
 #include "DatasmithSceneActor.h"
 
-ADatasmithSceneActor::ADatasmithSceneActor() {
+ADatasmithSceneActor::ADatasmithSceneActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->Scene = NULL;
 }
+
 

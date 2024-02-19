@@ -9,7 +9,8 @@ class INTERACTIVETOOLSFRAMEWORK_API UGizmoLambdaStateTarget : public UObject, pu
     GENERATED_BODY()
 public:
     UGizmoLambdaStateTarget();
-    
+
+
     // Fix for true pure virtual functions not being implemented
     UFUNCTION()
     void EndUpdate() override PURE_VIRTUAL(EndUpdate,);

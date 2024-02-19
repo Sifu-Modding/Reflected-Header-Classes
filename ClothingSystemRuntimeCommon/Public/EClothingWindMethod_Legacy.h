@@ -6,6 +6,5 @@ UENUM(BlueprintType)
 enum class EClothingWindMethod_Legacy : uint8 {
     Legacy,
     Accurate,
-    EClothingWindMethod_MAX UMETA(Hidden),
 };
 

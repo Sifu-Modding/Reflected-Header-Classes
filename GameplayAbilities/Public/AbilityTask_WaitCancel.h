@@ -15,6 +15,7 @@ public:
     FWaitCancelDelegate OnCancel;
     
     UAbilityTask_WaitCancel();
+
     UFUNCTION(BlueprintCallable)
     static UAbilityTask_WaitCancel* WaitCancel(UGameplayAbility* OwningAbility);
     

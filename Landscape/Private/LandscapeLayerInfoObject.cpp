@@ -5,3 +5,4 @@ ULandscapeLayerInfoObject::ULandscapeLayerInfoObject() {
     this->Hardness = 0.50f;
 }
 
+

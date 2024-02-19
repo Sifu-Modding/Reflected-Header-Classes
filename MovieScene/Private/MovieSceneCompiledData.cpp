@@ -4,3 +4,4 @@ UMovieSceneCompiledData::UMovieSceneCompiledData() {
     this->AccumulatedFlags = EMovieSceneSequenceFlags::None;
 }
 
+

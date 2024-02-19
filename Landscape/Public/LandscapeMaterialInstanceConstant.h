@@ -24,5 +24,6 @@ public:
     uint8 bEditorToolUsage: 1;
     
     ULandscapeMaterialInstanceConstant();
+
 };
 

@@ -18,7 +18,8 @@ private:
     UMediaPlayer* MediaPlayer;
     
 public:
-    UMediaComponent();
+    UMediaComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UMediaTexture* GetMediaTexture() const;
     

@@ -17,5 +17,6 @@ public:
     UAkGroupValue* DefaultGroupValue;
     
     UAkAssetDataSwitchContainer();
+
 };
 

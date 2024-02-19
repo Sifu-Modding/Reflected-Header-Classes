@@ -4,3 +4,4 @@ UMovieSceneSubtitlesSection::UMovieSceneSubtitlesSection() {
     this->m_bIsMCSpeaking = false;
 }
 
+

@@ -9,3 +9,4 @@ UMovieSceneMediaSection::UMovieSceneMediaSection() {
     this->ExternalMediaPlayer = NULL;
 }
 
+

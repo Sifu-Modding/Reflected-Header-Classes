@@ -1,8 +1,14 @@
 #include "RichTextBlock.h"
+#include "ESlateVisibility.h"
 #include "Templates/SubclassOf.h"
 
-class UDataTable;
-class URichTextBlockDecorator;
+URichTextBlock::URichTextBlock() {
+    this->Visibility = ESlateVisibility::SelfHitTestInvisible;
+    this->TextStyleSet = NULL;
+    this->bOverrideDefaultStyle = false;
+    this->MinDesiredWidth = 0.00f;
+    this->TextTransformPolicy = ETextTransformPolicy::None;
+}
 
 void URichTextBlock::SetTextTransformPolicy(ETextTransformPolicy InTransformPolicy) {
 }
@@ -51,10 +57,4 @@ URichTextBlockDecorator* URichTextBlock::GetDecoratorByClass(TSubclassOf<URichTe
 void URichTextBlock::ClearAllDefaultStyleOverrides() {
 }
 
-URichTextBlock::URichTextBlock() {
-    this->TextStyleSet = NULL;
-    this->bOverrideDefaultStyle = false;
-    this->MinDesiredWidth = 0.00f;
-    this->TextTransformPolicy = ETextTransformPolicy::None;
-}
 

@@ -15,6 +15,7 @@ public:
     FSourceEffectChorusSettings Settings;
     
     USourceEffectChorusPreset();
+
     UFUNCTION(BlueprintCallable)
     void SetWetModulator(const USoundModulatorBase* Modulator);
     

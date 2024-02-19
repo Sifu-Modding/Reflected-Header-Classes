@@ -8,5 +8,6 @@ class INTERACTIVETOOLSFRAMEWORK_API UInteractiveGizmoBuilder : public UObject {
     GENERATED_BODY()
 public:
     UInteractiveGizmoBuilder();
+
 };
 

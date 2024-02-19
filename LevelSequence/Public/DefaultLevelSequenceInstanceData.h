@@ -18,7 +18,8 @@ public:
     FTransform TransformOrigin;
     
     UDefaultLevelSequenceInstanceData();
-    
+
+
     // Fix for true pure virtual functions not being implemented
 };
 

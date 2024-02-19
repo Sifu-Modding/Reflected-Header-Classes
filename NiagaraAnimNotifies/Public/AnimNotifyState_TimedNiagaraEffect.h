@@ -27,5 +27,6 @@ public:
     bool bDestroyAtEnd;
     
     UAnimNotifyState_TimedNiagaraEffect();
+
 };
 

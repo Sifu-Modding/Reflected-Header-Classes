@@ -8,3 +8,4 @@ UMoviePipelineDeferredPassBase::UMoviePipelineDeferredPassBase() {
     this->StencilLayerMaterial = NULL;
 }
 
+

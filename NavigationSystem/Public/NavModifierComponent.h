@@ -7,7 +7,7 @@
 
 class UNavArea;
 
-UCLASS(Blueprintable, Config=Engine, DefaultConfig, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, DefaultConfig, ClassGroup=Custom, Config=Engine, meta=(BlueprintSpawnableComponent))
 class NAVIGATIONSYSTEM_API UNavModifierComponent : public UNavRelevantComponent {
     GENERATED_BODY()
 public:
@@ -20,7 +20,8 @@ public:
     UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bIncludeAgentHeight: 1;
     
-    UNavModifierComponent();
+    UNavModifierComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetAreaClass(TSubclassOf<UNavArea> NewAreaClass);
     

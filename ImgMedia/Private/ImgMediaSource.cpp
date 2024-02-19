@@ -1,5 +1,8 @@
 #include "ImgMediaSource.h"
 
+UImgMediaSource::UImgMediaSource() {
+}
+
 void UImgMediaSource::SetSequencePath(const FString& Path) {
 }
 
@@ -10,6 +13,4 @@ FString UImgMediaSource::GetSequencePath() const {
 void UImgMediaSource::GetProxies(TArray<FString>& OutProxies) const {
 }
 
-UImgMediaSource::UImgMediaSource() {
-}
 

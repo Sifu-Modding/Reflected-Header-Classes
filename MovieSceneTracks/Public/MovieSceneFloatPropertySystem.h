@@ -8,5 +8,6 @@ class MOVIESCENETRACKS_API UMovieSceneFloatPropertySystem : public UMovieScenePr
     GENERATED_BODY()
 public:
     UMovieSceneFloatPropertySystem();
+
 };
 

@@ -50,5 +50,6 @@ public:
     bool bRequireCurrentFrameData;
     
     UNiagaraDataInterfaceSkeletalMesh();
+
 };
 

@@ -7,6 +7,7 @@ UCLASS(Blueprintable, MinimalAPI)
 class ALandscapeGizmoActiveActor : public ALandscapeGizmoActor {
     GENERATED_BODY()
 public:
-    ALandscapeGizmoActiveActor();
+    ALandscapeGizmoActiveActor(const FObjectInitializer& ObjectInitializer);
+
 };
 

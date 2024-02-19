@@ -7,6 +7,7 @@ UCLASS(Blueprintable)
 class GAMEPLAYABILITIES_API AGameplayAbilityTargetActor_SingleLineTrace : public AGameplayAbilityTargetActor_Trace {
     GENERATED_BODY()
 public:
-    AGameplayAbilityTargetActor_SingleLineTrace();
+    AGameplayAbilityTargetActor_SingleLineTrace(const FObjectInitializer& ObjectInitializer);
+
 };
 

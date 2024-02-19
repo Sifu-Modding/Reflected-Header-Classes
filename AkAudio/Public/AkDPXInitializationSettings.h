@@ -8,5 +8,6 @@ class AKAUDIO_API UAkDPXInitializationSettings : public UAkPS5InitializationSett
     GENERATED_BODY()
 public:
     UAkDPXInitializationSettings();
+
 };
 

@@ -2,10 +2,9 @@
 #include "Net/UnrealNetwork.h"
 #include "Templates/SubclassOf.h"
 
-class IGameplayTaskOwnerInterface;
-class UGameplayTaskOwnerInterface;
-class UGameplayTask;
-class UGameplayTaskResource;
+UGameplayTasksComponent::UGameplayTasksComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bIsNetDirty = false;
+}
 
 void UGameplayTasksComponent::OnRep_SimulatedTasks() {
 }
@@ -20,7 +19,4 @@ void UGameplayTasksComponent::GetLifetimeReplicatedProps(TArray<FLifetimePropert
     DOREPLIFETIME(UGameplayTasksComponent, SimulatedTasks);
 }
 
-UGameplayTasksComponent::UGameplayTasksComponent() {
-    this->bIsNetDirty = false;
-}
 

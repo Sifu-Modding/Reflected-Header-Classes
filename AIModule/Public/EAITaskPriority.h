@@ -5,9 +5,9 @@
 UENUM(BlueprintType)
 enum class EAITaskPriority : uint8 {
     Lowest,
-    Low = 0x40,
-    AutonomousAI = 0x7F,
-    High = 0xC0,
-    Ultimate = 0xFE,
+    Low = 64,
+    AutonomousAI = 127,
+    High = 192,
+    Ultimate = 254,
 };
 

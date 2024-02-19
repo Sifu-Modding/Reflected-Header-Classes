@@ -20,11 +20,12 @@ private:
     UDataTable* m_ContextualDb;
     
 public:
-    USCDialogComponent();
+    USCDialogComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool BPF_InitBlackBoardFromAsset(UBlackboardData* _data);
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

@@ -8,7 +8,7 @@ UCLASS(Blueprintable)
 class UMG_API UPropertyBinding : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<UObject> SourceObject;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -18,5 +18,6 @@ public:
     FName DestinationProperty;
     
     UPropertyBinding();
+
 };
 

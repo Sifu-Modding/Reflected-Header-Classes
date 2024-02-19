@@ -12,3 +12,4 @@ UNiagaraRibbonRendererProperties::UNiagaraRibbonRendererProperties() {
     this->bScreenSpaceTessellation = true;
 }
 
+

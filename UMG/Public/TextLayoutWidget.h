@@ -35,6 +35,7 @@ protected:
     
 public:
     UTextLayoutWidget();
+
     UFUNCTION(BlueprintCallable)
     void SetJustification(TEnumAsByte<ETextJustify::Type> InJustification);
     

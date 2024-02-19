@@ -7,6 +7,7 @@ UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class FIELDSYSTEMENGINE_API UFieldNodeVector : public UFieldNodeBase {
     GENERATED_BODY()
 public:
-    UFieldNodeVector();
+    UFieldNodeVector(const FObjectInitializer& ObjectInitializer);
+
 };
 

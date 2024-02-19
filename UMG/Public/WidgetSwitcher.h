@@ -13,6 +13,7 @@ public:
     int32 ActiveWidgetIndex;
     
     UWidgetSwitcher();
+
     UFUNCTION(BlueprintCallable)
     void SetActiveWidgetIndex(int32 Index);
     

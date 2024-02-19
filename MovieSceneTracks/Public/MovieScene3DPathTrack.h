@@ -9,7 +9,8 @@ class UMovieScene3DPathTrack : public UMovieScene3DConstraintTrack, public IMovi
     GENERATED_BODY()
 public:
     UMovieScene3DPathTrack();
-    
+
+
     // Fix for true pure virtual functions not being implemented
 };
 

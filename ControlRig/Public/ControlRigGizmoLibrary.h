@@ -23,5 +23,6 @@ public:
     TArray<FControlRigGizmoDefinition> Gizmos;
     
     UControlRigGizmoLibrary();
+
 };
 

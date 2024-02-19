@@ -4,3 +4,4 @@ UTestMovieSceneTrack::UTestMovieSceneTrack() : UMovieSceneTrack(FObjectInitializ
     this->bHighPassFilter = false;
 }
 
+

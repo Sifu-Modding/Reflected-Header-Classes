@@ -39,6 +39,7 @@ public:
     FVector2D Nudge;
     
     UGridSlot();
+
     UFUNCTION(BlueprintCallable)
     void SetVerticalAlignment(TEnumAsByte<EVerticalAlignment> InVerticalAlignment);
     

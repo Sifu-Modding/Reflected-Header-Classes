@@ -1,6 +1,12 @@
 #include "AbilityTask_ApplyRootMotion_Base.h"
 #include "Net/UnrealNetwork.h"
 
+UAbilityTask_ApplyRootMotion_Base::UAbilityTask_ApplyRootMotion_Base() {
+    this->FinishVelocityMode = ERootMotionFinishVelocityMode::MaintainLastRootMotionVelocity;
+    this->FinishClampVelocity = 0.00f;
+    this->MovementComponent = NULL;
+}
+
 void UAbilityTask_ApplyRootMotion_Base::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
     
@@ -10,9 +16,4 @@ void UAbilityTask_ApplyRootMotion_Base::GetLifetimeReplicatedProps(TArray<FLifet
     DOREPLIFETIME(UAbilityTask_ApplyRootMotion_Base, FinishClampVelocity);
 }
 
-UAbilityTask_ApplyRootMotion_Base::UAbilityTask_ApplyRootMotion_Base() {
-    this->FinishVelocityMode = ERootMotionFinishVelocityMode::MaintainLastRootMotionVelocity;
-    this->FinishClampVelocity = 0.00f;
-    this->MovementComponent = NULL;
-}
 

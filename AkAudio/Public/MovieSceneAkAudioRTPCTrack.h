@@ -9,7 +9,8 @@ class UMovieSceneAkAudioRTPCTrack : public UMovieSceneAkTrack, public IMovieScen
     GENERATED_BODY()
 public:
     UMovieSceneAkAudioRTPCTrack();
-    
+
+
     // Fix for true pure virtual functions not being implemented
 };
 

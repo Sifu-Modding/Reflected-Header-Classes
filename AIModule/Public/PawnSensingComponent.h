@@ -54,7 +54,8 @@ protected:
     float PeripheralVisionCosine;
     
 public:
-    UPawnSensingComponent();
+    UPawnSensingComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     void SetSensingUpdatesEnabled(const bool bEnabled);
     

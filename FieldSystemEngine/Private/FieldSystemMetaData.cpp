@@ -1,5 +1,6 @@
 #include "FieldSystemMetaData.h"
 
-UFieldSystemMetaData::UFieldSystemMetaData() {
+UFieldSystemMetaData::UFieldSystemMetaData(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

@@ -19,6 +19,7 @@ public:
     FWaitOverlapDelegate OnOverlap;
     
     UAbilityTask_WaitOverlap();
+
     UFUNCTION(BlueprintCallable)
     static UAbilityTask_WaitOverlap* WaitForOverlap(UGameplayAbility* OwningAbility);
     

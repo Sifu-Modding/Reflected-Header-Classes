@@ -16,6 +16,7 @@ public:
     FNetworkSyncDelegate OnSync;
     
     UAbilityTask_NetworkSyncPoint();
+
     UFUNCTION(BlueprintCallable)
     static UAbilityTask_NetworkSyncPoint* WaitNetSync(UGameplayAbility* OwningAbility, EAbilityTaskNetSyncType SyncType);
     

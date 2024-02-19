@@ -8,5 +8,6 @@ class NIAGARA_API UNiagaraDataInterfaceSimpleCounter : public UNiagaraDataInterf
     GENERATED_BODY()
 public:
     UNiagaraDataInterfaceSimpleCounter();
+
 };
 

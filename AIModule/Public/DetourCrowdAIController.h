@@ -7,6 +7,7 @@ UCLASS(Blueprintable)
 class ADetourCrowdAIController : public AAIController {
     GENERATED_BODY()
 public:
-    ADetourCrowdAIController();
+    ADetourCrowdAIController(const FObjectInitializer& ObjectInitializer);
+
 };
 

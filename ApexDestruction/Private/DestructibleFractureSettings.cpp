@@ -6,3 +6,4 @@ UDestructibleFractureSettings::UDestructibleFractureSettings() {
     this->OriginalSubmeshCount = 0;
 }
 
+

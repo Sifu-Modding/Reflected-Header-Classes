@@ -18,6 +18,7 @@ public:
     FLinearColor BackgroundColor;
     
     UViewport();
+
     UFUNCTION(BlueprintCallable)
     AActor* Spawn(TSubclassOf<AActor> ActorClass);
     

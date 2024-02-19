@@ -4,7 +4,7 @@
 #include "MagicLeapARPinState.h"
 #include "MagicLeapARPinSettings.generated.h"
 
-UCLASS(Blueprintable, Config=Engine, DefaultConfig)
+UCLASS(Blueprintable, DefaultConfig, Config=Engine)
 class MAGICLEAPARPIN_API UMagicLeapARPinSettings : public UObject {
     GENERATED_BODY()
 public:
@@ -15,5 +15,6 @@ public:
     FMagicLeapARPinState OnUpdatedEventTriggerDelta;
     
     UMagicLeapARPinSettings();
+
 };
 

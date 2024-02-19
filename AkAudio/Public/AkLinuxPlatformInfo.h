@@ -8,5 +8,6 @@ class UAkLinuxPlatformInfo : public UAkPlatformInfo {
     GENERATED_BODY()
 public:
     UAkLinuxPlatformInfo();
+
 };
 

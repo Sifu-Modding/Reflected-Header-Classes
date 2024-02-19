@@ -27,6 +27,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SimpleDisplay, meta=(AllowPrivateAccess=true))
     bool AutoPost;
     
-    UAkRoomComponent();
+    UAkRoomComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

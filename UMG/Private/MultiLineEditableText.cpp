@@ -1,4 +1,17 @@
 #include "MultiLineEditableText.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=EWidgetClipping -FallbackName=EWidgetClipping
+
+UMultiLineEditableText::UMultiLineEditableText() {
+    this->Clipping = EWidgetClipping::ClipToBounds;
+    this->AutoWrapText = true;
+    this->bIsReadOnly = false;
+    this->SelectAllTextWhenFocused = false;
+    this->ClearTextSelectionOnFocusLoss = true;
+    this->RevertTextOnEscape = false;
+    this->ClearKeyboardFocusOnCommit = true;
+    this->AllowContextMenu = true;
+    this->VirtualKeyboardDismissAction = EVirtualKeyboardDismissAction::TextChangeOnDismiss;
+}
 
 void UMultiLineEditableText::SetWidgetStyle(const FTextBlockStyle& InWidgetStyle) {
 }
@@ -20,13 +33,4 @@ FText UMultiLineEditableText::GetHintText() const {
     return FText::GetEmpty();
 }
 
-UMultiLineEditableText::UMultiLineEditableText() {
-    this->bIsReadOnly = false;
-    this->SelectAllTextWhenFocused = false;
-    this->ClearTextSelectionOnFocusLoss = true;
-    this->RevertTextOnEscape = false;
-    this->ClearKeyboardFocusOnCommit = true;
-    this->AllowContextMenu = true;
-    this->VirtualKeyboardDismissAction = EVirtualKeyboardDismissAction::TextChangeOnDismiss;
-}
 

@@ -1,6 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTag -FallbackName=GameplayTag
+//CROSS-MODULE INCLUDE V2: -ModuleName=GameplayTags -ObjectName=GameplayTagContainer -FallbackName=GameplayTagContainer
 #include "Templates/SubclassOf.h"
 #include "ArenaBatch.generated.h"
 
@@ -26,7 +27,7 @@ public:
     int32 m_iStarsCountToUnlock;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    FGameplayTag m_WorldMapPathTag;
+    FGameplayTagContainer m_BatchFilters;
     
     SIFU_API FArenaBatch();
 };

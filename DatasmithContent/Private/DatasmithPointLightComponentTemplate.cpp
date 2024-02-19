@@ -7,3 +7,4 @@ UDatasmithPointLightComponentTemplate::UDatasmithPointLightComponentTemplate() {
     this->AttenuationRadius = 0.00f;
 }
 
+

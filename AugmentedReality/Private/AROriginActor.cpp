@@ -1,5 +1,6 @@
 #include "AROriginActor.h"
 
-AAROriginActor::AAROriginActor() {
+AAROriginActor::AAROriginActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

@@ -1,6 +1,12 @@
 #include "MoviePipelineExecutorJob.h"
 #include "MoviePipelineMasterConfig.h"
 
+UMoviePipelineExecutorJob::UMoviePipelineExecutorJob() {
+    this->StatusProgress = 0.00f;
+    this->bIsConsumed = false;
+    this->Configuration = CreateDefaultSubobject<UMoviePipelineMasterConfig>(TEXT("DefaultConfig"));
+}
+
 void UMoviePipelineExecutorJob::SetStatusProgress_Implementation(const float InProgress) {
 }
 
@@ -42,9 +48,4 @@ UMoviePipelineMasterConfig* UMoviePipelineExecutorJob::GetConfiguration() const 
     return NULL;
 }
 
-UMoviePipelineExecutorJob::UMoviePipelineExecutorJob() {
-    this->StatusProgress = 0.00f;
-    this->bIsConsumed = false;
-    this->Configuration = CreateDefaultSubobject<UMoviePipelineMasterConfig>(TEXT("DefaultConfig"));
-}
 

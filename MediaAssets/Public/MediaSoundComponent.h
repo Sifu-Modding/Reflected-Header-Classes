@@ -31,7 +31,8 @@ protected:
     UMediaPlayer* MediaPlayer;
     
 public:
-    UMediaSoundComponent();
+    UMediaSoundComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetSpectralAnalysisSettings(TArray<float> InFrequenciesToAnalyze, EMediaSoundComponentFFTSize InFFTSize);
     

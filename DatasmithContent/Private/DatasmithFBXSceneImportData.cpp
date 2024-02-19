@@ -6,3 +6,4 @@ UDatasmithFBXSceneImportData::UDatasmithFBXSceneImportData() {
     this->bColorizeMaterials = false;
 }
 
+

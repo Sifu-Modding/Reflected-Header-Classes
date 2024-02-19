@@ -12,5 +12,6 @@ public:
     FNiagaraPlatformSet Platforms;
     
     UNiagaraDataInterfacePlatformSet();
+
 };
 

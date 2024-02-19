@@ -1,6 +1,12 @@
 #include "ARFaceComponent.h"
 #include "Net/UnrealNetwork.h"
 
+UARFaceComponent::UARFaceComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->TransformSetting = EARFaceTransformMixing::TrackingOnly;
+    this->bUpdateVertexNormal = false;
+    this->bFaceOutOfScreen = true;
+}
+
 void UARFaceComponent::SetFaceComponentDebugMode(EFaceComponentDebugMode NewDebugMode) {
 }
 
@@ -18,9 +24,4 @@ void UARFaceComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& Out
     DOREPLIFETIME(UARFaceComponent, ReplicatedPayload);
 }
 
-UARFaceComponent::UARFaceComponent() {
-    this->TransformSetting = EARFaceTransformMixing::TrackingOnly;
-    this->bUpdateVertexNormal = false;
-    this->bFaceOutOfScreen = true;
-}
 

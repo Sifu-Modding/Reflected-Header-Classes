@@ -8,5 +8,6 @@ class INTERACTIVETOOLSFRAMEWORK_API USingleSelectionTool : public UInteractiveTo
     GENERATED_BODY()
 public:
     USingleSelectionTool();
+
 };
 

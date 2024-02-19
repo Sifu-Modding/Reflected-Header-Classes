@@ -41,6 +41,7 @@ public:
     DECLARE_DYNAMIC_DELEGATE(FOnGameWindowCloseButtonClickedDelegate);
     
     UWidgetBlueprintLibrary();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static FEventReply UnlockMouse(UPARAM(Ref) FEventReply& Reply);
     

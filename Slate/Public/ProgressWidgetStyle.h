@@ -12,5 +12,6 @@ public:
     FProgressBarStyle ProgressBarStyle;
     
     UProgressWidgetStyle();
+
 };
 

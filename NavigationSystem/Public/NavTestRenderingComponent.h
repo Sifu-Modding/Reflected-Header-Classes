@@ -7,6 +7,7 @@ UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UNavTestRenderingComponent : public UPrimitiveComponent {
     GENERATED_BODY()
 public:
-    UNavTestRenderingComponent();
+    UNavTestRenderingComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

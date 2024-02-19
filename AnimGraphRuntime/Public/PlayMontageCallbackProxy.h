@@ -29,6 +29,7 @@ public:
     FOnMontagePlayDelegate OnNotifyEnd;
     
     UPlayMontageCallbackProxy();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void OnNotifyEndReceived(FName NotifyName, const FBranchingPointNotifyPayload& BranchingPointNotifyPayload);

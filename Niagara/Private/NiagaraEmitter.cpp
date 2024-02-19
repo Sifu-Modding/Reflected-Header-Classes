@@ -26,3 +26,4 @@ UNiagaraEmitter::UNiagaraEmitter() {
     this->GPUComputeScript = NULL;
 }
 
+

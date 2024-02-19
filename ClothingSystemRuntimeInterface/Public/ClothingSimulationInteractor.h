@@ -9,6 +9,7 @@ class CLOTHINGSYSTEMRUNTIMEINTERFACE_API UClothingSimulationInteractor : public 
     GENERATED_BODY()
 public:
     UClothingSimulationInteractor();
+
     UFUNCTION(BlueprintCallable)
     void SetAnimDriveSpringStiffness(float InStiffness);
     

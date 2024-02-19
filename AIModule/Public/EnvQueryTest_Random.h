@@ -8,5 +8,6 @@ class UEnvQueryTest_Random : public UEnvQueryTest {
     GENERATED_BODY()
 public:
     UEnvQueryTest_Random();
+
 };
 

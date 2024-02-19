@@ -4,3 +4,4 @@ URichTextBlockImageDecorator::URichTextBlockImageDecorator() : URichTextBlockDec
     this->ImageSet = NULL;
 }
 
+

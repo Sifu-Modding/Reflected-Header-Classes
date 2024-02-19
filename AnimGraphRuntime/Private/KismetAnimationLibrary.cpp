@@ -1,6 +1,7 @@
 #include "KismetAnimationLibrary.h"
 
-class USkeletalMeshComponent;
+UKismetAnimationLibrary::UKismetAnimationLibrary() {
+}
 
 void UKismetAnimationLibrary::K2_TwoBoneIK(const FVector& RootPos, const FVector& JointPos, const FVector& EndPos, const FVector& JointTarget, const FVector& Effector, FVector& OutJointPos, FVector& OutEndPos, bool bAllowStretching, float StartStretchRatio, float MaxStretchScale) {
 }
@@ -40,6 +41,4 @@ float UKismetAnimationLibrary::K2_CalculateVelocityFromPositionHistory(float Del
     return 0.0f;
 }
 
-UKismetAnimationLibrary::UKismetAnimationLibrary() {
-}
 

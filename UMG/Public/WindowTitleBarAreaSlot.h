@@ -22,6 +22,7 @@ protected:
     
 public:
     UWindowTitleBarAreaSlot();
+
     UFUNCTION(BlueprintCallable)
     void SetVerticalAlignment(TEnumAsByte<EVerticalAlignment> InVerticalAlignment);
     

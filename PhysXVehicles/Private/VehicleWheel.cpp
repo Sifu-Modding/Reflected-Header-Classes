@@ -1,21 +1,5 @@
 #include "VehicleWheel.h"
 
-bool UVehicleWheel::IsInAir() const {
-    return false;
-}
-
-float UVehicleWheel::GetSuspensionOffset() const {
-    return 0.0f;
-}
-
-float UVehicleWheel::GetSteerAngle() const {
-    return 0.0f;
-}
-
-float UVehicleWheel::GetRotationAngle() const {
-    return 0.0f;
-}
-
 UVehicleWheel::UVehicleWheel() {
     this->bDontCreateShape = false;
     this->bAutoAdjustCollisionSize = true;
@@ -47,4 +31,21 @@ UVehicleWheel::UVehicleWheel() {
     this->DebugLongForce = 0.00f;
     this->DebugLatForce = 0.00f;
 }
+
+bool UVehicleWheel::IsInAir() const {
+    return false;
+}
+
+float UVehicleWheel::GetSuspensionOffset() const {
+    return 0.0f;
+}
+
+float UVehicleWheel::GetSteerAngle() const {
+    return 0.0f;
+}
+
+float UVehicleWheel::GetRotationAngle() const {
+    return 0.0f;
+}
+
 

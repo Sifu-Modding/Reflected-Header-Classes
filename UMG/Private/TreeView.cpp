@@ -1,6 +1,7 @@
 #include "TreeView.h"
 
-class UObject;
+UTreeView::UTreeView() : UListView(FObjectInitializer::Get()) {
+}
 
 void UTreeView::SetItemExpansion(UObject* Item, bool bExpandItem) {
 }
@@ -11,6 +12,4 @@ void UTreeView::ExpandAll() {
 void UTreeView::CollapseAll() {
 }
 
-UTreeView::UTreeView() {
-}
 

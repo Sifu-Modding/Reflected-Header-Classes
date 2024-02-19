@@ -26,7 +26,8 @@ protected:
     AMagicLeapSharedWorldPlayerController* ChosenOne;
     
 public:
-    AMagicLeapSharedWorldGameMode();
+    AMagicLeapSharedWorldGameMode(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     bool SendSharedWorldDataToClients();
     

@@ -3,7 +3,7 @@
 #include "FrameGrabberProtocol.h"
 #include "VideoCaptureProtocol.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS(Blueprintable, Config=Engine)
 class MOVIESCENECAPTURE_API UVideoCaptureProtocol : public UFrameGrabberProtocol {
     GENERATED_BODY()
 public:
@@ -14,5 +14,6 @@ public:
     float CompressionQuality;
     
     UVideoCaptureProtocol();
+
 };
 

@@ -77,9 +77,10 @@ private:
     float m_fRespawnTimeNoDown;
     
 public:
-    AThePlainesGameState();
+    AThePlainesGameState(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     void OnRepNumTeam();
     

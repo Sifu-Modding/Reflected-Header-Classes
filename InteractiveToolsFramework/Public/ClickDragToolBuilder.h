@@ -8,5 +8,6 @@ class INTERACTIVETOOLSFRAMEWORK_API UClickDragToolBuilder : public UInteractiveT
     GENERATED_BODY()
 public:
     UClickDragToolBuilder();
+
 };
 

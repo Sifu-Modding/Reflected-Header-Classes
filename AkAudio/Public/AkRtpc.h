@@ -8,5 +8,6 @@ class AKAUDIO_API UAkRtpc : public UAkAudioType {
     GENERATED_BODY()
 public:
     UAkRtpc();
+
 };
 

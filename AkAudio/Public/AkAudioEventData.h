@@ -40,5 +40,6 @@ public:
     TSet<UAkGroupValue*> GroupValues;
     
     UAkAudioEventData();
+
 };
 

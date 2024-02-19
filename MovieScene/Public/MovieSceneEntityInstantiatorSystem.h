@@ -8,5 +8,6 @@ class MOVIESCENE_API UMovieSceneEntityInstantiatorSystem : public UMovieSceneEnt
     GENERATED_BODY()
 public:
     UMovieSceneEntityInstantiatorSystem();
+
 };
 

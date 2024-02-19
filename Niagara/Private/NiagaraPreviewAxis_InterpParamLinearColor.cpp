@@ -3,3 +3,4 @@
 UNiagaraPreviewAxis_InterpParamLinearColor::UNiagaraPreviewAxis_InterpParamLinearColor() {
 }
 
+

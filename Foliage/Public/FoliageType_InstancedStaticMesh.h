@@ -22,5 +22,6 @@ public:
     TSubclassOf<UFoliageInstancedStaticMeshComponent> ComponentClass;
     
     UFoliageType_InstancedStaticMesh();
+
 };
 

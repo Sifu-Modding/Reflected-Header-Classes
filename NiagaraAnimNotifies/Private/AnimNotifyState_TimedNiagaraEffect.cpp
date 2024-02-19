@@ -5,3 +5,4 @@ UAnimNotifyState_TimedNiagaraEffect::UAnimNotifyState_TimedNiagaraEffect() {
     this->bDestroyAtEnd = false;
 }
 
+

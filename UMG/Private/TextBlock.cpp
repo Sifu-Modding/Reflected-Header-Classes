@@ -1,6 +1,13 @@
 #include "TextBlock.h"
 
-class UMaterialInstanceDynamic;
+UTextBlock::UTextBlock() {
+    this->bIsVariable = false;
+    this->MinDesiredWidth = 0.00f;
+    this->bWrapWithInvalidationPanel = false;
+    this->bAutoWrapText = false;
+    this->TextTransformPolicy = ETextTransformPolicy::None;
+    this->bSimpleTextMode = false;
+}
 
 void UTextBlock::SetTextTransformPolicy(ETextTransformPolicy InTransformPolicy) {
 }
@@ -44,11 +51,4 @@ UMaterialInstanceDynamic* UTextBlock::GetDynamicFontMaterial() {
     return NULL;
 }
 
-UTextBlock::UTextBlock() {
-    this->MinDesiredWidth = 0.00f;
-    this->bWrapWithInvalidationPanel = false;
-    this->bAutoWrapText = false;
-    this->TextTransformPolicy = ETextTransformPolicy::None;
-    this->bSimpleTextMode = false;
-}
 

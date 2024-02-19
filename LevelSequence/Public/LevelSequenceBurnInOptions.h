@@ -20,6 +20,7 @@ public:
     ULevelSequenceBurnInInitSettings* Settings;
     
     ULevelSequenceBurnInOptions();
+
     UFUNCTION(BlueprintCallable)
     void SetBurnIn(FSoftClassPath InBurnInClass);
     

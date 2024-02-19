@@ -92,6 +92,7 @@ private:
     
 public:
     UMediaPlayer();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool SupportsSeeking() const;
     

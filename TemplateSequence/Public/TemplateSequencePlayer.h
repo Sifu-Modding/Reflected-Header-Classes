@@ -14,6 +14,7 @@ class TEMPLATESEQUENCE_API UTemplateSequencePlayer : public UMovieSceneSequenceP
     GENERATED_BODY()
 public:
     UTemplateSequencePlayer();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static UTemplateSequencePlayer* CreateTemplateSequencePlayer(UObject* WorldContextObject, UTemplateSequence* TemplateSequence, FMovieSceneSequencePlaybackSettings Settings, ATemplateSequenceActor*& OutActor);
     

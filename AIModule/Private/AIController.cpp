@@ -3,13 +3,22 @@
 #include "PawnActionsComponent.h"
 #include "Templates/SubclassOf.h"
 
-class AActor;
-class UAIPerceptionComponent;
-class UBehaviorTree;
-class UBlackboardComponent;
-class UBlackboardData;
-class UGameplayTaskResource;
-class UNavigationQueryFilter;
+AAIController::AAIController(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bStartAILogicOnPossess = false;
+    this->bStopAILogicOnUnposses = true;
+    this->bLOSflag = false;
+    this->bSkipExtraLOSChecks = true;
+    this->bAllowStrafe = false;
+    this->bWantsPlayerState = false;
+    this->bSetControlRotationFromPawnOrientation = true;
+    this->PathFollowingComponent = CreateDefaultSubobject<UPathFollowingComponent>(TEXT("PathFollowingComponent"));
+    this->BrainComponent = NULL;
+    this->PerceptionComponent = NULL;
+    this->ActionsComp = CreateDefaultSubobject<UPawnActionsComponent>(TEXT("ActionsComp"));
+    this->Blackboard = NULL;
+    this->CachedGameplayTasksComponent = NULL;
+    this->DefaultNavigationFilterClass = NULL;
+}
 
 bool AAIController::UseBlackboard(UBlackboardData* BlackboardAsset, UBlackboardComponent*& BlackboardComponent) {
     return false;
@@ -84,20 +93,4 @@ UAIPerceptionComponent* AAIController::GetAIPerceptionComponent() {
 void AAIController::ClaimTaskResource(TSubclassOf<UGameplayTaskResource> ResourceClass) {
 }
 
-AAIController::AAIController() {
-    this->bStartAILogicOnPossess = false;
-    this->bStopAILogicOnUnposses = true;
-    this->bLOSflag = false;
-    this->bSkipExtraLOSChecks = true;
-    this->bAllowStrafe = false;
-    this->bWantsPlayerState = false;
-    this->bSetControlRotationFromPawnOrientation = true;
-    this->PathFollowingComponent = CreateDefaultSubobject<UPathFollowingComponent>(TEXT("PathFollowingComponent"));
-    this->BrainComponent = NULL;
-    this->PerceptionComponent = NULL;
-    this->ActionsComp = CreateDefaultSubobject<UPawnActionsComponent>(TEXT("ActionsComp"));
-    this->Blackboard = NULL;
-    this->CachedGameplayTasksComponent = NULL;
-    this->DefaultNavigationFilterClass = NULL;
-}
 

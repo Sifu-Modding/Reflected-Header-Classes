@@ -4,7 +4,7 @@
 
 UENUM(BlueprintType)
 enum class EToolChangeTrackingMode : uint8 {
-    NoChangeTracking = 0x1,
+    NoChangeTracking = 1,
     UndoToExit,
     FullUndoRedo,
 };

@@ -1,5 +1,6 @@
 #include "Landscape.h"
 
-ALandscape::ALandscape() {
+ALandscape::ALandscape(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

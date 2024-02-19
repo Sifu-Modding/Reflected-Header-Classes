@@ -1,5 +1,8 @@
 #include "AkWaapiCalls.h"
 
+UAkWaapiCalls::UAkWaapiCalls() {
+}
+
 FAKWaapiJsonObject UAkWaapiCalls::Unsubscribe(const FAkWaapiSubscriptionId& SubscriptionId, bool& UnsubscriptionDone) {
     return FAKWaapiJsonObject{};
 }
@@ -35,6 +38,4 @@ FAKWaapiJsonObject UAkWaapiCalls::CallWaapi(const FAkWaapiUri& WaapiUri, const F
     return FAKWaapiJsonObject{};
 }
 
-UAkWaapiCalls::UAkWaapiCalls() {
-}
 

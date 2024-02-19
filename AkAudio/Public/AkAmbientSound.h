@@ -22,7 +22,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SimpleDisplay, meta=(AllowPrivateAccess=true))
     bool AutoPost;
     
-    AAkAmbientSound();
+    AAkAmbientSound(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintCosmetic)
     void StopAmbientSound();
     

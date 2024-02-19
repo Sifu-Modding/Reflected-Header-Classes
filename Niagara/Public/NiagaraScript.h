@@ -52,6 +52,7 @@ private:
     
 public:
     UNiagaraScript();
+
     UFUNCTION(BlueprintCallable)
     void RaiseOnGPUCompilationComplete();
     

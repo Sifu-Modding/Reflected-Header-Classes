@@ -1,5 +1,13 @@
 #include "MultiLineEditableTextBox.h"
 
+UMultiLineEditableTextBox::UMultiLineEditableTextBox() {
+    this->AutoWrapText = true;
+    this->bIsReadOnly = false;
+    this->AllowContextMenu = true;
+    this->VirtualKeyboardDismissAction = EVirtualKeyboardDismissAction::TextChangeOnDismiss;
+    this->Style = NULL;
+}
+
 void UMultiLineEditableTextBox::SetTextStyle(const FTextBlockStyle& InTextStyle) {
 }
 
@@ -23,10 +31,4 @@ FText UMultiLineEditableTextBox::GetHintText() const {
     return FText::GetEmpty();
 }
 
-UMultiLineEditableTextBox::UMultiLineEditableTextBox() {
-    this->bIsReadOnly = false;
-    this->AllowContextMenu = true;
-    this->VirtualKeyboardDismissAction = EVirtualKeyboardDismissAction::TextChangeOnDismiss;
-    this->Style = NULL;
-}
 

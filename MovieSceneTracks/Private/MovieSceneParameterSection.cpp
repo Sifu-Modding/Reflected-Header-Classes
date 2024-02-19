@@ -1,5 +1,9 @@
 #include "MovieSceneParameterSection.h"
 
+UMovieSceneParameterSection::UMovieSceneParameterSection() {
+    this->bSupportsInfiniteRange = true;
+}
+
 bool UMovieSceneParameterSection::RemoveVectorParameter(FName InParameterName) {
     return false;
 }
@@ -45,6 +49,4 @@ void UMovieSceneParameterSection::AddColorParameterKey(FName InParameterName, FF
 void UMovieSceneParameterSection::AddBoolParameterKey(FName InParameterName, FFrameNumber InTime, bool InValue) {
 }
 
-UMovieSceneParameterSection::UMovieSceneParameterSection() {
-}
 

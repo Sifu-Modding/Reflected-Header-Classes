@@ -1,5 +1,8 @@
 #include "ARGeoAnchor.h"
 
+UARGeoAnchor::UARGeoAnchor() {
+}
+
 float UARGeoAnchor::GetLongitude() const {
     return 0.0f;
 }
@@ -16,6 +19,4 @@ float UARGeoAnchor::GetAltitudeMeters() const {
     return 0.0f;
 }
 
-UARGeoAnchor::UARGeoAnchor() {
-}
 

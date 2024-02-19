@@ -1,5 +1,8 @@
 #include "ClothingSimulationInteractor.h"
 
+UClothingSimulationInteractor::UClothingSimulationInteractor() {
+}
+
 void UClothingSimulationInteractor::SetAnimDriveSpringStiffness(float InStiffness) {
 }
 
@@ -39,6 +42,4 @@ void UClothingSimulationInteractor::DisableGravityOverride() {
 void UClothingSimulationInteractor::ClothConfigUpdated() {
 }
 
-UClothingSimulationInteractor::UClothingSimulationInteractor() {
-}
 

@@ -11,6 +11,7 @@ class MOVIESCENECAPTURE_API UMovieSceneCaptureEnvironment : public UObject {
     GENERATED_BODY()
 public:
     UMovieSceneCaptureEnvironment();
+
     UFUNCTION(BlueprintCallable)
     static bool IsCaptureInProgress();
     

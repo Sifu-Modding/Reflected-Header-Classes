@@ -8,5 +8,6 @@ class FIELDSYSTEMENGINE_API UFieldSystem : public UObject {
     GENERATED_BODY()
 public:
     UFieldSystem();
+
 };
 

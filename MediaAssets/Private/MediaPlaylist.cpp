@@ -1,6 +1,7 @@
 #include "MediaPlaylist.h"
 
-class UMediaSource;
+UMediaPlaylist::UMediaPlaylist() {
+}
 
 bool UMediaPlaylist::Replace(int32 Index, UMediaSource* Replacement) {
     return false;
@@ -49,6 +50,4 @@ bool UMediaPlaylist::Add(UMediaSource* MediaSource) {
     return false;
 }
 
-UMediaPlaylist::UMediaPlaylist() {
-}
 

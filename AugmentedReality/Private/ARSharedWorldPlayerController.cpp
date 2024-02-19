@@ -1,5 +1,9 @@
 #include "ARSharedWorldPlayerController.h"
 
+AARSharedWorldPlayerController::AARSharedWorldPlayerController(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->ClickEventKeys.AddDefaulted(1);
+}
+
 void AARSharedWorldPlayerController::ServerMarkReadyForReceiving_Implementation() {
 }
 bool AARSharedWorldPlayerController::ServerMarkReadyForReceiving_Validate() {
@@ -24,6 +28,4 @@ bool AARSharedWorldPlayerController::ClientInitSharedWorld_Validate(int32 Previe
     return true;
 }
 
-AARSharedWorldPlayerController::AARSharedWorldPlayerController() {
-}
 

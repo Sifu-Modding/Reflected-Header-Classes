@@ -12,5 +12,6 @@ public:
     FMovieSceneGeometryCollectionParams Params;
     
     UMovieSceneGeometryCollectionSection();
+
 };
 

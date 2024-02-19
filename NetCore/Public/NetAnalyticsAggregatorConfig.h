@@ -4,7 +4,7 @@
 #include "NetAnalyticsDataConfig.h"
 #include "NetAnalyticsAggregatorConfig.generated.h"
 
-UCLASS(Blueprintable, PerObjectConfig)
+UCLASS(Blueprintable, PerObjectConfig, Config=Engine)
 class UNetAnalyticsAggregatorConfig : public UObject {
     GENERATED_BODY()
 public:
@@ -12,5 +12,6 @@ public:
     TArray<FNetAnalyticsDataConfig> NetAnalyticsData;
     
     UNetAnalyticsAggregatorConfig();
+
 };
 

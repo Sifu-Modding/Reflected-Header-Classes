@@ -8,5 +8,6 @@ class AIMODULE_API UBTTask_PawnActionBase : public UBTTaskNode {
     GENERATED_BODY()
 public:
     UBTTask_PawnActionBase();
+
 };
 

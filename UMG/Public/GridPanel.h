@@ -17,6 +17,7 @@ public:
     TArray<float> RowFill;
     
     UGridPanel();
+
     UFUNCTION(BlueprintCallable)
     void SetRowFill(int32 ColumnIndex, float Coefficient);
     

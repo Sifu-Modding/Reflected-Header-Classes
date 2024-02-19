@@ -11,5 +11,6 @@ public:
     uint32 Seed;
     
     UNiagaraDataInterfaceCurlNoise();
+
 };
 

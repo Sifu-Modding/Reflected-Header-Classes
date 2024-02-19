@@ -177,6 +177,7 @@ protected:
     
 public:
     UARSessionConfig();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool ShouldResetTrackedObjects() const;
     

@@ -8,5 +8,6 @@ class UAkHololensPlatformInfo : public UAkPlatformInfo {
     GENERATED_BODY()
 public:
     UAkHololensPlatformInfo();
+
 };
 

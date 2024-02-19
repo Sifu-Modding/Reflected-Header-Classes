@@ -15,6 +15,7 @@ private:
     
 public:
     UARTrackedObject();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UARCandidateObject* GetDetectedObject() const;
     

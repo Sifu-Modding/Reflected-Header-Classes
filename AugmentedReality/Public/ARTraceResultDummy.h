@@ -8,5 +8,6 @@ class UARTraceResultDummy : public UObject {
     GENERATED_BODY()
 public:
     UARTraceResultDummy();
+
 };
 

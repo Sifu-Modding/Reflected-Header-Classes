@@ -8,5 +8,6 @@ class UMG_API URichTextBlockDecorator : public UObject {
     GENERATED_BODY()
 public:
     URichTextBlockDecorator();
+
 };
 

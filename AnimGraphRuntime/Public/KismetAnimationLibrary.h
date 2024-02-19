@@ -16,6 +16,7 @@ class ANIMGRAPHRUNTIME_API UKismetAnimationLibrary : public UBlueprintFunctionLi
     GENERATED_BODY()
 public:
     UKismetAnimationLibrary();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static void K2_TwoBoneIK(const FVector& RootPos, const FVector& JointPos, const FVector& EndPos, const FVector& JointTarget, const FVector& Effector, FVector& OutJointPos, FVector& OutEndPos, bool bAllowStretching, float StartStretchRatio, float MaxStretchScale);
     

@@ -6,3 +6,4 @@ UAkMediaAsset::UAkMediaAsset() {
     this->CurrentMediaAssetData = NULL;
 }
 
+

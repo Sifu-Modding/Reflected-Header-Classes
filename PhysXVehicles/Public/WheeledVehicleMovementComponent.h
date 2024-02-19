@@ -177,9 +177,10 @@ private:
     AController* OverrideController;
     
 public:
-    UWheeledVehicleMovementComponent();
+    UWheeledVehicleMovementComponent(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     void SetUseAutoGears(bool bUseAuto);
     
@@ -248,7 +249,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetCurrentGear() const;
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

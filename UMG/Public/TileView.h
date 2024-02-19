@@ -23,6 +23,7 @@ protected:
     
 public:
     UTileView();
+
     UFUNCTION(BlueprintCallable)
     void SetEntryWidth(float NewWidth);
     

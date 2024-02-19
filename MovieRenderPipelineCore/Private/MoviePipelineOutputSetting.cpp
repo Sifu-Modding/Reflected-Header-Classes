@@ -15,3 +15,4 @@ UMoviePipelineOutputSetting::UMoviePipelineOutputSetting() {
     this->FrameNumberOffset = 0;
 }
 
+

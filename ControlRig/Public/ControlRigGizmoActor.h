@@ -40,7 +40,8 @@ private:
     uint8 bHovered: 1;
     
 public:
-    AControlRigGizmoActor();
+    AControlRigGizmoActor(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetSelected(bool bInSelected);
     

@@ -12,6 +12,7 @@ public:
     FSourceEffectDynamicsProcessorSettings Settings;
     
     USourceEffectDynamicsProcessorPreset();
+
     UFUNCTION(BlueprintCallable)
     void SetSettings(const FSourceEffectDynamicsProcessorSettings& InSettings);
     

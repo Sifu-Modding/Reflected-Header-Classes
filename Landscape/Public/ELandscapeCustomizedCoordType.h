@@ -9,6 +9,5 @@ enum ELandscapeCustomizedCoordType {
     LCCT_CustomUV1,
     LCCT_CustomUV2,
     LCCT_WeightMapUV,
-    LCCT_MAX UMETA(Hidden),
 };
 

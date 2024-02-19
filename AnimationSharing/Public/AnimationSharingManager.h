@@ -9,7 +9,7 @@ class UAnimationSharingManager;
 class UAnimationSharingSetup;
 class USkeleton;
 
-UCLASS(Blueprintable, Config=Engine, DefaultConfig)
+UCLASS(Blueprintable, DefaultConfig, Config=Engine)
 class ANIMATIONSHARING_API UAnimationSharingManager : public UObject {
     GENERATED_BODY()
 public:
@@ -22,6 +22,7 @@ protected:
     
 public:
     UAnimationSharingManager();
+
     UFUNCTION(BlueprintCallable)
     void RegisterActorWithSkeletonBP(AActor* InActor, const USkeleton* SharingSkeleton);
     

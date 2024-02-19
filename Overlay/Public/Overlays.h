@@ -8,5 +8,6 @@ class OVERLAY_API UOverlays : public UObject {
     GENERATED_BODY()
 public:
     UOverlays();
+
 };
 

@@ -12,6 +12,7 @@ public:
     FSourceEffectFoldbackDistortionSettings Settings;
     
     USourceEffectFoldbackDistortionPreset();
+
     UFUNCTION(BlueprintCallable)
     void SetSettings(const FSourceEffectFoldbackDistortionSettings& InSettings);
     

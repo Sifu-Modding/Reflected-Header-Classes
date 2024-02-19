@@ -137,7 +137,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, NonPIEDuplicateTransient, meta=(AllowPrivateAccess=true))
     TArray<UTexture2D*> MobileWeightmapTextures;
     
-    ULandscapeComponent();
+    ULandscapeComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UMaterialInstanceDynamic* GetMaterialInstanceDynamic(int32 InIndex) const;
     

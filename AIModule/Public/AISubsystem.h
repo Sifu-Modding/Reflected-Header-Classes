@@ -5,7 +5,7 @@
 
 class UAISystem;
 
-UCLASS(Blueprintable, Config=Engine, DefaultConfig)
+UCLASS(Blueprintable, DefaultConfig, Config=Engine)
 class AIMODULE_API UAISubsystem : public UObject {
     GENERATED_BODY()
 public:
@@ -15,5 +15,6 @@ private:
     
 public:
     UAISubsystem();
+
 };
 

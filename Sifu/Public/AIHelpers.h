@@ -13,6 +13,7 @@ class AActor;
 class AFightingCharacter;
 class APawn;
 class UAIFightingComponent;
+class UAIPositionningPOIComponent;
 class UObject;
 
 UCLASS(Blueprintable)
@@ -22,6 +23,7 @@ public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FFightingAIDelegate, UAIFightingComponent*, AIComponent);
     
     UAIHelpers();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static FSCAITicketEnum Conv_SCEnumToAITicketEnum(const FSCUserDefinedEnumHandler& _scEnum);
     
@@ -87,6 +89,9 @@ public:
     
     UFUNCTION(BlueprintCallable)
     static void BPF_GetTicketCooldownRemaining(const UAIFightingComponent* _requester, const FSCAITicketEnum& _ticketEnum, float& _fOutMin, float& _fOutMax, int32& _iOutTicketsCount);
+    
+    UFUNCTION(BlueprintCallable)
+    static UAIPositionningPOIComponent* BPF_GetPOIAssignedWithCharacter(const AFightingCharacter* _AICharacter);
     
     UFUNCTION(BlueprintCallable)
     static void BPF_GetOwnedAttackTickets(UAIFightingComponent* _resquester, TArray<FSCAITicketEnum>& _outOwnedTickets);

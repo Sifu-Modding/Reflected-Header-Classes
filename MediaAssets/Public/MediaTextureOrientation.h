@@ -8,6 +8,5 @@ enum MediaTextureOrientation {
     MTORI_CW90,
     MTORI_CW180,
     MTORI_CW270,
-    MTORI_MAX UMETA(Hidden),
 };
 

@@ -4,7 +4,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=DeveloperSettings -ObjectName=DeveloperSettings -FallbackName=DeveloperSettings
 #include "ChaosSolverSettings.generated.h"
 
-UCLASS(Blueprintable, Config=Engine, DefaultConfig)
+UCLASS(Blueprintable, DefaultConfig, Config=Engine)
 class CHAOSSOLVERENGINE_API UChaosSolverSettings : public UDeveloperSettings {
     GENERATED_BODY()
 public:
@@ -12,5 +12,6 @@ public:
     FSoftClassPath DefaultChaosSolverActorClass;
     
     UChaosSolverSettings();
+
 };
 

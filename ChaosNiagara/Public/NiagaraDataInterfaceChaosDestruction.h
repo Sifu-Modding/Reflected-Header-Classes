@@ -164,5 +164,6 @@ protected:
     
 public:
     UNiagaraDataInterfaceChaosDestruction();
+
 };
 

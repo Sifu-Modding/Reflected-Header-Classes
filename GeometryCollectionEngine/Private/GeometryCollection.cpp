@@ -17,3 +17,4 @@ UGeometryCollection::UGeometryCollection() {
     this->BoneSelectedMaterialIndex = 0;
 }
 
+

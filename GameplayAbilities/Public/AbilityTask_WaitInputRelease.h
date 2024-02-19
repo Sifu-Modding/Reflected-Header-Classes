@@ -15,6 +15,7 @@ public:
     FInputReleaseDelegate OnRelease;
     
     UAbilityTask_WaitInputRelease();
+
     UFUNCTION(BlueprintCallable)
     static UAbilityTask_WaitInputRelease* WaitInputRelease(UGameplayAbility* OwningAbility, bool bTestAlreadyReleased);
     

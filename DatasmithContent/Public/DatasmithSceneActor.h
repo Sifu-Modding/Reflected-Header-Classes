@@ -15,6 +15,7 @@ public:
     UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<FName, TSoftObjectPtr<AActor>> RelatedActors;
     
-    ADatasmithSceneActor();
+    ADatasmithSceneActor(const FObjectInitializer& ObjectInitializer);
+
 };
 

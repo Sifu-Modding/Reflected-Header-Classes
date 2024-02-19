@@ -1,5 +1,13 @@
 #include "MenuAnchor.h"
 
+UMenuAnchor::UMenuAnchor() {
+    this->MenuClass = NULL;
+    this->Placement = MenuPlacement_ComboBox;
+    this->bFitInWindow = true;
+    this->ShouldDeferPaintingAfterWindowContent = true;
+    this->UseApplicationMenuStack = true;
+}
+
 void UMenuAnchor::ToggleOpen(bool bFocusOnOpen) {
 }
 
@@ -31,11 +39,4 @@ void UMenuAnchor::FitInWindow(bool bFit) {
 void UMenuAnchor::Close() {
 }
 
-UMenuAnchor::UMenuAnchor() {
-    this->MenuClass = NULL;
-    this->Placement = MenuPlacement_ComboBox;
-    this->bFitInWindow = true;
-    this->ShouldDeferPaintingAfterWindowContent = true;
-    this->UseApplicationMenuStack = true;
-}
 

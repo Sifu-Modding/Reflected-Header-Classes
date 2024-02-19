@@ -14,9 +14,10 @@ protected:
     FARImageUpdatePayload ReplicatedPayload;
     
 public:
-    UARImageComponent();
+    UARImageComponent(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     static void SetImageComponentDebugMode(EImageComponentDebugMode NewDebugMode);
     

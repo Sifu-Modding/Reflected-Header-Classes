@@ -20,5 +20,6 @@ public:
     uint8 bAutoSortTests: 1;
     
     UEnvQueryGenerator();
+
 };
 

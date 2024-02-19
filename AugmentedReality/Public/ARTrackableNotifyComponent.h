@@ -77,6 +77,7 @@ public:
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTrackableObjectDelegate OnRemoveTrackedObject;
     
-    UARTrackableNotifyComponent();
+    UARTrackableNotifyComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

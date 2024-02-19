@@ -17,5 +17,6 @@ public:
     UWidget* Content;
     
     UPanelSlot();
+
 };
 

@@ -14,7 +14,8 @@ public:
     UMaterialParameterCollection* MPC;
     
     UMovieSceneMaterialParameterCollectionTrack();
-    
+
+
     // Fix for true pure virtual functions not being implemented
 };
 

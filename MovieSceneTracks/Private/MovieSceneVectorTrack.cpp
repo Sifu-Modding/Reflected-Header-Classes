@@ -4,3 +4,4 @@ UMovieSceneVectorTrack::UMovieSceneVectorTrack() {
     this->NumChannelsUsed = 0;
 }
 
+

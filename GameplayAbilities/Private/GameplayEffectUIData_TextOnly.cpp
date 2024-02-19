@@ -3,3 +3,4 @@
 UGameplayEffectUIData_TextOnly::UGameplayEffectUIData_TextOnly() {
 }
 
+

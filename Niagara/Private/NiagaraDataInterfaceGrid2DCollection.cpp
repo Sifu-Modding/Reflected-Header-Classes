@@ -1,7 +1,9 @@
 #include "NiagaraDataInterfaceGrid2DCollection.h"
 
-class UNiagaraComponent;
-class UTextureRenderTarget2D;
+UNiagaraDataInterfaceGrid2DCollection::UNiagaraDataInterfaceGrid2DCollection() {
+    this->OverrideBufferFormat = ENiagaraGpuBufferFormat::Float;
+    this->bOverrideFormat = false;
+}
 
 void UNiagaraDataInterfaceGrid2DCollection::GetTextureSize(const UNiagaraComponent* Component, int32& SizeX, int32& SizeY) {
 }
@@ -17,8 +19,4 @@ bool UNiagaraDataInterfaceGrid2DCollection::FillRawTexture2D(const UNiagaraCompo
     return false;
 }
 
-UNiagaraDataInterfaceGrid2DCollection::UNiagaraDataInterfaceGrid2DCollection() {
-    this->OverrideBufferFormat = ENiagaraGpuBufferFormat::Float;
-    this->bOverrideFormat = false;
-}
 

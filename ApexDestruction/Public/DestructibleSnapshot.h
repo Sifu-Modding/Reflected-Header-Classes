@@ -8,5 +8,6 @@ class APEXDESTRUCTION_API UDestructibleSnapshot : public UObject {
     GENERATED_BODY()
 public:
     UDestructibleSnapshot();
+
 };
 

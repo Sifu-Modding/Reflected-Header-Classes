@@ -38,5 +38,6 @@ public:
     bool AlignToSurface;
     
     ULandscapeGrassType();
+
 };
 

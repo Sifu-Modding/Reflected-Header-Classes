@@ -5,3 +5,4 @@ UWidgetBlueprintGeneratedClass::UWidgetBlueprintGeneratedClass() {
     this->bClassRequiresNativeTick = false;
 }
 
+

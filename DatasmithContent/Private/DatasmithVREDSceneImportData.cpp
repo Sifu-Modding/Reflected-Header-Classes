@@ -10,3 +10,4 @@ UDatasmithVREDSceneImportData::UDatasmithVREDSceneImportData() {
     this->bImportClipInfo = false;
 }
 
+

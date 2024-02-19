@@ -9,7 +9,8 @@ class UMovieScenePreAnimatedComponentTransformSystem : public UMovieSceneEntityI
     GENERATED_BODY()
 public:
     UMovieScenePreAnimatedComponentTransformSystem();
-    
+
+
     // Fix for true pure virtual functions not being implemented
 };
 

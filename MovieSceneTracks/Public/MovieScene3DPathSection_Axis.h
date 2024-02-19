@@ -10,6 +10,5 @@ enum class MovieScene3DPathSection_Axis : uint8 {
     NEG_X,
     NEG_Y,
     NEG_Z,
-    MovieScene3DPathSection_MAX UMETA(Hidden),
 };
 

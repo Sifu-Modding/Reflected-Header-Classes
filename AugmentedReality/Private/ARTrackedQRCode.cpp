@@ -4,3 +4,4 @@ UARTrackedQRCode::UARTrackedQRCode() {
     this->Version = 0;
 }
 
+

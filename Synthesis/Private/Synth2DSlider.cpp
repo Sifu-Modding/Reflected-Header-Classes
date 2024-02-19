@@ -1,5 +1,14 @@
 #include "Synth2DSlider.h"
 
+USynth2DSlider::USynth2DSlider() {
+    this->ValueX = 0.00f;
+    this->ValueY = 0.00f;
+    this->IndentHandle = false;
+    this->Locked = false;
+    this->StepSize = 0.01f;
+    this->IsFocusable = true;
+}
+
 void USynth2DSlider::SetValue(FVector2D InValue) {
 }
 
@@ -19,12 +28,4 @@ FVector2D USynth2DSlider::GetValue() const {
     return FVector2D{};
 }
 
-USynth2DSlider::USynth2DSlider() {
-    this->ValueX = 0.00f;
-    this->ValueY = 0.00f;
-    this->IndentHandle = false;
-    this->Locked = false;
-    this->StepSize = 0.01f;
-    this->IsFocusable = true;
-}
 

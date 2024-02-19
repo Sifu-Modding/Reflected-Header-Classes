@@ -15,6 +15,7 @@ public:
     FSourceEffectBitCrusherSettings Settings;
     
     USourceEffectBitCrusherPreset();
+
     UFUNCTION(BlueprintCallable)
     void SetSettings(const FSourceEffectBitCrusherBaseSettings& NewSettings);
     

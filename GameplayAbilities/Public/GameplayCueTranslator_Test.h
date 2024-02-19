@@ -8,5 +8,6 @@ class UGameplayCueTranslator_Test : public UGameplayCueTranslator {
     GENERATED_BODY()
 public:
     UGameplayCueTranslator_Test();
+
 };
 

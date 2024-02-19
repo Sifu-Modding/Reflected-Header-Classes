@@ -84,7 +84,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bUpdateReverbVolumesLocation;
     
-    UAkComponent();
+    UAkComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintCosmetic)
     void UseReverbVolumes(bool inUseReverbVolumes);
     

@@ -8,6 +8,6 @@ enum EFieldOperationType {
     Field_Divide,
     Field_Add,
     Field_Substract,
-    Field_Operation_Max,
+    Field_Operation_Max UMETA(Hidden),
 };
 

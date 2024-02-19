@@ -8,6 +8,7 @@ class SYNTHESIS_API USynthesisUtilitiesBlueprintFunctionLibrary : public UBluepr
     GENERATED_BODY()
 public:
     USynthesisUtilitiesBlueprintFunctionLibrary();
+
 private:
     UFUNCTION(BlueprintCallable)
     static float GetLogFrequency(float InLinearValue, float InDomainMin, float InDomainMax, float InRangeMin, float InRangeMax);

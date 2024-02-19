@@ -1,6 +1,7 @@
 #include "SlateBlueprintLibrary.h"
 
-class UObject;
+USlateBlueprintLibrary::USlateBlueprintLibrary() {
+}
 
 FVector2D USlateBlueprintLibrary::TransformVectorLocalToAbsolute(const FGeometry& Geometry, FVector2D LocalVector) {
     return FVector2D{};
@@ -61,6 +62,4 @@ FVector2D USlateBlueprintLibrary::AbsoluteToLocal(const FGeometry& Geometry, FVe
     return FVector2D{};
 }
 
-USlateBlueprintLibrary::USlateBlueprintLibrary() {
-}
 

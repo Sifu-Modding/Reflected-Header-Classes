@@ -8,5 +8,6 @@ class AKAUDIO_API UAkAcousticTexture : public UAkAudioType {
     GENERATED_BODY()
 public:
     UAkAcousticTexture();
+
 };
 

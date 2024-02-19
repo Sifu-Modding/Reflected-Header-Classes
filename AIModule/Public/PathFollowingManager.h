@@ -8,5 +8,6 @@ class AIMODULE_API UPathFollowingManager : public UObject {
     GENERATED_BODY()
 public:
     UPathFollowingManager();
+
 };
 

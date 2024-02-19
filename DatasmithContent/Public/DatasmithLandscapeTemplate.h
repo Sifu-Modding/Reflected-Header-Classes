@@ -16,5 +16,6 @@ public:
     int32 StaticLightingLOD;
     
     UDatasmithLandscapeTemplate();
+
 };
 

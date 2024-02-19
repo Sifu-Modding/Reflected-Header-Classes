@@ -15,6 +15,7 @@ public:
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVolumeEndOverlapSignature OnPlayerEndOverlap;
     
-    ASCPlayerVolume();
+    ASCPlayerVolume(const FObjectInitializer& ObjectInitializer);
+
 };
 

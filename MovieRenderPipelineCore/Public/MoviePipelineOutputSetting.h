@@ -56,5 +56,6 @@ public:
     int32 FrameNumberOffset;
     
     UMoviePipelineOutputSetting();
+
 };
 

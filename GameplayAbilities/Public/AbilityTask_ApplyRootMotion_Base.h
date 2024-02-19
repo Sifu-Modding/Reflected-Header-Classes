@@ -29,7 +29,8 @@ protected:
     
 public:
     UAbilityTask_ApplyRootMotion_Base();
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 };
 

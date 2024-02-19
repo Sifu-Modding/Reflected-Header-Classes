@@ -24,6 +24,7 @@ class NIAGARA_API UNiagaraFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UNiagaraFunctionLibrary();
+
     UFUNCTION(BlueprintCallable)
     static UNiagaraComponent* SpawnSystemAttached(UNiagaraSystem* SystemTemplate, USceneComponent* AttachToComponent, FName AttachPointName, FVector Location, FRotator Rotation, TEnumAsByte<EAttachLocation::Type> LocationType, bool bAutoDestroy, bool bAutoActivate, ENCPoolMethod PoolingMethod, bool bPreCullCheck);
     

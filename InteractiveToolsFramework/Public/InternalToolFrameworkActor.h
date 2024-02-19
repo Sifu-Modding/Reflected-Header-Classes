@@ -7,6 +7,7 @@ UCLASS(Blueprintable, Transient)
 class INTERACTIVETOOLSFRAMEWORK_API AInternalToolFrameworkActor : public AActor {
     GENERATED_BODY()
 public:
-    AInternalToolFrameworkActor();
+    AInternalToolFrameworkActor(const FObjectInitializer& ObjectInitializer);
+
 };
 

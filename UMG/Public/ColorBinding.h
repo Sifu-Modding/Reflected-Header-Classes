@@ -10,6 +10,7 @@ class UMG_API UColorBinding : public UPropertyBinding {
     GENERATED_BODY()
 public:
     UColorBinding();
+
     UFUNCTION(BlueprintCallable)
     FSlateColor GetSlateValue() const;
     

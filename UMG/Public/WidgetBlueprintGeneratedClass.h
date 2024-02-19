@@ -29,5 +29,6 @@ public:
     TArray<FName> NamedSlots;
     
     UWidgetBlueprintGeneratedClass();
+
 };
 

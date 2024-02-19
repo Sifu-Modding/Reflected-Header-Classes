@@ -24,6 +24,7 @@ public:
     bool bEnableHardwareAcceleration;
     
     USubmixEffectConvolutionReverbPreset();
+
     UFUNCTION(BlueprintCallable)
     void SetSettings(const FSubmixEffectConvolutionReverbSettings& InSettings);
     

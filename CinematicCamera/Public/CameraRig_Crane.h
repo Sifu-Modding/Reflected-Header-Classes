@@ -38,6 +38,7 @@ private:
     USceneComponent* CraneCameraMount;
     
 public:
-    ACameraRig_Crane();
+    ACameraRig_Crane(const FObjectInitializer& ObjectInitializer);
+
 };
 

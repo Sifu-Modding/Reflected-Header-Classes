@@ -4,3 +4,4 @@ UMovieSceneBuiltInEasingFunction::UMovieSceneBuiltInEasingFunction() {
     this->Type = EMovieSceneBuiltInEasing::Linear;
 }
 
+

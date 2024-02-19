@@ -24,7 +24,8 @@ protected:
     ANavigationData* MyNavData;
     
 public:
-    UPathFollowingComponent();
+    UPathFollowingComponent(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     void OnNavDataRegistered(ANavigationData* NavData);
@@ -39,7 +40,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     TEnumAsByte<EPathFollowingAction::Type> GetPathActionType() const;
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

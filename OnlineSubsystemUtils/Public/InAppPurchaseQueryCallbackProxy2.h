@@ -18,6 +18,7 @@ public:
     FInAppPurchaseQuery2Result OnFailure;
     
     UInAppPurchaseQueryCallbackProxy2();
+
     UFUNCTION(BlueprintCallable)
     static UInAppPurchaseQueryCallbackProxy2* CreateProxyObjectForInAppPurchaseQuery(APlayerController* PlayerController, const TArray<FString>& ProductIdentifiers);
     

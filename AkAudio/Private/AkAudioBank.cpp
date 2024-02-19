@@ -6,3 +6,4 @@ UAkAudioBank::UAkAudioBank() {
     this->CurrentLocalizedPlatformAssetData = NULL;
 }
 
+

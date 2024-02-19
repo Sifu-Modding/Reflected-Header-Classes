@@ -1,7 +1,8 @@
 #include "SVONVolume.h"
 #include "SVONVolumeRenderingComponent.h"
 
-ASVONVolume::ASVONVolume() {
+ASVONVolume::ASVONVolume(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bColored = true;
     this->myShowMortonCodes = false;
     this->myShowNeighbourLinks = false;
     this->myShowParentChildLinks = false;
@@ -14,4 +15,5 @@ ASVONVolume::ASVONVolume() {
     this->myNumBytes = 0;
     this->RenderingComp = CreateDefaultSubobject<USVONVolumeRenderingComponent>(TEXT("SVONRenderingComponent"));
 }
+
 

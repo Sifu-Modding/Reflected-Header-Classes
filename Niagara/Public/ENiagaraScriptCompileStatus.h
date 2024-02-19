@@ -11,6 +11,5 @@ enum class ENiagaraScriptCompileStatus : uint8 {
     NCS_BeingCreated,
     NCS_UpToDateWithWarnings,
     NCS_ComputeUpToDateWithWarnings,
-    NCS_MAX UMETA(Hidden),
 };
 

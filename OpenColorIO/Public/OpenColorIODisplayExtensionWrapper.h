@@ -12,6 +12,7 @@ class OPENCOLORIO_API UOpenColorIODisplayExtensionWrapper : public UObject {
     GENERATED_BODY()
 public:
     UOpenColorIODisplayExtensionWrapper();
+
     UFUNCTION(BlueprintCallable)
     void SetSceneExtensionIsActiveFunctions(const TArray<FSceneViewExtensionIsActiveFunctor>& IsActiveFunctions);
     

@@ -1,5 +1,15 @@
 #include "GridSlot.h"
 
+UGridSlot::UGridSlot() {
+    this->HorizontalAlignment = HAlign_Fill;
+    this->VerticalAlignment = VAlign_Fill;
+    this->Row = 0;
+    this->RowSpan = 0;
+    this->Column = 0;
+    this->ColumnSpan = 0;
+    this->Layer = 0;
+}
+
 void UGridSlot::SetVerticalAlignment(TEnumAsByte<EVerticalAlignment> InVerticalAlignment) {
 }
 
@@ -27,13 +37,4 @@ void UGridSlot::SetColumnSpan(int32 InColumnSpan) {
 void UGridSlot::SetColumn(int32 InColumn) {
 }
 
-UGridSlot::UGridSlot() {
-    this->HorizontalAlignment = HAlign_Fill;
-    this->VerticalAlignment = VAlign_Fill;
-    this->Row = 0;
-    this->RowSpan = 0;
-    this->Column = 0;
-    this->ColumnSpan = 0;
-    this->Layer = 0;
-}
 

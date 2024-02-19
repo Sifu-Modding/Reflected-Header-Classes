@@ -10,6 +10,7 @@ class AUDIOCAPTURE_API UAudioCaptureFunctionLibrary : public UBlueprintFunctionL
     GENERATED_BODY()
 public:
     UAudioCaptureFunctionLibrary();
+
     UFUNCTION(BlueprintCallable)
     static UAudioCapture* CreateAudioCapture();
     

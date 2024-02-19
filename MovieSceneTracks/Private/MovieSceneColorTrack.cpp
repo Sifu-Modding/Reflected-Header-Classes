@@ -4,3 +4,4 @@ UMovieSceneColorTrack::UMovieSceneColorTrack() {
     this->bIsSlateColor = false;
 }
 
+

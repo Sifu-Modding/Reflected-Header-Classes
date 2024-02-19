@@ -17,5 +17,6 @@ public:
     uint8 bContinueRTPCOnMatineeEnd: 1;
     
     UInterpTrackAkAudioRTPC();
+
 };
 

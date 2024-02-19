@@ -1,5 +1,11 @@
 #include "SpectatorBeaconClient.h"
 
+ASpectatorBeaconClient::ASpectatorBeaconClient(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->RequestType = ESpectatorClientRequestType::NonePending;
+    this->bPendingReservationSent = false;
+    this->bCancelReservation = false;
+}
+
 void ASpectatorBeaconClient::ServerReservationRequest_Implementation(const FString& SessionId, const FSpectatorReservation& Reservation) {
 }
 bool ASpectatorBeaconClient::ServerReservationRequest_Validate(const FString& SessionId, const FSpectatorReservation& Reservation) {
@@ -24,9 +30,4 @@ void ASpectatorBeaconClient::ClientReservationResponse_Implementation(TEnumAsByt
 void ASpectatorBeaconClient::ClientCancelReservationResponse_Implementation(TEnumAsByte<ESpectatorReservationResult::Type> ReservationResponse) {
 }
 
-ASpectatorBeaconClient::ASpectatorBeaconClient() {
-    this->RequestType = ESpectatorClientRequestType::NonePending;
-    this->bPendingReservationSent = false;
-    this->bCancelReservation = false;
-}
 

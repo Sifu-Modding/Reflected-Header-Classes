@@ -1,7 +1,10 @@
 #include "ReplayTimelineController.h"
 #include "ReplayCutManagement.h"
 
-class UReplayKey;
+UReplayTimelineController::UReplayTimelineController() {
+    this->m_CutManagement = CreateDefaultSubobject<UReplayCutManagement>(TEXT("CutManagement"));
+    this->m_Model = NULL;
+}
 
 void UReplayTimelineController::BPF_SaveKeysWithCallback(const FSCDynamicDelegate& _onModelSaved) {
 }
@@ -29,8 +32,4 @@ UReplayKey* UReplayTimelineController::BPF_GetCurrentKeyOfType(EReplayKeyTypeFla
     return NULL;
 }
 
-UReplayTimelineController::UReplayTimelineController() {
-    this->m_CutManagement = CreateDefaultSubobject<UReplayCutManagement>(TEXT("CutManagement"));
-    this->m_Model = NULL;
-}
 

@@ -4,3 +4,4 @@ UAkAssetDataSwitchContainer::UAkAssetDataSwitchContainer() {
     this->DefaultGroupValue = NULL;
 }
 
+

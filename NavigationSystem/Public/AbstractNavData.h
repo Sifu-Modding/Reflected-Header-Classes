@@ -7,6 +7,7 @@ UCLASS(Blueprintable)
 class NAVIGATIONSYSTEM_API AAbstractNavData : public ANavigationData {
     GENERATED_BODY()
 public:
-    AAbstractNavData();
+    AAbstractNavData(const FObjectInitializer& ObjectInitializer);
+
 };
 

@@ -8,5 +8,6 @@ class GEOMETRYCACHE_API UGeometryCacheCodecV1 : public UGeometryCacheCodecBase {
     GENERATED_BODY()
 public:
     UGeometryCacheCodecV1();
+
 };
 

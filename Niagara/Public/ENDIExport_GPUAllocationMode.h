@@ -6,6 +6,5 @@ UENUM(BlueprintType)
 enum class ENDIExport_GPUAllocationMode : uint8 {
     FixedSize,
     PerParticle,
-    ENDIExport_MAX UMETA(Hidden),
 };
 

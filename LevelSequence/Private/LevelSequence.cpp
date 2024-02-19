@@ -1,6 +1,12 @@
 #include "LevelSequence.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=MovieScene -ObjectName=EMovieSceneCompletionMode -FallbackName=EMovieSceneCompletionMode
 
-class UObject;
+ULevelSequence::ULevelSequence() {
+    this->DefaultCompletionMode = EMovieSceneCompletionMode::RestoreState;
+    this->bParentContextsAreSignificant = true;
+    this->MovieScene = NULL;
+    this->DirectorClass = NULL;
+}
 
 void ULevelSequence::RemoveMetaDataByClass(UClass* InClass) {
 }
@@ -17,8 +23,4 @@ UObject* ULevelSequence::CopyMetaData(UObject* InMetaData) {
     return NULL;
 }
 
-ULevelSequence::ULevelSequence() {
-    this->MovieScene = NULL;
-    this->DirectorClass = NULL;
-}
 

@@ -4,3 +4,4 @@ ULevelCapture::ULevelCapture() {
     this->bAutoStartCapture = true;
 }
 
+

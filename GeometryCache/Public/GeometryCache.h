@@ -26,7 +26,8 @@ protected:
     
 public:
     UGeometryCache();
-    
+
+
     // Fix for true pure virtual functions not being implemented
 };
 

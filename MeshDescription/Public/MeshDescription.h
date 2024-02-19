@@ -8,5 +8,6 @@ class MESHDESCRIPTION_API UDEPRECATED_MeshDescription : public UObject {
     GENERATED_BODY()
 public:
     UDEPRECATED_MeshDescription();
+
 };
 

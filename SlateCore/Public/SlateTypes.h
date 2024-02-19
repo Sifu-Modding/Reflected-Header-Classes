@@ -8,5 +8,6 @@ class USlateTypes : public UObject {
     GENERATED_BODY()
 public:
     USlateTypes();
+
 };
 

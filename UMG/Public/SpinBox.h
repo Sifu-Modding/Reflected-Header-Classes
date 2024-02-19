@@ -103,6 +103,7 @@ protected:
     
 public:
     USpinBox();
+
     UFUNCTION(BlueprintCallable)
     void SetValue(float NewValue);
     

@@ -70,5 +70,6 @@ public:
     FVector2D ParameterSigns;
     
     UPlanePositionGizmo();
+
 };
 

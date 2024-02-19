@@ -29,6 +29,7 @@ private:
     
 public:
     UARPlaneGeometry();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UARPlaneGeometry* GetSubsumedBy() const;
     

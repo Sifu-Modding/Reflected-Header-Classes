@@ -5,3 +5,4 @@ UGizmoAxisScaleParameterSource::UGizmoAxisScaleParameterSource() {
     this->Parameter = 0.00f;
 }
 
+

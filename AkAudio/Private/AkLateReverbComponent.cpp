@@ -1,6 +1,6 @@
 #include "AkLateReverbComponent.h"
 
-UAkLateReverbComponent::UAkLateReverbComponent() {
+UAkLateReverbComponent::UAkLateReverbComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->bEnable = true;
     this->AuxBus = NULL;
     this->SendLevel = 1.00f;
@@ -8,4 +8,5 @@ UAkLateReverbComponent::UAkLateReverbComponent() {
     this->Priority = 1.00f;
     this->NextLowerPriorityComponent = NULL;
 }
+
 

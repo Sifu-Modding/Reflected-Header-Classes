@@ -8,5 +8,6 @@ class UAkXboxOnePlatformInfo : public UAkPlatformInfo {
     GENERATED_BODY()
 public:
     UAkXboxOnePlatformInfo();
+
 };
 

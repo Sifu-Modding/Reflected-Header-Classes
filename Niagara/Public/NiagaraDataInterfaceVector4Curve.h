@@ -21,5 +21,6 @@ public:
     FRichCurve WCurve;
     
     UNiagaraDataInterfaceVector4Curve();
+
 };
 

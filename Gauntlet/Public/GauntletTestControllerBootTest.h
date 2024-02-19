@@ -8,5 +8,6 @@ class GAUNTLET_API UGauntletTestControllerBootTest : public UGauntletTestControl
     GENERATED_BODY()
 public:
     UGauntletTestControllerBootTest();
+
 };
 

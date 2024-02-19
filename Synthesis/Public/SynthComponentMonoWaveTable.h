@@ -24,7 +24,8 @@ protected:
     UMonoWaveTableSynthPreset* CurrentPreset;
     
 public:
-    USynthComponentMonoWaveTable();
+    USynthComponentMonoWaveTable(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetWaveTablePosition(float InPosition);
     

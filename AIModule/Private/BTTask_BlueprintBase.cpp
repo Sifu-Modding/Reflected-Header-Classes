@@ -1,5 +1,11 @@
 #include "BTTask_BlueprintBase.h"
 
+UBTTask_BlueprintBase::UBTTask_BlueprintBase() {
+    this->AIOwner = NULL;
+    this->ActorOwner = NULL;
+    this->bShowPropertyDetails = true;
+}
+
 void UBTTask_BlueprintBase::SetFinishOnMessageWithId(FName MessageName, int32 RequestID) {
 }
 
@@ -26,9 +32,4 @@ void UBTTask_BlueprintBase::FinishExecute(bool bSuccess) {
 void UBTTask_BlueprintBase::FinishAbort() {
 }
 
-UBTTask_BlueprintBase::UBTTask_BlueprintBase() {
-    this->AIOwner = NULL;
-    this->ActorOwner = NULL;
-    this->bShowPropertyDetails = true;
-}
 

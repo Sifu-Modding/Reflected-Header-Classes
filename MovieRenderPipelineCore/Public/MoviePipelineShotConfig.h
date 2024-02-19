@@ -8,5 +8,6 @@ class MOVIERENDERPIPELINECORE_API UMoviePipelineShotConfig : public UMoviePipeli
     GENERATED_BODY()
 public:
     UMoviePipelineShotConfig();
+
 };
 

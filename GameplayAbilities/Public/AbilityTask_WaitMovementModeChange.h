@@ -17,6 +17,7 @@ public:
     FMovementModeChangedDelegate OnChange;
     
     UAbilityTask_WaitMovementModeChange();
+
     UFUNCTION(BlueprintCallable)
     void OnMovementModeChange(ACharacter* Character, TEnumAsByte<EMovementMode> PrevMovementMode, uint8 PreviousCustomMode);
     

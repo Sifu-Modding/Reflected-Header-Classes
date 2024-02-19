@@ -4,7 +4,7 @@
 
 UENUM(BlueprintType)
 enum class EInputCaptureRequestType : uint8 {
-    Begin = 0x1,
+    Begin = 1,
     Ignore,
 };
 

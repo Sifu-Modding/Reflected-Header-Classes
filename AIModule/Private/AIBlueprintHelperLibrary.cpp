@@ -1,16 +1,8 @@
 #include "AIBlueprintHelperLibrary.h"
 #include "Templates/SubclassOf.h"
 
-class AAIController;
-class AActor;
-class AController;
-class APawn;
-class UAIAsyncTaskBlueprintProxy;
-class UAnimInstance;
-class UBehaviorTree;
-class UBlackboardComponent;
-class UNavigationPath;
-class UObject;
+UAIBlueprintHelperLibrary::UAIBlueprintHelperLibrary() {
+}
 
 void UAIBlueprintHelperLibrary::UnlockAIResourcesWithAnimation(UAnimInstance* AnimInstance, bool bUnlockMovement, bool UnlockAILogic) {
 }
@@ -71,6 +63,4 @@ UAIAsyncTaskBlueprintProxy* UAIBlueprintHelperLibrary::CreateMoveToProxyObject(U
     return NULL;
 }
 
-UAIBlueprintHelperLibrary::UAIBlueprintHelperLibrary() {
-}
 

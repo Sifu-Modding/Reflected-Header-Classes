@@ -12,5 +12,6 @@ public:
     FCheckBoxStyle CheckBoxStyle;
     
     UCheckBoxWidgetStyle();
+
 };
 

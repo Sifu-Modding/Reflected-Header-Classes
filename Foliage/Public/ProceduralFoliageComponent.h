@@ -25,6 +25,7 @@ private:
     FGuid ProceduralGuid;
     
 public:
-    UProceduralFoliageComponent();
+    UProceduralFoliageComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

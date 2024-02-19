@@ -12,5 +12,6 @@ public:
     TArray<FModularSynthPresetBankEntry> Presets;
     
     UModularSynthPresetBank();
+
 };
 

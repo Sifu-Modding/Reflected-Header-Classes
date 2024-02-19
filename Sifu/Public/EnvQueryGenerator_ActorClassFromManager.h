@@ -13,10 +13,10 @@ UCLASS(Blueprintable, EditInlineNew)
 class SIFU_API UEnvQueryGenerator_ActorClassFromManager : public UEnvQueryGenerator {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     FAIDataProviderBoolValue m_GenerateOnlyActorsInRadius;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     FAIDataProviderFloatValue m_SearchRadius;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -26,5 +26,6 @@ public:
     TSubclassOf<AActor> m_ActorClass;
     
     UEnvQueryGenerator_ActorClassFromManager();
+
 };
 

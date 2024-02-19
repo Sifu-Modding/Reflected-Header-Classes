@@ -8,5 +8,6 @@ class URecastFilter_UseDefaultArea : public UNavigationQueryFilter {
     GENERATED_BODY()
 public:
     URecastFilter_UseDefaultArea();
+
 };
 

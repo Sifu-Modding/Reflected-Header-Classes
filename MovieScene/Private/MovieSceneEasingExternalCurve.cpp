@@ -4,3 +4,4 @@ UMovieSceneEasingExternalCurve::UMovieSceneEasingExternalCurve() {
     this->Curve = NULL;
 }
 
+

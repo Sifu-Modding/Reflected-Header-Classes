@@ -7,8 +7,8 @@ enum class ERigElementType : uint8 {
     None,
     Bone,
     Space,
-    Control = 0x4,
-    Curve = 0x8,
-    All = 0xF,
+    Control = 4,
+    Curve = 8,
+    All = 15,
 };
 

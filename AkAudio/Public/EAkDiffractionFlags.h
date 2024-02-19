@@ -6,6 +6,6 @@ UENUM(BlueprintType)
 enum class EAkDiffractionFlags : uint8 {
     UseBuiltInParam,
     UseObstruction,
-    CalcEmitterVirtualPosition = 0x3,
+    CalcEmitterVirtualPosition = 3,
 };
 

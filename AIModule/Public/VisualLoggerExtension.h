@@ -8,5 +8,6 @@ class AIMODULE_API UVisualLoggerExtension : public UObject {
     GENERATED_BODY()
 public:
     UVisualLoggerExtension();
+
 };
 

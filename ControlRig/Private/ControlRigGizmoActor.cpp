@@ -2,6 +2,18 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=SceneComponent -FallbackName=SceneComponent
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=StaticMeshComponent -FallbackName=StaticMeshComponent
 
+AControlRigGizmoActor::AControlRigGizmoActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("SceneComponent0"));
+    this->ActorRootComponent = (USceneComponent*)RootComponent;
+    this->StaticMeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("StaticMeshComponent0"));
+    this->ControlRigIndex = 4294967295;
+    this->bEnabled = true;
+    this->bSelected = false;
+    this->bSelectable = true;
+    this->bHovered = false;
+    this->StaticMeshComponent->SetupAttachment(RootComponent);
+}
+
 void AControlRigGizmoActor::SetSelected(bool bInSelected) {
 }
 
@@ -38,13 +50,4 @@ FTransform AControlRigGizmoActor::GetGlobalTransform() const {
     return FTransform{};
 }
 
-AControlRigGizmoActor::AControlRigGizmoActor() {
-    this->ActorRootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("SceneComponent0"));
-    this->StaticMeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("StaticMeshComponent0"));
-    this->ControlRigIndex = 4294967295;
-    this->bEnabled = true;
-    this->bSelected = false;
-    this->bSelectable = true;
-    this->bHovered = false;
-}
 

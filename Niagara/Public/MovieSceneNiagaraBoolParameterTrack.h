@@ -9,7 +9,8 @@ class UMovieSceneNiagaraBoolParameterTrack : public UMovieSceneNiagaraParameterT
     GENERATED_BODY()
 public:
     UMovieSceneNiagaraBoolParameterTrack();
-    
+
+
     // Fix for true pure virtual functions not being implemented
 };
 

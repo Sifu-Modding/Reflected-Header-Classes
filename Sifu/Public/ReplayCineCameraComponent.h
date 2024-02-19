@@ -16,7 +16,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UCurveFloat* m_ZoomSpeedCurve;
     
-    UReplayCineCameraComponent();
+    UReplayCineCameraComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FReplayKeyDataCameraSettings BPF_GetCameraSettings() const;
     

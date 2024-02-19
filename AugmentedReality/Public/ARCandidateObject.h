@@ -20,6 +20,7 @@ private:
     
 public:
     UARCandidateObject();
+
     UFUNCTION(BlueprintCallable)
     void SetFriendlyName(const FString& NewName);
     

@@ -1,6 +1,8 @@
 #include "RigVM.h"
 
-class UScriptStruct;
+URigVM::URigVM() {
+    this->DeferredVMToCopy = NULL;
+}
 
 void URigVM::SetParameterValueVector2D(const FName& InParameterName, const FVector2D& InValue, int32 InArrayIndex) {
 }
@@ -81,7 +83,4 @@ int32 URigVM::AddRigVMFunction(UScriptStruct* InRigVMStruct, const FName& InMeth
     return 0;
 }
 
-URigVM::URigVM() {
-    this->DeferredVMToCopy = NULL;
-}
 

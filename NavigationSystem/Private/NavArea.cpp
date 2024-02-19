@@ -21,3 +21,4 @@ UNavArea::UNavArea() {
     this->bSupportsAgent15 = true;
 }
 
+

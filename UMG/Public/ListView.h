@@ -63,6 +63,7 @@ private:
     
 public:
     UListView();
+
     UFUNCTION(BlueprintCallable)
     void SetSelectionMode(TEnumAsByte<ESelectionMode::Type> NewSelectionMode);
     

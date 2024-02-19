@@ -1,11 +1,19 @@
 #include "AbilityTask_ApplyRootMotionMoveToActorForce.h"
 #include "Net/UnrealNetwork.h"
 
-class AActor;
-class UAbilityTask_ApplyRootMotionMoveToActorForce;
-class UCurveFloat;
-class UCurveVector;
-class UGameplayAbility;
+UAbilityTask_ApplyRootMotionMoveToActorForce::UAbilityTask_ApplyRootMotionMoveToActorForce() {
+    this->TargetActor = NULL;
+    this->OffsetAlignment = ERootMotionMoveToActorTargetOffsetType::AlignFromTargetToSource;
+    this->Duration = 0.00f;
+    this->bDisableDestinationReachedInterrupt = false;
+    this->bSetNewMovementMode = false;
+    this->NewMovementMode = MOVE_Walking;
+    this->bRestrictSpeedToExpected = false;
+    this->PathOffsetCurve = NULL;
+    this->TimeMappingCurve = NULL;
+    this->TargetLerpSpeedHorizontalCurve = NULL;
+    this->TargetLerpSpeedVerticalCurve = NULL;
+}
 
 void UAbilityTask_ApplyRootMotionMoveToActorForce::OnTargetActorSwapped(AActor* OriginalTarget, AActor* NewTarget) {
 }
@@ -40,17 +48,4 @@ void UAbilityTask_ApplyRootMotionMoveToActorForce::GetLifetimeReplicatedProps(TA
     DOREPLIFETIME(UAbilityTask_ApplyRootMotionMoveToActorForce, TargetLerpSpeedVerticalCurve);
 }
 
-UAbilityTask_ApplyRootMotionMoveToActorForce::UAbilityTask_ApplyRootMotionMoveToActorForce() {
-    this->TargetActor = NULL;
-    this->OffsetAlignment = ERootMotionMoveToActorTargetOffsetType::AlignFromTargetToSource;
-    this->Duration = 0.00f;
-    this->bDisableDestinationReachedInterrupt = false;
-    this->bSetNewMovementMode = false;
-    this->NewMovementMode = MOVE_Walking;
-    this->bRestrictSpeedToExpected = false;
-    this->PathOffsetCurve = NULL;
-    this->TimeMappingCurve = NULL;
-    this->TargetLerpSpeedHorizontalCurve = NULL;
-    this->TargetLerpSpeedVerticalCurve = NULL;
-}
 

@@ -9,7 +9,8 @@ class INTERACTIVETOOLSFRAMEWORK_API UGizmoObjectModifyStateTarget : public UObje
     GENERATED_BODY()
 public:
     UGizmoObjectModifyStateTarget();
-    
+
+
     // Fix for true pure virtual functions not being implemented
     UFUNCTION()
     void EndUpdate() override PURE_VIRTUAL(EndUpdate,);

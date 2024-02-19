@@ -11,6 +11,7 @@ class UAnimationBudgetBlueprintLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UAnimationBudgetBlueprintLibrary();
+
 private:
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void SetAnimationBudgetParameters(UObject* WorldContextObject, const FAnimationBudgetAllocatorParameters& InParameters);

@@ -36,6 +36,7 @@ public:
     FSlateBrush LowQualityFallbackBrush;
     
     UBackgroundBlur();
+
     UFUNCTION(BlueprintCallable)
     void SetVerticalAlignment(TEnumAsByte<EVerticalAlignment> InVerticalAlignment);
     

@@ -1,12 +1,11 @@
 #include "VehicleAnimInstance.h"
 
-class AWheeledVehicle;
+UVehicleAnimInstance::UVehicleAnimInstance() {
+    this->WheeledVehicleMovementComponent = NULL;
+}
 
 AWheeledVehicle* UVehicleAnimInstance::GetVehicle() {
     return NULL;
 }
 
-UVehicleAnimInstance::UVehicleAnimInstance() {
-    this->WheeledVehicleMovementComponent = NULL;
-}
 

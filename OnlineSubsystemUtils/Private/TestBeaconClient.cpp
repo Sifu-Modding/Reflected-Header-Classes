@@ -1,5 +1,8 @@
 #include "TestBeaconClient.h"
 
+ATestBeaconClient::ATestBeaconClient(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+}
+
 void ATestBeaconClient::ServerPong_Implementation() {
 }
 bool ATestBeaconClient::ServerPong_Validate() {
@@ -9,6 +12,4 @@ bool ATestBeaconClient::ServerPong_Validate() {
 void ATestBeaconClient::ClientPing_Implementation() {
 }
 
-ATestBeaconClient::ATestBeaconClient() {
-}
 

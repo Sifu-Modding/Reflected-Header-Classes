@@ -7,7 +7,6 @@ namespace EBodyCollisionResponse {
     enum Type {
         BodyCollision_Enabled,
         BodyCollision_Disabled,
-        BodyCollision_MAX UMETA(Hidden),
     };
 }
 

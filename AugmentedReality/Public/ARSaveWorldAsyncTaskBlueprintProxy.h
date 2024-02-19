@@ -18,6 +18,7 @@ public:
     FARSaveWorldPin OnFailed;
     
     UARSaveWorldAsyncTaskBlueprintProxy();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static UARSaveWorldAsyncTaskBlueprintProxy* ARSaveWorld(UObject* WorldContextObject);
     

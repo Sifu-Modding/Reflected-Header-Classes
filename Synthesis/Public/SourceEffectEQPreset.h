@@ -12,6 +12,7 @@ public:
     FSourceEffectEQSettings Settings;
     
     USourceEffectEQPreset();
+
     UFUNCTION(BlueprintCallable)
     void SetSettings(const FSourceEffectEQSettings& InSettings);
     

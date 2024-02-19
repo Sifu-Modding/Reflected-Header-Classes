@@ -16,6 +16,7 @@ class SIFU_API USCTools : public USCCoreTools {
     GENERATED_BODY()
 public:
     USCTools();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static EQuadrantTypes GetAttackQuadrant(EQuadrantTypes _eQuadrant, bool _bIsMirror);
     
@@ -48,6 +49,9 @@ public:
     
     UFUNCTION(BlueprintCallable, meta=(Latent, LatentInfo="LatentInfo", WorldContext="WorldContextObject"))
     static void BPF_Fade(UObject* WorldContextObject, const float _fDuration, const bool _bToBlack, FLatentActionInfo LatentInfo);
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    static FText BPF_AsCultureInvariant(FText _textToChange);
     
 };
 

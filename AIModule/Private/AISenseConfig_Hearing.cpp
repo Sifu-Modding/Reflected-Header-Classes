@@ -8,3 +8,4 @@ UAISenseConfig_Hearing::UAISenseConfig_Hearing() {
     this->bUseLoSHearing = false;
 }
 
+

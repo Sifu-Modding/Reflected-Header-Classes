@@ -1,12 +1,28 @@
 #include "AkComponent.h"
 
-class AActor;
-class UAkAudioEvent;
-class UAkAuxBus;
-class UAkComponent;
-class UAkRtpc;
-class UAkSwitchValue;
-class UAkTrigger;
+UAkComponent::UAkComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bAutoActivate = true;
+    this->bUseSpatialAudio = false;
+    this->OcclusionCollisionChannel = ECC_GameTraceChannel17;
+    this->EnableSpotReflectors = false;
+    this->EarlyReflectionAuxBus = NULL;
+    this->EarlyReflectionOrder = 0;
+    this->EarlyReflectionBusSendGain = 1.00f;
+    this->EarlyReflectionMaxPathLength = 0.00f;
+    this->roomReverbAuxBusGain = 0.00f;
+    this->diffractionMaxEdges = 0;
+    this->diffractionMaxPaths = 0;
+    this->diffractionMaxPathLength = 0.00f;
+    this->DrawFirstOrderReflections = false;
+    this->DrawSecondOrderReflections = false;
+    this->DrawHigherOrderReflections = false;
+    this->DrawDiffraction = false;
+    this->StopWhenOwnerDestroyed = true;
+    this->AttenuationScalingFactor = 1.00f;
+    this->OcclusionRefreshInterval = -1.00f;
+    this->bUseReverbVolumes = true;
+    this->bUpdateReverbVolumesLocation = true;
+}
 
 void UAkComponent::UseReverbVolumes(bool inUseReverbVolumes) {
 }
@@ -72,26 +88,4 @@ float UAkComponent::GetAttenuationRadius() const {
     return 0.0f;
 }
 
-UAkComponent::UAkComponent() {
-    this->bUseSpatialAudio = false;
-    this->OcclusionCollisionChannel = ECC_GameTraceChannel17;
-    this->EnableSpotReflectors = false;
-    this->EarlyReflectionAuxBus = NULL;
-    this->EarlyReflectionOrder = 0;
-    this->EarlyReflectionBusSendGain = 1.00f;
-    this->EarlyReflectionMaxPathLength = 0.00f;
-    this->roomReverbAuxBusGain = 0.00f;
-    this->diffractionMaxEdges = 0;
-    this->diffractionMaxPaths = 0;
-    this->diffractionMaxPathLength = 0.00f;
-    this->DrawFirstOrderReflections = false;
-    this->DrawSecondOrderReflections = false;
-    this->DrawHigherOrderReflections = false;
-    this->DrawDiffraction = false;
-    this->StopWhenOwnerDestroyed = true;
-    this->AttenuationScalingFactor = 1.00f;
-    this->OcclusionRefreshInterval = -1.00f;
-    this->bUseReverbVolumes = true;
-    this->bUpdateReverbVolumesLocation = true;
-}
 

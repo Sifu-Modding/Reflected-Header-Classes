@@ -1,5 +1,8 @@
 #include "SubmixEffectFilterPreset.h"
 
+USubmixEffectFilterPreset::USubmixEffectFilterPreset() {
+}
+
 void USubmixEffectFilterPreset::SetSettings(const FSubmixEffectFilterSettings& InSettings) {
 }
 
@@ -21,6 +24,4 @@ void USubmixEffectFilterPreset::SetFilterCutoffFrequency(float InFrequency) {
 void USubmixEffectFilterPreset::SetFilterAlgorithm(ESubmixFilterAlgorithm InAlgorithm) {
 }
 
-USubmixEffectFilterPreset::USubmixEffectFilterPreset() {
-}
 

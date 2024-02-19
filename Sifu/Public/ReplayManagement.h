@@ -22,6 +22,7 @@ protected:
     
 public:
     UReplayManagement();
+
     UFUNCTION(BlueprintCallable)
     void OnStreamingCompleteQuitReplayManagement();
     

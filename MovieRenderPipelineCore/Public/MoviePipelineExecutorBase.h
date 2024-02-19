@@ -43,6 +43,7 @@ protected:
     
 public:
     UMoviePipelineExecutorBase();
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void SetStatusProgress(const float InProgress);
     

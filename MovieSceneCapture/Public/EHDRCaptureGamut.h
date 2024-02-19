@@ -10,6 +10,5 @@ enum EHDRCaptureGamut {
     HCGM_ACES,
     HCGM_ACEScg,
     HCGM_Linear,
-    HCGM_MAX UMETA(Hidden),
 };
 

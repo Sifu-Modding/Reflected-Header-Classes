@@ -8,5 +8,6 @@ class NAVIGATIONSYSTEM_API UNavArea_LowHeight : public UNavArea {
     GENERATED_BODY()
 public:
     UNavArea_LowHeight();
+
 };
 

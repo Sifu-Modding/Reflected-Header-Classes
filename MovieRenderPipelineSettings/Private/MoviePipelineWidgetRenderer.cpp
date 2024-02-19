@@ -4,3 +4,4 @@ UMoviePipelineWidgetRenderer::UMoviePipelineWidgetRenderer() {
     this->RenderTarget = NULL;
 }
 
+

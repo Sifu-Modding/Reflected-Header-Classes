@@ -1,5 +1,6 @@
 #include "FieldNodeFloat.h"
 
-UFieldNodeFloat::UFieldNodeFloat() {
+UFieldNodeFloat::UFieldNodeFloat(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

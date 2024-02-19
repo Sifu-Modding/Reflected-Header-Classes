@@ -61,7 +61,8 @@ private:
     UMagicLeapARPinSaveGame* PinData;
     
 public:
-    UMagicLeapARPinComponent();
+    UMagicLeapARPinComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void UnPin();
     

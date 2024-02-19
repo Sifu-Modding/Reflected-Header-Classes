@@ -12,7 +12,8 @@ UCLASS(Abstract, Blueprintable)
 class LANDSCAPE_API ALandscapeBlueprintBrushBase : public AActor {
     GENERATED_BODY()
 public:
-    ALandscapeBlueprintBrushBase();
+    ALandscapeBlueprintBrushBase(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void RequestLandscapeUpdate();
     

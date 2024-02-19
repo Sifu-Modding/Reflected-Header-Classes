@@ -7,6 +7,7 @@ UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnable
 class NAVIGATIONSYSTEM_API UNavLinkRenderingComponent : public UPrimitiveComponent {
     GENERATED_BODY()
 public:
-    UNavLinkRenderingComponent();
+    UNavLinkRenderingComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

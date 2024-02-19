@@ -9,6 +9,7 @@ class AUDIOCAPTURE_API UAudioCapture : public UAudioGenerator {
     GENERATED_BODY()
 public:
     UAudioCapture();
+
     UFUNCTION(BlueprintCallable)
     void StopCapturingAudio();
     

@@ -25,7 +25,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 ARWorldBytesDelivered;
     
-    AARSharedWorldGameState();
+    AARSharedWorldGameState(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void K2_OnARWorldMapIsReady();
     

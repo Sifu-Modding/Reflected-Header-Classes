@@ -4,3 +4,4 @@ UNiagaraDataInterfaceLandscape::UNiagaraDataInterfaceLandscape() {
     this->SourceLandscape = NULL;
 }
 
+

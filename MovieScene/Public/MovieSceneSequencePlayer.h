@@ -81,8 +81,9 @@ protected:
     
 public:
     UMovieSceneSequencePlayer();
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     void StopAtCurrentTime();
     

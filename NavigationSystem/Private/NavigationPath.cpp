@@ -1,5 +1,9 @@
 #include "NavigationPath.h"
 
+UNavigationPath::UNavigationPath() {
+    this->RecalculateOnInvalidation = ENavigationOptionFlag::Default;
+}
+
 bool UNavigationPath::IsValid() const {
     return false;
 }
@@ -30,7 +34,4 @@ void UNavigationPath::EnableRecalculationOnInvalidation(TEnumAsByte<ENavigationO
 void UNavigationPath::EnableDebugDrawing(bool bShouldDrawDebugData, FLinearColor PathColor) {
 }
 
-UNavigationPath::UNavigationPath() {
-    this->RecalculateOnInvalidation = ENavigationOptionFlag::Default;
-}
 

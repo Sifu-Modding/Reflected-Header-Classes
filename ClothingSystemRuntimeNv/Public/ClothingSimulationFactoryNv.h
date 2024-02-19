@@ -8,5 +8,6 @@ class CLOTHINGSYSTEMRUNTIMENV_API UClothingSimulationFactoryNv : public UClothin
     GENERATED_BODY()
 public:
     UClothingSimulationFactoryNv();
+
 };
 

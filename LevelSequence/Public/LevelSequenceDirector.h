@@ -17,6 +17,7 @@ public:
     ULevelSequence* LevelSequence;
     
     ULevelSequenceDirector();
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnCreated();
     

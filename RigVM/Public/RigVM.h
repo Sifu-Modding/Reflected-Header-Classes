@@ -49,6 +49,7 @@ private:
     
 public:
     URigVM();
+
     UFUNCTION(BlueprintCallable)
     void SetParameterValueVector2D(const FName& InParameterName, const FVector2D& InValue, int32 InArrayIndex);
     

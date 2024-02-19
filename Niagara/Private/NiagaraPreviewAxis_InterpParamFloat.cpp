@@ -5,3 +5,4 @@ UNiagaraPreviewAxis_InterpParamFloat::UNiagaraPreviewAxis_InterpParamFloat() {
     this->Max = 0.00f;
 }
 
+

@@ -6,6 +6,5 @@ UENUM(BlueprintType)
 enum MediaTextureOutputFormat {
     MTOF_Default,
     MTOF_SRGB_LINOUT,
-    MTOF_MAX UMETA(Hidden),
 };
 

@@ -1,6 +1,8 @@
 #include "OnlineBeaconHost.h"
 
-AOnlineBeaconHost::AOnlineBeaconHost() {
+AOnlineBeaconHost::AOnlineBeaconHost(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->NetDriverName = TEXT("BeaconDriverHost");
     this->ListenPort = 15000;
 }
+
 

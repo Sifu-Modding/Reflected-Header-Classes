@@ -12,6 +12,7 @@ public:
     FSourceEffectMidSideSpreaderSettings Settings;
     
     USourceEffectMidSideSpreaderPreset();
+
     UFUNCTION(BlueprintCallable)
     void SetSettings(const FSourceEffectMidSideSpreaderSettings& InSettings);
     

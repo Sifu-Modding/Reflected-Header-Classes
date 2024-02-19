@@ -6,3 +6,4 @@ UBodySetupCore::UBodySetupCore() {
     this->CollisionReponse = EBodyCollisionResponse::BodyCollision_Enabled;
 }
 
+

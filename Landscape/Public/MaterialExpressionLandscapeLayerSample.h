@@ -18,5 +18,6 @@ public:
     FGuid ExpressionGUID;
     
     UMaterialExpressionLandscapeLayerSample();
+
 };
 

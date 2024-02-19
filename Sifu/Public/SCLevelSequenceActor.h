@@ -14,7 +14,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FSequenceBinding> m_SequenceBindings;
     
-    ASCLevelSequenceActor();
+    ASCLevelSequenceActor(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void BPF_Play();
     

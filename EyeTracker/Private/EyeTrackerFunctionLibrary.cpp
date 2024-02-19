@@ -1,6 +1,7 @@
 #include "EyeTrackerFunctionLibrary.h"
 
-class APlayerController;
+UEyeTrackerFunctionLibrary::UEyeTrackerFunctionLibrary() {
+}
 
 void UEyeTrackerFunctionLibrary::SetEyeTrackedPlayer(APlayerController* PlayerController) {
 }
@@ -21,6 +22,4 @@ bool UEyeTrackerFunctionLibrary::GetGazeData(FEyeTrackerGazeData& OutGazeData) {
     return false;
 }
 
-UEyeTrackerFunctionLibrary::UEyeTrackerFunctionLibrary() {
-}
 

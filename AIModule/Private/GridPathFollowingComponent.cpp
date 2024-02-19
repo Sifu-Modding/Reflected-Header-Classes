@@ -1,6 +1,7 @@
 #include "GridPathFollowingComponent.h"
 
-UGridPathFollowingComponent::UGridPathFollowingComponent() {
+UGridPathFollowingComponent::UGridPathFollowingComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->GridManager = NULL;
 }
+
 

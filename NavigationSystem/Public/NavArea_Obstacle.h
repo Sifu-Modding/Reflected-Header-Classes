@@ -8,5 +8,6 @@ class NAVIGATIONSYSTEM_API UNavArea_Obstacle : public UNavArea {
     GENERATED_BODY()
 public:
     UNavArea_Obstacle();
+
 };
 

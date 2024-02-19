@@ -35,7 +35,8 @@ private:
     TArray<UBodySetup*> BodySetups;
     
 public:
-    UMRMeshComponent();
+    UMRMeshComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetWireframeMaterial(UMaterialInterface* InMaterial);
     
@@ -66,7 +67,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void Clear();
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

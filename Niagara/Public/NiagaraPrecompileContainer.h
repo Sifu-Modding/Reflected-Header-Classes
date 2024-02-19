@@ -17,5 +17,6 @@ public:
     UNiagaraSystem* System;
     
     UNiagaraPrecompileContainer();
+
 };
 

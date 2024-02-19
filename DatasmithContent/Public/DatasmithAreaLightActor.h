@@ -63,6 +63,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float SpotlightOuterAngle;
     
-    ADatasmithAreaLightActor();
+    ADatasmithAreaLightActor(const FObjectInitializer& ObjectInitializer);
+
 };
 

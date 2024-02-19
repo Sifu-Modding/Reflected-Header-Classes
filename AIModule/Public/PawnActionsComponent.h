@@ -29,7 +29,8 @@ protected:
     UPawnAction* CurrentAction;
     
 public:
-    UPawnActionsComponent();
+    UPawnActionsComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     bool K2_PushAction(UPawnAction* NewAction, TEnumAsByte<EAIRequestPriority::Type> Priority, UObject* Instigator);
     

@@ -6,7 +6,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=SCCore -ObjectName=SCCollisionResponseBuilder -FallbackName=SCCollisionResponseBuilder
 #include "WCollisionSettings.generated.h"
 
-UCLASS(Blueprintable, Config=Engine, DefaultConfig, Config=Game)
+UCLASS(Blueprintable, DefaultConfig, Config=Game)
 class SIFU_API UWCollisionSettings : public UDeveloperSettings {
     GENERATED_BODY()
 public:
@@ -49,5 +49,6 @@ protected:
     
 public:
     UWCollisionSettings();
+
 };
 

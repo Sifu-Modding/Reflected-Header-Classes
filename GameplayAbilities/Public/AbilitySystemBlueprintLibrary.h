@@ -35,6 +35,7 @@ class GAMEPLAYABILITIES_API UAbilitySystemBlueprintLibrary : public UBlueprintFu
     GENERATED_BODY()
 public:
     UAbilitySystemBlueprintLibrary();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool TargetDataHasOrigin(const FGameplayAbilityTargetDataHandle& TargetData, int32 Index);
     

@@ -1,6 +1,9 @@
 #include "ARQRCodeComponent.h"
 #include "Net/UnrealNetwork.h"
 
+UARQRCodeComponent::UARQRCodeComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+}
+
 void UARQRCodeComponent::SetQRCodeComponentDebugMode(EQRCodeComponentDebugMode NewDebugMode) {
 }
 
@@ -18,6 +21,4 @@ void UARQRCodeComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& O
     DOREPLIFETIME(UARQRCodeComponent, ReplicatedPayload);
 }
 
-UARQRCodeComponent::UARQRCodeComponent() {
-}
 

@@ -1,9 +1,15 @@
 #include "ControlRigComponent.h"
 
-class UControlRig;
-class UControlRigComponent;
-class USkeletalMesh;
-class USkeletalMeshComponent;
+UControlRigComponent::UControlRigComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bAutoActivate = true;
+    this->ControlRigClass = NULL;
+    this->bResetTransformBeforeTick = true;
+    this->bResetInitialsBeforeSetup = true;
+    this->bUpdateRigOnTick = true;
+    this->bUpdateInEditor = true;
+    this->bDrawBones = true;
+    this->ControlRig = NULL;
+}
 
 void UControlRigComponent::Update(float DeltaTime) {
 }
@@ -151,13 +157,4 @@ void UControlRigComponent::AddMappedComponents(TArray<FControlRigComponentMapped
 void UControlRigComponent::AddMappedCompleteSkeletalMesh(USkeletalMeshComponent* SkeletalMeshComponent) {
 }
 
-UControlRigComponent::UControlRigComponent() {
-    this->ControlRigClass = NULL;
-    this->bResetTransformBeforeTick = true;
-    this->bResetInitialsBeforeSetup = true;
-    this->bUpdateRigOnTick = true;
-    this->bUpdateInEditor = true;
-    this->bDrawBones = true;
-    this->ControlRig = NULL;
-}
 

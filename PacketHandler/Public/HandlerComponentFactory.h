@@ -8,5 +8,6 @@ class PACKETHANDLER_API UHandlerComponentFactory : public UObject {
     GENERATED_BODY()
 public:
     UHandlerComponentFactory();
+
 };
 

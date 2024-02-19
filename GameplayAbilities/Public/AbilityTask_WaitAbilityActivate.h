@@ -18,6 +18,7 @@ public:
     FWaitAbilityActivateDelegate OnActivate;
     
     UAbilityTask_WaitAbilityActivate();
+
     UFUNCTION(BlueprintCallable)
     static UAbilityTask_WaitAbilityActivate* WaitForAbilityActivateWithTagRequirements(UGameplayAbility* OwningAbility, FGameplayTagRequirements TagRequirements, bool IncludeTriggeredAbilities, bool TriggerOnce);
     

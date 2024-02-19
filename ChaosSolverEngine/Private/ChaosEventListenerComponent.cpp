@@ -1,5 +1,6 @@
 #include "ChaosEventListenerComponent.h"
 
-UChaosEventListenerComponent::UChaosEventListenerComponent() {
+UChaosEventListenerComponent::UChaosEventListenerComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

@@ -10,7 +10,7 @@ class MOVIERENDERPIPELINECORE_API UMoviePipelineSetting : public UObject {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<UMoviePipeline> CachedPipeline;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -18,6 +18,7 @@ private:
     
 public:
     UMoviePipelineSetting();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     void BuildNewProcessCommandLine(UPARAM(Ref) FString& InOutUnrealURLParams, UPARAM(Ref) FString& InOutCommandLineArgs) const;
     

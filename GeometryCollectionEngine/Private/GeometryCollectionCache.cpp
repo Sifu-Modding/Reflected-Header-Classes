@@ -4,3 +4,4 @@ UGeometryCollectionCache::UGeometryCollectionCache() {
     this->SupportedCollection = NULL;
 }
 
+

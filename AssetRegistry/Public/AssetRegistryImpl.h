@@ -12,7 +12,8 @@ class UAssetRegistryImpl : public UObject, public IAssetRegistry {
     GENERATED_BODY()
 public:
     UAssetRegistryImpl();
-    
+
+
     // Fix for true pure virtual functions not being implemented
     UFUNCTION(BlueprintCallable)
     void WaitForCompletion() override PURE_VIRTUAL(WaitForCompletion,);

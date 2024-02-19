@@ -3,3 +3,4 @@
 UImageSequenceProtocol_BMP::UImageSequenceProtocol_BMP() {
 }
 
+

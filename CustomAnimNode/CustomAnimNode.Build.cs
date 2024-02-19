@@ -8,7 +8,6 @@ public class CustomAnimNode : ModuleRules {
         
         PublicDependencyModuleNames.AddRange(new string[] {
             "AnimGraphRuntime",
-            "AnimationCore",
             "Core",
             "CoreUObject",
             "Engine",

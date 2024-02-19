@@ -8,5 +8,6 @@ class UEnvQueryContext_Querier : public UEnvQueryContext {
     GENERATED_BODY()
 public:
     UEnvQueryContext_Querier();
+
 };
 

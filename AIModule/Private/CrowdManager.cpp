@@ -14,3 +14,4 @@ UCrowdManager::UCrowdManager() {
     this->bResolveCollisions = false;
 }
 
+

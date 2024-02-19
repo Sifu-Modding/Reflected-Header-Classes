@@ -7,6 +7,7 @@ UCLASS(Blueprintable, MinimalAPI, NotPlaceable)
 class AInstancedFoliageActor : public AActor {
     GENERATED_BODY()
 public:
-    AInstancedFoliageActor();
+    AInstancedFoliageActor(const FObjectInitializer& ObjectInitializer);
+
 };
 

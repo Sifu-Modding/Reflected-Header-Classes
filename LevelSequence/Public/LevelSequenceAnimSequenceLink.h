@@ -12,5 +12,6 @@ public:
     TArray<FLevelSequenceAnimSequenceLinkItem> AnimSequenceLinks;
     
     ULevelSequenceAnimSequenceLink();
+
 };
 

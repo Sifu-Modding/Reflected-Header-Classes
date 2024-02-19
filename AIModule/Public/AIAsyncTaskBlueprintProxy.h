@@ -17,6 +17,7 @@ public:
     FOAISimpleDelegate OnFail;
     
     UAIAsyncTaskBlueprintProxy();
+
     UFUNCTION(BlueprintCallable)
     void OnMoveCompleted(FAIRequestID RequestID, TEnumAsByte<EPathFollowingResult::Type> MovementResult);
     

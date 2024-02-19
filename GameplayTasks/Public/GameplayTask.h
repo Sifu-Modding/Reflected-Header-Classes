@@ -25,13 +25,14 @@ protected:
     
 public:
     UGameplayTask();
+
     UFUNCTION(BlueprintCallable)
     void ReadyForActivation();
     
     UFUNCTION(BlueprintCallable)
     void EndTask();
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

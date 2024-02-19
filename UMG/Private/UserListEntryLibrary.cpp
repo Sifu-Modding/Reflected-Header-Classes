@@ -1,8 +1,7 @@
 #include "UserListEntryLibrary.h"
 
-class IUserListEntry;
-class UUserListEntry;
-class UListViewBase;
+UUserListEntryLibrary::UUserListEntryLibrary() {
+}
 
 bool UUserListEntryLibrary::IsListItemSelected(TScriptInterface<IUserListEntry> UserListEntry) {
     return false;
@@ -16,6 +15,4 @@ UListViewBase* UUserListEntryLibrary::GetOwningListView(TScriptInterface<IUserLi
     return NULL;
 }
 
-UUserListEntryLibrary::UUserListEntryLibrary() {
-}
 

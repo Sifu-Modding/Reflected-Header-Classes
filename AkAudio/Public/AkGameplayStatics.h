@@ -38,6 +38,7 @@ class AKAUDIO_API UAkGameplayStatics : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UAkGameplayStatics();
+
     UFUNCTION(BlueprintCallable, BlueprintCosmetic)
     static void UseReverbVolumes(bool inUseReverbVolumes, AActor* Actor);
     

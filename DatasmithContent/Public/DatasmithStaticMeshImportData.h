@@ -8,5 +8,6 @@ class DATASMITHCONTENT_API UDatasmithStaticMeshImportData : public UDatasmithAss
     GENERATED_BODY()
 public:
     UDatasmithStaticMeshImportData();
+
 };
 

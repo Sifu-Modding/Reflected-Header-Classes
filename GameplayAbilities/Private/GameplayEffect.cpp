@@ -16,3 +16,4 @@ UGameplayEffect::UGameplayEffect() {
     this->StackExpirationPolicy = EGameplayEffectStackingExpirationPolicy::ClearEntireStack;
 }
 
+

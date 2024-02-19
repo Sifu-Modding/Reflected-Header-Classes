@@ -8,5 +8,6 @@ class AKAUDIO_API UAkPlatformInfo : public UObject {
     GENERATED_BODY()
 public:
     UAkPlatformInfo();
+
 };
 

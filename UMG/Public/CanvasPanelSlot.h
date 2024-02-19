@@ -21,6 +21,7 @@ public:
     int32 ZOrder;
     
     UCanvasPanelSlot();
+
     UFUNCTION(BlueprintCallable)
     void SetZOrder(int32 InZOrder);
     

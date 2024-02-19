@@ -45,6 +45,7 @@ protected:
     
 public:
     UPawnAction();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     TEnumAsByte<EAIRequestPriority::Type> GetActionPriority();
     

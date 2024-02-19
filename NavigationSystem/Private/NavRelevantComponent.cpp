@@ -1,10 +1,12 @@
 #include "NavRelevantComponent.h"
 
-void UNavRelevantComponent::SetNavigationRelevancy(bool bRelevant) {
-}
-
-UNavRelevantComponent::UNavRelevantComponent() {
+UNavRelevantComponent::UNavRelevantComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bCanEverAffectNavigation = true;
     this->bAttachToOwnersRoot = true;
     this->CachedNavParent = NULL;
 }
+
+void UNavRelevantComponent::SetNavigationRelevancy(bool bRelevant) {
+}
+
 

@@ -20,5 +20,6 @@ public:
     float MaxParameter;
     
     UGizmoAxisIntervalParameterSource();
+
 };
 

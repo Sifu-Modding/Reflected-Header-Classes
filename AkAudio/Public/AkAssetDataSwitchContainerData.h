@@ -24,5 +24,6 @@ public:
     TArray<UAkAssetDataSwitchContainerData*> Children;
     
     UAkAssetDataSwitchContainerData();
+
 };
 

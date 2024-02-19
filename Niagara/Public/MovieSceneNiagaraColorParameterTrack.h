@@ -9,7 +9,8 @@ class UMovieSceneNiagaraColorParameterTrack : public UMovieSceneNiagaraParameter
     GENERATED_BODY()
 public:
     UMovieSceneNiagaraColorParameterTrack();
-    
+
+
     // Fix for true pure virtual functions not being implemented
 };
 

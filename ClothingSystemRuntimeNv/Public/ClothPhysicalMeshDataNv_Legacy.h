@@ -20,5 +20,6 @@ public:
     TArray<float> AnimDriveMultipliers;
     
     UClothPhysicalMeshDataNv_Legacy();
+
 };
 

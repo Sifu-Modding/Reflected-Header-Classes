@@ -17,7 +17,8 @@ protected:
     USoundWave* GranulatedSoundWave;
     
 public:
-    UGranularSynth();
+    UGranularSynth(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetSustainGain(const float SustainGain);
     

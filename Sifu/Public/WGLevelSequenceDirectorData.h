@@ -33,5 +33,6 @@ public:
     TArray<UAkAudioEvent*> m_AudioEventsOnFinish;
     
     UWGLevelSequenceDirectorData();
+
 };
 

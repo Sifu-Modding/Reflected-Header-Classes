@@ -5,7 +5,7 @@
 
 class AOnlineBeaconClient;
 
-UCLASS(Blueprintable, NonTransient)
+UCLASS(Blueprintable, NonTransient, Config=Engine)
 class ONLINESUBSYSTEMUTILS_API AOnlineBeaconHost : public AOnlineBeacon {
     GENERATED_BODY()
 public:
@@ -17,6 +17,7 @@ private:
     TArray<AOnlineBeaconClient*> ClientActors;
     
 public:
-    AOnlineBeaconHost();
+    AOnlineBeaconHost(const FObjectInitializer& ObjectInitializer);
+
 };
 

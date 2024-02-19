@@ -8,5 +8,6 @@ class VARIANTMANAGERCONTENT_API UPropertyValueTransform : public UPropertyValue 
     GENERATED_BODY()
 public:
     UPropertyValueTransform();
+
 };
 

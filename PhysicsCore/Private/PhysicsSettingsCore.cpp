@@ -25,3 +25,4 @@ UPhysicsSettingsCore::UPhysicsSettingsCore() {
     this->DefaultShapeComplexity = CTF_UseSimpleAndComplex;
 }
 
+

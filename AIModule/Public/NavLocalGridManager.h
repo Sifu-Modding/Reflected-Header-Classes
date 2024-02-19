@@ -10,6 +10,7 @@ class AIMODULE_API UNavLocalGridManager : public UObject {
     GENERATED_BODY()
 public:
     UNavLocalGridManager();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static bool SetLocalNavigationGridDensity(UObject* WorldContextObject, float CellSize);
     

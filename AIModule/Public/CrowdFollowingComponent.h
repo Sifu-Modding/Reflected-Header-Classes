@@ -12,11 +12,12 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector CrowdAgentMoveDirection;
     
-    UCrowdFollowingComponent();
+    UCrowdFollowingComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SuspendCrowdSteering(bool bSuspend);
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

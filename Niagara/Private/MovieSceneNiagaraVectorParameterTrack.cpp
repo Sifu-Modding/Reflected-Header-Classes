@@ -4,3 +4,4 @@ UMovieSceneNiagaraVectorParameterTrack::UMovieSceneNiagaraVectorParameterTrack()
     this->ChannelsUsed = 0;
 }
 
+

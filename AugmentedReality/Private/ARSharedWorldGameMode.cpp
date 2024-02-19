@@ -1,6 +1,12 @@
 #include "ARSharedWorldGameMode.h"
+#include "ARSharedWorldGameState.h"
+#include "ARSharedWorldPlayerController.h"
 
-class AARSharedWorldGameState;
+AARSharedWorldGameMode::AARSharedWorldGameMode(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->GameStateClass = AARSharedWorldGameState::StaticClass();
+    this->PlayerControllerClass = AARSharedWorldPlayerController::StaticClass();
+    this->BufferSizePerChunk = 512;
+}
 
 void AARSharedWorldGameMode::SetPreviewImageData(TArray<uint8> ImageData) {
 }
@@ -15,7 +21,4 @@ AARSharedWorldGameState* AARSharedWorldGameMode::GetARSharedWorldGameState() {
     return NULL;
 }
 
-AARSharedWorldGameMode::AARSharedWorldGameMode() {
-    this->BufferSizePerChunk = 512;
-}
 

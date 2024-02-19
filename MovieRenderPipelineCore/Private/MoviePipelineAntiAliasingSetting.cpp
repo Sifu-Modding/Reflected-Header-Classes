@@ -11,3 +11,4 @@ UMoviePipelineAntiAliasingSetting::UMoviePipelineAntiAliasingSetting() {
     this->bRenderWarmUpFrames = false;
 }
 
+

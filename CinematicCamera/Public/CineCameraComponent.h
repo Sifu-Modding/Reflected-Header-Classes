@@ -8,7 +8,7 @@
 #include "NamedLensPreset.h"
 #include "CineCameraComponent.generated.h"
 
-UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, Config=Engine, meta=(BlueprintSpawnableComponent))
 class CINEMATICCAMERA_API UCineCameraComponent : public UCameraComponent {
     GENERATED_BODY()
 public:
@@ -56,7 +56,8 @@ protected:
     float DefaultLensFStop;
     
 public:
-    UCineCameraComponent();
+    UCineCameraComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetLensPresetByName(const FString& InPresetName);
     

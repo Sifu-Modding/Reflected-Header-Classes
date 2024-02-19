@@ -1,6 +1,7 @@
 #include "XRLoadingScreenFunctionLibrary.h"
 
-class UTexture;
+UXRLoadingScreenFunctionLibrary::UXRLoadingScreenFunctionLibrary() {
+}
 
 void UXRLoadingScreenFunctionLibrary::ShowLoadingScreen() {
 }
@@ -17,6 +18,4 @@ void UXRLoadingScreenFunctionLibrary::ClearLoadingScreenSplashes() {
 void UXRLoadingScreenFunctionLibrary::AddLoadingScreenSplash(UTexture* Texture, FVector Translation, FRotator Rotation, FVector2D Size, FRotator DeltaRotation, bool bClearBeforeAdd) {
 }
 
-UXRLoadingScreenFunctionLibrary::UXRLoadingScreenFunctionLibrary() {
-}
 

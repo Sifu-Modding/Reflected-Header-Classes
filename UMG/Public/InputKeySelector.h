@@ -58,6 +58,7 @@ public:
     FOnIsSelectingKeyChanged OnIsSelectingKeyChanged;
     
     UInputKeySelector();
+
     UFUNCTION(BlueprintCallable)
     void SetTextBlockVisibility(const ESlateVisibility InVisibility);
     

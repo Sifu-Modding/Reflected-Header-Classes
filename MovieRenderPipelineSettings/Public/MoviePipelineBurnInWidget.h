@@ -10,6 +10,7 @@ class MOVIERENDERPIPELINESETTINGS_API UMoviePipelineBurnInWidget : public UUserW
     GENERATED_BODY()
 public:
     UMoviePipelineBurnInWidget();
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnOutputFrameStarted(UMoviePipeline* ForPipeline);
     

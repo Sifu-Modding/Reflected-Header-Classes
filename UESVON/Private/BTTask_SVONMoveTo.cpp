@@ -1,6 +1,7 @@
 #include "BTTask_SVONMoveTo.h"
 
 UBTTask_SVONMoveTo::UBTTask_SVONMoveTo() {
+    this->NodeName = TEXT("SVON Move To");
     this->AcceptableRadius = 5.00f;
     this->ObservedBlackboardValueTolerance = 4.75f;
     this->bObserveBlackboardValue = false;
@@ -9,4 +10,5 @@ UBTTask_SVONMoveTo::UBTTask_SVONMoveTo() {
     this->bReachTestIncludesGoalRadius = true;
     this->bUseAsyncPathfinding = false;
 }
+
 

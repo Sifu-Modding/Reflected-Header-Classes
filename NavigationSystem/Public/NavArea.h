@@ -5,7 +5,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=NavAreaBase -FallbackName=NavAreaBase
 #include "NavArea.generated.h"
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Abstract, Blueprintable, Config=Engine)
 class NAVIGATIONSYSTEM_API UNavArea : public UNavAreaBase {
     GENERATED_BODY()
 public:
@@ -72,5 +72,6 @@ public:
     uint8 bSupportsAgent15: 1;
     
     UNavArea();
+
 };
 

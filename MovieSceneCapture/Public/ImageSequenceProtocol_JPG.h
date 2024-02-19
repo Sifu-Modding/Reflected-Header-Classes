@@ -8,5 +8,6 @@ class MOVIESCENECAPTURE_API UImageSequenceProtocol_JPG : public UCompressedImage
     GENERATED_BODY()
 public:
     UImageSequenceProtocol_JPG();
+
 };
 

@@ -16,8 +16,9 @@ private:
     UAbilitySystemComponent* AbilitySystemComponent;
     
 public:
-    AAbilitySystemTestPawn();
-    
+    AAbilitySystemTestPawn(const FObjectInitializer& ObjectInitializer);
+
+
     // Fix for true pure virtual functions not being implemented
     UFUNCTION(BlueprintCallable, BlueprintCosmetic)
     void ForwardGameplayCueToParent() override PURE_VIRTUAL(ForwardGameplayCueToParent,);

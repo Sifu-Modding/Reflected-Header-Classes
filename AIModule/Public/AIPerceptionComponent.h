@@ -38,7 +38,8 @@ public:
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FActorPerceptionInfoUpdatedDelegate OnTargetPerceptionInfoUpdated;
     
-    UAIPerceptionComponent();
+    UAIPerceptionComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetSenseEnabled(TSubclassOf<UAISense> SenseClass, const bool bEnable);
     

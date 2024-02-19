@@ -16,7 +16,8 @@ public:
     int32 AxisIndex;
     
     UGizmoWorldAxisSource();
-    
+
+
     // Fix for true pure virtual functions not being implemented
     UFUNCTION()
     bool HasTangentVectors() const override PURE_VIRTUAL(HasTangentVectors, return false;);

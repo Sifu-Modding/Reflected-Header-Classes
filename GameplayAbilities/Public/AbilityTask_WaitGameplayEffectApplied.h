@@ -17,6 +17,7 @@ protected:
     
 public:
     UAbilityTask_WaitGameplayEffectApplied();
+
     UFUNCTION(BlueprintCallable)
     void OnApplyGameplayEffectCallback(UAbilitySystemComponent* Target, const FGameplayEffectSpec& SpecApplied, FActiveGameplayEffectHandle ActiveHandle);
     

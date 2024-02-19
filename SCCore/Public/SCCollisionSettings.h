@@ -6,7 +6,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ECollisionChannel -FallbackName=ECollisionChannel
 #include "SCCollisionSettings.generated.h"
 
-UCLASS(Blueprintable, Config=Engine, DefaultConfig, Config=Game)
+UCLASS(Blueprintable, DefaultConfig, Config=Game)
 class SCCORE_API USCCollisionSettings : public UDeveloperSettings {
     GENERATED_BODY()
 public:
@@ -76,5 +76,6 @@ protected:
     
 public:
     USCCollisionSettings();
+
 };
 

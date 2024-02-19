@@ -7,6 +7,6 @@ enum class EWidgetDesignFlags : uint8 {
     None,
     Designing,
     ShowOutline,
-    ExecutePreConstruct = 0x4,
+    ExecutePreConstruct = 4,
 };
 

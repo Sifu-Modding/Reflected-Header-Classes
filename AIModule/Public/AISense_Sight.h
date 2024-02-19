@@ -32,5 +32,6 @@ protected:
     
 public:
     UAISense_Sight();
+
 };
 

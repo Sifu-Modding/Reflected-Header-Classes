@@ -22,6 +22,7 @@ class AIMODULE_API UAIBlueprintHelperLibrary : public UBlueprintFunctionLibrary 
     GENERATED_BODY()
 public:
     UAIBlueprintHelperLibrary();
+
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     static void UnlockAIResourcesWithAnimation(UAnimInstance* AnimInstance, bool bUnlockMovement, bool UnlockAILogic);
     

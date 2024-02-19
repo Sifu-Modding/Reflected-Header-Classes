@@ -8,5 +8,6 @@ class UMovieSceneTransformOriginSystem : public UMovieSceneEntitySystem {
     GENERATED_BODY()
 public:
     UMovieSceneTransformOriginSystem();
+
 };
 

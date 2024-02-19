@@ -17,6 +17,7 @@ class AIMODULE_API UBTFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UBTFunctionLibrary();
+
     UFUNCTION(BlueprintCallable)
     static void StopUsingExternalEvent(UBTNode* NodeOwner);
     

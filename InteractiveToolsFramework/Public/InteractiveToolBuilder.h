@@ -8,5 +8,6 @@ class INTERACTIVETOOLSFRAMEWORK_API UInteractiveToolBuilder : public UObject {
     GENERATED_BODY()
 public:
     UInteractiveToolBuilder();
+
 };
 

@@ -8,5 +8,6 @@ class DATASMITHCONTENT_API UDatasmithIFCSceneImportData : public UDatasmithScene
     GENERATED_BODY()
 public:
     UDatasmithIFCSceneImportData();
+
 };
 

@@ -8,5 +8,6 @@ class MOVIESCENE_API UMovieSceneBoundSceneComponentInstantiator : public UMovieS
     GENERATED_BODY()
 public:
     UMovieSceneBoundSceneComponentInstantiator();
+
 };
 

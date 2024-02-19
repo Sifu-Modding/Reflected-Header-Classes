@@ -1,8 +1,7 @@
 #include "ARDependencyHandler.h"
 
-class UARDependencyHandler;
-class UARSessionConfig;
-class UObject;
+UARDependencyHandler::UARDependencyHandler() {
+}
 
 void UARDependencyHandler::StartARSessionLatent(UObject* WorldContextObject, UARSessionConfig* SessionConfig, FLatentActionInfo LatentInfo) {
 }
@@ -20,6 +19,4 @@ UARDependencyHandler* UARDependencyHandler::GetARDependencyHandler() {
 void UARDependencyHandler::CheckARServiceAvailability(UObject* WorldContextObject, FLatentActionInfo LatentInfo, EARServiceAvailability& OutAvailability) {
 }
 
-UARDependencyHandler::UARDependencyHandler() {
-}
 

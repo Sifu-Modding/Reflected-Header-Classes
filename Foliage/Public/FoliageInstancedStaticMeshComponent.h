@@ -21,6 +21,7 @@ private:
     FGuid GenerationGuid;
     
 public:
-    UFoliageInstancedStaticMeshComponent();
+    UFoliageInstancedStaticMeshComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

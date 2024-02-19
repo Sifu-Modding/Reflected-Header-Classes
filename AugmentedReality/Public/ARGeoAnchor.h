@@ -9,6 +9,7 @@ class AUGMENTEDREALITY_API UARGeoAnchor : public UARTrackedGeometry {
     GENERATED_BODY()
 public:
     UARGeoAnchor();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetLongitude() const;
     

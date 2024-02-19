@@ -8,5 +8,6 @@ class UMoviePipelineDeferredPass_PathTracer : public UMoviePipelineDeferredPassB
     GENERATED_BODY()
 public:
     UMoviePipelineDeferredPass_PathTracer();
+
 };
 

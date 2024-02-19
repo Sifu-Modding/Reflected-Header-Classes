@@ -13,6 +13,7 @@ public:
     ULoudnessNRTSettings* Settings;
     
     ULoudnessNRT();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     void GetNormalizedLoudnessAtTime(const float InSeconds, float& OutLoudness) const;
     

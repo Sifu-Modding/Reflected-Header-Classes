@@ -6,3 +6,4 @@ UAnimSharingInstance::UAnimSharingInstance() {
     this->SharingActor = NULL;
 }
 
+

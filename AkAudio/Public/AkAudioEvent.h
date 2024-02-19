@@ -34,6 +34,7 @@ private:
     
 public:
     UAkAudioEvent();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetMinimumDuration() const;
     

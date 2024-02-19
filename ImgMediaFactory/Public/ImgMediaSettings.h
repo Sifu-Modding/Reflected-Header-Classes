@@ -4,7 +4,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
 #include "ImgMediaSettings.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS(Blueprintable, Config=Engine)
 class IMGMEDIAFACTORY_API UImgMediaSettings : public UObject {
     GENERATED_BODY()
 public:
@@ -41,5 +41,6 @@ private:
     
 public:
     UImgMediaSettings();
+
 };
 

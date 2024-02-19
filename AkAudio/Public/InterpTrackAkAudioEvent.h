@@ -15,5 +15,6 @@ public:
     uint8 bContinueEventOnMatineeEnd: 1;
     
     UInterpTrackAkAudioEvent();
+
 };
 

@@ -1,5 +1,7 @@
 #include "LandscapeGizmoActiveActor.h"
+#include "LandscapeGizmoRenderComponent.h"
 
-ALandscapeGizmoActiveActor::ALandscapeGizmoActiveActor() {
+ALandscapeGizmoActiveActor::ALandscapeGizmoActiveActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer.SetDefaultSubobjectClass<ULandscapeGizmoRenderComponent>(TEXT("GizmoRendererComponent0"))) {
 }
+
 

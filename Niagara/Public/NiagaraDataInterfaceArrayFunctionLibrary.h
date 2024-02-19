@@ -15,6 +15,7 @@ class NIAGARA_API UNiagaraDataInterfaceArrayFunctionLibrary : public UBlueprintF
     GENERATED_BODY()
 public:
     UNiagaraDataInterfaceArrayFunctionLibrary();
+
 private:
     UFUNCTION(BlueprintCallable)
     static void SetNiagaraArrayVector4(UNiagaraComponent* NiagaraSystem, FName OverrideName, const TArray<FVector4>& ArrayData);

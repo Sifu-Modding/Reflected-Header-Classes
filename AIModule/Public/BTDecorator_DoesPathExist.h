@@ -30,5 +30,6 @@ public:
     TSubclassOf<UNavigationQueryFilter> FilterClass;
     
     UBTDecorator_DoesPathExist();
+
 };
 

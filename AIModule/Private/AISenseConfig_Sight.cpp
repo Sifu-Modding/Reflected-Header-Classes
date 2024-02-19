@@ -11,3 +11,4 @@ UAISenseConfig_Sight::UAISenseConfig_Sight() {
     this->NearClippingRadius = 0.00f;
 }
 
+

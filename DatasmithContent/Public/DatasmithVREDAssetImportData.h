@@ -8,5 +8,6 @@ class DATASMITHCONTENT_API UDatasmithVREDAssetImportData : public UDatasmithAsse
     GENERATED_BODY()
 public:
     UDatasmithVREDAssetImportData();
+
 };
 

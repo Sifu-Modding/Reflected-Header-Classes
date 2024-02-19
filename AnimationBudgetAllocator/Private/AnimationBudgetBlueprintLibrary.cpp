@@ -1,6 +1,7 @@
 #include "AnimationBudgetBlueprintLibrary.h"
 
-class UObject;
+UAnimationBudgetBlueprintLibrary::UAnimationBudgetBlueprintLibrary() {
+}
 
 void UAnimationBudgetBlueprintLibrary::SetAnimationBudgetParameters(UObject* WorldContextObject, const FAnimationBudgetAllocatorParameters& InParameters) {
 }
@@ -8,6 +9,4 @@ void UAnimationBudgetBlueprintLibrary::SetAnimationBudgetParameters(UObject* Wor
 void UAnimationBudgetBlueprintLibrary::EnableAnimationBudget(UObject* WorldContextObject, bool bEnabled) {
 }
 
-UAnimationBudgetBlueprintLibrary::UAnimationBudgetBlueprintLibrary() {
-}
 

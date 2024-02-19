@@ -17,6 +17,7 @@ public:
     FWaitAbilityCommitDelegate OnCommit;
     
     UAbilityTask_WaitAbilityCommit();
+
     UFUNCTION(BlueprintCallable)
     static UAbilityTask_WaitAbilityCommit* WaitForAbilityCommit_Query(UGameplayAbility* OwningAbility, FGameplayTagQuery Query, bool TriggerOnce);
     

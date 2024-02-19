@@ -15,6 +15,7 @@ public:
     TArray<FGameplayTagResponseTableEntry> Entries;
     
     UGameplayTagReponseTable();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void TagResponseEvent(const FGameplayTag Tag, int32 NewCount, UAbilitySystemComponent* ASC, int32 idx);

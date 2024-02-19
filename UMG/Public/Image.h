@@ -42,6 +42,7 @@ public:
     UWidget::FOnPointerEvent OnMouseButtonDownEvent;
     
     UImage();
+
     UFUNCTION(BlueprintCallable)
     void SetOpacity(float InOpacity);
     

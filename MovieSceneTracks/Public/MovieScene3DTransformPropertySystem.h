@@ -8,5 +8,6 @@ class MOVIESCENETRACKS_API UMovieScene3DTransformPropertySystem : public UMovieS
     GENERATED_BODY()
 public:
     UMovieScene3DTransformPropertySystem();
+
 };
 

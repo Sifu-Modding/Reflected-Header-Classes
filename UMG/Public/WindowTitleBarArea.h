@@ -17,6 +17,7 @@ public:
     bool bDoubleClickTogglesFullscreen;
     
     UWindowTitleBarArea();
+
     UFUNCTION(BlueprintCallable)
     void SetVerticalAlignment(TEnumAsByte<EVerticalAlignment> InVerticalAlignment);
     

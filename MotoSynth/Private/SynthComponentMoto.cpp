@@ -1,5 +1,10 @@
 #include "SynthComponentMoto.h"
 
+USynthComponentMoto::USynthComponentMoto(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->MotoSynthPreset = NULL;
+    this->RPM = 1000.00f;
+}
+
 void USynthComponentMoto::SetSettings(const FMotoSynthRuntimeSettings& InSettings) {
 }
 
@@ -13,8 +18,4 @@ bool USynthComponentMoto::IsEnabled() const {
 void USynthComponentMoto::GetRPMRange(float& OutMinRPM, float& OutMaxRPM) {
 }
 
-USynthComponentMoto::USynthComponentMoto() {
-    this->MotoSynthPreset = NULL;
-    this->RPM = 1000.00f;
-}
 

@@ -19,6 +19,7 @@ public:
     FOnlineLogoutResult OnFailure;
     
     ULogoutCallbackProxy();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static ULogoutCallbackProxy* Logout(UObject* WorldContextObject, APlayerController* PlayerController);
     

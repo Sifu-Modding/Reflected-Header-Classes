@@ -35,6 +35,7 @@ public:
     FMargin Padding;
     
     UScrollBar();
+
     UFUNCTION(BlueprintCallable)
     void SetState(float InOffsetFraction, float InThumbSizeFraction);
     

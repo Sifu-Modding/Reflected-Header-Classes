@@ -13,6 +13,7 @@ public:
     FSubmixEffectTapDelaySettings Settings;
     
     USubmixEffectTapDelayPreset();
+
     UFUNCTION(BlueprintCallable)
     void SetTap(int32 TapId, const FTapDelayInfo& TapInfo);
     

@@ -19,6 +19,7 @@ protected:
     
 public:
     UAREnvironmentCaptureProbe();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector GetExtent() const;
     

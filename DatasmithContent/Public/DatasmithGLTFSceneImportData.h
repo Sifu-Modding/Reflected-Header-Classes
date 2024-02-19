@@ -23,5 +23,6 @@ public:
     FString Source;
     
     UDatasmithGLTFSceneImportData();
+
 };
 

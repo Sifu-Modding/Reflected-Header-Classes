@@ -8,5 +8,6 @@ class VARIANTMANAGERCONTENT_API ULevelVariantSetsFunctionDirector : public UObje
     GENERATED_BODY()
 public:
     ULevelVariantSetsFunctionDirector();
+
 };
 

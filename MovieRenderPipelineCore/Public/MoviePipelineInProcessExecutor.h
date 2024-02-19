@@ -11,5 +11,6 @@ public:
     bool bUseCurrentLevel;
     
     UMoviePipelineInProcessExecutor();
+
 };
 

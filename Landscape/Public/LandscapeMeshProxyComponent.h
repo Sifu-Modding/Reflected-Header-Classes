@@ -20,6 +20,7 @@ private:
     int8 ProxyLOD;
     
 public:
-    ULandscapeMeshProxyComponent();
+    ULandscapeMeshProxyComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

@@ -12,5 +12,6 @@ public:
     FDatasmithCameraLookatTrackingSettingsTemplate LookatTrackingSettings;
     
     UDatasmithCineCameraActorTemplate();
+
 };
 

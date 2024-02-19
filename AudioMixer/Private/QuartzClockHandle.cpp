@@ -1,6 +1,7 @@
 #include "QuartzClockHandle.h"
 
-class UObject;
+UQuartzClockHandle::UQuartzClockHandle() {
+}
 
 void UQuartzClockHandle::UnsubscribeFromTimeDivision(const UObject* WorldContextObject, EQuartzCommandQuantization InQuantizationBoundary) {
 }
@@ -58,6 +59,4 @@ float UQuartzClockHandle::GetBeatsPerMinute(const UObject* WorldContextObject) c
     return 0.0f;
 }
 
-UQuartzClockHandle::UQuartzClockHandle() {
-}
 

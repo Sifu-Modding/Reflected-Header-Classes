@@ -13,6 +13,7 @@ public:
     UOnsetNRTSettings* Settings;
     
     UOnsetNRT();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     void GetNormalizedChannelOnsetsBetweenTimes(const float InStartSeconds, const float InEndSeconds, const int32 InChannel, TArray<float>& OutOnsetTimestamps, TArray<float>& OutOnsetStrengths) const;
     

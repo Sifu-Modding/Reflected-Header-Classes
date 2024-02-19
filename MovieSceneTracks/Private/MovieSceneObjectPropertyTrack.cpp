@@ -4,3 +4,4 @@ UMovieSceneObjectPropertyTrack::UMovieSceneObjectPropertyTrack() {
     this->PropertyClass = NULL;
 }
 
+

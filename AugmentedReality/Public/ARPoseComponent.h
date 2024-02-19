@@ -14,9 +14,10 @@ protected:
     FARPoseUpdatePayload ReplicatedPayload;
     
 public:
-    UARPoseComponent();
+    UARPoseComponent(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     static void SetPoseComponentDebugMode(EPoseComponentDebugMode NewDebugMode);
     

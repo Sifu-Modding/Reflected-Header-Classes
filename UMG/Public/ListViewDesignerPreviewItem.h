@@ -8,5 +8,6 @@ class UListViewDesignerPreviewItem : public UObject {
     GENERATED_BODY()
 public:
     UListViewDesignerPreviewItem();
+
 };
 

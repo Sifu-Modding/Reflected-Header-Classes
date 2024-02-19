@@ -7,7 +7,7 @@ enum class EMovieSceneBlendType : uint8 {
     Invalid,
     Absolute,
     Additive,
-    Relative = 0x4,
-    AdditiveFromBase = 0x8,
+    Relative = 4,
+    AdditiveFromBase = 8,
 };
 

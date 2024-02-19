@@ -1,5 +1,8 @@
 #include "AkMIDIEventCallbackInfo.h"
 
+UAkMIDIEventCallbackInfo::UAkMIDIEventCallbackInfo() {
+}
+
 EAkMidiEventType UAkMIDIEventCallbackInfo::GetType() {
     return EAkMidiEventType::AkMidiEventTypeInvalid;
 }
@@ -40,6 +43,4 @@ bool UAkMIDIEventCallbackInfo::GetCc(FAkMidiCc& AsCc) {
     return false;
 }
 
-UAkMIDIEventCallbackInfo::UAkMIDIEventCallbackInfo() {
-}
 

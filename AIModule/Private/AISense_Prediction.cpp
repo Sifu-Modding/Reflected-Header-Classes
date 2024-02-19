@@ -1,8 +1,7 @@
 #include "AISense_Prediction.h"
 
-class AAIController;
-class AActor;
-class APawn;
+UAISense_Prediction::UAISense_Prediction() {
+}
 
 void UAISense_Prediction::RequestPawnPredictionEvent(APawn* Requestor, AActor* PredictedActor, float PredictionTime) {
 }
@@ -10,6 +9,4 @@ void UAISense_Prediction::RequestPawnPredictionEvent(APawn* Requestor, AActor* P
 void UAISense_Prediction::RequestControllerPredictionEvent(AAIController* Requestor, AActor* PredictedActor, float PredictionTime) {
 }
 
-UAISense_Prediction::UAISense_Prediction() {
-}
 

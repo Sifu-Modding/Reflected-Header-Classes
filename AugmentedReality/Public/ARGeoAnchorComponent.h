@@ -14,9 +14,10 @@ protected:
     FARGeoAnchorUpdatePayload ReplicatedPayload;
     
 public:
-    UARGeoAnchorComponent();
+    UARGeoAnchorComponent(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     static void SetGeoAnchorComponentDebugMode(EGeoAnchorComponentDebugMode NewDebugMode);
     

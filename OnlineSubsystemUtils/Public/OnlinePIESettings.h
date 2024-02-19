@@ -15,5 +15,6 @@ public:
     TArray<FPIELoginSettingsInternal> Logins;
     
     UOnlinePIESettings();
+
 };
 

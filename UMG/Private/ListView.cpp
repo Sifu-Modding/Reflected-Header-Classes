@@ -1,6 +1,14 @@
 #include "ListView.h"
 
-class UObject;
+UListView::UListView() {
+    this->Orientation = Orient_Vertical;
+    this->SelectionMode = ESelectionMode::Single;
+    this->ConsumeMouseWheel = EConsumeMouseWheel::WhenScrollingPossible;
+    this->bClearSelectionOnClick = false;
+    this->bIsFocusable = true;
+    this->EntrySpacing = 0.00f;
+    this->bReturnFocusToSelection = false;
+}
 
 void UListView::SetSelectionMode(TEnumAsByte<ESelectionMode::Type> NewSelectionMode) {
 }
@@ -80,13 +88,4 @@ void UListView::BP_CancelScrollIntoView() {
 void UListView::AddItem(UObject* Item) {
 }
 
-UListView::UListView() {
-    this->Orientation = Orient_Vertical;
-    this->SelectionMode = ESelectionMode::Single;
-    this->ConsumeMouseWheel = EConsumeMouseWheel::WhenScrollingPossible;
-    this->bClearSelectionOnClick = false;
-    this->bIsFocusable = true;
-    this->EntrySpacing = 0.00f;
-    this->bReturnFocusToSelection = false;
-}
 

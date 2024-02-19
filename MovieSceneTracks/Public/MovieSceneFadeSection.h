@@ -9,7 +9,7 @@ UCLASS(Blueprintable, MinimalAPI)
 class UMovieSceneFadeSection : public UMovieSceneSection {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     FMovieSceneFloatChannel FloatCurve;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -19,5 +19,6 @@ public:
     uint8 bFadeAudio: 1;
     
     UMovieSceneFadeSection();
+
 };
 

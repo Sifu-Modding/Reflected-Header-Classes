@@ -5,3 +5,4 @@ UGizmoAxisIntervalParameterSource::UGizmoAxisIntervalParameterSource() {
     this->MaxParameter = 0.00f;
 }
 
+

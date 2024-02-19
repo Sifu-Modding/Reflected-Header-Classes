@@ -116,6 +116,7 @@ protected:
     
 public:
     UAbilitySystemGlobals();
+
     UFUNCTION(BlueprintCallable, Exec)
     void ToggleIgnoreAbilitySystemCosts();
     

@@ -1,6 +1,7 @@
 #include "ARLifeCycleComponent.h"
 
-class AARActor;
+UARLifeCycleComponent::UARLifeCycleComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+}
 
 void UARLifeCycleComponent::ServerSpawnARActor_Implementation(UClass* ComponentClass, FGuid NativeID) {
 }
@@ -14,6 +15,4 @@ bool UARLifeCycleComponent::ServerDestroyARActor_Validate(AARActor* Actor) {
     return true;
 }
 
-UARLifeCycleComponent::UARLifeCycleComponent() {
-}
 

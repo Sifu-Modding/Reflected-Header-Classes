@@ -8,5 +8,6 @@ class UMovieSceneHierarchicalBiasSystem : public UMovieSceneEntityInstantiatorSy
     GENERATED_BODY()
 public:
     UMovieSceneHierarchicalBiasSystem();
+
 };
 

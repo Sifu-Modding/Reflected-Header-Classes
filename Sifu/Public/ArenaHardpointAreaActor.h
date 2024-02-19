@@ -54,7 +54,8 @@ private:
     TMap<AFightingCharacter*, FVolumesArray> m_overlappedVolumesPerEnemy;
     
 public:
-    AArenaHardpointAreaActor();
+    AArenaHardpointAreaActor(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void UpdateVolumeBounds();
     

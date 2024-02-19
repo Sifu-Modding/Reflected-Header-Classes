@@ -1,5 +1,12 @@
 #include "ComboBoxString.h"
 
+UComboBoxString::UComboBoxString() {
+    this->MaxListHeight = 450.00f;
+    this->HasDownArrow = true;
+    this->EnableGamepadNavigationMode = true;
+    this->bIsFocusable = true;
+}
+
 void UComboBoxString::SetSelectedOption(const FString& Option) {
 }
 
@@ -46,10 +53,4 @@ void UComboBoxString::ClearOptions() {
 void UComboBoxString::AddOption(const FString& Option) {
 }
 
-UComboBoxString::UComboBoxString() {
-    this->MaxListHeight = 450.00f;
-    this->HasDownArrow = true;
-    this->EnableGamepadNavigationMode = true;
-    this->bIsFocusable = true;
-}
 

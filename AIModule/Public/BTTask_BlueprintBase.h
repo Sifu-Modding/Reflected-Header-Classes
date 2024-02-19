@@ -27,6 +27,7 @@ protected:
     
 public:
     UBTTask_BlueprintBase();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void SetFinishOnMessageWithId(FName MessageName, int32 RequestID);

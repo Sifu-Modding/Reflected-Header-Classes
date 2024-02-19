@@ -8,5 +8,6 @@ class UAkXboxOneAnvilPlatformInfo : public UAkXboxOneGDKPlatformInfo {
     GENERATED_BODY()
 public:
     UAkXboxOneAnvilPlatformInfo();
+
 };
 

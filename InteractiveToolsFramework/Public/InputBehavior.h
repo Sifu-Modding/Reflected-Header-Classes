@@ -8,5 +8,6 @@ class INTERACTIVETOOLSFRAMEWORK_API UInputBehavior : public UObject {
     GENERATED_BODY()
 public:
     UInputBehavior();
+
 };
 

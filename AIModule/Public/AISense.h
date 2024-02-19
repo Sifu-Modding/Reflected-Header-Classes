@@ -6,7 +6,7 @@
 
 class UAIPerceptionSystem;
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Abstract, Blueprintable, Config=Engine)
 class AIMODULE_API UAISense : public UObject {
     GENERATED_BODY()
 public:
@@ -29,5 +29,6 @@ private:
     
 public:
     UAISense();
+
 };
 

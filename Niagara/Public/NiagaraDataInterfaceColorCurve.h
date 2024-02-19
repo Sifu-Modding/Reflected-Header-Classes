@@ -21,5 +21,6 @@ public:
     FRichCurve AlphaCurve;
     
     UNiagaraDataInterfaceColorCurve();
+
 };
 

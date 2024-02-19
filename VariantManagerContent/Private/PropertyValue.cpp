@@ -1,5 +1,11 @@
 #include "PropertyValue.h"
 
+UPropertyValue::UPropertyValue() {
+    this->bHasRecordedData = false;
+    this->LeafPropertyClass = NULL;
+    this->PropCategory = EPropertyValueCategory::Undefined;
+}
+
 bool UPropertyValue::HasRecordedData() const {
     return false;
 }
@@ -12,9 +18,4 @@ FString UPropertyValue::GetFullDisplayString() const {
     return TEXT("");
 }
 
-UPropertyValue::UPropertyValue() {
-    this->bHasRecordedData = false;
-    this->LeafPropertyClass = NULL;
-    this->PropCategory = EPropertyValueCategory::Undefined;
-}
 

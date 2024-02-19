@@ -1,5 +1,9 @@
 #include "NiagaraParameterCollectionInstance.h"
 
+UNiagaraParameterCollectionInstance::UNiagaraParameterCollectionInstance() {
+    this->Collection = NULL;
+}
+
 void UNiagaraParameterCollectionInstance::SetVectorParameter(const FString& InVariableName, FVector InValue) {
 }
 
@@ -56,7 +60,4 @@ bool UNiagaraParameterCollectionInstance::GetBoolParameter(const FString& InVari
     return false;
 }
 
-UNiagaraParameterCollectionInstance::UNiagaraParameterCollectionInstance() {
-    this->Collection = NULL;
-}
 

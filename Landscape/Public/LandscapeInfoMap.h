@@ -8,5 +8,6 @@ class ULandscapeInfoMap : public UObject {
     GENERATED_BODY()
 public:
     ULandscapeInfoMap();
+
 };
 

@@ -1,6 +1,10 @@
 #include "UserDefinedImageCaptureProtocol.h"
 
-class UTexture;
+UUserDefinedImageCaptureProtocol::UUserDefinedImageCaptureProtocol() {
+    this->Format = EDesiredImageFormat::EXR;
+    this->bEnableCompression = false;
+    this->CompressionQuality = 100;
+}
 
 void UUserDefinedImageCaptureProtocol::WriteImageToDisk(const FCapturedPixels& PixelData, const FCapturedPixelsID& StreamID, const FFrameMetrics& FrameMetrics, bool bCopyImageData) {
 }
@@ -13,9 +17,4 @@ FString UUserDefinedImageCaptureProtocol::GenerateFilenameForBuffer(UTexture* Bu
     return TEXT("");
 }
 
-UUserDefinedImageCaptureProtocol::UUserDefinedImageCaptureProtocol() {
-    this->Format = EDesiredImageFormat::EXR;
-    this->bEnableCompression = false;
-    this->CompressionQuality = 100;
-}
 

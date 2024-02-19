@@ -1,5 +1,8 @@
 #include "SubmixEffectDelayPreset.h"
 
+USubmixEffectDelayPreset::USubmixEffectDelayPreset() {
+}
+
 void USubmixEffectDelayPreset::SetSettings(const FSubmixEffectDelaySettings& InSettings) {
 }
 
@@ -13,6 +16,4 @@ float USubmixEffectDelayPreset::GetMaxDelayInMilliseconds() {
     return 0.0f;
 }
 
-USubmixEffectDelayPreset::USubmixEffectDelayPreset() {
-}
 

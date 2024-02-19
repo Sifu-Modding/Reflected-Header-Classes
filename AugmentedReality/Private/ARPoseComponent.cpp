@@ -1,6 +1,9 @@
 #include "ARPoseComponent.h"
 #include "Net/UnrealNetwork.h"
 
+UARPoseComponent::UARPoseComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+}
+
 void UARPoseComponent::SetPoseComponentDebugMode(EPoseComponentDebugMode NewDebugMode) {
 }
 
@@ -18,6 +21,4 @@ void UARPoseComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& Out
     DOREPLIFETIME(UARPoseComponent, ReplicatedPayload);
 }
 
-UARPoseComponent::UARPoseComponent() {
-}
 

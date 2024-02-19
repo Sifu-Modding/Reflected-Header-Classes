@@ -8,5 +8,6 @@ class UAkWinGDKPlatformInfo : public UAkPlatformInfo {
     GENERATED_BODY()
 public:
     UAkWinGDKPlatformInfo();
+
 };
 

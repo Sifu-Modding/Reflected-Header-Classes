@@ -1,5 +1,8 @@
 #include "TimeManagementBlueprintLibrary.h"
 
+UTimeManagementBlueprintLibrary::UTimeManagementBlueprintLibrary() {
+}
+
 FFrameTime UTimeManagementBlueprintLibrary::TransformTime(const FFrameTime& SourceTime, const FFrameRate& SourceRate, const FFrameRate& DestinationRate) {
     return FFrameTime{};
 }
@@ -68,6 +71,4 @@ FFrameNumber UTimeManagementBlueprintLibrary::Add_FrameNumberFrameNumber(FFrameN
     return FFrameNumber{};
 }
 
-UTimeManagementBlueprintLibrary::UTimeManagementBlueprintLibrary() {
-}
 

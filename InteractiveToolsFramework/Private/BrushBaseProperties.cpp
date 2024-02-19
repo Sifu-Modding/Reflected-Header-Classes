@@ -10,3 +10,4 @@ UBrushBaseProperties::UBrushBaseProperties() {
     this->bShowFalloff = true;
 }
 
+

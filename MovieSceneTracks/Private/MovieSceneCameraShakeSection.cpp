@@ -6,3 +6,4 @@ UMovieSceneCameraShakeSection::UMovieSceneCameraShakeSection() {
     this->PlaySpace = ECameraShakePlaySpace::CameraLocal;
 }
 
+

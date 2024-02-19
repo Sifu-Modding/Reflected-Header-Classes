@@ -54,5 +54,6 @@ public:
     UPrimitiveComponent* AttachedComponent;
     
     UBrushStampIndicator();
+
 };
 

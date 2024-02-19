@@ -1,5 +1,9 @@
 #include "ReplayManagement.h"
 
+UReplayManagement::UReplayManagement() {
+    this->m_ReplaySaveGame = NULL;
+}
+
 void UReplayManagement::OnStreamingCompleteQuitReplayManagement() {
 }
 
@@ -27,7 +31,4 @@ bool UReplayManagement::BPF_HasSpaceForNewReplay(const FReplaySizeManagement& _i
     return false;
 }
 
-UReplayManagement::UReplayManagement() {
-    this->m_ReplaySaveGame = NULL;
-}
 

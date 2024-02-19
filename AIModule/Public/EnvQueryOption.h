@@ -17,5 +17,6 @@ public:
     TArray<UEnvQueryTest*> Tests;
     
     UEnvQueryOption();
+
 };
 

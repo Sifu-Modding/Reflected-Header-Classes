@@ -8,5 +8,6 @@ class CONTROLRIG_API UControlRigAnimInstance : public UAnimInstance {
     GENERATED_BODY()
 public:
     UControlRigAnimInstance();
+
 };
 

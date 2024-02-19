@@ -1,6 +1,7 @@
 #include "OpenColorIODisplayExtensionWrapper.h"
 
-class UOpenColorIODisplayExtensionWrapper;
+UOpenColorIODisplayExtensionWrapper::UOpenColorIODisplayExtensionWrapper() {
+}
 
 void UOpenColorIODisplayExtensionWrapper::SetSceneExtensionIsActiveFunctions(const TArray<FSceneViewExtensionIsActiveFunctor>& IsActiveFunctions) {
 }
@@ -18,6 +19,4 @@ UOpenColorIODisplayExtensionWrapper* UOpenColorIODisplayExtensionWrapper::Create
     return NULL;
 }
 
-UOpenColorIODisplayExtensionWrapper::UOpenColorIODisplayExtensionWrapper() {
-}
 

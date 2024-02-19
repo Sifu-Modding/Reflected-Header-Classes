@@ -6,6 +6,5 @@ UENUM(BlueprintType)
 enum EScrollDirection {
     Scroll_Down,
     Scroll_Up,
-    Scroll_MAX UMETA(Hidden),
 };
 

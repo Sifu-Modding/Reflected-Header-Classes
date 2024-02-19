@@ -69,14 +69,15 @@ private:
     TArray<UPrimitiveComponent*> SimulatedComponents;
     
 public:
-    UStaticMeshSimulationComponent();
+    UStaticMeshSimulationComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceivePhysicsCollision(const FChaosPhysicsCollisionInfo& CollisionInfo);
     
     UFUNCTION(BlueprintCallable)
     void ForceRecreatePhysicsState();
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

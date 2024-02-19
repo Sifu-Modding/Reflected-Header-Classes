@@ -1,6 +1,9 @@
 #include "ARMeshComponent.h"
 #include "Net/UnrealNetwork.h"
 
+UARMeshComponent::UARMeshComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+}
+
 void UARMeshComponent::ServerUpdatePayload_Implementation(const FARMeshUpdatePayload& NewPayload) {
 }
 bool UARMeshComponent::ServerUpdatePayload_Validate(const FARMeshUpdatePayload& NewPayload) {
@@ -15,6 +18,4 @@ void UARMeshComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& Out
     DOREPLIFETIME(UARMeshComponent, ReplicatedPayload);
 }
 
-UARMeshComponent::UARMeshComponent() {
-}
 

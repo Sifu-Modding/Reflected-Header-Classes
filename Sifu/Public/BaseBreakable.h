@@ -101,7 +101,8 @@ protected:
     float m_fProximityCreatePhysicsOffset;
     
 public:
-    ABaseBreakable();
+    ABaseBreakable(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     void OnWakeStateChanged(bool _bIsAwake);

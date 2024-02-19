@@ -5,3 +5,4 @@ UDatasmithSpotLightComponentTemplate::UDatasmithSpotLightComponentTemplate() {
     this->OuterConeAngle = 0.00f;
 }
 
+

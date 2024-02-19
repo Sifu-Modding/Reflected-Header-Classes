@@ -1,6 +1,7 @@
 #include "NiagaraDataInterfaceArrayFunctionLibrary.h"
 
-class UNiagaraComponent;
+UNiagaraDataInterfaceArrayFunctionLibrary::UNiagaraDataInterfaceArrayFunctionLibrary() {
+}
 
 void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayVector4(UNiagaraComponent* NiagaraSystem, FName OverrideName, const TArray<FVector4>& ArrayData) {
 }
@@ -58,6 +59,4 @@ TArray<bool> UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayBool(UNia
     return TArray<bool>();
 }
 
-UNiagaraDataInterfaceArrayFunctionLibrary::UNiagaraDataInterfaceArrayFunctionLibrary() {
-}
 

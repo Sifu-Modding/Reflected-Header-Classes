@@ -12,5 +12,6 @@ public:
     TArray<FPhysicalMaterialInput> Inputs;
     
     UMaterialExpressionLandscapePhysicalMaterialOutput();
+
 };
 

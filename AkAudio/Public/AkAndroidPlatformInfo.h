@@ -8,5 +8,6 @@ class UAkAndroidPlatformInfo : public UAkPlatformInfo {
     GENERATED_BODY()
 public:
     UAkAndroidPlatformInfo();
+
 };
 

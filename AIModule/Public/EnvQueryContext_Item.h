@@ -8,5 +8,6 @@ class AIMODULE_API UEnvQueryContext_Item : public UEnvQueryContext {
     GENERATED_BODY()
 public:
     UEnvQueryContext_Item();
+
 };
 

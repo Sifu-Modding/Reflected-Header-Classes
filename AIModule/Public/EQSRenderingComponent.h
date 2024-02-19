@@ -7,6 +7,7 @@ UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class AIMODULE_API UEQSRenderingComponent : public UPrimitiveComponent {
     GENERATED_BODY()
 public:
-    UEQSRenderingComponent();
+    UEQSRenderingComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

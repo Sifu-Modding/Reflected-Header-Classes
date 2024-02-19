@@ -19,6 +19,7 @@ private:
     
 public:
     UUMGSequencePlayer();
+
     UFUNCTION(BlueprintCallable)
     void SetUserTag(FName InUserTag);
     

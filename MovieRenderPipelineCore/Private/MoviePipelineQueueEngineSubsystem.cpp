@@ -2,7 +2,10 @@
 #include "MoviePipelineQueue.h"
 #include "Templates/SubclassOf.h"
 
-class UMoviePipelineExecutorBase;
+UMoviePipelineQueueEngineSubsystem::UMoviePipelineQueueEngineSubsystem() {
+    this->ActiveExecutor = NULL;
+    this->CurrentQueue = CreateDefaultSubobject<UMoviePipelineQueue>(TEXT("EngineMoviePipelineQueue"));
+}
 
 void UMoviePipelineQueueEngineSubsystem::RenderQueueWithExecutorInstance(UMoviePipelineExecutorBase* InExecutor) {
 }
@@ -23,8 +26,4 @@ UMoviePipelineExecutorBase* UMoviePipelineQueueEngineSubsystem::GetActiveExecuto
     return NULL;
 }
 
-UMoviePipelineQueueEngineSubsystem::UMoviePipelineQueueEngineSubsystem() {
-    this->ActiveExecutor = NULL;
-    this->CurrentQueue = CreateDefaultSubobject<UMoviePipelineQueue>(TEXT("EngineMoviePipelineQueue"));
-}
 

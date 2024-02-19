@@ -11,5 +11,6 @@ public:
     TArray<UEditableGameplayTagQueryExpression*> Expressions;
     
     UEditableGameplayTagQueryExpression_AnyExprMatch();
+
 };
 

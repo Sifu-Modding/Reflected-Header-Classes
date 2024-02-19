@@ -11,7 +11,8 @@ UCLASS(Blueprintable)
 class AUGMENTEDREALITY_API AARActor : public AActor {
     GENERATED_BODY()
 public:
-    AARActor();
+    AARActor(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     UARComponent* AddARComponent(TSubclassOf<UARComponent> InComponentClass, const FGuid& NativeID);
     

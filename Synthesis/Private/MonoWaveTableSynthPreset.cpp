@@ -8,3 +8,4 @@ UMonoWaveTableSynthPreset::UMonoWaveTableSynthPreset() {
     this->bNormalizeWaveTables = true;
 }
 
+

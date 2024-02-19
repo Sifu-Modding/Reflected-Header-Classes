@@ -19,6 +19,7 @@ private:
     TMap<UPrimitiveComponent*, FBreakEventCallbackWrapper> BreakEventRegistrations;
     
 public:
-    UChaosGameplayEventDispatcher();
+    UChaosGameplayEventDispatcher(const FObjectInitializer& ObjectInitializer);
+
 };
 

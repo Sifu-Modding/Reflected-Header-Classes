@@ -57,5 +57,6 @@ public:
     TEnumAsByte<EPhysicalSurface> SurfaceType;
     
     UPhysicalMaterial();
+
 };
 

@@ -14,3 +14,4 @@ USequenceCameraShake::USequenceCameraShake() {
     this->CameraStandIn = CreateDefaultSubobject<USequenceCameraShakeCameraStandIn>(TEXT("SequenceCameraShake_CameraStandIn"));
 }
 
+

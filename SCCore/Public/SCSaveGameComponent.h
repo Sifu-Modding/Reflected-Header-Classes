@@ -14,6 +14,7 @@ public:
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USCDelegate::FDynamicMulticast OnPreSaveLevel;
     
-    USCSaveGameComponent();
+    USCSaveGameComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

@@ -12,5 +12,6 @@ public:
     FMovieSceneCameraShakeSectionData ShakeData;
     
     UMovieSceneCameraShakeSourceShakeSection();
+
 };
 

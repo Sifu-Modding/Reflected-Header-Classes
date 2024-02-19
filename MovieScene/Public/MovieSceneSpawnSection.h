@@ -12,7 +12,8 @@ public:
     bool bPreviewOnly;
     
     UMovieSceneSpawnSection();
-    
+
+
     // Fix for true pure virtual functions not being implemented
 };
 

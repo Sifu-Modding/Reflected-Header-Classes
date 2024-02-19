@@ -1,5 +1,8 @@
 #include "SubmixEffectTapDelayPreset.h"
 
+USubmixEffectTapDelayPreset::USubmixEffectTapDelayPreset() {
+}
+
 void USubmixEffectTapDelayPreset::SetTap(int32 TapId, const FTapDelayInfo& TapInfo) {
 }
 
@@ -25,6 +28,4 @@ float USubmixEffectTapDelayPreset::GetMaxDelayInMilliseconds() {
 void USubmixEffectTapDelayPreset::AddTap(int32& TapId) {
 }
 
-USubmixEffectTapDelayPreset::USubmixEffectTapDelayPreset() {
-}
 

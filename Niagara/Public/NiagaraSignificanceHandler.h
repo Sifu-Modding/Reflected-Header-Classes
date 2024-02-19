@@ -8,5 +8,6 @@ class NIAGARA_API UNiagaraSignificanceHandler : public UObject {
     GENERATED_BODY()
 public:
     UNiagaraSignificanceHandler();
+
 };
 

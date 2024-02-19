@@ -8,7 +8,6 @@ namespace ETargetDataFilterSelf {
         TDFS_Any,
         TDFS_NoSelf,
         TDFS_NoOthers,
-        TDFS_MAX UMETA(Hidden),
     };
 }
 

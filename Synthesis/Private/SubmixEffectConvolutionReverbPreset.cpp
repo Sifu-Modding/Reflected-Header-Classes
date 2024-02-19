@@ -1,6 +1,10 @@
 #include "SubmixEffectConvolutionReverbPreset.h"
 
-class UAudioImpulseResponse;
+USubmixEffectConvolutionReverbPreset::USubmixEffectConvolutionReverbPreset() {
+    this->ImpulseResponse = NULL;
+    this->BlockSize = ESubmixEffectConvolutionReverbBlockSize::BlockSize1024;
+    this->bEnableHardwareAcceleration = true;
+}
 
 void USubmixEffectConvolutionReverbPreset::SetSettings(const FSubmixEffectConvolutionReverbSettings& InSettings) {
 }
@@ -8,9 +12,4 @@ void USubmixEffectConvolutionReverbPreset::SetSettings(const FSubmixEffectConvol
 void USubmixEffectConvolutionReverbPreset::SetImpulseResponse(UAudioImpulseResponse* InImpulseResponse) {
 }
 
-USubmixEffectConvolutionReverbPreset::USubmixEffectConvolutionReverbPreset() {
-    this->ImpulseResponse = NULL;
-    this->BlockSize = ESubmixEffectConvolutionReverbBlockSize::BlockSize1024;
-    this->bEnableHardwareAcceleration = true;
-}
 

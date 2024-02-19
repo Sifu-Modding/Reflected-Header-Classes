@@ -16,3 +16,4 @@ UMovieSceneSkeletalAnimationSection::UMovieSceneSkeletalAnimationSection() {
     this->bMatchRotationRoll = false;
 }
 
+

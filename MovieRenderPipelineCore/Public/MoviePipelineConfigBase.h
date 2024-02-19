@@ -20,6 +20,7 @@ protected:
     
 public:
     UMoviePipelineConfigBase();
+
     UFUNCTION(BlueprintCallable)
     void RemoveSetting(UMoviePipelineSetting* InSetting);
     

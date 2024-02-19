@@ -109,6 +109,7 @@ public:
     FOnEditableTextBoxCommittedEvent OnTextCommitted;
     
     UEditableTextBox();
+
     UFUNCTION(BlueprintCallable)
     void SetText(FText InText);
     

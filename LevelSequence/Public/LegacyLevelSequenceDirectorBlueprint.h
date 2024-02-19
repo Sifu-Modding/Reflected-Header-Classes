@@ -8,5 +8,6 @@ class ULegacyLevelSequenceDirectorBlueprint : public UBlueprint {
     GENERATED_BODY()
 public:
     ULegacyLevelSequenceDirectorBlueprint();
+
 };
 

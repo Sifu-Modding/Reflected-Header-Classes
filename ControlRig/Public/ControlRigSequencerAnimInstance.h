@@ -8,5 +8,6 @@ class CONTROLRIG_API UControlRigSequencerAnimInstance : public UAnimSequencerIns
     GENERATED_BODY()
 public:
     UControlRigSequencerAnimInstance();
+
 };
 

@@ -54,8 +54,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FNavAgentProperties NavAgentProperties;
     
-    AEQSTestingPawn();
-    
+    AEQSTestingPawn(const FObjectInitializer& ObjectInitializer);
+
+
     // Fix for true pure virtual functions not being implemented
 };
 

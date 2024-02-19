@@ -11,6 +11,7 @@ class EDITABLEMESH_API UEditableMeshFactory : public UObject {
     GENERATED_BODY()
 public:
     UEditableMeshFactory();
+
     UFUNCTION(BlueprintCallable)
     static UEditableMesh* MakeEditableMesh(UPrimitiveComponent* PrimitiveComponent, const int32 LODIndex);
     

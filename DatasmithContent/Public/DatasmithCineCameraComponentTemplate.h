@@ -30,5 +30,6 @@ public:
     FDatasmithPostProcessSettingsTemplate PostProcessSettings;
     
     UDatasmithCineCameraComponentTemplate();
+
 };
 

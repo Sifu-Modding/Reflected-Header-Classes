@@ -36,6 +36,7 @@ protected:
     
 public:
     ULevelSequence();
+
     UFUNCTION(BlueprintCallable)
     void RemoveMetaDataByClass(UClass* InClass);
     
@@ -48,7 +49,7 @@ public:
     UFUNCTION(BlueprintCallable)
     UObject* CopyMetaData(UObject* InMetaData);
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

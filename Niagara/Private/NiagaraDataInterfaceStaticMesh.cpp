@@ -8,3 +8,4 @@ UNiagaraDataInterfaceStaticMesh::UNiagaraDataInterfaceStaticMesh() {
     this->bUsePhysicsBodyVelocity = false;
 }
 
+

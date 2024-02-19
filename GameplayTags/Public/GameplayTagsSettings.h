@@ -7,7 +7,7 @@
 #include "RestrictedConfigInfo.h"
 #include "GameplayTagsSettings.generated.h"
 
-UCLASS(Blueprintable, Config=Engine, DefaultConfig, Config=GameplayTags)
+UCLASS(Blueprintable, DefaultConfig, Config=GameplayTags)
 class GAMEPLAYTAGS_API UGameplayTagsSettings : public UGameplayTagsList {
     GENERATED_BODY()
 public:
@@ -45,5 +45,6 @@ public:
     TArray<FRestrictedConfigInfo> RestrictedConfigFiles;
     
     UGameplayTagsSettings();
+
 };
 

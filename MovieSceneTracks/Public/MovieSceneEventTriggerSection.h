@@ -13,7 +13,8 @@ public:
     FMovieSceneEventChannel EventChannel;
     
     UMovieSceneEventTriggerSection();
-    
+
+
     // Fix for true pure virtual functions not being implemented
 };
 

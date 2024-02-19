@@ -1,6 +1,12 @@
 #include "GameMapsSettings.h"
 
-class UGameMapsSettings;
+UGameMapsSettings::UGameMapsSettings() {
+    this->bUseSplitscreen = true;
+    this->TwoPlayerSplitscreenLayout = ETwoPlayerSplitScreenType::Horizontal;
+    this->ThreePlayerSplitscreenLayout = EThreePlayerSplitScreenType::FavorTop;
+    this->FourPlayerSplitscreenLayout = EFourPlayerSplitScreenType::Grid;
+    this->bOffsetPlayerGamepadIds = true;
+}
 
 void UGameMapsSettings::SetSkipAssigningGamepadToPlayer1(bool bSkipFirstPlayer) {
 }
@@ -13,11 +19,4 @@ UGameMapsSettings* UGameMapsSettings::GetGameMapsSettings() {
     return NULL;
 }
 
-UGameMapsSettings::UGameMapsSettings() {
-    this->bUseSplitscreen = false;
-    this->TwoPlayerSplitscreenLayout = ETwoPlayerSplitScreenType::Horizontal;
-    this->ThreePlayerSplitscreenLayout = EThreePlayerSplitScreenType::FavorTop;
-    this->FourPlayerSplitscreenLayout = EFourPlayerSplitScreenType::Grid;
-    this->bOffsetPlayerGamepadIds = false;
-}
 

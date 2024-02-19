@@ -4,3 +4,4 @@ UMovieSceneCameraCutTrack::UMovieSceneCameraCutTrack() {
     this->bCanBlend = false;
 }
 
+

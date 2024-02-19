@@ -2,8 +2,10 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=CapsuleComponent -FallbackName=CapsuleComponent
 #include "NavigationInvokerComponent.h"
 
-ANavigationTestingActor::ANavigationTestingActor() {
-    this->CapsuleComponent = CreateDefaultSubobject<UCapsuleComponent>(TEXT("CollisionCylinder"));
+ANavigationTestingActor::ANavigationTestingActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bIsEditorOnlyActor = true;
+    this->RootComponent = CreateDefaultSubobject<UCapsuleComponent>(TEXT("CollisionCylinder"));
+    this->CapsuleComponent = (UCapsuleComponent*)RootComponent;
     this->InvokerComponent = CreateDefaultSubobject<UNavigationInvokerComponent>(TEXT("InvokerComponent"));
     this->bActAsNavigationInvoker = false;
     this->MyNavData = NULL;
@@ -31,4 +33,5 @@ ANavigationTestingActor::ANavigationTestingActor() {
     this->ShowStepIndex = -1;
     this->OffsetFromCornersDistance = 0.00f;
 }
+
 

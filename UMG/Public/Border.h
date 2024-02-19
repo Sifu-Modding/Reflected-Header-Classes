@@ -70,6 +70,7 @@ public:
     UWidget::FOnPointerEvent OnMouseDoubleClickEvent;
     
     UBorder();
+
     UFUNCTION(BlueprintCallable)
     void SetVerticalAlignment(TEnumAsByte<EVerticalAlignment> InVerticalAlignment);
     

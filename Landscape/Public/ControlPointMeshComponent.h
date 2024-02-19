@@ -10,6 +10,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float VirtualTextureMainPassMaxDrawDistance;
     
-    UControlPointMeshComponent();
+    UControlPointMeshComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

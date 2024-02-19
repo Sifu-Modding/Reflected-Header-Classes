@@ -8,5 +8,6 @@ class NIAGARA_API UNiagaraConvertInPlaceUtilityBase : public UObject {
     GENERATED_BODY()
 public:
     UNiagaraConvertInPlaceUtilityBase();
+
 };
 

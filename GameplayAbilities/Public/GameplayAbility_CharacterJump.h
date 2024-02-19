@@ -8,5 +8,6 @@ class GAMEPLAYABILITIES_API UGameplayAbility_CharacterJump : public UGameplayAbi
     GENERATED_BODY()
 public:
     UGameplayAbility_CharacterJump();
+
 };
 

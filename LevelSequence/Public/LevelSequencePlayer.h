@@ -22,6 +22,7 @@ public:
     ALevelSequenceActor* SequenceActor;
     
     ULevelSequencePlayer();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UCameraComponent* GetActiveCameraComponent() const;
     

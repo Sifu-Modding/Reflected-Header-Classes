@@ -1,6 +1,9 @@
 #include "BehaviorTreeComponent.h"
 
-class UBehaviorTree;
+UBehaviorTreeComponent::UBehaviorTreeComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bAutoActivate = true;
+    this->DefaultBehaviorTreeAsset = NULL;
+}
 
 void UBehaviorTreeComponent::SetDynamicSubtree(FGameplayTag InjectTag, UBehaviorTree* BehaviorAsset) {
 }
@@ -12,7 +15,4 @@ float UBehaviorTreeComponent::GetTagCooldownEndTime(FGameplayTag CooldownTag) co
 void UBehaviorTreeComponent::AddCooldownTagDuration(FGameplayTag CooldownTag, float CooldownDuration, bool bAddToExistingDuration) {
 }
 
-UBehaviorTreeComponent::UBehaviorTreeComponent() {
-    this->DefaultBehaviorTreeAsset = NULL;
-}
 

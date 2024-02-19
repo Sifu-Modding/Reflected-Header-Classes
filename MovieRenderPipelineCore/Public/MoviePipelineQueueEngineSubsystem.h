@@ -20,6 +20,7 @@ private:
     
 public:
     UMoviePipelineQueueEngineSubsystem();
+
     UFUNCTION(BlueprintCallable)
     void RenderQueueWithExecutorInstance(UMoviePipelineExecutorBase* InExecutor);
     

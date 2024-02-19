@@ -20,6 +20,7 @@ public:
     FEmptyOnlineDelegate OnFailure;
     
     UJoinSessionCallbackProxy();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static UJoinSessionCallbackProxy* JoinSession(UObject* WorldContextObject, APlayerController* PlayerController, const FBlueprintSessionResult& SearchResult);
     

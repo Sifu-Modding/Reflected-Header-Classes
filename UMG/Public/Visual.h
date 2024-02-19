@@ -8,5 +8,6 @@ class UMG_API UVisual : public UObject {
     GENERATED_BODY()
 public:
     UVisual();
+
 };
 

@@ -16,6 +16,7 @@ public:
     UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AGeometryCollectionRenderLevelSetActor* GeometryCollectionRenderLevelSetActor;
     
-    UGeometryCollectionDebugDrawComponent();
+    UGeometryCollectionDebugDrawComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

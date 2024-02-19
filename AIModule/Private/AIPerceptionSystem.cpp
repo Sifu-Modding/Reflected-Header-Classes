@@ -1,10 +1,9 @@
 #include "AIPerceptionSystem.h"
 #include "Templates/SubclassOf.h"
 
-class AActor;
-class UAISense;
-class UAISenseEvent;
-class UObject;
+UAIPerceptionSystem::UAIPerceptionSystem() {
+    this->PerceptionAgingRate = 0.30f;
+}
 
 void UAIPerceptionSystem::ReportPerceptionEvent(UObject* WorldContextObject, UAISenseEvent* PerceptionEvent) {
 }
@@ -23,7 +22,4 @@ TSubclassOf<UAISense> UAIPerceptionSystem::GetSenseClassForStimulus(UObject* Wor
     return NULL;
 }
 
-UAIPerceptionSystem::UAIPerceptionSystem() {
-    this->PerceptionAgingRate = 0.30f;
-}
 

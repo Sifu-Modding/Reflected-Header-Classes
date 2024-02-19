@@ -9,7 +9,7 @@
 
 class UNavArea;
 
-UCLASS(Blueprintable, NotPlaceable)
+UCLASS(Blueprintable, NotPlaceable, Config=Engine)
 class NAVIGATIONSYSTEM_API ARecastNavMesh : public ANavigationData {
     GENERATED_BODY()
 public:
@@ -192,7 +192,8 @@ public:
     UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     float VerticalDeviationFromGroundCompensation;
     
-    ARecastNavMesh();
+    ARecastNavMesh(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     bool K2_ReplaceAreaInTileBounds(FBox Bounds, TSubclassOf<UNavArea> OldArea, TSubclassOf<UNavArea> NewArea, bool ReplaceLinks);
     

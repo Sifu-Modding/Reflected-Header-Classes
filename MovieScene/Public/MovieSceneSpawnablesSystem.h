@@ -8,5 +8,6 @@ class UMovieSceneSpawnablesSystem : public UMovieSceneEntitySystem {
     GENERATED_BODY()
 public:
     UMovieSceneSpawnablesSystem();
+
 };
 

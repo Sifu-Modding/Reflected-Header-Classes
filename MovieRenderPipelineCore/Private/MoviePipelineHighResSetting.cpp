@@ -9,3 +9,4 @@ UMoviePipelineHighResSetting::UMoviePipelineHighResSetting() {
     this->bWriteAllSamples = false;
 }
 
+

@@ -13,6 +13,7 @@ private:
     FWuguanCustomLightingUserParameters m_Parameters;
     
 public:
-    ACustomLightingVolume();
+    ACustomLightingVolume(const FObjectInitializer& ObjectInitializer);
+
 };
 

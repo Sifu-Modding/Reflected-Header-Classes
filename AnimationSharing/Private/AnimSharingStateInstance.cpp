@@ -1,10 +1,5 @@
 #include "AnimSharingStateInstance.h"
 
-class AActor;
-
-void UAnimSharingStateInstance::GetInstancedActors(TArray<AActor*>& Actors) {
-}
-
 UAnimSharingStateInstance::UAnimSharingStateInstance() {
     this->AnimationToPlay = NULL;
     this->PermutationTimeOffset = 0.00f;
@@ -12,4 +7,8 @@ UAnimSharingStateInstance::UAnimSharingStateInstance() {
     this->bStateBool = false;
     this->Instance = NULL;
 }
+
+void UAnimSharingStateInstance::GetInstancedActors(TArray<AActor*>& Actors) {
+}
+
 

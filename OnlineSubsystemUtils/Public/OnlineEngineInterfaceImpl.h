@@ -3,7 +3,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=OnlineEngineInterface -FallbackName=OnlineEngineInterface
 #include "OnlineEngineInterfaceImpl.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS(Blueprintable, Config=Engine)
 class ONLINESUBSYSTEMUTILS_API UOnlineEngineInterfaceImpl : public UOnlineEngineInterface {
     GENERATED_BODY()
 public:
@@ -13,5 +13,6 @@ private:
     
 public:
     UOnlineEngineInterfaceImpl();
+
 };
 

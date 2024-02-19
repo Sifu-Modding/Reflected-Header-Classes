@@ -13,6 +13,7 @@ class AUGMENTEDREALITY_API UARGeoTrackingSupport : public UObject {
     GENERATED_BODY()
 public:
     UARGeoTrackingSupport();
+
     UFUNCTION(BlueprintCallable)
     static UARGeoTrackingSupport* GetGeoTrackingSupport();
     

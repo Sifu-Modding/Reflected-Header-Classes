@@ -20,5 +20,6 @@ public:
     bool BoolValue;
     
     UAIDataProvider_QueryParams();
+
 };
 

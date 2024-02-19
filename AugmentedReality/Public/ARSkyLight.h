@@ -14,7 +14,8 @@ private:
     UAREnvironmentCaptureProbe* CaptureProbe;
     
 public:
-    AARSkyLight();
+    AARSkyLight(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetEnvironmentCaptureProbe(UAREnvironmentCaptureProbe* InCaptureProbe);
     

@@ -13,5 +13,6 @@ public:
     UAkComponent* AkComponent;
     
     UAkCallbackInfo();
+
 };
 

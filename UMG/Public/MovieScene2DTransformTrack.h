@@ -8,5 +8,6 @@ class UMovieScene2DTransformTrack : public UMovieScenePropertyTrack {
     GENERATED_BODY()
 public:
     UMovieScene2DTransformTrack();
+
 };
 

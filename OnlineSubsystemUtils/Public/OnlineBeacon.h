@@ -5,7 +5,7 @@
 
 class UNetDriver;
 
-UCLASS(Blueprintable, NotPlaceable, Transient)
+UCLASS(Blueprintable, NotPlaceable, Transient, Config=Engine)
 class ONLINESUBSYSTEMUTILS_API AOnlineBeacon : public AActor {
     GENERATED_BODY()
 public:
@@ -20,6 +20,7 @@ protected:
     UNetDriver* NetDriver;
     
 public:
-    AOnlineBeacon();
+    AOnlineBeacon(const FObjectInitializer& ObjectInitializer);
+
 };
 

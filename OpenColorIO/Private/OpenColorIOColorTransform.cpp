@@ -4,3 +4,4 @@ UOpenColorIOColorTransform::UOpenColorIOColorTransform() {
     this->ConfigurationOwner = NULL;
 }
 
+

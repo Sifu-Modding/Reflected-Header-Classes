@@ -8,5 +8,6 @@ class MOVIESCENETRACKS_API UMovieSceneBaseValueEvaluatorSystem : public UMovieSc
     GENERATED_BODY()
 public:
     UMovieSceneBaseValueEvaluatorSystem();
+
 };
 

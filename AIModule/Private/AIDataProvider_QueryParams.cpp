@@ -6,3 +6,4 @@ UAIDataProvider_QueryParams::UAIDataProvider_QueryParams() {
     this->BoolValue = false;
 }
 
+

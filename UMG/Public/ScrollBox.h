@@ -78,6 +78,7 @@ public:
     FOnUserScrolledEvent OnUserScrolled;
     
     UScrollBox();
+
     UFUNCTION(BlueprintCallable)
     void SetWheelScrollMultiplier(float NewWheelScrollMultiplier);
     

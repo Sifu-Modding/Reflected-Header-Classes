@@ -26,6 +26,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRuntimeFloatCurve SteeringCurve;
     
-    UWheeledVehicleMovementComponent4W();
+    UWheeledVehicleMovementComponent4W(const FObjectInitializer& ObjectInitializer);
+
 };
 

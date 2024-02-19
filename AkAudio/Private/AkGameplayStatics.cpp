@@ -1,18 +1,7 @@
 #include "AkGameplayStatics.h"
 
-class AActor;
-class UAkAudioBank;
-class UAkAudioEvent;
-class UAkAudioType;
-class UAkAuxBus;
-class UAkComponent;
-class UAkMediaAsset;
-class UAkRtpc;
-class UAkStateValue;
-class UAkSwitchValue;
-class UAkTrigger;
-class UObject;
-class USceneComponent;
+UAkGameplayStatics::UAkGameplayStatics() {
+}
 
 void UAkGameplayStatics::UseReverbVolumes(bool inUseReverbVolumes, AActor* Actor) {
 }
@@ -212,6 +201,4 @@ void UAkGameplayStatics::CancelEventCallback(const FOnAkPostEventCallback& PostE
 void UAkGameplayStatics::AddOutputCaptureMarker(const FString& MarkerText) {
 }
 
-UAkGameplayStatics::UAkGameplayStatics() {
-}
 

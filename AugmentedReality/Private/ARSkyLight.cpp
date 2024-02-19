@@ -1,11 +1,10 @@
 #include "ARSkyLight.h"
 
-class UAREnvironmentCaptureProbe;
+AARSkyLight::AARSkyLight(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->CaptureProbe = NULL;
+}
 
 void AARSkyLight::SetEnvironmentCaptureProbe(UAREnvironmentCaptureProbe* InCaptureProbe) {
 }
 
-AARSkyLight::AARSkyLight() {
-    this->CaptureProbe = NULL;
-}
 

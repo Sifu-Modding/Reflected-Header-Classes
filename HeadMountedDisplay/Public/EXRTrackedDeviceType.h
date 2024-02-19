@@ -8,7 +8,7 @@ enum class EXRTrackedDeviceType : uint8 {
     Controller,
     TrackingReference,
     Other,
-    Invalid = 0xFE,
+    Invalid = 254,
     Any,
 };
 

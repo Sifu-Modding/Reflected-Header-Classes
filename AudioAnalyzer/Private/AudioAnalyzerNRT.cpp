@@ -5,3 +5,4 @@ UAudioAnalyzerNRT::UAudioAnalyzerNRT() {
     this->DurationInSeconds = 0.00f;
 }
 
+

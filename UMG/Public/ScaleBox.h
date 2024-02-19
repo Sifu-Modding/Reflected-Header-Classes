@@ -22,6 +22,7 @@ public:
     bool IgnoreInheritedScale;
     
     UScaleBox();
+
     UFUNCTION(BlueprintCallable)
     void SetUserSpecifiedScale(float InUserSpecifiedScale);
     

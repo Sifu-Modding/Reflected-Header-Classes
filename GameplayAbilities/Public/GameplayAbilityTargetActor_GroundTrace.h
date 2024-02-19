@@ -13,6 +13,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float CollisionHeight;
     
-    AGameplayAbilityTargetActor_GroundTrace();
+    AGameplayAbilityTargetActor_GroundTrace(const FObjectInitializer& ObjectInitializer);
+
 };
 

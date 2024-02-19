@@ -22,9 +22,10 @@ protected:
     bool m_bActive;
     
 public:
-    UReplayablePhysicsComponent();
+    UReplayablePhysicsComponent(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable)
     void OnReplaySystemRecordingChanged(bool _bIsRecording);
@@ -36,7 +37,7 @@ private:
     UFUNCTION(BlueprintCallable)
     void OnRep_Active();
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

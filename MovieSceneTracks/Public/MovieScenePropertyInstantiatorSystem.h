@@ -9,7 +9,8 @@ class MOVIESCENETRACKS_API UMovieScenePropertyInstantiatorSystem : public UMovie
     GENERATED_BODY()
 public:
     UMovieScenePropertyInstantiatorSystem();
-    
+
+
     // Fix for true pure virtual functions not being implemented
 };
 

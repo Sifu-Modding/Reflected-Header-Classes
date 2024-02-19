@@ -9,7 +9,6 @@ public class AIModule : ModuleRules {
         PublicDependencyModuleNames.AddRange(new string[] {
             "Core",
             "CoreUObject",
-            "DeveloperSettings",
             "Engine",
             "GameplayTags",
             "GameplayTasks",

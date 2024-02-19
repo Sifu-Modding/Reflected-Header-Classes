@@ -59,5 +59,6 @@ public:
     TSubclassOf<UNavArea> Agent15Area;
     
     UNavAreaMeta_SwitchByAgent();
+
 };
 

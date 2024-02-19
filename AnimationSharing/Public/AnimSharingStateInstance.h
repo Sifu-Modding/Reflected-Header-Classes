@@ -30,6 +30,7 @@ private:
     
 public:
     UAnimSharingStateInstance();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void GetInstancedActors(TArray<AActor*>& Actors);

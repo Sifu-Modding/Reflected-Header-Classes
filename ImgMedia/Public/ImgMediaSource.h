@@ -21,6 +21,7 @@ protected:
     
 public:
     UImgMediaSource();
+
     UFUNCTION(BlueprintCallable)
     void SetSequencePath(const FString& Path);
     

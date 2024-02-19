@@ -3,7 +3,6 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=LinearColor -FallbackName=LinearColor
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector2D -FallbackName=Vector2D
 //CROSS-MODULE INCLUDE V2: -ModuleName=UMG -ObjectName=Widget -FallbackName=Widget
-//CROSS-MODULE INCLUDE V2: -ModuleName=UMG -ObjectName=Widget -FallbackName=Widget
 #include "OnControllerCaptureBeginEventSynth2DDelegate.h"
 #include "OnControllerCaptureEndEventSynth2DDelegate.h"
 #include "OnFloatValueChangedEventSynth2DDelegate.h"
@@ -65,6 +64,7 @@ public:
     FOnFloatValueChangedEventSynth2D OnValueChangedY;
     
     USynth2DSlider();
+
     UFUNCTION(BlueprintCallable)
     void SetValue(FVector2D InValue);
     

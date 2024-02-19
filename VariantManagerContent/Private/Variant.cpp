@@ -1,11 +1,8 @@
 #include "Variant.h"
 
-class AActor;
-class ULevelVariantSets;
-class UObject;
-class UTexture2D;
-class UVariant;
-class UVariantSet;
+UVariant::UVariant() {
+    this->Thumbnail = NULL;
+}
 
 void UVariant::SwitchOn() {
 }
@@ -71,7 +68,4 @@ int32 UVariant::AddDependency(FVariantDependency& Dependency) {
     return 0;
 }
 
-UVariant::UVariant() {
-    this->Thumbnail = NULL;
-}
 

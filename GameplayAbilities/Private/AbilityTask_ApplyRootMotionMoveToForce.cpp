@@ -1,9 +1,13 @@
 #include "AbilityTask_ApplyRootMotionMoveToForce.h"
 #include "Net/UnrealNetwork.h"
 
-class UAbilityTask_ApplyRootMotionMoveToForce;
-class UCurveVector;
-class UGameplayAbility;
+UAbilityTask_ApplyRootMotionMoveToForce::UAbilityTask_ApplyRootMotionMoveToForce() {
+    this->Duration = 0.00f;
+    this->bSetNewMovementMode = false;
+    this->NewMovementMode = MOVE_Walking;
+    this->bRestrictSpeedToExpected = false;
+    this->PathOffsetCurve = NULL;
+}
 
 UAbilityTask_ApplyRootMotionMoveToForce* UAbilityTask_ApplyRootMotionMoveToForce::ApplyRootMotionMoveToForce(UGameplayAbility* OwningAbility, FName TaskInstanceName, FVector NewTargetLocation, float NewDuration, bool NewBSetNewMovementMode, TEnumAsByte<EMovementMode> MovementMode, bool NewBRestrictSpeedToExpected, UCurveVector* NewPathOffsetCurve, ERootMotionFinishVelocityMode VelocityOnFinishMode, FVector SetVelocityOnFinish, float ClampVelocityOnFinish, FVector NewPathOffsetAmplitude) {
     return NULL;
@@ -22,11 +26,4 @@ void UAbilityTask_ApplyRootMotionMoveToForce::GetLifetimeReplicatedProps(TArray<
     DOREPLIFETIME(UAbilityTask_ApplyRootMotionMoveToForce, PathOffsetAmplitude);
 }
 
-UAbilityTask_ApplyRootMotionMoveToForce::UAbilityTask_ApplyRootMotionMoveToForce() {
-    this->Duration = 0.00f;
-    this->bSetNewMovementMode = false;
-    this->NewMovementMode = MOVE_Walking;
-    this->bRestrictSpeedToExpected = false;
-    this->PathOffsetCurve = NULL;
-}
 

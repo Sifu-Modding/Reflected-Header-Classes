@@ -17,7 +17,8 @@ private:
     uint8 bDestroyOnSystemFinish: 1;
     
 public:
-    ANiagaraActor();
+    ANiagaraActor(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetDestroyOnSystemFinish(bool bShouldDestroyOnSystemFinish);
     

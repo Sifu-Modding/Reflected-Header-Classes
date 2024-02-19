@@ -14,6 +14,7 @@ private:
     TArray<TSoftObjectPtr<AAISituationActor>> m_situationsToSpawn;
     
 public:
-    AWuguanPerfTestingLocations();
+    AWuguanPerfTestingLocations(const FObjectInitializer& ObjectInitializer);
+
 };
 

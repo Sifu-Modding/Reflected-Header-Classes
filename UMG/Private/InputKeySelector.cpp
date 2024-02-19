@@ -1,5 +1,13 @@
 #include "InputKeySelector.h"
 
+UInputKeySelector::UInputKeySelector() {
+    this->KeySelectionText = FText::FromString(TEXT("..."));
+    this->NoKeySpecifiedText = FText::FromString(TEXT("Empty"));
+    this->bAllowModifierKeys = true;
+    this->bAllowGamepadKeys = false;
+    this->EscapeKeys.AddDefaulted(1);
+}
+
 void UInputKeySelector::SetTextBlockVisibility(const ESlateVisibility InVisibility) {
 }
 
@@ -25,11 +33,4 @@ bool UInputKeySelector::GetIsSelectingKey() const {
     return false;
 }
 
-UInputKeySelector::UInputKeySelector() {
-    this->KeySelectionText = FText::FromString(TEXT("..."));
-    this->NoKeySpecifiedText = FText::FromString(TEXT("Empty"));
-    this->bAllowModifierKeys = true;
-    this->bAllowGamepadKeys = false;
-    this->EscapeKeys.AddDefaulted(1);
-}
 

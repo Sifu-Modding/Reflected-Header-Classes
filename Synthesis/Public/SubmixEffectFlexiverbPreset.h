@@ -12,6 +12,7 @@ public:
     FSubmixEffectFlexiverbSettings Settings;
     
     USubmixEffectFlexiverbPreset();
+
     UFUNCTION(BlueprintCallable)
     void SetSettings(const FSubmixEffectFlexiverbSettings& InSettings);
     

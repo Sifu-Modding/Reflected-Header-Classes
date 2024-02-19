@@ -4,3 +4,4 @@ UMoviePipelineCameraSetting::UMoviePipelineCameraSetting() {
     this->ShutterTiming = EMoviePipelineShutterTiming::FrameCenter;
 }
 
+

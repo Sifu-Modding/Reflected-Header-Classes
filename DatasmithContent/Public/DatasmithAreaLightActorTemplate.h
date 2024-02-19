@@ -58,5 +58,6 @@ public:
     float AttenuationRadius;
     
     UDatasmithAreaLightActorTemplate();
+
 };
 

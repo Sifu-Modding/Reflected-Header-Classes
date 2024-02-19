@@ -8,5 +8,6 @@ class DATASMITHCONTENT_API UDatasmithOptionsBase : public UObject {
     GENERATED_BODY()
 public:
     UDatasmithOptionsBase();
+
 };
 

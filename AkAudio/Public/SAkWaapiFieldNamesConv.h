@@ -9,6 +9,7 @@ class AKAUDIO_API USAkWaapiFieldNamesConv : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     USAkWaapiFieldNamesConv();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static FText Conv_FAkWaapiFieldNamesToText(const FAkWaapiFieldNames& INAkWaapiFieldNames);
     

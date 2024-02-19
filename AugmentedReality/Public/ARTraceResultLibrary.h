@@ -13,6 +13,7 @@ class AUGMENTEDREALITY_API UARTraceResultLibrary : public UBlueprintFunctionLibr
     GENERATED_BODY()
 public:
     UARTraceResultLibrary();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static UARTrackedGeometry* GetTrackedGeometry(const FARTraceResult& TraceResult);
     

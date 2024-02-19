@@ -8,5 +8,6 @@ class AUDIOEXTENSIONS_API USpatializationPluginSourceSettingsBase : public UObje
     GENERATED_BODY()
 public:
     USpatializationPluginSourceSettingsBase();
+
 };
 

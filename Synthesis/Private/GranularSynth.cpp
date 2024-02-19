@@ -1,6 +1,8 @@
 #include "GranularSynth.h"
 
-class USoundWave;
+UGranularSynth::UGranularSynth(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->GranulatedSoundWave = NULL;
+}
 
 void UGranularSynth::SetSustainGain(const float SustainGain) {
 }
@@ -65,7 +67,4 @@ float UGranularSynth::GetCurrentPlayheadTime() const {
     return 0.0f;
 }
 
-UGranularSynth::UGranularSynth() {
-    this->GranulatedSoundWave = NULL;
-}
 

@@ -37,7 +37,8 @@ private:
     TArray<UAkAudioBank*> m_SavedSoundBanksToLoad;
     
 public:
-    AThePlainesLevel();
+    AThePlainesLevel(const FObjectInitializer& ObjectInitializer);
+
 private:
     UFUNCTION(BlueprintCallable)
     void UnregisterFromSignificanceOnActorEndPlay(AActor* _actor, TEnumAsByte<EEndPlayReason::Type> _eEndPlayReason);

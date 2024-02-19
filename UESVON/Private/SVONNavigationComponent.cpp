@@ -1,6 +1,6 @@
 #include "SVONNavigationComponent.h"
 
-USVONNavigationComponent::USVONNavigationComponent() {
+USVONNavigationComponent::USVONNavigationComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->DebugPrintCurrentPosition = false;
     this->DebugPrintMortonCodes = false;
     this->DebugDrawOpenNodes = false;
@@ -10,4 +10,5 @@ USVONNavigationComponent::USVONNavigationComponent() {
     this->NodeSizeCompensation = 1.00f;
     this->PathCostType = ESVONPathCostType::EUCLIDEAN;
 }
+
 

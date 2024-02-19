@@ -82,6 +82,7 @@ public:
     FOnFocusReceivedDelegateEvent OnFocusReceivedDelegate;
     
     USlider();
+
     UFUNCTION(BlueprintCallable)
     void SetValue(float InValue);
     

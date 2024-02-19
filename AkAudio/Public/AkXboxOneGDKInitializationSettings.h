@@ -8,7 +8,7 @@
 #include "AkXboxOneGDKApuHeapInitializationSettings.h"
 #include "AkXboxOneGDKInitializationSettings.generated.h"
 
-UCLASS(Blueprintable, Config=Engine, DefaultConfig, Config=Game)
+UCLASS(Blueprintable, DefaultConfig, Config=Game)
 class AKAUDIO_API UAkXboxOneGDKInitializationSettings : public UObject, public IAkPlatformInitialisationSettingsBase {
     GENERATED_BODY()
 public:
@@ -25,10 +25,11 @@ public:
     FAkXboxOneGDKAdvancedInitializationSettings AdvancedSettings;
     
     UAkXboxOneGDKInitializationSettings();
+
     UFUNCTION(BlueprintCallable)
     void MigrateMultiCoreRendering(bool NewValue);
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

@@ -1,6 +1,10 @@
 #include "WidgetSwitcher.h"
+#include "ESlateVisibility.h"
 
-class UWidget;
+UWidgetSwitcher::UWidgetSwitcher() {
+    this->Visibility = ESlateVisibility::SelfHitTestInvisible;
+    this->ActiveWidgetIndex = 0;
+}
 
 void UWidgetSwitcher::SetActiveWidgetIndex(int32 Index) {
 }
@@ -24,7 +28,4 @@ UWidget* UWidgetSwitcher::GetActiveWidget() const {
     return NULL;
 }
 
-UWidgetSwitcher::UWidgetSwitcher() {
-    this->ActiveWidgetIndex = 0;
-}
 

@@ -14,7 +14,8 @@ public:
     USkillsChilds* m_Root;
     
     USkillsDB();
-    
+
+
     // Fix for true pure virtual functions not being implemented
 };
 

@@ -8,5 +8,6 @@ class UMovieSceneVisibilityTrack : public UMovieSceneBoolTrack {
     GENERATED_BODY()
 public:
     UMovieSceneVisibilityTrack();
+
 };
 

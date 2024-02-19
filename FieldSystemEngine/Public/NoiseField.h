@@ -19,7 +19,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTransform Transform;
     
-    UNoiseField();
+    UNoiseField(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UNoiseField* SetNoiseField(float NewMinRange, float NewMaxRange, FTransform NewTransform);
     
