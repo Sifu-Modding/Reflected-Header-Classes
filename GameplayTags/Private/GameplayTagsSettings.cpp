@@ -2,7 +2,7 @@
 
 UGameplayTagsSettings::UGameplayTagsSettings() {
     this->ConfigFileName = TEXT("../../../Sifu/Config/DefaultGameplayTags.ini");
-    this->GameplayTagList.AddDefaulted(787);
+    this->GameplayTagList.AddDefaulted(788);
     this->ImportTagsFromConfig = true;
     this->WarnOnInvalidTags = true;
     this->FastReplication = false;
